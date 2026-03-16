@@ -27,8 +27,12 @@ export function MissionSection() {
             Ethereum Classic DAO
           </h1>
           <p className="mt-6 max-w-2xl text-xl text-[var(--text-secondary)] md:text-2xl">
-            Building critical infrastructure for the world&rsquo;s largest
-            Proof-of-Work smart contract platform.
+            Driving adoption and long-term development of Ethereum Classic
+            &mdash; the largest Proof-of-Work smart contract platform.
+          </p>
+          <p className="mt-4 max-w-2xl text-base text-[var(--text-muted)]">
+            Governance, treasury management, and protocol coordination for
+            the only EVM-compatible blockchain secured by Proof-of-Work.
           </p>
         </FadeIn>
 
