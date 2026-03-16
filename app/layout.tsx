@@ -17,22 +17,22 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: {
     default:
-      "Ethereum Classic DAO LLC — Off-Chain Administrative Executor",
-    template: "%s | Ethereum Classic DAO LLC",
+      "Ethereum Classic DAO — Building Infrastructure for the Largest Proof-of-Work Smart Contract Platform",
+    template: "%s | Ethereum Classic DAO",
   },
   description:
-    "Ethereum Classic DAO LLC is a Wyoming-registered DAO LLC serving as the off-chain administrative executor for OlympiaDAO governance. Subordinate to on-chain governance per ECIP-1114.",
+    "Ethereum Classic DAO LLC is the organizational entity behind Ethereum Classic's Olympia DAO, building governance infrastructure for the largest Proof-of-Work smart contract platform.",
   keywords: [
     "Ethereum Classic",
     "ETC",
     "DAO LLC",
     "Wyoming",
-    "OlympiaDAO",
-    "ECIP-1114",
-    "governance",
-    "administrative executor",
-    "treasury",
-    "compliance",
+    "Olympia DAO",
+    "Proof-of-Work",
+    "smart contracts",
+    "blockchain infrastructure",
+    "digital commodity",
+    "CLARITY Act",
   ],
   authors: [
     { name: "Cody Burns", url: "https://github.com/realcodywburns" },
@@ -42,25 +42,25 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://ethereumclassicdao.org",
-    siteName: "Ethereum Classic DAO LLC",
+    siteName: "Ethereum Classic DAO",
     title:
-      "Ethereum Classic DAO LLC — Off-Chain Administrative Executor",
+      "Ethereum Classic DAO — Building Infrastructure for the Largest Proof-of-Work Smart Contract Platform",
     description:
-      "Wyoming-registered DAO LLC. Off-chain administrative executor subordinate to on-chain governance per ECIP-1114.",
+      "The organizational entity behind Ethereum Classic's Olympia DAO. Wyoming DAO LLC building critical blockchain infrastructure.",
     images: [
       {
         url: "https://ethereumclassicdao.org/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Ethereum Classic DAO LLC",
+        alt: "Ethereum Classic DAO",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ethereum Classic DAO LLC",
+    title: "Ethereum Classic DAO",
     description:
-      "Wyoming DAO LLC. Off-chain administrative executor for OlympiaDAO governance.",
+      "Building governance infrastructure for the largest Proof-of-Work smart contract platform. Wyoming DAO LLC.",
     images: ["https://ethereumclassicdao.org/og-image.png"],
   },
   robots: {

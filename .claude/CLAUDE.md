@@ -1,8 +1,8 @@
-# Ethereum Classic DAO LLC — Corporate Website
+# Ethereum Classic DAO — Institutional Website
 
 ## Project Context
 
-Professional corporate landing page for the **Ethereum Classic DAO LLC**, a Wyoming-registered DAO LLC (Filing ID 2025-001671865). The LLC serves as an off-chain administrative executor for OlympiaDAO, strictly subordinate to on-chain governance per ECIP-1114.
+Institutional website for **Ethereum Classic DAO LLC**, a Wyoming-registered DAO LLC (Filing ID 2025-001671865). The LLC is the organizational entity behind Ethereum Classic's Olympia DAO, building governance infrastructure for the largest Proof-of-Work smart contract platform.
 
 **Domain:** ethereumclassicdao.org
 **Repo:** `EthereumClassicDAO/ethereumclassicdao-org`
@@ -35,19 +35,28 @@ pnpm typecheck        # TypeScript strict check
 ```
 app/
   layout.tsx              → Root layout (fonts, metadata, NavHeader, Footer)
-  page.tsx                → Home page
-  about/page.tsx          → About (LLC scope per ECIP-1114)
-  transparency/page.tsx   → Transparency (reports, audit trail, disclosures)
-  contact/page.tsx        → Contact (registered agent, official channels)
+  page.tsx                → Home (mission, positioning, ecosystem)
+  about/page.tsx          → About (org description, institutional infrastructure)
+  transparency/page.tsx   → Disclosures (reporting framework, documents)
+  contact/page.tsx        → Contact (registered agent, ecosystem properties)
   globals.css             → Design tokens + Tailwind @theme
 components/
   sections/
-    NavHeader.tsx         → Sticky nav (4 pages + external links)
-    FooterSection.tsx     → Footer (cross-links, copyright, legal)
-  home/                   → Home page sections
-  about/                  → About page sections
-  transparency/           → Transparency page sections
-  contact/                → Contact page sections
+    NavHeader.tsx         → Sticky nav (About, Disclosures, Contact + filing marker)
+    FooterSection.tsx     → 4-column footer (Organization, Site, Ecosystem, Resources)
+  home/
+    MissionSection.tsx    → Entity identity, value prop, impact metrics
+    PositioningSection.tsx → PoW+EVM uniqueness, institutional infra, regulatory
+    EcosystemSection.tsx  → Ecosystem property links
+  about/
+    AboutSection.tsx      → Org description, Olympia upgrade, what we build
+    InfrastructureSection.tsx → Exchanges, custody, Grayscale, mining, regulatory
+  transparency/
+    ReportsSection.tsx    → Reporting framework list
+    DocumentsSection.tsx  → Document grid (Zcash model, available/pending status)
+  contact/
+    RegisteredAgentSection.tsx → Address block + Wyoming SOS link
+    ChannelsSection.tsx   → Ecosystem property list
 lib/
   utils.ts                → cn() helper (clsx)
 public/
@@ -58,22 +67,30 @@ public/
 
 ## Design System
 
-- **Brand:** Olympia design tokens — `#00ffae` green accent, `#0a0f10` dark background
+- **Brand:** Olympia tokens — `#00ffae` green accent, `#0a0f10` dark background
+- **Surfaces:** Neutralized — `#111111` surface, `#181818` elevated, `#1a1a1a` borders
 - **Fonts:** Inter (body) + JetBrains Mono (code) via next/font/google
-- **Cards:** `rgba(0,0,0,0.35)` bg, `#1f292b` border, 14px radius, lift-on-hover
-- **Tone:** Formal/institutional (more corporate than olympiadao.org)
+- **Pattern:** Flat cards (no hover lift, no shadows), `border-t` / `divide-y` dividers
+- **Hover:** `hover:text-white` (not `hover:text-green`)
+- **Tone:** Confident, institutional, understated — like Solana Foundation or Stellar Enterprise Fund
 - **No "Demo · Mordor" badge** — this is the real legal entity
 
-## Content Authority
+## Positioning & Copy Guidelines
 
-All LLC scope, responsibilities, prohibitions, and transparency requirements derived exclusively from **ECIP-1114** (lines 347-476). No discretionary reinterpretation.
+- **ETC unique claim:** "The largest Proof-of-Work blockchain with native smart contracts"
+- **Regulatory:** CLARITY Act "digital commodity" classification is *pending* — use "positioned for" or "candidate for"
+- **Grayscale:** ETCG is a trust, NOT an ETF. Say "regulated securities exposure" not "ETF pipeline"
+- **Mining:** "170+ TH/s" and "absorbed significant Ethereum mining infrastructure post-Merge" are safe claims
+- **Naming:** "Ethereum Classic's Olympia DAO" (not "OlympiaDAO")
+- **Never say:** "subordinate to on-chain governance", "off-chain administrative executor", SHALL/MUST NOT, ECIP-1114 references in rendered content, hash-bound tuples, governance pipeline
+- **Tone:** Confident but factual. No hype. No superlatives. Let the facts speak.
 
 ## Cross-Site Links
 
 | Property | URL |
 |----------|-----|
-| OlympiaDAO | https://olympiadao.org |
-| Treasury | https://olympiatreasury.org |
+| Olympia DAO | https://olympiadao.org |
+| Olympia Treasury | https://olympiatreasury.org |
 | Governance App | https://app.olympiadao.org |
 | GitHub | https://github.com/EthereumClassicDAO |
 
@@ -82,7 +99,7 @@ All LLC scope, responsibilities, prohibitions, and transparency requirements der
 ### Always Do
 - Follow Olympia brand tokens for colors, spacing, typography
 - Use section-based composition pattern (each page imports section components)
-- Keep content faithful to ECIP-1114 definitions
+- Keep institutional tone — professional, factual, no hype
 - Run `pnpm lint && pnpm typecheck` before committing
 
 ### Ask First
@@ -94,4 +111,6 @@ All LLC scope, responsibilities, prohibitions, and transparency requirements der
 - Add wallet connections or blockchain interactions (this is a static corporate site)
 - Add "Demo · Mordor" badges (real legal entity)
 - Use amber accent (reserved for treasury across the suite)
+- Add hover lifts, card shadows, or green glowing icons
+- Reference ECIP-1114 in rendered content
 - Commit .env files or credentials
