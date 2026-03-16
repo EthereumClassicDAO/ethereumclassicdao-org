@@ -11,8 +11,8 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 const infrastructure = [
   {
     icon: ArrowLeftRight,
-    category: "Major Exchanges",
-    details: "Coinbase, Kraken, Binance, Robinhood, OKX, Bitstamp",
+    category: "Global Exchange Coverage",
+    details: "300+ markets across Binance, Coinbase, OKX, Kraken, Upbit, Bybit, Bitget, Gate, and 20+ more exchanges",
   },
   {
     icon: Lock,

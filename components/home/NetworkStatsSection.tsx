@@ -9,9 +9,9 @@ const stats = [
     context: "Post-Merge mining infrastructure",
   },
   {
-    value: "6+",
-    label: "Major Exchanges",
-    context: "Coinbase, Kraken, Binance, Robinhood, OKX, Bitstamp",
+    value: "300+",
+    label: "Trading Markets",
+    context: "Binance, Coinbase, OKX, Kraken, Upbit, Bybit, and 20+ more exchanges",
   },
   {
     value: "3",
