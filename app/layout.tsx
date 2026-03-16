@@ -15,6 +15,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
   title: {
     default:
       "Ethereum Classic DAO — Building Infrastructure for the Largest Proof-of-Work Smart Contract Platform",
