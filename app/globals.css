@@ -77,6 +77,90 @@ body {
   color: white;
 }
 
+/* ==========================================
+   Visual System — Backgrounds & Effects
+   ========================================== */
+
+/* Hero radial gradient — green glow from top */
+.hero-gradient {
+  background:
+    radial-gradient(
+      ellipse 80% 50% at 50% -20%,
+      rgba(0, 255, 174, 0.07) 0%,
+      transparent 70%
+    ),
+    var(--background);
+}
+
+/* Light variant for inner pages */
+.hero-gradient-light {
+  background:
+    radial-gradient(
+      ellipse 80% 50% at 50% -20%,
+      rgba(0, 255, 174, 0.04) 0%,
+      transparent 70%
+    ),
+    var(--background);
+}
+
+/* Subtle grid overlay for texture */
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Alternating section background */
+.section-alt {
+  background: var(--bg-surface);
+}
+
+/* Gradient section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 255, 174, 0.12) 30%,
+    rgba(0, 255, 174, 0.2) 50%,
+    rgba(0, 255, 174, 0.12) 70%,
+    transparent 100%
+  );
+}
+
+/* ==========================================
+   Status Badges
+   ========================================== */
+
+.badge-available {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(0, 255, 174, 0.1);
+  color: var(--brand-green);
+}
+
+.badge-pending {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-subtle);
+}
+
+/* ==========================================
+   Accessibility
+   ========================================== */
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -13,9 +14,10 @@ const navLinks = [
 
 export function NavHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--border-default)] bg-[var(--background)]">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-[rgba(255,255,255,0.06)] bg-[rgba(10,15,16,0.85)] backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image src="/logo.svg" alt="" width={28} height={28} />
@@ -30,9 +32,15 @@ export function NavHeader() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm text-[var(--text-muted)] transition-colors duration-200 hover:text-white"
+              className="relative text-sm transition-colors duration-200 hover:text-white"
+              style={{
+                color: pathname === link.href ? "var(--text-primary)" : "var(--text-muted)",
+              }}
             >
               {link.label}
+              {pathname === link.href && (
+                <span className="absolute -bottom-1.5 left-1/2 h-0.5 w-4 -translate-x-1/2 rounded-full bg-[var(--brand-green)]" />
+              )}
             </Link>
           ))}
           <span className="hidden text-xs font-mono text-[var(--text-subtle)] lg:inline">
@@ -52,12 +60,15 @@ export function NavHeader() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t border-[var(--border-default)] bg-[var(--background)] px-6 py-4 md:hidden">
+        <div className="border-t border-[rgba(255,255,255,0.06)] bg-[rgba(10,15,16,0.95)] backdrop-blur-md px-6 py-4 md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="block py-3 text-sm text-[var(--text-muted)] transition-colors hover:text-white"
+              className="block py-3 text-sm transition-colors hover:text-white"
+              style={{
+                color: pathname === link.href ? "var(--text-primary)" : "var(--text-muted)",
+              }}
               onClick={() => setMobileOpen(false)}
             >
               {link.label}

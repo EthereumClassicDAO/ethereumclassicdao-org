@@ -1,3 +1,5 @@
+import { FadeIn } from "@/components/ui/FadeIn";
+
 const metrics = [
   {
     label: "Incorporated",
@@ -24,37 +26,45 @@ const metrics = [
 
 export function MissionSection() {
   return (
-    <section className="pt-40 pb-24">
+    <section className="hero-gradient grid-overlay relative min-h-[70vh] pt-40 pb-24">
       <div className="mx-auto max-w-5xl px-6">
-        <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
-          Ethereum Classic DAO
-        </h1>
+        <FadeIn>
+          <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
+            Wyoming DAO LLC
+          </p>
+          <h1 className="mt-4 text-5xl font-bold tracking-tighter md:text-7xl">
+            Ethereum Classic DAO
+          </h1>
+          <p className="mt-6 max-w-2xl text-xl text-[var(--text-secondary)] md:text-2xl">
+            Building critical infrastructure for the world&rsquo;s largest
+            Proof-of-Work smart contract platform.
+          </p>
+        </FadeIn>
 
-        <p className="mt-6 max-w-2xl text-xl text-[var(--text-muted)]">
-          Building critical infrastructure for the world&rsquo;s largest
-          Proof-of-Work smart contract platform.
-        </p>
-
-        <div className="mt-16 grid grid-cols-2 gap-8 md:grid-cols-4">
-          {metrics.map((m) => (
-            <div key={m.label}>
-              <p className="text-xs font-medium uppercase tracking-wider text-[var(--text-subtle)]">
-                {m.label}
-              </p>
-              <p className="mt-2 text-sm font-semibold text-white">
-                {m.value}
-                {m.footnote && <span className="text-[var(--text-subtle)]">*</span>}
-              </p>
-              {m.detail && (
-                <p className="mt-0.5 text-xs text-[var(--text-muted)]">
-                  {m.detail}
+        <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-4">
+          {metrics.map((m, i) => (
+            <FadeIn key={m.label} delay={i * 100}>
+              <div className="rounded-lg bg-[var(--bg-elevated)] border-l-2 border-[var(--brand-green)] p-5">
+                <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
+                  {m.label}
                 </p>
-              )}
-            </div>
+                <p className="mt-2 text-2xl font-bold tracking-tight">
+                  {m.value}
+                  {m.footnote && (
+                    <span className="text-[var(--text-subtle)]">*</span>
+                  )}
+                </p>
+                {m.detail && (
+                  <p className="mt-1 text-xs text-[var(--text-muted)]">
+                    {m.detail}
+                  </p>
+                )}
+              </div>
+            </FadeIn>
           ))}
         </div>
 
-        <p className="mt-8 text-xs text-[var(--text-subtle)]">
+        <p className="mt-6 text-xs text-[var(--text-subtle)]">
           * Classification pending under the CLARITY Act
         </p>
       </div>

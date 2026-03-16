@@ -41,22 +41,26 @@ app/
   contact/page.tsx        → Contact (registered agent, ecosystem properties)
   globals.css             → Design tokens + Tailwind @theme
 components/
+  ui/
+    FadeIn.tsx            → Scroll-triggered fade-up animation (client, IntersectionObserver)
+    SectionDivider.tsx    → Gradient line divider between sections
+    PropertyCard.tsx      → Shared link card (icon, name, desc, arrow, hover)
   sections/
-    NavHeader.tsx         → Sticky nav (About, Disclosures, Contact + filing marker)
-    FooterSection.tsx     → 4-column footer (Organization, Site, Ecosystem, Resources)
+    NavHeader.tsx         → Sticky nav, backdrop-blur, active link green dot indicator
+    FooterSection.tsx     → 4-column footer with SectionDivider + section-alt
   home/
-    MissionSection.tsx    → Entity identity, value prop, impact metrics
-    PositioningSection.tsx → PoW+EVM uniqueness, institutional infra, regulatory
-    EcosystemSection.tsx  → Ecosystem property links
+    MissionSection.tsx    → Hero gradient, metric cards, entity identity
+    PositioningSection.tsx → Icon cards (Shield, Building2, Scale), section-alt
+    EcosystemSection.tsx  → PropertyCard grid (Vote, Landmark, LayoutDashboard, Github)
   about/
-    AboutSection.tsx      → Org description, Olympia upgrade, what we build
-    InfrastructureSection.tsx → Exchanges, custody, Grayscale, mining, regulatory
+    AboutSection.tsx      → Hero-gradient-light, callout, icon list
+    InfrastructureSection.tsx → Icon cards grid, section-alt
   transparency/
-    ReportsSection.tsx    → Reporting framework list
-    DocumentsSection.tsx  → Document grid (Zcash model, available/pending status)
+    ReportsSection.tsx    → Icon cards (Receipt, ClipboardCheck, Calculator, etc.)
+    DocumentsSection.tsx  → Badge cards (available/pending), 2-col grid
   contact/
-    RegisteredAgentSection.tsx → Address block + Wyoming SOS link
-    ChannelsSection.tsx   → Ecosystem property list
+    RegisteredAgentSection.tsx → Address card with MapPin icon
+    ChannelsSection.tsx   → PropertyCard grid (same as EcosystemSection)
 lib/
   utils.ts                → cn() helper (clsx)
 public/
@@ -70,7 +74,14 @@ public/
 - **Brand:** Olympia tokens — `#00ffae` green accent, `#0a0f10` dark background
 - **Surfaces:** Neutralized — `#111111` surface, `#181818` elevated, `#1a1a1a` borders
 - **Fonts:** Inter (body) + JetBrains Mono (code) via next/font/google
-- **Pattern:** Flat cards (no hover lift, no shadows), `border-t` / `divide-y` dividers
+- **Heroes:** Radial green glow (`hero-gradient` / `hero-gradient-light`), grid overlay optional
+- **Cards:** `rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)]`, hover: border brightens + `hover:-translate-y-0.5`
+- **Icons:** Lucide 20px on 40x40 `rounded-lg bg-[rgba(0,255,174,0.08)]` backgrounds — every card/list item gets a contextual icon
+- **Sections:** Alternating `--background` / `.section-alt` with `SectionDivider` gradient lines between
+- **Metrics:** Green left border (`border-l-2 border-[var(--brand-green)]`), `font-mono` labels, `text-2xl font-bold` values
+- **Badges:** `.badge-available` (green pill) / `.badge-pending` (muted pill)
+- **Animations:** `FadeIn` wrapper (Intersection Observer, `translateY(20px)→0`, 700ms ease-out, staggered delays, respects `prefers-reduced-motion`)
+- **Nav:** `backdrop-blur-md`, active link gets green dot indicator via `usePathname()`
 - **Hover:** `hover:text-white` (not `hover:text-green`)
 - **Tone:** Confident, institutional, understated — like Solana Foundation or Stellar Enterprise Fund
 - **No "Demo · Mordor" badge** — this is the real legal entity
@@ -111,6 +122,6 @@ public/
 - Add wallet connections or blockchain interactions (this is a static corporate site)
 - Add "Demo · Mordor" badges (real legal entity)
 - Use amber accent (reserved for treasury across the suite)
-- Add hover lifts, card shadows, or green glowing icons
+- Add card shadows or green glowing icons
 - Reference ECIP-1114 in rendered content
 - Commit .env files or credentials

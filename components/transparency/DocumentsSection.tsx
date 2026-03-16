@@ -1,4 +1,6 @@
 import { ExternalLink } from "lucide-react";
+import { FadeIn } from "@/components/ui/FadeIn";
+import { SectionDivider } from "@/components/ui/SectionDivider";
 
 const documents = [
   {
@@ -30,43 +32,51 @@ const documents = [
 
 export function DocumentsSection() {
   return (
-    <section className="border-t border-[var(--border-default)] py-20">
-      <div className="mx-auto max-w-3xl px-6">
-        <h2 className="text-xl font-bold">Documents</h2>
+    <>
+      <SectionDivider />
+      <section className="section-alt py-20">
+        <div className="mx-auto max-w-3xl px-6">
+          <FadeIn>
+            <h2 className="text-xl font-bold">Documents</h2>
+          </FadeIn>
 
-        <div className="mt-8 divide-y divide-[var(--divider)]">
-          {documents.map((doc) => (
-            <div
-              key={doc.name}
-              className="flex items-center justify-between py-4"
-            >
-              <div>
-                <p className="text-sm font-semibold text-white">{doc.name}</p>
-                {doc.status === "pending" && doc.note && (
-                  <p className="mt-0.5 text-xs text-[var(--text-subtle)]">
-                    {doc.note}
-                  </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {documents.map((doc, i) => (
+              <FadeIn key={doc.name} delay={i * 80}>
+                {doc.status === "available" && doc.href ? (
+                  <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] p-5">
+                    <div className="flex items-start justify-between">
+                      <p className="text-sm font-semibold">{doc.name}</p>
+                      <span className="badge-available">Available</span>
+                    </div>
+                    <a
+                      href={doc.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+                    >
+                      View document
+                      <ExternalLink size={12} />
+                    </a>
+                  </div>
+                ) : (
+                  <div className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-5">
+                    <div className="flex items-start justify-between">
+                      <p className="text-sm font-semibold">{doc.name}</p>
+                      <span className="badge-pending">Pending</span>
+                    </div>
+                    {doc.status === "pending" && "note" in doc && doc.note && (
+                      <p className="mt-2 text-xs text-[var(--text-subtle)]">
+                        {doc.note}
+                      </p>
+                    )}
+                  </div>
                 )}
-              </div>
-              {doc.status === "available" && doc.href ? (
-                <a
-                  href={doc.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
-                >
-                  View
-                  <ExternalLink size={12} />
-                </a>
-              ) : (
-                <span className="text-xs text-[var(--text-subtle)]">
-                  Pending
-                </span>
-              )}
-            </div>
-          ))}
+              </FadeIn>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

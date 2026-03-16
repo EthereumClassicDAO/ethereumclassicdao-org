@@ -1,15 +1,22 @@
+import { Shield, Building2, Scale } from "lucide-react";
+import { FadeIn } from "@/components/ui/FadeIn";
+import { SectionDivider } from "@/components/ui/SectionDivider";
+
 const positions = [
   {
+    icon: Shield,
     title: "Proof-of-Work Security",
     description:
       "The only EVM-compatible blockchain secured by Proof-of-Work consensus. Following Ethereum\u2019s transition to Proof-of-Stake, Ethereum Classic absorbed significant mining infrastructure and stands alone at the intersection of Bitcoin\u2019s security model and Ethereum\u2019s programmability.",
   },
   {
+    icon: Building2,
     title: "Institutional Infrastructure",
     description:
       "Listed on Coinbase, Kraken, Binance, and Robinhood. Institutional custody through Coinbase Custody and BitGo. Regulated securities exposure via Grayscale Ethereum Classic Trust (ETCG), established 2017.",
   },
   {
+    icon: Scale,
     title: "Regulatory Clarity",
     description:
       "Organized as a Wyoming DAO LLC under the Decentralized Autonomous Organization Supplement. Positioned for classification as a digital commodity under the CLARITY Act\u2019s mature blockchain criteria.",
@@ -18,26 +25,36 @@ const positions = [
 
 export function PositioningSection() {
   return (
-    <section className="border-t border-[var(--border-default)] py-20">
-      <div className="mx-auto max-w-5xl px-6">
-        <h2 className="text-2xl font-bold tracking-tight">
-          Why Ethereum Classic
-        </h2>
+    <>
+      <SectionDivider />
+      <section className="section-alt py-24">
+        <div className="mx-auto max-w-5xl px-6">
+          <FadeIn>
+            <h2 className="text-2xl font-bold tracking-tight">
+              Why Ethereum Classic
+            </h2>
+          </FadeIn>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {positions.map((p) => (
-            <div
-              key={p.title}
-              className="rounded-lg border border-[var(--border-default)] p-6"
-            >
-              <h3 className="text-base font-semibold">{p.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                {p.description}
-              </p>
-            </div>
-          ))}
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {positions.map((p, i) => (
+              <FadeIn key={p.title} delay={i * 100}>
+                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6 transition-all duration-200 hover:border-[rgba(255,255,255,0.12)] hover:-translate-y-0.5">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+                    <p.icon
+                      size={20}
+                      className="text-[var(--brand-green)]"
+                    />
+                  </div>
+                  <h3 className="mt-4 text-base font-semibold">{p.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
+                    {p.description}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
