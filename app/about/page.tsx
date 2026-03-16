@@ -1,22 +1,18 @@
 import type { Metadata } from "next";
-import { ScopeSection } from "@/components/about/ScopeSection";
-import { ProhibitionsSection } from "@/components/about/ProhibitionsSection";
-import { DonationsSection } from "@/components/about/DonationsSection";
-import { InstitutionalSection } from "@/components/about/InstitutionalSection";
+import { AboutSection } from "@/components/about/AboutSection";
+import { InfrastructureSection } from "@/components/about/InfrastructureSection";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Scope, responsibilities, and limitations of the Ethereum Classic DAO LLC as defined by ECIP-1114.",
+    "About Ethereum Classic DAO — the organizational entity behind Ethereum Classic's Olympia DAO, building governance infrastructure for the largest Proof-of-Work smart contract platform.",
 };
 
 export default function AboutPage() {
   return (
     <main>
-      <ScopeSection />
-      <ProhibitionsSection />
-      <DonationsSection />
-      <InstitutionalSection />
+      <AboutSection />
+      <InfrastructureSection />
     </main>
   );
 }
