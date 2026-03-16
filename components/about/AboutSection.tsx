@@ -55,18 +55,18 @@ export function AboutSection() {
 
           <div className="mt-8 space-y-6 text-base leading-relaxed text-[var(--text-secondary)]">
             <p>
-              Ethereum Classic DAO LLC is the organizational entity behind
-              Ethereum Classic&rsquo;s Olympia DAO — a governance system
-              designed to fund and coordinate development of the Ethereum
-              Classic protocol.
+              Ethereum Classic DAO LLC drives long-term development and
+              institutional adoption of Ethereum Classic — providing
+              governance, treasury management, and protocol coordination
+              for the world&rsquo;s largest Proof-of-Work smart contract
+              platform.
             </p>
             <p>
-              As the largest Proof-of-Work blockchain with native smart
-              contracts, Ethereum Classic occupies a unique position in the
-              digital asset landscape. It combines the security guarantees of
-              Proof-of-Work consensus with the programmability of the Ethereum
-              Virtual Machine — a combination that no other blockchain offers at
-              scale.
+              As the only EVM-compatible blockchain secured by Proof-of-Work
+              consensus, Ethereum Classic combines Bitcoin&rsquo;s security
+              model with Ethereum&rsquo;s programmability — a combination
+              that no other blockchain offers at scale. Something Bitcoin
+              wishes it had: native smart contracts on a Proof-of-Work chain.
             </p>
           </div>
         </FadeIn>

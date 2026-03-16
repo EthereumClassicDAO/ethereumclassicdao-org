@@ -1,12 +1,12 @@
 # Ethereum Classic DAO
 
-> The organizational entity behind Ethereum Classic's Olympia DAO — building governance infrastructure for the largest Proof-of-Work smart contract platform.
+> Driving adoption and long-term development of Ethereum Classic — the only EVM-compatible blockchain secured by Proof-of-Work.
 
 ## About
 
-Ethereum Classic DAO LLC is a Wyoming-registered DAO LLC (Filing ID 2025-001671865) that serves as the organizational entity behind Ethereum Classic's Olympia DAO.
+Ethereum Classic DAO LLC is a Wyoming-registered DAO LLC (Filing ID 2025-001671865) providing governance, treasury management, and protocol coordination for the Ethereum Classic ecosystem.
 
-Ethereum Classic (ETC) is the largest Proof-of-Work blockchain with native smart contracts. It combines the security guarantees of Proof-of-Work consensus with the programmability of the Ethereum Virtual Machine.
+Ethereum Classic (ETC) is the only Proof-of-Work blockchain with native EVM smart contracts. Every Ethereum framework, library, and IDE works with Ethereum Classic — just change the chain ID (61 mainnet, 63 Mordor testnet).
 
 ## Legal Structure
 
@@ -32,17 +32,33 @@ The Olympia upgrade introduces protocol-level treasury funding and on-chain gove
 
 ## Network Statistics
 
-- Hashrate: 170+ TH/s (absorbed significant Ethereum mining infrastructure post-Merge)
-- Major exchanges: Coinbase, Kraken, Binance, Robinhood, OKX, Bitstamp
-- Independent clients: core-geth (Go), besu (Java), fukuii (Scala)
+- Hashrate: 170+ TH/s (largest PoW smart contract network, absorbed Ethereum mining infrastructure post-Merge)
+- Markets: 300+ across Binance, Coinbase, OKX, Kraken, Upbit, Bybit, Robinhood, and 20+ exchanges
+- Independent clients: fukuii (Scala, primary), core-geth (Go), besu (Java)
 - Network origin: 2016 (oldest EVM-compatible blockchain)
+- Chain IDs: 61 (mainnet), 63 (Mordor testnet)
+- RPC: https://etc.rivet.link
 
 ## Client Implementations
 
-Three independent implementations ensure decentralization:
-- **core-geth** — Go, maintained by ETC Cooperative
-- **besu** — Java, Hyperledger project
-- **fukuii** — Scala, independent implementation
+Three independent implementations ensure zero single points of failure:
+- **fukuii** — Scala, primary Olympia client (Production, 2,300+ tests, full SNAP sync)
+- **core-geth** — Go, battle-tested stability (Maintenance mode)
+- **besu** — Java, cross-client verification (Reference test client)
+
+## Developer Tooling (Full EVM Compatibility)
+
+- Smart Contract Development: Hardhat, Foundry (forge/cast/anvil), Remix IDE, OpenZeppelin Contracts 5.x
+- Client Libraries: ethers.js v6, viem, web3.js v4
+- Wallets: MetaMask, Trust Wallet, Rabby
+- Infrastructure: Rivet (RPC at etc.rivet.link), Blockscout (etc.blockscout.com)
+- Security: Slither, Mythril, Echidna
+
+## Institutional Products
+
+- Grayscale Ethereum Classic Trust (ETCG) — regulated securities exposure since 2017, ETF pipeline in progress
+- Institutional custody: Coinbase Custody, BitGo
+- 300+ exchange markets: Binance, Coinbase, OKX, Kraken, Upbit, Bybit, Robinhood, and 20+ more
 
 ## Regulatory Positioning
 

@@ -16,9 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 const SITE_URL = "https://ethereumclassicdao.org";
 const TITLE =
-  "Ethereum Classic DAO — Governance Infrastructure for Ethereum Classic";
+  "Ethereum Classic DAO — Driving Adoption of the Largest PoW Smart Contract Platform";
 const DESCRIPTION =
-  "Ethereum Classic DAO LLC is the organizational entity behind Ethereum Classic's Olympia DAO, building governance infrastructure for the largest Proof-of-Work smart contract platform.";
+  "Ethereum Classic DAO LLC provides governance, treasury management, and protocol coordination for Ethereum Classic — the only EVM-compatible blockchain secured by Proof-of-Work.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -111,7 +111,7 @@ const jsonLd = {
   url: "https://ethereumclassicdao.org",
   logo: "https://ethereumclassicdao.org/logo.svg",
   description:
-    "Wyoming-registered DAO LLC building governance infrastructure for Ethereum Classic, the largest Proof-of-Work smart contract platform.",
+    "Wyoming-registered DAO LLC providing governance, treasury management, and protocol coordination for Ethereum Classic — the only EVM-compatible blockchain secured by Proof-of-Work.",
   foundingDate: "2025",
   legalName: "Ethereum Classic DAO LLC",
   address: {

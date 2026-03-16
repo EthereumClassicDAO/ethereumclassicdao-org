@@ -6,7 +6,7 @@ const stats = [
     value: "170+",
     unit: "TH/s",
     label: "Network Hashrate",
-    context: "Post-Merge mining infrastructure",
+    context: "Largest PoW smart contract network",
   },
   {
     value: "300+",
@@ -16,7 +16,7 @@ const stats = [
   {
     value: "3",
     label: "Independent Clients",
-    context: "core-geth, besu, fukuii",
+    context: "fukuii, core-geth, besu — zero single points of failure",
   },
   {
     value: "2016",
