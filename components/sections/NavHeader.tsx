@@ -46,7 +46,7 @@ export function NavHeader() {
             </Link>
           ))}
           <span className="hidden text-xs font-mono text-[var(--text-subtle)] lg:inline">
-            Est. 2025 · Wyoming
+            Wyoming DAO LLC
           </span>
         </div>
 
