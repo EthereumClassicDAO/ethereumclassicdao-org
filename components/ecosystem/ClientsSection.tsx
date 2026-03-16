@@ -6,7 +6,7 @@ const primaryClient = {
   language: "Scala",
   description:
     "The Olympia primary client — built from scratch as an independent ETC implementation in Scala. Full SNAP sync, 2,300+ tests, and first-class Olympia protocol support. Fukuii is the reference client for the Olympia governance upgrade.",
-  github: "https://github.com/nicobao/fukuii",
+  github: "https://github.com/ethereumclassic/fukuii",
   status: "Production",
   featured: true,
 };
@@ -17,7 +17,7 @@ const secondaryClients = [
     language: "Go",
     description:
       "Long-standing ETC client forked from go-ethereum. Full ETC protocol history and battle-tested stability. Maintenance mode — critical fixes only.",
-    github: "https://github.com/etclabscore/core-geth",
+    github: "https://github.com/ethereumclassic/core-geth",
     status: "Maintenance",
   },
   {
@@ -25,7 +25,7 @@ const secondaryClients = [
     language: "Java",
     description:
       "Hyperledger Besu with ETC protocol support. JDK 21 LTS. Used as a reference test client for cross-client protocol verification.",
-    github: "https://github.com/hyperledger/besu",
+    github: "https://github.com/ethereumclassic/besu",
     status: "Reference",
   },
 ];
