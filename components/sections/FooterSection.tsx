@@ -3,8 +3,11 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 
 const siteLinks = [
   { label: "About", href: "/about" },
+  { label: "Governance", href: "/governance" },
+  { label: "Ecosystem", href: "/ecosystem" },
   { label: "Disclosures", href: "/transparency" },
   { label: "Contact", href: "/contact" },
+  { label: "Privacy", href: "/privacy" },
 ];
 
 const ecosystemLinks = [
@@ -26,8 +29,8 @@ export function FooterSection() {
   return (
     <>
       <SectionDivider />
-      <footer className="section-alt py-16">
-        <div className="mx-auto max-w-6xl px-6">
+      <footer className="section-alt noise-overlay relative py-16">
+        <div className="relative z-10 mx-auto max-w-6xl px-6">
           <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <span className="flex items-center gap-2 text-sm font-semibold tracking-tight">

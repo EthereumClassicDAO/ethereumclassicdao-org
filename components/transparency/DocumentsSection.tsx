@@ -34,7 +34,7 @@ export function DocumentsSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-alt py-20">
+      <section className="section-gradient py-20">
         <div className="mx-auto max-w-3xl px-6">
           <FadeIn>
             <h2 className="text-xl font-bold">Documents</h2>
@@ -44,7 +44,7 @@ export function DocumentsSection() {
             {documents.map((doc, i) => (
               <FadeIn key={doc.name} delay={i * 80}>
                 {doc.status === "available" && doc.href ? (
-                  <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] p-5">
+                  <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] shadow-[0_0_20px_rgba(0,255,174,0.05)] p-5">
                     <div className="flex items-start justify-between">
                       <p className="text-sm font-semibold">{doc.name}</p>
                       <span className="badge-available">Available</span>

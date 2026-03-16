@@ -3,8 +3,8 @@ import { FadeIn } from "@/components/ui/FadeIn";
 
 export function RegisteredAgentSection() {
   return (
-    <section className="hero-gradient-light pt-32 pb-20">
-      <div className="mx-auto max-w-3xl px-6">
+    <section className="hero-gradient noise-overlay relative pt-32 pb-20">
+      <div className="relative z-10 mx-auto max-w-3xl px-6">
         <FadeIn>
           <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
             Get in Touch
@@ -20,7 +20,7 @@ export function RegisteredAgentSection() {
         <FadeIn>
           <h2 className="mt-12 text-xl font-bold">Registered Agent</h2>
 
-          <div className="mt-6 rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6">
+          <div className="mt-6 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] shadow-[0_0_20px_rgba(0,255,174,0.05)] p-6">
             <div className="flex gap-4">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
                 <MapPin size={20} className="text-[var(--brand-green)]" />

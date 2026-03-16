@@ -40,10 +40,19 @@ export function InfrastructureSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-alt py-20">
-        <div className="mx-auto max-w-3xl px-6">
+      <section className="section-gradient relative geo-circle py-28">
+        <div className="relative z-10 mx-auto max-w-3xl px-6">
           <FadeIn>
-            <h2 className="text-xl font-bold">
+            <p className="text-4xl font-bold font-mono text-[var(--brand-green)]">
+              170+ <span className="text-lg">TH/s</span>
+            </p>
+            <p className="mt-1 text-sm text-[var(--text-muted)]">
+              Network hashrate — absorbed significant Ethereum mining infrastructure post-Merge
+            </p>
+          </FadeIn>
+
+          <FadeIn>
+            <h2 className="mt-12 text-xl font-bold">
               Institutional Infrastructure
             </h2>
             <p className="mt-3 text-sm text-[var(--text-muted)]">

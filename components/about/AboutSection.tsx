@@ -22,13 +22,13 @@ const buildItems = [
 
 export function AboutSection() {
   return (
-    <section className="hero-gradient-light pt-32 pb-20">
-      <div className="mx-auto max-w-3xl px-6">
+    <section className="hero-gradient noise-overlay relative pt-32 pb-20">
+      <div className="relative z-10 mx-auto max-w-3xl px-6">
         <FadeIn>
           <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
             About
           </p>
-          <h1 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
+          <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
             About Ethereum Classic DAO
           </h1>
 
@@ -53,7 +53,7 @@ export function AboutSection() {
         <FadeIn>
           <div className="mt-16">
             <h2 className="text-xl font-bold">The Olympia Upgrade</h2>
-            <div className="mt-4 border-l-2 border-[var(--brand-green)] pl-6 space-y-4 text-base leading-relaxed text-[var(--text-secondary)]">
+            <div className="mt-4 rounded-xl p-8 border border-[var(--border-brand)] bg-[rgba(0,255,174,0.02)] space-y-4 text-base leading-relaxed text-[var(--text-secondary)]">
               <p>
                 The Olympia hard fork introduces protocol-level treasury
                 funding, decentralized governance, and smart contract-based
