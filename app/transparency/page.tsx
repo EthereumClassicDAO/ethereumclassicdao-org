@@ -1,20 +1,18 @@
 import type { Metadata } from "next";
 import { ReportsSection } from "@/components/transparency/ReportsSection";
-import { AuditTrailSection } from "@/components/transparency/AuditTrailSection";
-import { DisclosuresSection } from "@/components/transparency/DisclosuresSection";
+import { DocumentsSection } from "@/components/transparency/DocumentsSection";
 
 export const metadata: Metadata = {
-  title: "Transparency",
+  title: "Disclosures",
   description:
-    "Public reports, hash-bound auditability, and required disclosures for the Ethereum Classic DAO LLC.",
+    "Public reports and disclosure documents for Ethereum Classic DAO LLC.",
 };
 
 export default function TransparencyPage() {
   return (
     <main>
       <ReportsSection />
-      <AuditTrailSection />
-      <DisclosuresSection />
+      <DocumentsSection />
     </main>
   );
 }
