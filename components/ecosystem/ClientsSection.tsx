@@ -1,30 +1,32 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
-const clients = [
+const primaryClient = {
+  name: "fukuii",
+  language: "Scala",
+  description:
+    "The Olympia primary client — built from scratch as an independent ETC implementation in Scala. Full SNAP sync, 2,300+ tests, and first-class Olympia protocol support. Fukuii is the reference client for the Olympia governance upgrade.",
+  github: "https://github.com/nicobao/fukuii",
+  status: "Production",
+  featured: true,
+};
+
+const secondaryClients = [
   {
     name: "core-geth",
     language: "Go",
     description:
-      "The primary Ethereum Classic client, maintained by the ETC Cooperative. Fork of go-ethereum with full ETC protocol support.",
+      "Long-standing ETC client forked from go-ethereum. Full ETC protocol history and battle-tested stability. Maintenance mode — critical fixes only.",
     github: "https://github.com/etclabscore/core-geth",
-    status: "Production",
+    status: "Maintenance",
   },
   {
     name: "besu",
     language: "Java",
     description:
-      "Enterprise-grade Ethereum client by Hyperledger. Supports ETC with full protocol compatibility. JDK 21 LTS.",
+      "Hyperledger Besu with ETC protocol support. JDK 21 LTS. Used as a reference test client for cross-client protocol verification.",
     github: "https://github.com/hyperledger/besu",
-    status: "Production",
-  },
-  {
-    name: "fukuii",
-    language: "Scala",
-    description:
-      "Independent ETC client built from scratch. SNAP sync, 2,300+ tests. The third independent implementation for network resilience.",
-    github: "https://github.com/nicobao/fukuii",
-    status: "Alpha",
+    status: "Reference",
   },
 ];
 
@@ -40,13 +42,49 @@ export function ClientsSection() {
             </h2>
             <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
               Three independent client implementations ensure decentralization
-              and resilience. No single implementation is a point of failure.
+              and resilience. Fukuii leads Olympia protocol development.
             </p>
           </FadeIn>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {clients.map((client, i) => (
-              <FadeIn key={client.name} delay={i * 100}>
+          {/* Primary client — featured */}
+          <FadeIn delay={100}>
+            <div className="mt-10 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] shadow-[0_0_24px_rgba(0,255,174,0.07)] p-8 transition-colors hover:border-[var(--border-glow)]">
+              <div className="flex flex-wrap items-start justify-between gap-4">
+                <div>
+                  <div className="flex items-center gap-3">
+                    <p className="text-xl font-bold font-mono">
+                      {primaryClient.name}
+                    </p>
+                    <span className="badge-available">
+                      {primaryClient.status}
+                    </span>
+                    <span className="inline-flex items-center rounded-full bg-[rgba(0,255,174,0.12)] px-2.5 py-0.5 text-xs font-semibold text-[var(--brand-green)]">
+                      Olympia Primary
+                    </span>
+                  </div>
+                  <p className="mt-1 text-sm text-[var(--text-subtle)]">
+                    {primaryClient.language}
+                  </p>
+                </div>
+              </div>
+              <p className="mt-4 text-base leading-relaxed text-[var(--text-muted)] max-w-2xl">
+                {primaryClient.description}
+              </p>
+              <a
+                href={primaryClient.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+              >
+                View on GitHub →
+              </a>
+            </div>
+          </FadeIn>
+
+          {/* Secondary clients */}
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {secondaryClients.map((client, i) => (
+              <FadeIn key={client.name} delay={(i + 2) * 100}>
                 <div className="flex flex-col rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6 transition-colors hover:border-[var(--border-glow)]">
                   <div className="flex items-start justify-between">
                     <div>
@@ -57,15 +95,7 @@ export function ClientsSection() {
                         {client.language}
                       </p>
                     </div>
-                    <span
-                      className={
-                        client.status === "Production"
-                          ? "badge-available"
-                          : "badge-active"
-                      }
-                    >
-                      {client.status}
-                    </span>
+                    <span className="badge-pending">{client.status}</span>
                   </div>
                   <p className="mt-4 flex-1 text-sm leading-relaxed text-[var(--text-muted)]">
                     {client.description}

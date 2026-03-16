@@ -1,0 +1,64 @@
+# Ethereum Classic DAO
+
+> The organizational entity behind Ethereum Classic's Olympia DAO — building governance infrastructure for the largest Proof-of-Work smart contract platform.
+
+## About
+
+Ethereum Classic DAO LLC is a Wyoming-registered DAO LLC (Filing ID 2025-001671865) that serves as the organizational entity behind Ethereum Classic's Olympia DAO.
+
+Ethereum Classic (ETC) is the largest Proof-of-Work blockchain with native smart contracts. It combines the security guarantees of Proof-of-Work consensus with the programmability of the Ethereum Virtual Machine.
+
+## Legal Structure
+
+- **Entity:** Ethereum Classic DAO LLC
+- **Jurisdiction:** Wyoming, United States
+- **Filing ID:** 2025-001671865
+- **Registered Agent:** 30 N Gould St Ste R, Sheridan, WY 82801
+
+## Governance — Olympia Framework
+
+The Olympia upgrade introduces protocol-level treasury funding and on-chain governance to Ethereum Classic.
+
+**Treasury Funding:** 100% of EIP-1559 basefee funds the Olympia Treasury. Block rewards remain untouched — miners are unaffected.
+
+**Governance Process:**
+1. Propose — Community members submit governance proposals on-chain (permissionless)
+2. Vote — Soulbound NFT holders cast weighted on-chain votes
+3. Queue — Approved proposals enter a security timelock
+4. Execute — After timelock, proposals execute automatically on-chain
+5. Disclose — All outcomes publicly reported and verifiable
+
+**Safeguards:** Configurable timelock, three-layer on-chain sanctions screening, soulbound (non-transferable) voting tokens.
+
+## Network Statistics
+
+- Hashrate: 170+ TH/s (absorbed significant Ethereum mining infrastructure post-Merge)
+- Major exchanges: Coinbase, Kraken, Binance, Robinhood, OKX, Bitstamp
+- Independent clients: core-geth (Go), besu (Java), fukuii (Scala)
+- Network origin: 2016 (oldest EVM-compatible blockchain)
+
+## Client Implementations
+
+Three independent implementations ensure decentralization:
+- **core-geth** — Go, maintained by ETC Cooperative
+- **besu** — Java, Hyperledger project
+- **fukuii** — Scala, independent implementation
+
+## Regulatory Positioning
+
+- Wyoming DAO LLC structure provides limited liability protection
+- ETC positioned for "digital commodity" classification under the proposed CLARITY Act
+- Grayscale Ethereum Classic Trust (ETCG) provides regulated securities exposure
+
+## Web Properties
+
+- ethereumclassicdao.org — This site (institutional)
+- olympiadao.org — Governance landing page
+- olympiatreasury.org — Treasury monitoring dashboard
+- app.olympiadao.org — Proposal submission, voting, and execution
+- github.com/EthereumClassicDAO — Open-source repositories
+
+## Contact
+
+Registered Agent: 30 N Gould St Ste R, Sheridan, WY 82801, United States
+Wyoming Secretary of State Filing: https://wyobiz.wyo.gov/business/FilingDetails.aspx?eFNum=101157225123250204055197221085227098244002050082

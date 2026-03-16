@@ -14,22 +14,19 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://ethereumclassicdao.org";
+const TITLE =
+  "Ethereum Classic DAO — Governance Infrastructure for Ethereum Classic";
+const DESCRIPTION =
+  "Ethereum Classic DAO LLC is the organizational entity behind Ethereum Classic's Olympia DAO, building governance infrastructure for the largest Proof-of-Work smart contract platform.";
+
 export const metadata: Metadata = {
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "48x48" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
-    apple: "/apple-touch-icon.png",
-  },
-  manifest: "/site.webmanifest",
+  metadataBase: new URL(SITE_URL),
   title: {
-    default:
-      "Ethereum Classic DAO — Building Infrastructure for the Largest Proof-of-Work Smart Contract Platform",
+    default: TITLE,
     template: "%s | Ethereum Classic DAO",
   },
-  description:
-    "Ethereum Classic DAO LLC is the organizational entity behind Ethereum Classic's Olympia DAO, building governance infrastructure for the largest Proof-of-Work smart contract platform.",
+  description: DESCRIPTION,
   keywords: [
     "Ethereum Classic",
     "ETC",
@@ -38,44 +35,95 @@ export const metadata: Metadata = {
     "Olympia DAO",
     "Proof-of-Work",
     "smart contracts",
-    "blockchain infrastructure",
+    "blockchain governance",
     "digital commodity",
     "CLARITY Act",
+    "blockchain infrastructure",
   ],
   authors: [
     { name: "Cody Burns", url: "https://github.com/realcodywburns" },
     { name: "Chris Mercer", url: "https://github.com/chris-mercer" },
   ],
+  creator: "Ethereum Classic DAO LLC",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.webmanifest",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ethereumclassicdao.org",
+    url: SITE_URL,
     siteName: "Ethereum Classic DAO",
-    title:
-      "Ethereum Classic DAO — Building Infrastructure for the Largest Proof-of-Work Smart Contract Platform",
-    description:
-      "The organizational entity behind Ethereum Classic's Olympia DAO. Wyoming DAO LLC building critical blockchain infrastructure.",
+    title: TITLE,
+    description: DESCRIPTION,
     images: [
       {
-        url: "https://ethereumclassicdao.org/og-image.png",
+        url: `${SITE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Ethereum Classic DAO",
+        alt: "Ethereum Classic DAO — Governance Infrastructure for Ethereum Classic",
+        type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ethereum Classic DAO",
-    description:
-      "Building governance infrastructure for the largest Proof-of-Work smart contract platform. Wyoming DAO LLC.",
-    images: ["https://ethereumclassicdao.org/og-image.png"],
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [`${SITE_URL}/og-image.png`],
+  },
+  alternates: {
+    canonical: SITE_URL,
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
-  metadataBase: new URL("https://ethereumclassicdao.org"),
+  appleWebApp: {
+    capable: true,
+    title: "ETC DAO",
+    statusBarStyle: "black-translucent",
+  },
+  formatDetection: {
+    telephone: false,
+    email: false,
+  },
+  other: {
+    "color-scheme": "dark",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Ethereum Classic DAO LLC",
+  alternateName: "ETC DAO",
+  url: "https://ethereumclassicdao.org",
+  logo: "https://ethereumclassicdao.org/logo.svg",
+  description:
+    "Wyoming-registered DAO LLC building governance infrastructure for Ethereum Classic, the largest Proof-of-Work smart contract platform.",
+  foundingDate: "2025",
+  legalName: "Ethereum Classic DAO LLC",
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "WY",
+    addressCountry: "US",
+  },
+  sameAs: [
+    "https://olympiadao.org",
+    "https://github.com/EthereumClassicDAO",
+    "https://app.olympiadao.org",
+  ],
 };
 
 export default function RootLayout({
@@ -85,6 +133,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
