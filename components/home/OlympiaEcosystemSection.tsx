@@ -1,4 +1,4 @@
-import { Building2, Vote, Landmark, Cpu } from "lucide-react";
+import { Building2, Vote, Landmark, Network } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
@@ -31,12 +31,12 @@ const entities = [
     highlighted: false,
   },
   {
-    icon: Cpu,
-    name: "Olympia Hard Fork",
-    role: "Protocol Upgrade",
+    icon: Network,
+    name: "Ethereum Classic",
+    role: "Network Protocol",
     description:
-      "The most significant protocol upgrade in Ethereum Classic's history. EIP-1559 fee market, treasury funding mechanism, and governance integration coordinated across three independent client implementations.",
-    href: "https://app.olympiadao.org",
+      "The largest Proof-of-Work smart contract platform. Coordinating network upgrades to maintain EVM protocol parity — ensuring Ethereum Classic delivers a best-in-class EVM experience with every protocol upgrade.",
+    href: "https://ethereumclassic.org",
     highlighted: false,
   },
 ];
@@ -52,8 +52,8 @@ export function OlympiaEcosystemSection() {
               Coordinating Organizations
             </h2>
             <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
-              Three coordinating organizations and one protocol upgrade work
-              together to govern and develop Ethereum Classic.
+              Three coordinating organizations working together to govern
+              and advance the Ethereum Classic network.
             </p>
           </FadeIn>
 
