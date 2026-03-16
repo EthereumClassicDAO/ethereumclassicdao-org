@@ -4,28 +4,28 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 
 const pillars = [
   {
-    icon: Vote,
-    title: "Governance Infrastructure",
+    icon: GitBranch,
+    title: "Core Client Development",
     description:
-      "On-chain proposal submission, NFT-weighted voting, and transparent execution through the Olympia Governor contract. Every governance action is publicly verifiable.",
+      "Maintaining the core client software that powers the Ethereum Classic network. Multiple independent implementations ensure zero single points of failure. The Olympia hard fork introduces EIP-1559 fee markets, protocol-level treasury funding, and on-chain governance.",
   },
   {
-    icon: GitBranch,
-    title: "Protocol Development",
+    icon: Vote,
+    title: "Critical Infrastructure",
     description:
-      "Coordinating three independent client implementations — fukuii (Scala), core-geth (Go), and besu (Java) — ensuring zero single points of failure across the network.",
+      "On-chain governance with proposal submission, NFT-weighted voting, and transparent execution through the Olympia Governor contract. Protocol-funded treasury via EIP-1559 basefee — sustainable funding without touching block rewards.",
   },
   {
     icon: Pickaxe,
-    title: "Earn Block Rewards",
+    title: "Hashrate Incentives",
     description:
-      "Secure Ethereum Classic and earn block rewards by running fukuii. GPU and ASIC compatible mining on the only Proof-of-Work network with native smart contracts.",
+      "170+ TH/s securing the only Proof-of-Work network with native smart contracts. GPU and ASIC compatible mining. Block rewards remain untouched by the Olympia upgrade — miners are unaffected while the network gains governance and treasury infrastructure.",
   },
   {
     icon: Scale,
-    title: "Regulatory Compliance & Market Access",
+    title: "US Regulatory Compliance",
     description:
-      "Wyoming DAO LLC framework ensures US regulatory compliance. Aligned with the CLARITY Act (ETC as digital commodity) and GENIUS Act (stablecoins on ETC's EVM). Grayscale ETCG since 2017. 300+ exchange markets.",
+      "Wyoming DAO LLC framework ensures proper reporting and compliance with US federal and state regulatory frameworks. Aligned with the CLARITY Act (ETC as digital commodity) and GENIUS Act (stablecoins on ETC's EVM). Grayscale ETCG since 2017. 300+ exchange markets.",
   },
 ];
 

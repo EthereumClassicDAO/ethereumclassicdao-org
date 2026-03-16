@@ -32,10 +32,10 @@ const entities = [
   },
   {
     icon: Cpu,
-    name: "Olympia Protocol",
-    role: "Hard Fork Upgrade",
+    name: "Olympia Hard Fork",
+    role: "Protocol Upgrade",
     description:
-      "EIP-1559 fee market, treasury funding mechanism, and governance integration coordinated across three independent client implementations.",
+      "The most significant protocol upgrade in Ethereum Classic's history. EIP-1559 fee market, treasury funding mechanism, and governance integration coordinated across three independent client implementations.",
     href: "https://app.olympiadao.org",
     highlighted: false,
   },
@@ -52,8 +52,8 @@ export function OlympiaEcosystemSection() {
               Coordinating Organizations
             </h2>
             <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
-              Four coordinating organizations work together to govern and
-              develop Ethereum Classic.
+              Three coordinating organizations and one protocol upgrade work
+              together to govern and develop Ethereum Classic.
             </p>
           </FadeIn>
 
