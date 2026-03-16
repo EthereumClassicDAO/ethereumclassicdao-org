@@ -126,7 +126,7 @@ export function FooterSection() {
           <div className="section-divider mx-auto mt-12 mb-6 max-w-5xl" />
 
           <p className="text-xs text-[var(--text-subtle)]">
-            &copy; 2025 Ethereum Classic DAO LLC
+            &copy; 2026 Ethereum Classic DAO LLC
           </p>
         </div>
       </footer>

@@ -12,12 +12,12 @@ const infrastructure = [
   {
     icon: ArrowLeftRight,
     category: "Global Exchange Coverage",
-    details: "300+ markets across Binance, Coinbase, OKX, Kraken, Upbit, Bybit, Bitget, Gate, and 20+ more exchanges",
+    details: "300+ active markets across 20+ major global exchanges. Available on every leading trading platform.",
   },
   {
     icon: Lock,
     category: "Institutional Custody",
-    details: "Coinbase Custody, BitGo",
+    details: "Institutional-grade digital asset custody from leading custodians. Multi-signature security, insurance coverage, and regulatory compliance.",
   },
   {
     icon: TrendingUp,

@@ -14,14 +14,14 @@ const products = [
     icon: Lock,
     title: "Institutional Custody",
     description:
-      "Coinbase Custody and BitGo provide institutional-grade storage solutions for Ethereum Classic. Multi-signature security, insurance coverage, and regulatory compliance.",
-    detail: "Coinbase Custody · BitGo",
+      "Institutional-grade digital asset custody from industry-leading custodians. Multi-signature security, insurance coverage, and regulatory compliance for enterprise and fund managers.",
+    detail: "Leading Custodians · Enterprise",
   },
   {
     icon: ArrowLeftRight,
     title: "Global Exchange Coverage",
     description:
-      "300+ active markets across Binance, Coinbase, OKX, Kraken, Upbit, Bybit, Bitget, Gate, Robinhood, and 20+ more exchanges worldwide.",
+      "300+ active markets across 20+ major global exchanges. Available on every leading trading platform and retail brokerage worldwide.",
     detail: "300+ Markets · 20+ Exchanges",
   },
 ];

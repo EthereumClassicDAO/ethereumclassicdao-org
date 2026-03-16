@@ -1,12 +1,12 @@
 # Ethereum Classic DAO
 
-> Maintaining core software, critical infrastructure, and hashrate incentives for Ethereum Classic — the only EVM-compatible blockchain secured by Proof-of-Work. Wyoming DAO LLC ensuring US regulatory compliance.
+> Building the software and infrastructure for global adoption of Ethereum Classic — the largest Proof-of-Work smart contract platform. Wyoming DAO LLC ensuring US regulatory compliance.
 
 ## About
 
-Ethereum Classic DAO LLC is the legal wrapper for the Olympia DAO under Wyoming's DAO LLC framework (Filing ID 2025-001671865). The LLC maintains core software, critical infrastructure, and hashrate incentives for the world's largest Proof-of-Work smart contract platform. It ensures proper reporting and compliance with US federal and state regulatory frameworks.
+Ethereum Classic DAO LLC is the legal entity for the Olympia DAO under Wyoming's DAO LLC framework (Filing ID 2025-001671865). The LLC builds software, ecosystem infrastructure, and hashrate incentives for the world's largest Proof-of-Work smart contract platform — while ensuring proper reporting and compliance with US federal and state regulatory frameworks.
 
-Ethereum Classic (ETC) is the only Proof-of-Work blockchain with native EVM smart contracts. Every Ethereum framework, library, and IDE works with Ethereum Classic — just change the chain ID (61 mainnet, 63 Mordor testnet).
+Ethereum Classic (ETC) is the only Proof-of-Work blockchain with native EVM smart contracts. Every Ethereum framework, library, and IDE works with Ethereum Classic — just change the chain ID (61 mainnet, 63 Mordor testnet). Network upgrades are coordinated to maintain EVM protocol parity, delivering a best-in-class EVM experience.
 
 ETC is positioned not just as a digital commodity under the CLARITY Act, but as a compliant smart contract platform where regulated stablecoins (GENIUS Act) and ETF-aligned ERC-20 tokens can operate on a Proof-of-Work foundation.
 
@@ -37,32 +37,31 @@ The Olympia upgrade introduces protocol-level treasury funding and on-chain gove
 ## Network Statistics
 
 - Hashrate: 170+ TH/s (largest PoW smart contract network, absorbed Ethereum mining infrastructure post-Merge)
-- Markets: 300+ across Binance, Coinbase, OKX, Kraken, Upbit, Bybit, Robinhood, and 20+ exchanges
+- Markets: 300+ active markets across 20+ major global exchanges
 - Independent clients: fukuii (Scala, primary), core-geth (Go), besu (Java)
 - Network origin: July 30, 2015 (genesis block — oldest EVM-compatible blockchain)
 - Chain IDs: 61 (mainnet), 63 (Mordor testnet)
-- RPC: https://etc.rivet.link
 
 ## Client Implementations
 
 Three independent implementations ensure zero single points of failure:
-- **fukuii** — Scala, primary Olympia client (Production, 2,300+ tests, full SNAP sync)
-- **core-geth** — Go, battle-tested stability (Maintenance mode)
-- **besu** — Java, cross-client verification (Reference test client)
+- **fukuii** — Purpose-built for Ethereum Classic. Independent implementation designed for performance, security, and protocol parity. Primary client for the Olympia upgrade.
+- **core-geth** — The longest-running ETC client, forked from go-ethereum. Battle-tested stability across every network upgrade since genesis.
+- **besu** — Enterprise-grade client built on Hyperledger Besu. Cross-client protocol verification and consensus compatibility validation.
 
 ## Developer Tooling (Full EVM Compatibility)
 
 - Smart Contract Development: Hardhat, Foundry (forge/cast/anvil), Remix IDE, OpenZeppelin Contracts 5.x
 - Client Libraries: ethers.js v6, viem, web3.js v4
-- Wallets: Ledger, Trezor, MetaMask, Trust Wallet, Rabby, Exodus, and 50+ wallet integrations
-- Infrastructure: Rivet (RPC at etc.rivet.link), Blockscout (etc.blockscout.com)
+- Wallets: 50+ wallet integrations including hardware wallets, browser extensions, and mobile wallets
+- Infrastructure: Public RPC endpoints, block explorers, oracle networks
 - Security: Slither, Mythril, Echidna
 
 ## Institutional Products
 
 - Grayscale Ethereum Classic Trust (ETCG) — regulated securities exposure since 2017, ETF conversion pipeline in progress
-- Institutional custody: Coinbase Custody, BitGo
-- 300+ exchange markets: Binance, Coinbase, OKX, Kraken, Upbit, Bybit, Robinhood, and 20+ more
+- Institutional-grade digital asset custody from leading custodians
+- 300+ active markets across 20+ major global exchanges and retail brokerages worldwide
 
 ## Regulatory Positioning
 

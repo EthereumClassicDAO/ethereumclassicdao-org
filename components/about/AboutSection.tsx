@@ -31,7 +31,7 @@ const positions = [
     icon: Building2,
     title: "Institutional Infrastructure",
     description:
-      "Listed on Coinbase, Kraken, Binance, and Robinhood. Institutional custody through Coinbase Custody and BitGo. Regulated securities exposure via Grayscale Ethereum Classic Trust (ETCG), established 2017, with ETF pipeline in progress.",
+      "Listed on all major global exchanges with 300+ active markets. Institutional-grade custody from leading digital asset custodians. Regulated securities exposure via the Grayscale Ethereum Classic Trust (ETCG), established 2017, with ETF conversion pipeline in progress.",
   },
   {
     icon: Scale,

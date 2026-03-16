@@ -33,8 +33,9 @@ export function MissionSection({ stats }: { stats: EtcStats }) {
             Ethereum Classic DAO
           </h1>
           <p className="mt-6 max-w-2xl text-xl text-[var(--text-secondary)] md:text-2xl">
-            Driving adoption and long-term development of Ethereum Classic
-            &mdash; the largest Proof-of-Work smart contract platform.
+            Building the software and infrastructure for global adoption of
+            Ethereum Classic &mdash; the largest Proof-of-Work smart contract
+            platform.
           </p>
           <p className="mt-4 max-w-2xl text-base text-[var(--text-muted)]">
             Maintaining core software, critical infrastructure, and ecosystem

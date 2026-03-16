@@ -8,17 +8,17 @@ const focusAreas = [
   {
     question: "Core Client Development",
     answer:
-      "Maintaining and coordinating the core client software that powers the Ethereum Classic network. Multiple independent implementations ensure no single point of failure. The Olympia hard fork introduces EIP-1559 fee markets, protocol-level treasury funding, and on-chain governance — the most significant upgrade in Ethereum Classic's history.",
+      "Maintaining and coordinating the core client software that runs the Ethereum Classic network. Multiple independent implementations ensure no single point of failure. Coordinating network upgrades to maintain EVM protocol parity — ensuring Ethereum Classic delivers a best-in-class EVM experience with every protocol upgrade.",
   },
   {
-    question: "Critical Infrastructure",
+    question: "Ecosystem Infrastructure",
     answer:
-      "On-chain governance infrastructure with a structured proposal lifecycle from submission through execution. Proposals pass through NFT-weighted voting, security timelock, and multi-layer safeguard checks. Protocol-funded treasury via EIP-1559 basefee — 100% of transaction basefees flow to the Olympia Treasury, creating sustainable funding without token inflation or block reward changes.",
+      "Building and integrating the infrastructure that makes Ethereum Classic accessible to everyone — from public RPC endpoints and block explorers to oracle networks, institutional custody integrations, and on-chain governance. Protocol-funded treasury via EIP-1559 basefee creates sustainable funding without token inflation or block reward changes.",
   },
   {
     question: "Hashrate Incentive Alignment",
     answer:
-      "Ensuring network security through mining economics. 170+ TH/s of mining infrastructure absorbed significant Ethereum hardware post-Merge. The Olympia upgrade preserves block rewards entirely for miners while adding treasury and governance capabilities funded by EIP-1559 basefees. GPU and ASIC compatible — the only Proof-of-Work network with native smart contracts.",
+      "Ensuring network security through mining economics. 170+ TH/s of mining infrastructure absorbed significant Ethereum hardware post-Merge. The Olympia upgrade preserves block rewards entirely for miners while adding governance and treasury capabilities funded by EIP-1559 basefees. GPU and ASIC compatible — the largest Proof-of-Work network with native smart contracts.",
   },
   {
     question: "US Regulatory Compliance",
@@ -36,8 +36,9 @@ export function WhatWeDoSection() {
           <FadeIn>
             <h2 className="text-3xl font-bold tracking-tight">What We Do</h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Four pillars of the Olympia DAO &mdash; core software, critical
-              infrastructure, hashrate incentives, and US regulatory compliance.
+              Building everything Ethereum Classic needs for global adoption
+              &mdash; from the core protocol to the infrastructure and
+              regulatory framework.
             </p>
           </FadeIn>
 

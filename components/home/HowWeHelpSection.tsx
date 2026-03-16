@@ -7,13 +7,13 @@ const pillars = [
     icon: GitBranch,
     title: "Core Client Development",
     description:
-      "Maintaining the core client software that powers the Ethereum Classic network. Multiple independent implementations ensure zero single points of failure. The Olympia hard fork introduces EIP-1559 fee markets, protocol-level treasury funding, and on-chain governance.",
+      "Maintaining and coordinating the core client software that runs the Ethereum Classic network. Multiple independent implementations ensure resilience and decentralization across 170+ TH/s of mining infrastructure.",
   },
   {
     icon: Vote,
-    title: "Critical Infrastructure",
+    title: "Ecosystem Infrastructure",
     description:
-      "On-chain governance with proposal submission, NFT-weighted voting, and transparent execution through the Olympia Governor contract. Protocol-funded treasury via EIP-1559 basefee — sustainable funding without touching block rewards.",
+      "Building and integrating the infrastructure layer — block explorers, public RPC endpoints, oracle networks, institutional custody, and developer tooling. Full EVM compatibility means every Ethereum tool works with Ethereum Classic.",
   },
   {
     icon: Pickaxe,
@@ -25,7 +25,7 @@ const pillars = [
     icon: Scale,
     title: "US Regulatory Compliance",
     description:
-      "Wyoming DAO LLC framework ensures proper reporting and compliance with US federal and state regulatory frameworks. Aligned with the CLARITY Act (ETC as digital commodity) and GENIUS Act (stablecoins on ETC's EVM). Grayscale ETCG since 2017. 300+ exchange markets.",
+      "Wyoming DAO LLC framework ensures proper reporting and compliance with US federal and state regulatory frameworks. Positioned under the CLARITY Act (ETC as digital commodity) and the GENIUS Act (regulated stablecoins on ETC's EVM). 300+ exchange markets worldwide.",
   },
 ];
 
@@ -40,8 +40,8 @@ export function HowWeHelpSection() {
               How We Help
             </h2>
             <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
-              The legal entity behind the Olympia DAO &mdash; maintaining core
-              software, critical infrastructure, and hashrate incentives while
+              Building the software and infrastructure that Ethereum Classic
+              needs to scale from individuals to institutions &mdash; while
               ensuring US regulatory compliance.
             </p>
           </FadeIn>

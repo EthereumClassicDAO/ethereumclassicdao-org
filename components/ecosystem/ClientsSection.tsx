@@ -5,7 +5,7 @@ const primaryClient = {
   name: "fukuii",
   language: "Scala",
   description:
-    "The Olympia primary client — built from scratch as an independent ETC implementation in Scala. Full SNAP sync, 2,300+ tests, and first-class Olympia protocol support. Fukuii is the reference client for the Olympia governance upgrade.",
+    "Purpose-built for Ethereum Classic — an independent implementation designed from the ground up for performance, security, and protocol parity. Fukuii is the primary client for the Olympia upgrade, coordinating EIP-1559 fee markets, treasury funding, and on-chain governance across the network.",
   github: "https://github.com/ethereumclassic/fukuii",
   status: "Production",
   featured: true,
@@ -16,7 +16,7 @@ const secondaryClients = [
     name: "core-geth",
     language: "Go",
     description:
-      "Long-standing ETC client forked from go-ethereum. Full ETC protocol history and battle-tested stability. Maintenance mode — critical fixes only.",
+      "The longest-running Ethereum Classic client, forked from go-ethereum. Battle-tested stability across every network upgrade since genesis. Maintenance mode with continued critical security support.",
     github: "https://github.com/ethereumclassic/core-geth",
     status: "Maintenance",
   },
@@ -24,7 +24,7 @@ const secondaryClients = [
     name: "besu",
     language: "Java",
     description:
-      "Hyperledger Besu with ETC protocol support. JDK 21 LTS. Used as a reference test client for cross-client protocol verification.",
+      "Enterprise-grade client built on Hyperledger Besu. Provides cross-client protocol verification and serves as the reference implementation for validating consensus compatibility across all three clients.",
     github: "https://github.com/ethereumclassic/besu",
     status: "Reference",
   },
@@ -42,7 +42,7 @@ export function ClientsSection() {
             </h2>
             <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
               Three independent client implementations ensure decentralization
-              and resilience. Fukuii leads Olympia protocol development.
+              and resilience. No single codebase controls the network.
             </p>
           </FadeIn>
 
