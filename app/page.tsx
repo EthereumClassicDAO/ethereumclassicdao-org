@@ -1,15 +1,13 @@
-import { HeroSection } from "@/components/home/HeroSection";
-import { RegistrationSection } from "@/components/home/RegistrationSection";
-import { RoleSection } from "@/components/home/RoleSection";
-import { RelationshipSection } from "@/components/home/RelationshipSection";
+import { MissionSection } from "@/components/home/MissionSection";
+import { PositioningSection } from "@/components/home/PositioningSection";
+import { EcosystemSection } from "@/components/home/EcosystemSection";
 
 export default function Home() {
   return (
     <main>
-      <HeroSection />
-      <RegistrationSection />
-      <RoleSection />
-      <RelationshipSection />
+      <MissionSection />
+      <PositioningSection />
+      <EcosystemSection />
     </main>
   );
 }
