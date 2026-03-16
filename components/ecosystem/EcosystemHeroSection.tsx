@@ -12,8 +12,9 @@ export function EcosystemHeroSection() {
             Build on Ethereum Classic
           </h1>
           <p className="mt-4 text-lg text-[var(--text-muted)]">
-            Open-source tools, client implementations, and governance
-            infrastructure for the largest Proof-of-Work smart contract platform.
+            The only Proof-of-Work blockchain with native EVM smart contracts.
+            Every framework, library, and IDE that works with Ethereum works
+            with Ethereum Classic &mdash; just change the chain ID.
           </p>
         </FadeIn>
       </div>
