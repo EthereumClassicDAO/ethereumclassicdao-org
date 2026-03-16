@@ -1,22 +1,22 @@
-import { Blocks, Coins, BookOpen, Gavel, Shield, Building2, Scale } from "lucide-react";
+import { GitBranch, Vote, Pickaxe, Scale, Shield, Building2 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 const buildItems = [
   {
-    icon: Blocks,
-    text: "Protocol governance infrastructure — proposal, voting, and execution systems",
+    icon: GitBranch,
+    text: "Core network software — three independent client implementations (fukuii, core-geth, besu)",
   },
   {
-    icon: Coins,
-    text: "Treasury management and transparency tooling",
+    icon: Vote,
+    text: "On-chain governance infrastructure — proposal, voting, execution, and treasury management",
   },
   {
-    icon: BookOpen,
-    text: "Developer ecosystem and documentation",
+    icon: Pickaxe,
+    text: "Hashrate incentive alignment — ensuring network security through mining economics",
   },
   {
-    icon: Gavel,
-    text: "Institutional compliance and regulatory interface",
+    icon: Scale,
+    text: "US regulatory compliance — CLARITY Act (digital commodity), GENIUS Act (stablecoins), ETF alignment",
   },
 ];
 
@@ -37,7 +37,7 @@ const positions = [
     icon: Scale,
     title: "Regulatory Clarity",
     description:
-      "Organized as a Wyoming DAO LLC under the Decentralized Autonomous Organization Supplement. Positioned for classification as a digital commodity under the CLARITY Act\u2019s mature blockchain criteria.",
+      "Wyoming DAO LLC under the Decentralized Autonomous Organization Supplement. Positioned for digital commodity classification (CLARITY Act) and as a compliant EVM platform for regulated stablecoins (GENIUS Act) \u2014 producing an ecosystem of US-based ETF-aligned digital assets.",
   },
 ];
 
@@ -55,18 +55,22 @@ export function AboutSection() {
 
           <div className="mt-8 space-y-6 text-base leading-relaxed text-[var(--text-secondary)]">
             <p>
-              Ethereum Classic DAO LLC drives long-term development and
-              institutional adoption of Ethereum Classic — providing
-              governance, treasury management, and protocol coordination
+              Ethereum Classic DAO LLC is the legal entity for the Olympia
+              DAO, utilizing Wyoming&rsquo;s DAO LLC framework to maintain
+              core software, critical infrastructure, and hashrate incentives
               for the world&rsquo;s largest Proof-of-Work smart contract
-              platform.
+              platform. The LLC ensures proper reporting and compliance with
+              US federal and state regulatory frameworks.
             </p>
             <p>
-              As the only EVM-compatible blockchain secured by Proof-of-Work
-              consensus, Ethereum Classic combines Bitcoin&rsquo;s security
-              model with Ethereum&rsquo;s programmability — a combination
-              that no other blockchain offers at scale. Something Bitcoin
-              wishes it had: native smart contracts on a Proof-of-Work chain.
+              Ethereum Classic is the only EVM-compatible blockchain secured
+              by Proof-of-Work — combining Bitcoin&rsquo;s security model
+              with Ethereum&rsquo;s programmability. This positions ETC not
+              just as a digital commodity under the CLARITY Act, but as a
+              compliant smart contract platform where regulated stablecoins
+              (GENIUS Act) and ETF-aligned ERC-20 tokens can operate on a
+              Proof-of-Work foundation. Something Bitcoin wishes it had:
+              native smart contracts on a Proof-of-Work chain.
             </p>
           </div>
         </FadeIn>

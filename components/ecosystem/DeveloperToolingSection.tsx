@@ -70,6 +70,16 @@ const categories: ToolCategory[] = [
     heading: "Wallets",
     tools: [
       {
+        name: "Ledger",
+        description: "Hardware wallet — secure ETC storage with Ledger Nano S Plus and Nano X. Industry-leading cold storage.",
+        href: "https://www.ledger.com",
+      },
+      {
+        name: "Trezor",
+        description: "Hardware wallet — ETC support on Trezor Model T and Trezor Safe. Open-source firmware.",
+        href: "https://trezor.io",
+      },
+      {
         name: "MetaMask",
         description: "Browser wallet — add ETC as a custom network with Chain ID 61 and the Rivet RPC endpoint.",
         href: "https://metamask.io",
@@ -83,6 +93,11 @@ const categories: ToolCategory[] = [
         name: "Rabby",
         description: "Multi-chain browser wallet with built-in transaction simulation and security checks.",
         href: "https://rabby.io",
+      },
+      {
+        name: "Exodus",
+        description: "Desktop + mobile wallet with native ETC support and built-in exchange. Available on desktop, mobile, and browser.",
+        href: "https://www.exodus.com",
       },
     ],
   },
@@ -183,6 +198,20 @@ export function DeveloperToolingSection() {
               </FadeIn>
             ))}
           </div>
+
+          <p className="mt-6 text-xs text-[var(--text-subtle)]">
+            ETC is supported by 50+ wallet applications across hardware,
+            browser, mobile, and desktop. See the full list at{" "}
+            <a
+              href="https://ethereumclassic.org/services/wallets"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--brand-green)] hover:underline"
+            >
+              ethereumclassic.org
+            </a>
+            .
+          </p>
         </div>
       </section>
     </>

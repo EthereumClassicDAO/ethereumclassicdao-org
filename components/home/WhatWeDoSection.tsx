@@ -23,7 +23,7 @@ const focusAreas = [
   {
     question: "Regulatory Compliance",
     answer:
-      "Wyoming DAO LLC structure (Filing ID 2025-001671865) provides legal clarity for on-chain governance operations. Ethereum Classic is positioned for digital commodity classification under the CLARITY Act's mature blockchain criteria — the only Proof-of-Work smart contract platform with this regulatory path.",
+      "Wyoming DAO LLC structure (Filing ID 2025-001671865) provides the legal framework for on-chain governance and US regulatory compliance. ETC is positioned for digital commodity classification under the CLARITY Act, while the GENIUS Act creates a pathway for regulated stablecoins on ETC's EVM — enabling a compliant ecosystem of ETF-aligned digital assets from the flagship ETC asset to protocol-based ERC-20 tokens.",
   },
 ];
 

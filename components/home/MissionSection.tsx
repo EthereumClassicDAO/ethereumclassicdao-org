@@ -37,8 +37,10 @@ export function MissionSection({ stats }: { stats: EtcStats }) {
             &mdash; the largest Proof-of-Work smart contract platform.
           </p>
           <p className="mt-4 max-w-2xl text-base text-[var(--text-muted)]">
-            Governance, treasury management, and protocol coordination for
-            the only EVM-compatible blockchain secured by Proof-of-Work.
+            Maintaining core software, critical infrastructure, and ecosystem
+            alignment for the only EVM-compatible blockchain secured by
+            Proof-of-Work &mdash; positioned for US regulatory compliance
+            under the CLARITY Act and GENIUS Act.
           </p>
         </FadeIn>
 

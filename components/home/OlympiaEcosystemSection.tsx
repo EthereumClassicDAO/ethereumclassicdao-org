@@ -8,7 +8,7 @@ const entities = [
     name: "Ethereum Classic DAO LLC",
     role: "Legal Entity",
     description:
-      "Wyoming-registered DAO LLC providing organizational structure, regulatory compliance, and operational coordination for the Ethereum Classic ecosystem.",
+      "The legal wrapper for the Olympia DAO under Wyoming's DAO LLC framework. Ensures US regulatory compliance, proper reporting, and alignment with federal digital asset legislation including the CLARITY Act and GENIUS Act.",
     href: "https://ethereumclassicdao.org",
     highlighted: true,
   },

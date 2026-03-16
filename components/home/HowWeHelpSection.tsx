@@ -1,4 +1,4 @@
-import { Vote, GitBranch, Pickaxe, TrendingUp } from "lucide-react";
+import { Vote, GitBranch, Pickaxe, Scale } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
@@ -22,10 +22,10 @@ const pillars = [
       "Secure Ethereum Classic and earn block rewards by running fukuii. GPU and ASIC compatible mining on the only Proof-of-Work network with native smart contracts.",
   },
   {
-    icon: TrendingUp,
-    title: "Institutional Adoption",
+    icon: Scale,
+    title: "Regulatory Compliance & Market Access",
     description:
-      "Grayscale Ethereum Classic Trust (ETCG) since 2017 with ETF pipeline in progress. Institutional custody via Coinbase Custody and BitGo. 300+ exchange markets worldwide.",
+      "Wyoming DAO LLC framework ensures US regulatory compliance. Aligned with the CLARITY Act (ETC as digital commodity) and GENIUS Act (stablecoins on ETC's EVM). Grayscale ETCG since 2017. 300+ exchange markets.",
   },
 ];
 
@@ -40,8 +40,9 @@ export function HowWeHelpSection() {
               How We Help
             </h2>
             <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
-              Ethereum Classic DAO provides governance, protocol coordination,
-              and ecosystem support for the Ethereum Classic network.
+              The legal entity behind the Olympia DAO &mdash; maintaining core
+              software, critical infrastructure, and hashrate incentives while
+              ensuring US regulatory compliance.
             </p>
           </FadeIn>
 

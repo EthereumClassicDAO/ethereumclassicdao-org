@@ -16,6 +16,12 @@ export function EcosystemHeroSection() {
             Every framework, library, and IDE that works with Ethereum works
             with Ethereum Classic &mdash; just change the chain ID.
           </p>
+          <p className="mt-4 text-base text-[var(--text-muted)]">
+            A compliant EVM ecosystem positioned for regulated digital assets
+            &mdash; from the flagship ETC commodity to protocol-based ERC-20
+            tokens, stablecoins under the GENIUS Act, and ETF-aligned
+            instruments.
+          </p>
         </FadeIn>
       </div>
     </section>

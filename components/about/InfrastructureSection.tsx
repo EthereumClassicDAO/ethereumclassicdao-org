@@ -32,7 +32,7 @@ const infrastructure = [
   {
     icon: FileCheck,
     category: "Regulatory Status",
-    details: "Wyoming DAO LLC · Filing ID 2025-001671865 · CLARITY Act commodity candidate",
+    details: "Wyoming DAO LLC · Filing ID 2025-001671865 · CLARITY Act commodity · GENIUS Act EVM platform",
   },
 ];
 

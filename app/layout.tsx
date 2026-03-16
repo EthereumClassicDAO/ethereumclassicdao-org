@@ -16,9 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 const SITE_URL = "https://ethereumclassicdao.org";
 const TITLE =
-  "Ethereum Classic DAO — Driving Adoption of the Largest PoW Smart Contract Platform";
+  "Ethereum Classic DAO — Core Software, Infrastructure & Regulatory Compliance for Ethereum Classic";
 const DESCRIPTION =
-  "Ethereum Classic DAO LLC provides governance, treasury management, and protocol coordination for Ethereum Classic — the only EVM-compatible blockchain secured by Proof-of-Work.";
+  "Ethereum Classic DAO LLC maintains core software, critical infrastructure, and hashrate incentives for Ethereum Classic — the only EVM-compatible blockchain secured by Proof-of-Work. Wyoming DAO LLC ensuring US regulatory compliance.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -38,6 +38,9 @@ export const metadata: Metadata = {
     "blockchain governance",
     "digital commodity",
     "CLARITY Act",
+    "GENIUS Act",
+    "stablecoins",
+    "ETF",
     "blockchain infrastructure",
   ],
   authors: [
@@ -111,7 +114,7 @@ const jsonLd = {
   url: "https://ethereumclassicdao.org",
   logo: "https://ethereumclassicdao.org/logo.svg",
   description:
-    "Wyoming-registered DAO LLC providing governance, treasury management, and protocol coordination for Ethereum Classic — the only EVM-compatible blockchain secured by Proof-of-Work.",
+    "Wyoming-registered DAO LLC maintaining core software, critical infrastructure, and hashrate incentives for Ethereum Classic — the only EVM-compatible blockchain secured by Proof-of-Work. Positioned for US regulatory compliance under the CLARITY Act and GENIUS Act.",
   foundingDate: "2025",
   legalName: "Ethereum Classic DAO LLC",
   address: {

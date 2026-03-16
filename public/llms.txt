@@ -1,19 +1,23 @@
 # Ethereum Classic DAO
 
-> Driving adoption and long-term development of Ethereum Classic — the only EVM-compatible blockchain secured by Proof-of-Work.
+> Maintaining core software, critical infrastructure, and hashrate incentives for Ethereum Classic — the only EVM-compatible blockchain secured by Proof-of-Work. Wyoming DAO LLC ensuring US regulatory compliance.
 
 ## About
 
-Ethereum Classic DAO LLC is a Wyoming-registered DAO LLC (Filing ID 2025-001671865) providing governance, treasury management, and protocol coordination for the Ethereum Classic ecosystem.
+Ethereum Classic DAO LLC is the legal wrapper for the Olympia DAO under Wyoming's DAO LLC framework (Filing ID 2025-001671865). The LLC maintains core software, critical infrastructure, and hashrate incentives for the world's largest Proof-of-Work smart contract platform. It ensures proper reporting and compliance with US federal and state regulatory frameworks.
 
 Ethereum Classic (ETC) is the only Proof-of-Work blockchain with native EVM smart contracts. Every Ethereum framework, library, and IDE works with Ethereum Classic — just change the chain ID (61 mainnet, 63 Mordor testnet).
+
+ETC is positioned not just as a digital commodity under the CLARITY Act, but as a compliant smart contract platform where regulated stablecoins (GENIUS Act) and ETF-aligned ERC-20 tokens can operate on a Proof-of-Work foundation.
 
 ## Legal Structure
 
 - **Entity:** Ethereum Classic DAO LLC
 - **Jurisdiction:** Wyoming, United States
 - **Filing ID:** 2025-001671865
+- **Framework:** Wyoming Decentralized Autonomous Organization Supplement
 - **Registered Agent:** 30 N Gould St Ste R, Sheridan, WY 82801
+- **Regulatory alignment:** CLARITY Act (digital commodity), GENIUS Act (stablecoins on EVM)
 
 ## Governance — Olympia Framework
 
@@ -35,7 +39,7 @@ The Olympia upgrade introduces protocol-level treasury funding and on-chain gove
 - Hashrate: 170+ TH/s (largest PoW smart contract network, absorbed Ethereum mining infrastructure post-Merge)
 - Markets: 300+ across Binance, Coinbase, OKX, Kraken, Upbit, Bybit, Robinhood, and 20+ exchanges
 - Independent clients: fukuii (Scala, primary), core-geth (Go), besu (Java)
-- Network origin: 2016 (oldest EVM-compatible blockchain)
+- Network origin: July 30, 2015 (genesis block — oldest EVM-compatible blockchain)
 - Chain IDs: 61 (mainnet), 63 (Mordor testnet)
 - RPC: https://etc.rivet.link
 
@@ -50,20 +54,22 @@ Three independent implementations ensure zero single points of failure:
 
 - Smart Contract Development: Hardhat, Foundry (forge/cast/anvil), Remix IDE, OpenZeppelin Contracts 5.x
 - Client Libraries: ethers.js v6, viem, web3.js v4
-- Wallets: MetaMask, Trust Wallet, Rabby
+- Wallets: Ledger, Trezor, MetaMask, Trust Wallet, Rabby, Exodus, and 50+ wallet integrations
 - Infrastructure: Rivet (RPC at etc.rivet.link), Blockscout (etc.blockscout.com)
 - Security: Slither, Mythril, Echidna
 
 ## Institutional Products
 
-- Grayscale Ethereum Classic Trust (ETCG) — regulated securities exposure since 2017, ETF pipeline in progress
+- Grayscale Ethereum Classic Trust (ETCG) — regulated securities exposure since 2017, ETF conversion pipeline in progress
 - Institutional custody: Coinbase Custody, BitGo
 - 300+ exchange markets: Binance, Coinbase, OKX, Kraken, Upbit, Bybit, Robinhood, and 20+ more
 
 ## Regulatory Positioning
 
-- Wyoming DAO LLC structure provides limited liability protection
-- ETC positioned for "digital commodity" classification under the proposed CLARITY Act
+- Wyoming DAO LLC under the Decentralized Autonomous Organization Supplement
+- ETC positioned for digital commodity classification under the CLARITY Act
+- GENIUS Act creates a pathway for regulated stablecoins on ETC's EVM
+- Compliant ecosystem of ETF-aligned digital assets — from the flagship ETC asset to protocol-based ERC-20 tokens
 - Grayscale Ethereum Classic Trust (ETCG) provides regulated securities exposure
 
 ## Web Properties
