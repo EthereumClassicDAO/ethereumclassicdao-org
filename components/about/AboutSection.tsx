@@ -31,9 +31,10 @@ export function AboutSection() {
               protocol upgrade in Ethereum Classic&rsquo;s history.
             </p>
             <p>
-              Through Olympia, a portion of block rewards funds a
-              protocol-managed treasury. Community members submit proposals,
-              vote on resource allocation, and execute decisions — all on-chain,
+              Through Olympia, EIP-1559 transaction fees fund a
+              protocol-managed treasury — block rewards remain untouched and
+              go entirely to miners. Community members submit proposals, vote
+              on resource allocation, and execute decisions — all on-chain,
               all transparent, all permissionless.
             </p>
           </div>
