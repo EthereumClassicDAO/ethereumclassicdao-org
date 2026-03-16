@@ -33,8 +33,8 @@ const properties = [
 export function EcosystemSection() {
   return (
     <>
-      <SectionDivider />
-      <section className="py-24">
+      <SectionDivider variant="strong" />
+      <section className="py-28">
         <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2 className="text-2xl font-bold tracking-tight">Ecosystem</h2>

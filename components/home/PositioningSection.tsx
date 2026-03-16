@@ -27,18 +27,22 @@ export function PositioningSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-alt py-24">
-        <div className="mx-auto max-w-5xl px-6">
+      <section className="section-gradient geo-lines relative py-28">
+        <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 className="text-2xl font-bold tracking-tight">
+            <h2 className="text-3xl font-bold tracking-tight">
               Why Ethereum Classic
             </h2>
+            <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
+              What makes Ethereum Classic uniquely positioned for institutional
+              adoption.
+            </p>
           </FadeIn>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {positions.map((p, i) => (
               <FadeIn key={p.title} delay={i * 100}>
-                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6 transition-all duration-200 hover:border-[rgba(255,255,255,0.12)] hover:-translate-y-0.5">
+                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
                     <p.icon
                       size={20}
