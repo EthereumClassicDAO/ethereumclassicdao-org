@@ -5,15 +5,15 @@ const team = [
   {
     initials: "CB",
     name: "Cody Burns",
-    title: "Co-Founder",
-    bio: "Longtime Ethereum Classic ecosystem contributor. Background in blockchain research, protocol governance, and decentralized systems.",
+    title: "Co-Founder · Protocol Governance",
+    bio: "Core contributor to Ethereum Classic since 2016. Led protocol governance efforts across multiple network upgrades, authored key ECIPs, and coordinated community consensus on critical technical decisions.",
     github: "https://github.com/realcodywburns",
   },
   {
     initials: "CM",
     name: "Chris Mercer",
-    title: "Co-Founder",
-    bio: "Systems architect specializing in blockchain infrastructure, distributed systems, and multi-client protocol coordination.",
+    title: "Co-Founder · Infrastructure",
+    bio: "Architect behind the multi-client coordination strategy for Ethereum Classic. Built and maintains core client software, developer tooling, and the governance infrastructure powering the Olympia upgrade.",
     github: "https://github.com/chris-mercer",
   },
 ];
@@ -27,7 +27,9 @@ export function LeadershipSection() {
           <FadeIn>
             <h2 className="text-3xl font-bold tracking-tight">Leadership</h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              The founding team behind Ethereum Classic DAO LLC.
+              Organizing Ethereum Classic&apos;s core contributors — coordinating
+              network upgrades, client development, and ecosystem
+              infrastructure since the chain&apos;s earliest days.
             </p>
           </FadeIn>
 
