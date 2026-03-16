@@ -1,4 +1,4 @@
-import { Blocks, Coins, BookOpen, Gavel } from "lucide-react";
+import { Blocks, Coins, BookOpen, Gavel, Shield, Building2, Scale } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 const buildItems = [
@@ -17,6 +17,27 @@ const buildItems = [
   {
     icon: Gavel,
     text: "Institutional compliance and regulatory interface",
+  },
+];
+
+const positions = [
+  {
+    icon: Shield,
+    title: "Proof-of-Work Security",
+    description:
+      "The only EVM-compatible blockchain secured by Proof-of-Work consensus. Following Ethereum\u2019s transition to Proof-of-Stake, Ethereum Classic absorbed significant mining infrastructure and stands alone at the intersection of Bitcoin\u2019s security model and Ethereum\u2019s programmability.",
+  },
+  {
+    icon: Building2,
+    title: "Institutional Infrastructure",
+    description:
+      "Listed on Coinbase, Kraken, Binance, and Robinhood. Institutional custody through Coinbase Custody and BitGo. Regulated securities exposure via Grayscale Ethereum Classic Trust (ETCG), established 2017, with ETF pipeline in progress.",
+  },
+  {
+    icon: Scale,
+    title: "Regulatory Clarity",
+    description:
+      "Organized as a Wyoming DAO LLC under the Decentralized Autonomous Organization Supplement. Positioned for classification as a digital commodity under the CLARITY Act\u2019s mature blockchain criteria.",
   },
 ];
 
@@ -88,6 +109,36 @@ export function AboutSection() {
                     <p className="text-base leading-relaxed text-[var(--text-secondary)] pt-2">
                       {item.text}
                     </p>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </FadeIn>
+
+        <FadeIn>
+          <div className="mt-16">
+            <h2 className="text-xl font-bold">Why Ethereum Classic</h2>
+            <p className="mt-3 text-sm text-[var(--text-muted)]">
+              What makes Ethereum Classic uniquely positioned for institutional
+              adoption and long-term sustainability.
+            </p>
+            <div className="mt-6 space-y-6">
+              {positions.map((p, i) => (
+                <FadeIn key={p.title} delay={i * 80}>
+                  <div className="flex gap-4 items-start">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+                      <p.icon
+                        size={20}
+                        className="text-[var(--brand-green)]"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-base font-semibold">{p.title}</p>
+                      <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
+                        {p.description}
+                      </p>
+                    </div>
                   </div>
                 </FadeIn>
               ))}
