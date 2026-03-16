@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ReportsSection } from "@/components/transparency/ReportsSection";
+import { PrinciplesSection } from "@/components/transparency/PrinciplesSection";
 import { DocumentsSection } from "@/components/transparency/DocumentsSection";
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export default function TransparencyPage() {
   return (
     <main>
       <ReportsSection />
+      <PrinciplesSection />
       <DocumentsSection />
     </main>
   );

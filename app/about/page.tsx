@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { AboutSection } from "@/components/about/AboutSection";
+import { RoadmapSection } from "@/components/about/RoadmapSection";
 import { InfrastructureSection } from "@/components/about/InfrastructureSection";
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export default function AboutPage() {
   return (
     <main>
       <AboutSection />
+      <RoadmapSection />
       <InfrastructureSection />
     </main>
   );
