@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ==========================================
-   Olympia Design Tokens
+   Olympia Design Tokens — Institutional
    ========================================== */
 
 :root {
@@ -10,15 +10,14 @@
   --brand-green-hover: #14f1b4;
   --brand-green-active: #00cc8a;
   --brand-green-muted: #007a53;
-  --brand-green-subtle: rgba(0, 255, 174, 0.08);
-  --brand-green-glow: rgba(0, 255, 174, 0.4);
+  --brand-green-subtle: rgba(0, 255, 174, 0.04);
 
   /* Backgrounds */
   --background: #0a0f10;
   --foreground: #ffffff;
-  --bg-surface: #0f1614;
-  --bg-elevated: #162420;
-  --bg-overlay: rgba(10, 15, 16, 0.85);
+  --bg-surface: #111111;
+  --bg-elevated: #181818;
+  --bg-overlay: rgba(0, 0, 0, 0.9);
   --bg-card: rgba(0, 0, 0, 0.35);
 
   /* Text */
@@ -28,20 +27,17 @@
   --text-subtle: #6b7280;
 
   /* Borders */
-  --border-default: #1f292b;
+  --border-default: #1a1a1a;
   --border-subtle: rgba(255, 255, 255, 0.04);
   --border-strong: rgba(255, 255, 255, 0.16);
   --border-brand: rgba(0, 255, 174, 0.3);
+  --divider: rgba(255, 255, 255, 0.06);
 
   /* Semantic */
   --color-success: #00ffae;
   --color-error: #ef4444;
   --color-warning: #f59e0b;
   --color-info: #38bdf8;
-
-  /* Card */
-  --card-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
-  --card-hover-shadow: 0 14px 32px rgba(0, 0, 0, 0.55);
 }
 
 @theme inline {
@@ -77,7 +73,7 @@ body {
 
 /* Selection */
 ::selection {
-  background: var(--brand-green-glow);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
 }
 
