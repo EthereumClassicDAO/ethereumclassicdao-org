@@ -5,6 +5,7 @@ interface Stat {
   unit?: string;
   label: string;
   context?: string;
+  contextColor?: "green" | "red" | "muted";
 }
 
 export function StatsGrid({
@@ -31,6 +32,19 @@ export function StatsGrid({
               <p className="mt-2 text-xs text-[var(--text-muted)]">
                 {s.label}
               </p>
+              {s.context && (
+                <p
+                  className={`mt-1 text-xs ${
+                    s.contextColor === "green"
+                      ? "text-emerald-400"
+                      : s.contextColor === "red"
+                        ? "text-red-400"
+                        : "text-[var(--text-muted)]"
+                  }`}
+                >
+                  {s.context}
+                </p>
+              )}
             </div>
           </FadeIn>
         ))}
@@ -53,7 +67,15 @@ export function StatsGrid({
             </p>
             <p className="mt-2 text-sm font-semibold">{s.label}</p>
             {s.context && (
-              <p className="mt-1 text-xs text-[var(--text-muted)]">
+              <p
+                className={`mt-1 text-xs ${
+                  s.contextColor === "green"
+                    ? "text-emerald-400"
+                    : s.contextColor === "red"
+                      ? "text-red-400"
+                      : "text-[var(--text-muted)]"
+                }`}
+              >
                 {s.context}
               </p>
             )}

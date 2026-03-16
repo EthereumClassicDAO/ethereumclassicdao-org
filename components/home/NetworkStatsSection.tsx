@@ -1,37 +1,38 @@
 import { StatsGrid } from "@/components/ui/StatsGrid";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import type { EtcStats } from "@/lib/api/etc-stats";
+import { formatUSD, formatCompact, formatBlockTime } from "@/lib/format";
 
-const stats = [
-  {
-    value: "170+",
-    unit: "TH/s",
-    label: "Network Hashrate",
-    context: "Largest PoW smart contract network",
-  },
-  {
-    value: "300+",
-    label: "Trading Markets",
-    context: "Binance, Coinbase, OKX, Kraken, Upbit, Bybit, and 20+ more exchanges",
-  },
-  {
-    value: "3",
-    label: "Independent Clients",
-    context: "fukuii, core-geth, besu — zero single points of failure",
-  },
-  {
-    value: "2016",
-    label: "Network Origin",
-    context: "Oldest EVM-compatible blockchain",
-  },
-];
+export function NetworkStatsSection({ stats }: { stats: EtcStats }) {
+  const sectionStats = [
+    {
+      value: formatUSD(stats.marketCap),
+      label: "Market Capitalization",
+      context: `Rank #${stats.marketCapRank} by market cap`,
+    },
+    {
+      value: formatCompact(stats.totalAddresses),
+      label: "Total Addresses",
+      context: "All-time unique addresses on Ethereum Classic",
+    },
+    {
+      value: "3",
+      label: "Independent Clients",
+      context: "fukuii, core-geth, besu — zero single points of failure",
+    },
+    {
+      value: formatBlockTime(stats.averageBlockTimeMs),
+      label: "Block Time",
+      context: "Average time between blocks",
+    },
+  ];
 
-export function NetworkStatsSection() {
   return (
     <>
       <SectionDivider variant="strong" />
       <section className="section-deep py-24">
         <div className="mx-auto max-w-6xl px-6">
-          <StatsGrid stats={stats} variant="section" />
+          <StatsGrid stats={sectionStats} variant="section" />
         </div>
       </section>
     </>

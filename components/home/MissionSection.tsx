@@ -1,12 +1,7 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { StatsGrid } from "@/components/ui/StatsGrid";
-
-const networkStats = [
-  { value: "170+", unit: "TH/s", label: "Network Hashrate" },
-  { value: "3", label: "Independent Client Implementations" },
-  { value: "11", label: "Protocol Proposals" },
-  { value: "2016", label: "Network Origin" },
-];
+import type { EtcStats } from "@/lib/api/etc-stats";
+import { formatUSD, formatCompact, formatPercent } from "@/lib/format";
 
 const entityMetrics = [
   { label: "Incorporated", value: "May 2025", detail: "Wyoming DAO LLC" },
@@ -15,7 +10,18 @@ const entityMetrics = [
   { label: "Asset Class", value: "Digital Commodity", detail: null, footnote: true },
 ];
 
-export function MissionSection() {
+export function MissionSection({ stats }: { stats: EtcStats }) {
+  const networkStats = [
+    {
+      value: formatUSD(stats.price),
+      label: "ETC Price",
+      context: `${formatPercent(stats.priceChange24h)} (24h)`,
+      contextColor: (stats.priceChange24h >= 0 ? "green" : "red") as "green" | "red",
+    },
+    { value: formatUSD(stats.marketCap), label: "Market Cap" },
+    { value: formatCompact(stats.totalTransactions), label: "Total Transactions" },
+    { value: "2015", label: "Network Origin" },
+  ];
   return (
     <section className="hero-gradient noise-overlay geo-lines grid-overlay relative min-h-dvh pt-40 pb-32">
       <div className="relative z-10 mx-auto max-w-5xl px-6">
