@@ -1,5 +1,31 @@
-import { MapPin, ExternalLink } from "lucide-react";
+import { ExternalLink, MessageSquare, Github, Vote, FileText } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
+
+const channels = [
+  {
+    icon: MessageSquare,
+    title: "X (Twitter)",
+    description: "Follow for announcements, governance updates, and ecosystem news.",
+    href: "https://x.com/ethclassicdao",
+    cta: "Follow @ethclassicdao",
+  },
+  {
+    icon: Github,
+    title: "GitHub",
+    description:
+      "Open-source repositories for all Olympia governance infrastructure, client software, and tooling.",
+    href: "https://github.com/EthereumClassicDAO",
+    cta: "View repositories",
+  },
+  {
+    icon: Vote,
+    title: "Governance App",
+    description:
+      "Submit proposals, vote on resource allocation, and participate in on-chain governance.",
+    href: "https://app.olympiadao.org",
+    cta: "Open governance app",
+  },
+];
 
 export function RegisteredAgentSection() {
   return (
@@ -7,50 +33,77 @@ export function RegisteredAgentSection() {
       <div className="relative z-10 mx-auto max-w-3xl px-6">
         <FadeIn>
           <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
-            Get in Touch
+            Connect
           </p>
           <h1 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
-            Contact
+            Get Involved
           </h1>
-          <p className="mt-4 text-lg text-[var(--text-muted)]">
-            Registered agent information and official communication channels.
+          <p className="mt-4 max-w-xl text-lg text-[var(--text-muted)]">
+            Ethereum Classic DAO is built in public. Follow development,
+            contribute to open-source infrastructure, or participate in
+            governance.
           </p>
         </FadeIn>
 
-        <FadeIn>
-          <h2 className="mt-12 text-xl font-bold">Registered Agent</h2>
-
-          <div className="mt-6 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] shadow-[0_0_20px_rgba(0,255,174,0.05)] p-6">
-            <div className="flex gap-4">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
-                <MapPin size={20} className="text-[var(--brand-green)]" />
-              </div>
-              <div>
-                <p className="text-sm font-semibold">
-                  Ethereum Classic DAO LLC
-                </p>
-                <p className="mt-1 text-sm text-[var(--text-secondary)]">
-                  30 N Gould St Ste R
-                </p>
-                <p className="text-sm text-[var(--text-secondary)]">
-                  Sheridan, WY 82801
-                </p>
-                <p className="text-sm text-[var(--text-muted)]">
-                  United States
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-4 border-t border-[rgba(255,255,255,0.06)] pt-4">
+        <div className="mt-12 grid gap-6">
+          {channels.map((ch, i) => (
+            <FadeIn key={ch.title} delay={i * 80}>
               <a
-                href="https://wyobiz.wyo.gov/business/FilingDetails.aspx?eFNum=101157225123250204055197221085227098244002050082"
+                href={ch.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+                className="group flex gap-5 rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5"
               >
-                Wyoming Secretary of State Filing
-                <ExternalLink size={14} />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+                  <ch.icon
+                    size={20}
+                    className="text-[var(--brand-green)]"
+                  />
+                </div>
+                <div>
+                  <p className="text-base font-semibold">{ch.title}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-[var(--text-muted)]">
+                    {ch.description}
+                  </p>
+                  <span className="mt-3 inline-flex items-center text-sm font-medium text-[var(--brand-green)] transition-colors group-hover:text-[var(--brand-green-hover)]">
+                    {ch.cta}{" "}
+                    <span className="ml-1 transition-transform group-hover:translate-x-0.5">
+                      &rarr;
+                    </span>
+                  </span>
+                </div>
               </a>
+            </FadeIn>
+          ))}
+        </div>
+
+        <FadeIn delay={300}>
+          <div className="mt-16 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.06)] p-6">
+            <div className="flex items-start gap-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgba(255,255,255,0.04)]">
+                <FileText
+                  size={20}
+                  className="text-[var(--text-subtle)]"
+                />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-[var(--text-secondary)]">
+                  Legal Entity
+                </p>
+                <p className="mt-1 text-sm text-[var(--text-muted)]">
+                  Ethereum Classic DAO LLC &middot; Wyoming DAO LLC &middot;
+                  Filing ID 2025-001671865
+                </p>
+                <a
+                  href="https://wyobiz.wyo.gov/business/FilingDetails.aspx?eFNum=101157225123250204055197221085227098244002050082"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-[var(--text-subtle)] transition-colors hover:text-white"
+                >
+                  Wyoming Secretary of State Filing
+                  <ExternalLink size={12} />
+                </a>
+              </div>
             </div>
           </div>
         </FadeIn>
