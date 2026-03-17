@@ -36,7 +36,7 @@ const stages = [
     ],
   },
   {
-    title: "Miner Experimentation",
+    title: "Miner Distribution Exploration",
     status: "future" as const,
     description:
       "Protocol-layer treasury smoothing to reduce per-block variance. Specification phase exploring miner-compatible mechanisms.",
