@@ -69,8 +69,7 @@ export function AboutSection() {
               just as a digital commodity under the CLARITY Act, but as a
               compliant smart contract platform where regulated stablecoins
               (GENIUS Act) and ETF-aligned ERC-20 tokens can operate on a
-              Proof-of-Work foundation. Something Bitcoin wishes it had:
-              native smart contracts on a Proof-of-Work chain.
+              Proof-of-Work foundation.
             </p>
           </div>
         </FadeIn>
