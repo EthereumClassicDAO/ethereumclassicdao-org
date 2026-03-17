@@ -1,18 +1,19 @@
+import Image from "next/image";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
 const team = [
   {
-    initials: "CB",
     name: "Cody Burns",
     title: "Organizing Member",
+    photo: "/cody-burns.png",
     bio: "Core contributor to Ethereum Classic since 2016. Active across protocol governance, network upgrades, and community coordination.",
     github: "https://github.com/realcodywburns",
   },
   {
-    initials: "CM",
     name: "Chris Mercer",
     title: "Organizing Member",
+    photo: "/chris-mercer.jpeg",
     bio: "Core contributor to Ethereum Classic since 2017. Active across client development, ecosystem infrastructure, and developer tooling.",
     github: "https://github.com/chris-mercer",
   },
@@ -27,9 +28,11 @@ export function LeadershipSection() {
           <FadeIn>
             <h2 className="text-3xl font-bold tracking-tight">Leadership</h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Organizing Ethereum Classic&apos;s core contributors — coordinating
-              network upgrades, client development, and ecosystem
-              infrastructure since the chain&apos;s earliest days.
+              Ethereum Classic DAO LLC builds on nearly a decade of ecosystem
+              stewardship — succeeding the ETC Cooperative as the organizational
+              home for Ethereum Classic&apos;s core contributors. Coordinating
+              network upgrades, client development, and ecosystem infrastructure
+              since the chain&apos;s earliest days.
             </p>
           </FadeIn>
 
@@ -38,11 +41,13 @@ export function LeadershipSection() {
               <FadeIn key={person.name} delay={i * 100}>
                 <div className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6">
                   <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[rgba(0,255,174,0.12)]">
-                      <span className="text-sm font-bold font-mono text-[var(--brand-green)]">
-                        {person.initials}
-                      </span>
-                    </div>
+                    <Image
+                      src={person.photo}
+                      alt={person.name}
+                      width={48}
+                      height={48}
+                      className="h-12 w-12 shrink-0 rounded-full object-cover grayscale"
+                    />
                     <div>
                       <p className="text-base font-semibold">{person.name}</p>
                       <p className="text-xs text-[var(--text-subtle)]">
