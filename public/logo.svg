@@ -1,62 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
-  <defs>
-    <radialGradient id="badgeFill" cx="50%" cy="45%" r="50%">
-      <stop offset="0%" stop-color="#0f2018"/>
-      <stop offset="100%" stop-color="#071210"/>
-    </radialGradient>
-    <radialGradient id="diamondGlow" cx="50%" cy="48%" r="30%">
-      <stop offset="0%" stop-color="#00ffae" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#00ffae" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="ringGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="88%" stop-color="#00ffae" stop-opacity="0"/>
-      <stop offset="95%" stop-color="#00ffae" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#00ffae" stop-opacity="0.1"/>
-    </radialGradient>
-  </defs>
-
-  <!-- Outer glow -->
-  <circle cx="256" cy="256" r="250" fill="url(#ringGlow)"/>
-
-  <!-- Dark badge background -->
-  <circle cx="256" cy="256" r="232" fill="url(#badgeFill)"/>
-  <circle cx="256" cy="256" r="232" stroke="#00ffae" stroke-width="1.5" stroke-opacity="0.12"/>
-
-  <!-- Hexagonal shield outline -->
-  <path d="M 256 60 L 420 116 L 420 336 L 256 452 L 92 336 L 92 116 Z"
-    fill="none" stroke="#00ffae" stroke-width="2" stroke-opacity="0.18" stroke-linejoin="round"/>
-
-  <!-- Inner shield -->
-  <path d="M 256 80 L 400 130 L 400 326 L 256 432 L 112 326 L 112 130 Z"
-    fill="none" stroke="#0a3020" stroke-width="2.5" stroke-opacity="0.4" stroke-linejoin="round"/>
-
-  <!-- Diamond glow aura -->
-  <ellipse cx="256" cy="252" rx="120" ry="140" fill="url(#diamondGlow)"/>
-
-  <!-- ETC Diamond (centered, large, green) -->
-  <g transform="translate(170, 138) scale(0.34)">
-    <g transform="translate(0,512) scale(0.1,-0.1)" fill="#00ffae" stroke="none">
-      <path d="M2551 5071 c-6 -11 -125 -193 -263 -403 -138 -211 -340 -518 -448
--683 -108 -165 -321 -490 -474 -723 -153 -233 -276 -425 -274 -427 1 -1 154
-61 338 139 884 374 1126 476 1137 476 7 0 330 -142 719 -316 388 -173 708
--314 710 -312 3 3 -1417 2253 -1430 2266 -3 2 -9 -6 -15 -17z"/>
-      <path d="M2485 3110 c-376 -157 -1450 -612 -1452 -614 -2 -2 99 -60 224 -130
-126 -69 473 -263 773 -430 l545 -303 40 23 c22 12 357 200 745 418 387 217
-706 399 708 405 2 6 -1 11 -7 11 -10 0 -175 73 -1036 457 -203 91 -388 173
--410 183 l-41 18 -89 -38z"/>
-      <path d="M1119 2083 c16 -21 308 -427 648 -903 341 -476 661 -923 712 -994 51
--70 95 -135 98 -143 4 -10 10 -6 23 15 10 16 145 206 301 423 155 217 378 527
-494 689 116 162 316 441 444 619 206 287 253 359 209 324 -7 -6 -343 -198
--746 -427 l-732 -417 -128 74 c-1304 758 -1336 777 -1346 777 -4 0 6 -17 23
--37z"/>
-    </g>
-  </g>
-
-  <!-- Horizontal governance bars -->
-  <rect x="120" y="250" width="40" height="2" rx="1" fill="#00ffae" fill-opacity="0.25"/>
-  <rect x="352" y="250" width="40" height="2" rx="1" fill="#00ffae" fill-opacity="0.25"/>
-
-  <!-- Shield vertex accents -->
-  <circle cx="256" cy="60" r="3" fill="#00ffae" fill-opacity="0.4"/>
-  <circle cx="256" cy="452" r="3" fill="#00ffae" fill-opacity="0.4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Three progressive bars — building infrastructure -->
+  <rect x="8" y="6" width="10" height="4" rx="1.5" fill="#00ffae"/>
+  <rect x="5" y="14" width="16" height="4" rx="1.5" fill="#00ffae"/>
+  <rect x="2" y="22" width="22" height="4" rx="1.5" fill="#00ffae"/>
 </svg>
