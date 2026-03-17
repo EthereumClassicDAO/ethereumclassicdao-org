@@ -5,15 +5,15 @@ const team = [
   {
     initials: "CB",
     name: "Cody Burns",
-    title: "Co-Founder · Protocol Governance",
-    bio: "Core contributor to Ethereum Classic since 2016. Led protocol governance efforts across multiple network upgrades, authored key ECIPs, and coordinated community consensus on critical technical decisions.",
+    title: "Organizing Member",
+    bio: "Core contributor to Ethereum Classic since 2016. Active across protocol governance, network upgrades, and community coordination.",
     github: "https://github.com/realcodywburns",
   },
   {
     initials: "CM",
     name: "Chris Mercer",
-    title: "Co-Founder · Infrastructure",
-    bio: "Architect behind the multi-client coordination strategy for Ethereum Classic. Built and maintains core client software, developer tooling, and the governance infrastructure powering the Olympia upgrade.",
+    title: "Organizing Member",
+    bio: "Core contributor to Ethereum Classic since 2017. Active across client development, ecosystem infrastructure, and developer tooling.",
     github: "https://github.com/chris-mercer",
   },
 ];
