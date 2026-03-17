@@ -7,14 +7,14 @@ const team = [
     name: "Cody Burns",
     title: "Organizing Member",
     photo: "/cody-burns.png",
-    bio: "Core contributor to Ethereum Classic since 2016. Active across protocol governance, network upgrades, and community coordination.",
+    bio: "Core contributor to Ethereum Classic since 2016. Active across client development, ecosystem infrastructure, and community coordination.",
     github: "https://github.com/realcodywburns",
   },
   {
     name: "Chris Mercer",
     title: "Organizing Member",
     photo: "/chris-mercer.jpeg",
-    bio: "Core contributor to Ethereum Classic since 2017. Active across client development, ecosystem infrastructure, and developer tooling.",
+    bio: "Core contributor to Ethereum Classic since 2017. Active across protocol governance, application infrastructure, and developer tooling.",
     github: "https://github.com/chris-mercer",
   },
 ];
