@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Ethereum Classic DAO",
     short_name: "ETC DAO",
     description:
-      "The organizational entity behind Ethereum Classic's Olympia DAO — building governance infrastructure for the largest Proof-of-Work smart contract platform.",
+      "Building the software and infrastructure for global adoption of Ethereum Classic — the largest Proof-of-Work smart contract platform.",
     start_url: "/",
     display: "standalone",
     background_color: "#0a0f10",

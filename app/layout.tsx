@@ -16,9 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 const SITE_URL = "https://ethereumclassicdao.org";
 const TITLE =
-  "Ethereum Classic DAO — Core Software, Infrastructure & Regulatory Compliance for Ethereum Classic";
+  "Ethereum Classic DAO — Building Software & Infrastructure for Global Adoption of Ethereum Classic";
 const DESCRIPTION =
-  "Ethereum Classic DAO LLC maintains core software, critical infrastructure, and hashrate incentives for Ethereum Classic — the only EVM-compatible blockchain secured by Proof-of-Work. Wyoming DAO LLC ensuring US regulatory compliance.";
+  "Ethereum Classic DAO LLC builds the software and infrastructure for global adoption of Ethereum Classic — the largest Proof-of-Work smart contract platform. Core client development, ecosystem infrastructure, hashrate incentives, and US regulatory compliance under the CLARITY Act and GENIUS Act.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Ethereum Classic DAO — Governance Infrastructure for Ethereum Classic",
+        alt: "Ethereum Classic DAO — Building Software & Infrastructure for Global Adoption",
         type: "image/png",
       },
     ],
@@ -114,7 +114,7 @@ const jsonLd = {
   url: "https://ethereumclassicdao.org",
   logo: "https://ethereumclassicdao.org/logo.svg",
   description:
-    "Wyoming-registered DAO LLC maintaining core software, critical infrastructure, and hashrate incentives for Ethereum Classic — the only EVM-compatible blockchain secured by Proof-of-Work. Positioned for US regulatory compliance under the CLARITY Act and GENIUS Act.",
+    "Wyoming-registered DAO LLC building the software and infrastructure for global adoption of Ethereum Classic — the largest Proof-of-Work smart contract platform. Positioned for US regulatory compliance under the CLARITY Act and GENIUS Act.",
   foundingDate: "2025",
   legalName: "Ethereum Classic DAO LLC",
   address: {
@@ -123,8 +123,9 @@ const jsonLd = {
     addressCountry: "US",
   },
   sameAs: [
-    "https://olympiadao.org",
+    "https://x.com/ethclassicdao",
     "https://github.com/EthereumClassicDAO",
+    "https://olympiadao.org",
     "https://app.olympiadao.org",
   ],
 };
