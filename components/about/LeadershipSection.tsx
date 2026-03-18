@@ -6,7 +6,7 @@ const team = [
   {
     name: "Cody Burns",
     title: "Organizing Member",
-    photo: "/cody-burns.png",
+    photo: "/cody-burns.jpeg",
     bio: "Core contributor to Ethereum Classic since 2016. Active across client development, ecosystem infrastructure, and community coordination.",
     github: "https://github.com/realcodywburns",
   },

@@ -52,8 +52,8 @@ export function GovernanceProcessSection() {
               Governance Process
             </h2>
             <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
-              On-chain proposal submission, voting, and execution — fully
-              transparent and permissionless.
+              Membership-based on-chain governance — proposals, voting,
+              timelock, and transparent execution.
             </p>
           </FadeIn>
 

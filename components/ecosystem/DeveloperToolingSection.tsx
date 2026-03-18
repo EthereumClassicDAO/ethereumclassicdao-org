@@ -6,6 +6,7 @@ interface Tool {
   description: string;
   config?: string;
   href?: string;
+  badge?: string;
 }
 
 interface ToolCategory {
@@ -35,12 +36,6 @@ const categories: ToolCategory[] = [
         config: "Deploy → Injected Provider (MetaMask on Chain 61)",
         href: "https://remix.ethereum.org",
       },
-      {
-        name: "OpenZeppelin Contracts",
-        description: "Battle-tested library for secure smart contract development. Token standards, governance, and access management.",
-        config: "Fully compatible — use latest 5.x",
-        href: "https://www.openzeppelin.com/contracts",
-      },
     ],
   },
   {
@@ -64,6 +59,28 @@ const categories: ToolCategory[] = [
         config: 'new Web3("https://etc.rivet.link")',
         href: "https://docs.web3js.org",
       },
+      {
+        name: "wagmi",
+        description: "React hooks for Ethereum. Type-safe wallet connections, contract interactions, and chain management.",
+        config: "chains: [ethereumClassic]",
+        href: "https://wagmi.sh",
+      },
+      {
+        name: "RainbowKit",
+        description: "Beautiful wallet connection UI for React. Supports 100+ wallets with a polished connect flow.",
+        config: "chains: [ethereumClassic]",
+        href: "https://www.rainbowkit.com",
+      },
+      {
+        name: "Scaffold-ETH 2",
+        description: "Full-stack dApp starter with Next.js, Hardhat, and wagmi. Rapid prototyping for EVM chains.",
+        href: "https://scaffoldeth.io",
+      },
+      {
+        name: "thirdweb SDK",
+        description: "All-in-one Web3 development platform. Deploy contracts, build frontends, manage wallets.",
+        href: "https://thirdweb.com",
+      },
     ],
   },
   {
@@ -71,12 +88,14 @@ const categories: ToolCategory[] = [
     tools: [
       {
         name: "Ledger",
-        description: "Hardware wallet — secure ETC storage with Ledger Nano S Plus and Nano X. Industry-leading cold storage.",
+        description: "Secure ETC storage with Ledger Nano S Plus and Nano X. Industry-leading cold storage.",
+        badge: "Hardware Wallet",
         href: "https://www.ledger.com",
       },
       {
         name: "Trezor",
-        description: "Hardware wallet — ETC support on Trezor Model T and Trezor Safe. Open-source firmware.",
+        description: "ETC support on Trezor Model T and Trezor Safe. Open-source firmware.",
+        badge: "Hardware Wallet",
         href: "https://trezor.io",
       },
       {
@@ -151,8 +170,8 @@ export function DeveloperToolingSection() {
               Developer Tooling
             </h2>
             <p className="mt-3 max-w-2xl text-base text-[var(--text-muted)]">
-              Every framework, library, and tool in the Ethereum ecosystem
-              works with Ethereum Classic. Full EVM compatibility &mdash;
+              Ethereum Classic maintains parity with the latest EVM
+              specification. All modern Ethereum tooling works on ETC &mdash;
               configure your chain ID and start building.
             </p>
           </FadeIn>
@@ -171,7 +190,14 @@ export function DeveloperToolingSection() {
                         className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5"
                       >
                         <div className="flex items-start justify-between">
-                          <p className="text-sm font-semibold">{tool.name}</p>
+                          <div className="flex items-center gap-2">
+                            <p className="text-sm font-semibold">{tool.name}</p>
+                            {tool.badge && (
+                              <span className="rounded-full bg-[var(--brand-green-subtle)] px-2 py-0.5 text-[10px] font-mono font-medium text-[var(--brand-green)]">
+                                {tool.badge}
+                              </span>
+                            )}
+                          </div>
                           {tool.href && (
                             <a
                               href={tool.href}

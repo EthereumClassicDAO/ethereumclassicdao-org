@@ -53,10 +53,11 @@ export function MiningSection() {
           <FadeIn delay={300}>
             <div className="mt-8 max-w-2xl">
               <p className="text-sm leading-relaxed text-[var(--text-muted)]">
-                Following Ethereum&rsquo;s transition to Proof-of-Stake,
-                Ethereum Classic absorbed significant mining infrastructure and
-                stands alone as the only EVM-compatible chain secured by
-                Proof-of-Work. Run{" "}
+                Ethereum Classic is the only EVM-compatible chain secured by
+                Proof-of-Work. ETChash supports both ASIC efficiency for
+                commercial-grade operations and GPU accessibility for global
+                participation &mdash; diversifying miner composition and reducing
+                supply chain risk. Run{" "}
                 <a
                   href="https://github.com/ethereumclassic/fukuii"
                   target="_blank"

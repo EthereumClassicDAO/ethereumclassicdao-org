@@ -6,7 +6,7 @@ const stages = [
     title: "Consensus Upgrades",
     status: "complete" as const,
     description:
-      "Fee market improvements, dynamic gas limits, and treasury funding mechanism. Three independent client implementations complete.",
+      "Fee market improvements, dynamic gas limits, and treasury funding mechanism. Independent client implementations complete.",
     deliverables: [
       "Transaction fee market",
       "Dynamic gas limits",

@@ -11,12 +11,12 @@ const faqItems = [
   {
     question: "How is the Treasury funded?",
     answer:
-      "The Olympia Treasury is funded by transaction fees that would otherwise be burned. Block rewards remain completely untouched and go entirely to miners. This creates sustainable development funding without inflation or miner impact.",
+      "The Olympia Treasury is funded by transaction fee revenue, voluntary on-chain donations, and mining rewards directed to the treasury address. Block rewards remain completely untouched and go entirely to miners. This creates sustainable, transparent funding without inflation or miner impact.",
   },
   {
     question: "Who can submit proposals?",
     answer:
-      "Any community member can submit a governance proposal on-chain. There are no gatekeepers or permission requirements. Proposals define the action to execute and the supporting rationale.",
+      "Members can submit governance proposals on-chain. Membership is granted through non-transferable tokens. Proposals define the action to execute and the supporting rationale.",
   },
   {
     question: "How does voting work?",
@@ -26,12 +26,12 @@ const faqItems = [
   {
     question: "What is the Olympia upgrade?",
     answer:
-      "The Olympia upgrade is the most significant protocol enhancement in Ethereum Classic's history. It introduces improved fee markets, protocol-level treasury funding, and the foundation for on-chain governance. Three independent client implementations support the upgrade.",
+      "The Olympia upgrade is the most significant protocol enhancement in Ethereum Classic's history. It introduces improved fee markets, protocol-level treasury funding, and the foundation for on-chain governance. Independent client implementations support the upgrade.",
   },
   {
     question: "When does Olympia activate?",
     answer:
-      "Olympia activates on the Mordor testnet first, followed by Ethereum Classic mainnet pending successful testnet validation. Exact activation dates are coordinated across the three independent client teams.",
+      "Olympia activates on the Mordor testnet first, followed by Ethereum Classic mainnet pending successful testnet validation. Exact activation dates are coordinated across the independent client teams.",
   },
   {
     question: "How are funds protected from misuse?",

@@ -14,7 +14,7 @@ const steps = [
     number: "01",
     title: "Propose",
     description:
-      "Any community member can submit a governance proposal on-chain. Proposals define the action to execute and the supporting rationale. There are no gatekeepers — the process is fully permissionless.",
+      "Any member can submit a governance proposal on-chain. Proposals define the action to execute and the supporting rationale. Membership is granted through non-transferable tokens.",
   },
   {
     icon: Vote,

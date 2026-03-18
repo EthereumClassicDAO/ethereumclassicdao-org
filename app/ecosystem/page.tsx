@@ -4,6 +4,7 @@ import { NetworkConfigSection } from "@/components/ecosystem/NetworkConfigSectio
 import { DeveloperToolingSection } from "@/components/ecosystem/DeveloperToolingSection";
 import { ClientsSection } from "@/components/ecosystem/ClientsSection";
 import { MiningSection } from "@/components/ecosystem/MiningSection";
+import { EquipmentSection } from "@/components/ecosystem/EquipmentSection";
 import { InstitutionalProductsSection } from "@/components/ecosystem/InstitutionalProductsSection";
 import { DeveloperLinksSection } from "@/components/ecosystem/DeveloperLinksSection";
 import { PropertiesSection } from "@/components/ecosystem/PropertiesSection";
@@ -22,6 +23,7 @@ export default function EcosystemPage() {
       <DeveloperToolingSection />
       <ClientsSection />
       <MiningSection />
+      <EquipmentSection />
       <InstitutionalProductsSection />
       <DeveloperLinksSection />
       <PropertiesSection />

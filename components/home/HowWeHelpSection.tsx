@@ -7,7 +7,7 @@ const pillars = [
     icon: GitBranch,
     title: "Core Client Development",
     description:
-      "Maintaining and coordinating the core client software that runs the Ethereum Classic network. Multiple independent implementations ensure resilience and decentralization across 170+ TH/s of mining infrastructure.",
+      "Maintaining and coordinating the client software that runs the Ethereum Classic network. Independent implementations ensure resilience and decentralization across 170+ TH/s of mining infrastructure.",
   },
   {
     icon: Vote,

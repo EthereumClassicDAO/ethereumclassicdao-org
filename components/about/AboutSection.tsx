@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 const buildItems = [
   {
     icon: GitBranch,
-    text: "Core network software — three independent client implementations (fukuii, core-geth, besu)",
+    text: "Core network software — independent client implementations ensuring no single point of failure",
   },
   {
     icon: Vote,

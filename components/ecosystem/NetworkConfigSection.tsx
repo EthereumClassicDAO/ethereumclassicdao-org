@@ -3,7 +3,23 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
-const networks = [
+interface EvmVersion {
+  name: string;
+  ethOrigin: boolean;
+}
+
+interface NetworkConfig {
+  name: string;
+  chainId: string;
+  currency: string;
+  rpc: string;
+  explorer: string;
+  consensus: string;
+  evmVersions: EvmVersion[];
+  nextUpgrade: EvmVersion[];
+}
+
+const networks: NetworkConfig[] = [
   {
     name: "ETC Mainnet",
     chainId: "61",
@@ -11,7 +27,14 @@ const networks = [
     rpc: "https://etc.rivet.link",
     explorer: "https://etc.blockscout.com",
     consensus: "Proof-of-Work",
-    evm: "Shanghai-equivalent",
+    evmVersions: [
+      { name: "Shanghai", ethOrigin: true },
+      { name: "Spiral", ethOrigin: false },
+    ],
+    nextUpgrade: [
+      { name: "Olympia", ethOrigin: false },
+      { name: "Fusaka", ethOrigin: true },
+    ],
   },
   {
     name: "Mordor Testnet",
@@ -20,9 +43,31 @@ const networks = [
     rpc: "https://rpc.mordor.etcnodes.org",
     explorer: "https://etc-mordor.blockscout.com",
     consensus: "Proof-of-Work",
-    evm: "Shanghai-equivalent",
+    evmVersions: [
+      { name: "Shanghai", ethOrigin: true },
+      { name: "Spiral", ethOrigin: false },
+    ],
+    nextUpgrade: [
+      { name: "Olympia", ethOrigin: false },
+      { name: "Fusaka", ethOrigin: true },
+    ],
   },
 ];
+
+function EvmLabel({ versions }: { versions: EvmVersion[] }) {
+  return (
+    <>
+      {versions.map((v, i) => (
+        <span key={v.name}>
+          {i > 0 && " · "}
+          <span className={v.ethOrigin ? "text-violet-400" : undefined}>
+            {v.name}
+          </span>
+        </span>
+      ))}
+    </>
+  );
+}
 
 function copyToClipboard(text: string) {
   navigator.clipboard.writeText(text);
@@ -127,7 +172,17 @@ export function NetworkConfigSection() {
                         EVM
                       </dt>
                       <dd className="text-sm font-mono font-semibold">
-                        {net.evm}
+                        <EvmLabel versions={net.evmVersions} />
+                      </dd>
+                    </div>
+                    <div className="h-px bg-[var(--border-subtle)]" />
+
+                    <div className="flex items-center justify-between">
+                      <dt className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)]">
+                        Next Upgrade
+                      </dt>
+                      <dd className="text-sm font-mono font-semibold">
+                        <EvmLabel versions={net.nextUpgrade} />
                       </dd>
                     </div>
                   </dl>

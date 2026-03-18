@@ -46,7 +46,7 @@ export function NavHeader() {
               )}
             </Link>
           ))}
-          <span className="hidden text-xs font-mono text-[var(--text-subtle)] lg:inline">
+          <span className="hidden text-xs font-mono text-[var(--brand-green)] lg:inline">
             Wyoming DAO LLC
           </span>
           <ThemeToggle />

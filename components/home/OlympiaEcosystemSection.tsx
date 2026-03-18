@@ -52,8 +52,8 @@ export function OlympiaEcosystemSection() {
               Coordinating Organizations
             </h2>
             <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
-              Three coordinating organizations working together to govern
-              and advance the Ethereum Classic network.
+              Coordinating organizations working together to govern and
+              advance the Ethereum Classic network.
             </p>
           </FadeIn>
 

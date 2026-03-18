@@ -10,7 +10,7 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 
 const flowSteps = [
   { icon: ArrowRight, label: "Transactions", sublabel: "Users pay gas fees" },
-  { icon: Coins, label: "Fee Revenue", sublabel: "Transaction fee mechanism" },
+  { icon: Coins, label: "Fee Revenue", sublabel: "Basefee + donations + mining" },
   { icon: Landmark, label: "Treasury", sublabel: "Protocol-managed vault" },
   { icon: Vote, label: "Governance", sublabel: "Community proposals" },
   { icon: Globe, label: "Ecosystem", sublabel: "Development funding" },
@@ -35,14 +35,14 @@ export function TreasuryFundingSection() {
           <FadeIn>
             <div className="mt-12 rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] p-8">
               <p className="text-lg font-semibold">
-                100% of transaction fee revenue funds the Olympia Treasury
+                Transaction fee revenue funds the Olympia Treasury
               </p>
               <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
                 Block rewards remain completely untouched — miners are
-                unaffected. Transaction fees that would otherwise be burned are
-                redirected to a protocol-managed treasury. This creates
-                sustainable funding without inflation or reduced miner
-                compensation.
+                unaffected. The treasury receives basefee revenue, voluntary
+                on-chain donations, and mining rewards directed to the treasury
+                address. This creates sustainable, transparent funding without
+                inflation or reduced miner compensation.
               </p>
             </div>
           </FadeIn>

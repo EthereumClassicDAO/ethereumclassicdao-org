@@ -27,7 +27,7 @@ const infrastructure = [
   {
     icon: Pickaxe,
     category: "Mining Infrastructure",
-    details: "170+ TH/s hashrate, GPU and ASIC compatible",
+    details: "170+ TH/s hashrate. Global GPU and ASIC mining operations secure the only Proof-of-Work network with native smart contracts.",
   },
   {
     icon: FileCheck,
@@ -47,7 +47,7 @@ export function InfrastructureSection() {
               170+ <span className="text-lg">TH/s</span>
             </p>
             <p className="mt-1 text-sm text-[var(--text-muted)]">
-              Network hashrate — absorbed significant Ethereum mining infrastructure post-Merge
+              Network hashrate — GPU and ASIC compatible, securing the only Proof-of-Work network with native smart contracts
             </p>
           </FadeIn>
 

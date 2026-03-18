@@ -24,7 +24,7 @@ const secondaryClients = [
     name: "besu",
     language: "Java",
     description:
-      "Enterprise-grade client built on Hyperledger Besu. Provides cross-client protocol verification and serves as the reference implementation for validating consensus compatibility across all three clients.",
+      "Enterprise-grade client built on Hyperledger Besu. Provides cross-client protocol verification and serves as the reference implementation for validating consensus compatibility across all clients.",
     github: "https://github.com/ethereumclassic/besu",
     status: "Reference",
   },
@@ -41,8 +41,8 @@ export function ClientsSection() {
               Client Implementations
             </h2>
             <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
-              Three independent client implementations ensure decentralization
-              and resilience. No single codebase controls the network.
+              Independent client implementations ensure decentralization and
+              resilience. No single codebase controls the network.
             </p>
           </FadeIn>
 

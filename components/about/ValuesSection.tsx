@@ -13,7 +13,7 @@ const values = [
     icon: Network,
     title: "Decentralization",
     description:
-      "Three independent client implementations, distributed mining infrastructure, and on-chain governance — no single point of control.",
+      "Independent client implementations, distributed mining infrastructure, and on-chain governance — no single point of control.",
   },
   {
     icon: Eye,

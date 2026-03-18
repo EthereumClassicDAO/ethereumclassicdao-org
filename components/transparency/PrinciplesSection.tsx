@@ -19,7 +19,7 @@ const principles = [
     icon: Network,
     title: "Decentralization",
     description:
-      "No single point of control or failure. Three independent client implementations, permissionless proposal submission, and community-driven governance ensure resilience.",
+      "No single point of control or failure. Independent client implementations, permissionless proposal submission, and community-driven governance ensure resilience.",
   },
   {
     icon: Scale,

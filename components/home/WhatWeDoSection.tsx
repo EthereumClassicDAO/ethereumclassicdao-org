@@ -8,7 +8,7 @@ const focusAreas = [
   {
     question: "Core Client Development",
     answer:
-      "Maintaining and coordinating the core client software that runs the Ethereum Classic network. Multiple independent implementations ensure no single point of failure. Coordinating network upgrades to maintain EVM protocol parity — ensuring Ethereum Classic delivers a best-in-class EVM experience with every protocol upgrade.",
+      "Maintaining and coordinating the client software that runs the Ethereum Classic network. Independent implementations ensure no single point of failure. Coordinating network upgrades to maintain EVM protocol parity — ensuring Ethereum Classic delivers a best-in-class EVM experience with every protocol upgrade.",
   },
   {
     question: "Ecosystem Infrastructure",
@@ -18,7 +18,7 @@ const focusAreas = [
   {
     question: "Hashrate Incentive Alignment",
     answer:
-      "Ensuring network security through mining economics. 170+ TH/s of mining infrastructure absorbed significant Ethereum hardware post-Merge. The Olympia upgrade preserves block rewards entirely for miners while adding governance and treasury capabilities funded by transaction fees. GPU and ASIC compatible — the largest Proof-of-Work network with native smart contracts.",
+      "Ensuring network security through mining economics. 170+ TH/s of mining infrastructure secures the largest Proof-of-Work network with native smart contracts. The Olympia upgrade preserves block rewards entirely for miners while adding governance and treasury capabilities funded by transaction fees. GPU and ASIC compatible — ASIC efficiency for commercial-grade operations, GPU accessibility for global participation. This dual-compatibility diversifies miner composition and reduces supply chain risk.",
   },
   {
     question: "US Regulatory Compliance",

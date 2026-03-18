@@ -73,7 +73,6 @@ export function EtcOverviewSection({ stats }: { stats: EtcStats }) {
       value: formatBlockTime(stats.averageBlockTimeMs),
     },
     { label: "Network Hashrate", value: "170+ TH/s *" },
-    { label: "Independent Clients", value: "3 (fukuii, core-geth, besu)" },
     { label: "Gas Price (avg)", value: formatGwei(stats.gasPriceAvg) },
   ];
 
@@ -123,8 +122,8 @@ export function EtcOverviewSection({ stats }: { stats: EtcStats }) {
           </FadeIn>
 
           <p className="mt-4 text-xs text-[var(--text-subtle)]">
-            * Hashrate approximate, based on pool data. Data refreshes every 5
-            minutes.
+            * Hashrate approximate, based on pool data. Gas price from
+            Blockscout. Data refreshes every 10 minutes.
           </p>
         </div>
       </section>
