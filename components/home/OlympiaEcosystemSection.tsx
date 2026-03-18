@@ -51,7 +51,7 @@ export function OlympiaEcosystemSection() {
             <h2 className="text-3xl font-bold tracking-tight">
               Coordinating Organizations
             </h2>
-            <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
+            <p className="mt-3 max-w-2xl text-base text-[var(--text-muted)]">
               Coordinating organizations working together to govern and
               advance the Ethereum Classic network.
             </p>

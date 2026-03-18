@@ -34,7 +34,7 @@ export function PrinciplesSection() {
     <>
       <SectionDivider />
       <section className="section-gradient py-28">
-        <div className="mx-auto max-w-4xl px-6">
+        <div className="mx-auto max-w-3xl px-6">
           <FadeIn>
             <h2 className="text-3xl font-bold tracking-tight">
               Organizational Principles

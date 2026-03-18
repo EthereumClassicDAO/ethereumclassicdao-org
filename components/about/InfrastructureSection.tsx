@@ -46,8 +46,11 @@ export function InfrastructureSection() {
             <p className="text-4xl font-bold font-mono text-[var(--brand-green)]">
               170+ <span className="text-lg">TH/s</span>
             </p>
+            <p className="mt-1 text-xs font-mono text-[var(--text-subtle)]">
+              Algorithm: ETChash
+            </p>
             <p className="mt-1 text-sm text-[var(--text-muted)]">
-              Network hashrate — GPU and ASIC compatible, securing the only Proof-of-Work network with native smart contracts
+              GPU and ASIC compatible — securing the only Proof-of-Work network with native smart contracts
             </p>
           </FadeIn>
 
@@ -63,7 +66,7 @@ export function InfrastructureSection() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {infrastructure.map((item, i) => (
               <FadeIn key={item.category} delay={i * 80}>
-                <div className="flex gap-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5">
+                <div className={`flex gap-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5${i === infrastructure.length - 1 ? " sm:col-span-2" : ""}`}>
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                     <item.icon
                       size={20}

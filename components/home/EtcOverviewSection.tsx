@@ -7,7 +7,6 @@ import {
   formatSupply,
   formatBlockTime,
   formatPercent,
-  formatGwei,
 } from "@/lib/format";
 
 interface Row {
@@ -73,7 +72,6 @@ export function EtcOverviewSection({ stats }: { stats: EtcStats }) {
       value: formatBlockTime(stats.averageBlockTimeMs),
     },
     { label: "Network Hashrate", value: "170+ TH/s *" },
-    { label: "Gas Price (avg)", value: formatGwei(stats.gasPriceAvg) },
   ];
 
   const priceChangeColor: "green" | "red" =
@@ -122,8 +120,8 @@ export function EtcOverviewSection({ stats }: { stats: EtcStats }) {
           </FadeIn>
 
           <p className="mt-4 text-xs text-[var(--text-subtle)]">
-            * Hashrate approximate, based on pool data. Gas price from
-            Blockscout. Data refreshes every 10 minutes.
+            * Hashrate approximate, based on pool data. Data refreshes every
+            10 minutes.
           </p>
         </div>
       </section>

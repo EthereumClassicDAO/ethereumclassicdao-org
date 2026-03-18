@@ -28,8 +28,8 @@ const networks: NetworkConfig[] = [
     explorer: "https://etc.blockscout.com",
     consensus: "Proof-of-Work",
     evmVersions: [
-      { name: "Shanghai", ethOrigin: true },
       { name: "Spiral", ethOrigin: false },
+      { name: "Shanghai", ethOrigin: true },
     ],
     nextUpgrade: [
       { name: "Olympia", ethOrigin: false },
@@ -44,8 +44,8 @@ const networks: NetworkConfig[] = [
     explorer: "https://etc-mordor.blockscout.com",
     consensus: "Proof-of-Work",
     evmVersions: [
-      { name: "Shanghai", ethOrigin: true },
       { name: "Spiral", ethOrigin: false },
+      { name: "Shanghai", ethOrigin: true },
     ],
     nextUpgrade: [
       { name: "Olympia", ethOrigin: false },
@@ -55,17 +55,17 @@ const networks: NetworkConfig[] = [
 ];
 
 function EvmLabel({ versions }: { versions: EvmVersion[] }) {
+  const primary = versions.find((v) => !v.ethOrigin);
+  const secondary = versions.find((v) => v.ethOrigin);
   return (
-    <>
-      {versions.map((v, i) => (
-        <span key={v.name}>
-          {i > 0 && " · "}
-          <span className={v.ethOrigin ? "text-violet-400" : undefined}>
-            {v.name}
-          </span>
+    <span>
+      {primary && <span>{primary.name}</span>}
+      {secondary && (
+        <span className="ml-1.5 text-[10px] font-normal text-violet-400">
+          {secondary.name}
         </span>
-      ))}
-    </>
+      )}
+    </span>
   );
 }
 
@@ -83,7 +83,7 @@ export function NetworkConfigSection() {
             <h2 className="text-3xl font-bold tracking-tight">
               Network Configuration
             </h2>
-            <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
+            <p className="mt-3 max-w-2xl text-base text-[var(--text-muted)]">
               Connect to Ethereum Classic mainnet or the Mordor testnet.
               Full EVM compatibility — use your existing Ethereum tooling.
             </p>
