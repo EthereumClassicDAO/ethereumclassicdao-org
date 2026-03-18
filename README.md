@@ -53,6 +53,14 @@ pnpm typecheck    # TypeScript check
 - **Fonts:** Inter (body) + JetBrains Mono (code)
 - **Tone:** Institutional, confident, factual — like Solana Foundation or Stellar Enterprise Fund
 
+## Branch Strategy
+
+| Branch | Purpose |
+|--------|---------|
+| `demo_v0.1` | Preserved snapshot — fast-iteration development, not ECIP-aligned |
+| `demo_v0.2` | Active development — spec-compliant, 7 pages, live stats, light/dark theme |
+| `main` | Production — deployed after Olympia activates on ETC mainnet |
+
 ## Related Repos
 
 - [olympia-brand](https://github.com/olympiadao/olympia-brand) — Design tokens, logos, favicons
