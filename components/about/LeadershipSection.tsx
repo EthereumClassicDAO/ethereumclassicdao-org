@@ -39,7 +39,7 @@ export function LeadershipSection() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {team.map((person, i) => (
               <FadeIn key={person.name} delay={i * 100}>
-                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6">
+                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6">
                   <div className="flex items-center gap-4">
                     <Image
                       src={person.photo}

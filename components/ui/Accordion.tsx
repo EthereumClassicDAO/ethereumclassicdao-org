@@ -12,12 +12,12 @@ export function Accordion({ items }: { items: AccordionItem[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="divide-y divide-[rgba(255,255,255,0.06)]">
+    <div className="divide-y divide-[var(--divider)]">
       {items.map((item, i) => (
         <div key={i}>
           <button
             onClick={() => setOpenIndex(openIndex === i ? null : i)}
-            className="flex w-full items-center justify-between py-5 text-left text-sm font-semibold transition-colors hover:text-white"
+            className="flex w-full items-center justify-between py-5 text-left text-sm font-semibold transition-colors hover:text-[var(--text-primary)]"
           >
             {item.question}
             <ChevronDown

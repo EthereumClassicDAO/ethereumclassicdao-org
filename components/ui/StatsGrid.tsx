@@ -36,9 +36,9 @@ export function StatsGrid({
                 <p
                   className={`mt-1 text-xs ${
                     s.contextColor === "green"
-                      ? "text-emerald-400"
+                      ? "text-[var(--color-success)]"
                       : s.contextColor === "red"
-                        ? "text-red-400"
+                        ? "text-[var(--color-error)]"
                         : "text-[var(--text-muted)]"
                   }`}
                 >
@@ -70,9 +70,9 @@ export function StatsGrid({
               <p
                 className={`mt-1 text-xs ${
                   s.contextColor === "green"
-                    ? "text-emerald-400"
+                    ? "text-[var(--color-success)]"
                     : s.contextColor === "red"
-                      ? "text-red-400"
+                      ? "text-[var(--color-error)]"
                       : "text-[var(--text-muted)]"
                 }`}
               >

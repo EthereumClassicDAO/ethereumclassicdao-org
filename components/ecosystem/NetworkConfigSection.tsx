@@ -47,7 +47,7 @@ export function NetworkConfigSection() {
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {networks.map((net, i) => (
               <FadeIn key={net.chainId} delay={i * 100}>
-                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6">
+                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6">
                   <h3 className="text-lg font-bold font-mono">
                     {net.name}
                     <span className="ml-2 text-sm font-normal text-[var(--text-subtle)]">
@@ -64,7 +64,7 @@ export function NetworkConfigSection() {
                         {net.chainId}
                       </dd>
                     </div>
-                    <div className="h-px bg-[rgba(255,255,255,0.04)]" />
+                    <div className="h-px bg-[var(--border-subtle)]" />
 
                     <div className="flex items-center justify-between">
                       <dt className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)]">
@@ -74,7 +74,7 @@ export function NetworkConfigSection() {
                         {net.currency}
                       </dd>
                     </div>
-                    <div className="h-px bg-[rgba(255,255,255,0.04)]" />
+                    <div className="h-px bg-[var(--border-subtle)]" />
 
                     <div className="flex items-center justify-between gap-4">
                       <dt className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)]">
@@ -86,14 +86,14 @@ export function NetworkConfigSection() {
                         </code>
                         <button
                           onClick={() => copyToClipboard(net.rpc)}
-                          className="shrink-0 text-[10px] font-mono text-[var(--text-subtle)] transition-colors hover:text-white"
+                          className="shrink-0 text-[10px] font-mono text-[var(--text-subtle)] transition-colors hover:text-[var(--text-primary)]"
                           title="Copy RPC URL"
                         >
                           Copy
                         </button>
                       </dd>
                     </div>
-                    <div className="h-px bg-[rgba(255,255,255,0.04)]" />
+                    <div className="h-px bg-[var(--border-subtle)]" />
 
                     <div className="flex items-center justify-between">
                       <dt className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)]">
@@ -110,7 +110,7 @@ export function NetworkConfigSection() {
                         </a>
                       </dd>
                     </div>
-                    <div className="h-px bg-[rgba(255,255,255,0.04)]" />
+                    <div className="h-px bg-[var(--border-subtle)]" />
 
                     <div className="flex items-center justify-between">
                       <dt className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)]">
@@ -120,7 +120,7 @@ export function NetworkConfigSection() {
                         {net.consensus}
                       </dd>
                     </div>
-                    <div className="h-px bg-[rgba(255,255,255,0.04)]" />
+                    <div className="h-px bg-[var(--border-subtle)]" />
 
                     <div className="flex items-center justify-between">
                       <dt className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)]">

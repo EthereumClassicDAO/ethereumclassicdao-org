@@ -14,28 +14,28 @@ const steps = [
     number: "01",
     title: "Propose",
     description:
-      "Any community member can submit a governance proposal on-chain. Proposals define the action to execute, the target contract, and the rationale. There are no gatekeepers — the process is fully permissionless.",
+      "Any community member can submit a governance proposal on-chain. Proposals define the action to execute and the supporting rationale. There are no gatekeepers — the process is fully permissionless.",
   },
   {
     icon: Vote,
     number: "02",
     title: "Vote",
     description:
-      "Soulbound NFT holders cast weighted on-chain votes during a defined voting period. Votes are transparent and immutable. A quorum threshold must be met for the proposal to pass.",
+      "Members cast weighted on-chain votes during a defined voting period. Votes are transparent and immutable. A quorum threshold must be met for the proposal to pass.",
   },
   {
     icon: Clock,
     number: "03",
     title: "Queue",
     description:
-      "Approved proposals enter a security timelock. This delay provides the community time to review and react before execution. The timelock is enforced at the contract level.",
+      "Approved proposals enter a security timelock. This delay provides the community time to review and react before execution. The timelock is enforced at the protocol level.",
   },
   {
     icon: Zap,
     number: "04",
     title: "Execute",
     description:
-      "After the timelock expires, the proposal executes automatically. Treasury transfers, contract upgrades, and parameter changes all happen on-chain with full auditability.",
+      "After the timelock expires, the proposal executes automatically. Treasury transfers and governance actions all happen on-chain with full auditability.",
   },
   {
     icon: FileCheck,
@@ -64,14 +64,14 @@ export function HowItWorksSection() {
           <div className="mt-12 space-y-6">
             {steps.map((step, i) => (
               <FadeIn key={step.title} delay={i * 80}>
-                <div className="flex gap-6 rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6 transition-colors hover:border-[var(--border-glow)]">
+                <div className="flex gap-6 rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
                   <div className="flex flex-col items-center gap-2">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-[var(--brand-green)] bg-[var(--background)]">
                       <span className="text-sm font-mono font-bold text-[var(--brand-green)]">
                         {step.number}
                       </span>
                     </div>
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                       <step.icon
                         size={16}
                         className="text-[var(--brand-green)]"

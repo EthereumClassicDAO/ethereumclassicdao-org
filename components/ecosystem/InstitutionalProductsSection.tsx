@@ -39,15 +39,15 @@ export function InstitutionalProductsSection() {
             <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
               A regulated digital asset ecosystem &mdash; from the Grayscale
               ETC Trust to institutional custody, positioned for ETF conversion
-              and compliant ERC-20 token issuance.
+              and compliant token issuance.
             </p>
           </FadeIn>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {products.map((product, i) => (
               <FadeIn key={product.title} delay={i * 100}>
-                <div className="flex flex-col rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+                <div className="flex flex-col rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                     <product.icon
                       size={20}
                       className="text-[var(--brand-green)]"

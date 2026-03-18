@@ -10,7 +10,7 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 
 const flowSteps = [
   { icon: ArrowRight, label: "Transactions", sublabel: "Users pay gas fees" },
-  { icon: Coins, label: "Basefee", sublabel: "EIP-1559 fee mechanism" },
+  { icon: Coins, label: "Fee Revenue", sublabel: "Transaction fee mechanism" },
   { icon: Landmark, label: "Treasury", sublabel: "Protocol-managed vault" },
   { icon: Vote, label: "Governance", sublabel: "Community proposals" },
   { icon: Globe, label: "Ecosystem", sublabel: "Development funding" },
@@ -33,16 +33,16 @@ export function TreasuryFundingSection() {
           </FadeIn>
 
           <FadeIn>
-            <div className="mt-12 rounded-xl border border-[var(--border-brand)] bg-[rgba(0,255,174,0.02)] p-8">
+            <div className="mt-12 rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] p-8">
               <p className="text-lg font-semibold">
-                100% of EIP-1559 basefee funds the Olympia Treasury
+                100% of transaction fee revenue funds the Olympia Treasury
               </p>
               <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
                 Block rewards remain completely untouched — miners are
-                unaffected. The basefee, which would otherwise be burned (as on
-                Ethereum mainnet), is redirected to a protocol-managed treasury
-                contract. This creates a sustainable funding mechanism without
-                introducing inflation or reducing miner compensation.
+                unaffected. Transaction fees that would otherwise be burned are
+                redirected to a protocol-managed treasury. This creates
+                sustainable funding without inflation or reduced miner
+                compensation.
               </p>
             </div>
           </FadeIn>
@@ -58,12 +58,12 @@ export function TreasuryFundingSection() {
             {/* Desktop: horizontal */}
             <div className="mt-6 hidden md:block">
               <div className="relative">
-                <div className="absolute top-6 left-10 right-10 h-px bg-[rgba(255,255,255,0.06)]" />
+                <div className="absolute top-6 left-10 right-10 h-px bg-[var(--divider)]" />
                 <div className="relative grid grid-cols-5 gap-2">
                   {flowSteps.map((step, i) => (
                     <FadeIn key={step.label} delay={i * 100}>
                       <div className="text-center">
-                        <div className="relative mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-[rgba(255,255,255,0.1)] bg-[var(--bg-elevated)]">
+                        <div className="relative mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-[var(--border-strong)] bg-[var(--bg-elevated)]">
                           <step.icon
                             size={18}
                             className="text-[var(--brand-green)]"
@@ -87,7 +87,7 @@ export function TreasuryFundingSection() {
               {flowSteps.map((step, i) => (
                 <FadeIn key={step.label} delay={i * 80}>
                   <div className="flex items-center gap-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[rgba(255,255,255,0.1)] bg-[var(--bg-elevated)]">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--border-strong)] bg-[var(--bg-elevated)]">
                       <step.icon
                         size={16}
                         className="text-[var(--brand-green)]"

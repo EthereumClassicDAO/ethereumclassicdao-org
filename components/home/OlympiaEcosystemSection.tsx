@@ -17,7 +17,7 @@ const entities = [
     name: "Olympia DAO",
     role: "On-Chain Governance",
     description:
-      "Proposal submission, NFT-weighted voting, and transparent execution through the Olympia Governor contract deployed on Ethereum Classic.",
+      "Proposal submission, membership-based voting, and transparent execution — all on-chain on Ethereum Classic.",
     href: "https://olympiadao.org",
     highlighted: false,
   },
@@ -26,7 +26,7 @@ const entities = [
     name: "Olympia Treasury",
     role: "Protocol-Funded Treasury",
     description:
-      "EIP-1559 basefee accumulation creates sustainable protocol funding. Real-time treasury monitoring via public dashboard.",
+      "Transaction fee revenue creates sustainable protocol funding. Real-time treasury monitoring via public dashboard.",
     href: "https://olympiatreasury.org",
     highlighted: false,
   },
@@ -66,12 +66,12 @@ export function OlympiaEcosystemSection() {
                   rel={entity.highlighted ? undefined : "noopener noreferrer"}
                   className={`group flex flex-col rounded-xl border p-6 transition-all duration-200 hover:-translate-y-0.5 ${
                     entity.highlighted
-                      ? "bg-[var(--bg-elevated)] border-[var(--border-brand)] shadow-[0_0_24px_rgba(0,255,174,0.05)]"
-                      : "bg-[var(--bg-elevated)] border-[rgba(255,255,255,0.06)] hover:border-[var(--border-glow)]"
+                      ? "bg-[var(--bg-elevated)] border-[var(--border-brand)] shadow-[0_0_24px_var(--border-glow)]"
+                      : "bg-[var(--bg-elevated)] border-[var(--divider)] hover:border-[var(--border-glow)]"
                   }`}
                 >
                   <div className="flex items-start justify-between">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                       <entity.icon
                         size={20}
                         className="text-[var(--brand-green)]"

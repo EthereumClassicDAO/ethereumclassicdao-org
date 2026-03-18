@@ -24,8 +24,8 @@ function OverviewTable({
   rows: Row[];
 }) {
   return (
-    <div className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] overflow-hidden">
-      <div className="px-6 py-4 border-b border-[rgba(255,255,255,0.06)]">
+    <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] overflow-hidden">
+      <div className="px-6 py-4 border-b border-[var(--divider)]">
         <p className="text-sm font-semibold tracking-wide">{heading}</p>
       </div>
       <div>
@@ -33,7 +33,7 @@ function OverviewTable({
           <div
             key={row.label}
             className={`flex items-center justify-between px-6 py-3 ${
-              i % 2 === 0 ? "bg-[rgba(255,255,255,0.02)]" : ""
+              i % 2 === 0 ? "bg-[var(--bg-card)]" : ""
             }`}
           >
             <span className="text-sm text-[var(--text-muted)]">
@@ -42,9 +42,9 @@ function OverviewTable({
             <span
               className={`text-sm font-mono font-medium ${
                 row.color === "green"
-                  ? "text-emerald-400"
+                  ? "text-[var(--color-success)]"
                   : row.color === "red"
-                    ? "text-red-400"
+                    ? "text-[var(--color-error)]"
                     : "text-[var(--text-primary)]"
               }`}
             >

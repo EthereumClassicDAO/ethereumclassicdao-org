@@ -13,17 +13,17 @@ const focusAreas = [
   {
     question: "Ecosystem Infrastructure",
     answer:
-      "Building and integrating the infrastructure that makes Ethereum Classic accessible to everyone — from public RPC endpoints and block explorers to oracle networks, institutional custody integrations, and on-chain governance. Protocol-funded treasury via EIP-1559 basefee creates sustainable funding without token inflation or block reward changes.",
+      "Building and integrating the infrastructure that makes Ethereum Classic accessible to everyone — from public RPC endpoints and block explorers to oracle networks, institutional custody integrations, and on-chain governance. Protocol-funded treasury creates sustainable funding without token inflation or block reward changes.",
   },
   {
     question: "Hashrate Incentive Alignment",
     answer:
-      "Ensuring network security through mining economics. 170+ TH/s of mining infrastructure absorbed significant Ethereum hardware post-Merge. The Olympia upgrade preserves block rewards entirely for miners while adding governance and treasury capabilities funded by EIP-1559 basefees. GPU and ASIC compatible — the largest Proof-of-Work network with native smart contracts.",
+      "Ensuring network security through mining economics. 170+ TH/s of mining infrastructure absorbed significant Ethereum hardware post-Merge. The Olympia upgrade preserves block rewards entirely for miners while adding governance and treasury capabilities funded by transaction fees. GPU and ASIC compatible — the largest Proof-of-Work network with native smart contracts.",
   },
   {
     question: "US Regulatory Compliance",
     answer:
-      "Wyoming DAO LLC structure (Filing ID 2025-001671865) provides the legal framework for on-chain governance and US regulatory compliance. ETC is positioned for digital commodity classification under the CLARITY Act, while the GENIUS Act creates a pathway for regulated stablecoins on ETC's EVM — enabling a compliant ecosystem of ETF-aligned digital assets from the flagship ETC asset to protocol-based ERC-20 tokens.",
+      "Wyoming DAO LLC structure provides the legal framework for on-chain governance and US regulatory compliance. ETC is positioned for digital commodity classification under the CLARITY Act, while the GENIUS Act creates a pathway for regulated stablecoins — enabling a compliant ecosystem of digital assets on Ethereum Classic.",
   },
 ];
 

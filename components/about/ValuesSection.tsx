@@ -45,8 +45,8 @@ export function ValuesSection() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {values.map((value, i) => (
               <FadeIn key={value.title} delay={i * 100}>
-                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                     <value.icon
                       size={20}
                       className="text-[var(--brand-green)]"

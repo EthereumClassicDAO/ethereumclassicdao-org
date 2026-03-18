@@ -7,34 +7,37 @@
    ========================================== */
 
 :root {
-  /* Brand (shared) */
-  --brand-green: #00ffae;
-  --brand-green-hover: #14f1b4;
-  --brand-green-active: #00cc8a;
+  /* Brand — light mode uses darker shade for WCAG AA on white */
+  --brand-green: #00a87a;
+  --brand-green-hover: #009e72;
+  --brand-green-active: #008c64;
   --brand-green-muted: #007a53;
-  --brand-green-subtle: rgba(0, 255, 174, 0.04);
+  --brand-green-subtle: rgba(0, 168, 122, 0.08);
 
-  /* Light mode defaults */
+  /* Light mode backgrounds */
   --background: #f8faf9;
   --foreground: #0a0f10;
   --bg-surface: #ffffff;
   --bg-elevated: #f1f5f3;
   --bg-deep: #edf2f0;
-  --bg-overlay: rgba(255, 255, 255, 0.9);
+  --bg-overlay: rgba(248, 250, 249, 0.92);
   --bg-card: rgba(255, 255, 255, 0.6);
 
+  /* Light mode text */
   --text-primary: #0a0f10;
   --text-secondary: #374151;
   --text-muted: #6b7280;
   --text-subtle: #9ca3af;
 
+  /* Light mode borders */
   --border-default: #e2e8f0;
   --border-subtle: rgba(0, 0, 0, 0.04);
   --border-strong: rgba(0, 0, 0, 0.16);
-  --border-brand: rgba(0, 200, 138, 0.3);
-  --border-glow: rgba(0, 200, 138, 0.15);
+  --border-brand: rgba(0, 168, 122, 0.3);
+  --border-glow: rgba(0, 168, 122, 0.15);
   --divider: rgba(0, 0, 0, 0.06);
 
+  /* Semantic */
   --color-success: #059669;
   --color-error: #ef4444;
   --color-warning: #f59e0b;
@@ -42,19 +45,29 @@
 }
 
 .dark {
+  /* Brand — neon green for dark backgrounds */
+  --brand-green: #00ffae;
+  --brand-green-hover: #14f1b4;
+  --brand-green-active: #00cc8a;
+  --brand-green-muted: #007a53;
+  --brand-green-subtle: rgba(0, 255, 174, 0.08);
+
+  /* Dark mode backgrounds */
   --background: #0a0f10;
   --foreground: #ffffff;
   --bg-surface: #111111;
   --bg-elevated: #181818;
   --bg-deep: #080b0c;
-  --bg-overlay: rgba(0, 0, 0, 0.9);
+  --bg-overlay: rgba(10, 15, 16, 0.92);
   --bg-card: rgba(0, 0, 0, 0.35);
 
+  /* Dark mode text */
   --text-primary: #ffffff;
   --text-secondary: #c3c5cb;
   --text-muted: #9ca3af;
   --text-subtle: #6b7280;
 
+  /* Dark mode borders */
   --border-default: #1a1a1a;
   --border-subtle: rgba(255, 255, 255, 0.04);
   --border-strong: rgba(255, 255, 255, 0.16);
@@ -62,6 +75,7 @@
   --border-glow: rgba(0, 255, 174, 0.15);
   --divider: rgba(255, 255, 255, 0.06);
 
+  /* Semantic */
   --color-success: #00ffae;
   --color-error: #ef4444;
   --color-warning: #f59e0b;
@@ -99,9 +113,13 @@ body {
   outline-offset: 2px;
 }
 
-/* Selection */
+/* Selection — theme-aware */
 ::selection {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--brand-green-subtle);
+  color: var(--text-primary);
+}
+.dark ::selection {
+  background: rgba(0, 255, 174, 0.25);
   color: white;
 }
 
@@ -109,8 +127,29 @@ body {
    Visual System — Backgrounds & Effects
    ========================================== */
 
-/* Hero — multi-layer gradient stack (3 radials + linear color shift) */
+/* Hero — light mode: subtle green tint on light background */
 .hero-gradient {
+  background:
+    radial-gradient(
+      ellipse 120% 60% at 50% -30%,
+      rgba(0, 168, 122, 0.06) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 80% 40% at 20% 20%,
+      rgba(0, 168, 122, 0.03) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 80% 40%,
+      rgba(0, 80, 60, 0.03) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, var(--background) 0%, var(--bg-elevated) 40%, var(--background) 100%);
+}
+
+/* Hero — dark mode: neon green glow on dark background */
+.dark .hero-gradient {
   background:
     radial-gradient(
       ellipse 120% 60% at 50% -30%,
@@ -130,8 +169,24 @@ body {
     linear-gradient(180deg, #0a0f10 0%, #0d1214 40%, #0a1210 70%, #0a0f10 100%);
 }
 
-/* Light variant for inner pages — same structure, lower intensity */
+/* Light variant for inner pages — light mode */
 .hero-gradient-light {
+  background:
+    radial-gradient(
+      ellipse 120% 60% at 50% -30%,
+      rgba(0, 168, 122, 0.04) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 80% 40% at 20% 20%,
+      rgba(0, 168, 122, 0.02) 0%,
+      transparent 50%
+    ),
+    linear-gradient(180deg, var(--background) 0%, var(--bg-surface) 40%, var(--background) 100%);
+}
+
+/* Light variant for inner pages — dark mode */
+.dark .hero-gradient-light {
   background:
     radial-gradient(
       ellipse 120% 60% at 50% -30%,
@@ -170,8 +225,14 @@ body {
   mix-blend-mode: overlay;
 }
 
-/* Subtle grid overlay for texture */
+/* Grid overlay — light mode uses dark lines, dark mode uses light lines */
 .grid-overlay {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+.dark .grid-overlay {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
@@ -187,8 +248,17 @@ body {
   background: var(--bg-surface);
 }
 
-/* Gradient section — subtle green undertone from bottom */
+/* Gradient section — light mode */
 .section-gradient {
+  background:
+    radial-gradient(
+      ellipse 100% 80% at 50% 100%,
+      rgba(0, 168, 122, 0.03) 0%,
+      transparent 60%
+    ),
+    linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-elevated) 50%, var(--bg-surface) 100%);
+}
+.dark .section-gradient {
   background:
     radial-gradient(
       ellipse 100% 80% at 50% 100%,
@@ -198,8 +268,12 @@ body {
     linear-gradient(180deg, var(--bg-surface) 0%, #0c1110 50%, var(--bg-surface) 100%);
 }
 
-/* Deep section — darker than surface, for stats/callouts */
+/* Deep section — light mode: slightly darker surface; dark mode: very dark */
 .section-deep {
+  background:
+    linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-deep) 50%, var(--bg-elevated) 100%);
+}
+.dark .section-deep {
   background:
     linear-gradient(180deg, #080b0c 0%, #0a0e0f 50%, #080b0c 100%);
 }
@@ -226,8 +300,8 @@ body {
       -45deg,
       transparent,
       transparent 40px,
-      rgba(0, 255, 174, 0.02) 40px,
-      rgba(0, 255, 174, 0.02) 41px
+      var(--brand-green-subtle) 40px,
+      var(--brand-green-subtle) 41px
     );
   pointer-events: none;
   mask-image: radial-gradient(ellipse at 100% 0%, black 30%, transparent 70%);
@@ -248,7 +322,7 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 255, 174, 0.06);
+  border: 1px solid var(--divider);
   pointer-events: none;
 }
 
@@ -256,15 +330,15 @@ body {
    Section Dividers
    ========================================== */
 
-/* Standard gradient divider */
+/* Standard gradient divider — uses brand green at reduced opacity */
 .section-divider {
   height: 1px;
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(0, 255, 174, 0.12) 30%,
-    rgba(0, 255, 174, 0.2) 50%,
-    rgba(0, 255, 174, 0.12) 70%,
+    var(--border-brand) 30%,
+    var(--border-brand) 50%,
+    var(--border-brand) 70%,
     transparent 100%
   );
 }
@@ -275,16 +349,16 @@ body {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(0, 255, 174, 0.2) 20%,
-    rgba(0, 255, 174, 0.35) 50%,
-    rgba(0, 255, 174, 0.2) 80%,
+    var(--border-brand) 20%,
+    var(--brand-green) 50%,
+    var(--border-brand) 80%,
     transparent 100%
   );
-  box-shadow: 0 0 20px rgba(0, 255, 174, 0.08);
+  box-shadow: 0 0 20px var(--border-glow);
 }
 
 /* ==========================================
-   Status Badges
+   Status Badges — theme-aware backgrounds
    ========================================== */
 
 .badge-available {
@@ -295,7 +369,7 @@ body {
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
-  background: rgba(0, 255, 174, 0.1);
+  background: var(--brand-green-subtle);
   color: var(--brand-green);
 }
 
@@ -307,7 +381,7 @@ body {
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--border-subtle);
   color: var(--text-subtle);
 }
 
@@ -319,7 +393,7 @@ body {
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
-  background: rgba(0, 255, 174, 0.1);
+  background: var(--brand-green-subtle);
   color: var(--brand-green);
 }
 
@@ -355,7 +429,7 @@ body {
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--border-subtle);
   color: var(--text-subtle);
 }
 

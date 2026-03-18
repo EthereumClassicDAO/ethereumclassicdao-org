@@ -11,32 +11,32 @@ const faqItems = [
   {
     question: "How is the Treasury funded?",
     answer:
-      "The Olympia Treasury is funded by 100% of the EIP-1559 basefee — the portion of transaction fees that would otherwise be burned. Block rewards remain completely untouched and go entirely to miners. This creates sustainable development funding without inflation or miner impact.",
+      "The Olympia Treasury is funded by transaction fees that would otherwise be burned. Block rewards remain completely untouched and go entirely to miners. This creates sustainable development funding without inflation or miner impact.",
   },
   {
     question: "Who can submit proposals?",
     answer:
-      "Any community member can submit a governance proposal on-chain. There are no gatekeepers or permission requirements. Proposals define the action to execute, the target contract, and supporting rationale.",
+      "Any community member can submit a governance proposal on-chain. There are no gatekeepers or permission requirements. Proposals define the action to execute and the supporting rationale.",
   },
   {
     question: "How does voting work?",
     answer:
-      "Voting power is tied to soulbound (non-transferable) NFT membership tokens. During the voting period, holders cast on-chain votes for or against proposals. A quorum threshold must be met, and a majority of votes must approve the proposal for it to pass.",
+      "Voting power is tied to non-transferable membership tokens. During the voting period, holders cast on-chain votes for or against proposals. A quorum threshold must be met, and a majority of votes must approve the proposal for it to pass.",
   },
   {
-    question: "What is the Olympia hard fork?",
+    question: "What is the Olympia upgrade?",
     answer:
-      "The Olympia hard fork is the most significant protocol upgrade in Ethereum Classic's history. It introduces EIP-1559 fee markets, protocol-level treasury funding, and sets the foundation for on-chain governance. Three independent client implementations (core-geth, besu, fukuii) support the upgrade.",
+      "The Olympia upgrade is the most significant protocol enhancement in Ethereum Classic's history. It introduces improved fee markets, protocol-level treasury funding, and the foundation for on-chain governance. Three independent client implementations support the upgrade.",
   },
   {
     question: "When does Olympia activate?",
     answer:
-      "Olympia activates on the Mordor testnet at block 15,800,850 (approximately March 28, 2026). Mainnet activation is targeted for approximately mid-June 2026 at block 24,751,337, pending successful testnet validation.",
+      "Olympia activates on the Mordor testnet first, followed by Ethereum Classic mainnet pending successful testnet validation. Exact activation dates are coordinated across the three independent client teams.",
   },
   {
     question: "How are funds protected from misuse?",
     answer:
-      "Multiple safeguards protect treasury funds: a configurable timelock delay on all approved proposals, three-layer on-chain sanctions screening (submission, voting, and execution), soulbound voting tokens that prevent vote buying, and full on-chain transparency for every transaction.",
+      "Multiple safeguards protect treasury funds: a configurable timelock delay on all approved proposals, three-layer on-chain sanctions screening (submission, voting, and execution), non-transferable voting tokens that prevent vote buying, and full on-chain transparency for every transaction.",
   },
   {
     question: "Is Ethereum Classic a security or commodity?",

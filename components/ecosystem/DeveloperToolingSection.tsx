@@ -37,7 +37,7 @@ const categories: ToolCategory[] = [
       },
       {
         name: "OpenZeppelin Contracts",
-        description: "Battle-tested library for secure smart contract development. ERC-20, ERC-721, Governor, AccessControl.",
+        description: "Battle-tested library for secure smart contract development. Token standards, governance, and access management.",
         config: "Fully compatible — use latest 5.x",
         href: "https://www.openzeppelin.com/contracts",
       },
@@ -168,7 +168,7 @@ export function DeveloperToolingSection() {
                     {category.tools.map((tool) => (
                       <div
                         key={tool.name}
-                        className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-5"
+                        className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5"
                       >
                         <div className="flex items-start justify-between">
                           <p className="text-sm font-semibold">{tool.name}</p>

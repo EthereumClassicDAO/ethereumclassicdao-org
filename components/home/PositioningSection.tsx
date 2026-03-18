@@ -42,8 +42,8 @@ export function PositioningSection() {
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {positions.map((p, i) => (
               <FadeIn key={p.title} delay={i * 100}>
-                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                     <p.icon
                       size={20}
                       className="text-[var(--brand-green)]"

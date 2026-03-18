@@ -19,7 +19,7 @@ const steps = [
     icon: Vote,
     number: "02",
     title: "Vote",
-    description: "Soulbound NFT holders cast weighted on-chain votes",
+    description: "Members cast weighted on-chain votes",
   },
   {
     icon: Clock,
@@ -61,7 +61,7 @@ export function GovernanceProcessSection() {
           <div className="mt-14 hidden md:block">
             <div className="relative">
               {/* Connecting line */}
-              <div className="absolute top-5 left-5 right-5 h-px bg-[rgba(255,255,255,0.06)]" />
+              <div className="absolute top-5 left-5 right-5 h-px bg-[var(--divider)]" />
 
               <div className="relative grid grid-cols-5 gap-4">
                 {steps.map((step, i) => (
@@ -95,7 +95,7 @@ export function GovernanceProcessSection() {
                       </span>
                     </div>
                     {i < steps.length - 1 && (
-                      <div className="mt-2 h-full w-px bg-[rgba(255,255,255,0.06)]" />
+                      <div className="mt-2 h-full w-px bg-[var(--divider)]" />
                     )}
                   </div>
                   <div className="pb-4">
