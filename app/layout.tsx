@@ -50,13 +50,9 @@ export const metadata: Metadata = {
   ],
   creator: "Ethereum Classic DAO LLC",
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "48x48" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
-  manifest: "/manifest.webmanifest",
   openGraph: {
     type: "website",
     locale: "en_US",
