@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navLinks = [
   { label: "About", href: "/about" },
@@ -48,6 +49,7 @@ export function NavHeader() {
           <span className="hidden text-xs font-mono text-[var(--text-subtle)] lg:inline">
             Wyoming DAO LLC
           </span>
+          <ThemeToggle />
         </div>
 
         {/* Mobile toggle */}
