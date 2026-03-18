@@ -23,7 +23,7 @@ ETC is positioned not just as a digital commodity under the CLARITY Act, but as 
 
 The Olympia upgrade introduces protocol-level treasury funding and on-chain governance to Ethereum Classic.
 
-**Treasury Funding:** 100% of EIP-1559 basefee funds the Olympia Treasury. Block rewards remain untouched — miners are unaffected.
+**Treasury Funding:** EIP-1559 basefee revenue funds the Olympia Treasury. Block rewards remain untouched — miners are unaffected.
 
 **Governance Process:**
 1. Propose — Community members submit governance proposals on-chain (permissionless)
