@@ -16,7 +16,7 @@ const faqItems = [
   {
     question: "Who can submit proposals?",
     answer:
-      "Members can submit governance proposals on-chain. Membership is granted through non-transferable tokens. Proposals define the action to execute and the supporting rationale.",
+      "Anyone can submit governance proposals on-chain. Voting power is granted through non-transferable membership tokens. Proposals define the action to execute and the supporting rationale.",
   },
   {
     question: "How does voting work?",

@@ -13,7 +13,7 @@ const steps = [
     icon: FileText,
     number: "01",
     title: "Propose",
-    description: "Community members submit governance proposals on-chain",
+    description: "Anyone can submit governance proposals on-chain",
   },
   {
     icon: Vote,

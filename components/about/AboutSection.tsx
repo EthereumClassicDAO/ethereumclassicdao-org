@@ -88,9 +88,9 @@ export function AboutSection() {
               <p>
                 Through Olympia, transaction fees fund a
                 protocol-managed treasury — block rewards remain untouched and
-                go entirely to miners. Community members submit proposals, vote
-                on resource allocation, and execute decisions — all on-chain,
-                all transparent, all permissionless.
+                go entirely to miners. Anyone can submit proposals on-chain.
+                Members vote on resource allocation and execute
+                decisions — transparent and verifiable at every step.
               </p>
             </div>
           </div>
