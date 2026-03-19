@@ -27,7 +27,7 @@ const infrastructure = [
   {
     icon: Pickaxe,
     category: "Mining Infrastructure",
-    details: "170+ TH/s hashrate, GPU and ASIC compatible",
+    details: "170+ TH/s hashrate. Global GPU and ASIC mining operations secure the only Proof-of-Work network with native smart contracts.",
   },
   {
     icon: FileCheck,
@@ -46,8 +46,11 @@ export function InfrastructureSection() {
             <p className="text-4xl font-bold font-mono text-[var(--brand-green)]">
               170+ <span className="text-lg">TH/s</span>
             </p>
+            <p className="mt-1 text-xs font-mono text-[var(--text-subtle)]">
+              Algorithm: ETChash
+            </p>
             <p className="mt-1 text-sm text-[var(--text-muted)]">
-              Network hashrate — absorbed significant Ethereum mining infrastructure post-Merge
+              GPU and ASIC compatible — securing the only Proof-of-Work network with native smart contracts
             </p>
           </FadeIn>
 
@@ -63,8 +66,8 @@ export function InfrastructureSection() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {infrastructure.map((item, i) => (
               <FadeIn key={item.category} delay={i * 80}>
-                <div className="flex gap-4 rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-5">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+                <div className={`flex gap-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5${i === infrastructure.length - 1 ? " sm:col-span-2" : ""}`}>
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                     <item.icon
                       size={20}
                       className="text-[var(--brand-green)]"

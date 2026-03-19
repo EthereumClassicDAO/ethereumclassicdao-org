@@ -7,7 +7,7 @@ const pillars = [
     icon: GitBranch,
     title: "Core Client Development",
     description:
-      "Maintaining and coordinating the core client software that runs the Ethereum Classic network. Multiple independent implementations ensure resilience and decentralization across 170+ TH/s of mining infrastructure.",
+      "Maintaining and coordinating the client software that runs the Ethereum Classic network. Independent implementations ensure resilience and decentralization across 170+ TH/s of mining infrastructure.",
   },
   {
     icon: Vote,
@@ -39,7 +39,7 @@ export function HowWeHelpSection() {
             <h2 className="text-3xl font-bold tracking-tight">
               How We Help
             </h2>
-            <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
+            <p className="mt-3 max-w-2xl text-base text-[var(--text-muted)]">
               Building the software and infrastructure that Ethereum Classic
               needs to scale from individuals to institutions &mdash; while
               ensuring US regulatory compliance.
@@ -49,8 +49,8 @@ export function HowWeHelpSection() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {pillars.map((p, i) => (
               <FadeIn key={p.title} delay={i * 100}>
-                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                     <p.icon
                       size={20}
                       className="text-[var(--brand-green)]"

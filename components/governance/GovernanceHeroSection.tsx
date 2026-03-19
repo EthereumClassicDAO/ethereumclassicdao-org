@@ -12,8 +12,8 @@ export function GovernanceHeroSection() {
             Olympia Governance Framework
           </h1>
           <p className="mt-4 text-lg text-[var(--text-muted)]">
-            On-chain proposal submission, voting, and execution for Ethereum
-            Classic. Fully transparent, fully permissionless.
+            Membership-based governance with on-chain proposals, voting, and
+            execution. Transparent, auditable, and built on Ethereum Classic.
           </p>
         </FadeIn>
       </div>

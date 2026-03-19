@@ -5,7 +5,7 @@ const primaryClient = {
   name: "fukuii",
   language: "Scala",
   description:
-    "Purpose-built for Ethereum Classic — an independent implementation designed from the ground up for performance, security, and protocol parity. Fukuii is the primary client for the Olympia upgrade, coordinating EIP-1559 fee markets, treasury funding, and on-chain governance across the network.",
+    "Purpose-built for Ethereum Classic — an independent implementation designed from the ground up for performance, security, and protocol parity. Fukuii is the primary client for the Olympia upgrade, coordinating fee markets, treasury funding, and on-chain governance across the network.",
   github: "https://github.com/ethereumclassic/fukuii",
   status: "Production",
   featured: true,
@@ -24,7 +24,7 @@ const secondaryClients = [
     name: "besu",
     language: "Java",
     description:
-      "Enterprise-grade client built on Hyperledger Besu. Provides cross-client protocol verification and serves as the reference implementation for validating consensus compatibility across all three clients.",
+      "Enterprise-grade client built on Hyperledger Besu. Provides cross-client protocol verification and serves as the reference implementation for validating consensus compatibility across all clients.",
     github: "https://github.com/ethereumclassic/besu",
     status: "Reference",
   },
@@ -41,14 +41,14 @@ export function ClientsSection() {
               Client Implementations
             </h2>
             <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
-              Three independent client implementations ensure decentralization
-              and resilience. No single codebase controls the network.
+              Independent client implementations ensure decentralization and
+              resilience. No single codebase controls the network.
             </p>
           </FadeIn>
 
           {/* Primary client — featured */}
           <FadeIn delay={100}>
-            <div className="mt-10 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] shadow-[0_0_24px_rgba(0,255,174,0.07)] p-8 transition-colors hover:border-[var(--border-glow)]">
+            <div className="mt-10 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] shadow-[0_0_24px_var(--border-glow)] p-8 transition-colors hover:border-[var(--border-glow)]">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
                   <div className="flex items-center gap-3">
@@ -58,7 +58,7 @@ export function ClientsSection() {
                     <span className="badge-available">
                       {primaryClient.status}
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-[rgba(0,255,174,0.12)] px-2.5 py-0.5 text-xs font-semibold text-[var(--brand-green)]">
+                    <span className="inline-flex items-center rounded-full bg-[var(--brand-green-subtle)] px-2.5 py-0.5 text-xs font-semibold text-[var(--brand-green)]">
                       Olympia Primary
                     </span>
                   </div>
@@ -85,7 +85,7 @@ export function ClientsSection() {
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             {secondaryClients.map((client, i) => (
               <FadeIn key={client.name} delay={(i + 2) * 100}>
-                <div className="flex flex-col rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6 transition-colors hover:border-[var(--border-glow)]">
+                <div className="flex flex-col rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
                   <div className="flex items-start justify-between">
                     <div>
                       <p className="text-base font-semibold font-mono">

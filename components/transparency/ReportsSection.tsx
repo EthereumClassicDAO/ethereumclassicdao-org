@@ -60,8 +60,8 @@ export function ReportsSection() {
         <div className="mt-8 space-y-3">
           {reportTypes.map((report, i) => (
             <FadeIn key={report.label} delay={i * 60}>
-              <div className="flex gap-4 rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-5">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+              <div className="flex gap-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                   <report.icon
                     size={20}
                     className="text-[var(--brand-green)]"

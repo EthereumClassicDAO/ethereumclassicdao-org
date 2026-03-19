@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 const buildItems = [
   {
     icon: GitBranch,
-    text: "Core network software — three independent client implementations (fukuii, core-geth, besu)",
+    text: "Core network software — independent client implementations ensuring no single point of failure",
   },
   {
     icon: Vote,
@@ -68,7 +68,7 @@ export function AboutSection() {
               with Ethereum&rsquo;s programmability. This positions ETC not
               just as a digital commodity under the CLARITY Act, but as a
               compliant smart contract platform where regulated stablecoins
-              (GENIUS Act) and ETF-aligned ERC-20 tokens can operate on a
+              (GENIUS Act) can operate on a
               Proof-of-Work foundation.
             </p>
           </div>
@@ -77,20 +77,20 @@ export function AboutSection() {
         <FadeIn>
           <div className="mt-16">
             <h2 className="text-xl font-bold">The Olympia Upgrade</h2>
-            <div className="mt-4 rounded-xl p-8 border border-[var(--border-brand)] bg-[rgba(0,255,174,0.02)] space-y-4 text-base leading-relaxed text-[var(--text-secondary)]">
+            <div className="mt-4 rounded-xl p-8 border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] space-y-4 text-base leading-relaxed text-[var(--text-secondary)]">
               <p>
-                The Olympia hard fork introduces protocol-level treasury
-                funding, decentralized governance, and smart contract-based
+                The Olympia upgrade introduces protocol-level treasury
+                funding, decentralized governance, and on-chain
                 proposal execution to Ethereum Classic. It represents the most
                 significant protocol upgrade in Ethereum Classic&rsquo;s
                 history.
               </p>
               <p>
-                Through Olympia, EIP-1559 transaction fees fund a
+                Through Olympia, transaction fees fund a
                 protocol-managed treasury — block rewards remain untouched and
-                go entirely to miners. Community members submit proposals, vote
-                on resource allocation, and execute decisions — all on-chain,
-                all transparent, all permissionless.
+                go entirely to miners. Anyone can submit proposals on-chain.
+                Members vote on resource allocation and execute
+                decisions — transparent and verifiable at every step.
               </p>
             </div>
           </div>
@@ -103,7 +103,7 @@ export function AboutSection() {
               {buildItems.map((item, i) => (
                 <FadeIn key={i} delay={i * 80}>
                   <div className="flex gap-4 items-start">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                       <item.icon
                         size={20}
                         className="text-[var(--brand-green)]"
@@ -130,7 +130,7 @@ export function AboutSection() {
               {positions.map((p, i) => (
                 <FadeIn key={p.title} delay={i * 80}>
                   <div className="flex gap-4 items-start">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                       <p.icon
                         size={20}
                         className="text-[var(--brand-green)]"

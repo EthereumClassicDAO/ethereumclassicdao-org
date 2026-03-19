@@ -1,5 +1,5 @@
 // Dual-source ETC network stats from Blockscout + CoinGecko
-// Fetched server-side with ISR (revalidate every 5 minutes)
+// Fetched server-side with ISR (revalidate every 10 minutes)
 
 export interface EtcStats {
   // Blockscout
@@ -67,7 +67,7 @@ interface CoinGeckoResponse {
 
 async function fetchBlockscout(): Promise<Partial<EtcStats>> {
   const res = await fetch("https://etc.blockscout.com/api/v2/stats", {
-    next: { revalidate: 300 },
+    next: { revalidate: 600 },
   });
   if (!res.ok) throw new Error(`Blockscout ${res.status}`);
   const data: BlockscoutStatsResponse = await res.json();
@@ -93,7 +93,7 @@ async function fetchBlockscout(): Promise<Partial<EtcStats>> {
 async function fetchCoinGecko(): Promise<Partial<EtcStats>> {
   const res = await fetch(
     "https://api.coingecko.com/api/v3/coins/ethereum-classic?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=false",
-    { next: { revalidate: 300 } },
+    { next: { revalidate: 600 } },
   );
   if (!res.ok) throw new Error(`CoinGecko ${res.status}`);
   const data: CoinGeckoResponse = await res.json();

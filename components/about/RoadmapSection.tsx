@@ -6,22 +6,22 @@ const stages = [
     title: "Consensus Upgrades",
     status: "complete" as const,
     description:
-      "EIP-1559 fee market, dynamic gas limit, and treasury funding mechanism. Three independent client implementations (core-geth, besu, fukuii) complete.",
+      "Fee market improvements, dynamic gas limits, and treasury funding mechanism. Independent client implementations complete.",
     deliverables: [
-      "EIP-1559 basefee mechanism",
-      "Gas limit convergence (8M → 60M)",
-      "Treasury accumulation address",
+      "Transaction fee market",
+      "Dynamic gas limits",
+      "Treasury funding mechanism",
     ],
   },
   {
     title: "Core Governance",
     status: "active" as const,
     description:
-      "Governor, Treasury, and sanctions contracts deployed. Soulbound NFT voting. Proposal lifecycle: submit, vote, queue, execute.",
+      "Governance and treasury contracts deployed. Membership-based voting. Full proposal lifecycle: submit, vote, queue, execute.",
     deliverables: [
-      "Governor contract (OpenZeppelin)",
-      "Treasury vault (AccessControl)",
-      "Sanctions oracle integration",
+      "Governance and treasury contracts",
+      "Membership voting system",
+      "Sanctions compliance layer",
     ],
   },
   {
@@ -32,11 +32,11 @@ const stages = [
     deliverables: [
       "Conditional outcome tokens",
       "Market-informed proposal ranking",
-      "ECIP-1117 specification",
+      "Protocol specification",
     ],
   },
   {
-    title: "Miner Distribution Exploration",
+    title: "Treasury Distribution",
     status: "future" as const,
     description:
       "Protocol-layer treasury smoothing to reduce per-block variance. Specification phase exploring miner-compatible mechanisms.",
@@ -47,10 +47,10 @@ const stages = [
     ],
   },
   {
-    title: "Protocol Hardcoding",
+    title: "Protocol Integration",
     status: "future" as const,
     description:
-      "Permanent consensus integration of proven governance mechanisms. The final stage moves governance from contract layer to protocol layer.",
+      "Permanent consensus integration of proven governance mechanisms. Moving governance from contract layer to protocol layer.",
     deliverables: [
       "Consensus-level governance",
       "Immutable treasury rules",
@@ -96,11 +96,11 @@ export function RoadmapSection() {
                             ? "bg-[var(--brand-green)]"
                             : stage.status === "active"
                               ? "bg-[var(--brand-green)] animate-pulse"
-                              : "bg-[rgba(255,255,255,0.15)]"
+                              : "bg-[var(--border-strong)]"
                         }`}
                       />
                       {i < stages.length - 1 && (
-                        <div className="mt-1 h-full w-px bg-[rgba(255,255,255,0.06)]" />
+                        <div className="mt-1 h-full w-px bg-[var(--divider)]" />
                       )}
                     </div>
 

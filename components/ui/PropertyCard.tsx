@@ -16,9 +16,9 @@ export function PropertyCard({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-4 rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-5 transition-all duration-200 hover:border-[rgba(255,255,255,0.12)]"
+      className="group flex items-center gap-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5 transition-all duration-200 hover:border-[var(--border-strong)]"
     >
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
         <Icon size={20} className="text-[var(--brand-green)]" />
       </div>
       <div className="min-w-0 flex-1">

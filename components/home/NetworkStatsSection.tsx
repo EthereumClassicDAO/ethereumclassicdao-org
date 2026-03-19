@@ -16,9 +16,9 @@ export function NetworkStatsSection({ stats }: { stats: EtcStats }) {
       context: "All-time unique addresses on Ethereum Classic",
     },
     {
-      value: "3",
-      label: "Independent Clients",
-      context: "fukuii, core-geth, besu — zero single points of failure",
+      value: formatCompact(stats.totalBlocks),
+      label: "Total Blocks",
+      context: "Blocks produced since genesis (2015)",
     },
     {
       value: formatBlockTime(stats.averageBlockTimeMs),

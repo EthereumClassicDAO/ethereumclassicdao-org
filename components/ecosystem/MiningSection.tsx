@@ -16,7 +16,7 @@ export function MiningSection() {
         <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[rgba(0,255,174,0.08)]">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--brand-green-subtle)]">
                 <Pickaxe size={24} className="text-[var(--brand-green)]" />
               </div>
               <div>
@@ -33,7 +33,7 @@ export function MiningSection() {
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
             {stats.map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 80}>
-                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-5">
+                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5">
                   <p className="text-2xl font-bold font-mono text-[var(--brand-green)]">
                     {stat.value}
                     {stat.unit && (
@@ -53,10 +53,11 @@ export function MiningSection() {
           <FadeIn delay={300}>
             <div className="mt-8 max-w-2xl">
               <p className="text-sm leading-relaxed text-[var(--text-muted)]">
-                Following Ethereum&rsquo;s transition to Proof-of-Stake,
-                Ethereum Classic absorbed significant mining infrastructure and
-                stands alone as the only EVM-compatible chain secured by
-                Proof-of-Work. Run{" "}
+                Ethereum Classic is the only EVM-compatible chain secured by
+                Proof-of-Work. ETChash supports both ASIC efficiency for
+                commercial-grade operations and GPU accessibility for global
+                participation &mdash; diversifying miner composition and reducing
+                supply chain risk. Run{" "}
                 <a
                   href="https://github.com/ethereumclassic/fukuii"
                   target="_blank"

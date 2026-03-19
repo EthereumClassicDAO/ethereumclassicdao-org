@@ -13,13 +13,13 @@ const steps = [
     icon: FileText,
     number: "01",
     title: "Propose",
-    description: "Community members submit governance proposals on-chain",
+    description: "Anyone can submit governance proposals on-chain",
   },
   {
     icon: Vote,
     number: "02",
     title: "Vote",
-    description: "Soulbound NFT holders cast weighted on-chain votes",
+    description: "Members cast weighted on-chain votes",
   },
   {
     icon: Clock,
@@ -52,8 +52,8 @@ export function GovernanceProcessSection() {
               Governance Process
             </h2>
             <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
-              On-chain proposal submission, voting, and execution — fully
-              transparent and permissionless.
+              Membership-based on-chain governance — proposals, voting,
+              timelock, and transparent execution.
             </p>
           </FadeIn>
 
@@ -61,7 +61,7 @@ export function GovernanceProcessSection() {
           <div className="mt-14 hidden md:block">
             <div className="relative">
               {/* Connecting line */}
-              <div className="absolute top-5 left-5 right-5 h-px bg-[rgba(255,255,255,0.06)]" />
+              <div className="absolute top-5 left-5 right-5 h-px bg-[var(--divider)]" />
 
               <div className="relative grid grid-cols-5 gap-4">
                 {steps.map((step, i) => (
@@ -95,7 +95,7 @@ export function GovernanceProcessSection() {
                       </span>
                     </div>
                     {i < steps.length - 1 && (
-                      <div className="mt-2 h-full w-px bg-[rgba(255,255,255,0.06)]" />
+                      <div className="mt-2 h-full w-px bg-[var(--divider)]" />
                     )}
                   </div>
                   <div className="pb-4">

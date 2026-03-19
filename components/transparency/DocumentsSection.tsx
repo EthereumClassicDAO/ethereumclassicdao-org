@@ -44,7 +44,7 @@ export function DocumentsSection() {
             {documents.map((doc, i) => (
               <FadeIn key={doc.name} delay={i * 80}>
                 {doc.status === "available" && doc.href ? (
-                  <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] shadow-[0_0_20px_rgba(0,255,174,0.05)] p-5">
+                  <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] shadow-[0_0_20px_var(--border-glow)] p-5">
                     <div className="flex items-start justify-between">
                       <p className="text-sm font-semibold">{doc.name}</p>
                       <span className="badge-available">Available</span>
@@ -60,7 +60,7 @@ export function DocumentsSection() {
                     </a>
                   </div>
                 ) : (
-                  <div className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-5">
+                  <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5">
                     <div className="flex items-start justify-between">
                       <p className="text-sm font-semibold">{doc.name}</p>
                       <span className="badge-pending">Pending</span>

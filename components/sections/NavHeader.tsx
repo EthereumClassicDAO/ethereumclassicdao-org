@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navLinks = [
   { label: "About", href: "/about" },
@@ -19,7 +20,7 @@ export function NavHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-[rgba(255,255,255,0.06)] bg-[rgba(10,15,16,0.85)] backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--divider)] bg-[var(--bg-overlay)] backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image src="/logo.svg" alt="" width={28} height={28} />
@@ -34,7 +35,7 @@ export function NavHeader() {
             <Link
               key={link.label}
               href={link.href}
-              className="relative text-sm transition-colors duration-200 hover:text-white"
+              className="relative text-sm transition-colors duration-200 hover:text-[var(--text-primary)]"
               style={{
                 color: pathname === link.href ? "var(--text-primary)" : "var(--text-muted)",
               }}
@@ -45,9 +46,10 @@ export function NavHeader() {
               )}
             </Link>
           ))}
-          <span className="hidden text-xs font-mono text-[var(--text-subtle)] lg:inline">
+          <span className="hidden text-xs font-mono text-[var(--brand-green)] lg:inline">
             Wyoming DAO LLC
           </span>
+          <ThemeToggle />
         </div>
 
         {/* Mobile toggle */}
@@ -62,12 +64,12 @@ export function NavHeader() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t border-[rgba(255,255,255,0.06)] bg-[rgba(10,15,16,0.95)] backdrop-blur-md px-6 py-4 md:hidden">
+        <div className="border-t border-[var(--divider)] bg-[var(--bg-overlay)] backdrop-blur-md px-6 py-4 md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="block py-3 text-sm transition-colors hover:text-white"
+              className="block py-3 text-sm transition-colors hover:text-[var(--text-primary)]"
               style={{
                 color: pathname === link.href ? "var(--text-primary)" : "var(--text-muted)",
               }}

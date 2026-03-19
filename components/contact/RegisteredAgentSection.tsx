@@ -52,9 +52,9 @@ export function RegisteredAgentSection() {
                 href={ch.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex gap-5 rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5"
+                className="group flex gap-5 rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                   <ch.icon
                     size={20}
                     className="text-[var(--brand-green)]"
@@ -78,9 +78,9 @@ export function RegisteredAgentSection() {
         </div>
 
         <FadeIn delay={300}>
-          <div className="mt-16 rounded-xl bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.06)] p-6">
+          <div className="mt-16 rounded-xl bg-[var(--bg-card)] border border-[var(--divider)] p-6">
             <div className="flex items-start gap-4">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[rgba(255,255,255,0.04)]">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--border-subtle)]">
                 <FileText
                   size={20}
                   className="text-[var(--text-subtle)]"
@@ -98,7 +98,7 @@ export function RegisteredAgentSection() {
                   href="https://wyobiz.wyo.gov/business/FilingDetails.aspx?eFNum=101157225123250204055197221085227098244002050082"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-[var(--text-subtle)] transition-colors hover:text-white"
+                  className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-[var(--text-subtle)] transition-colors hover:text-[var(--text-primary)]"
                 >
                   Wyoming Secretary of State Filing
                   <ExternalLink size={12} />

@@ -7,7 +7,6 @@ import {
   formatSupply,
   formatBlockTime,
   formatPercent,
-  formatGwei,
 } from "@/lib/format";
 
 interface Row {
@@ -24,8 +23,8 @@ function OverviewTable({
   rows: Row[];
 }) {
   return (
-    <div className="rounded-xl bg-[var(--bg-elevated)] border border-[rgba(255,255,255,0.06)] overflow-hidden">
-      <div className="px-6 py-4 border-b border-[rgba(255,255,255,0.06)]">
+    <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] overflow-hidden">
+      <div className="px-6 py-4 border-b border-[var(--divider)]">
         <p className="text-sm font-semibold tracking-wide">{heading}</p>
       </div>
       <div>
@@ -33,7 +32,7 @@ function OverviewTable({
           <div
             key={row.label}
             className={`flex items-center justify-between px-6 py-3 ${
-              i % 2 === 0 ? "bg-[rgba(255,255,255,0.02)]" : ""
+              i % 2 === 0 ? "bg-[var(--bg-card)]" : ""
             }`}
           >
             <span className="text-sm text-[var(--text-muted)]">
@@ -42,9 +41,9 @@ function OverviewTable({
             <span
               className={`text-sm font-mono font-medium ${
                 row.color === "green"
-                  ? "text-emerald-400"
+                  ? "text-[var(--color-success)]"
                   : row.color === "red"
-                    ? "text-red-400"
+                    ? "text-[var(--color-error)]"
                     : "text-[var(--text-primary)]"
               }`}
             >
@@ -73,8 +72,6 @@ export function EtcOverviewSection({ stats }: { stats: EtcStats }) {
       value: formatBlockTime(stats.averageBlockTimeMs),
     },
     { label: "Network Hashrate", value: "170+ TH/s *" },
-    { label: "Independent Clients", value: "3 (fukuii, core-geth, besu)" },
-    { label: "Gas Price (avg)", value: formatGwei(stats.gasPriceAvg) },
   ];
 
   const priceChangeColor: "green" | "red" =
@@ -123,8 +120,8 @@ export function EtcOverviewSection({ stats }: { stats: EtcStats }) {
           </FadeIn>
 
           <p className="mt-4 text-xs text-[var(--text-subtle)]">
-            * Hashrate approximate, based on pool data. Data refreshes every 5
-            minutes.
+            * Hashrate approximate, based on pool data. Data refreshes every
+            10 minutes.
           </p>
         </div>
       </section>

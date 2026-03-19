@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EthereumClassicDAO.org
 
-## Getting Started
+> **Production** — Olympia ECIP spec compliant. Prepared for future production deployment.
 
-First, run the development server:
+Institutional website for **Ethereum Classic DAO LLC**, a Wyoming-registered DAO LLC (Filing ID 2025-001671865). The legal entity behind Ethereum Classic's Olympia DAO governance infrastructure.
+
+**URL:** [ethereumclassicdao.org](https://ethereumclassicdao.org)
+
+## Features
+
+- Institutional positioning for the largest Proof-of-Work smart contract platform
+- Live network stats (Blockscout API v2 + CoinGecko, ISR 10min)
+- 7 pages: Home, About, Governance, Ecosystem, Transparency, Contact, Privacy
+- 30+ section components across page-scoped directories
+- Light/dark theme toggle
+- Scroll-triggered fade-up animations (Intersection Observer)
+- Responsive, mobile-first
+
+## Pages
+
+| Page | Content |
+|------|---------|
+| **Home** | Mission hero, ETC overview (live data), network stats, governance process, what we do, how we help, Olympia ecosystem |
+| **About** | Organization, infrastructure, leadership (headshots), values, roadmap |
+| **Governance** | How it works, treasury funding flow, safeguards, FAQ |
+| **Ecosystem** | Network config (EVM versions), developer tooling (8 categories), clients, mining, equipment (ASIC+GPU), institutional products |
+| **Transparency** | Principles, reports, documents |
+| **Contact** | Registered agent, engagement channels |
+| **Privacy** | Legal/compliance |
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Framework | Next.js 16 (App Router, Turbopack) |
+| UI | React 19, TypeScript 5 (strict) |
+| Styling | Tailwind CSS 4, CSS custom properties |
+| Icons | Lucide React |
+| Package Manager | pnpm 10 |
+
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev          # Dev server (Turbopack)
+pnpm build        # Production build
+pnpm lint         # ESLint
+pnpm typecheck    # TypeScript check
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Brand:** Olympia tokens — `#00ffae` green accent, `#0a0f10` dark background
+- **Logo:** ETC diamond (pure vector SVG from olympia-brand repo)
+- **Fonts:** Inter (body) + JetBrains Mono (code)
+- **Tone:** Institutional, confident, factual — like Solana Foundation or Stellar Enterprise Fund
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Branch Strategy
 
-## Learn More
+| Branch | Purpose |
+|--------|---------|
+| `main` | Production target — prepared for deployment after Olympia activates on ETC mainnet |
+| `demo_v0.2` | Active development — spec-compliant, live testing on Mordor + ETC (pre-Olympia) |
+| `demo_v0.1` | Archived — initial scaffolding, not spec compliant |
 
-To learn more about Next.js, take a look at the following resources:
+## Related Repos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [olympia-brand](https://github.com/olympiadao/olympia-brand) — Design tokens, logos, favicons
+- [olympiadao-org](https://github.com/olympiadao/olympiadao-org) — Olympia DAO landing page
+- [olympiatreasury-org](https://github.com/olympiadao/olympiatreasury-org) — Treasury dashboard
+- [olympia-app](https://github.com/olympiadao/olympia-app) — Governance UI
+- [olympia-governance-contracts](https://github.com/olympiadao/olympia-governance-contracts) — Governor, Executor, ECFPRegistry
+- [olympia-treasury-contract](https://github.com/olympiadao/olympia-treasury-contract) — Treasury vault

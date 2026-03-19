@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { NavHeader } from "@/components/sections/NavHeader";
 import { FooterSection } from "@/components/sections/FooterSection";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 const inter = Inter({
@@ -49,13 +50,9 @@ export const metadata: Metadata = {
   ],
   creator: "Ethereum Classic DAO LLC",
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "48x48" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
-  manifest: "/manifest.webmanifest",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -102,7 +99,7 @@ export const metadata: Metadata = {
     email: false,
   },
   other: {
-    "color-scheme": "dark",
+    "color-scheme": "dark light",
   },
 };
 
@@ -136,7 +133,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -146,9 +143,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        <NavHeader />
-        {children}
-        <FooterSection />
+        <ThemeProvider>
+          <NavHeader />
+          {children}
+          <FooterSection />
+        </ThemeProvider>
       </body>
     </html>
   );
