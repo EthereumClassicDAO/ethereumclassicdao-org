@@ -31,7 +31,7 @@ const faqItems = [
   {
     question: "When does Olympia activate?",
     answer:
-      "Olympia activates on the Mordor testnet at block 15,800,850 (approximately March 28, 2026). Mainnet activation is targeted for approximately mid-June 2026 at block 24,751,337, pending successful testnet validation.",
+      "Olympia will first activate on the Mordor testnet for community validation and multi-client testing. Once testnet validation is complete, mainnet activation will follow. Specific activation blocks will be announced through official Ethereum Classic governance channels.",
   },
   {
     question: "How are funds protected from misuse?",
