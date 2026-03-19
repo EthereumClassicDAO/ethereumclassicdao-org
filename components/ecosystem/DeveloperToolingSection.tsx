@@ -203,7 +203,7 @@ export function DeveloperToolingSection() {
                               href={tool.href}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="shrink-0 text-[10px] font-mono text-[var(--text-subtle)] transition-colors hover:text-[var(--brand-green)]"
+                              className="shrink-0 text-[10px] font-mono text-[var(--text-muted)] transition-colors hover:text-[var(--brand-green)]"
                             >
                               Docs &rarr;
                             </a>
@@ -213,7 +213,7 @@ export function DeveloperToolingSection() {
                           {tool.description}
                         </p>
                         {tool.config && (
-                          <code className="mt-3 block rounded-md bg-[rgba(0,0,0,0.3)] px-3 py-2 text-[11px] font-mono text-[var(--brand-green)] leading-relaxed">
+                          <code className="mt-3 block rounded-md bg-[var(--code-bg)] px-3 py-2 text-[11px] font-mono text-[var(--code-text)] leading-relaxed">
                             {tool.config}
                           </code>
                         )}
