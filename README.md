@@ -57,9 +57,10 @@ pnpm typecheck    # TypeScript check
 
 | Branch | Purpose |
 |--------|---------|
-| `demo_v0.1` | Preserved snapshot — fast-iteration development, not ECIP-aligned |
-| `demo_v0.2` | Active development — spec-compliant, 7 pages, live stats, light/dark theme |
 | `main` | Production — deployed after Olympia activates on ETC mainnet |
+| `demo_v0.3` | Active development — aligned with 9-contract governance stack |
+| `demo_v0.2` | Preserved — spec-compliant, 7 pages, live stats, light/dark theme |
+| `demo_v0.1` | Preserved snapshot — fast-iteration development, not ECIP-aligned |
 
 ## Related Repos
 
