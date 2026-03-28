@@ -14,7 +14,7 @@ const steps = [
     number: "01",
     title: "Propose",
     description:
-      "Anyone can submit a governance proposal on-chain. Proposals define the action to execute and the supporting rationale. Voting power is granted through non-transferable membership tokens.",
+      "Anyone can submit a governance proposal on-chain. Proposals define the action to execute and the supporting rationale. CoreDAO members vote using non-transferable membership NFTs.",
   },
   {
     icon: Vote,

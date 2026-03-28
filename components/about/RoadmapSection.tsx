@@ -8,7 +8,7 @@ const stages = [
     description:
       "Fee market improvements, dynamic gas limits, and treasury funding mechanism. Independent client implementations complete.",
     deliverables: [
-      "Transaction fee market",
+      "Fee market",
       "Dynamic gas limits",
       "Treasury funding mechanism",
     ],

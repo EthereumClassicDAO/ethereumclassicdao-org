@@ -26,7 +26,7 @@ const entities = [
     name: "Olympia Treasury",
     role: "Protocol-Funded Treasury",
     description:
-      "Transaction fee revenue creates sustainable protocol funding. Real-time treasury monitoring via public dashboard.",
+      "Basefee revenue creates sustainable protocol funding. Real-time treasury monitoring via public dashboard.",
     href: "https://olympiatreasury.org",
     highlighted: false,
   },

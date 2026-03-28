@@ -14,10 +14,10 @@ const phases = [
     status: "complete" as const,
     period: "2024 Q3 – 2025 Q2",
     description:
-      "Five core ECIPs drafted and submitted: ECIP-1111 (EIP-1559 Fee Market), ECIP-1112 (Protocol Treasury), ECIP-1113 (DAO Governance), ECIP-1114 (ECFP Funding Process), ECIP-1121 (EVM Alignment with Shanghai/Cancun). Community review on the ECIP repository.",
+      "Five core ECIPs drafted and submitted: ECIP-1111 (EIP-1559 Fee Market), ECIP-1112 (Protocol Treasury), ECIP-1113 (DAO Governance), ECIP-1114 (ECFP Funding Process), ECIP-1121 (EVM Alignment with Fusaka). Community review on the ECIP repository.",
     milestones: [
       "ECIP-1111 through ECIP-1114 submitted",
-      "ECIP-1121 (EVM Alignment) added — 14 EIPs from Shanghai/Cancun",
+      "ECIP-1121 (EVM Alignment) added — EIPs spanning London, Dencun, Pectra, and Fusaka",
       "Cross-reference alignment with EIP-1559 and related Ethereum standards",
     ],
   },
@@ -77,7 +77,7 @@ const phases = [
     status: "upcoming" as const,
     period: "TBD",
     description:
-      "Olympia activates on ETC mainnet at the agreed-upon block. EIP-1559 fee market goes live, basefee begins flowing to the protocol treasury. Block rewards remain completely untouched.",
+      "Olympia activates on ETC mainnet at the agreed-upon block. EIP-1559 fee market goes live, basefee begins flowing to the protocol treasury. Block rewards and tips remain completely untouched.",
     milestones: [
       "All three clients release Olympia-compatible versions",
       "Node operators upgrade before activation block",

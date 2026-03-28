@@ -86,8 +86,8 @@ export function AboutSection() {
                 history.
               </p>
               <p>
-                Through Olympia, transaction fees fund a
-                protocol-managed treasury — block rewards remain untouched and
+                Through Olympia, the basefee funds a
+                protocol-managed treasury — block rewards and tips remain untouched and
                 go entirely to miners. Anyone can submit proposals on-chain.
                 Members vote on resource allocation and execute
                 decisions — transparent and verifiable at every step.

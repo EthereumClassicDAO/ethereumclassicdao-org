@@ -25,7 +25,7 @@ const values = [
     icon: Leaf,
     title: "Sustainability",
     description:
-      "Protocol-funded treasury via transaction fees creates long-term funding without token inflation or external dependency.",
+      "Protocol-funded treasury via basefee revenue creates long-term funding without token inflation or external dependency.",
   },
 ];
 
