@@ -71,6 +71,27 @@ Three independent implementations ensure zero single points of failure:
 - Compliant ecosystem of ETF-aligned digital assets — from the flagship ETC asset to protocol-based ERC-20 tokens
 - Grayscale Ethereum Classic Trust (ETCG) provides regulated securities exposure
 
+## Olympia Upgrade Guide
+
+Node operators must upgrade before the Olympia activation block. Three clients available:
+
+- **Fukuii** (Scala, JDK 21+) — Primary client post-Olympia. 143 RPC methods, 2,706 tests.
+- **Core-Geth** (Go 1.24+) — Transitioning to maintenance role.
+- **Hyperledger Besu** (Java 21+) — Enterprise-grade, Apache 2.0 licensed.
+
+Prerequisites: 8 GB RAM, 500 GB SSD. Block rewards remain untouched — only EIP-1559 basefee is redirected to the treasury.
+
+## Olympia Development Timeline
+
+Six phases from specification to mainnet:
+
+1. Specification Drafting (2024 Q3 – 2025 Q2) — Complete. Five core ECIPs (1111–1114, 1121).
+2. Client Implementation (2025 Q1 – 2025 Q4) — Complete. Three independent implementations.
+3. Governance Contracts (2025 Q3 – 2026 Q1) — Complete. Demo v0.3 deployed (9 contracts).
+4. Testnet Deployment (2026 Q1 – present) — In progress. Mordor sync verified, SNAP sync successful.
+5. Community Decision (CDC-23) — Upcoming. Activation block to be announced.
+6. Mainnet Activation — Upcoming. EIP-1559 basefee begins flowing to treasury.
+
 ## Web Properties
 
 - ethereumclassicdao.org — This site (institutional)
