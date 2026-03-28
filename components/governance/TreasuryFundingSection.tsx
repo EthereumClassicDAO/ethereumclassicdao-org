@@ -35,10 +35,10 @@ export function TreasuryFundingSection() {
           <FadeIn>
             <div className="mt-12 rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] p-8">
               <p className="text-lg font-semibold">
-                Transaction fee revenue funds the Olympia Treasury
+                Basefee revenue funds the Olympia Treasury
               </p>
               <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                Block rewards remain completely untouched — miners are
+                Block rewards and tips remain completely untouched — miners are
                 unaffected. The treasury receives basefee revenue, voluntary
                 on-chain donations, and mining rewards directed to the treasury
                 address. This creates sustainable, transparent funding without

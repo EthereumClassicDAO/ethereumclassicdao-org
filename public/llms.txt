@@ -23,16 +23,16 @@ ETC is positioned not just as a digital commodity under the CLARITY Act, but as 
 
 The Olympia upgrade introduces protocol-level treasury funding and on-chain governance to Ethereum Classic.
 
-**Treasury Funding:** EIP-1559 basefee revenue funds the Olympia Treasury. Block rewards remain untouched — miners are unaffected.
+**Treasury Funding:** EIP-1559 basefee revenue funds the Olympia Treasury. Block rewards and tips remain untouched — miners are unaffected.
 
 **Governance Process:**
 1. Propose — Community members submit governance proposals on-chain (permissionless)
-2. Vote — Soulbound NFT holders cast weighted on-chain votes
+2. Vote — CoreDAO membership NFT holders cast weighted on-chain votes
 3. Queue — Approved proposals enter a security timelock
 4. Execute — After timelock, proposals execute automatically on-chain
 5. Disclose — All outcomes publicly reported and verifiable
 
-**Safeguards:** Configurable timelock, three-layer on-chain sanctions screening, soulbound (non-transferable) voting tokens.
+**Safeguards:** Configurable timelock, three-layer on-chain sanctions screening, non-transferable membership NFT voting tokens.
 
 ## Network Statistics
 
@@ -79,7 +79,7 @@ Node operators must upgrade before the Olympia activation block. Three clients a
 - **Core-Geth** (Go 1.24+) — Transitioning to maintenance role.
 - **Hyperledger Besu** (Java 21+) — Enterprise-grade, Apache 2.0 licensed.
 
-Prerequisites: 8 GB RAM, 500 GB SSD. Block rewards remain untouched — only EIP-1559 basefee is redirected to the treasury.
+Prerequisites: 8 GB RAM, 500 GB SSD. Block rewards and tips remain untouched — only EIP-1559 basefee is redirected to the treasury.
 
 ## Olympia Development Timeline
 

@@ -19,7 +19,7 @@ const pillars = [
     icon: Pickaxe,
     title: "Hashrate Incentives",
     description:
-      "170+ TH/s securing the only Proof-of-Work network with native smart contracts. GPU and ASIC compatible mining. Block rewards remain untouched by the Olympia upgrade — miners are unaffected while the network gains governance and treasury infrastructure.",
+      "170+ TH/s securing the only Proof-of-Work network with native smart contracts. GPU and ASIC compatible mining. Block rewards and tips remain untouched by the Olympia upgrade — miners are unaffected while the network gains governance and treasury infrastructure.",
   },
   {
     icon: Scale,

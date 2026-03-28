@@ -17,9 +17,9 @@ const safeguards = [
   },
   {
     icon: Fingerprint,
-    title: "Non-Transferable Voting",
+    title: "Two-Layer Governance",
     description:
-      "Voting power is tied to non-transferable membership tokens. This prevents vote buying, governance manipulation, and ensures that only committed community members can influence decisions.",
+      "CoreDAO membership NFTs are non-transferable, preventing vote buying and governance manipulation. Public participation is enabled through futarchy prediction markets — ensuring both protocol accountability and broad community input.",
   },
 ];
 

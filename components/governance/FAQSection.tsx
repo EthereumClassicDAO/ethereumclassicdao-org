@@ -11,17 +11,17 @@ const faqItems = [
   {
     question: "How is the Treasury funded?",
     answer:
-      "The Olympia Treasury is funded by transaction fee revenue, voluntary on-chain donations, and mining rewards directed to the treasury address. Block rewards remain completely untouched and go entirely to miners. This creates sustainable, transparent funding without inflation or miner impact.",
+      "The Olympia Treasury is funded by basefee revenue, voluntary on-chain donations, and mining rewards directed to the treasury address. Block rewards and tips remain completely untouched and go entirely to miners. This creates sustainable, transparent funding without inflation or miner impact.",
   },
   {
     question: "Who can submit proposals?",
     answer:
-      "Anyone can submit governance proposals on-chain. Voting power is granted through non-transferable membership tokens. Proposals define the action to execute and the supporting rationale.",
+      "Anyone can submit governance proposals on-chain. CoreDAO members vote using non-transferable membership NFTs, while public sentiment is captured through futarchy prediction markets. Proposals define the action to execute and the supporting rationale.",
   },
   {
     question: "How does voting work?",
     answer:
-      "Voting power is tied to non-transferable membership tokens. During the voting period, holders cast on-chain votes for or against proposals. A quorum threshold must be met, and a majority of votes must approve the proposal for it to pass.",
+      "Governance operates on two layers. The CoreDAO uses non-transferable membership NFTs for critical protocol decisions — security maintenance, EVM parity, and client funding. Members cast on-chain votes during a defined voting period, and proposals require both quorum and majority to pass. Public participation is enabled through futarchy prediction markets, where anyone can stake on proposal outcomes to signal community sentiment and inform treasury allocation.",
   },
   {
     question: "What is the Olympia upgrade?",
