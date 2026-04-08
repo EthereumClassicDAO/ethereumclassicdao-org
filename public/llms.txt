@@ -27,7 +27,7 @@ The Olympia upgrade introduces protocol-level treasury funding and on-chain gove
 
 **Governance Process:**
 1. Propose — Community members submit governance proposals on-chain (permissionless)
-2. Vote — CoreDAO membership NFT holders cast weighted on-chain votes
+2. Vote — Olympia membership NFT holders cast weighted on-chain votes
 3. Queue — Approved proposals enter a security timelock
 4. Execute — After timelock, proposals execute automatically on-chain
 5. Disclose — All outcomes publicly reported and verifiable
@@ -89,7 +89,7 @@ Six phases from specification to mainnet:
 2. Client Implementation (2025 Q1 – 2025 Q4) — Complete. Three independent implementations.
 3. Governance Contracts (2025 Q3 – 2026 Q1) — Complete. Demo v0.3 deployed (9 contracts).
 4. Testnet Deployment (2026 Q1 – present) — In progress. Mordor sync verified, SNAP sync successful.
-5. Community Decision (CDC-23) — Upcoming. Activation block to be announced.
+5. Olympia Upgrade core developers call — Upcoming. Activation block to be announced.
 6. Mainnet Activation — Upcoming. EIP-1559 basefee begins flowing to treasury.
 
 ## Web Properties
