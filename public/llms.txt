@@ -85,7 +85,7 @@ Prerequisites: 8 GB RAM, 500 GB SSD. Block rewards and tips remain untouched —
 
 Six phases from specification to mainnet:
 
-1. Specification Drafting (2024 Q3 – 2025 Q2) — Complete. Five core ECIPs (1111–1114, 1121).
+1. Specification Drafting (2024 Q3 – 2025 Q2) — Complete. Three client-facing ECIPs: ECIP-1111 (EIP-1559 fee market), ECIP-1112 (treasury contract), ECIP-1121 (Fusaka EVM alignment). Plus contract layer ECIPs 1113 and 1114.
 2. Client Implementation (2025 Q1 – 2025 Q4) — Complete. Three independent implementations.
 3. Governance Contracts (2025 Q3 – 2026 Q1) — Complete. Demo v0.3 deployed (9 contracts).
 4. Testnet Deployment (2026 Q1 – present) — In progress. Mordor sync verified, SNAP sync successful.

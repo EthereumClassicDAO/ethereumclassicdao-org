@@ -44,6 +44,10 @@ export const metadata: Metadata = {
     "stablecoins",
     "ETF",
     "blockchain infrastructure",
+    "ECIP-1121",
+    "Fusaka",
+    "EVM upgrade",
+    "EVM compatibility",
   ],
   authors: [
     { name: "Cody Burns", url: "https://github.com/realcodywburns" },
