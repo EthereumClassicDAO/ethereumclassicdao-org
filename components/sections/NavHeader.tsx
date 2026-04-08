@@ -10,12 +10,9 @@ import { ThemeToggle } from "@/components/theme-toggle";
 const navLinks = [
   { label: "About", href: "/about" },
   { label: "Governance", href: "/governance" },
-  { label: "Clients", href: "/clients" },
-  { label: "Upgrade", href: "/upgrade" },
+  { label: "Olympia", href: "/olympia" },
   { label: "Timeline", href: "/timeline" },
   { label: "Ecosystem", href: "/ecosystem" },
-  { label: "Disclosures", href: "/transparency" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export function NavHeader() {
