@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import { NavHeader } from "@/components/sections/NavHeader";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -148,6 +149,11 @@ export default function RootLayout({
           {children}
           <FooterSection />
         </ThemeProvider>
+        <Script
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "40b57ae4e0624a72a3b781b2961cd29a"}'
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
