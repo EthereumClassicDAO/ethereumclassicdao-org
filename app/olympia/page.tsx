@@ -78,7 +78,7 @@ const faqItems = [
   {
     question: "Will my miner rewards change?",
     answer:
-      "No. Block rewards and tips remain completely untouched at 2.048 ETC (Era 4). The Olympia upgrade redirects the EIP-1559 basefee to the protocol treasury — this is separate from miner rewards.",
+      "No. Block rewards and tips remain completely untouched at 2.048 ETC (Era 4). The Olympia upgrade redirects the EIP-1559 basefee, a value set to be destroyed, to the protocol treasury. This is separate from miner rewards.",
   },
   {
     question: "When is the activation block?",
