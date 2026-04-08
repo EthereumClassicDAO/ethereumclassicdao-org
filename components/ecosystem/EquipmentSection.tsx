@@ -11,18 +11,28 @@ interface Equipment {
 const asicMiners: Equipment[] = [
   {
     name: "Bitmain",
-    detail: "Antminer E9 Pro (3.68 GH/s)",
+    detail: "Antminer E11 (9 GH/s)",
     href: "https://www.bitmain.com",
   },
   {
     name: "iPollo",
-    detail: "V1 Mini SE Plus (280 MH/s)",
+    detail: "V2 (10 GH/s)",
     href: "https://www.ipollo.com",
   },
   {
     name: "Jasminer",
-    detail: "X16-Q (1.95 GH/s)",
+    detail: "X16-P (5.8 GH/s)",
     href: "https://www.jasminer.com",
+  },
+  {
+    name: "Bombax",
+    detail: "EZ100 Pro (15.5 GH/s)",
+    href: "https://bombaxminer.com",
+  },
+  {
+    name: "Anexminer",
+    detail: "ET7 (6 GH/s)",
+    href: "https://anexminer.org",
   },
 ];
 

@@ -25,9 +25,9 @@ const clients = [
       "Replace the existing binary or update via package manager",
       "Restart your node — it will automatically follow the Olympia fork",
     ],
-    dockerImage: "etclabscore/core-geth",
-    githubUrl: "https://github.com/etclabscore/core-geth/releases",
-    docsUrl: "https://etclabscore.github.io/core-geth/",
+    dockerImage: "ghcr.io/ethereumclassic/core-geth",
+    githubUrl: "https://github.com/ethereumclassic/core-geth/releases",
+    docsUrl: "https://github.com/ethereumclassic/core-geth#readme",
   },
   {
     name: "Hyperledger Besu",
@@ -44,9 +44,9 @@ const clients = [
       "Replace the existing binary or JAR file",
       "Restart your node — Besu automatically follows the Olympia fork",
     ],
-    dockerImage: "hyperledger/besu",
-    githubUrl: "https://github.com/hyperledger/besu/releases",
-    docsUrl: "https://besu.hyperledger.org/",
+    dockerImage: "ghcr.io/ethereumclassic/besu",
+    githubUrl: "https://github.com/ethereumclassic/besu/releases",
+    docsUrl: "https://github.com/ethereumclassic/besu#readme",
   },
   {
     name: "Fukuii",
@@ -63,9 +63,9 @@ const clients = [
       "Replace the existing binary",
       "Restart your node — Fukuii automatically follows the Olympia fork",
     ],
-    dockerImage: "whiteb0x/fukuii",
-    githubUrl: "https://github.com/AlanVerbner/fukuii/releases",
-    docsUrl: "https://github.com/AlanVerbner/fukuii#readme",
+    dockerImage: "ghcr.io/ethereumclassic/fukuii",
+    githubUrl: "https://github.com/ethereumclassic/fukuii/releases",
+    docsUrl: "https://github.com/ethereumclassic/fukuii#readme",
   },
 ];
 
@@ -83,7 +83,7 @@ const faqItems = [
   {
     question: "When is the activation block?",
     answer:
-      "The exact activation block will be announced after the CDC-23 community call. All three client implementations will release Olympia-compatible versions well before activation.",
+      "The exact activation block will be announced after the Olympia Upgrade core developers call. All three client implementations will release Olympia-compatible versions well before activation.",
   },
   {
     question: "Can I roll back if something goes wrong?",
@@ -126,7 +126,7 @@ export default function UpgradePage() {
                   Activation Block: TBD
                 </p>
                 <p className="mt-0.5 text-xs text-[var(--text-muted)]">
-                  The exact block number will be announced after CDC-23. Upgrade
+                  The exact block number will be announced after the Olympia Upgrade core developers call. Upgrade
                   your node as soon as a compatible release is available.
                 </p>
               </div>

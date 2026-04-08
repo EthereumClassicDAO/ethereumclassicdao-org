@@ -15,11 +15,6 @@ const phases = [
     period: "2024 Q3 – 2025 Q2",
     description:
       "Five core ECIPs drafted and submitted: ECIP-1111 (EIP-1559 Fee Market), ECIP-1112 (Protocol Treasury), ECIP-1113 (DAO Governance), ECIP-1114 (ECFP Funding Process), ECIP-1121 (EVM Alignment with Fusaka). Community review on the ECIP repository.",
-    milestones: [
-      "ECIP-1111 through ECIP-1114 submitted",
-      "ECIP-1121 (EVM Alignment) added — EIPs spanning London, Dencun, Pectra, and Fusaka",
-      "Cross-reference alignment with EIP-1559 and related Ethereum standards",
-    ],
   },
   {
     name: "Client Implementation",
@@ -27,12 +22,6 @@ const phases = [
     period: "2025 Q1 – 2025 Q4",
     description:
       "Three independent client implementations built and tested. Core-Geth (Go), Hyperledger Besu (Java), and Fukuii (Scala) each implement the full Olympia specification independently, ensuring no single point of failure.",
-    milestones: [
-      "Core-Geth: Olympia branch with all 5 ECIPs + 14 EIPs",
-      "Besu: Olympia branch with ETC-specific fork support",
-      "Fukuii: Built from scratch — 143 RPC methods, 2,706 tests",
-      "Cross-client test matrix covering 14 historical forks + Olympia",
-    ],
   },
   {
     name: "Governance Contracts",
@@ -40,12 +29,6 @@ const phases = [
     period: "2025 Q3 – 2026 Q1",
     description:
       "Smart contract suite deployed and tested: OlympiaTreasury, OlympiaGovernor, OlympiaExecutor, TimelockController, ECFPRegistry, SanctionsOracle, OlympiaMemberNFT. Demo v0.3 deployed to both Mordor testnet and ETC mainnet.",
-    milestones: [
-      "Demo v0.1 — initial treasury + governor deployment",
-      "Demo v0.2 — executor + timelock + sanctions oracle",
-      "Demo v0.3 — full suite with member NFT + renderer + verifier",
-      "Deterministic CREATE2 deployment — identical addresses on Mordor + ETC",
-    ],
   },
   {
     name: "Testnet Deployment",
@@ -53,24 +36,13 @@ const phases = [
     period: "2026 Q1 – Present",
     description:
       "Mordor testnet deployment and validation. All three clients syncing and producing blocks. Cross-client compatibility verified through the Hive integration testing framework. SNAP sync validated between clients.",
-    milestones: [
-      "Mordor genesis hash identical across all 3 clients",
-      "Fukuii SNAP sync success — genesis to head in ~35 minutes",
-      "Docker images built for all 3 clients (pre-olympia + olympia tags)",
-      "Next: Mordor Olympia fork activation at TBD block",
-    ],
   },
   {
-    name: "Community Decision (CDC-23)",
+    name: "Olympia Upgrade Core Developers Call",
     status: "upcoming" as const,
     period: "TBD",
     description:
-      "The Community Development Call (CDC-23) will finalize the Olympia activation block for Mordor testnet and ETC mainnet. All client teams and stakeholders will participate in the consensus decision.",
-    milestones: [
-      "Mordor activation block announced",
-      "ETC mainnet activation block announced",
-      "Client release schedule coordinated",
-    ],
+      "The Olympia Upgrade core developers call will finalize the activation block for Mordor testnet and ETC mainnet. All client teams and stakeholders will participate in the consensus decision.",
   },
   {
     name: "Mainnet Activation",
@@ -78,12 +50,6 @@ const phases = [
     period: "TBD",
     description:
       "Olympia activates on ETC mainnet at the agreed-upon block. EIP-1559 fee market goes live, basefee begins flowing to the protocol treasury. Block rewards and tips remain completely untouched.",
-    milestones: [
-      "All three clients release Olympia-compatible versions",
-      "Node operators upgrade before activation block",
-      "Olympia goes live — basefee directed to treasury",
-      "Treasury enters accumulation phase (Stage 1)",
-    ],
   },
 ];
 
@@ -165,25 +131,6 @@ export default function TimelinePage() {
                           {phase.description}
                         </p>
 
-                        <ul className="mt-3 space-y-1">
-                          {phase.milestones.map((milestone, j) => (
-                            <li
-                              key={j}
-                              className="flex items-start gap-2 text-sm text-[var(--text-muted)]"
-                            >
-                              <span
-                                className={`mt-2 h-1 w-1 shrink-0 rounded-full ${
-                                  phase.status === "complete"
-                                    ? "bg-[var(--brand-green)]"
-                                    : phase.status === "active"
-                                      ? "bg-[#F59E0B]"
-                                      : "bg-[rgba(255,255,255,0.3)]"
-                                }`}
-                              />
-                              {milestone}
-                            </li>
-                          ))}
-                        </ul>
                       </div>
                     </div>
                   </FadeIn>

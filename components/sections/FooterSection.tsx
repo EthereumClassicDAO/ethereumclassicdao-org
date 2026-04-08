@@ -41,7 +41,7 @@ const columns: { heading: string; links: FooterLink[] }[] = [
   {
     heading: "Build",
     links: [
-      { label: "Client Software", href: "/ecosystem" },
+      { label: "Client Software", href: "/clients" },
       { label: "Developer Tooling", href: "/ecosystem#tooling" },
       {
         label: "Block Explorer",

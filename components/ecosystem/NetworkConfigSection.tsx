@@ -40,7 +40,7 @@ const networks: NetworkConfig[] = [
     name: "Mordor Testnet",
     chainId: "63",
     currency: "METC",
-    rpc: "https://rpc.mordor.etcnodes.org",
+    rpc: "https://rpc.mordor.etccooperative.org",
     explorer: "https://etc-mordor.blockscout.com",
     consensus: "Proof-of-Work",
     evmVersions: [

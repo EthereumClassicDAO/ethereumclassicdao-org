@@ -6,7 +6,7 @@ import { ExternalLink } from "lucide-react";
 export const metadata: Metadata = {
   title: "Client Implementations",
   description:
-    "Three independent client implementations ensure no single point of failure for Ethereum Classic.",
+    "Independent Ethereum Classic client implementations — full clients and ETC plugins for major upstream clients.",
 };
 
 const clients = [
@@ -14,52 +14,58 @@ const clients = [
     name: "Fukuii",
     language: "Scala",
     languageColor: "#DC322F",
-    role: "Primary Client",
+    role: "Primary",
     roleColor: "#00ffae",
     description:
-      "Next-generation ETC client built from the ground up. 143 RPC methods, 2,706 tests, full SNAP sync support. Becomes the primary production client after Olympia.",
-    organization: "White B0x Inc.",
-    githubUrl: "https://github.com/AlanVerbner/fukuii",
-    docsUrl: "https://github.com/AlanVerbner/fukuii#readme",
-    stats: [
-      { label: "RPC Methods", value: "143" },
-      { label: "Tests", value: "2,706" },
-      { label: "Runtime", value: "JDK 21" },
-    ],
+      "Purpose-built for Ethereum Classic — an independent implementation designed from the ground up for performance, security, and protocol parity. Primary client for the Olympia upgrade.",
+    docsUrl: "https://github.com/ethereumclassic/fukuii#readme",
+    releasesUrl: "https://github.com/ethereumclassic/fukuii/releases",
   },
   {
     name: "Core-Geth",
     language: "Go",
     languageColor: "#00ADD8",
-    role: "Maintenance",
+    role: "Maintained",
     roleColor: "#a78bfa",
     description:
-      "Battle-tested ETC client based on go-ethereum. Transitioning to maintenance role as Fukuii takes over post-Olympia.",
-    organization: "ETC Labs",
-    githubUrl: "https://github.com/etclabscore/core-geth",
-    docsUrl: "https://etclabscore.github.io/core-geth/",
-    stats: [
-      { label: "Version", value: "v1.12.21" },
-      { label: "Forks", value: "8 supported" },
-      { label: "Runtime", value: "Go 1.24" },
-    ],
+      "Two security releases shipped (v1.12.21, v1.12.22) addressing CVE mitigations and DNS discovery updates. The established mainnet client continuing in a maintenance role alongside next-generation implementations.",
+    docsUrl: "https://github.com/ethereumclassic/core-geth#readme",
+    releasesUrl: "https://github.com/ethereumclassic/core-geth/releases",
   },
+];
+
+const plugins = [
   {
-    name: "Hyperledger Besu",
+    name: "Besu",
     language: "Java",
     languageColor: "#B07219",
-    role: "Enterprise",
-    roleColor: "#38bdf8",
-    description:
-      "Enterprise-grade client maintained by the Hyperledger Foundation. Supports SNAP state serving, permissioning, and privacy.",
-    organization: "Hyperledger Foundation",
-    githubUrl: "https://github.com/hyperledger/besu",
-    docsUrl: "https://besu.hyperledger.org/",
-    stats: [
-      { label: "Version", value: "v26.3" },
-      { label: "License", value: "Apache 2.0" },
-      { label: "Runtime", value: "Java 21" },
-    ],
+    releasesUrl: "https://github.com/ethereumclassic/besu/releases",
+    docsUrl: "https://github.com/ethereumclassic/besu#readme",
+    description: "A plugin that adds ETC support into the Besu codebase.",
+  },
+  {
+    name: "Erigon",
+    language: "Go",
+    languageColor: "#00ADD8",
+    releasesUrl: "https://github.com/ethereumclassic/erigon/releases",
+    docsUrl: "https://github.com/ethereumclassic/erigon#readme",
+    description: "A plugin that adds ETC support into the Erigon codebase.",
+  },
+  {
+    name: "Go-Ethereum",
+    language: "Go",
+    languageColor: "#00ADD8",
+    releasesUrl: "https://github.com/ethereumclassic/go-ethereum/releases",
+    docsUrl: "https://github.com/ethereumclassic/go-ethereum#readme",
+    description: "A plugin that adds ETC support into the Go-Ethereum codebase.",
+  },
+  {
+    name: "Nethermind",
+    language: "C#",
+    languageColor: "#178600",
+    releasesUrl: "https://github.com/ethereumclassic/nethermind/releases",
+    docsUrl: "https://github.com/ethereumclassic/nethermind#readme",
+    description: "A plugin that adds ETC support into the Nethermind codebase.",
   },
 ];
 
@@ -70,15 +76,14 @@ export default function ClientsPage() {
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
           <FadeIn>
             <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl">
-              Three Independent{" "}
-              <span className="text-[var(--brand-green)]">Client Implementations</span>
+              Client{" "}
+              <span className="text-[var(--brand-green)]">Implementations</span>
             </h1>
           </FadeIn>
           <FadeIn delay={100}>
             <p className="mx-auto max-w-2xl text-lg text-[var(--text-muted)]">
-              Multi-client architecture ensures no single point of failure. Each
-              implementation passes the cross-client test matrix covering 14 historical
-              forks and all Olympia specifications.
+              Multi-client architecture following best practices in client execution
+              and enterprise-grade features.
             </p>
           </FadeIn>
         </div>
@@ -88,7 +93,7 @@ export default function ClientsPage() {
 
       <section className="section-alt py-16 px-6">
         <div className="mx-auto max-w-5xl">
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {clients.map((client, i) => (
               <FadeIn key={client.name} delay={i * 80}>
                 <div className="rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-6">
@@ -120,25 +125,14 @@ export default function ClientsPage() {
                     {client.description}
                   </p>
 
-                  <div className="mt-4 grid grid-cols-3 gap-2">
-                    {client.stats.map((s) => (
-                      <div key={s.label} className="rounded-lg bg-[var(--background)] px-2 py-2 text-center">
-                        <p className="text-[10px] text-[var(--text-muted)]">{s.label}</p>
-                        <p className="text-sm font-semibold">{s.value}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  <p className="mt-3 text-xs text-[var(--text-muted)]">{client.organization}</p>
-
                   <div className="mt-4 flex gap-3">
                     <a
-                      href={client.githubUrl}
+                      href={client.releasesUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-sm text-[var(--brand-green)] transition hover:opacity-80"
                     >
-                      GitHub <ExternalLink size={12} />
+                      Releases <ExternalLink size={12} />
                     </a>
                     <a
                       href={client.docsUrl}
@@ -147,6 +141,65 @@ export default function ClientsPage() {
                       className="inline-flex items-center gap-1 text-sm text-[var(--brand-green)] transition hover:opacity-80"
                     >
                       Docs <ExternalLink size={12} />
+                    </a>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn delay={250}>
+            <h2 className="mt-14 mb-2 text-xl font-bold tracking-tight">
+              ETC Plugins
+            </h2>
+            <p className="mb-6 text-sm text-[var(--text-muted)]">
+              ETC compatibility layers for major upstream clients — bringing Ethereum Classic
+              support to the broader Ethereum client ecosystem without maintaining full forks.
+            </p>
+          </FadeIn>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {plugins.map((plugin, i) => (
+              <FadeIn key={plugin.name} delay={300 + i * 80}>
+                <div className="rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-5">
+                  <div className="flex items-center gap-3">
+                    <span
+                      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-sm font-bold"
+                      style={{
+                        backgroundColor: `${plugin.languageColor}20`,
+                        color: plugin.languageColor,
+                      }}
+                    >
+                      {plugin.language.slice(0, 2)}
+                    </span>
+                    <div>
+                      <h3 className="font-semibold">{plugin.name}</h3>
+                      <span className="rounded-full bg-[#38bdf815] px-2 py-0.5 text-xs font-medium text-[#38bdf8]">
+                        Plugin
+                      </span>
+                    </div>
+                  </div>
+
+                  <p className="mt-3 text-xs leading-relaxed text-[var(--text-muted)]">
+                    {plugin.description}
+                  </p>
+
+                  <div className="mt-3 flex gap-3">
+                    <a
+                      href={plugin.releasesUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs font-medium text-[var(--brand-green)] transition hover:opacity-80"
+                    >
+                      Releases <ExternalLink size={11} />
+                    </a>
+                    <a
+                      href={plugin.docsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs font-medium text-[var(--brand-green)] transition hover:opacity-80"
+                    >
+                      Docs <ExternalLink size={11} />
                     </a>
                   </div>
                 </div>

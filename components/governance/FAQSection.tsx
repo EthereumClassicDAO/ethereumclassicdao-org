@@ -16,12 +16,12 @@ const faqItems = [
   {
     question: "Who can submit proposals?",
     answer:
-      "Anyone can submit governance proposals on-chain. CoreDAO members vote using non-transferable membership NFTs, while public sentiment is captured through futarchy prediction markets. Proposals define the action to execute and the supporting rationale.",
+      "Anyone can submit governance proposals on-chain. Olympia DAO members vote using non-transferable membership NFTs, while public sentiment is captured through futarchy prediction markets. Proposals define the action to execute and the supporting rationale.",
   },
   {
     question: "How does voting work?",
     answer:
-      "Governance operates on two layers. The CoreDAO uses non-transferable membership NFTs for critical protocol decisions — security maintenance, EVM parity, and client funding. Members cast on-chain votes during a defined voting period, and proposals require both quorum and majority to pass. Public participation is enabled through futarchy prediction markets, where anyone can stake on proposal outcomes to signal community sentiment and inform treasury allocation.",
+      "Governance operates on two layers. The Olympia DAO uses non-transferable membership NFTs for critical protocol decisions — security maintenance, EVM parity, and client funding. Members cast on-chain votes during a defined voting period, and proposals require both quorum and majority to pass. Public participation is enabled through futarchy prediction markets, where anyone can stake on proposal outcomes to signal community sentiment and inform treasury allocation.",
   },
   {
     question: "What is the Olympia upgrade?",
