@@ -18,7 +18,7 @@ const focusAreas = [
   {
     question: "Hashrate Incentive Alignment",
     answer:
-      "Ensuring network security through mining economics. 170+ TH/s of mining infrastructure secures the largest Proof-of-Work network with native smart contracts. The Olympia upgrade preserves block rewards and tips entirely for miners while adding governance and treasury capabilities funded by basefee revenue. GPU and ASIC compatible — ASIC efficiency for commercial-grade operations, GPU accessibility for global participation. This dual-compatibility diversifies miner composition and reduces supply chain risk.",
+      "170+ TH/s of mining infrastructure secures the largest Proof-of-Work network with native smart contracts. The Olympia treasury is primarily funded through EIP-1559 basefee — a value that was previously set to be destroyed — alongside voluntary contributions. Block rewards and tips remain completely untouched. Miners receive everything they do today; the protocol simply redirects what was already being discarded into a governed treasury. GPU and ASIC compatible — dual-compatibility diversifies miner composition and reduces supply chain risk.",
   },
   {
     question: "US Regulatory Compliance",

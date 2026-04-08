@@ -1,4 +1,4 @@
-import { Vote, Landmark, LayoutDashboard, Github } from "lucide-react";
+import { Vote, Landmark, Github } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { PropertyCard } from "@/components/ui/PropertyCard";
@@ -15,12 +15,6 @@ const properties = [
     name: "Olympia Treasury",
     description: "Treasury monitoring dashboard",
     href: "https://olympiatreasury.org",
-  },
-  {
-    icon: LayoutDashboard,
-    name: "Governance App",
-    description: "Proposal submission, voting, and execution",
-    href: "https://app.olympiadao.org",
   },
   {
     icon: Github,

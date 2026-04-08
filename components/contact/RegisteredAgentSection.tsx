@@ -19,11 +19,11 @@ const channels = [
   },
   {
     icon: Vote,
-    title: "Governance App",
+    title: "Olympia DAO",
     description:
-      "Submit proposals, vote on resource allocation, and participate in on-chain governance.",
-    href: "https://app.olympiadao.org",
-    cta: "Open governance app",
+      "Submit proposals and participate in on-chain governance.",
+    href: "https://olympiadao.org",
+    cta: "Visit olympiadao.org",
   },
 ];
 

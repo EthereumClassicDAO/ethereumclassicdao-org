@@ -74,11 +74,13 @@ const categories: ToolCategory[] = [
       {
         name: "Scaffold-ETH 2",
         description: "Full-stack dApp starter with Next.js, Hardhat, and wagmi. Rapid prototyping for EVM chains.",
+        config: "targetNetworks: [chains.ethereumClassic]",
         href: "https://scaffoldeth.io",
       },
       {
         name: "thirdweb SDK",
         description: "All-in-one Web3 development platform. Deploy contracts, build frontends, manage wallets.",
+        config: "chain: defineChain(61)",
         href: "https://thirdweb.com",
       },
     ],
