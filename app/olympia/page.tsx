@@ -167,10 +167,10 @@ export default function UpgradePage() {
             </Suspense>
           </FadeIn>
           <FadeIn delay={100}>
-            <div className="mt-4 flex items-center gap-3 rounded-xl border border-[rgba(245,158,11,0.2)] bg-[rgba(245,158,11,0.05)] px-5 py-4">
-              <AlertTriangle size={20} className="shrink-0 text-[#F59E0B]" />
+            <div className="mt-4 flex items-center gap-3 rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] px-5 py-4">
+              <AlertTriangle size={20} className="shrink-0 text-[var(--brand-green)]" />
               <div>
-                <p className="text-sm font-medium text-[#F59E0B]">
+                <p className="text-sm font-medium text-[var(--brand-green)]">
                   Olympia is in final testing on the Mordor Testnet — Activation Block: TBD
                 </p>
                 <p className="mt-0.5 text-xs text-[var(--text-muted)]">

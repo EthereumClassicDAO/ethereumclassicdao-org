@@ -7,7 +7,8 @@ const entityMetrics = [
   { label: "Incorporated", value: "May 2025", detail: "Wyoming DAO LLC" },
   { label: "Status", value: "Active", detail: "Good Standing" },
   { label: "Network", value: "Proof-of-Work", detail: "EVM Compatible" },
-  { label: "Asset Class", value: "Digital Commodity", detail: null, footnote: true },
+  { label: "Asset Class", value: "Digital Commodity", detail: "* CLARITY Act" },
+  { label: "Asset Platform", value: "EVM Native", detail: "GENIUS Act" },
 ];
 
 export function MissionSection({ stats }: { stats: EtcStats }) {
@@ -49,7 +50,7 @@ export function MissionSection({ stats }: { stats: EtcStats }) {
           <StatsGrid stats={networkStats} variant="hero" />
         </div>
 
-        <div className="mt-16 grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="mt-16 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
           {entityMetrics.map((m, i) => (
             <FadeIn key={m.label} delay={i * 80}>
               <div className="rounded-lg bg-[var(--bg-elevated)] border-l-2 border-[var(--brand-green)] p-4">
@@ -58,9 +59,6 @@ export function MissionSection({ stats }: { stats: EtcStats }) {
                 </p>
                 <p className="mt-1.5 text-lg font-bold tracking-tight">
                   {m.value}
-                  {m.footnote && (
-                    <span className="text-[var(--text-subtle)]">*</span>
-                  )}
                 </p>
                 {m.detail && (
                   <p className="mt-0.5 text-[10px] text-[var(--text-muted)]">
@@ -71,10 +69,6 @@ export function MissionSection({ stats }: { stats: EtcStats }) {
             </FadeIn>
           ))}
         </div>
-
-        <p className="mt-4 text-xs text-[var(--text-subtle)]">
-          * Classification pending under the CLARITY Act
-        </p>
       </div>
     </section>
   );
