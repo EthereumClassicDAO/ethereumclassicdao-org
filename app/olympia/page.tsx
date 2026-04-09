@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { RoadmapSection } from "@/components/about/RoadmapSection";
+import { ActivationCountdown } from "@/components/ui/ActivationCountdown";
 import { ExternalLink, AlertTriangle, CheckCircle2, Flame, Landmark, Cpu } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -160,7 +162,12 @@ export default function UpgradePage() {
       <section className="py-12 px-6">
         <div className="mx-auto max-w-5xl">
           <FadeIn>
-            <div className="flex items-center gap-3 rounded-xl border border-[rgba(245,158,11,0.2)] bg-[rgba(245,158,11,0.05)] px-5 py-4">
+            <Suspense>
+              <ActivationCountdown />
+            </Suspense>
+          </FadeIn>
+          <FadeIn delay={100}>
+            <div className="mt-4 flex items-center gap-3 rounded-xl border border-[rgba(245,158,11,0.2)] bg-[rgba(245,158,11,0.05)] px-5 py-4">
               <AlertTriangle size={20} className="shrink-0 text-[#F59E0B]" />
               <div>
                 <p className="text-sm font-medium text-[#F59E0B]">
