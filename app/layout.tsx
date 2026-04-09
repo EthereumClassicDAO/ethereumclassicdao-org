@@ -20,7 +20,7 @@ const SITE_URL = "https://ethereumclassicdao.org";
 const TITLE =
   "Ethereum Classic DAO — Building Software & Infrastructure for Global Adoption of Ethereum Classic";
 const DESCRIPTION =
-  "Ethereum Classic DAO LLC builds the software and infrastructure for global adoption of Ethereum Classic — the largest Proof-of-Work smart contract platform. Core client development, ecosystem infrastructure, hashrate incentives, and US regulatory compliance under the CLARITY Act and GENIUS Act.";
+  "Ethereum Classic DAO LLC builds the software and infrastructure for global adoption of Ethereum Classic, the only Proof-of-Work blockchain with full EVM compatibility. Classified as a digital commodity under the CLARITY Act, a decentralized asset under MiCA, and a recognized crypto-asset on Japan's FSA Green List. Core client development, ecosystem infrastructure, and regulated stablecoin platform positioning under the GENIUS Act.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -41,7 +41,13 @@ export const metadata: Metadata = {
     "digital commodity",
     "CLARITY Act",
     "GENIUS Act",
-    "stablecoins",
+    "MiCA",
+    "FSA Green List",
+    "digital commodity",
+    "decentralized asset",
+    "regulated stablecoin",
+    "stablecoin platform",
+    "Japan crypto-asset",
     "ETF",
     "blockchain infrastructure",
     "ECIP-1121",
