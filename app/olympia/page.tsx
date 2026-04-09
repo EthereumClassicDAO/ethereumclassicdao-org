@@ -5,9 +5,25 @@ import { RoadmapSection } from "@/components/about/RoadmapSection";
 import { ExternalLink, AlertTriangle, CheckCircle2, Flame, Landmark, Cpu } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Olympia Upgrade",
+  title: "Olympia Upgrade — EIP-1559, Protocol Treasury, and Fusaka EVM Alignment for Ethereum Classic",
   description:
-    "The Olympia upgrade introduces EIP-1559 fee market, a protocol treasury, and Fusaka EVM alignment to Ethereum Classic. Node upgrade guides for Core-Geth, Hyperledger Besu, and Fukuii.",
+    "Olympia is Ethereum Classic's most significant protocol upgrade. Adds EIP-1559 fee market, a protocol-controlled treasury for open-source core development, and full Fusaka EVM alignment — positioning ETC as the Proof-of-Work infrastructure layer for institutional and sovereign adoption. Node upgrade guides for Fukuii and Core-Geth.",
+  keywords: [
+    "Olympia upgrade",
+    "Ethereum Classic upgrade",
+    "EIP-1559",
+    "ECIP-1111",
+    "ECIP-1112",
+    "ECIP-1121",
+    "Fusaka EVM",
+    "EVM alignment",
+    "protocol treasury",
+    "Ethereum Classic node upgrade",
+    "Fukuii",
+    "Core-Geth",
+    "hard fork",
+    "ETC upgrade",
+  ],
 };
 
 const ecips = [
