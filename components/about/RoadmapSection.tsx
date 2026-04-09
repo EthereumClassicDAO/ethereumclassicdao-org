@@ -6,44 +6,57 @@ const stages = [
     title: "Consensus Upgrades",
     status: "complete" as const,
     description:
-      "Fee market improvements, dynamic gas limits, and treasury funding mechanism. Independent client implementations complete.",
+      "Adds the most widely adopted transaction type to Ethereum Classic, ensuring continued network support by exchanges, wallets, and modern development tooling. Independent client implementations complete.",
     deliverables: [
-      "Fee market",
+      "EIP-1559 fee market with predictable gas pricing",
       "Dynamic gas limits",
-      "Treasury funding mechanism",
+      "Basefee introduced — previously set to be destroyed, now funds the treasury",
+      "Miner tips and block rewards untouched",
+      "Core development and infrastructure funded without new issuance",
     ],
   },
   {
     title: "Core Governance",
     status: "active" as const,
     description:
-      "Governance and treasury contracts deployed. Membership-based voting. Full proposal lifecycle: submit, vote, queue, execute.",
+      "Governance and treasury contracts deployed. Membership-based voting. Full proposal lifecycle: submit, vote, queue, execute. Moves core development, critical infrastructure, and long-term network security from private balance sheets to an open, transparent, and permissionless framework — bringing stability to the most critical and historically unstable aspects of Ethereum Classic since the Ethereum Foundation forked to its own chain in 2016.",
     deliverables: [
+      // Governance infrastructure
       "Governance and treasury contracts",
-      "Membership voting system",
+      "Membership-based voting system",
       "Sanctions compliance layer",
+      // Funding reform
+      "Open, transparent funding proposals with competitive bidding",
+      "Free market pricing for network maintenance",
+      "Removes organizational overhead from the funding pipeline",
+      // Access
+      "Open to qualified professionals across the EVM ecosystem",
+      "Donation pipeline for stakeholders without fielding a team",
     ],
   },
   {
     title: "Prediction Markets",
     status: "research" as const,
     description:
-      "Futarchy-assisted governance using prediction markets to inform treasury allocation. Research phase exploring conditional token frameworks.",
+      "Futarchy-assisted governance uses prediction markets to inform treasury allocation. In a futarchy market, participants stake on the expected outcome of a proposal — if funded, does the network benefit? Market prices aggregate public opinion into a measurable signal that governance can act on. This opens protocol-level decision making to broad public participation beyond NFT holders, replacing opaque insider consensus with transparent, financially-backed forecasting. This stage requires the Fusaka EVM alignment delivered by Olympia (ECIP-1121). Research phase exploring conditional token frameworks.",
     deliverables: [
       "Conditional outcome tokens",
       "Market-informed proposal ranking",
-      "Protocol specification",
+      "User acquisition and on-chain transaction flywheel",
+      "Financially incentivized public interest in protocol development",
+      "Additive market sentiment to complement siloed GitHub discussion threads",
     ],
   },
   {
     title: "Treasury Distribution",
     status: "future" as const,
     description:
-      "Protocol-layer treasury smoothing to reduce per-block variance. Specification phase exploring miner-compatible mechanisms.",
+      "As Ethereum Classic's fixed-emission schedule reduces block subsidies over time, basefee revenue held in the treasury can optionally be redistributed back to miners to supplement long-term network security. ECIP-1115 defines a governance-layer smoothing mechanism — an L-curve that spreads these optional payouts across a configurable future window, reducing per-block volatility and providing a more predictable revenue profile. Critically, this is entirely optional and governance-controlled: no miner entitlement is created, consensus-layer rewards and tips remain untouched, and parameters can be adjusted or disabled without a hard fork. Specification phase exploring miner-compatible mechanisms.",
     deliverables: [
       "Treasury smoothing algorithm",
+      "Smoothing allocation amount experiments",
+      "Multi-algorithm modeling for stable miner security budget through ECIP-1017 emission reduction events",
       "Miner impact analysis",
-      "Cross-client specification",
     ],
   },
   {

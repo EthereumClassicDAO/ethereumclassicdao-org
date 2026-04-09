@@ -16,68 +16,30 @@ const ecips = [
     title: "EIP-1559 Fee Market",
     icon: Flame,
     description:
-      "Introduces the most widely adopted transaction format and fee market in the EVM ecosystem. Dynamic gas pricing makes fees more predictable for users and applications. The upgrade is fully additive — legacy Type-0 and Type-1 transactions remain valid indefinitely. Unlike Ethereum where the basefee is burned, ETC redirects it to the protocol treasury. Miner block rewards and tips remain completely untouched.",
+      "The most widely adopted transaction format and fee market in the EVM ecosystem, now on Ethereum Classic. Dynamic gas pricing delivers predictable fees for users and applications. Fully additive — legacy transactions remain valid indefinitely. Unlike Ethereum where the basefee is burned, ETC redirects it to the protocol treasury. Miner block rewards and tips remain completely untouched.",
   },
   {
     ecip: "ECIP-1112",
     title: "Protocol Treasury",
     icon: Landmark,
     description:
-      "The treasury is primarily funded by the EIP-1559 basefee — a value previously set to be destroyed — alongside voluntary contributions from anyone who wants to support ETC development without fielding a team. Miners receive everything they do today; the protocol simply redirects what was already being discarded. No admin keys, no multisig — only on-chain governance can release funds.",
+      "A protocol-controlled vault funded by basefee revenue and voluntary contributions. For the first time, institutions, developers, and network stakeholders can directly fund Ethereum Classic's core development and critical infrastructure without fielding their own team. Miners receive everything they do today — block rewards and tips remain completely untouched.",
   },
   {
     ecip: "ECIP-1121",
     title: "Fusaka EVM Alignment",
     icon: Cpu,
     description:
-      "Olympia ends Ethereum Classic's longest period of EVM stagnation. ECIP-1121 brings ETC's execution layer forward through London, Dencun, Pectra, and Fusaka — closing years of divergence in a single upgrade. For exchanges and wallets, this means modern RPC compatibility and standard transaction types. For developers, it means every current Ethereum tool, library, and framework works on ETC without modification. Full EVM protocol parity: one codebase runs everywhere.",
+      "Olympia ends Ethereum Classic's longest period of EVM stagnation, advancing the execution layer through London, Dencun, Pectra, and Fusaka in a single upgrade. Exchanges and wallets gain modern RPC compatibility and standard transaction support. Developers gain full access to every current Ethereum tool, library, and framework — one codebase, every EVM chain.",
   },
 ];
 
 const clients = [
   {
-    name: "Core-Geth",
-    language: "Go",
-    languageColor: "#00ADD8",
-    role: "Maintenance",
-    version: "TBD",
-    runtime: "Go 1.24+",
-    disk: "500 GB+ (full sync)",
-    ram: "8 GB minimum",
-    steps: [
-      "Stop your running Core-Geth node",
-      "Download the Olympia-compatible release from GitHub",
-      "Replace the existing binary or update via package manager",
-      "Restart your node — it will automatically follow the Olympia fork",
-    ],
-    dockerImage: "ghcr.io/ethereumclassic/core-geth",
-    githubUrl: "https://github.com/ethereumclassic/core-geth/releases",
-    docsUrl: "https://github.com/ethereumclassic/core-geth#readme",
-  },
-  {
-    name: "Hyperledger Besu",
-    language: "Java",
-    languageColor: "#B07219",
-    role: "Enterprise",
-    version: "TBD",
-    runtime: "JDK 21+",
-    disk: "500 GB+ (full sync)",
-    ram: "8 GB minimum",
-    steps: [
-      "Stop your running Besu node",
-      "Download the Olympia-compatible release from GitHub or update via package manager",
-      "Replace the existing binary or JAR file",
-      "Restart your node — Besu automatically follows the Olympia fork",
-    ],
-    dockerImage: "ghcr.io/ethereumclassic/besu",
-    githubUrl: "https://github.com/ethereumclassic/besu/releases",
-    docsUrl: "https://github.com/ethereumclassic/besu#readme",
-  },
-  {
     name: "Fukuii",
     language: "Scala",
     languageColor: "#DC322F",
-    role: "Primary Client",
+    role: "Primary Client · Enterprise Grade",
     version: "TBD",
     runtime: "JDK 21+",
     disk: "500 GB+ (SNAP sync)",
@@ -92,6 +54,25 @@ const clients = [
     githubUrl: "https://github.com/ethereumclassic/fukuii/releases",
     docsUrl: "https://github.com/ethereumclassic/fukuii#readme",
   },
+  {
+    name: "Core-Geth",
+    language: "Go",
+    languageColor: "#00ADD8",
+    role: "Legacy Client · Maintenance Mode",
+    version: "TBD",
+    runtime: "Go 1.24+",
+    disk: "500 GB+ (full sync)",
+    ram: "8 GB minimum",
+    steps: [
+      "Stop your running Core-Geth node",
+      "Download the Olympia-compatible release from GitHub",
+      "Replace the existing binary or update via package manager",
+      "Restart your node — it will automatically follow the Olympia fork",
+    ],
+    dockerImage: "ghcr.io/ethereumclassic/core-geth",
+    githubUrl: "https://github.com/ethereumclassic/core-geth/releases",
+    docsUrl: "https://github.com/ethereumclassic/core-geth#readme",
+  },
 ];
 
 const faqItems = [
@@ -103,17 +84,17 @@ const faqItems = [
   {
     question: "Will my miner rewards change?",
     answer:
-      "No. Block rewards and tips remain completely untouched at 2.048 ETC (Era 4). The Olympia upgrade redirects the EIP-1559 basefee, a value set to be destroyed, to the protocol treasury. This is separate from miner rewards.",
+      "No. Block rewards and tips remain completely untouched. The Olympia upgrade redirects the EIP-1559 basefee — a value set to be destroyed — to the protocol treasury. This is entirely separate from miner rewards.",
   },
   {
     question: "When is the activation block?",
     answer:
-      "The exact activation block will be announced after the Olympia Upgrade core developers call. All three client implementations will release Olympia-compatible versions well before activation.",
+      "The exact activation block will be announced after the Olympia Upgrade core developers call. All client implementations will release Olympia-compatible versions well before activation. Outreach will occur with all major network stakeholders to assure a smooth upgrade.",
   },
   {
     question: "Can I roll back if something goes wrong?",
     answer:
-      "You can downgrade to a pre-Olympia client version, but your node will only follow the pre-fork chain. In practice, the network will have moved to the Olympia chain. All three clients have been extensively tested against a cross-client test matrix covering 14 historical forks.",
+      "Olympia is backward compatible, but nodes must remain on current client versions to follow the canonical chain. In the unlikely event of an issue, emergency releases would be published promptly. All clients have been thoroughly tested by the same team that has delivered every Ethereum Classic network upgrade since 2016 — 14 hard forks without a chain split. Core-Geth is actively maintained through the Olympia upgrade, and Fukuii carries broader test coverage than any previous ETC client. Olympia also marks a fundamental shift from reactive maintenance to active development — so the network's core teams are responsive, engaged, and building forward.",
   },
 ];
 
@@ -131,10 +112,28 @@ export default function UpgradePage() {
           </FadeIn>
           <FadeIn delay={100}>
             <p className="mx-auto max-w-2xl text-lg text-[var(--text-muted)]">
-              Ethereum Classic&apos;s most significant protocol upgrade — EIP-1559
-              fee market, a protocol-controlled treasury, and full Fusaka EVM
-              alignment in a single coordinated hard fork.
+              The Olympia era marks a shift from reactive maintenance to active
+              development on the longest-running EVM and the only Proof-of-Work
+              smart contract platform in the world.
             </p>
+            <ul className="mx-auto mt-6 max-w-2xl space-y-3 text-left text-sm text-[var(--text-muted)]">
+              <li className="flex gap-3">
+                <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
+                <span><span className="font-semibold text-white">EIP-1559 fee market</span> — the most widely adopted transaction type in the EVM ecosystem, bringing predictable gas pricing and modern tooling compatibility</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
+                <span><span className="font-semibold text-white">Protocol treasury</span> — seeded by basefee revenue and voluntary contributions, funding open-source core development, infrastructure, and long-term network security</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
+                <span><span className="font-semibold text-white">Fusaka EVM alignment</span> — closes years of divergence in a single upgrade; every current Ethereum tool, library, and framework works on ETC without modification</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
+                <span><span className="font-semibold text-white">Institutional infrastructure</span> — the Proof-of-Work foundation for regulated stablecoins under MiCA and the GENIUS Act, energy grid stabilization, and ETF-compliant digital assets that regulators across the US, EU, Japan, and beyond are moving to define</span>
+              </li>
+            </ul>
           </FadeIn>
         </div>
       </section>
@@ -166,10 +165,10 @@ export default function UpgradePage() {
         <div className="mx-auto max-w-5xl">
           <FadeIn>
             <h2 className="mb-2 text-2xl font-bold tracking-tight">
-              What Olympia Changes
+              What Olympia Brings to Ethereum Classic
             </h2>
             <p className="mb-8 text-sm text-[var(--text-muted)]">
-              Three client-facing ECIPs form the core of the Olympia protocol upgrade.
+              A modern fee market, a protocol-controlled treasury, and full Fusaka EVM compatibility — delivered to the only Proof-of-Work smart contract platform in the world.
             </p>
           </FadeIn>
 
@@ -207,7 +206,7 @@ export default function UpgradePage() {
         <div className="mx-auto max-w-5xl">
           <FadeIn>
             <h2 className="mb-8 text-2xl font-bold tracking-tight">
-              Per-Client Upgrade Steps
+              Steps to Upgrade Your Client
             </h2>
           </FadeIn>
 
