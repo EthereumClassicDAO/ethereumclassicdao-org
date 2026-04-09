@@ -12,7 +12,7 @@ export default async function Home() {
 
   return (
     <main>
-      <MissionSection stats={stats} />
+      <MissionSection />
       <NetworkStatsSection stats={stats} />
       <EtcOverviewSection stats={stats} />
       <HowWeHelpSection />

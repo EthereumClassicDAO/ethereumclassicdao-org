@@ -1,7 +1,4 @@
 import { FadeIn } from "@/components/ui/FadeIn";
-import { StatsGrid } from "@/components/ui/StatsGrid";
-import type { EtcStats } from "@/lib/api/etc-stats";
-import { formatUSD, formatCompact, formatPercent } from "@/lib/format";
 
 const entityCards = [
   { label: "Incorporated", value: "May 2025", detail: "Wyoming DAO LLC" },
@@ -16,18 +13,7 @@ const regulatoryCards = [
   { label: "FSA Green List", value: "Recognized Asset", detail: "Japan" },
 ];
 
-export function MissionSection({ stats }: { stats: EtcStats }) {
-  const networkStats = [
-    {
-      value: formatUSD(stats.price),
-      label: "ETC Price",
-      context: `${formatPercent(stats.priceChange24h)} (24h)`,
-      contextColor: (stats.priceChange24h >= 0 ? "green" : "red") as "green" | "red",
-    },
-    { value: formatUSD(stats.marketCap), label: "Market Cap" },
-    { value: formatCompact(stats.totalTransactions), label: "Total Transactions" },
-    { value: "2015", label: "Network Origin" },
-  ];
+export function MissionSection() {
   return (
     <section className="hero-gradient noise-overlay geo-lines grid-overlay relative min-h-dvh pt-40 pb-32">
       <div className="relative z-10 mx-auto max-w-5xl px-6">
@@ -55,10 +41,6 @@ export function MissionSection({ stats }: { stats: EtcStats }) {
             sovereign adoption.
           </p>
         </FadeIn>
-
-        <div className="mt-16">
-          <StatsGrid stats={networkStats} variant="hero" />
-        </div>
 
         {/* Entity cards */}
         <div className="mt-16 grid grid-cols-3 gap-3">
