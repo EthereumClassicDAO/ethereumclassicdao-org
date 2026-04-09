@@ -101,19 +101,7 @@ export function EtcOverviewSection({ stats }: { stats: EtcStats }) {
       <section className="section-alt py-24">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
-              Overview
-            </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight">
-              Ethereum Classic Network
-            </h2>
-            <p className="mt-3 text-sm text-[var(--text-muted)]">
-              Live network and market data from Blockscout and CoinGecko.
-            </p>
-          </FadeIn>
-
-          <FadeIn delay={100}>
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="mt-0 grid gap-6 md:grid-cols-2">
               <OverviewTable heading="Network" rows={networkRows} />
               <OverviewTable heading="Economics" rows={economicsRows} />
             </div>
