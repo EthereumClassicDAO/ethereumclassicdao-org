@@ -3,12 +3,17 @@ import { StatsGrid } from "@/components/ui/StatsGrid";
 import type { EtcStats } from "@/lib/api/etc-stats";
 import { formatUSD, formatCompact, formatPercent } from "@/lib/format";
 
-const entityMetrics = [
+const entityCards = [
   { label: "Incorporated", value: "May 2025", detail: "Wyoming DAO LLC" },
   { label: "Status", value: "Active", detail: "Good Standing" },
   { label: "Network", value: "Proof-of-Work", detail: "EVM Compatible" },
-  { label: "Asset Class", value: "Digital Commodity", detail: "* CLARITY Act" },
-  { label: "Asset Platform", value: "EVM Native", detail: "GENIUS Act" },
+];
+
+const regulatoryCards = [
+  { label: "CLARITY Act", value: "Digital Commodity", detail: "CFTC · United States" },
+  { label: "GENIUS Act", value: "Stablecoin Platform", detail: "United States" },
+  { label: "MiCA", value: "Decentralized Asset", detail: "European Union" },
+  { label: "FSA Green List", value: "Recognized Asset", detail: "Japan" },
 ];
 
 export function MissionSection({ stats }: { stats: EtcStats }) {
@@ -50,21 +55,47 @@ export function MissionSection({ stats }: { stats: EtcStats }) {
           <StatsGrid stats={networkStats} variant="hero" />
         </div>
 
-        <div className="mt-16 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-          {entityMetrics.map((m, i) => (
+        {/* Entity cards */}
+        <div className="mt-16 grid grid-cols-3 gap-3">
+          {entityCards.map((m, i) => (
             <FadeIn key={m.label} delay={i * 80}>
-              <div className="rounded-lg bg-[var(--bg-elevated)] border-l-2 border-[var(--brand-green)] p-4">
+              <div className="flex flex-col justify-between rounded-lg bg-[var(--bg-elevated)] border-l-2 border-[var(--brand-green)] p-4 min-h-[80px]">
                 <p className="text-[10px] font-mono uppercase tracking-wider text-[var(--brand-green)]">
                   {m.label}
                 </p>
-                <p className="mt-1.5 text-lg font-bold tracking-tight">
-                  {m.value}
-                </p>
-                {m.detail && (
-                  <p className="mt-0.5 text-[10px] text-[var(--text-muted)]">
-                    {m.detail}
+                <div>
+                  <p className="mt-1.5 text-sm font-bold tracking-tight leading-snug">
+                    {m.value}
                   </p>
-                )}
+                  {m.detail && (
+                    <p className="mt-1 text-[10px] text-[var(--text-muted)]">
+                      {m.detail}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        {/* Regulatory positioning cards */}
+        <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {regulatoryCards.map((m, i) => (
+            <FadeIn key={m.label} delay={300 + i * 80}>
+              <div className="flex flex-col justify-between rounded-lg bg-[var(--bg-elevated)] border-l-2 border-[var(--brand-green)] p-4 min-h-[80px]">
+                <p className="text-[10px] font-mono uppercase tracking-wider text-[var(--brand-green)]">
+                  {m.label}
+                </p>
+                <div>
+                  <p className="mt-1.5 text-sm font-bold tracking-tight leading-snug">
+                    {m.value}
+                  </p>
+                  {m.detail && (
+                    <p className="mt-1 text-[10px] text-[var(--text-muted)]">
+                      {m.detail}
+                    </p>
+                  )}
+                </div>
               </div>
             </FadeIn>
           ))}
