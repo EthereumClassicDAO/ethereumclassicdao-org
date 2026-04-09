@@ -1,6 +1,6 @@
 # Ethereum Classic DAO
 
-> Building the software and infrastructure for global adoption of Ethereum Classic — the largest Proof-of-Work smart contract platform. Wyoming DAO LLC ensuring US regulatory compliance.
+> Building the software and infrastructure for global adoption of Ethereum Classic, the only Proof-of-Work blockchain with full EVM compatibility. Classified as a digital commodity under the CLARITY Act, a decentralized asset under MiCA, and a recognized crypto-asset on Japan's FSA Green List.
 
 ## About
 
@@ -72,9 +72,10 @@ Three independent implementations ensure zero single points of failure:
 ## Regulatory Positioning
 
 - Wyoming DAO LLC under the Decentralized Autonomous Organization Supplement
-- ETC positioned for digital commodity classification under the CLARITY Act
-- GENIUS Act creates a pathway for regulated stablecoins on ETC's EVM
-- Compliant ecosystem of ETF-aligned digital assets — from the flagship ETC asset to protocol-based ERC-20 tokens
+- United States: digital commodity classification under the CLARITY Act (CFTC jurisdiction)
+- United States: Proof-of-Work EVM platform for regulated stablecoin deployment under the GENIUS Act
+- European Union: decentralized asset under MiCA (Markets in Crypto-Assets Regulation), exempt from issuer obligations as a fully decentralized protocol
+- Japan: recognized crypto-asset on the FSA Green List (JVCEA), fast-track listing across all Japanese regulated exchanges
 - Grayscale Ethereum Classic Trust (ETCG) provides regulated securities exposure
 
 ## Olympia Upgrade Guide

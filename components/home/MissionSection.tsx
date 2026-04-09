@@ -38,16 +38,21 @@ export function MissionSection({ stats }: { stats: EtcStats }) {
           <h1 className="mt-4 text-6xl font-bold leading-[0.9] tracking-[-0.04em] md:text-8xl">
             Ethereum Classic DAO
           </h1>
-          <p className="mt-6 max-w-2xl text-xl text-[var(--text-secondary)] md:text-2xl">
+          <p className="mt-6 text-xl text-[var(--text-secondary)] md:text-2xl">
             Building the software and infrastructure for global adoption of
-            Ethereum Classic &mdash; the largest Proof-of-Work smart contract
-            platform.
+            Ethereum Classic, the largest Proof-of-Work smart contract platform
+            with native EVM compatibility.
           </p>
-          <p className="mt-4 max-w-2xl text-base text-[var(--text-muted)]">
-            Maintaining core software, critical infrastructure, and ecosystem
-            alignment for the only EVM-compatible blockchain secured by
-            Proof-of-Work &mdash; positioned for US regulatory compliance
-            under the CLARITY Act and GENIUS Act.
+          <p className="mt-4 text-base text-[var(--text-muted)]">
+            Ethereum Classic is the only Proof-of-Work blockchain with full EVM
+            compatibility, classified as a digital commodity under the CLARITY
+            Act, a decentralized asset under MiCA, and a recognized crypto-asset
+            on Japan&apos;s FSA Green List. As a GENIUS Act-compliant EVM
+            platform, Ethereum Classic is positioned as the Proof-of-Work
+            infrastructure layer for regulated stablecoin deployment. Ethereum
+            Classic DAO LLC maintains core client software, critical
+            infrastructure, and ecosystem alignment for institutional and
+            sovereign adoption.
           </p>
         </FadeIn>
 
