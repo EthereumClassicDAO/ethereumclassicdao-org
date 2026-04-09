@@ -1,13 +1,38 @@
 import type { Metadata } from "next";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
-import { ExternalLink, AlertTriangle, CheckCircle2, ArrowRight } from "lucide-react";
+import { RoadmapSection } from "@/components/about/RoadmapSection";
+import { ExternalLink, AlertTriangle, CheckCircle2, Flame, Landmark, Cpu } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Olympia Upgrade Guide",
+  title: "Olympia Upgrade",
   description:
-    "How to upgrade your Ethereum Classic node for the Olympia hard fork. Guides for Core-Geth, Hyperledger Besu, and Fukuii.",
+    "The Olympia upgrade introduces EIP-1559 fee market, a protocol treasury, and Fusaka EVM alignment to Ethereum Classic. Node upgrade guides for Core-Geth, Hyperledger Besu, and Fukuii.",
 };
+
+const ecips = [
+  {
+    ecip: "ECIP-1111",
+    title: "EIP-1559 Fee Market",
+    icon: Flame,
+    description:
+      "Introduces the most widely adopted transaction format and fee market in the EVM ecosystem. Dynamic gas pricing makes fees more predictable for users and applications. The upgrade is fully additive — legacy Type-0 and Type-1 transactions remain valid indefinitely. Unlike Ethereum where the basefee is burned, ETC redirects it to the protocol treasury. Miner block rewards and tips remain completely untouched.",
+  },
+  {
+    ecip: "ECIP-1112",
+    title: "Protocol Treasury",
+    icon: Landmark,
+    description:
+      "The treasury is primarily funded by the EIP-1559 basefee — a value previously set to be destroyed — alongside voluntary contributions from anyone who wants to support ETC development without fielding a team. Miners receive everything they do today; the protocol simply redirects what was already being discarded. No admin keys, no multisig — only on-chain governance can release funds.",
+  },
+  {
+    ecip: "ECIP-1121",
+    title: "Fusaka EVM Alignment",
+    icon: Cpu,
+    description:
+      "Olympia ends Ethereum Classic's longest period of EVM stagnation. ECIP-1121 brings ETC's execution layer forward through London, Dencun, Pectra, and Fusaka — closing years of divergence in a single upgrade. For exchanges and wallets, this means modern RPC compatibility and standard transaction types. For developers, it means every current Ethereum tool, library, and framework works on ETC without modification. Full EVM protocol parity: one codebase runs everywhere.",
+  },
+];
 
 const clients = [
   {
@@ -95,19 +120,20 @@ const faqItems = [
 export default function UpgradePage() {
   return (
     <main>
+      {/* Hero */}
       <section className="hero-gradient relative pt-32 pb-16">
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
           <FadeIn>
             <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl">
               Olympia{" "}
-              <span className="text-[var(--brand-green)]">Upgrade Guide</span>
+              <span className="text-[var(--brand-green)]">Upgrade</span>
             </h1>
           </FadeIn>
           <FadeIn delay={100}>
             <p className="mx-auto max-w-2xl text-lg text-[var(--text-muted)]">
-              Node operators must upgrade before the Olympia activation block.
-              Three independent client implementations are available — choose the
-              one that fits your infrastructure.
+              Ethereum Classic&apos;s most significant protocol upgrade — EIP-1559
+              fee market, a protocol-controlled treasury, and full Fusaka EVM
+              alignment in a single coordinated hard fork.
             </p>
           </FadeIn>
         </div>
@@ -123,7 +149,7 @@ export default function UpgradePage() {
               <AlertTriangle size={20} className="shrink-0 text-[#F59E0B]" />
               <div>
                 <p className="text-sm font-medium text-[#F59E0B]">
-                  Activation Block: TBD
+                  Olympia is in final testing on the Mordor Testnet — Activation Block: TBD
                 </p>
                 <p className="mt-0.5 text-xs text-[var(--text-muted)]">
                   The exact block number will be announced after the Olympia Upgrade core developers call. Upgrade
@@ -134,6 +160,47 @@ export default function UpgradePage() {
           </FadeIn>
         </div>
       </section>
+
+      {/* What Olympia Changes — ECIP Explainer */}
+      <section className="section-alt py-16 px-6">
+        <div className="mx-auto max-w-5xl">
+          <FadeIn>
+            <h2 className="mb-2 text-2xl font-bold tracking-tight">
+              What Olympia Changes
+            </h2>
+            <p className="mb-8 text-sm text-[var(--text-muted)]">
+              Three client-facing ECIPs form the core of the Olympia protocol upgrade.
+            </p>
+          </FadeIn>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {ecips.map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <FadeIn key={item.ecip} delay={i * 80}>
+                  <div className="rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-6">
+                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
+                      <Icon size={20} className="text-[var(--brand-green)]" />
+                    </div>
+                    <p className="font-mono text-xs text-[var(--brand-green)]">
+                      {item.ecip}
+                    </p>
+                    <h3 className="mt-1 text-base font-semibold">{item.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
+                      {item.description}
+                    </p>
+                  </div>
+                </FadeIn>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Roadmap */}
+      <RoadmapSection />
+
+      <SectionDivider />
 
       {/* Client Upgrade Guides */}
       <section className="section-alt py-16 px-6">
@@ -247,19 +314,6 @@ export default function UpgradePage() {
               </FadeIn>
             ))}
           </div>
-
-          <FadeIn delay={300}>
-            <div className="mt-8 text-center">
-              <a
-                href="https://olympiadao.org/upgrade"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-[var(--brand-green)] transition hover:opacity-80"
-              >
-                Full upgrade details on olympiadao.org <ArrowRight size={14} />
-              </a>
-            </div>
-          </FadeIn>
         </div>
       </section>
     </main>
