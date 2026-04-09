@@ -44,8 +44,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${base}/olympia`,
       lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
+      changeFrequency: "weekly",
+      priority: 0.95,
     },
     {
       url: `${base}/timeline`,

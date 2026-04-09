@@ -19,11 +19,15 @@ ETC is positioned not just as a digital commodity under the CLARITY Act, but as 
 - **Registered Agent:** 30 N Gould St Ste R, Sheridan, WY 82801
 - **Regulatory alignment:** CLARITY Act (digital commodity), GENIUS Act (stablecoins on EVM)
 
-## Governance — Olympia Framework
+## Olympia — Ethereum Classic's Most Significant Protocol Upgrade
 
-The Olympia upgrade introduces protocol-level treasury funding and on-chain governance to Ethereum Classic.
+The Olympia era marks a shift from reactive maintenance to active development on the longest-running EVM and the only Proof-of-Work smart contract platform in the world. Three client-facing ECIPs form the core of the upgrade:
 
-**Treasury Funding:** EIP-1559 basefee revenue funds the Olympia Treasury. Block rewards and tips remain untouched — miners are unaffected.
+**ECIP-1111 — EIP-1559 Fee Market:** Adds the most widely adopted transaction format in the EVM ecosystem to Ethereum Classic. Dynamic gas pricing delivers predictable fees for users and applications. Fully additive — legacy transactions remain valid indefinitely. Unlike Ethereum where the basefee is burned, ETC redirects it to the protocol treasury. Miner block rewards and tips remain completely untouched.
+
+**ECIP-1112 — Protocol Treasury:** A protocol-controlled vault funded by basefee revenue and voluntary contributions. For the first time, institutions, developers, and network stakeholders can directly fund Ethereum Classic's core development and critical infrastructure without fielding their own team. Only on-chain governance can release funds — no admin keys, no multisig.
+
+**ECIP-1121 — Fusaka EVM Alignment:** Advances ETC's execution layer through London, Dencun, Pectra, and Fusaka in a single upgrade — ending Ethereum Classic's longest period of EVM stagnation. Exchanges and wallets gain modern RPC compatibility and standard transaction support. Developers gain full access to every current Ethereum tool, library, and framework without modification.
 
 **Governance Process:**
 1. Propose — Community members submit governance proposals on-chain (permissionless)
@@ -33,6 +37,8 @@ The Olympia upgrade introduces protocol-level treasury funding and on-chain gove
 5. Disclose — All outcomes publicly reported and verifiable
 
 **Safeguards:** Configurable timelock, three-layer on-chain sanctions screening, non-transferable membership NFT voting tokens.
+
+**Institutional Positioning:** Ethereum Classic is the Proof-of-Work infrastructure layer for institutions and sovereign nations building compliant financial systems — regulated stablecoins under MiCA and the GENIUS Act, energy grid stabilization backed by immutable settlement, and ETF-compliant digital asset infrastructure that regulators across the US, EU, Japan, and beyond are moving to define.
 
 ## Network Statistics
 
