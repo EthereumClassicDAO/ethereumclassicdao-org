@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { RoadmapSection } from "@/components/about/RoadmapSection";
 import { ActivationCountdown } from "@/components/ui/ActivationCountdown";
-import { ExternalLink, AlertTriangle, CheckCircle2, Flame, Landmark, Cpu } from "lucide-react";
+import { ExternalLink, CheckCircle2, Flame, Landmark, Cpu } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Olympia Upgrade — EIP-1559, Protocol Treasury, and Fusaka EVM Alignment for Ethereum Classic",
@@ -165,20 +165,6 @@ export default function UpgradePage() {
             <Suspense>
               <ActivationCountdown />
             </Suspense>
-          </FadeIn>
-          <FadeIn delay={100}>
-            <div className="mt-4 flex items-center gap-3 rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] px-5 py-4">
-              <AlertTriangle size={20} className="shrink-0 text-[var(--brand-green)]" />
-              <div>
-                <p className="text-sm font-medium text-[var(--brand-green)]">
-                  Olympia is in final testing on the Mordor Testnet — Activation Block: TBD
-                </p>
-                <p className="mt-0.5 text-xs text-[var(--text-muted)]">
-                  The exact block number will be announced after the Olympia Upgrade core developers call. Upgrade
-                  your node as soon as a compatible release is available.
-                </p>
-              </div>
-            </div>
           </FadeIn>
         </div>
       </section>
