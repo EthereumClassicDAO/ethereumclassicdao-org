@@ -1,7 +1,5 @@
 # EthereumClassicDAO.org
 
-> **Production** — Olympia ECIP spec compliant. Prepared for future production deployment.
-
 Institutional website for **Ethereum Classic DAO LLC**, a Wyoming-registered DAO LLC (Filing ID 2025-001671865). The legal entity behind Ethereum Classic's Olympia DAO governance infrastructure.
 
 **URL:** [ethereumclassicdao.org](https://ethereumclassicdao.org)
@@ -59,9 +57,10 @@ pnpm typecheck    # TypeScript check
 
 | Branch | Purpose |
 |--------|---------|
-| `main` | Production target — prepared for deployment after Olympia activates on ETC mainnet |
-| `demo_v0.2` | Active development — spec-compliant, live testing on Mordor + ETC (pre-Olympia) |
-| `demo_v0.1` | Archived — initial scaffolding, not spec compliant |
+| `main` | Production — deployed after Olympia activates on ETC mainnet |
+| `demo_v0.3` | Active development — aligned with 9-contract governance stack |
+| `demo_v0.2` | Preserved — spec-compliant, 7 pages, live stats, light/dark theme |
+| `demo_v0.1` | Preserved snapshot — fast-iteration development, not ECIP-aligned |
 
 ## Related Repos
 

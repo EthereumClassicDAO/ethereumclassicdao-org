@@ -6,68 +6,57 @@ const stages = [
     title: "Consensus Upgrades",
     status: "complete" as const,
     description:
-      "Adds the most widely adopted transaction type to Ethereum Classic, ensuring continued network support by exchanges, wallets, and modern development tooling. Independent client implementations complete.",
+      "Three ECIPs in a single upgrade: EIP-1559 fee market, a protocol-controlled treasury funded by basefee revenue, and full Fusaka execution-layer parity. Every current Ethereum tool, library, and framework now works on ETC without modification.",
     deliverables: [
-      "EIP-1559 fee market with predictable gas pricing",
-      "Dynamic gas limits",
-      "Basefee introduced — previously set to be destroyed, now funds the treasury",
-      "Miner tips and block rewards untouched",
-      "Core development and infrastructure funded without new issuance",
+      "EIP-1559 fee market with predictable gas pricing (ECIP-1111)",
+      "Protocol treasury funded by basefee revenue and voluntary contributions (ECIP-1112)",
+      "Full Fusaka EVM parity: Dencun, Pectra, and Fusaka execution-layer EIPs (ECIP-1121)",
+      "Miner block rewards and tips completely untouched",
     ],
   },
   {
     title: "Core Governance",
     status: "active" as const,
     description:
-      "Governance and treasury contracts deployed. Membership-based voting. Full proposal lifecycle: submit, vote, queue, execute. Moves core development, critical infrastructure, and long-term network security from private balance sheets to an open, transparent, and permissionless framework — bringing stability to the most critical and historically unstable aspects of Ethereum Classic since the Ethereum Foundation forked to its own chain in 2016.",
+      "On-chain governance contracts deployed with membership-based voting and a full proposal lifecycle: submit, vote, queue, execute. Core development funding moves from private balance sheets to an open, permissionless, and transparent process.",
     deliverables: [
-      // Governance infrastructure
-      "Governance and treasury contracts",
-      "Membership-based voting system",
-      "Sanctions compliance layer",
-      // Funding reform
-      "Open, transparent funding proposals with competitive bidding",
-      "Free market pricing for network maintenance",
-      "Removes organizational overhead from the funding pipeline",
-      // Access
-      "Open to qualified professionals across the EVM ecosystem",
-      "Donation pipeline for stakeholders without fielding a team",
+      "Governance and treasury contracts with timelock execution",
+      "Membership-based voting with sanctions compliance",
+      "Open proposal process with competitive bidding",
+      "Direct on-chain contribution path for any stakeholder",
     ],
   },
   {
     title: "Prediction Markets",
     status: "research" as const,
     description:
-      "Futarchy-assisted governance uses prediction markets to inform treasury allocation. In a futarchy market, participants stake on the expected outcome of a proposal — if funded, does the network benefit? Market prices aggregate public opinion into a measurable signal that governance can act on. This opens protocol-level decision making to broad public participation beyond NFT holders, replacing opaque insider consensus with transparent, financially-backed forecasting. This stage requires the Fusaka EVM alignment delivered by Olympia (ECIP-1121). Research phase exploring conditional token frameworks.",
+      "Futarchy-assisted governance uses prediction markets to inform treasury allocation. Participants stake on proposal outcomes, and market prices provide a financially-backed public signal alongside on-chain member votes. Requires ECIP-1121 EVM alignment.",
     deliverables: [
       "Conditional outcome tokens",
       "Market-informed proposal ranking",
-      "User acquisition and on-chain transaction flywheel",
-      "Financially incentivized public interest in protocol development",
-      "Additive market sentiment to complement siloed GitHub discussion threads",
+      "On-chain participation open to any stakeholder, not just DAO members",
     ],
   },
   {
     title: "Treasury Distribution",
     status: "future" as const,
     description:
-      "As Ethereum Classic's fixed-emission schedule reduces block subsidies over time, basefee revenue held in the treasury can optionally be redistributed back to miners to supplement long-term network security. ECIP-1115 defines a governance-layer smoothing mechanism — an L-curve that spreads these optional payouts across a configurable future window, reducing per-block volatility and providing a more predictable revenue profile. Critically, this is entirely optional and governance-controlled: no miner entitlement is created, consensus-layer rewards and tips remain untouched, and parameters can be adjusted or disabled without a hard fork. Specification phase exploring miner-compatible mechanisms.",
+      "As ETC's fixed-emission schedule reduces block subsidies over time, accumulated basefee revenue can optionally supplement miner security budgets. ECIP-1115 defines a governance-controlled smoothing curve that spreads optional payouts across a configurable window without creating miner entitlements or touching consensus-layer rewards.",
     deliverables: [
-      "Treasury smoothing algorithm",
-      "Smoothing allocation amount experiments",
-      "Multi-algorithm modeling for stable miner security budget through ECIP-1017 emission reduction events",
-      "Miner impact analysis",
+      "Treasury smoothing algorithm (ECIP-1115)",
+      "Multi-scenario modeling through ECIP-1017 emission reduction events",
+      "Governance-controlled parameters, adjustable without a hard fork",
     ],
   },
   {
     title: "Protocol Integration",
     status: "future" as const,
     description:
-      "Permanent consensus integration of proven governance mechanisms. Moving governance from contract layer to protocol layer.",
+      "Proven governance mechanisms elevated from the contract layer to consensus. Treasury rules become immutable at the protocol level.",
     deliverables: [
-      "Consensus-level governance",
+      "Consensus-level governance encoding",
       "Immutable treasury rules",
-      "Long-term sustainability",
+      "Long-term protocol sustainability",
     ],
   },
 ];

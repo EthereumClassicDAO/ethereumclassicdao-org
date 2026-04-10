@@ -50,7 +50,7 @@ export function InfrastructureSection() {
               Algorithm: ETChash
             </p>
             <p className="mt-1 text-sm text-[var(--text-muted)]">
-              GPU and ASIC compatible — securing the only Proof-of-Work network with native smart contracts
+              GPU and ASIC compatible, securing the only Proof-of-Work network with native smart contracts
             </p>
           </FadeIn>
 

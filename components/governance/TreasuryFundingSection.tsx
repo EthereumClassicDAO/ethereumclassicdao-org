@@ -4,15 +4,42 @@ import {
   Landmark,
   Vote,
   Globe,
+  Timer,
+  ShieldCheck,
+  Fingerprint,
 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
+const safeguards = [
+  {
+    icon: Timer,
+    title: "Timelock",
+    ecip: "ECIP-1113",
+    description:
+      "Every approved proposal must wait through a configurable delay period before execution. This gives the community time to review, object, or prepare, preventing hasty or malicious actions from taking effect immediately.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Sanctions Screening",
+    ecip: "ECIP-1119",
+    description:
+      "The governance system includes on-chain sanctions compliance at three layers: proposal submission, active voting, and execution. Sanctioned addresses cannot participate in governance or receive treasury funds.",
+  },
+  {
+    icon: Fingerprint,
+    title: "Two-Layer Governance",
+    ecip: "ECIP-1117",
+    description:
+      "Olympia DAO membership NFTs are non-transferable, preventing vote buying and governance manipulation. Public participation is enabled through open futarchy prediction markets, where anyone can stake on protocol outcomes and earn financial rewards for accurate predictions, ensuring both protocol accountability and broad community input.",
+  },
+];
+
 const flowSteps = [
-  { icon: ArrowRight, label: "Transactions", sublabel: "Users pay gas fees" },
+  { icon: ArrowRight, label: "Transactions", sublabel: "Users and markets pay gas fees" },
   { icon: Coins, label: "Fee Revenue", sublabel: "Basefee + donations + mining" },
   { icon: Landmark, label: "Treasury", sublabel: "Protocol-managed vault" },
-  { icon: Vote, label: "Governance", sublabel: "Community proposals" },
+  { icon: Vote, label: "Governance", sublabel: "Olympia DAO proposals" },
   { icon: Globe, label: "Ecosystem", sublabel: "Development funding" },
 ];
 
@@ -26,8 +53,8 @@ export function TreasuryFundingSection() {
             <h2 className="text-3xl font-bold tracking-tight">
               Treasury Funding
             </h2>
-            <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
-              How the Olympia Treasury is funded — sustainably and without
+            <p className="mt-3 text-base text-[var(--text-muted)]">
+              How the Olympia Treasury is funded, sustainably and without
               impacting miners.
             </p>
           </FadeIn>
@@ -38,11 +65,22 @@ export function TreasuryFundingSection() {
                 Basefee revenue funds the Olympia Treasury
               </p>
               <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                Block rewards and tips remain completely untouched — miners are
-                unaffected. The treasury receives basefee revenue, voluntary
-                on-chain donations, and mining rewards directed to the treasury
-                address. This creates sustainable, transparent funding without
-                inflation or reduced miner compensation.
+                Block rewards and tips remain completely untouched and go
+                entirely to miners. The treasury receives basefee revenue,
+                voluntary on-chain donations, and mining rewards directed to
+                the treasury address. Futarchy prediction market activity
+                generates additional transaction volume that flows back into
+                the treasury as basefee revenue, creating a self-reinforcing
+                funding loop alongside governance signal.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
+                Any stakeholder, whether exchanges, custodians, miners,
+                investment product issuers, or institutions holding ETC on
+                behalf of fund shareholders, can contribute directly on-chain
+                with no overhead and no intermediaries. Stakeholders who prefer
+                a traditional giving model can contribute through the ETC
+                Cooperative, a US 501(c)(3) non-profit that accepts
+                tax-deductible donations.
               </p>
             </div>
           </FadeIn>
@@ -118,6 +156,46 @@ export function TreasuryFundingSection() {
               </a>
             </div>
           </FadeIn>
+
+          {/* Safeguards */}
+          <FadeIn>
+            <div className="mt-20">
+              <h2 className="text-3xl font-bold tracking-tight">Safeguards</h2>
+              <p className="mt-3 text-base text-[var(--text-muted)]">
+                Built-in protections that keep governance secure and compliant.
+              </p>
+              <div className="mt-3 flex gap-2">
+                <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                  ECIP-1113
+                </span>
+                <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                  ECIP-1117
+                </span>
+                <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                  ECIP-1119
+                </span>
+              </div>
+            </div>
+          </FadeIn>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {safeguards.map((item, i) => (
+              <FadeIn key={item.title} delay={i * 100}>
+                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
+                    <item.icon size={20} className="text-[var(--brand-green)]" />
+                  </div>
+                  <p className="mt-4 text-base font-semibold">{item.title}</p>
+                  <span className="mt-1.5 inline-block rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                    {item.ecip}
+                  </span>
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
+                    {item.description}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
     </>

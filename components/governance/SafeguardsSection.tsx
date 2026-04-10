@@ -6,34 +6,47 @@ const safeguards = [
   {
     icon: Timer,
     title: "Timelock",
+    ecip: "ECIP-1113",
     description:
-      "Every approved proposal must wait through a configurable delay period before execution. This gives the community time to review, object, or prepare — preventing hasty or malicious actions from taking effect immediately.",
+      "Every approved proposal must wait through a configurable delay period before execution. This gives the community time to review, object, or prepare, preventing hasty or malicious actions from taking effect immediately.",
   },
   {
     icon: ShieldCheck,
     title: "Sanctions Screening",
+    ecip: "ECIP-1119",
     description:
       "The governance system includes on-chain sanctions compliance at three layers: proposal submission, active voting, and execution. Sanctioned addresses cannot participate in governance or receive treasury funds.",
   },
   {
     icon: Fingerprint,
     title: "Two-Layer Governance",
+    ecip: "ECIP-1117",
     description:
-      "Olympia DAO membership NFTs are non-transferable, preventing vote buying and governance manipulation. Public participation is enabled through futarchy prediction markets — ensuring both protocol accountability and broad community input.",
+      "Olympia DAO membership NFTs are non-transferable, preventing vote buying and governance manipulation. Public participation is enabled through open futarchy prediction markets, where anyone can stake on protocol outcomes and earn financial rewards for accurate predictions, ensuring both protocol accountability and broad community input.",
   },
 ];
 
 export function SafeguardsSection() {
   return (
     <>
-      <SectionDivider />
-      <section className="section-alt py-28">
+      <section className="section-gradient py-28">
         <div className="mx-auto max-w-4xl px-6">
           <FadeIn>
             <h2 className="text-3xl font-bold tracking-tight">Safeguards</h2>
-            <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
+            <p className="mt-3 text-base text-[var(--text-muted)]">
               Built-in protections that keep governance secure and compliant.
             </p>
+            <div className="mt-3 flex gap-2">
+              <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                ECIP-1113
+              </span>
+              <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                ECIP-1117
+              </span>
+              <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                ECIP-1119
+              </span>
+            </div>
           </FadeIn>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -47,7 +60,10 @@ export function SafeguardsSection() {
                     />
                   </div>
                   <p className="mt-4 text-base font-semibold">{item.title}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
+                  <span className="mt-1.5 inline-block rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                    {item.ecip}
+                  </span>
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
                     {item.description}
                   </p>
                 </div>

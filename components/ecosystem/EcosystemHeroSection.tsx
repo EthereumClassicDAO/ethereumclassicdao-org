@@ -3,7 +3,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 export function EcosystemHeroSection() {
   return (
     <section className="hero-gradient noise-overlay relative pt-32 pb-20">
-      <div className="relative z-10 mx-auto max-w-3xl px-6">
+      <div className="relative z-10 mx-auto max-w-5xl px-6">
         <FadeIn>
           <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
             Ecosystem
@@ -14,13 +14,12 @@ export function EcosystemHeroSection() {
           <p className="mt-4 text-lg text-[var(--text-muted)]">
             The only Proof-of-Work blockchain with native EVM smart contracts.
             Every framework, library, and IDE that works with Ethereum works
-            with Ethereum Classic &mdash; just change the chain ID.
+            with Ethereum Classic. Just change the chain ID.
           </p>
           <p className="mt-4 text-base text-[var(--text-muted)]">
-            A compliant EVM ecosystem positioned for regulated digital assets
-            &mdash; from the flagship ETC digital commodity to compliant
-            tokens, stablecoins under the GENIUS Act, and ETF-aligned
-            instruments.
+            A compliant EVM ecosystem positioned for regulated digital assets:
+            from the flagship ETC digital commodity to compliant tokens,
+            stablecoins under the GENIUS Act, and ETF-aligned instruments.
           </p>
         </FadeIn>
       </div>

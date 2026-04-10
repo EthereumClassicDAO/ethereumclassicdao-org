@@ -7,7 +7,7 @@ const products = [
     icon: TrendingUp,
     title: "Grayscale Ethereum Classic Trust (ETCG)",
     description:
-      "Regulated securities exposure since 2017. The only Proof-of-Work smart contract platform with a Grayscale trust product. ETF conversion pipeline in progress — establishing ETC as the anchor asset for a compliant digital commodity ecosystem.",
+      "Regulated securities exposure since 2017. The only Proof-of-Work smart contract platform with a Grayscale trust product. ETF conversion pipeline in progress, establishing ETC as the anchor asset for a compliant digital commodity ecosystem.",
     detail: "Ticker: ETCG · Est. 2017",
   },
   {
@@ -36,10 +36,10 @@ export function InstitutionalProductsSection() {
             <h2 className="text-3xl font-bold tracking-tight">
               Institutional Products & Market Access
             </h2>
-            <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
-              A regulated digital asset ecosystem &mdash; from the Grayscale
-              ETC Trust to institutional custody, positioned for ETF conversion
-              and compliant token issuance.
+            <p className="mt-3 text-base text-[var(--text-muted)]">
+              A regulated digital asset ecosystem covering the Grayscale
+              ETC Trust, institutional custody, ETF conversion, and compliant
+              token issuance.
             </p>
           </FadeIn>
 

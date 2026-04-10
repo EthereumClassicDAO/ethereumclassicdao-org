@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 const entityCards = [
@@ -87,6 +88,16 @@ export function MissionSection() {
             </FadeIn>
           ))}
         </div>
+
+        <FadeIn delay={620}>
+          <Link
+            href="/regulation"
+            className="mt-6 inline-flex items-center gap-2 text-xs font-medium text-[var(--brand-green)] transition-colors hover:underline underline-offset-4"
+          >
+            View the regulatory landscape
+            <span aria-hidden="true">→</span>
+          </Link>
+        </FadeIn>
       </div>
     </section>
   );

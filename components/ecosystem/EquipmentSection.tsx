@@ -39,17 +39,17 @@ const asicMiners: Equipment[] = [
 const gpuManufacturers: Equipment[] = [
   {
     name: "NVIDIA",
-    detail: "GeForce RTX series — high-performance ETChash mining with CUDA cores",
+    detail: "GeForce RTX series, high-performance ETChash mining with CUDA cores",
     href: "https://www.nvidia.com",
   },
   {
     name: "AMD",
-    detail: "Radeon RX series — competitive ETChash performance and efficiency",
+    detail: "Radeon RX series, competitive ETChash performance and efficiency",
     href: "https://www.amd.com",
   },
   {
     name: "Intel",
-    detail: "Arc series GPUs — emerging ETChash support",
+    detail: "Arc series GPUs, with emerging ETChash support",
     href: "https://www.intel.com",
   },
 ];
@@ -90,10 +90,10 @@ export function EquipmentSection() {
             <h2 className="text-3xl font-bold tracking-tight">
               Mining Equipment
             </h2>
-            <p className="mt-3 max-w-2xl text-base text-[var(--text-muted)]">
+            <p className="mt-3 text-base text-[var(--text-muted)]">
               ETChash is uniquely positioned among mining algorithms. ASIC miners
               provide specialized, efficient, commercial-grade operations locked
-              into the ETChash algorithm &mdash; delivering maximum hashrate per
+              into the ETChash algorithm, delivering maximum hashrate per
               watt. GPU mining ensures broad global accessibility, with compatible
               hardware available at consumer electronics retailers worldwide. This
               dual-compatibility decentralizes the hashrate across geographies,
