@@ -1,6 +1,5 @@
 import { Timer, ShieldCheck, Fingerprint } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { SectionDivider } from "@/components/ui/SectionDivider";
 
 const safeguards = [
   {
