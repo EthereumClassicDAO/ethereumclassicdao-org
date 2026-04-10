@@ -17,7 +17,7 @@ export function StewardshipSection() {
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Olympia is the culmination of years of funded, principled stewardship
-              by the organization that has kept Ethereum Classic's core development
+              by the organization that has kept Ethereum Classic&apos;s core development
               alive and moving forward.
             </p>
           </FadeIn>
@@ -32,8 +32,8 @@ export function StewardshipSection() {
               </p>
               <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
                 The ETC Cooperative is a US 501(c)(3) non-profit that has funded
-                Ethereum Classic's core client development for years, contributing
-                millions of dollars to Ethereum Classic's client teams and the
+                Ethereum Classic&apos;s core client development for years, contributing
+                millions of dollars to Ethereum Classic&apos;s client teams and the
                 infrastructure that has kept the network running through every
                 upgrade cycle since Atlantis. Every hard fork, every client
                 release, and every cross-client coordination effort has been
@@ -43,11 +43,11 @@ export function StewardshipSection() {
               <p className="mt-4 text-sm leading-relaxed text-[var(--text-muted)]">
                 Olympia is what the ETC Cooperative has been building toward: a
                 protocol-native funding model that does not depend on any single
-                organization's continued generosity. The Olympia Treasury,
+                organization&apos;s continued generosity. The Olympia Treasury,
                 governed on-chain by the Olympia DAO and executed by the Wyoming
                 DAO LLC, replaces institutional dependency with a durable
                 financial foundation that scales with network usage and addresses
-                the network's needs openly and transparently. Mining operations,
+                the network&apos;s needs openly and transparently. Mining operations,
                 hardware manufacturers, exchanges, and individual supporters can
                 now contribute directly on-chain. What once required the
                 infrastructure of a dedicated non-profit now takes a single
@@ -59,17 +59,17 @@ export function StewardshipSection() {
                 a founding participant in the open development model Olympia
                 establishes. The model changes, not the commitment. Any
                 developer, organization, or stakeholder across the entire EVM
-                ecosystem can now contribute to and bid for Ethereum Classic's
+                ecosystem can now contribute to and bid for Ethereum Classic&apos;s
                 core development on equal terms, without fielding a team or
                 managing a non-profit to do it. No backroom relationships,
                 no preferred vendors, no single point of failure. This is
-                Ethereum Classic's founding principles applied to its own
+                Ethereum Classic&apos;s founding principles applied to its own
                 development process, and the ETC Cooperative helped make it
                 possible.
               </p>
               <p className="mt-4 text-sm leading-relaxed text-[var(--text-muted)]">
                 The regulatory clarity now taking shape globally accelerates
-                this transition. ETC's classification as a digital commodity
+                this transition. ETC&apos;s classification as a digital commodity
                 under the CLARITY Act, a decentralized asset under MiCA, and a
                 qualifying stablecoin platform under the GENIUS Act means the
                 full spectrum of participants can engage with confidence: retail
@@ -128,7 +128,7 @@ export function StewardshipSection() {
                 to fund its own core development through a fully transparent,
                 permissionless, on-chain process. Any stakeholder worldwide can
                 contribute directly, without intermediaries, without preferred
-                relationships, and without asking permission. This is ETC's
+                relationships, and without asking permission. This is ETC&apos;s
                 founding principles delivered in full: a decentralized network
                 governed and funded by the same open standards it was built on.
                 Grayscale saw it coming. Olympia makes it real.
