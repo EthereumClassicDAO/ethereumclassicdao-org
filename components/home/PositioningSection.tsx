@@ -15,14 +15,14 @@ const positions = [
     icon: Building2,
     title: "Institutional Infrastructure",
     description:
-      "Listed on all major global exchanges with 300+ active markets. Institutional-grade custody from leading digital asset custodians. Regulated securities exposure via the Grayscale Ethereum Classic Trust (ETCG), established 2017.",
-    cta: null,
+      "Listed on all major global exchanges with 300+ active markets. Institutional-grade custody from leading digital asset custodians. Regulated securities exposure via the Grayscale Ethereum Classic Trust (ETCG), available at Charles Schwab, Fidelity, and Interactive Brokers.",
+    cta: { label: "View Investment Products", href: "/investment-products" },
   },
   {
     icon: Scale,
     title: "Regulatory Clarity",
     description:
-      "Wyoming DAO LLC under the Decentralized Autonomous Organization Supplement. Positioned for digital commodity classification (CLARITY Act) and as a compliant EVM platform for regulated stablecoins (GENIUS Act) \u2014 the foundation for an ecosystem of ETF-aligned digital assets.",
+      "Wyoming DAO LLC under the Decentralized Autonomous Organization Supplement. ETC inherits the commodity classification path that Proof-of-Work networks established and the programmable finance frameworks being built around smart contract platforms.",
     cta: { label: "View Regulatory Landscape", href: "/regulation" },
   },
 ];

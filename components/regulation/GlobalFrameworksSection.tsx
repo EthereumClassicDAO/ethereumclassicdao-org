@@ -135,9 +135,9 @@ export function GlobalFrameworksSection() {
 
           <FadeIn>
             <p className="mt-10 text-sm text-[var(--text-subtle)] border-l-2 border-[var(--brand-green)] pl-4">
-              No other smart contract platform has ETC&rsquo;s regulatory surface: simultaneously
-              positioned as a digital commodity (US), a decentralized asset (EU), and a live
-              stablecoin platform (US/global).
+              ETC&rsquo;s regulatory surface spans two distinct trajectories: the digital commodity
+              classification path that Proof-of-Work networks established, and the programmable
+              finance frameworks being built around smart contract platforms. It qualifies under both.
             </p>
           </FadeIn>
         </div>

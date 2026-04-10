@@ -22,7 +22,7 @@ const infrastructure = [
   {
     icon: TrendingUp,
     category: "Regulated Products",
-    details: "Grayscale Ethereum Classic Trust (ETCG), est. 2017",
+    details: "Grayscale Ethereum Classic Trust (ETCG), est. 2018. Available on Charles Schwab, Fidelity, and Interactive Brokers.",
   },
   {
     icon: Pickaxe,

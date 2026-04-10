@@ -5,12 +5,12 @@ const thesisPoints = [
   {
     number: "01",
     title: "Regulatory Clarity",
-    body: "Digital commodity candidate (CLARITY Act), decentralized asset (MiCA), stablecoin platform (GENIUS Act): positioned across every major regulatory framework simultaneously. No other smart contract platform has this legal profile.",
+    body: "ETC inherits the commodity classification path that Proof-of-Work networks established and the programmable finance frameworks being built around smart contract platforms. Its regulatory surface spans both trajectories: digital commodity candidate (CLARITY Act), decentralized asset (MiCA), stablecoin platform (GENIUS Act).",
   },
   {
     number: "02",
     title: "Olympia Upgrade",
-    body: "EIP-1559 fee burn creates deflationary pressure on block rewards for the first time on ETC. On-chain DAO treasury funded by base fees. First programmable monetary policy on a Proof-of-Work EVM.",
+    body: "EIP-1559 fee market redirects basefee to a protocol-managed treasury for the first time on ETC. On-chain DAO governance controls resource allocation. First programmable monetary policy on a Proof-of-Work EVM.",
   },
   {
     number: "03",
@@ -20,12 +20,12 @@ const thesisPoints = [
   {
     number: "04",
     title: "Proven Track Record",
-    body: "The original Ethereum Virtual Machine, running continuously since July 2015. Zero protocol-level failures. Immutable ledger. No other smart contract platform has a longer operational track record.",
+    body: "The original Ethereum Virtual Machine, running continuously since July 2015. Zero protocol-level failures. Immutable ledger. The longest continuously operating smart contract platform in production.",
   },
   {
     number: "05",
     title: "Deepest PoW Smart Contract Liquidity",
-    body: "300+ exchanges, 11 fiat currency pairs, accessible GPU mining hardware at retail, and institutional ASIC infrastructure. No comparable Proof-of-Work network with native smart contract capability exists.",
+    body: "300+ exchanges, 11 fiat currency pairs, accessible GPU mining hardware at retail, and institutional ASIC infrastructure. The only Proof-of-Work network with native smart contract capability at this depth of market access.",
   },
 ];
 

@@ -16,7 +16,7 @@ const buildItems = [
   },
   {
     icon: Scale,
-    text: "US regulatory compliance: CLARITY Act (digital commodity), GENIUS Act (stablecoins), ETF alignment",
+    text: "US regulatory compliance: digital commodity positioning under the CLARITY Act, regulated stablecoin platform under the GENIUS Act",
   },
 ];
 
@@ -31,7 +31,7 @@ const positions = [
     icon: Building2,
     title: "Institutional Infrastructure",
     description:
-      "Listed on all major global exchanges with 300+ active markets. Institutional-grade custody from leading digital asset custodians. Regulated securities exposure via the Grayscale Ethereum Classic Trust (ETCG), established 2017, with ETF conversion pipeline in progress.",
+      "Listed on all major global exchanges with 300+ active markets. Institutional-grade custody from leading digital asset custodians. Regulated securities exposure via the Grayscale Ethereum Classic Trust (ETCG), trading on OTCQX since 2018.",
   },
   {
     icon: Scale,
