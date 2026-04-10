@@ -33,15 +33,25 @@ export function ActivationCountdown() {
   const secs = secondsLeft % 60;
 
   return (
-    <div className="mt-4 flex flex-col items-center gap-2">
-      <div className="flex gap-3">
+    <div className="rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] p-6 text-center">
+      <div className="mb-4 flex justify-center gap-4">
         <DigitBox value={days} label="Days" />
-        <DigitBox value={hours} label="Hrs" />
-        <DigitBox value={minutes} label="Min" />
-        <DigitBox value={secs} label="Sec" />
+        <DigitBox value={hours} label="Hours" />
+        <DigitBox value={minutes} label="Minutes" />
+        <DigitBox value={secs} label="Seconds" />
       </div>
-      <p className="text-center text-[10px] italic text-[var(--text-muted)] opacity-60">
+      <p className="mb-4 text-[10px] italic text-[var(--text-muted)] opacity-60">
         * Countdown is set to January 1, 2027 until the ETC mainnet activation block is set
+      </p>
+      <div className="mb-2 flex items-center justify-center gap-2">
+        <span className="h-2 w-2 animate-pulse rounded-full bg-[var(--brand-green)]" />
+        <span className="text-sm font-medium text-[var(--brand-green)]">Activation Block Pending</span>
+      </div>
+      <p className="text-sm text-[var(--text-muted)]">
+        Olympia is in final testing on the Mordor Testnet — Activation Block: TBD
+      </p>
+      <p className="mt-1 text-xs text-[var(--text-muted)] opacity-60">
+        The exact block number will be announced after the Olympia Upgrade core developers call.
       </p>
     </div>
   );
