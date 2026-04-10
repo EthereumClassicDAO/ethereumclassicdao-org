@@ -4,19 +4,19 @@ import { FadeIn } from "@/components/ui/FadeIn";
 const buildItems = [
   {
     icon: GitBranch,
-    text: "Core network software — independent client implementations ensuring no single point of failure",
+    text: "Core network software: independent client implementations ensuring no single point of failure",
   },
   {
     icon: Vote,
-    text: "On-chain governance infrastructure — proposal, voting, execution, and treasury management",
+    text: "On-chain governance infrastructure: proposal, voting, execution, and treasury management",
   },
   {
     icon: Pickaxe,
-    text: "Hashrate incentive alignment — ensuring network security through mining economics",
+    text: "Hashrate incentive alignment, ensuring network security through mining economics",
   },
   {
     icon: Scale,
-    text: "US regulatory compliance — CLARITY Act (digital commodity), GENIUS Act (stablecoins), ETF alignment",
+    text: "US regulatory compliance: CLARITY Act (digital commodity), GENIUS Act (stablecoins), ETF alignment",
   },
 ];
 
@@ -37,7 +37,7 @@ const positions = [
     icon: Scale,
     title: "Regulatory Clarity",
     description:
-      "Wyoming DAO LLC under the Decentralized Autonomous Organization Supplement. Positioned for digital commodity classification (CLARITY Act) and as a compliant EVM platform for regulated stablecoins (GENIUS Act) \u2014 producing an ecosystem of US-based ETF-aligned digital assets.",
+      "Wyoming DAO LLC under the Decentralized Autonomous Organization Supplement. Positioned for digital commodity classification (CLARITY Act) and as a compliant EVM platform for regulated stablecoins (GENIUS Act), producing an ecosystem of US-based ETF-aligned digital assets.",
   },
 ];
 
@@ -64,7 +64,7 @@ export function AboutSection() {
             </p>
             <p>
               Ethereum Classic is the only EVM-compatible blockchain secured
-              by Proof-of-Work — combining Bitcoin&rsquo;s security model
+              by Proof-of-Work, combining Bitcoin&rsquo;s security model
               with Ethereum&rsquo;s programmability. This positions ETC not
               just as a digital commodity under the CLARITY Act, but as a
               compliant smart contract platform where regulated stablecoins
@@ -87,10 +87,10 @@ export function AboutSection() {
               </p>
               <p>
                 Through Olympia, the basefee funds a
-                protocol-managed treasury — block rewards and tips remain untouched and
+                protocol-managed treasury. Block rewards and tips remain untouched and
                 go entirely to miners. Anyone can submit proposals on-chain.
                 Members vote on resource allocation and execute
-                decisions — transparent and verifiable at every step.
+                decisions. Every step is transparent and verifiable on-chain.
               </p>
             </div>
           </div>

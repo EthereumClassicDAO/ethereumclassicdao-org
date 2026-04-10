@@ -4,47 +4,114 @@ import {
   Clock,
   Zap,
   FileCheck,
+  TrendingUp,
+  BarChart2,
+  Scale,
+  Lightbulb,
+  ArrowRight,
 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
-const steps = [
+const formalSteps = [
   {
     icon: FileText,
     number: "01",
     title: "Propose",
     description:
-      "Anyone can submit a governance proposal on-chain. Proposals define the action to execute and the supporting rationale. Olympia DAO members vote using non-transferable membership NFTs.",
+      "Members submit binding governance proposals on-chain. Proposals define the action to execute and the supporting rationale.",
   },
   {
     icon: Vote,
     number: "02",
     title: "Vote",
     description:
-      "Members cast weighted on-chain votes during a defined voting period. Votes are transparent and immutable. A quorum threshold must be met for the proposal to pass.",
+      "Members cast weighted on-chain votes during a defined voting period using non-transferable membership NFTs. Votes are transparent and immutable. A quorum threshold must be met for the proposal to pass.",
   },
   {
     icon: Clock,
     number: "03",
     title: "Queue",
     description:
-      "Approved proposals enter a security timelock. This delay provides the community time to review and react before execution. The timelock is enforced at the protocol level.",
+      "Approved proposals enter a configurable security timelock. This delay gives the community time to review and react before execution is triggered.",
   },
   {
     icon: Zap,
     number: "04",
     title: "Execute",
     description:
-      "After the timelock expires, the proposal executes automatically. Treasury transfers and governance actions all happen on-chain with full auditability.",
+      "After the timelock expires, proposals execute on-chain without manual intervention. Treasury transfers and governance actions are fully auditable.",
   },
   {
     icon: FileCheck,
     number: "05",
     title: "Disclose",
     description:
-      "All outcomes are publicly reported and independently verifiable. Proposal execution records, treasury movements, and governance decisions form a permanent on-chain record.",
+      "All outcomes are publicly recorded and independently verifiable. Proposal execution records, treasury movements, and governance decisions form a permanent on-chain record.",
   },
 ];
+
+const futarchySteps = [
+  {
+    icon: TrendingUp,
+    number: "01",
+    title: "Open",
+    description:
+      "Anyone opens a prediction market on a proposed protocol outcome. No membership required.",
+  },
+  {
+    icon: BarChart2,
+    number: "02",
+    title: "Speculate",
+    description:
+      "Public participants stake on outcomes, bringing new users onto ETC and generating transaction volume that flows as basefee revenue into the protocol treasury.",
+  },
+  {
+    icon: Scale,
+    number: "03",
+    title: "Resolve",
+    description:
+      "Markets settle when the underlying governance event executes on-chain. Participants are financially rewarded for accurate predictions.",
+  },
+  {
+    icon: Lightbulb,
+    number: "04",
+    title: "Signal",
+    description:
+      "Market prices feed back as on-chain signal into future governance decisions, creating a self-reinforcing loop between public participation and core development capacity.",
+  },
+];
+
+function StepCard({
+  step,
+  delay,
+}: {
+  step: (typeof formalSteps)[number];
+  delay: number;
+}) {
+  return (
+    <FadeIn delay={delay}>
+      <div className="flex gap-6 rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
+        <div className="flex flex-col items-center gap-2">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-[var(--brand-green)] bg-[var(--background)]">
+            <span className="text-sm font-mono font-bold text-[var(--brand-green)]">
+              {step.number}
+            </span>
+          </div>
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
+            <step.icon size={16} className="text-[var(--brand-green)]" />
+          </div>
+        </div>
+        <div>
+          <p className="text-base font-semibold">{step.title}</p>
+          <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
+            {step.description}
+          </p>
+        </div>
+      </div>
+    </FadeIn>
+  );
+}
 
 export function HowItWorksSection() {
   return (
@@ -52,40 +119,80 @@ export function HowItWorksSection() {
       <SectionDivider variant="strong" />
       <section className="section-deep py-28">
         <div className="mx-auto max-w-4xl px-6">
+          {/* Core Development Governance */}
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">
-              How It Works
-            </h2>
-            <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
-              Five stages from idea to execution — every step on-chain.
+            <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
+              Core Development Governance
             </p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight">
+              Binding On-Chain Protocol Governance
+            </h2>
+            <p className="mt-3 text-base text-[var(--text-muted)]">
+              Five stages from proposal to execution. Every step on-chain.
+              Scoped to core client software, critical infrastructure, network
+              security, treasury allocation, and emergency protocol responses.
+            </p>
+            <div className="mt-3 flex gap-2">
+              <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                ECIP-1113
+              </span>
+              <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                ECIP-1114
+              </span>
+              <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                ECIP-1119
+              </span>
+            </div>
           </FadeIn>
 
-          <div className="mt-12 space-y-6">
-            {steps.map((step, i) => (
-              <FadeIn key={step.title} delay={i * 80}>
-                <div className="flex gap-6 rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-[var(--brand-green)] bg-[var(--background)]">
-                      <span className="text-sm font-mono font-bold text-[var(--brand-green)]">
-                        {step.number}
-                      </span>
-                    </div>
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
-                      <step.icon
-                        size={16}
-                        className="text-[var(--brand-green)]"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-base font-semibold">{step.title}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              </FadeIn>
+          <div className="mt-10 space-y-6">
+            {formalSteps.map((step, i) => (
+              <StepCard key={step.title} step={step} delay={i * 80} />
+            ))}
+          </div>
+
+          <FadeIn>
+            <div className="mt-8">
+              <a
+                href="https://olympiadao.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+              >
+                View the Olympia DAO Governance App
+                <ArrowRight size={14} />
+              </a>
+            </div>
+          </FadeIn>
+
+          {/* Futarchy Markets */}
+          <FadeIn>
+            <div className="mt-20">
+              <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
+                Futarchy Markets
+              </p>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight">
+                Open Prediction Markets and Public Signal
+              </h2>
+              <p className="mt-3 text-base text-[var(--text-muted)]">
+                Open to anyone, no membership required. Market prices become
+                on-chain signal that informs governance decisions and funds
+                development through the basefee flywheel.
+              </p>
+              <div className="mt-3 flex gap-2">
+                <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                  ECIP-1117
+                </span>
+                <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                  ECIP-1118
+                </span>
+              </div>
+            </div>
+          </FadeIn>
+
+          <div className="mt-10 space-y-6">
+            {futarchySteps.map((step, i) => (
+              <StepCard key={step.title} step={step} delay={i * 80} />
             ))}
           </div>
         </div>

@@ -48,7 +48,7 @@ export function ActivationCountdown() {
         <span className="text-sm font-medium text-[var(--brand-green)]">Activation Block Pending</span>
       </div>
       <p className="text-sm text-[var(--text-muted)]">
-        Olympia is in final testing on the Mordor Testnet — Activation Block: TBD
+        Olympia is in final testing on the Mordor Testnet. Activation Block: TBD
       </p>
       <p className="mt-1 text-xs text-[var(--text-muted)] opacity-60">
         The exact block number will be announced after the Olympia Upgrade core developers call.

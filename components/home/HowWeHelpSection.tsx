@@ -13,13 +13,13 @@ const pillars = [
     icon: Vote,
     title: "Ecosystem Infrastructure",
     description:
-      "Building and integrating the infrastructure layer — block explorers, public RPC endpoints, oracle networks, institutional custody, and developer tooling. Full EVM compatibility means every Ethereum tool works with Ethereum Classic.",
+      "Building and integrating the infrastructure layer, including block explorers, public RPC endpoints, oracle networks, institutional custody, and developer tooling. Full EVM compatibility means every Ethereum tool works with Ethereum Classic.",
   },
   {
     icon: Pickaxe,
     title: "Hashrate Incentives",
     description:
-      "170+ TH/s securing the only Proof-of-Work network with native smart contracts. GPU and ASIC compatible mining. Block rewards and tips remain untouched by the Olympia upgrade — miners are unaffected while the network gains governance and treasury infrastructure.",
+      "170+ TH/s securing the only Proof-of-Work network with native smart contracts. GPU and ASIC compatible mining. Block rewards and tips remain untouched by the Olympia upgrade, so miners are unaffected while the network gains governance and treasury infrastructure.",
   },
   {
     icon: Scale,
@@ -39,9 +39,9 @@ export function HowWeHelpSection() {
             <h2 className="text-3xl font-bold tracking-tight">
               How We Help
             </h2>
-            <p className="mt-3 max-w-2xl text-base text-[var(--text-muted)]">
+            <p className="mt-3 text-base text-[var(--text-muted)]">
               Building the software and infrastructure that Ethereum Classic
-              needs to scale from individuals to institutions &mdash; while
+              needs to scale from individuals to institutions, while
               ensuring US regulatory compliance.
             </p>
           </FadeIn>

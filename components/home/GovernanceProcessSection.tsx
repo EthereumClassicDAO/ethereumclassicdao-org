@@ -4,42 +4,133 @@ import {
   Clock,
   Zap,
   FileCheck,
+  TrendingUp,
+  BarChart2,
+  Scale,
+  Lightbulb,
+  ArrowRight,
 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
-const steps = [
+const formalSteps = [
   {
     icon: FileText,
     number: "01",
     title: "Propose",
-    description: "Anyone can submit governance proposals on-chain",
+    description: "Members submit binding governance proposals on-chain",
   },
   {
     icon: Vote,
     number: "02",
     title: "Vote",
-    description: "Members cast weighted on-chain votes",
+    description: "Membership NFT holders cast weighted on-chain votes",
   },
   {
     icon: Clock,
     number: "03",
     title: "Queue",
-    description: "Approved proposals enter a security timelock",
+    description: "Approved proposals enter a configurable security timelock",
   },
   {
     icon: Zap,
     number: "04",
     title: "Execute",
-    description: "After timelock, proposals execute automatically",
+    description: "After timelock, proposals execute on-chain without manual intervention",
   },
   {
     icon: FileCheck,
     number: "05",
     title: "Disclose",
-    description: "All outcomes publicly reported and verified",
+    description: "All outcomes are publicly recorded and verifiable on-chain",
   },
 ];
+
+const futarchySteps = [
+  {
+    icon: TrendingUp,
+    number: "01",
+    title: "Open",
+    description: "Anyone opens a prediction market on a proposed protocol outcome",
+  },
+  {
+    icon: BarChart2,
+    number: "02",
+    title: "Speculate",
+    description: "Public participants stake on outcomes with no membership required",
+  },
+  {
+    icon: Scale,
+    number: "03",
+    title: "Resolve",
+    description: "Markets settle when the underlying governance event executes on-chain",
+  },
+  {
+    icon: Lightbulb,
+    number: "04",
+    title: "Signal",
+    description: "Market prices feed back as on-chain signal into future governance decisions",
+  },
+];
+
+function StepList({ steps }: { steps: typeof formalSteps }) {
+  return (
+    <>
+      {/* Desktop: horizontal with connecting line */}
+      <div className="mt-8 hidden md:block">
+        <div className="relative">
+          <div className="absolute top-5 left-5 right-5 h-px bg-[var(--divider)]" />
+          <div
+            className="relative grid gap-3"
+            style={{ gridTemplateColumns: `repeat(${steps.length}, 1fr)` }}
+          >
+            {steps.map((step, i) => (
+              <FadeIn key={step.title} delay={i * 80}>
+                <div className="text-center">
+                  <div className="relative mx-auto flex h-10 w-10 items-center justify-center rounded-full border-2 border-[var(--brand-green)] bg-[var(--background)]">
+                    <span className="text-xs font-mono font-bold text-[var(--brand-green)]">
+                      {step.number}
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm font-semibold">{step.title}</p>
+                  <p className="mt-1.5 text-xs leading-relaxed text-[var(--text-muted)]">
+                    {step.description}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile: vertical */}
+      <div className="mt-6 space-y-5 md:hidden">
+        {steps.map((step, i) => (
+          <FadeIn key={step.title} delay={i * 60}>
+            <div className="flex gap-4">
+              <div className="flex flex-col items-center">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[var(--brand-green)] bg-[var(--background)]">
+                  <span className="text-[10px] font-mono font-bold text-[var(--brand-green)]">
+                    {step.number}
+                  </span>
+                </div>
+                {i < steps.length - 1 && (
+                  <div className="mt-2 h-full w-px bg-[var(--divider)]" />
+                )}
+              </div>
+              <div className="pb-3">
+                <p className="text-sm font-semibold">{step.title}</p>
+                <p className="mt-1 text-xs text-[var(--text-muted)]">
+                  {step.description}
+                </p>
+              </div>
+            </div>
+          </FadeIn>
+        ))}
+      </div>
+    </>
+  );
+}
 
 export function GovernanceProcessSection() {
   return (
@@ -49,65 +140,120 @@ export function GovernanceProcessSection() {
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2 className="text-3xl font-bold tracking-tight">
-              Governance Process
+              Governance Architecture
             </h2>
-            <p className="mt-3 max-w-xl text-base text-[var(--text-muted)]">
-              Membership-based on-chain governance — proposals, voting,
-              timelock, and transparent execution.
+            <p className="mt-3 text-base text-[var(--text-muted)]">
+              Two complementary systems designed to work together. Membership-based
+              on-chain governance handles binding protocol decisions. Open prediction
+              markets give the broader public a financially incentivized stake in
+              network direction.
             </p>
           </FadeIn>
 
-          {/* Desktop: horizontal steps with connecting line */}
-          <div className="mt-14 hidden md:block">
-            <div className="relative">
-              {/* Connecting line */}
-              <div className="absolute top-5 left-5 right-5 h-px bg-[var(--divider)]" />
-
-              <div className="relative grid grid-cols-5 gap-4">
-                {steps.map((step, i) => (
-                  <FadeIn key={step.title} delay={i * 100}>
-                    <div className="text-center">
-                      <div className="relative mx-auto flex h-10 w-10 items-center justify-center rounded-full border-2 border-[var(--brand-green)] bg-[var(--background)]">
-                        <span className="text-xs font-mono font-bold text-[var(--brand-green)]">
-                          {step.number}
-                        </span>
-                      </div>
-                      <p className="mt-4 text-sm font-semibold">{step.title}</p>
-                      <p className="mt-2 text-xs leading-relaxed text-[var(--text-muted)]">
-                        {step.description}
-                      </p>
-                    </div>
-                  </FadeIn>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile: vertical timeline */}
-          <div className="mt-10 space-y-6 md:hidden">
-            {steps.map((step, i) => (
-              <FadeIn key={step.title} delay={i * 80}>
-                <div className="flex gap-4">
-                  <div className="flex flex-col items-center">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-[var(--brand-green)] bg-[var(--background)]">
-                      <span className="text-xs font-mono font-bold text-[var(--brand-green)]">
-                        {step.number}
+          <div className="mt-12 grid gap-6">
+            {/* Formal Governance */}
+            <FadeIn delay={80}>
+              <div className="rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-6">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
+                      Core Development Governance
+                    </p>
+                    <h3 className="mt-1.5 text-lg font-semibold">
+                      Binding On-Chain Protocol Governance
+                    </h3>
+                    <div className="mt-3 flex gap-2">
+                      <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                        ECIP-1113
+                      </span>
+                      <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                        ECIP-1114
+                      </span>
+                      <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                        ECIP-1119
                       </span>
                     </div>
-                    {i < steps.length - 1 && (
-                      <div className="mt-2 h-full w-px bg-[var(--divider)]" />
-                    )}
-                  </div>
-                  <div className="pb-4">
-                    <p className="text-sm font-semibold">{step.title}</p>
-                    <p className="mt-1 text-xs text-[var(--text-muted)]">
-                      {step.description}
+                    <p className="mt-4 text-sm text-[var(--text-muted)]">
+                      Binding governance scoped to core client software, critical
+                      infrastructure, network security, treasury allocation, and
+                      emergency protocol responses. The treasury is funded
+                      continuously by basefee revenue, on-chain donations, and
+                      miners directing hashpower to the treasury address.
+                      Stakeholders who prefer a traditional giving model can also
+                      contribute through the ETC Cooperative, a US 501(c)(3)
+                      non-profit that accepts tax-deductible donations.
+                    </p>
+                    <p className="mt-3 text-sm text-[var(--text-muted)]">
+                      Any stakeholder, whether exchanges, custodians, miners,
+                      investment product issuers, or institutions holding ETC
+                      on behalf of fund shareholders, can contribute directly
+                      on-chain with no overhead and no intermediaries. Settlement
+                      is immediate and verifiable. No coordination calls, no
+                      invoices, no preferred relationships.
+                    </p>
+                    <p className="mt-3 text-sm text-[var(--text-muted)]">
+                      Core development is no longer gated behind employment.
+                      Open proposals let any of the thousands of EVM developers
+                      worldwide bid for development funds, infrastructure
+                      contracts, and critical service agreements covering block
+                      explorers, RPC endpoints, oracles, bridges, and ecosystem
+                      integrations. Open proposals, open bids, open funding,
+                      all executed by the Wyoming DAO LLC on behalf of what the
+                      Olympia DAO approves on-chain.
                     </p>
                   </div>
                 </div>
-              </FadeIn>
-            ))}
+                <StepList steps={formalSteps} />
+                <div className="mt-6">
+                  <a
+                    href="https://olympiadao.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+                  >
+                    View the Olympia DAO Governance App
+                    <ArrowRight size={14} />
+                  </a>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Futarchy Markets */}
+            <FadeIn delay={160}>
+              <div className="rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-6">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
+                      Futarchy Markets
+                    </p>
+                    <h3 className="mt-1.5 text-lg font-semibold">
+                      Open Prediction Markets and Public Signal
+                    </h3>
+                    <div className="mt-3 flex gap-2">
+                      <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                        ECIP-1117
+                      </span>
+                      <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                        ECIP-1118
+                      </span>
+                    </div>
+                    <p className="mt-4 text-sm text-[var(--text-muted)]">
+                      Open prediction markets where anyone can speculate on
+                      protocol outcomes without membership. Participants are
+                      financially rewarded for accurate predictions, bringing
+                      new users onto ETC and generating transaction volume that
+                      flows as basefee revenue into the protocol treasury.
+                      Better signal produces more development funding and better
+                      protocol outcomes, creating a self-reinforcing loop between
+                      public participation and core development capacity.
+                    </p>
+                  </div>
+                </div>
+                <StepList steps={futarchySteps} />
+              </div>
+            </FadeIn>
           </div>
+
         </div>
       </section>
     </>

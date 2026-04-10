@@ -83,9 +83,9 @@ export function NetworkConfigSection() {
             <h2 className="text-3xl font-bold tracking-tight">
               Network Configuration
             </h2>
-            <p className="mt-3 max-w-2xl text-base text-[var(--text-muted)]">
+            <p className="mt-3 text-base text-[var(--text-muted)]">
               Connect to Ethereum Classic mainnet or the Mordor testnet.
-              Full EVM compatibility — use your existing Ethereum tooling.
+              Full EVM compatibility. Use your existing Ethereum tooling.
             </p>
           </FadeIn>
 

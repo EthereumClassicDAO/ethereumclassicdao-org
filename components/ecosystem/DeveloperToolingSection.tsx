@@ -26,7 +26,7 @@ const categories: ToolCategory[] = [
       },
       {
         name: "Foundry",
-        description: "Blazing fast Rust-based toolchain — forge, cast, anvil. Write tests in Solidity.",
+        description: "Blazing fast Rust-based toolchain: forge, cast, anvil. Write tests in Solidity.",
         config: "--rpc-url https://etc.rivet.link --chain 61",
         href: "https://getfoundry.sh",
       },
@@ -102,7 +102,7 @@ const categories: ToolCategory[] = [
       },
       {
         name: "MetaMask",
-        description: "Browser wallet — add ETC as a custom network with Chain ID 61 and the Rivet RPC endpoint.",
+        description: "Browser wallet. Add ETC as a custom network with Chain ID 61 and the Rivet RPC endpoint.",
         href: "https://metamask.io",
       },
       {
@@ -171,10 +171,10 @@ export function DeveloperToolingSection() {
             <h2 className="text-3xl font-bold tracking-tight">
               Developer Tooling
             </h2>
-            <p className="mt-3 max-w-2xl text-base text-[var(--text-muted)]">
+            <p className="mt-3 text-base text-[var(--text-muted)]">
               Ethereum Classic maintains parity with the latest EVM
-              specification. All modern Ethereum tooling works on ETC &mdash;
-              configure your chain ID and start building.
+              specification. All modern Ethereum tooling works on ETC.
+              Configure your chain ID and start building.
             </p>
           </FadeIn>
 

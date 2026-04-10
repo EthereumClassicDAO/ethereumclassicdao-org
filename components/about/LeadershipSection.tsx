@@ -29,10 +29,10 @@ export function LeadershipSection() {
             <h2 className="text-3xl font-bold tracking-tight">Leadership</h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Ethereum Classic DAO LLC builds on nearly a decade of ecosystem
-              stewardship — succeeding the ETC Cooperative as the organizational
-              home for Ethereum Classic&apos;s core contributors. Coordinating
-              network upgrades, client development, and ecosystem infrastructure
-              since the chain&apos;s earliest days.
+              stewardship, succeeding the ETC Cooperative as the organizational
+              home for Ethereum Classic&apos;s core contributors. The organization
+              has been coordinating network upgrades, client development, and
+              ecosystem infrastructure since the chain&apos;s earliest days.
             </p>
           </FadeIn>
 

@@ -17,7 +17,7 @@ const entities = [
     name: "Olympia DAO",
     role: "On-Chain Governance",
     description:
-      "Proposal submission, membership-based voting, and transparent execution — all on-chain on Ethereum Classic.",
+      "Proposal submission, membership-based voting, and transparent execution, all on-chain on Ethereum Classic.",
     href: "https://olympiadao.org",
     highlighted: false,
   },
@@ -35,7 +35,7 @@ const entities = [
     name: "Ethereum Classic",
     role: "Network Protocol",
     description:
-      "The largest Proof-of-Work smart contract platform. Coordinating network upgrades to maintain EVM protocol parity — ensuring Ethereum Classic delivers a best-in-class EVM experience with every protocol upgrade.",
+      "The largest Proof-of-Work smart contract platform. Coordinating network upgrades to maintain EVM protocol parity, ensuring Ethereum Classic delivers a best-in-class EVM experience with every protocol upgrade.",
     href: "https://ethereumclassic.org",
     highlighted: false,
   },
@@ -51,7 +51,7 @@ export function OlympiaEcosystemSection() {
             <h2 className="text-3xl font-bold tracking-tight">
               Coordinating Organizations
             </h2>
-            <p className="mt-3 max-w-2xl text-base text-[var(--text-muted)]">
+            <p className="mt-3 text-base text-[var(--text-muted)]">
               Coordinating organizations working together to govern and
               advance the Ethereum Classic network.
             </p>

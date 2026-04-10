@@ -42,6 +42,8 @@ const columns: { heading: string; links: FooterLink[] }[] = [
     heading: "Build",
     links: [
       { label: "Olympia Upgrade", href: "/olympia" },
+      { label: "Core Development", href: "/core-development" },
+      { label: "Clients", href: "/clients" },
       { label: "Developer Tooling", href: "/ecosystem#tooling" },
       {
         label: "Block Explorer",
@@ -69,6 +71,14 @@ const columns: { heading: string; links: FooterLink[] }[] = [
     ],
   },
   {
+    heading: "Markets",
+    links: [
+      { label: "Regulation", href: "/regulation" },
+      { label: "Environmental Impact", href: "/environmental-impact" },
+      { label: "Investment Products", href: "/investment-products" },
+    ],
+  },
+  {
     heading: "Legal",
     links: [
       { label: "Privacy", href: "/privacy" },
@@ -83,7 +93,7 @@ export function FooterSection() {
       <SectionDivider />
       <footer className="section-alt noise-overlay relative py-16">
         <div className="relative z-10 mx-auto max-w-6xl px-6">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-7">
             {/* Brand column */}
             <div className="lg:col-span-1">
               <span className="flex items-center gap-2 text-sm font-semibold tracking-tight">
@@ -147,7 +157,7 @@ export function FooterSection() {
           <div className="section-divider mx-auto mt-12 mb-6 max-w-5xl" />
 
           <p className="text-xs text-[var(--text-subtle)]">
-            &copy; 2026 Ethereum Classic DAO LLC
+            &copy; {new Date().getFullYear()} Ethereum Classic DAO LLC
           </p>
         </div>
       </footer>

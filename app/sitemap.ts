@@ -48,10 +48,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
-      url: `${base}/timeline`,
+      url: `${base}/core-development`,
       lastModified: now,
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${base}/contact`,
@@ -64,6 +64,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,
+    },
+    {
+      url: `${base}/regulation`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${base}/environmental-impact`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/investment-products`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
     },
   ];
 }
