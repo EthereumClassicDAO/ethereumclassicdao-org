@@ -33,10 +33,10 @@ export function ClientsSection() {
   return (
     <>
       <SectionDivider variant="strong" />
-      <section className="section-deep py-28">
+      <section aria-labelledby="client-implementations-heading" className="section-deep py-28">
         <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 id="client-implementations-heading" className="text-3xl font-bold tracking-tight">
               Client Implementations
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">

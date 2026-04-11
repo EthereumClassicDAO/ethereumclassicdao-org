@@ -21,13 +21,13 @@ export function TradFiAccessSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-alt relative py-28">
+      <section aria-labelledby="etc-in-traditional-finance-heading" className="section-alt relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
             <p className="font-mono text-xs uppercase tracking-wider text-[var(--brand-green)]">
               Brokerage Access
             </p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight">
+            <h2 id="etc-in-traditional-finance-heading" className="mt-2 text-3xl font-bold tracking-tight">
               ETC in Traditional Finance
             </h2>
             <p className="mt-3 max-w-2xl text-base text-[var(--text-muted)]">

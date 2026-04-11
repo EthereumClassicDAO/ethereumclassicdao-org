@@ -6,13 +6,13 @@ export function StewardshipSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-gradient py-28">
+      <section aria-labelledby="built-on-a-decade-of-commitment-heading" className="section-gradient py-28">
         <div className="mx-auto max-w-4xl px-6">
           <FadeIn>
             <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
               Institutional Stewardship
             </p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight">
+            <h2 id="built-on-a-decade-of-commitment-heading" className="mt-2 text-3xl font-bold tracking-tight">
               Built on a Decade of Commitment
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">

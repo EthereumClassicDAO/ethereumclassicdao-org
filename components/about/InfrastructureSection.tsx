@@ -47,10 +47,10 @@ export async function InfrastructureSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-gradient relative geo-circle py-28">
+      <section aria-labelledby="institutional-infrastructure-heading" className="section-gradient relative geo-circle py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 className="text-xl font-bold">
+            <h2 id="institutional-infrastructure-heading" className="text-xl font-bold">
               Institutional Infrastructure
             </h2>
             <p className="mt-3 text-sm text-[var(--text-muted)]">

@@ -46,10 +46,10 @@ export function DeveloperLinksSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-gradient py-28">
+      <section aria-labelledby="developer-resources-heading" className="section-gradient py-28">
         <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 id="developer-resources-heading" className="text-3xl font-bold tracking-tight">
               Developer Resources
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">

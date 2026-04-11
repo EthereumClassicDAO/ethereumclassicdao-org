@@ -117,14 +117,14 @@ export function HowItWorksSection() {
   return (
     <>
       <SectionDivider variant="strong" />
-      <section className="section-deep py-28">
+      <section aria-labelledby="binding-on-chain-protocol-governance-heading" className="section-deep py-28">
         <div className="mx-auto max-w-4xl px-6">
           {/* Core Development Governance */}
           <FadeIn>
             <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
               Core Development Governance
             </p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight">
+            <h2 id="binding-on-chain-protocol-governance-heading" className="mt-2 text-3xl font-bold tracking-tight">
               Binding On-Chain Protocol Governance
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
@@ -171,7 +171,7 @@ export function HowItWorksSection() {
               <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
                 Futarchy Markets
               </p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight">
+              <h2 id="open-prediction-markets-and-public-signal-heading" className="mt-2 text-3xl font-bold tracking-tight">
                 Open Prediction Markets and Public Signal
               </h2>
               <p className="mt-3 text-base text-[var(--text-muted)]">

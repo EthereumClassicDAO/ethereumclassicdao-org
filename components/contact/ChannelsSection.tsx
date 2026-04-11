@@ -28,10 +28,10 @@ export function ChannelsSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-alt py-20">
+      <section aria-labelledby="ecosystem-properties-heading" className="section-alt py-20">
         <div className="mx-auto max-w-3xl px-6">
           <FadeIn>
-            <h2 className="text-xl font-bold">Ecosystem Properties</h2>
+            <h2 id="ecosystem-properties-heading" className="text-xl font-bold">Ecosystem Properties</h2>
             <p className="mt-3 text-sm text-[var(--text-muted)]">
               The Olympia governance ecosystem spans multiple open-source web
               properties.

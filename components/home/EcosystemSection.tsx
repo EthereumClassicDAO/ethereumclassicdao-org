@@ -34,10 +34,10 @@ export function EcosystemSection() {
   return (
     <>
       <SectionDivider variant="strong" />
-      <section className="py-28">
+      <section aria-labelledby="ecosystem-heading" className="py-28">
         <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 className="text-2xl font-bold tracking-tight">Ecosystem</h2>
+            <h2 id="ecosystem-heading" className="text-2xl font-bold tracking-tight">Ecosystem</h2>
             <p className="mt-3 text-sm text-[var(--text-muted)]">
               The Olympia governance ecosystem spans multiple open-source web
               properties.

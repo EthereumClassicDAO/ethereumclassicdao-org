@@ -43,10 +43,10 @@ export function LeadershipSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-gradient relative py-28">
+      <section aria-labelledby="leadership-heading" className="section-gradient relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">Leadership</h2>
+            <h2 id="leadership-heading" className="text-3xl font-bold tracking-tight">Leadership</h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Ethereum Classic DAO LLC builds on nearly a decade of ecosystem
               stewardship, succeeding the ETC Cooperative as the organizational

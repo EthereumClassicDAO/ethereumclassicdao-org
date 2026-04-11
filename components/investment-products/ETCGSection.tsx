@@ -63,13 +63,13 @@ export async function ETCGSection() {
   return (
     <>
       <SectionDivider variant="strong" />
-      <section className="section-deep relative py-28">
+      <section aria-labelledby="grayscale-ethereum-classic-trust-heading" className="section-deep relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
             <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
               Regulated Securities Exposure
             </p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight">
+            <h2 id="grayscale-ethereum-classic-trust-heading" className="mt-2 text-3xl font-bold tracking-tight">
               Grayscale Ethereum Classic Trust
             </h2>
             <p className="mt-1 text-base text-[var(--text-muted)]">

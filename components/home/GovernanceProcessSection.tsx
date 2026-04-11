@@ -136,10 +136,10 @@ export function GovernanceProcessSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-gradient geo-circle relative py-28">
+      <section aria-labelledby="governance-architecture-heading" className="section-gradient geo-circle relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 id="governance-architecture-heading" className="text-3xl font-bold tracking-tight">
               Governance Architecture
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">

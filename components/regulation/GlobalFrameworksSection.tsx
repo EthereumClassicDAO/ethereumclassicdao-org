@@ -82,10 +82,10 @@ export function GlobalFrameworksSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-alt relative py-28">
+      <section aria-labelledby="the-2025-2026-regulatory-wave-heading" className="section-alt relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 id="the-2025-2026-regulatory-wave-heading" className="text-3xl font-bold tracking-tight">
               The 2025–2026 Regulatory Wave
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">

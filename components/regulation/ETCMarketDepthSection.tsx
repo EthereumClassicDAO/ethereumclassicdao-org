@@ -67,10 +67,10 @@ export function ETCMarketDepthSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-alt relative py-28">
+      <section aria-labelledby="etc-as-a-global-payment-network-heading" className="section-alt relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 id="etc-as-a-global-payment-network-heading" className="text-3xl font-bold tracking-tight">
               ETC as a Global Payment Network
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
