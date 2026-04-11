@@ -190,7 +190,7 @@ export async function ETCGSection() {
                   "Olympia upgrade: EIP-1559 fee market with basefee-funded protocol treasury and full Fusaka EVM parity. Every current Ethereum tool, library, and framework works on ETC without modification.",
                   "Original EVM, in continuous operation since July 2015. Longer operational track record than any competing smart contract platform.",
                   "Post-Merge infrastructure: the largest Proof-of-Work network with native smart contracts, having absorbed significant Ethereum mining capacity. Retail GPU access and institutional ASIC hardware available.",
-                  "300+ exchanges, 11 fiat currency pairs, continuous ETC/USD price discovery since 2016. The liquidity depth required for a credible global stablecoin settlement layer.",
+                  "300+ exchanges, 17 fiat currency pairs, continuous ETC/USD price discovery since 2016. The liquidity depth required for a credible global stablecoin settlement layer.",
                 ].map((point) => (
                   <div key={point} className="flex items-start gap-2">
                     <span

@@ -7,9 +7,9 @@ const CDN =
 
 // Symbols known to exist in spothq/cryptocurrency-icons
 const KNOWN: Set<string> = new Set([
-  "btc", "eth", "usdt", "usdc", "bnb", "ltc", "doge", "xrp",
-  "etc", "ada", "sol", "dot", "avax", "matic", "link", "uni",
-  "dai", "shib", "trx", "atom",
+  "btc", "eth", "usdt", "usdc", "busd", "bnb", "xrp", "doge",
+  "uni", "ltc", "cake", "etc", "ada", "sol", "dot", "avax",
+  "matic", "link", "dai", "shib", "trx", "atom",
 ]);
 
 interface Props {

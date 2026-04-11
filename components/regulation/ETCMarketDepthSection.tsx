@@ -4,30 +4,41 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 import { FlagImg } from "@/components/ui/FlagImg";
 import { CryptoImg } from "@/components/ui/CryptoImg";
 
+// Ordered by forex trading volume / economic size of counter currency
 const fiatPairs = [
   { pair: "ETC/USD", flag: "🇺🇸", currency: "US Dollar" },
   { pair: "ETC/EUR", flag: "🇪🇺", currency: "Euro" },
-  { pair: "ETC/KRW", flag: "🇰🇷", currency: "Korean Won" },
-  { pair: "ETC/TRY", flag: "🇹🇷", currency: "Turkish Lira" },
+  { pair: "ETC/JPY", flag: "🇯🇵", currency: "Japanese Yen" },
   { pair: "ETC/GBP", flag: "🇬🇧", currency: "British Pound" },
-  { pair: "ETC/IDR", flag: "🇮🇩", currency: "Indonesian Rupiah" },
+  { pair: "ETC/AUD", flag: "🇦🇺", currency: "Australian Dollar" },
+  { pair: "ETC/KRW", flag: "🇰🇷", currency: "Korean Won" },
+  { pair: "ETC/SGD", flag: "🇸🇬", currency: "Singapore Dollar" },
+  { pair: "ETC/TWD", flag: "🇹🇼", currency: "Taiwan Dollar" },
   { pair: "ETC/INR", flag: "🇮🇳", currency: "Indian Rupee" },
   { pair: "ETC/BRL", flag: "🇧🇷", currency: "Brazilian Real" },
+  { pair: "ETC/TRY", flag: "🇹🇷", currency: "Turkish Lira" },
+  { pair: "ETC/AED", flag: "🇦🇪", currency: "UAE Dirham" },
+  { pair: "ETC/THB", flag: "🇹🇭", currency: "Thai Baht" },
+  { pair: "ETC/UAH", flag: "🇺🇦", currency: "Ukrainian Hryvnia" },
+  { pair: "ETC/IDR", flag: "🇮🇩", currency: "Indonesian Rupiah" },
   { pair: "ETC/NZD", flag: "🇳🇿", currency: "New Zealand Dollar" },
-  { pair: "ETC/JPY", flag: "🇯🇵", currency: "Japanese Yen" },
   { pair: "ETC/PLN", flag: "🇵🇱", currency: "Polish Zloty" },
 ];
 
+// Ordered by market cap of counter asset
 const cryptoPairs = [
-  { pair: "ETC/USDT", symbol: "USDT" },
-  { pair: "ETC/USDC", symbol: "USDC" },
-  { pair: "ETC/FDUSD", symbol: "FDUSD" },
   { pair: "ETC/BTC", symbol: "BTC" },
   { pair: "ETC/ETH", symbol: "ETH" },
+  { pair: "ETC/USDT", symbol: "USDT" },
+  { pair: "ETC/USDC", symbol: "USDC" },
   { pair: "ETC/BNB", symbol: "BNB" },
-  { pair: "ETC/LTC", symbol: "LTC" },
-  { pair: "ETC/DOGE", symbol: "DOGE" },
   { pair: "ETC/XRP", symbol: "XRP" },
+  { pair: "ETC/DOGE", symbol: "DOGE" },
+  { pair: "ETC/UNI", symbol: "UNI" },
+  { pair: "ETC/LTC", symbol: "LTC" },
+  { pair: "CAKE/ETC", symbol: "CAKE" },
+  { pair: "ETC/BUSD", symbol: "BUSD" },
+  { pair: "ETC/FDUSD", symbol: "FDUSD" },
 ];
 
 const stats = [
@@ -39,13 +50,13 @@ const stats = [
   },
   {
     icon: BarChart3,
-    value: "11",
+    value: "17",
     label: "Fiat Pairs",
     detail: "Major currencies",
   },
   {
     icon: Activity,
-    value: "9",
+    value: "12",
     label: "Crypto Cross-Pairs",
     detail: "BTC, ETH, stablecoins",
   },

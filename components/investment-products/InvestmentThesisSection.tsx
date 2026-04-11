@@ -25,7 +25,7 @@ const thesisPoints = [
   {
     number: "05",
     title: "Deepest PoW Smart Contract Liquidity",
-    body: "300+ exchanges, 11 fiat currency pairs, accessible GPU mining hardware at retail, and institutional ASIC infrastructure. The only Proof-of-Work network with native smart contract capability at this depth of market access.",
+    body: "300+ exchanges, 17 fiat currency pairs, accessible GPU mining hardware at retail, and institutional ASIC infrastructure. The only Proof-of-Work network with native smart contract capability at this depth of market access.",
   },
 ];
 

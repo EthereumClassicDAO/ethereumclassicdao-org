@@ -9,14 +9,19 @@ const FLAG_MAP: Record<string, string> = {
   "🇪🇺": "1f1ea-1f1fa", // EU
   "🇯🇵": "1f1ef-1f1f5", // JP
   "🇬🇧": "1f1ec-1f1e7", // GB
-  "🇧🇷": "1f1e7-1f1f7", // BR
+  "🇦🇺": "1f1e6-1f1fa", // AU
   "🇰🇷": "1f1f0-1f1f7", // KR
-  "🇹🇷": "1f1f9-1f1f7", // TR
-  "🇮🇩": "1f1ee-1f1e9", // ID
+  "🇸🇬": "1f1f8-1f1ec", // SG
+  "🇹🇼": "1f1f9-1f1fc", // TW
   "🇮🇳": "1f1ee-1f1f3", // IN
+  "🇧🇷": "1f1e7-1f1f7", // BR
+  "🇹🇷": "1f1f9-1f1f7", // TR
+  "🇦🇪": "1f1e6-1f1ea", // AE
+  "🇹🇭": "1f1f9-1f1ed", // TH
+  "🇺🇦": "1f1fa-1f1e6", // UA
+  "🇮🇩": "1f1ee-1f1e9", // ID
   "🇳🇿": "1f1f3-1f1ff", // NZ
   "🇵🇱": "1f1f5-1f1f1", // PL
-  "🇦🇪": "1f1e6-1f1ea", // AE
   "🌏": "1f30f", // Asia-Pacific globe
   "🌍": "1f30d", // Africa/Europe globe
 };
