@@ -26,7 +26,7 @@ const dropdownGroups = [
     label: "Markets",
     items: [
       { label: "Regulation", href: "/regulation" },
-      { label: "Energy", href: "/environmental-impact" },
+      { label: "Energy Infrastructure", href: "/environmental-impact" },
       { label: "Investment Products", href: "/investment-products" },
     ],
   },
