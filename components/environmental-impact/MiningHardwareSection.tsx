@@ -97,6 +97,23 @@ export function MiningHardwareSection() {
               possible mining participation curve.
             </p>
           </FadeIn>
+
+          <FadeIn delay={100}>
+            <div className="mt-6 rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-5">
+              <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
+                Olympia Connection
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
+                The Olympia upgrade&apos;s EIP-1559 basefee treasury creates a
+                sustainable funding source for the client software that mining
+                operations depend on. Every transaction on the network generates
+                basefee revenue that flows to the protocol treasury, which
+                governance then allocates to core client development,
+                infrastructure, and network security. The economics of mining
+                ETC directly fund the software that keeps it worth mining.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
     </>

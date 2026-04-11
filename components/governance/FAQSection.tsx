@@ -78,7 +78,7 @@ export function FAQSection() {
 
           <FadeIn>
             <div className="mt-10">
-              <Accordion items={faqItems} />
+              <Accordion items={faqItems} defaultAllOpen />
             </div>
           </FadeIn>
         </div>
