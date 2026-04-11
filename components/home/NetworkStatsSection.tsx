@@ -109,7 +109,7 @@ export function NetworkStatsSection({ stats, hashrateTHs }: { stats: EtcStats; h
       label: "Average Block Time",
       value: formatBlockTime(stats.averageBlockTimeMs),
     },
-    { label: "Network Hashrate", value: `${Math.round(hashrateTHs)} TH/s *` },
+    { label: "Network Hashrate", value: `${Math.round(hashrateTHs)} TH/s` },
   ];
 
   const economicsRows: Row[] = [
@@ -156,10 +156,6 @@ export function NetworkStatsSection({ stats, hashrateTHs }: { stats: EtcStats; h
               <OverviewTable heading="Network" rows={networkRows} />
               <OverviewTable heading="Economics" rows={economicsRows} />
             </div>
-            <p className="mt-4 text-xs text-[var(--text-subtle)]">
-              * Hashrate approximate, based on pool data. Data refreshes every
-              10 minutes.
-            </p>
           </FadeIn>
         </div>
       </section>
