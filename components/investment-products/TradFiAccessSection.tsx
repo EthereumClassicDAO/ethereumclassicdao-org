@@ -2,19 +2,19 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
 const brokerages = [
-  "Charles Schwab",
-  "Fidelity Investments",
-  "E*Trade (Morgan Stanley)",
-  "Interactive Brokers",
-  "Webull",
-  "OTC Markets Group",
+  { name: "Charles Schwab", tag: "IRA · Taxable" },
+  { name: "Fidelity Investments", tag: "IRA · Taxable" },
+  { name: "Interactive Brokers", tag: "IRA · Taxable" },
+  { name: "E*Trade (Morgan Stanley)", tag: "IRA · Taxable" },
+  { name: "Webull", tag: "Taxable · Commission-free" },
+  { name: "OTC Markets Group", tag: "Direct · OTCQX" },
 ];
 
 const dataSources = [
   { label: "Yahoo Finance", ticker: "ETCG" },
   { label: "Bloomberg", ticker: "ETCG:US" },
   { label: "Seeking Alpha", ticker: "ETCG" },
-  { label: "CNBC Quotes", ticker: "ETCG" },
+  { label: "CNBC", ticker: "ETCG" },
 ];
 
 export function TradFiAccessSection() {
@@ -24,63 +24,51 @@ export function TradFiAccessSection() {
       <section className="section-alt relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">
-              Where to Access ETCG Today
+            <p className="font-mono text-xs uppercase tracking-wider text-[var(--text-subtle)]">
+              Brokerage Access
+            </p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight">
+              No crypto account required
             </h2>
-            <p className="mt-3 text-base text-[var(--text-muted)]">
-              As an OTCQX-listed security, ETCG is available through most major
-              US brokerages, the same platforms used for equities and bonds.
+            <p className="mt-3 max-w-2xl text-base text-[var(--text-muted)]">
+              ETCG is an OTCQX-listed grantor trust. Search the ticker at your
+              existing brokerage — it trades alongside equities and ETFs.
+              IRA-eligible at major full-service platforms.
             </p>
           </FadeIn>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {/* Brokerages */}
-            <FadeIn>
-              <div className="lg:col-span-2">
-                <p className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)]">
-                  Available At
-                </p>
-                <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
-                  {brokerages.map((b, i) => (
-                    <FadeIn key={b} delay={i * 60}>
-                      <div className="rounded-lg border border-[var(--divider)] bg-[var(--bg-elevated)] px-4 py-3 text-sm font-medium">
-                        {b}
-                      </div>
-                    </FadeIn>
-                  ))}
+          {/* Brokerage grid */}
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
+            {brokerages.map((b, i) => (
+              <FadeIn key={b.name} delay={i * 60}>
+                <div className="rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] px-4 py-4 transition-colors hover:border-[var(--brand-green)]/20">
+                  <p className="text-sm font-semibold">{b.name}</p>
+                  <p className="mt-1.5 font-mono text-[10px] uppercase tracking-wide text-[var(--brand-green)]/60">
+                    {b.tag}
+                  </p>
                 </div>
-              </div>
-            </FadeIn>
-
-            {/* Data sources */}
-            <FadeIn delay={120}>
-              <div>
-                <p className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)]">
-                  Market Data
-                </p>
-                <div className="mt-4 space-y-3">
-                  {dataSources.map((d) => (
-                    <div
-                      key={d.label}
-                      className="flex items-center justify-between rounded-lg border border-[var(--divider)] bg-[var(--bg-elevated)] px-4 py-3"
-                    >
-                      <span className="text-sm font-medium">{d.label}</span>
-                      <span className="font-mono text-xs text-[var(--brand-green)]">
-                        {d.ticker}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </FadeIn>
+              </FadeIn>
+            ))}
           </div>
 
+          {/* Data providers strip */}
           <FadeIn>
-            <p className="mt-10 text-xs text-[var(--text-subtle)]">
-              ETCG is an OTC security. Availability varies by brokerage.
-              Confirm with your broker before investing. This is not investment
-              advice.
-            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-[var(--divider)] pt-6">
+              <span className="shrink-0 font-mono text-[10px] uppercase tracking-widest text-[var(--text-subtle)]">
+                Track on
+              </span>
+              {dataSources.map((d) => (
+                <span key={d.label} className="text-sm text-[var(--text-muted)]">
+                  {d.label}{" "}
+                  <span className="font-mono font-semibold text-[var(--brand-green)]">
+                    {d.ticker}
+                  </span>
+                </span>
+              ))}
+              <span className="ml-auto text-xs italic text-[var(--text-subtle)] opacity-60">
+                OTC security. Not investment advice.
+              </span>
+            </div>
           </FadeIn>
         </div>
       </section>
