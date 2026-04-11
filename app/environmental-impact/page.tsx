@@ -5,6 +5,7 @@ import { ETCUniquePositionSection } from "@/components/environmental-impact/ETCU
 import { StrandedEnergySection } from "@/components/environmental-impact/StrandedEnergySection";
 import { ETCAsEnergyMarketSection } from "@/components/environmental-impact/ETCAsEnergyMarketSection";
 import { MiningHardwareSection } from "@/components/environmental-impact/MiningHardwareSection";
+import { EquipmentSection } from "@/components/ecosystem/EquipmentSection";
 
 export const metadata: Metadata = {
   title: "Proof-of-Work as Energy Infrastructure",
@@ -21,6 +22,7 @@ export default function EnvironmentalImpactPage() {
       <StrandedEnergySection />
       <ETCAsEnergyMarketSection />
       <MiningHardwareSection />
+      <EquipmentSection />
     </main>
   );
 }
