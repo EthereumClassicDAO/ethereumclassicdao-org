@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { Accordion } from "@/components/ui/Accordion";
 
-export function WhatWeDoSection({ hashrateStr = "170 TH/s" }: { hashrateStr?: string }) {
+export function WhatWeDoSection({ hashrateStr }: { hashrateStr: string }) {
   const focusAreas = [
     {
       question: "Core Client Development",
@@ -42,7 +42,7 @@ export function WhatWeDoSection({ hashrateStr = "170 TH/s" }: { hashrateStr?: st
 
           <FadeIn delay={100}>
             <div className="mt-10">
-              <Accordion items={focusAreas} />
+              <Accordion items={focusAreas} defaultAllOpen />
             </div>
           </FadeIn>
         </div>
