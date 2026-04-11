@@ -7,6 +7,12 @@ import {
   Timer,
   ShieldCheck,
   Fingerprint,
+  Building2,
+  Cpu,
+  TrendingUp,
+  User,
+  Heart,
+  RotateCcw,
 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
@@ -43,6 +49,34 @@ const flowSteps = [
   { icon: Globe, label: "Ecosystem", sublabel: "Development funding" },
 ];
 
+const stakeholders = [
+  {
+    icon: Building2,
+    name: "Exchanges & Custodians",
+    path: "Direct on-chain contribution — no intermediaries, no overhead",
+  },
+  {
+    icon: Cpu,
+    name: "Mining Operations",
+    path: "Direct hashpower to the treasury address alongside block rewards",
+  },
+  {
+    icon: TrendingUp,
+    name: "Investment Product Issuers",
+    path: "ETCG holders and future product issuers fund via direct wallet or treasury address",
+  },
+  {
+    icon: User,
+    name: "Individual Holders",
+    path: "Any wallet worldwide can contribute — a single on-chain transaction",
+  },
+  {
+    icon: Heart,
+    name: "ETC Cooperative",
+    path: "US 501(c)(3) non-profit accepting tax-deductible donations in any amount",
+  },
+];
+
 export function TreasuryFundingSection() {
   return (
     <>
@@ -70,17 +104,8 @@ export function TreasuryFundingSection() {
                 voluntary on-chain donations, and mining rewards directed to
                 the treasury address. Futarchy prediction market activity
                 generates additional transaction volume that flows back into
-                the treasury as basefee revenue, creating a self-reinforcing
+                the treasury as basefee revenue — creating a self-reinforcing
                 funding loop alongside governance signal.
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                Any stakeholder, whether exchanges, custodians, miners,
-                investment product issuers, or institutions holding ETC on
-                behalf of fund shareholders, can contribute directly on-chain
-                with no overhead and no intermediaries. Stakeholders who prefer
-                a traditional giving model can contribute through the ETC
-                Cooperative, a US 501(c)(3) non-profit that accepts
-                tax-deductible donations.
               </p>
             </div>
           </FadeIn>
@@ -93,9 +118,10 @@ export function TreasuryFundingSection() {
               </p>
             </FadeIn>
 
-            {/* Desktop: horizontal */}
+            {/* Desktop: horizontal with feedback loop */}
             <div className="mt-6 hidden md:block">
               <div className="relative">
+                {/* Forward arrow */}
                 <div className="absolute top-6 left-10 right-10 h-px bg-[var(--divider)]" />
                 <div className="relative grid grid-cols-5 gap-2">
                   {flowSteps.map((step, i) => (
@@ -117,6 +143,15 @@ export function TreasuryFundingSection() {
                     </FadeIn>
                   ))}
                 </div>
+                {/* Feedback loop */}
+                <FadeIn delay={600}>
+                  <div className="mt-6 flex items-center justify-center gap-2 rounded-lg border border-dashed border-[var(--divider)] py-3 px-4">
+                    <RotateCcw size={13} className="text-[var(--brand-green)]" />
+                    <p className="text-xs text-[var(--text-subtle)]">
+                      Futarchy markets generate transaction volume → additional basefee → treasury — self-reinforcing
+                    </p>
+                  </div>
+                </FadeIn>
               </div>
             </div>
 
@@ -135,6 +170,43 @@ export function TreasuryFundingSection() {
                       <p className="text-sm font-semibold">{step.label}</p>
                       <p className="text-xs text-[var(--text-muted)]">
                         {step.sublabel}
+                      </p>
+                    </div>
+                  </div>
+                </FadeIn>
+              ))}
+              <FadeIn delay={500}>
+                <div className="flex items-start gap-3 rounded-lg border border-dashed border-[var(--divider)] p-3">
+                  <RotateCcw size={14} className="mt-0.5 shrink-0 text-[var(--brand-green)]" />
+                  <p className="text-xs text-[var(--text-subtle)]">
+                    Futarchy markets generate basefee revenue that feeds back into the treasury — self-reinforcing
+                  </p>
+                </div>
+              </FadeIn>
+            </div>
+          </div>
+
+          {/* Stakeholder contribution paths */}
+          <div className="mt-14">
+            <FadeIn>
+              <p className="text-sm font-mono uppercase tracking-widest text-[var(--text-subtle)]">
+                Who Can Contribute
+              </p>
+              <p className="mt-2 text-base font-semibold">
+                Every stakeholder has a direct path to the treasury
+              </p>
+            </FadeIn>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {stakeholders.map((s, i) => (
+                <FadeIn key={s.name} delay={i * 80}>
+                  <div className="flex gap-3 rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-4 transition-colors hover:border-[var(--border-glow)]">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
+                      <s.icon size={16} className="text-[var(--brand-green)]" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold">{s.name}</p>
+                      <p className="mt-1 text-xs leading-relaxed text-[var(--text-muted)]">
+                        {s.path}
                       </p>
                     </div>
                   </div>
@@ -196,6 +268,16 @@ export function TreasuryFundingSection() {
               </FadeIn>
             ))}
           </div>
+
+          <FadeIn delay={200}>
+            <p className="mt-10 text-sm leading-relaxed text-[var(--text-muted)]">
+              These protections are the foundation, not the ceiling. The
+              institutional stewardship that has backed Ethereum Classic through
+              every upgrade since 2016 — the ETC Cooperative, Grayscale, and
+              the broader development community — continues as active
+              participants in a system now open to every stakeholder worldwide.
+            </p>
+          </FadeIn>
         </div>
       </section>
     </>
