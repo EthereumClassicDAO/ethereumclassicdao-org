@@ -1,18 +1,21 @@
-// ETC network hashrate — current value + 7-day history
+// ETC network hashrate — current value + multi-timeframe history
 // ISR: revalidates at most once per hour (not per page request)
 // Sources:
 //   Current:  2miners /api/stats → nodes[0].networkhashps (H/s)
 //   History:  Blockscout /api/v2/blocks/{height} → difficulty / avg_block_time → TH/s
-//             Sampled every 12 hours over 7 days (14 requests, one per data point)
+//             14 sampled blocks per timeframe, all fetched in parallel at ISR build time
 
 const BLOCKSCOUT = "https://etc.blockscout.com/api/v2";
-const ETC_AVG_BLOCK_TIME_S = 13; // seconds
-const BLOCKS_PER_12H = Math.round((12 * 3600) / ETC_AVG_BLOCK_TIME_S); // ~3323
+const ETC_AVG_BLOCK_TIME_S = 13;
+
+export type TimePeriod = "week" | "month" | "year" | "all";
 
 export interface HashratePoint {
-  label: string; // "Apr 3", "Apr 3 12:00", etc.
+  label: string;
   hashrateTHs: number;
 }
+
+export type HashrateHistories = Record<TimePeriod, HashratePoint[]>;
 
 // ─── Current hashrate (2miners) ──────────────────────────────────────────────
 
@@ -25,23 +28,23 @@ const FALLBACK_THS = 210;
 export async function fetchHashrateTHs(): Promise<number> {
   try {
     const res = await fetch("https://etc.2miners.com/api/stats", {
-      next: { revalidate: 3600 }, // 1 hour cache — one API call per hour max
+      next: { revalidate: 3600 },
     });
     if (!res.ok) throw new Error(`2miners ${res.status}`);
     const data: TwoMinersStats = await res.json();
     const hps = parseFloat(data.nodes?.[0]?.networkhashps ?? "0");
     if (!hps) throw new Error("No hashrate data");
-    return Math.round((hps / 1e12) * 10) / 10; // H/s → TH/s, 1 decimal
+    return Math.round((hps / 1e12) * 10) / 10;
   } catch {
     return FALLBACK_THS;
   }
 }
 
-// ─── 7-day hashrate history (Blockscout blocks) ──────────────────────────────
+// ─── Historical hashrate (Blockscout blocks) ─────────────────────────────────
 
 interface BlockscoutBlock {
   difficulty: string;
-  timestamp: string; // ISO 8601
+  timestamp: string;
   height: number;
 }
 
@@ -49,16 +52,35 @@ interface BlockscoutStats {
   total_blocks: string;
 }
 
-function formatLabel(isoTimestamp: string): string {
+const NUM_POINTS = 14;
+
+// How many blocks span each timeframe
+const TIMEFRAME_BLOCKS: Record<TimePeriod, (currentHeight: number) => number> =
+  {
+    week: () => Math.round((7 * 24 * 3600) / ETC_AVG_BLOCK_TIME_S),
+    month: () => Math.round((30 * 24 * 3600) / ETC_AVG_BLOCK_TIME_S),
+    year: () => Math.round((365 * 24 * 3600) / ETC_AVG_BLOCK_TIME_S),
+    all: (h) => h, // genesis → now
+  };
+
+function formatLabel(isoTimestamp: string, period: TimePeriod): string {
   const d = new Date(isoTimestamp);
   const month = d.toLocaleString("en-US", { month: "short", timeZone: "UTC" });
   const day = d.getUTCDate();
+  const year = d.getUTCFullYear();
   const hours = d.getUTCHours();
-  // Only show time component for intra-day points
-  if (hours === 0 || hours === 12) {
+
+  if (period === "week") {
     return hours === 0 ? `${month} ${day}` : `${month} ${day} 12:00`;
   }
-  return `${month} ${day}`;
+  if (period === "month") {
+    return `${month} ${day}`;
+  }
+  if (period === "year") {
+    return `${month} '${String(year).slice(2)}`;
+  }
+  // all: show year + month for older points, year only for well-separated points
+  return `${month} '${String(year).slice(2)}`;
 }
 
 async function fetchBlock(height: number): Promise<BlockscoutBlock | null> {
@@ -73,32 +95,22 @@ async function fetchBlock(height: number): Promise<BlockscoutBlock | null> {
   }
 }
 
-export async function fetchHashrateHistory(): Promise<HashratePoint[]> {
-  // 1. Get current block height
-  let currentHeight: number;
-  try {
-    const res = await fetch(`${BLOCKSCOUT}/stats`, {
-      next: { revalidate: 3600 },
-    });
-    if (!res.ok) throw new Error(`stats ${res.status}`);
-    const data: BlockscoutStats = await res.json();
-    currentHeight = parseInt(data.total_blocks, 10);
-    if (!currentHeight) throw new Error("No block height");
-  } catch {
-    return [];
-  }
+async function fetchHashrateHistoryFor(
+  period: TimePeriod,
+  currentHeight: number,
+): Promise<HashratePoint[]> {
+  const totalBlocks = TIMEFRAME_BLOCKS[period](currentHeight);
+  const intervalBlocks = Math.floor(totalBlocks / (NUM_POINTS - 1));
 
-  // 2. Sample 14 blocks: current height stepping back by 12h intervals (7 days)
-  const NUM_POINTS = 14;
   const blocks = await Promise.all(
     Array.from({ length: NUM_POINTS }, (_, i) => {
-      const stepsBack = NUM_POINTS - 1 - i; // oldest first
-      const height = Math.max(1, currentHeight - stepsBack * BLOCKS_PER_12H);
+      // oldest first: i=0 is furthest back, i=13 is current
+      const stepsBack = NUM_POINTS - 1 - i;
+      const height = Math.max(1, currentHeight - stepsBack * intervalBlocks);
       return fetchBlock(height);
     }),
   );
 
-  // 3. Convert difficulty → TH/s
   const points: HashratePoint[] = [];
   for (const block of blocks) {
     if (!block) continue;
@@ -106,8 +118,37 @@ export async function fetchHashrateHistory(): Promise<HashratePoint[]> {
     if (!difficulty) continue;
     const hashrateTHs =
       Math.round((difficulty / ETC_AVG_BLOCK_TIME_S / 1e12) * 10) / 10;
-    points.push({ label: formatLabel(block.timestamp), hashrateTHs });
+    points.push({ label: formatLabel(block.timestamp, period), hashrateTHs });
+  }
+  return points;
+}
+
+// Fetches all four timeframes in parallel — called once at ISR build time
+export async function fetchAllHashrateHistories(): Promise<HashrateHistories> {
+  // Get current block height first
+  let currentHeight = 0;
+  try {
+    const res = await fetch(`${BLOCKSCOUT}/stats`, {
+      next: { revalidate: 3600 },
+    });
+    if (res.ok) {
+      const data: BlockscoutStats = await res.json();
+      currentHeight = parseInt(data.total_blocks, 10);
+    }
+  } catch {
+    /* fall through — empty histories */
   }
 
-  return points;
+  if (!currentHeight) {
+    return { week: [], month: [], year: [], all: [] };
+  }
+
+  const [week, month, year, all] = await Promise.all([
+    fetchHashrateHistoryFor("week", currentHeight),
+    fetchHashrateHistoryFor("month", currentHeight),
+    fetchHashrateHistoryFor("year", currentHeight),
+    fetchHashrateHistoryFor("all", currentHeight),
+  ]);
+
+  return { week, month, year, all };
 }

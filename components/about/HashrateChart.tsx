@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
   AreaChart,
   Area,
@@ -8,15 +9,25 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import type { HashratePoint } from "@/lib/api/hashrate";
+import type { HashrateHistories, TimePeriod } from "@/lib/api/hashrate";
 
 interface Props {
-  data: HashratePoint[];
+  histories: HashrateHistories;
   currentTHs: number;
 }
 
-export function HashrateChart({ data, currentTHs }: Props) {
-  if (data.length === 0) {
+const PERIODS: { key: TimePeriod; label: string }[] = [
+  { key: "week", label: "7D" },
+  { key: "month", label: "30D" },
+  { key: "year", label: "1Y" },
+  { key: "all", label: "All" },
+];
+
+export function HashrateChart({ histories, currentTHs }: Props) {
+  const [period, setPeriod] = useState<TimePeriod>("week");
+  const data = histories[period];
+
+  if (!data || data.length === 0) {
     return (
       <div className="flex h-40 items-center justify-center rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)]">
         <p className="text-xs text-[var(--text-subtle)]">
@@ -28,16 +39,33 @@ export function HashrateChart({ data, currentTHs }: Props) {
 
   const min = Math.min(...data.map((d) => d.hashrateTHs));
   const max = Math.max(...data.map((d) => d.hashrateTHs));
-  const pad = Math.max((max - min) * 0.15, 5);
+  const pad = Math.max((max - min) * 0.2, 5);
 
   return (
     <div className="mt-5 rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] px-4 pb-3 pt-4">
-      <div className="mb-3 flex items-center justify-between">
+      {/* Header row */}
+      <div className="mb-3 flex items-center justify-between gap-2">
         <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-subtle)]">
-          Network Hashrate — 7 days
+          Network Hashrate
         </p>
-        <p className="font-mono text-xs text-[var(--brand-green)]">TH/s</p>
+        {/* Period tabs */}
+        <div className="flex gap-0.5 rounded-lg border border-[var(--divider)] p-0.5">
+          {PERIODS.map(({ key, label }) => (
+            <button
+              key={key}
+              onClick={() => setPeriod(key)}
+              className={`rounded-md px-2.5 py-1 font-mono text-[10px] transition-colors duration-150 ${
+                period === key
+                  ? "bg-[var(--brand-green)] text-black font-semibold"
+                  : "text-[var(--text-subtle)] hover:text-[var(--text-muted)]"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
       </div>
+
       <ResponsiveContainer width="100%" height={120}>
         <AreaChart data={data} margin={{ top: 4, right: 0, left: 0, bottom: 0 }}>
           <defs>
