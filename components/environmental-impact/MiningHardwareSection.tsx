@@ -114,6 +114,27 @@ export function MiningHardwareSection() {
               </p>
             </div>
           </FadeIn>
+
+          <FadeIn delay={160}>
+            <div className="mt-4 rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-5">
+              <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
+                Mined in America Act
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
+                The Mined in America Act establishes a voluntary federal
+                certification program for domestic digital asset mining
+                operations, directs NIST and the Manufacturing Extension
+                Partnership to support US manufacturing of mining equipment,
+                and provides certified operations with access to existing
+                federal energy and rural development programs. A Treasury
+                procurement channel and capital gains exemption apply to
+                certified Bitcoin miners. The certification framework, domestic
+                hardware manufacturing support, and energy infrastructure
+                provisions apply to all Proof-of-Work mining &mdash; including
+                the ETChash operations securing Ethereum Classic&apos;s network.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
     </>
