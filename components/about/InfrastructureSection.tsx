@@ -7,7 +7,8 @@ import {
 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
-import { fetchHashrateTHs } from "@/lib/api/hashrate";
+import { fetchHashrateTHs, fetchHashrateHistory } from "@/lib/api/hashrate";
+import { HashrateChart } from "@/components/about/HashrateChart";
 
 const infrastructure = [
   {
@@ -37,7 +38,10 @@ const infrastructure = [
 ];
 
 export async function InfrastructureSection() {
-  const hashrateTHs = await fetchHashrateTHs();
+  const [hashrateTHs, hashrateHistory] = await Promise.all([
+    fetchHashrateTHs(),
+    fetchHashrateHistory(),
+  ]);
   const hashrateDisplay = `${hashrateTHs.toFixed(1)} TH/s`;
 
   return (
@@ -65,6 +69,7 @@ export async function InfrastructureSection() {
               GPU and ASIC compatible, securing the only Proof-of-Work network
               with native smart contracts
             </p>
+            <HashrateChart data={hashrateHistory} currentTHs={hashrateTHs} />
           </FadeIn>
 
           <FadeIn>
