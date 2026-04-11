@@ -130,7 +130,7 @@ const upgrades: Upgrade[] = [
     ecip: "ECIP-1017",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1017",
     eips: [],
-    keyChanges: ["5M20 era system", "210,700,000 max supply", "20% reduction per era", "Sound fixed monetary policy"],
+    keyChanges: ["5M20 era system", "210,700,000 max supply", "20% reduction per era", "Sound fixed monetary policy", "First PoW EVM with programmable monetary policy"],
     description:
       "Established ETC's fixed monetary policy: the 5M20 era system with a 210,700,000 maximum supply. Block rewards reduce 20% every 5,000,000 blocks — sound, predictable, immutable.",
     status: "complete",
@@ -299,7 +299,7 @@ const upgrades: Upgrade[] = [
       "EIP-7935",
       "EIP-7951",
     ],
-    keyChanges: ["EIP-1559 fee market (ECIP-1111)", "Protocol treasury (ECIP-1112)", "Fusaka EVM alignment (ECIP-1121)", "DAO governance: core dev, infrastructure, security", "Futarchy markets: open public participation", "First PoW EVM with programmable fiscal policy"],
+    keyChanges: ["EIP-1559 fee market (ECIP-1111)", "Protocol treasury (ECIP-1112)", "Fusaka EVM alignment (ECIP-1121)", "DAO governance: core dev, infrastructure, security", "Futarchy markets: open public participation"],
     description:
       "ETC's most significant upgrade — EVM alignment to Fusaka, incorporating EIPs spanning London, Dencun, Pectra, and Fusaka. Introduces EIP-1559 fee market with basefee directed to a protocol treasury. On-chain DAO governance scoped to core client software, critical infrastructure, and network security. Open futarchy prediction markets let anyone stake on protocol outcomes without membership and earn rewards for accurate predictions.",
     status: "upcoming",
