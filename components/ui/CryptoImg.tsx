@@ -5,10 +5,16 @@
 const CDN =
   "https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/svg/color";
 
+// Per-symbol overrides for tokens not in spothq/cryptocurrency-icons
+const OVERRIDES: Record<string, string> = {
+  cake: "https://cryptologos.cc/logos/pancakeswap-cake-logo.svg",
+  busd: "https://cryptologos.cc/logos/binance-usd-busd-logo.svg",
+};
+
 // Symbols known to exist in spothq/cryptocurrency-icons
 const KNOWN: Set<string> = new Set([
-  "btc", "eth", "usdt", "usdc", "busd", "bnb", "xrp", "doge",
-  "uni", "ltc", "cake", "etc", "ada", "sol", "dot", "avax",
+  "btc", "eth", "usdt", "usdc", "bnb", "xrp", "doge",
+  "uni", "ltc", "etc", "ada", "sol", "dot", "avax",
   "matic", "link", "dai", "shib", "trx", "atom",
 ]);
 
@@ -20,6 +26,20 @@ interface Props {
 
 export function CryptoImg({ symbol, size = 20, className = "" }: Props) {
   const lower = symbol.toLowerCase();
+  const overrideUrl = OVERRIDES[lower];
+  if (overrideUrl) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={overrideUrl}
+        alt=""
+        aria-hidden="true"
+        width={size}
+        height={size}
+        className={`shrink-0 rounded-full ${className}`.trim()}
+      />
+    );
+  }
   if (!KNOWN.has(lower)) {
     // Muted monogram fallback for unlisted tokens (e.g. FDUSD)
     return (
