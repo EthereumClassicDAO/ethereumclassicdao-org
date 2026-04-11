@@ -9,7 +9,7 @@ const CDN =
 // URLs sourced from CoinGecko CDN (coin-images.coingecko.com)
 const OVERRIDES: Record<string, string> = {
   cake: "https://coin-images.coingecko.com/coins/images/12632/small/pancakeswap-cake-logo_%281%29.png?1696512440",
-  busd: "https://coin-images.coingecko.com/coins/images/9576/small/BUSDLOGO.jpg?1696509654",
+  busd: "https://coin-images.coingecko.com/coins/images/31273/small/new_binance-peg-busd.png?1696530096",
   fdusd: "https://coin-images.coingecko.com/coins/images/31079/small/FDUSD_icon_black.png?1731097953",
 };
 
