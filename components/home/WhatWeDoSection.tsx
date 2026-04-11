@@ -9,7 +9,7 @@ export function WhatWeDoSection({ hashrateStr }: { hashrateStr: string }) {
     {
       question: "Core Client Development",
       answer:
-        "We maintain and coordinate the client software that runs the Ethereum Classic network. Multiple independent client implementations — core-geth, Besu, and Fukuii — ensure no single point of failure in the protocol stack. We coordinate network upgrades to maintain EVM protocol parity with Ethereum, so every Solidity contract, development tool, and institutional integration built for the EVM works on Ethereum Classic without modification. The Olympia upgrade brings EIP-1559 basefee, the BASEFEE opcode, and protocol-funded governance to ETC, completing the EVM compatibility surface.",
+        "We maintain and coordinate the client software that runs the Ethereum Classic network. Multiple independent implementations ensure no single point of failure in the protocol stack. We coordinate network upgrades to maintain EVM protocol parity with Ethereum, so every Solidity contract, development tool, and institutional integration built for the EVM works on Ethereum Classic without modification. The Olympia upgrade brings EIP-1559 basefee, the BASEFEE opcode, and protocol-funded governance to ETC, completing the EVM compatibility surface.",
     },
     {
       question: "Critical Infrastructure",
