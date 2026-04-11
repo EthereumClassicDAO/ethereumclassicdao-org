@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { fetchEtcStats } from "@/lib/api/etc-stats";
+import { fetchHashrateTHs } from "@/lib/api/hashrate";
 import { MissionSection } from "@/components/home/MissionSection";
 
 export const metadata: Metadata = {
@@ -16,14 +17,15 @@ import { OlympiaEcosystemSection } from "@/components/home/OlympiaEcosystemSecti
 import { GovernanceProcessSection } from "@/components/home/GovernanceProcessSection";
 
 export default async function Home() {
-  const stats = await fetchEtcStats();
+  const [stats, hashrateTHs] = await Promise.all([fetchEtcStats(), fetchHashrateTHs()]);
+  const hashrateStr = `${Math.round(hashrateTHs)} TH/s`;
 
   return (
     <main>
       <MissionSection />
       <NetworkStatsSection stats={stats} />
       <HowWeHelpSection />
-      <WhatWeDoSection />
+      <WhatWeDoSection hashrateStr={hashrateStr} />
       <OlympiaEcosystemSection />
       <GovernanceProcessSection />
     </main>

@@ -1,14 +1,19 @@
 import { Pickaxe } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { fetchHashrateTHs, fetchAllHashrateHistories } from "@/lib/api/hashrate";
+import { HashrateChart } from "@/components/about/HashrateChart";
 
-const stats = [
-  { value: "170+", unit: "TH/s", label: "Network Hashrate" },
-  { value: "ETCHash", label: "Mining Algorithm" },
-  { value: "GPU + ASIC", label: "Compatible Hardware" },
-];
-
-export function MiningSection() {
+export async function MiningSection() {
+  const [hashrateTHs, hashrateHistories] = await Promise.all([
+    fetchHashrateTHs(),
+    fetchAllHashrateHistories(),
+  ]);
+  const stats = [
+    { value: `${hashrateTHs.toFixed(1)}`, unit: "TH/s", label: "Network Hashrate" },
+    { value: "ETCHash", label: "Mining Algorithm" },
+    { value: "GPU + ASIC", label: "Compatible Hardware" },
+  ];
   return (
     <>
       <SectionDivider />
@@ -70,6 +75,10 @@ export function MiningSection() {
                 GPU and ASIC mining supported via the ETCHash algorithm.
               </p>
             </div>
+          </FadeIn>
+
+          <FadeIn delay={380}>
+            <HashrateChart histories={hashrateHistories} currentTHs={hashrateTHs} />
           </FadeIn>
         </div>
       </section>

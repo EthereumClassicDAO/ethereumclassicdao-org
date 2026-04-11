@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { ExternalLink } from "lucide-react";
+import { fetchHashrateTHs, fetchAllHashrateHistories } from "@/lib/api/hashrate";
+import { HashrateChart } from "@/components/about/HashrateChart";
 
 export const metadata: Metadata = {
   title: "Client Implementations",
@@ -69,7 +71,12 @@ const plugins = [
   },
 ];
 
-export default function ClientsPage() {
+export default async function ClientsPage() {
+  const [hashrateTHs, hashrateHistories] = await Promise.all([
+    fetchHashrateTHs(),
+    fetchAllHashrateHistories(),
+  ]);
+
   return (
     <main>
       <section className="hero-gradient relative pt-32 pb-16">
@@ -85,6 +92,21 @@ export default function ClientsPage() {
               Multi-client architecture following best practices in client execution
               and enterprise-grade features.
             </p>
+          </FadeIn>
+          <FadeIn delay={180}>
+            <div className="mx-auto mt-8 max-w-2xl">
+              <div className="mb-3 flex items-end justify-center gap-3">
+                <p className="text-3xl font-bold font-mono text-[var(--brand-green)]">
+                  {hashrateTHs.toFixed(1)}{" "}
+                  <span className="text-base font-normal">TH/s</span>
+                </p>
+                <span className="mb-0.5 inline-flex items-center gap-1.5 rounded-full border border-[var(--brand-green)]/30 bg-[var(--brand-green)]/10 px-2.5 py-1 font-mono text-[10px] text-[var(--brand-green)]">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" />
+                  Live
+                </span>
+              </div>
+              <HashrateChart histories={hashrateHistories} currentTHs={hashrateTHs} />
+            </div>
           </FadeIn>
         </div>
       </section>
