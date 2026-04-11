@@ -29,10 +29,10 @@ export function WhatWeDoSection({ hashrateStr = "170 TH/s" }: { hashrateStr?: st
   return (
     <>
       <SectionDivider />
-      <section className="section-deep py-28">
+      <section aria-labelledby="what-we-do-heading" className="section-deep py-28">
         <div className="mx-auto max-w-3xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">What We Do</h2>
+            <h2 id="what-we-do-heading" className="text-3xl font-bold tracking-tight">What We Do</h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Building everything Ethereum Classic needs for global adoption:
               from the core protocol to the infrastructure and regulatory

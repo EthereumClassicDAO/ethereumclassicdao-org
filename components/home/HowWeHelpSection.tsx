@@ -34,10 +34,10 @@ export async function HowWeHelpSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-gradient geo-lines relative py-28">
+      <section aria-labelledby="how-we-help-heading" className="section-gradient geo-lines relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 id="how-we-help-heading" className="text-3xl font-bold tracking-tight">
               How We Help
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
@@ -54,6 +54,7 @@ export async function HowWeHelpSection() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                     <p.icon
                       size={20}
+                      aria-hidden="true"
                       className="text-[var(--brand-green)]"
                     />
                   </div>

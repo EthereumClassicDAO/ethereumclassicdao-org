@@ -135,13 +135,13 @@ export async function NetworkStatsSection({ stats }: { stats: EtcStats }) {
   return (
     <>
       <SectionDivider variant="strong" />
-      <section className="section-deep py-24">
+      <section aria-labelledby="ethereum-classic-network-heading" className="section-deep py-24">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
               Overview
             </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight">
+            <h2 id="ethereum-classic-network-heading" className="mt-3 text-3xl font-bold tracking-tight">
               Ethereum Classic Network
             </h2>
             <p className="mt-3 mb-10 text-sm text-[var(--text-muted)]">

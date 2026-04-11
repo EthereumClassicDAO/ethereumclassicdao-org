@@ -33,10 +33,10 @@ export function PrinciplesSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-gradient py-28">
+      <section aria-labelledby="organizational-principles-heading" className="section-gradient py-28">
         <div className="mx-auto max-w-3xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 id="organizational-principles-heading" className="text-3xl font-bold tracking-tight">
               Organizational Principles
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">

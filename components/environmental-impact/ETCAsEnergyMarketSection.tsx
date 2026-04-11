@@ -49,13 +49,13 @@ export function ETCAsEnergyMarketSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-gradient relative py-28">
+      <section aria-labelledby="etc-usd-a-global-24-7-energy-proxy-heading" className="section-gradient relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
             <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
               Price Discovery
             </p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight">
+            <h2 id="etc-usd-a-global-24-7-energy-proxy-heading" className="mt-2 text-3xl font-bold tracking-tight">
               ETC/USD: A Global 24/7 Energy Proxy
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">

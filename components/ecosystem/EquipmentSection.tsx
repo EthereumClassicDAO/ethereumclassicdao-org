@@ -84,10 +84,10 @@ export function EquipmentSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-gradient geo-lines relative py-28">
+      <section aria-labelledby="mining-equipment-heading" className="section-gradient geo-lines relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 id="mining-equipment-heading" className="text-3xl font-bold tracking-tight">
               Mining Equipment
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">

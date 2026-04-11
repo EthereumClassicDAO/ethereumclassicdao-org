@@ -27,10 +27,10 @@ export function FutureIssuersSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-gradient relative py-28">
+      <section aria-labelledby="the-investment-product-landscape-heading" className="section-gradient relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 id="the-investment-product-landscape-heading" className="text-3xl font-bold tracking-tight">
               The Investment Product Landscape
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">

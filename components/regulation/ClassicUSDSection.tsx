@@ -35,13 +35,13 @@ export function ClassicUSDSection() {
   return (
     <>
       <SectionDivider variant="strong" />
-      <section className="section-deep relative py-28">
+      <section aria-labelledby="classic-usd-the-definitive-regulated-stablecoin-on-ethereum-classic-heading" className="section-deep relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
             <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
               Regulated Stablecoin
             </p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight">
+            <h2 id="classic-usd-the-definitive-regulated-stablecoin-on-ethereum-classic-heading" className="mt-2 text-3xl font-bold tracking-tight">
               Classic USD: The Definitive Regulated Stablecoin on Ethereum
               Classic
             </h2>

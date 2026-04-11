@@ -37,7 +37,7 @@ const reportTypes = [
 
 export function ReportsSection() {
   return (
-    <section className="hero-gradient noise-overlay relative pt-32 pb-20">
+    <section aria-labelledby="reporting-framework-heading" className="hero-gradient noise-overlay relative pt-32 pb-20">
       <div className="relative z-10 mx-auto max-w-3xl px-6">
         <FadeIn>
           <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
@@ -54,7 +54,7 @@ export function ReportsSection() {
         </FadeIn>
 
         <FadeIn>
-          <h2 className="mt-12 text-xl font-bold">Reporting Framework</h2>
+          <h2 id="reporting-framework-heading" className="mt-12 text-xl font-bold">Reporting Framework</h2>
         </FadeIn>
 
         <div className="mt-8 space-y-3">

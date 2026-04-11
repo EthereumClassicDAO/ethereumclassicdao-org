@@ -64,10 +64,10 @@ export function FAQSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-gradient py-28">
+      <section aria-labelledby="frequently-asked-questions-heading" className="section-gradient py-28">
         <div className="mx-auto max-w-3xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 id="frequently-asked-questions-heading" className="text-3xl font-bold tracking-tight">
               Frequently Asked Questions
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">

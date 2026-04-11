@@ -81,10 +81,10 @@ export function TreasuryFundingSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-gradient geo-lines relative py-28">
+      <section aria-labelledby="treasury-funding-heading" className="section-gradient geo-lines relative py-28">
         <div className="relative z-10 mx-auto max-w-4xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 id="treasury-funding-heading" className="text-3xl font-bold tracking-tight">
               Treasury Funding
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
@@ -232,7 +232,7 @@ export function TreasuryFundingSection() {
           {/* Safeguards */}
           <FadeIn>
             <div className="mt-20">
-              <h2 className="text-3xl font-bold tracking-tight">Safeguards</h2>
+              <h2 id="safeguards-heading" className="text-3xl font-bold tracking-tight">Safeguards</h2>
               <p className="mt-3 text-base text-[var(--text-muted)]">
                 Built-in protections that keep governance secure and compliant.
               </p>

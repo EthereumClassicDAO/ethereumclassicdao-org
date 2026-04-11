@@ -45,10 +45,10 @@ export async function ETCUniquePositionSection() {
   return (
     <>
       <SectionDivider />
-      <section className="section-gradient relative py-28">
+      <section aria-labelledby="the-largest-proof-of-work-network-with-native-smart-contracts-heading" className="section-gradient relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 className="text-3xl font-bold tracking-tight">
+            <h2 id="the-largest-proof-of-work-network-with-native-smart-contracts-heading" className="text-3xl font-bold tracking-tight">
               The Largest Proof-of-Work Network with Native Smart Contracts
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
