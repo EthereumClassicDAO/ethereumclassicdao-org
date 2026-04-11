@@ -11,6 +11,7 @@ const OVERRIDES: Record<string, string> = {
   cake: "https://coin-images.coingecko.com/coins/images/12632/small/pancakeswap-cake-logo_%281%29.png?1696512440",
   busd: "https://coin-images.coingecko.com/coins/images/31273/small/new_binance-peg-busd.png?1696530096",
   fdusd: "https://coin-images.coingecko.com/coins/images/31079/small/FDUSD_icon_black.png?1731097953",
+  usc: "https://coin-images.coingecko.com/coins/images/37725/small/logo.png?1715334043",
 };
 
 // Tokens whose CoinGecko logo is dark-on-transparent — wrap in white bg to show on dark sites
