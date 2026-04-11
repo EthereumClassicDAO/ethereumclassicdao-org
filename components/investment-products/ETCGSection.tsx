@@ -158,6 +158,49 @@ export async function ETCGSection() {
             </div>
           </FadeIn>
 
+          {/* Discount / premium context */}
+          {premium !== null && (
+            <FadeIn delay={140}>
+              <div className="mt-4 rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-5">
+                <p className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)]">
+                  {premium < 0 ? "Discount Context" : "Premium Context"}
+                </p>
+                {premium < 0 ? (
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
+                    ETCG historically traded at premiums as high as 458% during
+                    the trust&apos;s early years when supply was constrained and
+                    institutional demand was high. The current{" "}
+                    <span className="font-semibold text-red-400">
+                      {premiumLabel}
+                    </span>{" "}
+                    discount reflects the absence of an active redemption
+                    mechanism — not a change in the underlying asset. ETF
+                    conversion restores NAV parity by introducing the
+                    create/redeem arbitrage that closes the gap. GBTC converted
+                    at a similar discount in January 2024. ETHE followed in July
+                    2024. Active protocol development and a credible ETF
+                    conversion pipeline are the primary catalysts for discount
+                    compression in closed-end digital asset trusts. Olympia is
+                    the most significant ETC protocol upgrade in the network&apos;s
+                    history.
+                  </p>
+                ) : (
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
+                    ETCG is trading at a{" "}
+                    <span className="font-semibold text-[var(--brand-green)]">
+                      {premiumLabel}
+                    </span>{" "}
+                    premium to NAV. Trust-phase premiums reflect constrained
+                    supply relative to institutional demand — the same dynamic
+                    GBTC and ETHE experienced before ETF conversion. No
+                    redemption mechanism exists; premium or discount is
+                    determined entirely by secondary market supply and demand.
+                  </p>
+                )}
+              </div>
+            </FadeIn>
+          )}
+
           {/* Mechanics — 3-col */}
           <div className="mt-4 grid gap-4 sm:grid-cols-3">
             {mechanics.map((m, i) => (
