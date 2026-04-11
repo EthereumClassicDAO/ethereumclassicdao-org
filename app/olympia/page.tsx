@@ -234,12 +234,12 @@ export default function UpgradePage() {
             </h1>
           </FadeIn>
           <FadeIn delay={100}>
-            <p className="text-lg text-[var(--text-muted)]">
+            <p className="mx-auto max-w-3xl text-lg text-[var(--text-muted)]">
               The Olympia era marks a shift from reactive maintenance to active
               development on the longest-running EVM and the only Proof-of-Work
               smart contract platform in the world.
             </p>
-            <ul className="mt-6 space-y-3 text-left text-sm text-[var(--text-muted)]">
+            <ul className="mx-auto mt-6 max-w-3xl space-y-3 text-left text-sm text-[var(--text-muted)]">
               <li className="flex gap-3">
                 <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
                 <span><span className="font-semibold text-white">EIP-1559 fee market:</span> the most widely adopted transaction type in the EVM ecosystem, bringing predictable gas pricing and modern tooling compatibility</span>
