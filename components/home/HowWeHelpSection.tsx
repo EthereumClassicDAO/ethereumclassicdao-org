@@ -1,11 +1,8 @@
 import { Vote, GitBranch, Pickaxe, Scale } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
-import { fetchHashrateTHs } from "@/lib/api/hashrate";
 
-export async function HowWeHelpSection() {
-  const hashrateTHs = await fetchHashrateTHs();
-  const hashrateStr = `${Math.round(hashrateTHs)} TH/s`;
+export function HowWeHelpSection({ hashrateStr }: { hashrateStr: string }) {
 
   const pillars = [
     {

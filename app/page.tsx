@@ -23,8 +23,8 @@ export default async function Home() {
   return (
     <main>
       <MissionSection />
-      <NetworkStatsSection stats={stats} />
-      <HowWeHelpSection />
+      <NetworkStatsSection stats={stats} hashrateTHs={hashrateTHs} />
+      <HowWeHelpSection hashrateStr={hashrateStr} />
       <WhatWeDoSection hashrateStr={hashrateStr} />
       <OlympiaEcosystemSection />
       <GovernanceProcessSection />
