@@ -44,7 +44,7 @@ export function FutureIssuersSection() {
             {/* Bitcoin ETF issuers */}
             <FadeIn delay={80}>
               <div>
-                <p className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)]">
+                <p className="text-xs font-mono uppercase tracking-wider text-[#F97316]">
                   Bitcoin ETF Issuers (10)
                 </p>
                 <div className="mt-4 space-y-2">
@@ -73,7 +73,7 @@ export function FutureIssuersSection() {
             {/* Ethereum ETF issuers */}
             <FadeIn delay={160}>
               <div>
-                <p className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)]">
+                <p className="text-xs font-mono uppercase tracking-wider text-[#8B5CF6]">
                   Ethereum ETF Issuers (6)
                 </p>
                 <div className="mt-4 space-y-2">
