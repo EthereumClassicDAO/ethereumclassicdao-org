@@ -556,7 +556,7 @@ export default function UpgradePage() {
 
       {/* FAQ */}
       <section className="section-gradient py-16 px-6">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-3xl">
           <FadeIn>
             <h2 className="mb-2 text-2xl font-bold tracking-tight">
               Frequently Asked Questions
