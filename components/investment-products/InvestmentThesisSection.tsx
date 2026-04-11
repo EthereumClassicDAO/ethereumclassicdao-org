@@ -1,7 +1,15 @@
+import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
-const thesisPoints = [
+type ThesisPoint = {
+  number: string;
+  title: string;
+  body: string;
+  link?: { href: string; label: string };
+};
+
+const thesisPoints: ThesisPoint[] = [
   {
     number: "01",
     title: "Regulatory Clarity",
@@ -25,7 +33,8 @@ const thesisPoints = [
   {
     number: "05",
     title: "Deepest PoW Smart Contract Liquidity",
-    body: "300+ exchanges, 17 fiat currency pairs, accessible GPU mining hardware at retail, and institutional ASIC infrastructure. The only Proof-of-Work network with native smart contract capability at this depth of market access.",
+    body: "300+ exchanges across every time zone, GPU mining hardware accessible at retail, and institutional ASIC infrastructure. ETC/USD has operated as a continuous 24/7 spot market since 2016 — the longest-running fiat price discovery mechanism of any programmable blockchain. Fiat pairs span 17 currencies across Americas, Europe, Asia-Pacific, the Middle East, and emerging markets.",
+    link: { href: "/environmental-impact", label: "See all 17 currency pairs →" },
   },
 ];
 
@@ -57,6 +66,14 @@ export function InvestmentThesisSection() {
                     <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
                       {p.body}
                     </p>
+                    {p.link && (
+                      <Link
+                        href={p.link.href}
+                        className="mt-2 inline-block text-xs font-medium text-[var(--brand-green)] transition-opacity hover:opacity-70"
+                      >
+                        {p.link.label}
+                      </Link>
+                    )}
                   </div>
                 </div>
               </FadeIn>
