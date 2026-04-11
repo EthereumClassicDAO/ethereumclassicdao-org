@@ -21,9 +21,9 @@ export function WhatWeDoSection({ hashrateStr }: { hashrateStr: string }) {
       answer: `${hashrateStr} of mining infrastructure secures the largest Proof-of-Work network with native smart contracts. The Olympia treasury is primarily funded through EIP-1559 basefee (a value that was previously set to be destroyed), alongside voluntary contributions. Block rewards and tips remain completely untouched. Miners receive everything they do today; the protocol simply redirects what was already being discarded into a governed treasury. GPU and ASIC compatible: dual-compatibility diversifies miner composition and reduces supply chain risk.`,
     },
     {
-      question: "US Regulatory Compliance",
+      question: "Regulatory Profile",
       answer:
-        "Wyoming DAO LLC structure provides the legal framework for on-chain governance and US regulatory compliance. ETC is positioned for digital commodity classification under the CLARITY Act, while the GENIUS Act creates a pathway for regulated stablecoins, enabling a compliant ecosystem of digital assets on Ethereum Classic.",
+        "Ethereum Classic sits at the intersection of every major regulatory classification. CLARITY Act (pending Senate): ETC qualifies as a digital commodity — no pre-mine, no foundation, Proof-of-Work consensus, no central issuer. GENIUS Act (signed July 2025): Classic USD ($USC) is the first GENIUS Act-aligned stablecoin deployed on ETC, issued by Brale Inc. under US money transmission licensing with 1:1 reserves. MiCA (in force Dec 2024): no central issuer means ETC is exempt from ART and EMT obligations; tradable on all 27 EU member state CASP-authorized platforms from day one. Japan FSA Green List: ETC is a recognized crypto-asset, eligible for trading by licensed Japanese exchanges. Mined in America Act: establishes voluntary federal certification for domestic PoW mining and directs NIST to support US ASIC manufacturing, recognizing Proof-of-Work mining as domestic energy infrastructure. Wyoming DAO LLC provides the legal framework for on-chain governance and US reporting obligations.",
     },
   ];
   return (
