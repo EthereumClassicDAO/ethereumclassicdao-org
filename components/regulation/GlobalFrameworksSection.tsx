@@ -6,13 +6,14 @@ const regions = [
   {
     region: "United States",
     flag: "🇺🇸",
-    framework: "GENIUS Act · CLARITY Act · OCC Trust Charters",
+    framework: "GENIUS Act · CLARITY Act · OCC Trust Charters · Mined in America Act",
     effective: "July 2025",
     keyRules: [
       "Stablecoin reserves 1:1 liquid assets (GENIUS Act, signed Jul 18, 2025)",
       "SEC/CFTC jurisdictional perimeter clarified for digital commodities",
       "OCC approved national trust bank charters for digital asset custody",
       "FDIC framework for bank-issued payment stablecoins under development",
+      "Mined in America Act: voluntary federal certification for domestic PoW mining; NIST support for US ASIC manufacturing; federal energy program access for certified Proof-of-Work operations",
     ],
   },
   {

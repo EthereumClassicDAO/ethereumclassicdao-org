@@ -101,11 +101,14 @@ ETC is a qualifying EVM for GENIUS Act-compliant stablecoin deployment. Classic 
 **MiCA (European Union) — Decentralized Asset**
 No central issuer means ETC is exempt from ART/EMT issuer requirements under MiCA. ETC may be traded by MiCA-licensed CASPs without per-asset approval. Decentralized Proof-of-Work removes any single point of regulatory failure.
 
+**Mined in America Act (United States) — Domestic Mining Infrastructure**
+Establishes a voluntary "Mined in America" certification program for domestic PoW mining operations. Directs NIST and the Manufacturing Extension Partnership to support US manufacturing of mining hardware. Provides certified mining operations with access to existing federal energy and rural development programs. The Treasury procurement channel and capital gains exemption for certified miners are Bitcoin-specific. The certification framework, domestic hardware manufacturing support, and energy program access apply to all Proof-of-Work mining, including the ETChash operations securing Ethereum Classic's network.
+
 **FSA Green List (Japan)**
 ETC is a recognized crypto-asset on Japan's Financial Services Agency Green List, enabling fast-track listing across all JVCEA-regulated Japanese exchanges.
 
 **Global Regulatory Wave (2025–2026)**
-- United States: GENIUS Act + CLARITY Act + OCC Trust Charters
+- United States: GENIUS Act + CLARITY Act + OCC Trust Charters + Mined in America Act
 - European Union: MiCA (fully applied Dec 30, 2024; hard cutoff Jul 1, 2026) — CASP licensing, EMT/ART stablecoin rules
 - United Kingdom: FSMA Cryptoassets Regulations 2026 — 14 regulated activities, FCA + BoE dual stablecoin oversight
 - Asia-Pacific: Japan PSA, Hong Kong Stablecoins Ordinance, Australia AFSL, Singapore MAS — 1:1 fiat-backed stablecoins, VASP licensing
@@ -143,7 +146,7 @@ Ethereum Classic's Proof-of-Work network functions as a global, 24/7, permission
 
 **Dirty Coin documentary:** Directed by Alana Mediavilla, filmed over three years across four continents from rural Texas to the mountains of Malawi. Documents how Proof-of-Work mining reshapes energy economics and creates socio-economic opportunity in communities the traditional grid has never reached. Winner, Best National Documentary, Puerto Rico Film Festival 2025. See dirtycointhemovie.com.
 
-**Hardware:** GPU mining (retail accessible worldwide, any gaming PC can participate) and purpose-built ETChash ASIC hardware (institutional scale). ETC is the only smart contract platform with both retail GPU accessibility and institutional ASIC infrastructure — the widest mining participation curve of any programmable blockchain.
+**Hardware:** GPU mining (retail accessible worldwide, any gaming PC can participate) and purpose-built ETChash ASIC hardware (institutional scale). ETC is the only smart contract platform with both retail GPU accessibility and institutional ASIC infrastructure — the widest mining participation curve of any programmable blockchain. The Mined in America Act establishes a voluntary federal certification program for domestic PoW mining and directs NIST to support domestic ASIC manufacturing — legislative recognition that the US government views Proof-of-Work mining as domestic energy infrastructure worth protecting and growing.
 
 ## Institutional Stewardship
 
