@@ -7,16 +7,16 @@ const stages = [
     title: "Closed-End Trust (OTCQX)",
     description:
       "Private placement creates shares → 6-month lock-up → shares trade on OTCQX. No redemption program. Price deviates from NAV.",
-    status: "ETCG is here",
-    badgeClass: "badge-available",
+    status: "ETCG complete · May 2018",
+    badgeClass: "badge-complete",
   },
   {
     stage: "Stage 2",
     title: "SEC Reporting & Institutional Adoption",
     description:
       "Annual 10-K and quarterly 10-Q filings. Eligible for IRA and brokerage accounts. Broad TradFi distribution. Institutional accumulation phase.",
-    status: "ETCG complete since ~2021",
-    badgeClass: "badge-active",
+    status: "ETCG complete · since ~2021",
+    badgeClass: "badge-complete",
   },
   {
     stage: "Stage 3",
