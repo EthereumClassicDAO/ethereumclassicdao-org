@@ -566,7 +566,7 @@ export default function UpgradePage() {
             </p>
           </FadeIn>
           <FadeIn delay={80}>
-            <Accordion items={faqItems} />
+            <Accordion items={faqItems} defaultAllOpen />
           </FadeIn>
         </div>
       </section>
