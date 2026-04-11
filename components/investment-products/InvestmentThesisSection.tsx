@@ -54,6 +54,18 @@ export function InvestmentThesisSection() {
             </p>
           </FadeIn>
 
+          <FadeIn delay={80}>
+            <div className="mt-8 rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] p-6">
+              <p className="text-sm font-semibold leading-relaxed text-[var(--text-primary)]">
+                ETC is the only Proof-of-Work network with both programmable
+                monetary policy — the ECIP-1017 emission schedule, fixed at
+                210,700,000 ETC maximum supply — and programmable fiscal policy:
+                the Olympia basefee treasury and on-chain governance controlling
+                resource allocation. No other PoW network has both.
+              </p>
+            </div>
+          </FadeIn>
+
           <div className="mt-12 space-y-8">
             {thesisPoints.map((p, i) => (
               <FadeIn key={p.number} delay={i * 80}>
