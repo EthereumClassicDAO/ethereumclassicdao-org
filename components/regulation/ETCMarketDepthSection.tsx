@@ -39,6 +39,7 @@ const cryptoPairs = [
   { pair: "CAKE/ETC", symbol: "CAKE" },
   { pair: "ETC/BUSD", symbol: "BUSD" },
   { pair: "ETC/FDUSD", symbol: "FDUSD" },
+  { pair: "ETC/USC", symbol: "USC" },
 ];
 
 const stats = [
@@ -56,7 +57,7 @@ const stats = [
   },
   {
     icon: Activity,
-    value: "12",
+    value: "13",
     label: "Crypto Cross-Pairs",
     detail: "BTC, ETH, stablecoins",
   },
