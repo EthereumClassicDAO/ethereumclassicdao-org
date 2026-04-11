@@ -226,7 +226,7 @@ export default function UpgradePage() {
     <main>
       {/* Hero */}
       <section className="hero-gradient relative pt-32 pb-16">
-        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
+        <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
           <FadeIn>
             <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl">
               Olympia{" "}
@@ -234,12 +234,12 @@ export default function UpgradePage() {
             </h1>
           </FadeIn>
           <FadeIn delay={100}>
-            <p className="mx-auto max-w-2xl text-lg text-[var(--text-muted)]">
+            <p className="text-lg text-[var(--text-muted)]">
               The Olympia era marks a shift from reactive maintenance to active
               development on the longest-running EVM and the only Proof-of-Work
               smart contract platform in the world.
             </p>
-            <ul className="mx-auto mt-6 max-w-2xl space-y-3 text-left text-sm text-[var(--text-muted)]">
+            <ul className="mt-6 space-y-3 text-left text-sm text-[var(--text-muted)]">
               <li className="flex gap-3">
                 <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
                 <span><span className="font-semibold text-white">EIP-1559 fee market:</span> the most widely adopted transaction type in the EVM ecosystem, bringing predictable gas pricing and modern tooling compatibility</span>
@@ -338,7 +338,7 @@ export default function UpgradePage() {
             <h2 className="mb-2 text-2xl font-bold tracking-tight">
               EVM Compatibility in Detail
             </h2>
-            <p className="mb-8 text-sm text-[var(--text-muted)] max-w-2xl">
+            <p className="mb-8 text-sm text-[var(--text-muted)]">
               Three Ethereum upgrade cycles delivered to ETC in a single fork, covering every execution-layer improvement that is independent of Proof-of-Stake and blob data availability.
             </p>
           </FadeIn>
@@ -556,7 +556,7 @@ export default function UpgradePage() {
 
       {/* FAQ */}
       <section className="section-gradient py-16 px-6">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-5xl">
           <FadeIn>
             <h2 className="mb-2 text-2xl font-bold tracking-tight">
               Frequently Asked Questions
