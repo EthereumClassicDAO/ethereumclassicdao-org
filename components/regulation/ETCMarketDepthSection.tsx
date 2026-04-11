@@ -1,6 +1,8 @@
 import { Activity, Globe, BarChart3 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { FlagImg } from "@/components/ui/FlagImg";
+import { CryptoImg } from "@/components/ui/CryptoImg";
 
 const fiatPairs = [
   { pair: "ETC/USD", flag: "🇺🇸", currency: "US Dollar" },
@@ -17,15 +19,15 @@ const fiatPairs = [
 ];
 
 const cryptoPairs = [
-  "ETC/USDT",
-  "ETC/USDC",
-  "ETC/FDUSD",
-  "ETC/BTC",
-  "ETC/ETH",
-  "ETC/BNB",
-  "ETC/LTC",
-  "ETC/DOGE",
-  "ETC/XRP",
+  { pair: "ETC/USDT", symbol: "USDT" },
+  { pair: "ETC/USDC", symbol: "USDC" },
+  { pair: "ETC/FDUSD", symbol: "FDUSD" },
+  { pair: "ETC/BTC", symbol: "BTC" },
+  { pair: "ETC/ETH", symbol: "ETH" },
+  { pair: "ETC/BNB", symbol: "BNB" },
+  { pair: "ETC/LTC", symbol: "LTC" },
+  { pair: "ETC/DOGE", symbol: "DOGE" },
+  { pair: "ETC/XRP", symbol: "XRP" },
 ];
 
 const stats = [
@@ -99,9 +101,7 @@ export function ETCMarketDepthSection() {
                     className="flex items-center gap-1.5 rounded-lg border border-[var(--divider)] bg-[var(--bg-elevated)] px-3 py-2"
                     title={p.currency}
                   >
-                    <span className="text-base" aria-hidden="true">
-                      {p.flag}
-                    </span>
+                    <FlagImg emoji={p.flag} size={20} />
                     <span className="font-mono text-xs font-medium">
                       {p.pair}
                     </span>
@@ -119,12 +119,13 @@ export function ETCMarketDepthSection() {
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {cryptoPairs.map((p) => (
-                  <span
-                    key={p}
-                    className="rounded-lg border border-[var(--divider)] bg-[var(--bg-elevated)] px-3 py-2 font-mono text-xs font-medium"
+                  <div
+                    key={p.pair}
+                    className="flex items-center gap-1.5 rounded-lg border border-[var(--divider)] bg-[var(--bg-elevated)] px-3 py-2"
                   >
-                    {p}
-                  </span>
+                    <CryptoImg symbol={p.symbol} size={16} />
+                    <span className="font-mono text-xs font-medium">{p.pair}</span>
+                  </div>
                 ))}
               </div>
             </div>

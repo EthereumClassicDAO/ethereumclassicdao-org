@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { FlagImg } from "@/components/ui/FlagImg";
 
 const mechanics = [
   {
@@ -82,9 +83,7 @@ export function ETCAsEnergyMarketSection() {
                     key={s.pair}
                     className="flex items-center gap-3 rounded-lg border border-[var(--divider)] px-3 py-2.5"
                   >
-                    <span className="text-base" aria-hidden="true">
-                      {s.flag}
-                    </span>
+                    <FlagImg emoji={s.flag} size={20} />
                     <div>
                       <p className="font-mono text-xs font-semibold">{s.pair}</p>
                       <p className="text-[10px] text-[var(--text-subtle)]">

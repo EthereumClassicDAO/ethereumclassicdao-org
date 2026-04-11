@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { FlagImg } from "@/components/ui/FlagImg";
 
 const regions = [
   {
@@ -101,9 +102,7 @@ export function GlobalFrameworksSection() {
               <FadeIn key={r.region} delay={i * 80}>
                 <div className="flex flex-col rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl" aria-hidden="true">
-                      {r.flag}
-                    </span>
+                    <FlagImg emoji={r.flag} size={24} />
                     <div>
                       <p className="text-sm font-semibold">{r.region}</p>
                       <p className="text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">
