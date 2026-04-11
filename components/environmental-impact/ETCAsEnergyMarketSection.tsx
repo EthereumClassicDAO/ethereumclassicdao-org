@@ -104,6 +104,27 @@ export function ETCAsEnergyMarketSection() {
                   </div>
                 ))}
               </div>
+              <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-[var(--divider)] pt-4">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-subtle)]">
+                  Markets on
+                </span>
+                <a
+                  href="https://www.coingecko.com/en/coins/ethereum-classic#markets"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs font-semibold text-[var(--brand-green)] transition-opacity hover:opacity-70"
+                >
+                  CoinGecko ↗
+                </a>
+                <a
+                  href="https://coinmarketcap.com/currencies/ethereum-classic/markets/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs font-semibold text-[var(--brand-green)] transition-opacity hover:opacity-70"
+                >
+                  CoinMarketCap ↗
+                </a>
+              </div>
             </div>
           </FadeIn>
 
