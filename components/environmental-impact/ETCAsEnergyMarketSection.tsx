@@ -21,17 +21,28 @@ const mechanics = [
   {
     label: "Local currency signals",
     detail:
-      "Fiat pairs across 11 currencies let energy producers in any market price their output in local terms.",
+      "Fiat pairs across 17 currencies let energy producers in any market price their output in local terms.",
   },
 ];
 
 const signals = [
   { pair: "ETC/USD", flag: "🇺🇸", note: "Primary global energy proxy" },
+  { pair: "ETC/EUR", flag: "🇪🇺", note: "European energy transition market" },
+  { pair: "ETC/JPY", flag: "🇯🇵", note: "Major LNG importing economy" },
+  { pair: "ETC/GBP", flag: "🇬🇧", note: "North Sea & offshore wind market" },
+  { pair: "ETC/AUD", flag: "🇦🇺", note: "Coal & LNG export economy" },
+  { pair: "ETC/KRW", flag: "🇰🇷", note: "High-density industrial energy market" },
+  { pair: "ETC/SGD", flag: "🇸🇬", note: "Asia-Pacific LNG trading hub" },
+  { pair: "ETC/TWD", flag: "🇹🇼", note: "High-tech manufacturing energy demand" },
+  { pair: "ETC/INR", flag: "🇮🇳", note: "World's fastest-growing energy market" },
   { pair: "ETC/BRL", flag: "🇧🇷", note: "Brazilian hydropower market" },
-  { pair: "ETC/KRW", flag: "🇰🇷", note: "Major energy-consuming economy" },
-  { pair: "ETC/JPY", flag: "🇯🇵", note: "Major energy-consuming economy" },
   { pair: "ETC/TRY", flag: "🇹🇷", note: "Emerging market energy signal" },
-  { pair: "ETC/IDR", flag: "🇮🇩", note: "Southeast Asia energy market" },
+  { pair: "ETC/AED", flag: "🇦🇪", note: "Gulf oil-producing economy" },
+  { pair: "ETC/THB", flag: "🇹🇭", note: "Regional energy growth market" },
+  { pair: "ETC/UAH", flag: "🇺🇦", note: "Eastern European energy infrastructure" },
+  { pair: "ETC/IDR", flag: "🇮🇩", note: "Coal & geothermal energy market" },
+  { pair: "ETC/NZD", flag: "🇳🇿", note: "Renewable energy pioneer" },
+  { pair: "ETC/PLN", flag: "🇵🇱", note: "Central European energy transition" },
 ];
 
 export function ETCAsEnergyMarketSection() {
