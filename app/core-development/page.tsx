@@ -220,9 +220,9 @@ const upgrades: Upgrade[] = [
       { name: "ECIP-1100", url: "https://ecips.ethereumclassic.org/ECIPs/ecip-1100" },
     ],
     eips: [],
-    keyChanges: ["ETCHash algorithm", "DAG growth reduction", "MESS finality mechanism", "GPU mining preservation"],
+    keyChanges: ["ETCHash algorithm", "DAG growth reduction", "MESS finality mechanism", "GPU mining preserved", "All Ethash ASICs absorbed post-Merge"],
     description:
-      "Introduced ETCHash — a modified DAG growth algorithm keeping ETC mineable on GPU hardware — and MESS (Modified Exponential Subjective Scoring) for chain finality. Following Ethereum's Merge, ETC absorbed a significant portion of the global GPU mining network.",
+      "Introduced ETCHash — a modified DAG growth algorithm keeping ETC mineable on GPU hardware — and MESS (Modified Exponential Subjective Scoring) for chain finality. Following Ethereum's Merge, ETC absorbed a significant portion of the global GPU mining network and every purpose-built Ethash ASIC miner — the only chain still running an ETChash-compatible algorithm.",
     status: "complete",
   },
   {
@@ -299,9 +299,9 @@ const upgrades: Upgrade[] = [
       "EIP-7935",
       "EIP-7951",
     ],
-    keyChanges: ["EIP-1559 fee market (ECIP-1111)", "Protocol treasury (ECIP-1112)", "Fusaka EVM alignment (ECIP-1121)", "On-chain DAO governance", "First PoW EVM with programmable monetary policy"],
+    keyChanges: ["EIP-1559 fee market (ECIP-1111)", "Protocol treasury (ECIP-1112)", "Fusaka EVM alignment (ECIP-1121)", "DAO governance: core dev, infrastructure, security", "Futarchy markets: open public participation", "First PoW EVM with programmable fiscal policy"],
     description:
-      "ETC's most significant upgrade — EVM alignment to Fusaka, incorporating EIPs spanning London, Dencun, Pectra, and Fusaka. Introduces EIP-1559 fee market with basefee directed to a protocol treasury and on-chain DAO governance.",
+      "ETC's most significant upgrade — EVM alignment to Fusaka, incorporating EIPs spanning London, Dencun, Pectra, and Fusaka. Introduces EIP-1559 fee market with basefee directed to a protocol treasury. On-chain DAO governance scoped to core client software, critical infrastructure, and network security. Open futarchy prediction markets let anyone stake on protocol outcomes without membership and earn rewards for accurate predictions.",
     status: "upcoming",
   },
 ];
