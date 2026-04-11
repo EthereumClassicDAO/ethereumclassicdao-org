@@ -267,7 +267,25 @@ export default function UpgradePage() {
       <section className="py-12 px-6">
         <div className="mx-auto max-w-5xl">
           <FadeIn>
-            <Suspense>
+            <Suspense fallback={
+              <div className="rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] p-6 text-center">
+                <div className="mb-4 flex justify-center gap-4">
+                  {["Days", "Hours", "Minutes", "Seconds"].map((label) => (
+                    <div key={label} className="flex flex-col items-center">
+                      <div className="flex h-14 w-16 items-center justify-center rounded-lg border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] font-mono text-2xl font-bold text-[var(--brand-green)]">
+                        --
+                      </div>
+                      <span className="mt-1.5 text-xs text-[var(--text-muted)]">{label}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mb-2 flex items-center justify-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-[var(--brand-green)]" />
+                  <span className="text-sm font-medium text-[var(--brand-green)]">Activation Block Pending</span>
+                </div>
+                <p className="text-sm text-[var(--text-muted)]">Olympia is in final testing on the Mordor Testnet. Activation Block: TBD</p>
+              </div>
+            }>
               <ActivationCountdown />
             </Suspense>
           </FadeIn>

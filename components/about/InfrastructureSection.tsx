@@ -48,7 +48,7 @@ export async function InfrastructureSection() {
     <>
       <SectionDivider />
       <section className="section-gradient relative geo-circle py-28">
-        <div className="relative z-10 mx-auto max-w-3xl px-6">
+        <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2 className="text-xl font-bold">
               Institutional Infrastructure
