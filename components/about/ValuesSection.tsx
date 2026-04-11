@@ -34,7 +34,7 @@ export function ValuesSection() {
     <>
       <SectionDivider />
       <section className="section-deep py-28">
-        <div className="mx-auto max-w-3xl px-6">
+        <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2 className="text-3xl font-bold tracking-tight">Our Values</h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">

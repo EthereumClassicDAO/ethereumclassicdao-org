@@ -1,9 +1,8 @@
 import { Cpu, Code2 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
-
-const stats = [
-  { value: "170+ TH/s", label: "Network Hashrate", detail: "Globally distributed" },
+import { fetchHashrateTHs } from "@/lib/api/hashrate";
+const staticStats = [
   { value: "July 2015", label: "In Production Since", detail: "Longest-running EVM" },
   { value: "Fusaka", label: "EVM Parity", detail: "Full Ethereum execution layer" },
   { value: "GPU + ASIC", label: "Hardware Access", detail: "Retail to institutional" },
@@ -36,7 +35,13 @@ const columns = [
   },
 ];
 
-export function ETCUniquePositionSection() {
+export async function ETCUniquePositionSection() {
+  const hashrateTHs = await fetchHashrateTHs();
+  const stats = [
+    { value: `${hashrateTHs.toFixed(1)} TH/s`, label: "Network Hashrate", detail: "Globally distributed" },
+    ...staticStats,
+  ];
+
   return (
     <>
       <SectionDivider />

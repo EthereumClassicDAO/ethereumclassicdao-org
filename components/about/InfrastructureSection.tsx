@@ -48,32 +48,9 @@ export async function InfrastructureSection() {
     <>
       <SectionDivider />
       <section className="section-gradient relative geo-circle py-28">
-        <div className="relative z-10 mx-auto max-w-3xl px-6">
+        <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <div className="flex items-end gap-4">
-              <div>
-                <p className="text-4xl font-bold font-mono text-[var(--brand-green)]">
-                  {hashrateTHs.toFixed(1)}{" "}
-                  <span className="text-lg">TH/s</span>
-                </p>
-                <p className="mt-1 text-xs font-mono text-[var(--text-subtle)]">
-                  Algorithm: ETChash
-                </p>
-              </div>
-              <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-[var(--brand-green)]/30 bg-[var(--brand-green)]/10 px-2.5 py-1 font-mono text-[10px] text-[var(--brand-green)]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" />
-                Live
-              </span>
-            </div>
-            <p className="mt-2 text-sm text-[var(--text-muted)]">
-              GPU and ASIC compatible, securing the only Proof-of-Work network
-              with native smart contracts
-            </p>
-            <HashrateChart histories={hashrateHistories} currentTHs={hashrateTHs} />
-          </FadeIn>
-
-          <FadeIn>
-            <h2 className="mt-12 text-xl font-bold">
+            <h2 className="text-xl font-bold">
               Institutional Infrastructure
             </h2>
             <p className="mt-3 text-sm text-[var(--text-muted)]">
@@ -120,6 +97,25 @@ export async function InfrastructureSection() {
               </div>
             </FadeIn>
           </div>
+
+          <FadeIn delay={200}>
+            <div className="mt-10 flex items-end gap-4">
+              <div>
+                <p className="text-4xl font-bold font-mono text-[var(--brand-green)]">
+                  {hashrateTHs.toFixed(1)}{" "}
+                  <span className="text-lg">TH/s</span>
+                </p>
+                <p className="mt-1 text-xs font-mono text-[var(--text-subtle)]">
+                  Algorithm: ETChash · GPU + ASIC compatible
+                </p>
+              </div>
+              <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-[var(--brand-green)]/30 bg-[var(--brand-green)]/10 px-2.5 py-1 font-mono text-[10px] text-[var(--brand-green)]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" />
+                Live
+              </span>
+            </div>
+            <HashrateChart histories={hashrateHistories} currentTHs={hashrateTHs} />
+          </FadeIn>
         </div>
       </section>
     </>

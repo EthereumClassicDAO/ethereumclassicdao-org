@@ -1,6 +1,7 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import type { EtcStats } from "@/lib/api/etc-stats";
+import { fetchHashrateTHs } from "@/lib/api/hashrate";
 import {
   formatUSD,
   formatCompact,
@@ -56,7 +57,8 @@ function OverviewTable({
   );
 }
 
-export function EtcOverviewSection({ stats }: { stats: EtcStats }) {
+export async function EtcOverviewSection({ stats }: { stats: EtcStats }) {
+  const hashrateTHs = await fetchHashrateTHs();
   const networkRows: Row[] = [
     { label: "Genesis Date", value: "July 30, 2015" },
     { label: "Consensus", value: "Proof-of-Work (ETChash)" },
@@ -71,7 +73,7 @@ export function EtcOverviewSection({ stats }: { stats: EtcStats }) {
       label: "Average Block Time",
       value: formatBlockTime(stats.averageBlockTimeMs),
     },
-    { label: "Network Hashrate", value: "170+ TH/s *" },
+    { label: "Network Hashrate", value: `${hashrateTHs.toFixed(1)} TH/s *` },
   ];
 
   const priceChangeColor: "green" | "red" =
