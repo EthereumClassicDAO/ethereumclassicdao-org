@@ -6,10 +6,15 @@ const CDN =
   "https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/svg/color";
 
 // Per-symbol overrides for tokens not in spothq/cryptocurrency-icons
+// URLs sourced from CoinGecko CDN (coin-images.coingecko.com)
 const OVERRIDES: Record<string, string> = {
-  cake: "https://cryptologos.cc/logos/pancakeswap-cake-logo.svg",
-  busd: "https://cryptologos.cc/logos/binance-usd-busd-logo.svg",
+  cake: "https://coin-images.coingecko.com/coins/images/12632/small/pancakeswap-cake-logo_%281%29.png?1696512440",
+  busd: "https://coin-images.coingecko.com/coins/images/9576/small/BUSDLOGO.jpg?1696509654",
+  fdusd: "https://coin-images.coingecko.com/coins/images/31079/small/FDUSD_icon_black.png?1731097953",
 };
+
+// Tokens whose CoinGecko logo is dark-on-transparent — wrap in white bg to show on dark sites
+const LIGHT_BG: Set<string> = new Set(["fdusd"]);
 
 // Symbols known to exist in spothq/cryptocurrency-icons
 const KNOWN: Set<string> = new Set([
@@ -28,6 +33,7 @@ export function CryptoImg({ symbol, size = 20, className = "" }: Props) {
   const lower = symbol.toLowerCase();
   const overrideUrl = OVERRIDES[lower];
   if (overrideUrl) {
+    const needsLightBg = LIGHT_BG.has(lower);
     return (
       // eslint-disable-next-line @next/next/no-img-element
       <img
@@ -36,7 +42,7 @@ export function CryptoImg({ symbol, size = 20, className = "" }: Props) {
         aria-hidden="true"
         width={size}
         height={size}
-        className={`shrink-0 rounded-full ${className}`.trim()}
+        className={`shrink-0 rounded-full ${needsLightBg ? "bg-white p-[2px]" : ""} ${className}`.trim()}
       />
     );
   }
