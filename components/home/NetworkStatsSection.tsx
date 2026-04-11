@@ -2,7 +2,6 @@ import { StatsGrid } from "@/components/ui/StatsGrid";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { FadeIn } from "@/components/ui/FadeIn";
 import type { EtcStats } from "@/lib/api/etc-stats";
-import { fetchHashrateTHs } from "@/lib/api/hashrate";
 import {
   formatUSD,
   formatCompact,
@@ -52,8 +51,7 @@ function OverviewTable({ heading, rows }: { heading: string; rows: Row[] }) {
   );
 }
 
-export async function NetworkStatsSection({ stats }: { stats: EtcStats }) {
-  const hashrateTHs = await fetchHashrateTHs();
+export function NetworkStatsSection({ stats, hashrateTHs }: { stats: EtcStats; hashrateTHs: number }) {
   const heroStats = [
     {
       value: formatUSD(stats.price),
@@ -111,7 +109,7 @@ export async function NetworkStatsSection({ stats }: { stats: EtcStats }) {
       label: "Average Block Time",
       value: formatBlockTime(stats.averageBlockTimeMs),
     },
-    { label: "Network Hashrate", value: `${hashrateTHs.toFixed(1)} TH/s *` },
+    { label: "Network Hashrate", value: `${Math.round(hashrateTHs)} TH/s *` },
   ];
 
   const economicsRows: Row[] = [
