@@ -9,6 +9,9 @@ import {
   Scale,
   Lightbulb,
   ArrowRight,
+  GitBranch,
+  Server,
+  CheckCircle,
 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
@@ -79,6 +82,37 @@ const futarchySteps = [
     title: "Signal",
     description:
       "Market prices feed back as on-chain signal into future governance decisions, creating a self-reinforcing loop between public participation and core development capacity.",
+  },
+];
+
+const powSteps = [
+  {
+    icon: Vote,
+    number: "01",
+    title: "DAO Approval",
+    description:
+      "Olympia DAO votes to approve a protocol upgrade through the on-chain governance process. Proposals require quorum and majority to pass.",
+  },
+  {
+    icon: GitBranch,
+    number: "02",
+    title: "Client Releases",
+    description:
+      "Independent client teams publish compatible implementations of the approved upgrade. Multiple implementations ensure no single point of failure.",
+  },
+  {
+    icon: Server,
+    number: "03",
+    title: "Network Adoption",
+    description:
+      "Miners, exchanges, wallets, and node operators upgrade their software. Each participant signals support by running the new implementation.",
+  },
+  {
+    icon: CheckCircle,
+    number: "04",
+    title: "Distributed Consensus",
+    description:
+      "The upgrade achieves activation when the broader network has adopted the new software — distributed participation across all three tiers made real.",
   },
 ];
 
@@ -192,6 +226,39 @@ export function HowItWorksSection() {
 
           <div className="mt-10 space-y-6">
             {futarchySteps.map((step, i) => (
+              <StepCard key={step.title} step={step} delay={i * 80} />
+            ))}
+          </div>
+
+          {/* Network Participant Layer */}
+          <FadeIn>
+            <div className="mt-20">
+              <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
+                Network Participant Layer
+              </p>
+              <h2 id="software-adoption-as-governance-signal-heading" className="mt-2 text-3xl font-bold tracking-tight">
+                Software Adoption as Governance Signal
+              </h2>
+              <p className="mt-3 text-base text-[var(--text-muted)]">
+                The three governance tiers are interdependent. Developers build
+                the software; users and institutions create the value that makes
+                the network worth building on; and network participants — miners,
+                exchanges, wallets, and infrastructure providers — run the software
+                that makes the network real. Protocol changes achieve consensus when
+                the broader network adopts them. Client adoption is not a veto — it
+                is the natural expression of distributed participation across all
+                the people and organizations the network depends on.
+              </p>
+              <div className="mt-3 flex gap-2">
+                <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
+                  ECIP Process
+                </span>
+              </div>
+            </div>
+          </FadeIn>
+
+          <div className="mt-10 space-y-6">
+            {powSteps.map((step, i) => (
               <StepCard key={step.title} step={step} delay={i * 80} />
             ))}
           </div>

@@ -12,10 +12,12 @@ export function GovernanceHeroSection() {
             Olympia Governance Framework
           </h1>
           <p className="mt-4 text-lg text-[var(--text-muted)]">
-            Two complementary systems designed to work together.
+            Three complementary systems designed to work together.
             Membership-based on-chain governance handles binding protocol
             decisions. Open prediction markets give the broader public a
-            financially incentivized stake in network direction.
+            financially incentivized stake in network direction. And network
+            participants — miners, exchanges, wallets, and infrastructure
+            providers — govern through the client software they choose to run.
           </p>
         </FadeIn>
       </div>
