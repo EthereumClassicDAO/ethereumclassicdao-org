@@ -157,7 +157,7 @@ const faqItems = [
   {
     question: "Is Ethereum Classic a security or commodity after Olympia?",
     answer:
-      "Olympia strengthens ETC's regulatory profile. As a Proof-of-Work blockchain with no pre-mine, no ICO, no foundation controlling the protocol, and now a community-governed on-chain treasury, ETC is positioned for classification as a digital commodity under the CLARITY Act. In the EU, ETC qualifies as a decentralized asset under MiCA, exempt from per-asset issuer requirements. The addition of on-chain governance through the Olympia DAO does not create a central issuer or controlling party: the network remains decentralized, and governance is open to any qualified participant worldwide.",
+      "Olympia strengthens ETC's regulatory profile. In the EU, ETC qualifies as a decentralized asset under MiCA, which has been in force since December 2024, exempt from per-asset issuer requirements. In Japan, ETC is recognized on the FSA Green List. In the US, ETC is positioned as a digital commodity candidate under the CLARITY Act, currently pending Senate passage. As a Proof-of-Work blockchain with no pre-mine, no ICO, no foundation controlling the protocol, and a community-governed on-chain treasury, ETC meets the decentralization criteria each framework applies. The addition of on-chain governance through the Olympia DAO does not create a central issuer or controlling party: the network remains decentralized, and governance is open to any qualified participant worldwide.",
   },
   {
     question: "Can I roll back if something goes wrong?",

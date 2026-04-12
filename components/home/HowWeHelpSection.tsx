@@ -25,7 +25,7 @@ export function HowWeHelpSection({ hashrateStr }: { hashrateStr: string }) {
       icon: Scale,
       title: "Global Regulatory Navigation",
       description:
-        "Wyoming DAO LLC fully aligned with US federal and state frameworks. ETC sits at the intersection of four major regulatory classifications: CLARITY Act digital commodity, MiCA decentralized asset, Japan FSA Green List, and live GENIUS Act stablecoin platform through Classic USD.",
+        "We track and maintain compliance across major global regulatory frameworks: CLARITY Act and GENIUS Act (US), MiCA (EU, in force Dec 2024), FSA Green List (Japan), FSMA (UK), and VARA (UAE). ETC is recognized under each, and Classic USD is a live GENIUS Act and MiCA-aligned stablecoin on ETC mainnet.",
     },
   ];
   return (
@@ -40,7 +40,7 @@ export function HowWeHelpSection({ hashrateStr }: { hashrateStr: string }) {
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Building the software and infrastructure that Ethereum Classic
               needs to scale from individuals to institutions, while
-              ensuring US regulatory compliance.
+              maintaining compliance across global regulatory frameworks.
             </p>
           </FadeIn>
 
