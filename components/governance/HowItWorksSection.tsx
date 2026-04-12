@@ -251,7 +251,7 @@ export function HowItWorksSection() {
               </p>
               <div className="mt-3 flex gap-2">
                 <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
-                  ECIP Process
+                  Software Releases
                 </span>
               </div>
             </div>
