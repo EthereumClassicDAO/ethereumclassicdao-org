@@ -45,7 +45,7 @@ export function StewardshipSection() {
                 protocol-native funding model that does not depend on any single
                 organization&apos;s continued generosity. The Olympia Treasury,
                 governed on-chain by the Olympia DAO and executed by the Wyoming
-                DAO LLC, replaces institutional dependency with a durable
+                DAO LLC, extends beyond institutional dependency with a durable
                 financial foundation that scales with network usage and addresses
                 the network&apos;s needs openly and transparently. Mining operations,
                 hardware manufacturers, exchanges, and individual supporters can
