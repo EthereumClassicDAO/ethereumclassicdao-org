@@ -31,12 +31,12 @@ const faqItems = [
   {
     question: "Who can participate in governance?",
     answer:
-      "Two systems run in parallel. Binding protocol decisions are made by Olympia DAO members holding non-transferable membership NFTs. Any EVM developer worldwide can submit proposals and bid for development funds, infrastructure contracts, or service agreements through the open proposal process, with no employment relationship or preferred vendor status required. Public participation is open to everyone through futarchy prediction markets, where anyone can stake on proposal outcomes without membership and earn financial rewards for accurate predictions.",
+      "Three systems operate in parallel. Binding protocol decisions are made by Olympia DAO members holding non-transferable membership NFTs — any EVM developer worldwide can submit proposals and bid for development funds, infrastructure contracts, or service agreements with no employment relationship or preferred vendor status required. Public participation is open to everyone through futarchy prediction markets, where anyone can stake on proposal outcomes without membership and earn financial rewards for accurate predictions. The PoW client layer provides a third independent governance voice: miners and node operators signal through the client software they choose to run, and no protocol change can succeed without adoption across the mining community.",
   },
   {
     question: "How does voting work?",
     answer:
-      "Governance operates on two complementary layers. The Olympia DAO uses non-transferable membership NFTs for binding protocol decisions scoped to core client software, critical infrastructure, network security, treasury allocation, and emergency responses. Members cast weighted on-chain votes during a defined voting period, and proposals require both quorum and majority to pass. Public participation is enabled through open futarchy prediction markets, where anyone can stake on proposal outcomes without membership. Participants earn financial rewards for accurate predictions and generate transaction volume that flows back into the protocol treasury as basefee revenue.",
+      "Governance operates on three complementary layers. The Olympia DAO uses non-transferable membership NFTs for binding protocol decisions scoped to core client software, critical infrastructure, network security, treasury allocation, and emergency responses — members cast weighted on-chain votes, and proposals require both quorum and majority to pass. Open futarchy prediction markets allow anyone to stake on proposal outcomes without membership, earn financial rewards for accurate predictions, and generate basefee revenue that flows back to the protocol treasury. The PoW client layer provides a third independent governance signal: multiple independent client implementations give miners and node operators a direct voice through the software they run, and no protocol change activates without adoption across the mining community.",
   },
   {
     question: "What does EVM alignment to Fusaka mean for builders?",
@@ -56,7 +56,7 @@ const faqItems = [
   {
     question: "Is Ethereum Classic a security or commodity?",
     answer:
-      "Ethereum Classic is positioned for classification as a digital commodity under the CLARITY Act framework. As a Proof-of-Work blockchain with no pre-mine, no ICO, no foundation controlling the protocol, and decentralized community governance, ETC aligns with the commodity characteristics the CLARITY Act is designed to recognize. In the EU, ETC qualifies as a decentralized asset under MiCA, exempt from per-asset issuer requirements. The CLARITY Act's full framework remains subject to final congressional enactment.",
+      "ETC's three-layer governance architecture strengthens its regulatory profile across all major frameworks. In the EU, ETC qualifies as a decentralized asset under MiCA, in force since December 2024, exempt from per-asset issuer requirements. In Japan, ETC is recognized on the FSA Green List. In the US, ETC is positioned as a digital commodity candidate under the CLARITY Act, pending Senate passage. The Olympia DAO, futarchy markets, and the PoW client layer together ensure no single party controls the protocol — the core decentralization criterion each framework applies.",
   },
 ];
 
