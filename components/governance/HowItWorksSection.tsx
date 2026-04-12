@@ -22,7 +22,7 @@ const formalSteps = [
     number: "01",
     title: "Propose",
     description:
-      "Members submit binding governance proposals on-chain. Proposals define the action to execute and the supporting rationale.",
+      "Any ETC account can submit a funding proposal on-chain. Proposals define the funding request, the rationale, and the scope of work.",
   },
   {
     icon: Vote,

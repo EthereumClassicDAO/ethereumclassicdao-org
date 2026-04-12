@@ -44,7 +44,7 @@ Developer impact: Solidity 0.8.x+, Foundry, Hardhat, wagmi, viem, and ethers.js 
 
 Core Development Governance (ECIP-1113, ECIP-1114, ECIP-1119): Binding on-chain governance scoped to core client software, critical infrastructure, network security, treasury allocation, and emergency protocol responses. Any Olympia DAO member can submit proposals. Open proposals let any EVM developer worldwide bid for development funds, infrastructure contracts, and critical service agreements covering block explorers, RPC endpoints, oracles, bridges, and ecosystem integrations — no employment relationship or preferred vendor status required. All outcomes are executed by the Wyoming DAO LLC on behalf of what the Olympia DAO approves on-chain.
 
-1. Propose — Members submit binding governance proposals on-chain
+1. Propose — Any ETC account can submit a funding proposal on-chain
 2. Vote — Membership NFT holders cast weighted on-chain votes
 3. Queue — Approved proposals enter a configurable security timelock
 4. Execute — After timelock, proposals execute on-chain without manual intervention
