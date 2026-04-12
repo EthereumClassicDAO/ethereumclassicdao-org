@@ -240,14 +240,14 @@ export function HowItWorksSection() {
                 Software Adoption as Governance Signal
               </h2>
               <p className="mt-3 text-base text-[var(--text-muted)]">
-                The three governance tiers are interdependent. Developers build
-                the software; users and institutions create the value that makes
-                the network worth building on; and network participants — miners,
-                exchanges, wallets, and infrastructure providers — run the software
-                that makes the network real. Protocol changes achieve consensus when
-                the broader network adopts them. Client adoption is not a veto — it
-                is the natural expression of distributed participation across all
-                the people and organizations the network depends on.
+                Every node operator, mining pool, exchange, and wallet provider
+                participates in governance through the client software they choose
+                to run. When the DAO approves a protocol upgrade and independent
+                client teams publish compatible releases, network adoption is the
+                final step. An upgrade becomes real when the infrastructure that
+                secures, settles, and routes ETC transactions upgrades to support
+                it. No membership required, no market position to open — running
+                the software is the governance act.
               </p>
               <div className="mt-3 flex gap-2">
                 <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
