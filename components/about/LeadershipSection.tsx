@@ -23,9 +23,9 @@ const team = [
 const orgs = [
   {
     name: "ETC Cooperative",
-    role: "Predecessor Organization",
+    role: "Foundational Organization",
     description:
-      "Founded in 2017, ETC Cooperative served as the primary organizational home for Ethereum Classic core development and ecosystem funding through 2024. Ethereum Classic DAO LLC succeeds the Cooperative as the network's organizational foundation.",
+      "Founded in 2017, ETC Cooperative served as the primary organizational home for Ethereum Classic core development and ecosystem funding for nearly a decade. Ethereum Classic DAO LLC and Olympia DAO build on that foundational work, extending it into protocol-native governance and treasury infrastructure.",
     href: "https://etccooperative.org",
     label: "etccooperative.org",
   },
@@ -48,11 +48,12 @@ export function LeadershipSection() {
           <FadeIn>
             <h2 id="leadership-heading" className="text-3xl font-bold tracking-tight">Leadership</h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Ethereum Classic DAO LLC builds on nearly a decade of ecosystem
-              stewardship, succeeding the ETC Cooperative as the organizational
-              home for Ethereum Classic&apos;s core contributors. The organization
-              has been coordinating network upgrades, client development, and
-              ecosystem infrastructure since the chain&apos;s earliest days.
+              Ethereum Classic DAO LLC extends nearly a decade of ecosystem
+              stewardship built by the ETC Cooperative, continuing as the
+              organizational home for Ethereum Classic&apos;s core contributors. The
+              work of coordinating network upgrades, client development, and
+              ecosystem infrastructure has continued uninterrupted since the
+              chain&apos;s earliest days.
             </p>
           </FadeIn>
 
