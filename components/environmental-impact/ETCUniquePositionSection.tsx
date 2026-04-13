@@ -29,7 +29,7 @@ const columns = [
       "Full Solidity and EVM compatibility — every Ethereum tool, library, and framework works without modification.",
       "Classic USD ($USC) by Brale: a live, 1:1 USD-backed stablecoin on a PoW chain.",
       "GENIUS Act-compliant stablecoin infrastructure, the first on any Proof-of-Work network.",
-      "ETCswap V2 and V3 provide on-chain liquidity for composable DeFi with a regulated stable base.",
+      <><a href="https://etcswap.org" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">ETCswap</a> V2 and V3 provide on-chain liquidity for composable DeFi with a regulated stable base.</>,
       "Smart contracts enable programmable settlement for energy transactions on-chain.",
     ],
   },
@@ -93,8 +93,8 @@ export async function ETCUniquePositionSection() {
                     </div>
                   </div>
                   <ul className="mt-5 space-y-3">
-                    {col.points.map((point) => (
-                      <li key={point} className="flex items-start gap-2.5">
+                    {col.points.map((point, j) => (
+                      <li key={j} className="flex items-start gap-2.5">
                         <span
                           className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[var(--brand-green)]"
                           aria-hidden="true"
