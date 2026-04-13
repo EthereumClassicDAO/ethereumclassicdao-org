@@ -69,16 +69,17 @@ Futarchy Markets (ECIP-1117, ECIP-1118): Open prediction markets where anyone ca
 - Markets: 300+ active markets across 20+ major global exchanges
 - Fiat pairs: ETC/USD, ETC/EUR, ETC/KRW, ETC/TRY, ETC/GBP, ETC/IDR, ETC/INR, ETC/BRL, ETC/NZD, ETC/JPY, ETC/PLN
 - Crypto pairs: ETC/USDC, ETC/USDT, ETC/FDUSD, ETC/BTC, ETC/ETH, ETC/BNB, ETC/LTC, ETC/DOGE, ETC/XRP
-- Independent clients: fukuii (Scala, primary), core-geth (Go), besu (Java)
+- Independent clients: fukuii (Scala, primary), core-geth (Go, maintenance); ETC plugins for Besu, Erigon, Go-Ethereum, Nethermind planned post-Olympia
 - Network origin: July 30, 2015 (genesis block — oldest EVM-compatible blockchain)
 - Chain IDs: 61 (mainnet), 63 (Mordor testnet)
 
 ## Client Implementations
 
-Three independent implementations ensure zero single points of failure:
-- **fukuii** — Purpose-built for Ethereum Classic. Independent implementation designed for performance, security, and protocol parity. Primary client for the Olympia upgrade.
-- **core-geth** — The longest-running ETC client, forked from go-ethereum. Battle-tested stability across every network upgrade since genesis.
-- **besu** — Enterprise-grade client built on Hyperledger Besu. Cross-client protocol verification and consensus compatibility validation.
+Two active clients at Olympia launch:
+- **fukuii** — Purpose-built for Ethereum Classic. Primary client for the Olympia era, designed for long-term protocol stewardship.
+- **core-geth** — The legacy ETC client, actively maintained and carried forward through Olympia for network continuity. Scheduled to phase out as Fukuii assumes the primary role. The upstream go-ethereum plugin architecture is the long-term replacement for maintaining a dedicated fork.
+
+ETC plugins for Besu, Erigon, Go-Ethereum, and Nethermind are planned for future release — compatibility layers that bring ETC support to major upstream clients without maintaining full forks.
 
 ## Developer Tooling (Full EVM Compatibility)
 
@@ -201,9 +202,8 @@ Taking that model on-chain and open-sourcing it through smart contracts is only 
 
 Node operators must upgrade before the Olympia activation block. Three clients available:
 
-- **Fukuii** (Scala, JDK 21+) — Primary client post-Olympia. 143 RPC methods, 2,706 tests.
-- **Core-Geth** (Go 1.24+) — Transitioning to maintenance role.
-- **Hyperledger Besu** (Java 21+) — Enterprise-grade, Apache 2.0 licensed.
+- **Fukuii** — Primary client for the Olympia era. Purpose-built for Ethereum Classic and designed for long-term protocol stewardship.
+- **Core-Geth** — Legacy client, actively maintained and carried through Olympia. Scheduled to phase out as Fukuii assumes the primary role.
 
 Prerequisites: 8 GB RAM, 500 GB SSD. Block rewards and tips remain untouched; only EIP-1559 basefee is redirected to the treasury.
 
@@ -246,7 +246,7 @@ ECIP-1121 closes years of EVM divergence in a single upgrade, delivering every e
 The Olympia Treasury is funded by EIP-1559 basefee revenue, voluntary on-chain donations, and mining rewards directed to the treasury address. Block rewards and tips remain completely untouched and go entirely to miners. Futarchy prediction market activity generates additional transaction volume that flows back into the treasury as basefee revenue. Any stakeholder — whether exchanges, custodians, miners, investment product issuers, or institutions holding ETC on behalf of fund shareholders — can contribute directly on-chain with no overhead. Stakeholders who prefer a traditional giving model can contribute through the ETC Cooperative, a US 501(c)(3) non-profit that accepts tax-deductible donations.
 
 **How was Olympia tested before mainnet?**
-Olympia activates on the Mordor testnet first. Mordor is Ethereum Classic's Proof-of-Work testnet and mirrors mainnet conditions closely. All three client implementations — Fukuii, Core-Geth, and Besu — run the Mordor fork before any mainnet activation is scheduled. Cross-client validation using the Hive integration testing framework confirms consensus compatibility across implementations. The mainnet activation block is not set until Mordor has run cleanly and major network stakeholders, including exchanges, custodians, and mining pools, have confirmed readiness.
+Olympia activates on the Mordor testnet first. Mordor is Ethereum Classic's Proof-of-Work testnet and mirrors mainnet conditions closely. The mainnet activation block is not set until Mordor has run cleanly and major network stakeholders, including exchanges, custodians, and mining pools, have confirmed readiness.
 
 **When is the mainnet activation block?**
 Olympia activates on Mordor testnet first. The mainnet activation block is announced after a successful Mordor run and a coordinated stakeholder readiness check with exchanges, mining pools, node operators, and infrastructure providers. All client implementations publish Olympia-compatible releases well before activation. The process follows the same sequence used for every previous ETC hard fork.
