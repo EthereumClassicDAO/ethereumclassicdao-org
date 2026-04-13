@@ -134,14 +134,14 @@ export function ClassicUSDSection() {
                 Why It Matters
               </p>
               <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {[
+                {([
                   "Proves ETC's EVM handles regulated financial instruments at production scale",
-                  "Enables composable DeFi with a USD-stable base (ETCswap V2/V3 integration)",
+                  <>Enables composable DeFi with a USD-stable base (<a href="https://etcswap.org" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">ETCswap</a> V2/V3 integration)</>,
                   "First deployment validates ETC as a GENIUS Act-compliant stablecoin platform",
                   "Brale's API-accessible platform is a pathway for additional fiat-backed issuers on ETC",
-                ].map((point) => (
+                ]).map((point, i) => (
                   <p
-                    key={point}
+                    key={i}
                     className="text-xs leading-relaxed text-[var(--text-secondary)]"
                   >
                     {point}
