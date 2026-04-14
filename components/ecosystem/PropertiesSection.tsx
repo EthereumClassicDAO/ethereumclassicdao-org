@@ -7,26 +7,26 @@ const properties = [
   {
     icon: Vote,
     name: "Olympia DAO",
-    description: "Governance landing page",
+    description: "Protocol governance — upgrade coordination, ECIP ratification, and network-wide signaling",
     href: "https://olympiadao.org",
   },
   {
     icon: Landmark,
     name: "Olympia Treasury",
-    description: "Treasury monitoring dashboard",
+    description: "Real-time treasury monitoring — funding allocation, balance, and disbursement history",
     href: "https://olympiatreasury.org",
   },
   {
     icon: LayoutDashboard,
     name: "Governance App",
-    description: "Proposal submission, voting, and execution",
+    description: "Proposal submission, on-chain voting, and execution tooling for network contributors",
     href: "https://app.olympiadao.org",
   },
   {
     icon: Github,
     name: "GitHub",
-    description: "Open-source repositories",
-    href: "https://github.com/EthereumClassicDAO",
+    description: "Client implementations, governance contracts, and protocol infrastructure — all open-source",
+    href: "https://github.com/olympiadao",
   },
 ];
 
@@ -34,16 +34,25 @@ export function PropertiesSection() {
   return (
     <>
       <SectionDivider variant="strong" />
-      <section aria-labelledby="olympia-properties-heading" className="section-alt py-28">
+      <section aria-labelledby="olympia-governance-framework-heading" className="section-alt py-28">
         <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 id="olympia-properties-heading" className="text-3xl font-bold tracking-tight">
-              Olympia Properties
+            <h2 id="olympia-governance-framework-heading" className="text-3xl font-bold tracking-tight">
+              Olympia Governance Framework
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              The Olympia governance ecosystem spans multiple open-source web
-              properties.
+              Operational infrastructure for core developers, protocol
+              contributors, and network security stakeholders. Governance
+              tooling, treasury monitoring, and open-source repositories for
+              those coordinating on critical infrastructure and emergency
+              response.
             </p>
+            <a
+              href="/governance"
+              className="mt-4 inline-flex items-center text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+            >
+              Learn about Olympia governance →
+            </a>
           </FadeIn>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2">

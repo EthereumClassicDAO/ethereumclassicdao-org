@@ -4,15 +4,15 @@ import { NetworkConfigSection } from "@/components/ecosystem/NetworkConfigSectio
 import { DeveloperToolingSection } from "@/components/ecosystem/DeveloperToolingSection";
 import { ClientsSection } from "@/components/ecosystem/ClientsSection";
 import { MiningSection } from "@/components/ecosystem/MiningSection";
-import { EquipmentSection } from "@/components/ecosystem/EquipmentSection";
 import { InstitutionalProductsSection } from "@/components/ecosystem/InstitutionalProductsSection";
+import { IntegrationsSection } from "@/components/ecosystem/IntegrationsSection";
 import { DeveloperLinksSection } from "@/components/ecosystem/DeveloperLinksSection";
 import { PropertiesSection } from "@/components/ecosystem/PropertiesSection";
 
 export const metadata: Metadata = {
-  title: "Ecosystem",
+  title: "Build on Ethereum Classic — EVM Developer Ecosystem",
   description:
-    "Build on Ethereum Classic — full EVM developer tooling, chain configuration, client implementations, mining, and institutional products.",
+    "Full EVM compatibility on Ethereum Classic. Foundry, Hardhat, wagmi, viem, and ethers.js work without modification. Chain IDs: 61 (mainnet), 63 (Mordor testnet). GPU and ASIC mining. Institutional access via ETCG. The same toolchain used for Ethereum deploys to ETC after Olympia.",
 };
 
 export default function EcosystemPage() {
@@ -21,11 +21,11 @@ export default function EcosystemPage() {
       <EcosystemHeroSection />
       <NetworkConfigSection />
       <DeveloperToolingSection />
+      <DeveloperLinksSection />
       <ClientsSection />
       <MiningSection />
-      <EquipmentSection />
       <InstitutionalProductsSection />
-      <DeveloperLinksSection />
+      <IntegrationsSection />
       <PropertiesSection />
     </main>
   );

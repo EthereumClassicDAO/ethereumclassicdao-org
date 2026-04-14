@@ -254,7 +254,7 @@ export default function UpgradePage() {
               </li>
               <li className="flex gap-3">
                 <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
-                <span><span className="font-semibold text-white">Institutional infrastructure:</span> the Proof-of-Work foundation for regulated stablecoin issuance (Classic USD, MiCA and GENIUS Act-compliant), digital commodity classification under the CLARITY Act, and the broadest cross-jurisdictional institutional access profile of any Proof-of-Work smart contract network</span>
+                <span><span className="font-semibold text-white">Institutional infrastructure:</span> the Proof-of-Work foundation for regulated stablecoin issuance (<a href="https://classicusd.com" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">Classic USD</a>, MiCA and GENIUS Act-compliant), digital commodity classification under the CLARITY Act, and the broadest cross-jurisdictional institutional access profile of any Proof-of-Work smart contract network</span>
               </li>
             </ul>
           </FadeIn>

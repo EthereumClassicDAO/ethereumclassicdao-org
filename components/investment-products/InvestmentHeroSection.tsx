@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 const stats = [
@@ -30,18 +31,47 @@ export function InvestmentHeroSection() {
             Institutional Access to Ethereum Classic
           </h1>
           <p className="mt-4 text-base text-[var(--text-muted)]">
-            From regulated trust products trading today to the expanding
-            investment product landscape. ETC is accessible through the same
-            TradFi infrastructure used for equities, bonds, and commodities.
+            ETC has had regulated investment product exposure since May 2018
+            &mdash; before most institutional digital asset infrastructure
+            existed. The Grayscale Ethereum Classic Trust was among the earliest
+            digital asset grantor trusts, applying the same structure Grayscale
+            used for GBTC (2013) and ETHE (2017) to Ethereum Classic. It
+            predated the ETF era and has traded as an SEC-reporting security for
+            over six years.
           </p>
-          <a
-            href="https://www.grayscale.com/funds/grayscale-ethereum-classic-trust"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-2 rounded-lg border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] px-5 py-2.5 text-sm font-semibold text-[var(--brand-green)] transition-colors hover:bg-[rgba(0,255,174,0.12)]"
-          >
-            Grayscale Ethereum Classic Trust →
-          </a>
+          <p className="mt-3 text-base text-[var(--text-muted)]">
+            The product landscape is now expanding. GBTC converted to a spot
+            Bitcoin ETF in January 2024. ETHE followed in July 2024. Regulatory
+            precedent for the trust-to-ETF conversion path is established, and
+            every issuer that built infrastructure for BTC and ETH investment
+            products already has the custody relationships, legal framework, and
+            distribution agreements needed for an ETC product. ETC is accessible
+            today through the same brokerage accounts used for equities, bonds,
+            and commodities &mdash; no crypto exchange, no self-custody, and no
+            special onboarding required.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href="https://www.grayscale.com/funds/grayscale-ethereum-classic-trust"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] px-5 py-2.5 text-sm font-semibold text-[var(--brand-green)] transition-colors hover:bg-[rgba(0,255,174,0.12)]"
+            >
+              Grayscale Ethereum Classic Trust →
+            </a>
+            <Link
+              href="/regulation"
+              className="inline-flex items-center gap-2 rounded-lg border border-[var(--divider)] bg-[var(--bg-elevated)] px-5 py-2.5 text-sm font-semibold text-[var(--text-muted)] transition-colors hover:border-[var(--border-brand)] hover:text-[var(--brand-green)]"
+            >
+              Regulatory Framework →
+            </Link>
+            <Link
+              href="/environmental-impact"
+              className="inline-flex items-center gap-2 rounded-lg border border-[var(--divider)] bg-[var(--bg-elevated)] px-5 py-2.5 text-sm font-semibold text-[var(--text-muted)] transition-colors hover:border-[var(--border-brand)] hover:text-[var(--brand-green)]"
+            >
+              Energy Infrastructure →
+            </Link>
+          </div>
         </FadeIn>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-3">

@@ -30,10 +30,17 @@ export function TradFiAccessSection() {
             <h2 id="etc-in-traditional-finance-heading" className="mt-2 text-3xl font-bold tracking-tight">
               ETC in Traditional Finance
             </h2>
-            <p className="mt-3 max-w-2xl text-base text-[var(--text-muted)]">
-              ETCG is an OTCQX-listed grantor trust. Search the ticker at your
-              existing brokerage — it trades alongside equities and ETFs.
-              IRA-eligible at major full-service platforms.
+            <p className="mt-3 text-base text-[var(--text-muted)]">
+              ETCG trades through standard brokerage infrastructure &mdash; no
+              crypto exchange account, no self-custody wallet, no seed phrase,
+              and no special onboarding. Search the ticker at any major brokerage
+              and it settles alongside equities and ETFs with standard T+1
+              settlement and the same tax reporting your brokerage already
+              provides. It is IRA-eligible at major full-service platforms,
+              meaning ETC exposure is accessible within the retirement account
+              structures that most institutional mandates and individual
+              investors already use. For allocators who cannot hold crypto
+              directly, ETCG is the current path.
             </p>
           </FadeIn>
 

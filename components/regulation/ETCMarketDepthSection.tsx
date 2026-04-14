@@ -74,9 +74,24 @@ export function ETCMarketDepthSection() {
               ETC as a Global Payment Network
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Deep liquidity, broad fiat coverage, and 300+ exchanges make ETC
-              one of the most accessible digital assets in the world, which is a
-              prerequisite for stablecoin viability as a global payment rail.
+              A stablecoin is only as useful as the network it runs on. For a
+              stablecoin to function as a global payment rail, the underlying
+              asset must be tradeable against local currencies in every
+              jurisdiction where the stablecoin is used. ETC has continuous
+              fiat price discovery across 17 major currencies and 300+ active
+              exchange markets — ETC/USD, ETC/EUR, ETC/JPY, ETC/KRW, ETC/INR,
+              and coverage across Latin America, Southeast Asia, the Middle
+              East, and Eastern Europe. Classic USD ($USC) settles on the same
+              network that these markets are pricing.
+            </p>
+            <p className="mt-3 text-base text-[var(--text-muted)]">
+              ETC/USD spot markets have operated continuously since 2016 —
+              one of the longest-running fiat price discovery mechanisms in
+              digital assets. That track record is what OTC desks, custodians,
+              and compliance teams look for when evaluating whether a network
+              can support institutional-scale stablecoin settlement. Deep
+              liquidity is not a marketing claim; it is a prerequisite for
+              every counterparty in the payment chain.
             </p>
           </FadeIn>
 
@@ -144,13 +159,7 @@ export function ETCMarketDepthSection() {
           </FadeIn>
 
           <FadeIn>
-            <p className="mt-10 border-l-2 border-[var(--brand-green)] pl-4 text-sm text-[var(--text-muted)]">
-              ETC/USD spot markets have operated continuously since 2016, making
-              this one of the longest-running fiat price discovery mechanisms in
-              all of crypto. This depth is what makes ETC viable as a stablecoin
-              settlement layer for global payments.
-            </p>
-            <div className="mt-6 flex items-center gap-4">
+            <div className="mt-10 flex items-center gap-4">
               <span className="text-xs text-[var(--text-subtle)]">Market data:</span>
               <a
                 href="https://www.coingecko.com/en/coins/ethereum-classic"

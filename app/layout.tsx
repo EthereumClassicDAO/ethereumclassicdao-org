@@ -43,7 +43,6 @@ export const metadata: Metadata = {
     "GENIUS Act",
     "MiCA",
     "FSA Green List",
-    "digital commodity",
     "decentralized asset",
     "regulated stablecoin",
     "stablecoin platform",
@@ -127,7 +126,7 @@ const organizationJsonLd = {
   url: "https://ethereumclassicdao.org",
   logo: "https://ethereumclassicdao.org/logo.svg",
   description:
-    "Wyoming-registered DAO LLC building the software and infrastructure for global adoption of Ethereum Classic — the largest Proof-of-Work smart contract platform. Recognized across six major global regulatory frameworks spanning four continents.",
+    "Wyoming-registered DAO LLC building the software and infrastructure for global adoption of Ethereum Classic — the largest Proof-of-Work smart contract platform. Recognized across leading global regulatory frameworks in the US, EU, UK, Japan, and UAE.",
   foundingDate: "2025",
   legalName: "Ethereum Classic DAO LLC",
   address: {
@@ -149,7 +148,7 @@ const websiteJsonLd = {
   name: "Ethereum Classic DAO",
   url: "https://ethereumclassicdao.org",
   description:
-    "Institutional website for Ethereum Classic DAO LLC — the Wyoming-registered DAO LLC building governance infrastructure for Ethereum Classic's Olympia upgrade.",
+    "Institutional website for Ethereum Classic DAO LLC — the Wyoming-registered DAO LLC building software, governance infrastructure, and institutional frameworks for Ethereum Classic, the largest Proof-of-Work blockchain with native EVM smart contracts.",
   publisher: {
     "@type": "Organization",
     name: "Ethereum Classic DAO LLC",

@@ -8,7 +8,7 @@ Ethereum Classic DAO LLC is the legal entity for the Olympia DAO under Wyoming's
 
 Ethereum Classic (ETC) is the only Proof-of-Work blockchain with native EVM smart contracts. Every Ethereum framework, library, and IDE works with Ethereum Classic. Just change the chain ID (61 mainnet, 63 Mordor testnet). Network upgrades are coordinated to maintain EVM protocol parity, delivering a best-in-class EVM experience.
 
-ETC is recognized across six major global regulatory frameworks spanning four continents — a digital commodity candidate under the CLARITY Act (US), decentralized asset under MiCA (EU), and active compliance across GENIUS Act (US), FSA Green List (Japan), FSMA (UK), and VARA (UAE). Classic USD ($USC), issued by Brale Inc. (NMLS #2376957), is a live proof of GENIUS Act and MiCA-aligned stablecoin deployment on ETC mainnet.
+ETC is recognized across leading global regulatory frameworks in the US, EU, UK, Japan, and UAE — a digital commodity candidate under the CLARITY Act (US), decentralized asset under MiCA (EU), and active compliance across GENIUS Act (US), FSA Green List (Japan), FSMA (UK), and VARA (UAE). Classic USD ($USC), issued by Brale Inc. (NMLS #2376957), is a live proof of GENIUS Act and MiCA-aligned stablecoin deployment on ETC mainnet.
 
 ## Legal Structure
 
@@ -143,7 +143,7 @@ Ethereum Classic's Proof-of-Work network functions as a global, 24/7, permission
 
 **Stranded energy use cases:** Remote hydroelectric, flared wellhead gas, curtailed wind and solar, off-peak industrial power, landfill gas, geothermal in seismically active regions.
 
-**ETC as energy market:** Mining profitability is a direct function of ETC price × block reward ÷ energy cost. When energy is cheap, mining profitability rises, driving up hash rate and energy consumption. When energy is expensive, miners curtail operations, freeing capacity for other uses. With 300+ exchanges across every time zone, ETC markets offer true 24/7 price discovery, unlike energy futures, which close on weekends. Fiat pairs across 17 currencies let local energy producers price their output in local terms. ETC/USD spot markets have operated continuously since 2016.
+**ETC as energy market:** Mining profitability is a direct function of ETC price × block reward ÷ energy cost. When energy is cheap, mining profitability rises, driving up hash rate and energy consumption. When energy is expensive, miners curtail operations, freeing capacity for other uses. With 300+ exchanges across every time zone, ETC markets offer true 24/7 price discovery, unlike energy futures, which close on weekends. Fiat pairs across major currencies let local energy producers price their output in local terms. ETC/USD spot markets have operated continuously since 2016.
 
 **Dirty Coin documentary:** Directed by Alana Mediavilla, filmed over three years across four continents from rural Texas to the mountains of Malawi. Documents how Proof-of-Work mining reshapes energy economics and creates socio-economic opportunity in communities the traditional grid has never reached. Winner, Best National Documentary, Puerto Rico Film Festival 2025. See dirtycointhemovie.com.
 
@@ -196,7 +196,7 @@ Taking that model on-chain and open-sourcing it through smart contracts is only 
 3. Olympia upgrade: EIP-1559 fee market with basefee-funded protocol treasury and full Fusaka EVM parity. Every current Ethereum tool, library, and framework works on ETC without modification.
 4. Original EVM, in continuous operation since July 2015. Longer operational track record than any competing smart contract platform.
 5. Post-Merge infrastructure: largest Proof-of-Work network with native smart contracts. Retail GPU access and institutional ASIC hardware available.
-6. 300+ exchanges, 17 fiat currency pairs, continuous ETC/USD price discovery since 2016. Liquidity depth required for a credible global stablecoin settlement layer.
+6. 300+ exchanges, fiat currency pairs across major global markets, continuous ETC/USD price discovery since 2016. Liquidity depth required for a credible global stablecoin settlement layer.
 
 ## Olympia Upgrade Guide
 

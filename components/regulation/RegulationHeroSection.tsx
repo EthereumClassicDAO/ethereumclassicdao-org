@@ -48,7 +48,25 @@ export function RegulationHeroSection() {
           <p className="mt-4 text-lg leading-relaxed text-[var(--text-muted)]">
             ETC sits at the intersection of three major global frameworks,
             each defined by landmark 2025 legislation: digital commodity
-            candidate, decentralized asset, and live stablecoin platform.
+            candidate under the CLARITY Act, decentralized asset under MiCA,
+            and live stablecoin platform under the GENIUS Act.
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-[var(--text-muted)]">
+            Most digital assets qualify under one of these frameworks. ETC
+            qualifies under all three simultaneously. Its Proof-of-Work
+            consensus satisfies the decentralization criteria regulators use
+            to classify assets as commodities. Its EVM compatibility makes it
+            a live platform for regulated stablecoin issuance. These are not
+            separate positioning choices — they are the same technical
+            properties expressed from different regulatory vantage points.
+            Its regulatory surface is additive, not exclusive.
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-[var(--text-muted)]">
+            The global regulatory frameworks that define ETC&apos;s position were
+            enacted in 2024 and 2025. ETC&apos;s technical profile was built in
+            2015 and 2016 — it was not retrofitted to match regulators. The
+            network arrived at this moment as it was designed: open,
+            immutable, and without a central issuer.
           </p>
         </FadeIn>
       </div>

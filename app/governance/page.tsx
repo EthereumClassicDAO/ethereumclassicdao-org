@@ -7,9 +7,9 @@ import { FAQSection } from "@/components/governance/FAQSection";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
 export const metadata: Metadata = {
-  title: "Governance",
+  title: "Olympia Governance Architecture",
   description:
-    "How Olympia governance works: on-chain proposal submission, voting, treasury funding, and execution for Ethereum Classic.",
+    "Three-layer governance for Ethereum Classic: binding on-chain DAO decisions via OpenZeppelin Governor 5.x, open futarchy prediction markets for public participation, and the network participant layer. Protocol treasury funded by EIP-1559 basefee. Wyoming DAO LLC executes on-chain approvals in the real world.",
 };
 
 export default function GovernancePage() {

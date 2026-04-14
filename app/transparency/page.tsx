@@ -4,9 +4,9 @@ import { PrinciplesSection } from "@/components/transparency/PrinciplesSection";
 import { DocumentsSection } from "@/components/transparency/DocumentsSection";
 
 export const metadata: Metadata = {
-  title: "Disclosures",
+  title: "Transparency & Disclosures",
   description:
-    "Public reports and disclosure documents for Ethereum Classic DAO LLC.",
+    "Public reports, governance disclosures, and treasury documentation for Ethereum Classic DAO LLC. Covers operational reporting, governance decisions, development funding, and the open development model established by Olympia.",
 };
 
 export default function TransparencyPage() {

@@ -172,9 +172,12 @@ export function DeveloperToolingSection() {
               Developer Tooling
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Ethereum Classic maintains parity with the latest EVM
-              specification. All modern Ethereum tooling works on ETC.
-              Configure your chain ID and start building.
+              Ethereum Classic tracks the Ethereum EVM specification, which
+              means the full Ethereum development toolchain works on ETC
+              without modification. Hardhat, Foundry, ethers.js, viem, wagmi
+              — every major tool connects with a single configuration
+              parameter. Set Chain ID to 61, point your RPC at
+              etc.rivet.link, and deploy.
             </p>
           </FadeIn>
 

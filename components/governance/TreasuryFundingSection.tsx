@@ -1,3 +1,4 @@
+import type { ReactNode, ElementType } from "react";
 import {
   ArrowRight,
   Coins,
@@ -13,6 +14,10 @@ import {
   User,
   Heart,
   RotateCcw,
+  Layers,
+  Flame,
+  HandCoins,
+  Pickaxe,
 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
@@ -23,21 +28,21 @@ const safeguards = [
     title: "Timelock",
     ecip: "ECIP-1113",
     description:
-      "Every approved proposal must wait through a configurable delay period before execution. This gives the community time to review, object, or prepare, preventing hasty or malicious actions from taking effect immediately.",
+      "Every approved proposal must pass through a configurable delay period between approval and execution. No treasury disbursement, contract call, or governance action can take effect immediately after a vote passes. The delay window gives the community — members, market participants, and infrastructure operators — time to review what is about to execute, raise objections, or prepare for its effects. Emergency proposals can be scoped with shorter delays; routine funding and upgrade proposals carry longer ones.",
   },
   {
     icon: ShieldCheck,
     title: "Sanctions Screening",
     ecip: "ECIP-1119",
     description:
-      "The governance system includes on-chain sanctions compliance at three layers: proposal submission, active voting, and execution. Sanctioned addresses cannot participate in governance or receive treasury funds.",
+      "On-chain sanctions compliance is enforced at three independent checkpoints: proposal submission, active voting, and execution. A sanctioned address cannot submit a proposal, cast a vote, or receive treasury funds — checked at each stage rather than once at onboarding. This gives compliance-oriented exchanges, custodians, and investment product issuers the on-chain verification they need to engage with the Olympia Treasury without relying on off-chain organizational assurances.",
   },
   {
     icon: Fingerprint,
     title: "Open Prediction Markets",
     ecip: "ECIP-1117",
     description:
-      "Open to anyone without membership — futarchy prediction markets provide a financially incentivized governance signal that prevents binding governance from becoming captured by a closed set of members. Anyone can stake on protocol outcomes and earn rewards for accurate predictions. Market prices become on-chain signal that informs governance decisions and holds the DAO publicly accountable.",
+      "Binding governance is limited to non-transferable membership NFT holders. Open prediction markets ensure that the DAO cannot become a closed system accountable only to its own members. Anyone — no membership, no application — can open a market on a proposed protocol outcome, stake on the result, and earn financial rewards for accurate predictions. Market prices aggregate public opinion into a real-time on-chain signal that the DAO must weigh. A governance decision that markets consistently bet against is a governance decision under visible public pressure.",
   },
 ];
 
@@ -49,7 +54,7 @@ const flowSteps = [
   { icon: Globe, label: "Ecosystem", sublabel: "Development funding" },
 ];
 
-const stakeholders = [
+const stakeholders: { icon: ElementType; name: string; path: ReactNode }[] = [
   {
     icon: Building2,
     name: "Exchanges & Custodians",
@@ -63,7 +68,19 @@ const stakeholders = [
   {
     icon: TrendingUp,
     name: "Investment Product Issuers",
-    path: "ETCG holders and future product issuers fund via direct wallet or treasury address",
+    path: (
+      <>
+        <a
+          href="https://www.otcmarkets.com/stock/ETCG/quote"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-white transition-colors"
+        >
+          ETCG
+        </a>{" "}
+        holders and product issuers — direct wallet or treasury address
+      </>
+    ),
   },
   {
     icon: User,
@@ -74,6 +91,34 @@ const stakeholders = [
     icon: Heart,
     name: "ETC Cooperative",
     path: "US 501(c)(3) non-profit accepting tax-deductible donations in any amount",
+  },
+  {
+    icon: Layers,
+    name: "Composable DeFi Protocols",
+    path: (
+      <>
+        RetroPGF — protocol fees and yield from application-layer
+        primitives directed to the treasury address (
+        <a
+          href="https://classicusd.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-white transition-colors"
+        >
+          Classic USD
+        </a>
+        ,{" "}
+        <a
+          href="https://etcswap.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-white transition-colors"
+        >
+          ETCswap
+        </a>
+        )
+      </>
+    ),
   },
 ];
 
@@ -88,8 +133,17 @@ export function TreasuryFundingSection() {
               Treasury Funding
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              How the Olympia Treasury is funded, sustainably and without
-              impacting miners.
+              The Olympia Treasury is funded by the basefee revenue that
+              EIP-1559 already removes from miner rewards on every
+              transaction. Block rewards and tips go entirely to miners
+              unchanged. No new issuance, no tax on mining income, no
+              inflation. The treasury grows proportionally with network
+              activity: more transactions, more basefee, more development
+              capacity. Voluntary on-chain contributions from exchanges,
+              custodians, miners, investment product issuers, and
+              individuals add to that base. Futarchy prediction market
+              activity generates additional transaction volume that
+              further compounds the basefee flywheel.
             </p>
           </FadeIn>
 
@@ -109,6 +163,60 @@ export function TreasuryFundingSection() {
               </p>
             </div>
           </FadeIn>
+
+          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+            <FadeIn delay={0}>
+              <div className="flex h-full flex-col rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
+                  <Flame size={20} className="text-[var(--brand-green)]" />
+                </div>
+                <p className="mt-4 text-sm font-semibold">Basefee Revenue</p>
+                <p className="mt-2 flex-1 text-xs leading-relaxed text-[var(--text-muted)]">
+                  EIP-1559 basefee is removed from every transaction and
+                  directed to the treasury automatically. The primary funding
+                  source grows proportionally with network activity — more
+                  transactions, more development capacity.
+                </p>
+                <p className="mt-4 text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">
+                  Automatic · EIP-1559 · Primary Source
+                </p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={80}>
+              <div className="flex h-full flex-col rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
+                  <HandCoins size={20} className="text-[var(--brand-green)]" />
+                </div>
+                <p className="mt-4 text-sm font-semibold">On-Chain Donations</p>
+                <p className="mt-2 flex-1 text-xs leading-relaxed text-[var(--text-muted)]">
+                  Any stakeholder worldwide can contribute directly with a
+                  single transaction. Exchanges, custodians, investment product
+                  issuers, DeFi protocols, and individual holders. Tax-advantaged
+                  contributions route through the ETC Cooperative.
+                </p>
+                <p className="mt-4 text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">
+                  Permissionless · Any Amount · Any Wallet
+                </p>
+              </div>
+            </FadeIn>
+            <FadeIn delay={160}>
+              <div className="flex h-full flex-col rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
+                  <Pickaxe size={20} className="text-[var(--brand-green)]" />
+                </div>
+                <p className="mt-4 text-sm font-semibold">Mining Contributions</p>
+                <p className="mt-2 flex-1 text-xs leading-relaxed text-[var(--text-muted)]">
+                  Miners can direct a portion of block rewards to the treasury
+                  address. Block rewards and tips otherwise go entirely to
+                  miners — no mandatory contribution, no impact on mining
+                  economics.
+                </p>
+                <p className="mt-4 text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">
+                  Optional · Block Rewards · Miner Choice
+                </p>
+              </div>
+            </FadeIn>
+          </div>
 
           {/* Funding flow */}
           <div className="mt-12">
@@ -195,6 +303,20 @@ export function TreasuryFundingSection() {
               <p className="mt-2 text-base font-semibold">
                 Every stakeholder has a direct path to the treasury
               </p>
+              <p className="mt-3 text-base text-[var(--text-muted)]">
+                No organization to join, no application to submit, no
+                preferred relationship required. Any participant with a
+                stake in the network can contribute directly on-chain
+                with a single transaction. Exchanges and custodians holding
+                ETC on behalf of clients, miners directing a portion of
+                block rewards to the treasury address, investment product
+                issuers growing the on-chain funding base alongside their
+                AUM, and individual holders sending any amount from any
+                wallet worldwide. For contributions that benefit from
+                tax-advantaged treatment, the ETC Cooperative accepts
+                donations as a US 501(c)(3) non-profit and directs them
+                to the Olympia Treasury.
+              </p>
             </FadeIn>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {stakeholders.map((s, i) => (
@@ -234,7 +356,16 @@ export function TreasuryFundingSection() {
             <div className="mt-20">
               <h2 id="safeguards-heading" className="text-3xl font-bold tracking-tight">Safeguards</h2>
               <p className="mt-3 text-base text-[var(--text-muted)]">
-                Built-in protections that keep governance secure and compliant.
+                Olympia is built on OpenZeppelin Governor 5.x, the most
+                widely deployed on-chain governance framework in the EVM
+                ecosystem. The timelock, quorum, and voting parameters are
+                defined in audited contracts, not in organizational policy.
+                Three independent safeguard layers enforce compliance at
+                proposal submission, during voting, and at execution.
+                Every treasury movement is publicly recorded and
+                independently verifiable on-chain, providing the audit
+                trail that compliance-oriented institutions require before
+                they can engage.
               </p>
               <div className="mt-3 flex gap-2">
                 <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">

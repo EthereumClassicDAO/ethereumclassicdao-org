@@ -14,8 +14,16 @@ export function MiningHardwareSection() {
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               ETC has the widest mining participation curve of any smart
-              contract platform, spanning retail electronics stores to industrial
-              ASIC deployments at stranded energy sites.
+              contract platform, spanning consumer electronics stores to
+              purpose-built ASIC deployments at industrial stranded energy
+              sites. This range is not incidental &mdash; it is what makes ETC
+              viable for stranded energy projects at every scale. A pilot
+              installation testing a small remote hydro site uses GPU hardware
+              available at retail. A commercial wellhead gas operation
+              committing long-term capital uses institutional ASIC hardware
+              purpose-built for the ETChash algorithm. No other smart contract
+              platform retained PoW consensus, so no other smart contract
+              platform has both ends of this curve.
             </p>
           </FadeIn>
 

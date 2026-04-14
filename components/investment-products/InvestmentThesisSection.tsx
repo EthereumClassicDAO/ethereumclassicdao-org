@@ -15,11 +15,13 @@ const thesisPoints: ThesisPoint[] = [
     number: "01",
     title: "Regulatory Clarity",
     body: "ETC inherits the commodity classification path that Proof-of-Work networks established and the programmable finance frameworks being built around smart contract platforms. Its regulatory surface spans both trajectories: digital commodity candidate (CLARITY Act), decentralized asset (MiCA), stablecoin platform (GENIUS Act).",
+    link: { href: "/regulation", label: "Regulatory Framework →" },
   },
   {
     number: "02",
     title: "Olympia Upgrade",
     body: "EIP-1559 fee market redirects basefee to a protocol-managed treasury for the first time on ETC. On-chain DAO governance controls resource allocation. First programmable monetary policy on a Proof-of-Work EVM.",
+    link: { href: "/olympia", label: "Olympia Upgrade →" },
   },
   {
     number: "03",
@@ -34,8 +36,7 @@ const thesisPoints: ThesisPoint[] = [
   {
     number: "05",
     title: "Deepest PoW Smart Contract Liquidity",
-    body: "300+ exchanges across every time zone, GPU mining hardware accessible at retail, and institutional ASIC infrastructure. ETC/USD has operated as a continuous 24/7 spot market since 2016 — the longest-running fiat price discovery mechanism of any programmable blockchain. Fiat pairs span 17 currencies across Americas, Europe, Asia-Pacific, the Middle East, and emerging markets.",
-    link: { href: "/regulation", label: "See all 17 currency pairs →" },
+    body: "300+ exchanges across every time zone, GPU mining hardware accessible at retail, and institutional ASIC infrastructure. ETC/USD has operated as a continuous 24/7 spot market since 2016 — the longest-running fiat price discovery mechanism of any programmable blockchain. Fiat pairs span major currencies across the Americas, Europe, Asia-Pacific, the Middle East, and emerging markets.",
   },
 ];
 
@@ -44,14 +45,20 @@ export function InvestmentThesisSection() {
     <>
       <SectionDivider />
       <section aria-labelledby="the-etc-investment-case-heading" className="section-alt relative py-28">
-        <div className="relative z-10 mx-auto max-w-3xl px-6">
+        <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2 id="the-etc-investment-case-heading" className="text-3xl font-bold tracking-tight">
               The ETC Investment Case
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Five structural properties that distinguish Ethereum Classic in
-              the 2025–2026 institutional digital asset landscape.
+              Five structural properties that differentiate Ethereum Classic in
+              the institutional digital asset landscape. Each addresses a
+              specific institutional requirement: regulatory classification
+              certainty, protocol upgrade credibility, compliant settlement
+              infrastructure, operational track record, and market liquidity
+              depth. Together they describe a network that arrived at this
+              moment as it was designed &mdash; not retrofitted to match a
+              regulatory environment it didn&rsquo;t anticipate.
             </p>
           </FadeIn>
 

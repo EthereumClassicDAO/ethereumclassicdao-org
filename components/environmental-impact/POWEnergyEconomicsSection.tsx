@@ -40,9 +40,24 @@ export function POWEnergyEconomicsSection() {
               How PoW Transforms Energy Markets
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Proof-of-Work mining is not an energy consumer. It is an energy
-              market participant. Miners respond to price signals the way no
-              other industrial consumer can.
+              Proof-of-Work mining is not an energy consumer &mdash; it is an
+              energy market participant. The difference is structural.
+              Traditional industrial consumers sign long-term offtake
+              agreements, build fixed infrastructure, and require stable,
+              predictable delivery. Miners are different: hardware is modular,
+              operations are relocatable, and curtailment is near-instantaneous.
+              They respond to real-time price signals the way no other
+              industrial consumer can.
+            </p>
+            <p className="mt-3 text-base text-[var(--text-muted)]">
+              This flexibility creates value that extends beyond the miner.
+              Renewable projects that previously struggled to secure financing
+              &mdash; because curtailment periods made unit economics
+              unpredictable &mdash; now have a buyer willing to absorb exactly
+              the output that the grid cannot. The miner&rsquo;s indifference to
+              energy source (renewable, fossil, waste gas, geothermal) means
+              PoW demand is available wherever power is generated, not just
+              where it is most convenient to deliver.
             </p>
           </FadeIn>
 

@@ -1,10 +1,11 @@
+import type { ReactNode, ElementType } from "react";
 import { Vote, GitBranch, Pickaxe, Scale } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
 export function HowWeHelpSection() {
 
-  const pillars = [
+  const pillars: { icon: ElementType; title: string; description: ReactNode }[] = [
     {
       icon: GitBranch,
       title: "Core Client Development",
@@ -25,7 +26,7 @@ export function HowWeHelpSection() {
       icon: Scale,
       title: "Global Regulatory Navigation",
       description:
-        "ETC straddles two regulatory trajectories — digital commodity under the CLARITY Act and MiCA, and regulated stablecoin infrastructure under the GENIUS Act — giving it the broadest institutional access profile of any Proof-of-Work network. We track compliance across six major frameworks spanning four continents, with Classic USD as a live proof of GENIUS Act and MiCA alignment on ETC mainnet.",
+        <>ETC straddles two regulatory trajectories — digital commodity under the CLARITY Act and MiCA, and regulated stablecoin infrastructure under the GENIUS Act — giving it the broadest institutional access profile of any Proof-of-Work network. We track compliance across leading global regulatory frameworks across the US, EU, UK, Japan, and UAE, with <a href="https://classicusd.com" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">Classic USD</a> as a live proof of GENIUS Act and MiCA alignment on ETC mainnet.</>,
     },
   ];
   return (
@@ -38,9 +39,16 @@ export function HowWeHelpSection() {
               How We Help
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Building the software and infrastructure that Ethereum Classic
-              needs to scale from individuals to institutions, while
-              maintaining compliance across global regulatory frameworks.
+              Ethereum Classic&rsquo;s second decade requires more than
+              open-source stewardship. Public RPC endpoints, block explorers,
+              oracle networks, and institutional custody integrations all
+              operate under service agreements that require a named legal
+              counterparty. Regulatory reporting, vendor contracts, and
+              institutional relationships cannot be executed by ad-hoc
+              community coordination. Ethereum Classic DAO LLC is that
+              counterparty &mdash; building the protocol and infrastructure
+              while maintaining the compliance framework that institutional
+              participants require to engage with the network.
             </p>
           </FadeIn>
 

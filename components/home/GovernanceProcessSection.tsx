@@ -173,11 +173,18 @@ export function GovernanceProcessSection() {
               Governance Architecture
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Three complementary systems designed to work together. Membership-based
-              on-chain governance handles binding protocol decisions. Open prediction
-              markets give the broader public a financially incentivized stake in
-              network direction. Network participants — miners, exchanges, wallets,
-              and infrastructure providers — govern through the client software they run.
+              Ethereum Classic governance operates through three complementary
+              and mutually reinforcing systems. Membership-based on-chain
+              governance handles binding protocol decisions &mdash; formal
+              votes with financial stakes, configurable timelocks, and
+              automatic on-chain execution. Open prediction markets extend
+              participation beyond the membership, bringing financially
+              incentivized signal from anyone willing to stake capital on an
+              outcome. Network participants &mdash; miners, exchanges, wallets,
+              and infrastructure operators &mdash; govern through the client
+              software they choose to run: distributed adoption is the
+              governance act that makes a protocol change real. Each layer
+              informs the others, and each provides a check the others cannot.
             </p>
           </FadeIn>
 
