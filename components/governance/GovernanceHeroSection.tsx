@@ -13,8 +13,8 @@ export function GovernanceHeroSection() {
           </h1>
           <p className="mt-4 text-lg text-[var(--text-muted)]">
             Three complementary systems designed to work together.
-            Membership-based on-chain governance handles binding protocol
-            decisions. Open prediction markets give the broader public a
+            Binding on-chain governance handles core protocol decisions,
+            informed by open prediction markets that give any participant a
             financially incentivized stake in network direction. And network
             participants — miners, exchanges, wallets, and infrastructure
             providers — govern through the client software they choose to run.

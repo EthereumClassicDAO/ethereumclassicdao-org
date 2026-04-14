@@ -71,8 +71,8 @@ export function ETCRegulatoryProfileSection() {
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {profiles.map((p, i) => (
-              <FadeIn key={p.act} delay={i * 100}>
-                <div className="flex flex-col rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
+              <FadeIn key={p.act} delay={i * 100} className="h-full">
+                <div className="flex flex-col h-full rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
                   <div className="flex items-start justify-between gap-2">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                       <p.icon size={20} className="text-[var(--brand-green)]" />

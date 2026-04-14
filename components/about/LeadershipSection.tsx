@@ -8,14 +8,14 @@ const team = [
     name: "Cody Burns",
     title: "Organizing Member",
     photo: "/cody-burns.jpeg",
-    bio: "Core contributor to Ethereum Classic since 2016. Active across client development, ecosystem infrastructure, and community coordination.",
+    bio: "Founding Ethereum Classic contributor and technical lead on every major network upgrade since the chain's inception in 2016. Architect of the Thanos mining algorithm upgrade and principal developer across multiple ETC client implementations. A decade of protocol architecture and institutional engagement has placed Ethereum Classic at the intersection of digital commodity regulation and programmable finance.",
     github: "https://github.com/realcodywburns",
   },
   {
     name: "Chris Mercer",
     title: "Organizing Member",
     photo: "/chris-mercer.jpeg",
-    bio: "Core contributor to Ethereum Classic since 2017. Active across protocol governance, application infrastructure, and developer tooling.",
+    bio: "Core contributor since Ethereum Classic's first year, active across governance, client development, and the application layer. Deployed Classic USD — a MiCA and GENIUS Act-compliant stablecoin — on Ethereum Classic, building the composable DeFi and governance infrastructure the network's institutional utility depends on. Leads the application layer and on-chain governance architecture underpinning ETC's institutional and developer ecosystem.",
     github: "https://github.com/chris-mercer",
   },
 ];
@@ -25,7 +25,7 @@ const orgs = [
     name: "ETC Cooperative",
     role: "Foundational Organization",
     description:
-      "Founded in 2017, ETC Cooperative served as the primary organizational home for Ethereum Classic core development and ecosystem funding for nearly a decade. Ethereum Classic DAO LLC and Olympia DAO build on that foundational work, extending it into protocol-native governance and treasury infrastructure.",
+      "Founded in 2017 by and composed of Ethereum Classic's earliest core contributors, ETC Cooperative is a US 501(c)(3) non-profit that contributed millions of dollars to Ethereum Classic's client teams and infrastructure — backing every hard fork, every client release, and every cross-client coordination effort since Atlantis. Ethereum Classic DAO LLC and Olympia DAO build on that foundational work, extending it into protocol-native governance and treasury infrastructure.",
     href: "https://etccooperative.org",
     label: "etccooperative.org",
   },
@@ -33,7 +33,7 @@ const orgs = [
     name: "Grayscale Investments",
     role: "Regulated Investment Products",
     description:
-      "Grayscale has provided regulated securities exposure to Ethereum Classic since 2018 via the Grayscale Ethereum Classic Trust (ETCG), trading on OTCQX and accessible through Charles Schwab, Fidelity, and Interactive Brokers.",
+      "Grayscale pioneered regulated institutional access to Ethereum Classic in 2018 — years before Bitcoin ETFs existed as a product category — and became a major institutional donor to the ETC Cooperative, indirectly funding the core client development of the network underpinning their product. No other investment product issuer was doing this at the time. The Grayscale Ethereum Classic Trust (ETCG) trades on OTCQX and is accessible through Charles Schwab, Fidelity, and Interactive Brokers.",
     href: "https://grayscale.com/crypto-products/grayscale-ethereum-classic-trust/",
     label: "grayscale.com",
   },
@@ -48,19 +48,22 @@ export function LeadershipSection() {
           <FadeIn>
             <h2 id="leadership-heading" className="text-3xl font-bold tracking-tight">Leadership</h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Ethereum Classic DAO LLC extends nearly a decade of ecosystem
-              stewardship built by the ETC Cooperative, continuing as the
-              organizational home for Ethereum Classic&apos;s core contributors. The
-              work of coordinating network upgrades, client development, and
-              ecosystem infrastructure has continued uninterrupted since the
-              chain&apos;s earliest days.
+              Ethereum Classic has been stewarded since 2016 by a global network
+              of volunteer contributors — maintaining the chain, coordinating
+              upgrades, and building the ecosystem before any formal organization
+              existed. The ETC Cooperative formalized that work in 2017, funding
+              core development and infrastructure for nearly a decade, sustained
+              in large part by distributed ETCG holders whose management fees
+              backed the network before protocol-native funding existed. Ethereum
+              Classic DAO LLC is the institutional expression of that continuity
+              — the same contributors, the same commitment, built to grow with the network and the global adoption of blockchain infrastructure.
             </p>
           </FadeIn>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {team.map((person, i) => (
-              <FadeIn key={person.name} delay={i * 100}>
-                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6">
+              <FadeIn key={person.name} delay={i * 100} className="h-full">
+                <div className="h-full rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6">
                   <div className="flex items-center gap-4">
                     <Image
                       src={person.photo}
@@ -95,15 +98,14 @@ export function LeadershipSection() {
           <FadeIn>
             <h3 className="mt-16 text-xl font-bold">Key Partners</h3>
             <p className="mt-2 text-sm text-[var(--text-muted)]">
-              Organizations that have shaped and continue to support the Ethereum
-              Classic ecosystem.
+              The organizations whose decade of funded development and regulated institutional access built the foundation Ethereum Classic DAO LLC continues.
             </p>
           </FadeIn>
 
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
             {orgs.map((org, i) => (
-              <FadeIn key={org.name} delay={i * 100}>
-                <div className="flex flex-col rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
+              <FadeIn key={org.name} delay={i * 100} className="h-full">
+                <div className="flex flex-col h-full rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
                   <p className="text-base font-semibold">{org.name}</p>
                   <p className="mt-0.5 text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)]">
                     {org.role}

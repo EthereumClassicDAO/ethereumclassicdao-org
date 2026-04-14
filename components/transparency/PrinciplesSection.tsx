@@ -46,8 +46,8 @@ export function PrinciplesSection() {
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {principles.map((item, i) => (
-              <FadeIn key={item.title} delay={i * 100}>
-                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
+              <FadeIn key={item.title} delay={i * 100} className="h-full">
+                <div className="h-full rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                     <item.icon
                       size={20}

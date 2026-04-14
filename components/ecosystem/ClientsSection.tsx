@@ -15,7 +15,7 @@ const secondaryClients = [
     name: "Core-Geth",
     language: "Go",
     description:
-      "Two security releases shipped addressing CVE mitigations and DNS discovery updates. The established mainnet client continuing in a maintenance role alongside next-generation implementations.",
+      "The established ETC mainnet client, continuing in a maintenance role through the Olympia upgrade and beyond. Go-based implementation with broad infrastructure support.",
     github: "https://github.com/ethereumclassic/core-geth",
     status: "Maintained",
   },
@@ -41,8 +41,8 @@ export function ClientsSection() {
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Multi-client architecture ensures no single codebase controls the
-              network. Two full clients and four ETC plugins cover the full
-              Ethereum client ecosystem.
+              network. Multiple independent client implementations and ETC plugins
+              cover the full Ethereum client ecosystem.
             </p>
           </FadeIn>
 
@@ -86,8 +86,8 @@ export function ClientsSection() {
             {secondaryClients.map((client, i) => {
               const isInternal = client.github.startsWith("/");
               return (
-                <FadeIn key={client.name} delay={(i + 2) * 100}>
-                  <div className="flex flex-col rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
+                <FadeIn key={client.name} delay={(i + 2) * 100} className="h-full">
+                  <div className="flex flex-col h-full rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
                     <div className="flex items-start justify-between">
                       <div>
                         <p className="text-base font-semibold font-mono">

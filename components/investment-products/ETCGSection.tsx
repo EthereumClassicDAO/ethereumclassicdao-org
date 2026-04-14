@@ -204,8 +204,8 @@ export async function ETCGSection() {
           {/* Mechanics — 3-col */}
           <div className="mt-4 grid gap-4 sm:grid-cols-3">
             {mechanics.map((m, i) => (
-              <FadeIn key={m.title} delay={i * 60}>
-                <div className="rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-5">
+              <FadeIn key={m.title} delay={i * 60} className="h-full">
+                <div className="h-full rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-5">
                   <div className="flex items-center gap-3">
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                       <m.icon size={16} className="text-[var(--brand-green)]" />

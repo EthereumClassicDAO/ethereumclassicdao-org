@@ -91,14 +91,15 @@ export function EquipmentSection() {
               Mining Equipment
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              ETChash is uniquely positioned among mining algorithms. ASIC miners
-              provide specialized, efficient, commercial-grade operations locked
-              into the ETChash algorithm, delivering maximum hashrate per
-              watt. GPU mining ensures broad global accessibility, with compatible
-              hardware available at consumer electronics retailers worldwide. This
-              dual-compatibility decentralizes the hashrate across geographies,
-              diversifies miner composition, and reduces supply chain risk on the
-              equipment that secures the network.
+              When Ethereum transitioned to Proof-of-Stake, ETC absorbed the
+              majority of the ETHash mining ecosystem — bringing established
+              manufacturers like Bitmain and Jasminer into a network with a
+              fixed monetary policy and no transition risk. ETChash supports
+              both ASIC efficiency for commercial-grade operations and GPU
+              accessibility for global participation. This dual-compatibility
+              decentralizes hashrate across geographies, diversifies miner
+              composition, and reduces supply chain risk on the equipment that
+              secures the network.
             </p>
           </FadeIn>
 

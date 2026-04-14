@@ -11,7 +11,7 @@ const regulatoryCards = [
   { label: "CLARITY Act", value: "Digital Commodity", detail: "CFTC · United States" },
   { label: "GENIUS Act", value: "Stablecoin Platform", detail: "United States" },
   { label: "MiCA", value: "Decentralized Asset", detail: "European Union" },
-  { label: "FSA Green List", value: "Recognized Asset", detail: "Japan" },
+  { label: "Global Compliance", value: "6 Frameworks", detail: "4 Continents" },
 ];
 
 export function MissionSection() {
@@ -31,15 +31,15 @@ export function MissionSection() {
             with native EVM compatibility.
           </p>
           <p className="mt-4 text-base text-[var(--text-muted)]">
-            Ethereum Classic is the only Proof-of-Work blockchain with full EVM
-            compatibility, classified as a digital commodity under the CLARITY
-            Act, a decentralized asset under MiCA, and a recognized crypto-asset
-            on Japan&apos;s FSA Green List. As a GENIUS Act-compliant EVM
-            platform, Ethereum Classic is positioned as the Proof-of-Work
-            infrastructure layer for regulated stablecoin deployment. Ethereum
-            Classic DAO LLC maintains core client software, critical
-            infrastructure, and ecosystem alignment for institutional and
-            sovereign adoption.
+            Ethereum Classic inherits two distinct regulatory trajectories: the
+            commodity classification path that Proof-of-Work networks
+            established, and the programmable finance frameworks being built
+            around smart contract platforms. Its regulatory surface is additive
+            — digital commodity candidate under the CLARITY Act, decentralized
+            asset under MiCA, and the only Proof-of-Work EVM with a live GENIUS
+            Act-aligned stablecoin. Ethereum Classic DAO LLC maintains core
+            client software, critical infrastructure, and ecosystem alignment
+            for institutional and sovereign adoption.
           </p>
         </FadeIn>
 

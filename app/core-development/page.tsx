@@ -117,7 +117,7 @@ const upgrades: Upgrade[] = [
     eips: ["EIP-155", "EIP-160"],
     keyChanges: ["Chain ID 61 replay protection", "EXP gas repricing", "Difficulty bomb delayed", "First ETC protocol deviation"],
     description:
-      "Delayed the difficulty bomb and implemented replay protection via chain ID. ETC's first independent protocol deviation from Ethereum.",
+      "Delayed the difficulty bomb and implemented replay protection via chain ID. ETC's chain ID 61 derives from its coin_type value in the BIP44 derivation path (m/44'/61'/0'/0/index). ETC's first independent protocol deviation from Ethereum.",
     status: "complete",
   },
   {
@@ -132,7 +132,7 @@ const upgrades: Upgrade[] = [
     eips: [],
     keyChanges: ["5M20 era system", "210,700,000 max supply", "20% reduction per era", "Sound fixed monetary policy", "First PoW EVM with programmable monetary policy"],
     description:
-      "Established ETC's fixed monetary policy: the 5M20 era system with a 210,700,000 maximum supply. Block rewards reduce 20% every 5,000,000 blocks — sound, predictable, immutable.",
+      "Established ETC's fixed monetary policy: the 5M20 era system with a 210,700,000 maximum supply. Block rewards reduce 20% — a fifthening — every 5,000,000 blocks, roughly every two years. Inspired by Bitcoin's halving schedule but designed to soften the miner hardware shock and spot price dislocation a 50% supply cut produces: the gradual reduction preserves the same long-term predictability with a smoother transition at each era boundary.",
     status: "complete",
   },
   {
@@ -146,7 +146,7 @@ const upgrades: Upgrade[] = [
     eips: [],
     keyChanges: ["Difficulty bomb permanently removed", "Perpetual PoW guaranteed", "No artificial migration pressure"],
     description:
-      "Permanently removed the difficulty bomb from ETC, ensuring the Proof-of-Work chain continues in perpetuity without artificial pressure to migrate.",
+      "Permanently removed the difficulty bomb — the artificial mechanism designed to pressure migration to Proof-of-Stake. With the bomb gone, Ethereum Classic became the canonical long-term Proof-of-Work EVM, establishing the two-EVM model: a flagship PoS chain and a flagship PoW chain, each with distinct security properties and trust assumptions, both sharing the EVM execution standard.",
     status: "complete",
   },
   {
@@ -250,7 +250,7 @@ const upgrades: Upgrade[] = [
     eips: ["EIP-3529", "EIP-3541"],
     keyChanges: ["Gas refund reduction", "0xEF bytecode prefix reserved", "EIP-1559 deferred to Olympia"],
     description:
-      "London parity without EIP-1559. Reduced gas refunds, reserved the 0xEF bytecode prefix for future use. The fee market upgrade arrives with Olympia.",
+      "Partial London parity — gas refunds reduced, 0xEF bytecode prefix reserved — without EIP-1559. The fee market was deliberately deferred to gather empirical data on adoption and gas dynamics, and to resolve where the basefee should flow: burned as on Ethereum, or redirected to a protocol treasury. The 2021 developer consensus landed on the treasury model, a position formalized four years later with the Olympia upgrade.",
     status: "complete",
   },
   {
@@ -264,7 +264,7 @@ const upgrades: Upgrade[] = [
     eips: ["EIP-3651", "EIP-3855", "EIP-3860", "EIP-6049"],
     keyChanges: ["Warm COINBASE access", "PUSH0 opcode", "Initcode size limit", "SELFDESTRUCT deprecation notice"],
     description:
-      "Shanghai parity. Warm COINBASE access, PUSH0 opcode, initcode size limit. The most recently completed ETC network upgrade.",
+      "Shanghai parity, excluding Proof-of-Stake validator withdrawals not applicable to Ethereum Classic. Warm COINBASE access, PUSH0 opcode, and initcode size limit. The most recently completed ETC network upgrade.",
     status: "complete",
   },
   {
@@ -299,9 +299,9 @@ const upgrades: Upgrade[] = [
       "EIP-7935",
       "EIP-7951",
     ],
-    keyChanges: ["EIP-1559 fee market (ECIP-1111)", "Protocol treasury (ECIP-1112)", "Fusaka EVM alignment (ECIP-1121)", "DAO governance: core dev, infrastructure, security", "Futarchy markets: open public participation"],
+    keyChanges: ["EIP-1559 fee market (ECIP-1111)", "Protocol treasury (ECIP-1112)", "Fusaka EVM alignment (ECIP-1121)", "DAO governance: core dev, infrastructure, security"],
     description:
-      "ETC's most significant upgrade — EVM alignment to Fusaka, incorporating EIPs spanning London, Dencun, Pectra, and Fusaka. Introduces EIP-1559 fee market with basefee directed to a protocol treasury. On-chain DAO governance scoped to core client software, critical infrastructure, and network security. Open futarchy prediction markets let anyone stake on protocol outcomes without membership and earn rewards for accurate predictions.",
+      "EVM alignment to Fusaka, incorporating EIPs spanning London, Dencun, Pectra, and Fusaka on a single upgrade boundary. Introduces EIP-1559 with basefee directed to a protocol treasury — the funding model first identified during the 2022 Mystique upgrade. On-chain DAO governance, built on the OpenZeppelin 5.x contract suite, is scoped to core client software, critical infrastructure, and network security, with funding proposals open to any ETC account. A subsequent phase introduces open futarchy prediction markets — public staking on protocol outcomes with rewards for accurate predictions.",
     status: "upcoming",
   },
 ];

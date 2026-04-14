@@ -18,14 +18,13 @@ import { GovernanceProcessSection } from "@/components/home/GovernanceProcessSec
 
 export default async function Home() {
   const [stats, hashrateTHs] = await Promise.all([fetchEtcStats(), fetchHashrateTHs()]);
-  const hashrateStr = `${Math.round(hashrateTHs)} TH/s`;
 
   return (
     <main>
       <MissionSection />
       <NetworkStatsSection stats={stats} hashrateTHs={hashrateTHs} />
-      <HowWeHelpSection hashrateStr={hashrateStr} />
-      <WhatWeDoSection hashrateStr={hashrateStr} />
+      <HowWeHelpSection />
+      <WhatWeDoSection />
       <OlympiaEcosystemSection />
       <GovernanceProcessSection />
     </main>

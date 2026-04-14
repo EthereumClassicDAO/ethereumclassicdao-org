@@ -100,8 +100,8 @@ export function GlobalFrameworksSection() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {regions.map((r, i) => (
-              <FadeIn key={r.region} delay={i * 80}>
-                <div className="flex flex-col rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
+              <FadeIn key={r.region} delay={i * 80} className="h-full">
+                <div className="flex flex-col h-full rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
                   <div className="flex items-center gap-2">
                     <FlagImg emoji={r.flag} size={24} />
                     <div>

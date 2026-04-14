@@ -4,36 +4,91 @@ import {
   TrendingUp,
   Pickaxe,
   FileCheck,
+  CircleDollarSign,
 } from "lucide-react";
+import type { ReactNode, ElementType } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { fetchHashrateTHs, fetchAllHashrateHistories } from "@/lib/api/hashrate";
 import { HashrateChart } from "@/components/about/HashrateChart";
 
-const infrastructure = [
+const infrastructure: { icon: ElementType; category: string; details: ReactNode }[] = [
   {
     icon: ArrowLeftRight,
     category: "Global Exchange Coverage",
-    details:
-      "300+ active markets across 20+ major global exchanges. Available on every leading trading platform.",
+    details: (
+      <>
+        <a
+          href="https://www.coingecko.com/en/coins/ethereum-classic#markets"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-white transition-colors"
+        >
+          300+ active markets
+        </a>
+        {" "}across 20+ major global exchanges with 17 fiat currency pairs spanning every major currency region. Continuous ETC/USD price discovery since 2016 — the liquidity depth required for institutional portfolio allocation and stablecoin settlement.
+      </>
+    ),
   },
   {
     icon: Lock,
     category: "Institutional Custody",
     details:
-      "Institutional-grade digital asset custody from leading custodians. Multi-signature security, insurance coverage, and regulatory compliance.",
+      "Fireblocks, Coinbase Custody, BitGo, Copper, and Bakkt provide the qualified custodian infrastructure required for institutional portfolio allocation — hedge funds, family offices, and regulated investment products. MPC security, insurance coverage, and SOC 2 compliance mean ETC moves through existing institutional settlement rails without bespoke custody arrangements.",
   },
   {
     icon: TrendingUp,
     category: "Regulated Products",
-    details:
-      "Grayscale Ethereum Classic Trust (ETCG), est. 2018. Available on Charles Schwab, Fidelity, and Interactive Brokers.",
+    details: (
+      <>
+        Grayscale Ethereum Classic Trust (
+        <a
+          href="https://www.otcmarkets.com/stock/ETCG/quote"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-white transition-colors"
+        >
+          ETCG
+        </a>
+        ), trading on OTCQX since 2018 and accessible through Charles Schwab, Fidelity, and Interactive Brokers — the only regulated securities vehicle for Proof-of-Work smart contract exposure. Positioned for ETF conversion following Grayscale&apos;s established trust-to-ETF precedent with Bitcoin and Ethereum.
+      </>
+    ),
   },
   {
     icon: FileCheck,
     category: "Regulatory Status",
-    details:
-      "Wyoming DAO LLC · Filing ID 2025-001671865 · CLARITY Act commodity · GENIUS Act EVM platform",
+    details: (
+      <>
+        Wyoming DAO LLC (
+        <a
+          href="https://wyobiz.wyo.gov/business/FilingDetails.aspx?eFNum=101157225123250204055197221085227098244002050082"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-white transition-colors"
+        >
+          Filing ID 2025-001671865
+        </a>
+        ), recognized across six major frameworks spanning four continents: digital commodity candidate under the CLARITY Act, decentralized asset under MiCA, FSA Green List in Japan, and active compliance across FSMA, VARA, and GENIUS Act frameworks — the broadest institutional access profile of any Proof-of-Work network.
+      </>
+    ),
+  },
+  {
+    icon: CircleDollarSign,
+    category: "Stablecoin Infrastructure",
+    details: (
+      <>
+        Classic USD ($USC), a MiCA and GENIUS Act-compliant stablecoin issued by Brale Inc. (
+        <a
+          href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/2376957"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-white transition-colors"
+        >
+          NMLS #2376957
+        </a>
+        ), deployed on Ethereum Classic mainnet — live proof of regulated stablecoin infrastructure on a Proof-of-Work network.
+      </>
+    ),
   },
 ];
 
@@ -42,7 +97,6 @@ export async function InfrastructureSection() {
     fetchHashrateTHs(),
     fetchAllHashrateHistories(),
   ]);
-  const hashrateDisplay = `${hashrateTHs.toFixed(1)} TH/s`;
 
   return (
     <>
@@ -54,17 +108,15 @@ export async function InfrastructureSection() {
               Institutional Infrastructure
             </h2>
             <p className="mt-3 text-sm text-[var(--text-muted)]">
-              The institutional ecosystem around Ethereum Classic.
+              Ethereum Classic&apos;s institutional footprint spans global exchange coverage, regulated investment products, and institutional-grade custody — the rails that connect a decade of principled protocol development to the capital and regulatory frameworks of a global financial system.
             </p>
           </FadeIn>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {infrastructure.map((item, i) => (
-              <FadeIn key={item.category} delay={i * 80}>
+              <FadeIn key={item.category} delay={i * 80} className="h-full">
                 <div
-                  className={`flex gap-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5${
-                    i === infrastructure.length - 1 ? " sm:col-span-2" : ""
-                  }`}
+                  className="flex h-full gap-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                     <item.icon
@@ -81,17 +133,31 @@ export async function InfrastructureSection() {
                 </div>
               </FadeIn>
             ))}
-            <FadeIn delay={infrastructure.length * 80}>
-              <div className="flex gap-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5">
+            <FadeIn delay={infrastructure.length * 80} className="h-full">
+              <div className="flex h-full gap-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                   <Pickaxe size={20} className="text-[var(--brand-green)]" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold">Mining Infrastructure</p>
                   <p className="mt-1 text-sm text-[var(--text-muted)]">
-                    {hashrateDisplay} network hashrate. Global GPU and ASIC
-                    mining operations secure the only Proof-of-Work network with
-                    native smart contracts.
+                    Billions of dollars in globally distributed GPU and ASIC mining
+                    infrastructure secures the only Proof-of-Work network with native
+                    smart contracts. When Ethereum transitioned to Proof-of-Stake in
+                    2022, Ethereum Classic absorbed the entire ETHash mining ecosystem
+                    — hashrate, GPU farms, and the ASIC manufacturing base including
+                    Bitmain and Jasminer — becoming the largest GPU and ETHash ASIC
+                    mining network in the world. Domestic US operations are positioned
+                    under the{" "}
+                    <a
+                      href="https://www.congress.gov/bill/119th-congress/senate-bill/4251"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-2 hover:text-white transition-colors"
+                    >
+                      Mined in America Act
+                    </a>
+                    .
                   </p>
                 </div>
               </div>

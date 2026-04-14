@@ -1,13 +1,13 @@
+import { type ReactNode } from "react";
 import { ShieldCheck, ArrowLeftRight, FileCheck, Coins } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
-const attributes = [
+const attributes: { icon: typeof ShieldCheck; title: string; description: ReactNode; link?: { label: string; href: string } }[] = [
   {
     icon: ShieldCheck,
     title: "US-Regulated Issuer",
-    description:
-      "Issued by Brale Inc. (NMLS #2376957), a licensed money transmitter operating under US Bank Secrecy Act and state money transmission regulations. Compliant with GENIUS Act stablecoin issuance requirements.",
+    description: <>Issued by <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/2376957" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">Brale Inc. (NMLS #2376957)</a>, a licensed money transmitter operating under US Bank Secrecy Act and state money transmission regulations. Compliant with GENIUS Act stablecoin issuance requirements.</>,
   },
   {
     icon: Coins,
@@ -63,12 +63,12 @@ export function ClassicUSDSection() {
                   </div>
                   <div className="hidden h-10 w-px bg-[var(--divider)] sm:block" />
                   <div className="grid grid-cols-2 gap-x-8 gap-y-2 sm:grid-cols-4">
-                    {[
+                    {([
                       { label: "Network", value: "Ethereum Classic · Chain 61" },
                       { label: "Backing", value: "1:1 USD · Segregated" },
-                      { label: "Issuer", value: "Brale Inc. · NMLS #2376957" },
+                      { label: "Issuer", value: <><a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/2376957" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">Brale Inc. · NMLS #2376957</a></> },
                       { label: "Standard", value: "ERC-20 · EIP-1967 Proxy" },
-                    ].map((item) => (
+                    ] as { label: string; value: ReactNode }[]).map((item) => (
                       <div key={item.label}>
                         <p className="text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">{item.label}</p>
                         <p className="mt-0.5 text-xs font-medium">{item.value}</p>
@@ -102,8 +102,8 @@ export function ClassicUSDSection() {
           {/* Attribute cards 2×2 */}
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {attributes.map((a, i) => (
-              <FadeIn key={a.title} delay={i * 60}>
-                <div className="rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-5">
+              <FadeIn key={a.title} delay={i * 60} className="h-full">
+                <div className="h-full rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-5">
                   <div className="flex items-center gap-3">
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                       <a.icon size={16} className="text-[var(--brand-green)]" />

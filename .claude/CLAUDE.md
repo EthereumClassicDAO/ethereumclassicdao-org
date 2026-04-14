@@ -90,10 +90,10 @@ public/
 
 - **ETC unique claim:** "The largest Proof-of-Work blockchain with native smart contracts"
 - **Regulatory:** CLARITY Act "digital commodity" classification is *pending* — use "positioned for" or "candidate for"
-- **Grayscale:** ETCG is a trust, NOT an ETF. Say "regulated securities exposure" not "ETF pipeline"
+- **Grayscale:** ETCG is currently a trust product. The ETF conversion pipeline is an established selling point and may be referenced. Do not call ETCG itself an ETF.
 - **Mining:** "170+ TH/s" and "absorbed significant Ethereum mining infrastructure post-Merge" are safe claims
 - **Naming:** "Ethereum Classic's Olympia DAO" (not "OlympiaDAO")
-- **Never say:** "subordinate to on-chain governance", "off-chain administrative executor", SHALL/MUST NOT, ECIP-1114 references in rendered content, hash-bound tuples, governance pipeline
+- **Never say:** "subordinate to on-chain governance", "off-chain administrative executor", SHALL/MUST NOT, ECIP-1120 references in rendered content, hash-bound tuples, governance pipeline
 - **Tone:** Confident but factual. No hype. No superlatives. Let the facts speak.
 
 ## Cross-Site Links
@@ -123,5 +123,5 @@ public/
 - Add "Demo · Mordor" badges (real legal entity)
 - Use amber accent (reserved for treasury across the suite)
 - Add card shadows or green glowing icons
-- Reference ECIP-1114 in rendered content
+- Reference ECIP-1120 in rendered content
 - Commit .env files or credentials

@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { ChevronDown } from "lucide-react";
 
 interface AccordionItem {
   question: string;
-  answer: string;
+  answer: ReactNode;
 }
 
 export function Accordion({
