@@ -68,7 +68,7 @@ const infrastructure: { icon: ElementType; category: string; details: ReactNode 
         >
           Filing ID 2025-001671865
         </a>
-        ), recognized across six major frameworks spanning four continents: digital commodity candidate under the CLARITY Act, decentralized asset under MiCA, FSA Green List in Japan, and active compliance across FSMA, VARA, and GENIUS Act frameworks — the broadest institutional access profile of any Proof-of-Work network.
+        ), recognized across leading global regulatory frameworks in the US, EU, UK, Japan, and UAE: digital commodity candidate under the CLARITY Act, decentralized asset under MiCA, FSA Green List in Japan, and active compliance across FSMA, VARA, and GENIUS Act frameworks — the broadest institutional access profile of any Proof-of-Work network.
       </>
     ),
   },
@@ -77,7 +77,15 @@ const infrastructure: { icon: ElementType; category: string; details: ReactNode 
     category: "Stablecoin Infrastructure",
     details: (
       <>
-        Classic USD ($USC), a MiCA and GENIUS Act-compliant stablecoin issued by Brale Inc. (
+        <a
+          href="https://classicusd.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-2 hover:text-white transition-colors"
+        >
+          Classic USD
+        </a>{" "}
+        ($USC), a MiCA and GENIUS Act-compliant stablecoin issued by Brale Inc. (
         <a
           href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/2376957"
           target="_blank"
@@ -104,7 +112,26 @@ export async function InfrastructureSection() {
       <section aria-labelledby="institutional-infrastructure-heading" className="section-gradient relative geo-circle py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 id="institutional-infrastructure-heading" className="text-xl font-bold">
+            <div className="flex items-end gap-4">
+              <div>
+                <p className="text-4xl font-bold font-mono text-[var(--brand-green)]">
+                  {hashrateTHs.toFixed(1)}{" "}
+                  <span className="text-lg">TH/s</span>
+                </p>
+                <p className="mt-1 text-xs font-mono text-[var(--text-subtle)]">
+                  Algorithm: ETChash · GPU + ASIC compatible
+                </p>
+              </div>
+              <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-[var(--brand-green)]/30 bg-[var(--brand-green)]/10 px-2.5 py-1 font-mono text-[10px] text-[var(--brand-green)]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" />
+                Live
+              </span>
+            </div>
+            <HashrateChart histories={hashrateHistories} currentTHs={hashrateTHs} />
+          </FadeIn>
+
+          <FadeIn>
+            <h2 id="institutional-infrastructure-heading" className="mt-16 text-xl font-bold">
               Institutional Infrastructure
             </h2>
             <p className="mt-3 text-sm text-[var(--text-muted)]">
@@ -163,25 +190,6 @@ export async function InfrastructureSection() {
               </div>
             </FadeIn>
           </div>
-
-          <FadeIn delay={200}>
-            <div className="mt-10 flex items-end gap-4">
-              <div>
-                <p className="text-4xl font-bold font-mono text-[var(--brand-green)]">
-                  {hashrateTHs.toFixed(1)}{" "}
-                  <span className="text-lg">TH/s</span>
-                </p>
-                <p className="mt-1 text-xs font-mono text-[var(--text-subtle)]">
-                  Algorithm: ETChash · GPU + ASIC compatible
-                </p>
-              </div>
-              <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-[var(--brand-green)]/30 bg-[var(--brand-green)]/10 px-2.5 py-1 font-mono text-[10px] text-[var(--brand-green)]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" />
-                Live
-              </span>
-            </div>
-            <HashrateChart histories={hashrateHistories} currentTHs={hashrateTHs} />
-          </FadeIn>
         </div>
       </section>
     </>

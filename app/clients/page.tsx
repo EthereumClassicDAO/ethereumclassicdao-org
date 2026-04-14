@@ -6,9 +6,9 @@ import { fetchHashrateTHs, fetchAllHashrateHistories } from "@/lib/api/hashrate"
 import { HashrateChart } from "@/components/about/HashrateChart";
 
 export const metadata: Metadata = {
-  title: "Client Implementations",
+  title: "ETC Client Implementations — Fukuii and Core-Geth",
   description:
-    "Independent Ethereum Classic client implementations — full clients and ETC plugins for major upstream clients.",
+    "Independent Ethereum Classic client implementations. Fukuii (Scala) is the primary client for the Olympia era — purpose-built for ETC protocol stewardship. Core-Geth (Go) is actively maintained through Olympia. ETC plugins for Besu, Erigon, Go-Ethereum, and Nethermind are planned post-Olympia.",
 };
 
 const clients = [

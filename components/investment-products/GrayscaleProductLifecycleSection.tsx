@@ -61,8 +61,16 @@ export function GrayscaleProductLifecycleSection() {
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Grayscale has established a repeatable three-stage path from
-              private trust to broadly accessible exchange-listed product. ETCG
-              has completed the first two stages.
+              private placement to broadly accessible exchange-listed product.
+              The same lifecycle that took GBTC from closed-end trust (2013) to
+              spot Bitcoin ETF (January 2024), and ETHE from closed-end trust
+              (2017) to spot Ethereum ETF (July 2024), applies structurally to
+              ETCG. The conversion path is not novel &mdash; it is the same
+              application process, the same regulatory framework, and the same
+              legal template Grayscale has executed twice. ETCG has completed
+              the first two stages. Conversion to an exchange-listed product is
+              a function of Grayscale&rsquo;s prioritization and SEC application
+              timing, not product eligibility, which ETCG already satisfies.
             </p>
           </FadeIn>
 

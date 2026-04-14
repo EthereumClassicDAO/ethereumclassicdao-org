@@ -76,6 +76,19 @@ export async function ETCGSection() {
               <span className="font-mono font-semibold">ETCG</span> · OTCQX
               Best Market · Est. May 10, 2018
             </p>
+            <p className="mt-3 text-base text-[var(--text-muted)]">
+              ETCG is the oldest regulated investment product providing exposure
+              to Ethereum Classic. A grantor trust structure &mdash; not a
+              registered investment company &mdash; means ETCG holds ETC
+              directly in institutional cold storage, with each share
+              representing a fixed quantity of the underlying asset. The trust
+              has filed annually with the SEC since 2020, making it eligible for
+              IRAs and standard brokerage accounts across major US platforms
+              without any crypto-native account or custody setup. It has traded
+              on OTCQX Best Market continuously since 2018: through the 2020
+              network security events, through the Ethereum Merge, and through
+              the broader digital asset market cycles that followed.
+            </p>
           </FadeIn>
 
           {/* Live data — full-width horizontal strip */}

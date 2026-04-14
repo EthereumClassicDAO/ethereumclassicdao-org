@@ -3,9 +3,9 @@ import { RegisteredAgentSection } from "@/components/contact/RegisteredAgentSect
 import { ChannelsSection } from "@/components/contact/ChannelsSection";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Ethereum Classic DAO LLC",
   description:
-    "Registered agent information and official communication channels for the Ethereum Classic DAO LLC.",
+    "Wyoming registered agent address and official communication channels for Ethereum Classic DAO LLC — Filing ID 2025-001671865.",
 };
 
 export default function ContactPage() {

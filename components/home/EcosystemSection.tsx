@@ -26,7 +26,7 @@ const properties = [
     icon: Github,
     name: "GitHub",
     description: "Open-source repositories",
-    href: "https://github.com/EthereumClassicDAO",
+    href: "https://github.com/olympiadao",
   },
 ];
 

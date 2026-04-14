@@ -35,7 +35,7 @@ const entities = [
     name: "Ethereum Classic",
     role: "Network Protocol",
     description:
-      "The largest Proof-of-Work smart contract platform, trading on 300+ markets across 20+ global exchanges with fiat pairs spanning every major currency region. Recognized across six major global regulatory frameworks spanning four continents — the broadest institutional access profile of any Proof-of-Work network.",
+      "The largest Proof-of-Work smart contract platform, trading on 300+ markets across 20+ global exchanges with fiat pairs spanning every major currency region. Recognized across leading global regulatory frameworks in the US, EU, UK, Japan, and UAE — the broadest institutional access profile of any Proof-of-Work network.",
     href: "https://ethereumclassic.org",
     highlighted: false,
   },
@@ -52,8 +52,18 @@ export function OlympiaEcosystemSection() {
               Coordinating Organizations
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Coordinating organizations working together to govern and
-              advance the Ethereum Classic network.
+              Ethereum Classic&rsquo;s governance architecture is organized
+              across four distinct layers: Ethereum Classic DAO LLC as the
+              Wyoming-registered legal entity providing the institutional
+              counterparty for compliance, vendor contracts, and regulatory
+              reporting; the Olympia DAO as the on-chain governance protocol
+              handling binding protocol decisions through transparent voting
+              and execution; the Olympia Treasury as the protocol-funded
+              resource pool directing basefee revenue and on-chain
+              contributions to core development; and the Ethereum Classic
+              network itself &mdash; the settlement infrastructure and
+              institutional asset that all governance decisions ultimately
+              serve.
             </p>
           </FadeIn>
 

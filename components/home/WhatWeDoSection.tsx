@@ -23,7 +23,7 @@ export function WhatWeDoSection() {
     {
       question: "Global Regulatory Navigation",
       answer:
-        "Ethereum Classic DAO is a Wyoming-registered DAO LLC. We track and maintain compliance across six major regulatory frameworks spanning four continents: CLARITY Act (US, digital commodity candidate), GENIUS Act (US, stablecoin platform, signed July 2025), MiCA (EU, decentralized asset, in force Dec 2024), FSA Green List (Japan), FSMA (UK, implementation Oct 2027), and VARA (UAE). Classic USD ($USC) is a live stablecoin on ETC mainnet, aligned with both GENIUS Act and MiCA requirements. The Mined in America Act covers domestic US mining infrastructure as a federal energy asset program. We maintain this alignment actively, tracking regulatory developments across every jurisdiction and building the infrastructure that lets institutional participants operate with confidence globally.",
+        <>Ethereum Classic DAO is a Wyoming-registered DAO LLC. We track and maintain compliance across leading global regulatory frameworks in the US, EU, UK, Japan, and UAE: CLARITY Act (US, digital commodity candidate), GENIUS Act (US, stablecoin platform, signed July 2025), MiCA (EU, decentralized asset, in force Dec 2024), FSA Green List (Japan), FSMA (UK, implementation Oct 2027), and VARA (UAE). <a href="https://classicusd.com" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">Classic USD</a> ($USC) is a live stablecoin on ETC mainnet, aligned with both GENIUS Act and MiCA requirements. The Mined in America Act covers domestic US mining infrastructure as a federal energy asset program. We maintain this alignment actively, tracking regulatory developments across every jurisdiction and building the infrastructure that lets institutional participants operate with confidence globally.</>,
     },
   ];
   return (
@@ -34,9 +34,18 @@ export function WhatWeDoSection() {
           <FadeIn>
             <h2 id="what-we-do-heading" className="text-3xl font-bold tracking-tight">What We Do</h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Building everything Ethereum Classic needs for global adoption:
-              from the core protocol to the infrastructure and regulatory
-              framework.
+              A decade of Ethereum Classic stewardship organized across four
+              interdependent areas: protocol engineering that keeps ETC current
+              with the EVM while honoring the network&rsquo;s immutability
+              commitments; infrastructure operations ensuring every
+              institutional touchpoint has a reliable legal counterparty;
+              security economics keeping Proof-of-Work viable and honest miners
+              economically aligned; and regulatory navigation positioning ETC
+              favorably across every major jurisdiction simultaneously. These
+              are not independent workstreams &mdash; client software quality
+              determines the regulatory profile, the regulatory profile
+              determines institutional accessibility, and institutional adoption
+              determines the network economics that fund the client work.
             </p>
           </FadeIn>
 

@@ -162,9 +162,14 @@ export function HowItWorksSection() {
               Binding On-Chain Protocol Governance
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Five stages from proposal to execution. Every step on-chain.
-              Scoped to core client software, critical infrastructure, network
-              security, treasury allocation, and emergency protocol responses.
+              Five stages from proposal submission to on-chain execution. Core
+              protocol decisions — client software upgrades, infrastructure
+              contracts, security bounties, treasury allocations, and emergency
+              responses — are governed by the Olympia DAO through the
+              OpenZeppelin Governor 5.x framework. No hiring manager, no
+              employment contract, no preferred vendor. Any EVM developer
+              worldwide can submit a proposal, compete for funded work, and
+              earn payment on delivery. The protocol governs itself.
             </p>
             <div className="mt-3 flex gap-2">
               <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
@@ -209,9 +214,17 @@ export function HowItWorksSection() {
                 Open Prediction Markets and Public Signal
               </h2>
               <p className="mt-3 text-base text-[var(--text-muted)]">
-                Open to anyone, no membership required. Market prices become
-                on-chain signal that informs governance decisions and funds
-                development through the basefee flywheel.
+                Open to anyone, no membership required. Anyone can open a
+                prediction market on a proposed protocol outcome, stake on
+                the result, and earn financial rewards for accurate
+                predictions. Market participants bring new users onto ETC,
+                generating transaction volume that flows as basefee revenue
+                into the Olympia Treasury. This creates a self-reinforcing
+                loop: public participation funds the protocol it is
+                predicting on. Market prices become on-chain signal that
+                informs future governance decisions and holds the DAO
+                publicly accountable to stakeholders who have real financial
+                skin in the game.
               </p>
               <div className="mt-3 flex gap-2">
                 <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">

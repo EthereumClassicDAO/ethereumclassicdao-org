@@ -5,10 +5,10 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 const products = [
   {
     icon: TrendingUp,
-    title: "Grayscale Ethereum Classic Trust (ETCG)",
+    title: "Regulated Investment Products",
     description:
-      "Regulated securities exposure since 2017. The only Proof-of-Work smart contract platform with a Grayscale trust product. ETF conversion pipeline in progress, establishing ETC as the anchor asset for a compliant digital commodity ecosystem.",
-    detail: "Ticker: ETCG · Est. 2017",
+      "The Grayscale Ethereum Classic Trust (ETCG) has provided regulated securities exposure since 2017, with an ETF conversion pipeline underway. As the Bitcoin and Ethereum ETF issuers — BlackRock, Fidelity, VanEck, 21Shares, and others — expand their digital asset product suites, ETC is positioned as the natural next Proof-of-Work digital commodity for trust and ETF structures.",
+    detail: "ETCG · Est. 2017 · ETF Pipeline",
   },
   {
     icon: Lock,
@@ -19,10 +19,10 @@ const products = [
   },
   {
     icon: ArrowLeftRight,
-    title: "Global Exchange Coverage",
+    title: "Global Exchange Coverage & OTC",
     description:
-      "300+ active markets across 20+ major global exchanges. Available on every leading trading platform and retail brokerage worldwide.",
-    detail: "300+ Markets · 20+ Exchanges",
+      "300+ active markets across 20+ major global exchanges and every leading retail brokerage. For block-size positions, major OTC desks — Cumberland, Galaxy Digital, B2C2, and others — provide bilateral execution with direct settlement into regulated custody.",
+    detail: "300+ Markets · 20+ Exchanges · OTC Available",
   },
 ];
 
@@ -30,16 +30,22 @@ export function InstitutionalProductsSection() {
   return (
     <>
       <SectionDivider />
-      <section aria-labelledby="institutional-products-market-access-heading" className="section-gradient relative py-28">
+      <section aria-labelledby="institutional-products-market-access-heading" className="section-deep relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2 id="institutional-products-market-access-heading" className="text-3xl font-bold tracking-tight">
               Institutional Products & Market Access
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              A regulated digital asset ecosystem covering the Grayscale
-              ETC Trust, institutional custody, ETF conversion, and compliant
-              token issuance.
+              Regulated entry points for institutional capital into the only
+              Proof-of-Work smart contract platform. ETCG has offered compliant
+              securities exposure since 2017, with an ETF conversion pipeline
+              underway. As Bitcoin and Ethereum ETF issuers expand their digital
+              asset product suites, ETC is positioned as the next Proof-of-Work
+              digital commodity for regulated investment structures. Institutional
+              custody, OTC execution, and 300+ exchange markets give professional
+              allocators the infrastructure to build and manage compliant ETC
+              positions at any scale.
             </p>
           </FadeIn>
 

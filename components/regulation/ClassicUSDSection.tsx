@@ -1,5 +1,5 @@
-import { type ReactNode } from "react";
-import { ShieldCheck, ArrowLeftRight, FileCheck, Coins } from "lucide-react";
+import { type ReactNode, type ElementType } from "react";
+import { ShieldCheck, ArrowLeftRight, FileCheck, Coins, BadgeCheck, Layers, Scale, Link2 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
@@ -30,6 +30,24 @@ const attributes: { icon: typeof ShieldCheck; title: string; description: ReactN
   },
 ];
 
+const whyItMatters: { icon: ElementType; text: ReactNode }[] = [
+  {
+    icon: BadgeCheck,
+    text: "Proves ETC's EVM handles regulated financial instruments at production scale",
+  },
+  {
+    icon: Layers,
+    text: <>Enables composable DeFi with a USD-stable base (<a href="https://etcswap.org" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">ETCswap</a> V2/V3 integration)</>,
+  },
+  {
+    icon: Scale,
+    text: "First deployment validates ETC as a GENIUS Act-compliant stablecoin platform",
+  },
+  {
+    icon: Link2,
+    text: "Brale\u2019s API-accessible platform is a pathway for additional fiat-backed issuers on ETC",
+  },
+];
 
 export function ClassicUSDSection() {
   return (
@@ -46,9 +64,23 @@ export function ClassicUSDSection() {
               Classic
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              The first and leading fiat-backed stablecoin native to ETC. A live
-              demonstration of GENIUS Act-aligned stablecoin infrastructure on a
-              Proof-of-Work EVM.
+              Classic USD ($USC) is the first fiat-backed stablecoin issued
+              natively on Ethereum Classic — a 1:1 USD-backed ERC-20 token
+              issued by Brale Inc. under US money transmission licensing, with
+              reserves held in segregated regulated US bank accounts and
+              independently attested. It is not a bridged asset or a wrapped
+              version of a token from another chain. It was designed for ETC
+              and deployed on ETC mainnet.
+            </p>
+            <p className="mt-3 text-base text-[var(--text-muted)]">
+              The GENIUS Act, signed July 18, 2025, established the first
+              federal framework for payment stablecoin issuance in the United
+              States. Classic USD meets those requirements: licensed issuer,
+              1:1 liquid reserves, par-value redemption, and third-party
+              attestations. Its existence on ETC demonstrates that a
+              Proof-of-Work EVM can serve as compliant infrastructure for
+              regulated financial instruments — not in theory, but in
+              production.
             </p>
           </FadeIn>
 
@@ -134,18 +166,15 @@ export function ClassicUSDSection() {
                 Why It Matters
               </p>
               <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {([
-                  "Proves ETC's EVM handles regulated financial instruments at production scale",
-                  <>Enables composable DeFi with a USD-stable base (<a href="https://etcswap.org" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">ETCswap</a> V2/V3 integration)</>,
-                  "First deployment validates ETC as a GENIUS Act-compliant stablecoin platform",
-                  "Brale's API-accessible platform is a pathway for additional fiat-backed issuers on ETC",
-                ]).map((point, i) => (
-                  <p
-                    key={i}
-                    className="text-xs leading-relaxed text-[var(--text-secondary)]"
-                  >
-                    {point}
-                  </p>
+                {whyItMatters.map((item, i) => (
+                  <div key={i} className="flex gap-3">
+                    <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[rgba(0,255,174,0.12)]">
+                      <item.icon size={13} className="text-[var(--brand-green)]" />
+                    </div>
+                    <p className="text-xs leading-relaxed text-[var(--text-secondary)]">
+                      {item.text}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>

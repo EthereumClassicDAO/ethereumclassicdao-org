@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
@@ -35,8 +36,16 @@ export function FutureIssuersSection() {
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Every issuer that launched a Bitcoin or Ethereum investment product
-              already has the legal infrastructure, custodial relationships, and
-              regulatory precedent to launch an Ethereum Classic product.
+              has already built the infrastructure that an ETC product requires.
+              The legal structure &mdash; grantor trust or exchange-listed
+              product &mdash; is already established. Custodial relationships
+              with Coinbase Custody or Fidelity Digital Assets are already in
+              place. Distribution agreements with major brokerages, SEC reporting
+              relationships, and the regulatory precedent for a Proof-of-Work
+              commodity investment product are all derived from the Bitcoin and
+              Ethereum products these issuers already operate. An ETC product is
+              an incremental addition to an existing infrastructure stack, not a
+              new build.
             </p>
           </FadeIn>
 
@@ -106,6 +115,14 @@ export function FutureIssuersSection() {
                     its PoW security, regulated stablecoin infrastructure, and
                     CLARITY Act commodity candidate status.
                   </p>
+                  <div className="mt-3">
+                    <Link
+                      href="/regulation"
+                      className="text-xs font-medium text-[var(--brand-green)] transition-opacity hover:opacity-70"
+                    >
+                      Regulatory Framework →
+                    </Link>
+                  </div>
                 </div>
               </div>
             </FadeIn>

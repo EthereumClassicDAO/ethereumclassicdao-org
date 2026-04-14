@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { FlagImg } from "@/components/ui/FlagImg";
@@ -21,7 +22,7 @@ const mechanics = [
   {
     label: "Local currency signals",
     detail:
-      "Fiat pairs across 17 currencies let energy producers in any market price their output in local terms.",
+      "Fiat pairs across major global currencies let energy producers price their output in local terms.",
   },
 ];
 
@@ -60,9 +61,22 @@ export function ETCAsEnergyMarketSection() {
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Mining profitability is a direct function of ETC price, block
-              reward, and energy cost. ETC financial markets are therefore a
-              continuous, real-time signal about energy value worldwide — the
-              first always-open, globally accessible energy commodity market.
+              reward, and energy cost. This creates a tight arbitrage: miners
+              enter when energy is cheap relative to ETC price, exit when it is
+              not. ETC financial markets are therefore a continuous, real-time
+              signal about energy value worldwide &mdash; the first always-open,
+              globally accessible energy commodity market.
+            </p>
+            <p className="mt-3 text-base text-[var(--text-muted)]">
+              Energy futures markets close on weekends. Regional electricity
+              spot markets are balkanized by jurisdiction, settlement rules, and
+              transmission constraints. ETC/USD trades 24/7, in every time
+              zone, across major global currencies, on over 300 exchanges. An
+              energy producer in Norway, a wellhead operator in Texas, and a
+              hydro developer in Malawi are all pricing their output against the
+              same continuous global signal. That is not a feature of
+              traditional commodity markets &mdash; it is a consequence of
+              permissionless, decentralized infrastructure.
             </p>
           </FadeIn>
 
@@ -139,6 +153,14 @@ export function ETCAsEnergyMarketSection() {
                 2016, making them one of the longest-running fiat price
                 discovery mechanisms in the asset class.
               </p>
+              <div className="mt-4">
+                <Link
+                  href="/investment-products"
+                  className="text-xs font-medium text-[var(--brand-green)] transition-opacity hover:opacity-70"
+                >
+                  ETCG: Institutional Access →
+                </Link>
+              </div>
             </div>
           </FadeIn>
         </div>

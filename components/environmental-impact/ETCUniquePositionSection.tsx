@@ -27,7 +27,7 @@ const columns = [
     subheading: "Ethereum's regulatory trajectory",
     points: [
       "Full Solidity and EVM compatibility — every Ethereum tool, library, and framework works without modification.",
-      "Classic USD ($USC) by Brale: a live, 1:1 USD-backed stablecoin on a PoW chain.",
+      <><a href="https://classicusd.com" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">Classic USD</a> ($USC) by Brale: a live, 1:1 USD-backed stablecoin on a PoW chain.</>,
       "GENIUS Act-compliant stablecoin infrastructure, the first on any Proof-of-Work network.",
       <><a href="https://etcswap.org" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">ETCswap</a> V2 and V3 provide on-chain liquidity for composable DeFi with a regulated stable base.</>,
       "Smart contracts enable programmable settlement for energy transactions on-chain.",
@@ -52,11 +52,23 @@ export async function ETCUniquePositionSection() {
               The Largest Proof-of-Work Network with Native Smart Contracts
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              ETC is not simply a PoW network or simply a smart contract platform.
-              It sits at the intersection of both, inheriting the commodity
-              classification path that Bitcoin established and the programmable
-              finance frameworks that Ethereum established. Its regulatory surface
-              is additive.
+              ETC is not simply a PoW network or simply a smart contract
+              platform. It sits at the intersection of both, inheriting the
+              commodity classification path that Bitcoin established and the
+              programmable finance frameworks that Ethereum established. No
+              other active blockchain occupies this position &mdash; Bitcoin has
+              PoW without programmability, Ethereum has the EVM without PoW.
+              ETC has both.
+            </p>
+            <p className="mt-3 text-base text-[var(--text-muted)]">
+              For energy markets, this intersection has a specific consequence:
+              the same network that provides a global 24/7 energy demand signal
+              also supports programmable contracts for energy settlement.
+              ETC/USD price is a function of energy cost, block reward, and
+              hardware efficiency &mdash; mining activity arbitrages between
+              energy markets and crypto markets continuously. The EVM layer
+              means those contracts can be settled on the same chain that
+              prices them.
             </p>
           </FadeIn>
 

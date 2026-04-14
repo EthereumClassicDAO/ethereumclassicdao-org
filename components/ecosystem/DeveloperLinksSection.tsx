@@ -13,8 +13,8 @@ const resources = [
   {
     icon: Github,
     name: "GitHub Organization",
-    description: "Open-source repositories and governance contracts",
-    href: "https://github.com/EthereumClassicDAO",
+    description: "Client implementations, ECIPs, and EVM developer resources",
+    href: "https://github.com/ethereumclassic",
   },
   {
     icon: LayoutDashboard,
@@ -46,15 +46,18 @@ export function DeveloperLinksSection() {
   return (
     <>
       <SectionDivider />
-      <section aria-labelledby="developer-resources-heading" className="section-gradient py-28">
+      <section aria-labelledby="developer-resources-heading" className="section-deep py-28">
         <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2 id="developer-resources-heading" className="text-3xl font-bold tracking-tight">
               Developer Resources
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Tools, documentation, and infrastructure for building on Ethereum
-              Classic.
+              The full breadth of Ethereum development infrastructure —
+              client libraries, on-chain analytics, governance tooling, and
+              protocol documentation — configured for Ethereum Classic. Same
+              EVM specification, same standards, same developer experience.
+              Everything you need to ship on ETC is already familiar.
             </p>
           </FadeIn>
 

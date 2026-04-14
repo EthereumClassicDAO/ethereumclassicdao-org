@@ -84,8 +84,12 @@ export function NetworkConfigSection() {
               Network Configuration
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Connect to Ethereum Classic mainnet or the Mordor testnet.
-              Full EVM compatibility. Use your existing Ethereum tooling.
+              Production RPC endpoints, chain IDs, and explorer URLs for
+              Ethereum Classic mainnet (Chain 61) and Mordor testnet (Chain
+              63). Drop-in configuration for MetaMask, Hardhat, Foundry, and
+              any EVM-compatible toolchain. Both networks run Proof-of-Work
+              consensus under the Spiral EVM specification, with the Olympia
+              upgrade pending activation on both chains.
             </p>
           </FadeIn>
 

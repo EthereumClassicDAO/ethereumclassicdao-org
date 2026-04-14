@@ -6,19 +6,19 @@ import { RoadmapSection } from "@/components/about/RoadmapSection";
 import { InfrastructureSection } from "@/components/about/InfrastructureSection";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Ethereum Classic DAO LLC",
   description:
-    "About Ethereum Classic DAO — driving long-term development and institutional adoption of Ethereum Classic, the largest Proof-of-Work smart contract platform.",
+    "Ethereum Classic DAO LLC is a Wyoming-registered DAO LLC building the software, governance infrastructure, and institutional frameworks for Ethereum Classic — the largest Proof-of-Work blockchain with native EVM smart contracts. Recognized under the CLARITY Act, MiCA, and Japan's FSA Green List.",
 };
 
 export default function AboutPage() {
   return (
     <main>
       <AboutSection />
-      <ValuesSection />
-      <LeadershipSection />
-      <RoadmapSection />
       <InfrastructureSection />
+      <LeadershipSection />
+      <ValuesSection />
+      <RoadmapSection />
     </main>
   );
 }

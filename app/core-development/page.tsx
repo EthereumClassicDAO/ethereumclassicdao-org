@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { PropertiesSection } from "@/components/ecosystem/PropertiesSection";
 
 export const metadata: Metadata = {
   title: "Core Development Timeline | Ethereum Classic DAO",
@@ -349,10 +350,18 @@ export default function TimelinePage() {
             <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
               Core Development Timeline
             </h1>
-            <p className="mt-4 max-w-2xl text-base text-[var(--text-muted)]">
-              Every network upgrade applied to Ethereum Classic mainnet — from
-              the Frontier genesis block in July 2015 through Olympia. A decade
-              of continuous operation.
+            <p className="mt-4 text-base text-[var(--text-muted)]">
+              A decade of uninterrupted Proof-of-Work operation — every
+              network upgrade applied to Ethereum Classic mainnet. Each upgrade
+              coordinated across independent client teams, funded by the ETC
+              Cooperative and institutional partners, and ratified through the
+              Ethereum Classic Improvement Proposal process. Full EVM parity delivered through every cycle — from Gas Reprice
+              to Spiral — tracking every major Ethereum protocol advancement
+              on the largest Proof-of-Work smart contract platform and the
+              only PoW EVM.
+            </p>
+            <p className="mt-3 text-base text-[var(--text-muted)]">
+              Olympia is next.
             </p>
           </FadeIn>
 
@@ -529,6 +538,7 @@ export default function TimelinePage() {
           </FadeIn>
         </div>
       </section>
+      <PropertiesSection />
     </main>
   );
 }

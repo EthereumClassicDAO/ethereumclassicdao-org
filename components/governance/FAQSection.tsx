@@ -45,7 +45,7 @@ const faqItems: { question: string; answer: ReactNode }[] = [
         >
           ETCG
         </a>
-        ) in 2018, years before Bitcoin ETFs existed as a product category, and simultaneously became a major institutional donor to the ETC Cooperative — pioneering what is now recognized industry practice: investment product issuers directly funding the protocol development underlying their products. What Grayscale was doing in 2018, the rest of the industry has only recently caught up to. With Olympia, Grayscale leads again — from pioneering the institutional off-chain funding model to supporting the first Proof-of-Work network to take that model fully on-chain. This is only possible on Ethereum Classic: Bitcoin, Litecoin, and Dogecoin have no native smart contract functionality and depend entirely on off-chain organizations and institutional goodwill to fund development. Grayscale, as one of the largest stakeholders in the ETC network, has proven consistently aligned to ETC's core principles — contributing material funding to codify those principles into ETC's development infrastructure. With Olympia, those efforts move on-chain. Contributions are open to all. Access is open to all. ETC's self-sovereignty is no longer dependent on any single institution's continued generosity.
+        ) in 2018, years before Bitcoin ETFs existed as a product category, and simultaneously became a major institutional donor to the ETC Cooperative — pioneering what is now recognized industry practice: investment product issuers directly funding the protocol development underlying their products. What Grayscale was doing in 2018, the rest of the industry has only recently caught up to. With Olympia, Grayscale leads again — from pioneering the institutional off-chain funding model to supporting the first Proof-of-Work network to take that model fully on-chain. This is only possible on Ethereum Classic: Bitcoin, Litecoin, and Dogecoin have no native smart contract functionality and depend entirely on off-chain organizations and institutional goodwill to fund development. Grayscale, as one of the largest stakeholders in the ETC network, has proven consistently aligned to ETC&apos;s core principles — contributing material funding to codify those principles into ETC&apos;s development infrastructure. With Olympia, those efforts move on-chain. Contributions are open to all. Access is open to all. ETC&apos;s self-sovereignty is no longer dependent on any single institution&apos;s continued generosity.
       </>
     ),
   },
@@ -107,8 +107,13 @@ export function FAQSection() {
               Frequently Asked Questions
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Common questions about Olympia governance, treasury funding, and
-              the DAO LLC structure.
+              Technical questions about how governance works, institutional
+              questions about the DAO LLC structure and regulatory profile,
+              and practical questions about who can participate and how
+              the treasury is funded. If you are an exchange, custodian,
+              investment product issuer, mining operation, or developer
+              evaluating engagement with the Olympia ecosystem, the answers
+              to the most common questions are here.
             </p>
           </FadeIn>
 

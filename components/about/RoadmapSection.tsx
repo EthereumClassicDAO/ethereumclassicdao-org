@@ -72,7 +72,27 @@ export function RoadmapSection() {
       <section aria-labelledby="olympia-roadmap-heading" className="section-gradient geo-circle relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 id="olympia-roadmap-heading" className="text-3xl font-bold tracking-tight">
+            <h2 className="text-3xl font-bold tracking-tight">The Olympia Upgrade</h2>
+            <div className="mt-4 rounded-xl p-8 border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] space-y-4 text-base leading-relaxed text-[var(--text-secondary)]">
+              <p>
+                The Olympia upgrade introduces protocol-level treasury
+                funding, decentralized governance, and on-chain
+                proposal execution to Ethereum Classic. It represents the most
+                significant protocol upgrade in Ethereum Classic&rsquo;s
+                history.
+              </p>
+              <p>
+                Through Olympia, the basefee funds a
+                protocol-managed treasury. Block rewards and tips remain untouched and
+                go entirely to miners. Anyone can submit proposals on-chain.
+                Members vote on resource allocation and execute
+                decisions. Every step is transparent and verifiable on-chain.
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn>
+            <h2 id="olympia-roadmap-heading" className="mt-16 text-3xl font-bold tracking-tight">
               Olympia Roadmap
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
