@@ -29,7 +29,7 @@ const formalSteps = [
     number: "02",
     title: "Vote",
     description:
-      "Members cast weighted on-chain votes during a defined voting period using non-transferable membership NFTs. Votes are transparent and immutable. A quorum threshold must be met for the proposal to pass.",
+      "Members vote on-chain during a defined voting period using non-transferable membership NFTs. Votes are transparent and immutable. Voting mechanics are governed by the OpenZeppelin Governor 5.x contract suite.",
   },
   {
     icon: Clock,

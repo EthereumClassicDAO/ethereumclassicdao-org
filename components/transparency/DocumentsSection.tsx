@@ -42,9 +42,9 @@ export function DocumentsSection() {
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {documents.map((doc, i) => (
-              <FadeIn key={doc.name} delay={i * 80}>
+              <FadeIn key={doc.name} delay={i * 80} className="h-full">
                 {doc.status === "available" && doc.href ? (
-                  <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] shadow-[0_0_20px_var(--border-glow)] p-5">
+                  <div className="h-full rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] shadow-[0_0_20px_var(--border-glow)] p-5">
                     <div className="flex items-start justify-between">
                       <p className="text-sm font-semibold">{doc.name}</p>
                       <span className="badge-available">Available</span>
@@ -60,7 +60,7 @@ export function DocumentsSection() {
                     </a>
                   </div>
                 ) : (
-                  <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5">
+                  <div className="h-full rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5">
                     <div className="flex items-start justify-between">
                       <p className="text-sm font-semibold">{doc.name}</p>
                       <span className="badge-pending">Pending</span>

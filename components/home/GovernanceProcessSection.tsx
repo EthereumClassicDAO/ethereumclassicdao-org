@@ -27,7 +27,7 @@ const formalSteps = [
     icon: Vote,
     number: "02",
     title: "Vote",
-    description: "Membership NFT holders cast weighted on-chain votes",
+    description: "Membership NFT holders vote on-chain via OpenZeppelin Governor 5.x",
   },
   {
     icon: Clock,

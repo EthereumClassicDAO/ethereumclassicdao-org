@@ -55,8 +55,8 @@ export function StatsGrid({
   return (
     <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
       {stats.map((s, i) => (
-        <FadeIn key={s.label} delay={i * 100}>
-          <div className="rounded-xl border-t-2 border-[var(--brand-green)] bg-[var(--bg-elevated)] p-6">
+        <FadeIn key={s.label} delay={i * 100} className="h-full">
+          <div className="h-full rounded-xl border-t-2 border-[var(--brand-green)] bg-[var(--bg-elevated)] p-6">
             <p className="text-3xl font-bold font-mono tracking-tight text-[var(--brand-green)] md:text-4xl">
               {s.value}
               {s.unit && (

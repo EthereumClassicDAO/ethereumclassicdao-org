@@ -19,7 +19,7 @@ export function EcosystemHeroSection() {
           <p className="mt-4 text-base text-[var(--text-muted)]">
             A compliant EVM ecosystem positioned for regulated digital assets:
             from the flagship ETC digital commodity to compliant tokens,
-            stablecoins under the GENIUS Act, and ETF-aligned instruments.
+            stablecoins under the GENIUS Act, and regulated investment products.
           </p>
         </FadeIn>
       </div>

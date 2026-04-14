@@ -76,8 +76,7 @@ export function RoadmapSection() {
               Olympia Roadmap
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Five stages from consensus upgrades to permanent protocol
-              integration.
+              The Olympia upgrade moves in five stages — establishing the protocol mechanics that make treasury funding possible, building the on-chain governance infrastructure, adding prediction market signals for better resource allocation, addressing long-term network security, and ultimately encoding governance rules at the consensus level where they become as immutable as the chain itself.
             </p>
           </FadeIn>
 

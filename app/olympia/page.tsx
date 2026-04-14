@@ -49,7 +49,7 @@ const ecips = [
     title: "EIP-1559 Fee Market",
     icon: Flame,
     description:
-      "The most widely adopted transaction format and fee market in the EVM ecosystem, now on Ethereum Classic. Dynamic gas pricing delivers predictable fees for users and applications. Fully additive: legacy transactions remain valid indefinitely. Unlike Ethereum where the basefee is burned, ETC redirects it to the protocol treasury. Miner block rewards and tips remain completely untouched.",
+      "Unlike Ethereum where the basefee is burned, ETC redirects it to the protocol treasury — the mechanism that funds open-source core development without any foundation or donor dependency. Dynamic gas pricing delivers predictable fees for users and applications. Fully additive: legacy transactions remain valid indefinitely. Miner block rewards and tips remain completely untouched.",
   },
   {
     ecip: "ECIP-1112",
@@ -137,12 +137,12 @@ const faqItems = [
   {
     question: "How was Olympia tested before mainnet?",
     answer:
-      "Olympia activates on the Mordor testnet first. Mordor is Ethereum Classic's Proof-of-Work testnet and mirrors mainnet conditions closely. All three client implementations, Fukuii, Core-Geth, and Besu, run the Mordor fork before any mainnet activation is scheduled. Cross-client validation using the Hive integration testing framework confirms consensus compatibility across implementations. The mainnet activation block is not set until Mordor has run cleanly and major network stakeholders, including exchanges, custodians, and mining pools, have confirmed readiness.",
+      "Olympia activates on the Mordor testnet first. Mordor is Ethereum Classic's Proof-of-Work testnet and mirrors mainnet conditions closely. Multiple independent client implementations run the Mordor fork before any mainnet activation is scheduled. Cross-client validation using the Hive integration testing framework confirms consensus compatibility across implementations. The mainnet activation block is not set until Mordor has run cleanly and major network stakeholders, including exchanges, custodians, and mining pools, have confirmed readiness.",
   },
   {
     question: "When is the mainnet activation block?",
     answer:
-      "Olympia activates on Mordor testnet first. The mainnet activation block is announced after a successful Mordor run and a coordinated stakeholder readiness check with exchanges, mining pools, node operators, and infrastructure providers. All client implementations publish Olympia-compatible releases well before activation. The process follows the same sequence used for every previous ETC hard fork.",
+      "Olympia is targeted for mainnet activation before 2027. Olympia activates on Mordor testnet first. The mainnet activation block is announced after a successful Mordor run and a coordinated stakeholder readiness check with exchanges, mining pools, node operators, and infrastructure providers. All client implementations publish Olympia-compatible releases well before activation. The process follows the same sequence used for every previous ETC hard fork.",
   },
   {
     question: "Will my miner rewards change?",
@@ -242,7 +242,7 @@ export default function UpgradePage() {
             <ul className="mx-auto mt-6 max-w-3xl space-y-3 text-left text-sm text-[var(--text-muted)]">
               <li className="flex gap-3">
                 <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
-                <span><span className="font-semibold text-white">EIP-1559 fee market:</span> the most widely adopted transaction type in the EVM ecosystem, bringing predictable gas pricing and modern tooling compatibility</span>
+                <span><span className="font-semibold text-white">EIP-1559 fee market:</span> fee market parity with Ethereum — predictable base fees, type 2 transaction support, and the tooling compatibility the entire EVM ecosystem assumes. Unlike Ethereum where the basefee is burned, ETC redirects it to the protocol treasury</span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
@@ -254,7 +254,7 @@ export default function UpgradePage() {
               </li>
               <li className="flex gap-3">
                 <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
-                <span><span className="font-semibold text-white">Institutional infrastructure:</span> the Proof-of-Work foundation for regulated stablecoins under MiCA and the GENIUS Act, energy grid stabilization, and ETF-compliant digital assets that regulators across the US, EU, Japan, and beyond are moving to define</span>
+                <span><span className="font-semibold text-white">Institutional infrastructure:</span> the Proof-of-Work foundation for regulated stablecoin issuance (Classic USD, MiCA and GENIUS Act-compliant), digital commodity classification under the CLARITY Act, and the broadest cross-jurisdictional institutional access profile of any Proof-of-Work smart contract network</span>
               </li>
             </ul>
           </FadeIn>
@@ -300,7 +300,7 @@ export default function UpgradePage() {
               What Olympia Brings to Ethereum Classic
             </h2>
             <p className="mb-8 text-sm text-[var(--text-muted)]">
-              A modern fee market, a protocol-controlled treasury, and full Fusaka EVM compatibility, delivered to the only Proof-of-Work smart contract platform in the world.
+              Three protocol upgrades in a single activation: a fee market that funds a protocol-controlled treasury, Fusaka EVM alignment that closes years of tooling divergence so every Ethereum library and framework works on ETC without modification, and the institutional access profile that follows. Delivered to the only Proof-of-Work smart contract platform in the world.
             </p>
           </FadeIn>
 
@@ -308,8 +308,8 @@ export default function UpgradePage() {
             {ecips.map((item, i) => {
               const Icon = item.icon;
               return (
-                <FadeIn key={item.ecip} delay={i * 80}>
-                  <div className="rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-6">
+                <FadeIn key={item.ecip} delay={i * 80} className="h-full">
+                  <div className="h-full rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-6">
                     <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
                       <Icon size={20} className="text-[var(--brand-green)]" />
                     </div>
@@ -394,8 +394,8 @@ export default function UpgradePage() {
             {evmCategories.map((cat, i) => {
               const Icon = cat.icon;
               return (
-                <FadeIn key={cat.title} delay={i * 60}>
-                  <div className="rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-5">
+                <FadeIn key={cat.title} delay={i * 60} className="h-full">
+                  <div className="h-full rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-5">
                     <div className="mb-3 flex items-center gap-2">
                       <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
                         <Icon size={16} className="text-[var(--brand-green)]" />
@@ -448,7 +448,7 @@ export default function UpgradePage() {
             <h3 className="mb-4 text-base font-semibold">Developer Tooling: Works Without Modification</h3>
             <div className="grid gap-4 sm:grid-cols-3">
               {devTools.map((tool) => (
-                <div key={tool.name} className="rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-4">
+                <div key={tool.name} className="h-full rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-4">
                   <p className="mb-1 text-sm font-semibold">{tool.name}</p>
                   <p className="text-xs leading-relaxed text-[var(--text-muted)]">{tool.description}</p>
                 </div>

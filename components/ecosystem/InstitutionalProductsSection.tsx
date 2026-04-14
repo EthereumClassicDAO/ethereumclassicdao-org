@@ -14,8 +14,8 @@ const products = [
     icon: Lock,
     title: "Institutional Custody",
     description:
-      "Institutional-grade digital asset custody from industry-leading custodians. Multi-signature security, insurance coverage, and regulatory compliance for enterprise and fund managers.",
-    detail: "Leading Custodians · Enterprise",
+      "Institutional-grade ETC custody from Fireblocks, Coinbase Custody, BitGo, Copper, and Bakkt. Multi-signature security, insurance coverage, and regulatory compliance for enterprise and fund managers.",
+    detail: "Fireblocks · Coinbase Custody · BitGo · Copper · Bakkt",
   },
   {
     icon: ArrowLeftRight,
@@ -45,8 +45,8 @@ export function InstitutionalProductsSection() {
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {products.map((product, i) => (
-              <FadeIn key={product.title} delay={i * 100}>
-                <div className="flex flex-col rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
+              <FadeIn key={product.title} delay={i * 100} className="h-full">
+                <div className="flex flex-col h-full rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                     <product.icon
                       size={20}

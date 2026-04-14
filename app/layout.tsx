@@ -119,7 +119,7 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
+const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Ethereum Classic DAO LLC",
@@ -127,7 +127,7 @@ const jsonLd = {
   url: "https://ethereumclassicdao.org",
   logo: "https://ethereumclassicdao.org/logo.svg",
   description:
-    "Wyoming-registered DAO LLC building the software and infrastructure for global adoption of Ethereum Classic — the largest Proof-of-Work smart contract platform. Positioned for US regulatory compliance under the CLARITY Act and GENIUS Act.",
+    "Wyoming-registered DAO LLC building the software and infrastructure for global adoption of Ethereum Classic — the largest Proof-of-Work smart contract platform. Recognized across six major global regulatory frameworks spanning four continents.",
   foundingDate: "2025",
   legalName: "Ethereum Classic DAO LLC",
   address: {
@@ -143,6 +143,20 @@ const jsonLd = {
   ],
 };
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Ethereum Classic DAO",
+  url: "https://ethereumclassicdao.org",
+  description:
+    "Institutional website for Ethereum Classic DAO LLC — the Wyoming-registered DAO LLC building governance infrastructure for Ethereum Classic's Olympia upgrade.",
+  publisher: {
+    "@type": "Organization",
+    name: "Ethereum Classic DAO LLC",
+    url: "https://ethereumclassicdao.org",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -153,15 +167,27 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
         <ThemeProvider>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-[var(--brand-green)] focus:px-4 focus:py-2 focus:text-[var(--background)] focus:outline-none"
+          >
+            Skip to main content
+          </a>
           <NavHeader />
-          {children}
+          <div id="main-content">
+            {children}
+          </div>
           <FooterSection />
         </ThemeProvider>
         <Script

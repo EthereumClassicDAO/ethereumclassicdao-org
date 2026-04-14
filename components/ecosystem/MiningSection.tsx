@@ -59,9 +59,12 @@ export async function MiningSection() {
             <div className="mt-8 max-w-2xl">
               <p className="text-sm leading-relaxed text-[var(--text-muted)]">
                 Ethereum Classic is the only EVM-compatible chain secured by
-                Proof-of-Work. ETChash supports both ASIC efficiency for
+                Proof-of-Work. When Ethereum transitioned to Proof-of-Stake,
+                ETC absorbed the majority of the ETHash mining ecosystem —
+                including established ASIC manufacturers like Bitmain and
+                Jasminer. ETChash supports both ASIC efficiency for
                 commercial-grade operations and GPU accessibility for global
-                participation &mdash; diversifying miner composition and reducing
+                participation, diversifying miner composition and reducing
                 supply chain risk. Run{" "}
                 <a
                   href="https://github.com/ethereumclassic/fukuii"

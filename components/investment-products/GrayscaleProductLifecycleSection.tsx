@@ -69,8 +69,8 @@ export function GrayscaleProductLifecycleSection() {
           {/* Stage cards */}
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {stages.map((s, i) => (
-              <FadeIn key={s.stage} delay={i * 100}>
-                <div className="flex flex-col rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
+              <FadeIn key={s.stage} delay={i * 100} className="h-full">
+                <div className="flex flex-col h-full rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
                   <p className="font-mono text-xs uppercase tracking-wider text-[var(--text-subtle)]">
                     {s.stage}
                   </p>

@@ -8,7 +8,7 @@ const entities = [
     name: "Ethereum Classic DAO LLC",
     role: "Legal Entity",
     description:
-      "The legal wrapper for the Olympia DAO under Wyoming's DAO LLC framework. Ensures US regulatory compliance, proper reporting, and alignment with federal digital asset legislation including the CLARITY Act and GENIUS Act.",
+      "The legal wrapper for the Olympia DAO under Wyoming's DAO LLC framework. Ensures global regulatory compliance and proper reporting, with alignment to federal digital asset legislation including the CLARITY Act, GENIUS Act, and Mined in America Act.",
     href: "https://ethereumclassicdao.org",
     highlighted: true,
   },
@@ -17,7 +17,7 @@ const entities = [
     name: "Olympia DAO",
     role: "On-Chain Governance",
     description:
-      "Proposal submission, membership-based voting, and transparent execution, all on-chain on Ethereum Classic.",
+      "On-chain governance for Ethereum Classic core development: open proposal submission, transparent voting and execution on ETC. A futarchy layer is planned to add public market signals from any participant — financially-backed predictions informing treasury allocation alongside votes.",
     href: "https://olympiadao.org",
     highlighted: false,
   },
@@ -26,7 +26,7 @@ const entities = [
     name: "Olympia Treasury",
     role: "Protocol-Funded Treasury",
     description:
-      "Basefee revenue creates sustainable protocol funding. Real-time treasury monitoring via public dashboard.",
+      "Sustainable protocol funding from basefee revenue, voluntary on-chain donations, and mining contributions — block rewards and tips go entirely to miners. Futarchy market activity generates additional transaction volume that feeds back as basefee revenue, creating a self-reinforcing funding loop.",
     href: "https://olympiatreasury.org",
     highlighted: false,
   },
@@ -35,7 +35,7 @@ const entities = [
     name: "Ethereum Classic",
     role: "Network Protocol",
     description:
-      "The largest Proof-of-Work smart contract platform. Coordinating network upgrades to maintain EVM protocol parity, ensuring Ethereum Classic delivers a best-in-class EVM experience with every protocol upgrade.",
+      "The largest Proof-of-Work smart contract platform, trading on 300+ markets across 20+ global exchanges with fiat pairs spanning every major currency region. Recognized across six major global regulatory frameworks spanning four continents — the broadest institutional access profile of any Proof-of-Work network.",
     href: "https://ethereumclassic.org",
     highlighted: false,
   },
@@ -59,12 +59,12 @@ export function OlympiaEcosystemSection() {
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {entities.map((entity, i) => (
-              <FadeIn key={entity.name} delay={i * 100}>
+              <FadeIn key={entity.name} delay={i * 100} className="h-full">
                 <a
                   href={entity.href}
                   target={entity.highlighted ? undefined : "_blank"}
                   rel={entity.highlighted ? undefined : "noopener noreferrer"}
-                  className={`group flex flex-col rounded-xl border p-6 transition-all duration-200 hover:-translate-y-0.5 ${
+                  className={`group flex flex-col h-full rounded-xl border p-6 transition-all duration-200 hover:-translate-y-0.5 ${
                     entity.highlighted
                       ? "bg-[var(--bg-elevated)] border-[var(--border-brand)] shadow-[0_0_24px_var(--border-glow)]"
                       : "bg-[var(--bg-elevated)] border-[var(--divider)] hover:border-[var(--border-glow)]"

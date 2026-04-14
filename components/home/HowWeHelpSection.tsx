@@ -2,30 +2,30 @@ import { Vote, GitBranch, Pickaxe, Scale } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
-export function HowWeHelpSection({ hashrateStr }: { hashrateStr: string }) {
+export function HowWeHelpSection() {
 
   const pillars = [
     {
       icon: GitBranch,
       title: "Core Client Development",
-      description: `Coordinating the client software that runs the Ethereum Classic network for over a decade. Multiple independent implementations ensure resilience. Every network upgrade on ETC has gone through us, and we serve as the active response to any emergency development issues.`,
+      description: "The technical and principled stewards of Ethereum Classic since inception — every client decision, network upgrade, and emergency response has been coordinated through us. A decade of accumulated domain knowledge drives every protocol decision: knowing not just what to build, but how to honor ETC's foundational principles while adapting to an evolving blockchain landscape. We are the humans behind billions of dollars in network value, driven to deliver a first-in-class Proof-of-Work smart contract experience for every stakeholder the network serves.",
     },
     {
       icon: Vote,
       title: "Critical Infrastructure",
       description:
-        "We are the legal entity on the contracts that keep Ethereum Classic running. Public RPC endpoints, block explorers, oracle networks, and institutional custody integrations operate under agreements we hold. We are the off-chain legal wrapper that executes on-chain governance decisions.",
+        "Public RPC endpoints, block explorers, oracle networks, and institutional custody integrations all operate under service agreements that require a named legal counterparty — that entity is us. Vendor contracts, regulatory reporting, and institutional relationships cannot be executed by ad-hoc coordination; a mature network requires a formal structure. As the off-chain legal wrapper for on-chain governance, we hold the agreements, execute the decisions, and provide the organizational continuity that Ethereum Classic's second decade requires.",
     },
     {
       icon: Pickaxe,
       title: "Hashrate Incentive Alignment",
-      description: `${hashrateStr} of globally distributed mining secures the largest Proof-of-Work smart contract platform. We defended the ETCHash miner base, responded to the 2020 51% attacks with the Thanos upgrade, and are building the fee market that keeps PoW economically viable long-term.`,
+      description: "Billions of dollars in globally distributed mining infrastructure secures Ethereum Classic, the largest Proof-of-Work smart contract platform. As core developers, we positioned ETC as the PoW EVM in 2018, implemented the Thanos upgrade in response to the 2020 51% attacks, and defended the ETCHash miner base from corporate capture ahead of The Merge. We are building the decentralized funding mechanisms that keep miner software current and PoW economically viable long-term. Domestic US mining operations are positioned under the Mined in America Act, aligned with our Wyoming DAO LLC registration and a decade of ETC core development.",
     },
     {
       icon: Scale,
       title: "Global Regulatory Navigation",
       description:
-        "We track and maintain compliance across major global regulatory frameworks: CLARITY Act and GENIUS Act (US), MiCA (EU, in force Dec 2024), FSA Green List (Japan), FSMA (UK), and VARA (UAE). ETC is recognized under each, and Classic USD is a live GENIUS Act and MiCA-aligned stablecoin on ETC mainnet.",
+        "ETC straddles two regulatory trajectories — digital commodity under the CLARITY Act and MiCA, and regulated stablecoin infrastructure under the GENIUS Act — giving it the broadest institutional access profile of any Proof-of-Work network. We track compliance across six major frameworks spanning four continents, with Classic USD as a live proof of GENIUS Act and MiCA alignment on ETC mainnet.",
     },
   ];
   return (
@@ -46,8 +46,8 @@ export function HowWeHelpSection({ hashrateStr }: { hashrateStr: string }) {
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {pillars.map((p, i) => (
-              <FadeIn key={p.title} delay={i * 100}>
-                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
+              <FadeIn key={p.title} delay={i * 100} className="h-full">
+                <div className="h-full rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-all duration-200 hover:border-[var(--border-glow)] hover:-translate-y-0.5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                     <p.icon
                       size={20}

@@ -16,7 +16,7 @@ const buildItems = [
   },
   {
     icon: Scale,
-    text: "US regulatory compliance: digital commodity positioning under the CLARITY Act, regulated stablecoin platform under the GENIUS Act",
+    text: "Global regulatory compliance: six major frameworks spanning four continents, including digital commodity candidate under the CLARITY Act, decentralized asset under MiCA, and GENIUS Act-aligned stablecoin platform",
   },
 ];
 
@@ -31,13 +31,13 @@ const positions = [
     icon: Building2,
     title: "Institutional Infrastructure",
     description:
-      "Listed on all major global exchanges with 300+ active markets. Institutional-grade custody from leading digital asset custodians. Regulated securities exposure via the Grayscale Ethereum Classic Trust (ETCG), trading on OTCQX since 2018.",
+      "Listed on all major global exchanges with 300+ active markets. Institutional-grade custody from leading digital asset custodians. Regulated securities exposure via the Grayscale Ethereum Classic Trust (ETCG), trading on OTCQX since 2018 and positioned for ETF conversion, following Grayscale's established trust-to-ETF precedent with Bitcoin and Ethereum.",
   },
   {
     icon: Scale,
     title: "Regulatory Clarity",
     description:
-      "Wyoming DAO LLC under the Decentralized Autonomous Organization Supplement. Positioned for digital commodity classification (CLARITY Act) and as a compliant EVM platform for regulated stablecoins (GENIUS Act), producing an ecosystem of US-based ETF-aligned digital assets.",
+      "Wyoming DAO LLC under the Decentralized Autonomous Organization Supplement. ETC straddles two regulatory trajectories — digital commodity candidate under the CLARITY Act and decentralized asset under MiCA — recognized across six major global regulatory frameworks spanning four continents. The Grayscale Ethereum Classic Trust positions ETC as a second-wave ETF candidate, the only Proof-of-Work smart contract platform in that pipeline.",
   },
 ];
 
@@ -59,17 +59,19 @@ export function AboutSection() {
               DAO, utilizing Wyoming&rsquo;s DAO LLC framework to maintain
               core software, critical infrastructure, and hashrate incentives
               for the world&rsquo;s largest Proof-of-Work smart contract
-              platform. The LLC ensures proper reporting and compliance with
-              US federal and state regulatory frameworks.
+              platform. The LLC ensures proper reporting and active compliance
+              across six major global regulatory frameworks spanning four continents.
             </p>
             <p>
               Ethereum Classic is the only EVM-compatible blockchain secured
               by Proof-of-Work, combining Bitcoin&rsquo;s security model
-              with Ethereum&rsquo;s programmability. This positions ETC not
-              just as a digital commodity under the CLARITY Act, but as a
-              compliant smart contract platform where regulated stablecoins
-              (GENIUS Act) can operate on a
-              Proof-of-Work foundation.
+              with Ethereum&rsquo;s programmability. This places ETC at the
+              intersection of two distinct regulatory trajectories — the
+              commodity classification path that Proof-of-Work networks
+              established, and the programmable finance frameworks being built
+              around smart contract platforms — giving it an additive
+              regulatory surface recognized across six major global frameworks
+              spanning four continents.
             </p>
           </div>
         </FadeIn>

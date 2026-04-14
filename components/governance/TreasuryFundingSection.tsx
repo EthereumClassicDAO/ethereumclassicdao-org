@@ -34,10 +34,10 @@ const safeguards = [
   },
   {
     icon: Fingerprint,
-    title: "Two-Layer Governance",
+    title: "Open Prediction Markets",
     ecip: "ECIP-1117",
     description:
-      "Olympia DAO membership NFTs are non-transferable, preventing vote buying and governance manipulation. Public participation is enabled through open futarchy prediction markets, where anyone can stake on protocol outcomes and earn financial rewards for accurate predictions, ensuring both protocol accountability and broad community input.",
+      "Open to anyone without membership — futarchy prediction markets provide a financially incentivized governance signal that prevents binding governance from becoming captured by a closed set of members. Anyone can stake on protocol outcomes and earn rewards for accurate predictions. Market prices become on-chain signal that informs governance decisions and holds the DAO publicly accountable.",
   },
 ];
 
@@ -198,8 +198,8 @@ export function TreasuryFundingSection() {
             </FadeIn>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {stakeholders.map((s, i) => (
-                <FadeIn key={s.name} delay={i * 80}>
-                  <div className="flex gap-3 rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-4 transition-colors hover:border-[var(--border-glow)]">
+                <FadeIn key={s.name} delay={i * 80} className="h-full">
+                  <div className="flex h-full gap-3 rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-4 transition-colors hover:border-[var(--border-glow)]">
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                       <s.icon size={16} className="text-[var(--brand-green)]" />
                     </div>
@@ -252,8 +252,8 @@ export function TreasuryFundingSection() {
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {safeguards.map((item, i) => (
-              <FadeIn key={item.title} delay={i * 100}>
-                <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
+              <FadeIn key={item.title} delay={i * 100} className="h-full">
+                <div className="h-full rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                     <item.icon size={20} className="text-[var(--brand-green)]" />
                   </div>

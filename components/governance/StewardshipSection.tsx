@@ -69,10 +69,13 @@ export function StewardshipSection() {
               </p>
               <p className="mt-4 text-sm leading-relaxed text-[var(--text-muted)]">
                 The regulatory clarity now taking shape globally accelerates
-                this transition. ETC&apos;s classification as a digital commodity
-                under the CLARITY Act, a decentralized asset under MiCA, and a
-                qualifying stablecoin platform under the GENIUS Act means the
-                full spectrum of participants can engage with confidence: retail
+                this transition. ETC is recognized as a digital commodity under
+                the CLARITY Act, a decentralized asset under MiCA (in force
+                December 2024), listed on Japan&apos;s FSA Green List, and
+                qualifying infrastructure for stablecoin issuance under the
+                GENIUS Act — with parallel frameworks advancing across the UK,
+                UAE, Hong Kong, and major Asia-Pacific jurisdictions. The full
+                spectrum of participants can engage with confidence: retail
                 individuals in any jurisdiction, regulated institutions managing
                 funds on behalf of clients, mining operations seeking a
                 transparent development partner, and enterprises building on
@@ -117,8 +120,11 @@ export function StewardshipSection() {
                 that has only recently caught up.
               </p>
               <p className="mt-4 text-sm leading-relaxed text-[var(--text-muted)]">
-                Taking that model on-chain and open-sourcing it through smart
-                contracts is only possible on Ethereum Classic. Bitcoin,
+                With Olympia, Grayscale leads again — from pioneering the
+                institutional off-chain funding model to supporting the first
+                Proof-of-Work network to take it fully on-chain. Taking that
+                model on-chain and open-sourcing it through smart contracts is
+                only possible on Ethereum Classic. Bitcoin,
                 Litecoin, and Dogecoin have no native smart contract
                 functionality, so their core development funding depends
                 entirely on off-chain organizations, personal relationships,
