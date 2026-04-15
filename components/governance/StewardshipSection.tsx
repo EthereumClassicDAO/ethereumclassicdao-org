@@ -154,6 +154,18 @@ export function StewardshipSection() {
                 ecosystems</strong>. They were years ahead of an industry that has only
                 recently caught up.
               </p>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
+                The deeper point is who ETCG represents. Grayscale is the
+                product issuer — but the capital base of the trust is a{" "}
+                <strong className="text-[var(--text-primary)] font-medium">globally distributed pool of retail and institutional
+                holders</strong>. The funding that reached ETC&apos;s core development
+                through the Cooperative did not originate from a single
+                centralized entity. It originated from a decentralized body of
+                investors whose capital flows through the product to the
+                network. ETC&apos;s development has been backed by decentralized
+                funding all along — Grayscale provided the regulated access
+                vehicle that made it possible.
+              </p>
 
               {/* With Olympia */}
               <div className="mt-6 border-t border-[var(--divider)] pt-6">

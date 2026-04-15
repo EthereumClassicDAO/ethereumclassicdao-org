@@ -1,13 +1,14 @@
 import type { ReactNode, ElementType } from "react";
 import {
   ArrowRight,
+  ExternalLink,
   Coins,
   Landmark,
   Vote,
   Globe,
-  Timer,
+  Lock,
   ShieldCheck,
-  Fingerprint,
+  CandlestickChart,
   Building2,
   Cpu,
   TrendingUp,
@@ -15,7 +16,7 @@ import {
   Heart,
   RotateCcw,
   Layers,
-  Flame,
+  Route,
   HandCoins,
   Pickaxe,
 } from "lucide-react";
@@ -24,25 +25,25 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 
 const safeguards = [
   {
-    icon: Timer,
-    title: "Timelock",
+    icon: Lock,
+    title: "OpenZeppelin Governor 5.x",
     ecip: "ECIP-1113",
     description:
-      "Every approved proposal must pass through a configurable delay period between approval and execution. No treasury disbursement, contract call, or governance action can take effect immediately after a vote passes. The delay window gives the community — members, market participants, and infrastructure operators — time to review what is about to execute, raise objections, or prepare for its effects. Emergency proposals can be scoped with shorter delays; routine funding and upgrade proposals carry longer ones.",
+      "Olympia governance is built on OpenZeppelin Governor 5.x — the most widely deployed on-chain governance framework in the EVM ecosystem, securing billions in protocol treasuries across Compound, Uniswap, Aave, and beyond. The full lifecycle — proposal submission, voting period, configurable security timelock, and automated on-chain execution — is enforced by audited contracts, not organizational policy. Multiple independent security audits, formally verified components, and years of adversarial mainnet exposure across the largest DeFi protocols make this the most battle-tested governance infrastructure available. Quorum thresholds, voting periods, and timelock delays are defined in code: no single party can override a vote, bypass the timelock, or execute a proposal that has not cleared the full on-chain process.",
   },
   {
     icon: ShieldCheck,
-    title: "Sanctions Screening",
+    title: "Institutional Compliance",
     ecip: "ECIP-1119",
     description:
-      "On-chain sanctions compliance is enforced at three independent checkpoints: proposal submission, active voting, and execution. A sanctioned address cannot submit a proposal, cast a vote, or receive treasury funds — checked at each stage rather than once at onboarding. This gives compliance-oriented exchanges, custodians, and investment product issuers the on-chain verification they need to engage with the Olympia Treasury without relying on off-chain organizational assurances.",
+      "On-chain sanctions compliance embedded directly in the governance contracts gives institutions a clear path to contributing to the Olympia Treasury. Exchanges, custodians, mining operations, and investment product issuers can fund core client development, critical infrastructure, network security, and emergency protocol responses without legal exposure or off-chain organizational assurances. Compliance is enforced at three independent checkpoints — proposal submission, active voting, and execution — verified in the contract itself, not in a policy document or terms of service. The result is an open treasury that institutions can engage with confidently.",
   },
   {
-    icon: Fingerprint,
-    title: "Open Prediction Markets",
+    icon: CandlestickChart,
+    title: "Public Signal Prediction Markets",
     ecip: "ECIP-1117",
     description:
-      "Binding governance is limited to non-transferable membership NFT holders. Open prediction markets ensure that the DAO cannot become a closed system accountable only to its own members. Anyone — no membership, no application — can open a market on a proposed protocol outcome, stake on the result, and earn financial rewards for accurate predictions. Market prices aggregate public opinion into a real-time on-chain signal that the DAO must weigh. A governance decision that markets consistently bet against is a governance decision under visible public pressure.",
+      "Futarchy prediction markets extend governance participation beyond the membership tier, generating a financially incentivized public signal alongside formal on-chain votes. Any participant can open a market on a proposed protocol outcome, stake capital on the result, and earn financial rewards for accurate predictions. Market prices aggregate real financial conviction from anyone willing to put capital behind their view — creating a live on-chain signal the DAO must weigh alongside vote counts. The markets generate transaction volume that flows as basefee revenue into the Olympia Treasury, creating a self-reinforcing loop between public participation and protocol funding capacity.",
   },
 ];
 
@@ -148,6 +149,31 @@ export function TreasuryFundingSection() {
           </FadeIn>
 
           <FadeIn>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <a
+                href="https://olympiatreasury.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)] transition-colors hover:bg-[rgba(0,255,174,0.15)]"
+              >
+                ECIP-1112
+                <ExternalLink size={9} aria-hidden="true" />
+              </a>
+            </div>
+            <div className="mt-4">
+              <a
+                href="https://olympiatreasury.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+              >
+                View the Olympia Treasury
+                <ArrowRight size={14} aria-hidden="true" />
+              </a>
+            </div>
+          </FadeIn>
+
+          <FadeIn>
             <div className="mt-12 rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] p-8">
               <p className="text-lg font-semibold">
                 Basefee revenue funds the Olympia Treasury
@@ -168,7 +194,7 @@ export function TreasuryFundingSection() {
             <FadeIn delay={0}>
               <div className="flex h-full flex-col rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
-                  <Flame size={20} aria-hidden="true" className="text-[var(--brand-green)]" />
+                  <Route size={20} aria-hidden="true" className="text-[var(--brand-green)]" />
                 </div>
                 <p className="mt-4 text-sm font-semibold">Basefee Revenue</p>
                 <p className="mt-2 flex-1 text-xs leading-relaxed text-[var(--text-muted)]">
@@ -339,35 +365,16 @@ export function TreasuryFundingSection() {
             </div>
           </div>
 
-          <FadeIn>
-            <div className="mt-12">
-              <a
-                href="https://olympiatreasury.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
-              >
-                View the Olympia Treasury Dashboard
-                <ArrowRight size={14} aria-hidden="true" />
-              </a>
-            </div>
-          </FadeIn>
-
           {/* Safeguards */}
           <FadeIn>
             <div className="mt-20">
               <h2 id="safeguards-heading" className="text-3xl font-bold tracking-tight">Safeguards</h2>
               <p className="mt-3 text-base text-[var(--text-muted)]">
-                Olympia is built on OpenZeppelin Governor 5.x, the most
-                widely deployed on-chain governance framework in the EVM
-                ecosystem. The timelock, quorum, and voting parameters are
-                defined in audited contracts, not in organizational policy.
-                Three independent safeguard layers enforce compliance at
-                proposal submission, during voting, and at execution.
-                Every treasury movement is publicly recorded and
-                independently verifiable on-chain, providing the audit
-                trail that compliance-oriented institutions require before
-                they can engage.
+                Three independent layers protect the integrity of every
+                treasury action — each operating at a distinct checkpoint
+                in the governance lifecycle, each providing a form of
+                accountability the others cannot. Every treasury movement
+                is publicly recorded and independently verifiable on-chain.
               </p>
               <div className="mt-3 flex gap-2">
                 <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
@@ -403,12 +410,23 @@ export function TreasuryFundingSection() {
           </div>
 
           <FadeIn delay={200}>
-            <p className="mt-10 text-sm leading-relaxed text-[var(--text-muted)]">
-              These protections are the foundation, not the ceiling. The
-              institutional stewardship that has backed Ethereum Classic through
-              every upgrade since 2016 — the ETC Cooperative, Grayscale, and
-              the broader development community — continues as active
-              participants in a system now open to every stakeholder worldwide.
+            <p className="mt-10 text-base leading-relaxed text-[var(--text-muted)]">
+              These three layers form the trust infrastructure that makes an
+              open protocol treasury viable at institutional scale. Audited
+              governance contracts enforce process integrity at every stage.
+              On-chain compliance gives exchanges, custodians, and investment
+              product issuers a verifiable path to participation. Public
+              prediction markets extend accountability beyond the membership
+              tier to any stakeholder willing to put capital behind their view.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-[var(--text-muted)]">
+              Together they establish something that has not existed before in
+              core blockchain development: a funding mechanism that is
+              simultaneously permissionless, publicly auditable, and compliant
+              with the standards that regulated institutions require. The
+              governance framework is the floor — what gets built on it is
+              open to every developer, institution, and stakeholder in the
+              network.
             </p>
           </FadeIn>
         </div>

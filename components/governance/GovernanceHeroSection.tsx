@@ -58,13 +58,13 @@ export function GovernanceHeroSection() {
           </div>
           <div className="mt-6">
             <a
-              href="https://app.olympiadao.org"
+              href="https://olympiadao.org"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
             >
-              Open the Olympia Governance App
-              <ArrowRight size={14} />
+              Visit the Olympia DAO
+              <ArrowRight size={14} aria-hidden="true" />
             </a>
           </div>
         </FadeIn>

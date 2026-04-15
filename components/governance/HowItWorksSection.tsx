@@ -133,7 +133,7 @@ function StepCard({
             </span>
           </div>
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
-            <step.icon size={16} className="text-[var(--brand-green)]" />
+            <step.icon size={16} aria-hidden="true" className="text-[var(--brand-green)]" />
           </div>
         </div>
         <div>
@@ -182,6 +182,17 @@ export function HowItWorksSection() {
                 ECIP-1119
               </span>
             </div>
+            <div className="mt-4">
+              <a
+                href="https://olympiadao.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+              >
+                View the Olympia DAO governance app
+                <ArrowRight size={14} aria-hidden="true" />
+              </a>
+            </div>
           </FadeIn>
 
           <div className="mt-10 space-y-6">
@@ -189,20 +200,6 @@ export function HowItWorksSection() {
               <StepCard key={step.title} step={step} delay={i * 80} />
             ))}
           </div>
-
-          <FadeIn>
-            <div className="mt-8">
-              <a
-                href="https://olympiadao.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
-              >
-                View the Olympia DAO Governance App
-                <ArrowRight size={14} />
-              </a>
-            </div>
-          </FadeIn>
 
           {/* Futarchy Markets */}
           <FadeIn>
@@ -233,6 +230,17 @@ export function HowItWorksSection() {
                 <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
                   ECIP-1118
                 </span>
+              </div>
+              <div className="mt-4">
+                <a
+                  href="https://olympiadao.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+                >
+                  View the Olympia DAO futarchy markets
+                  <ArrowRight size={14} aria-hidden="true" />
+                </a>
               </div>
             </div>
           </FadeIn>
@@ -266,6 +274,17 @@ export function HowItWorksSection() {
                 <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
                   Software Releases
                 </span>
+              </div>
+              <div className="mt-4">
+                <a
+                  href="https://github.com/ethereumclassic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+                >
+                  View Ethereum Classic client software releases
+                  <ArrowRight size={14} aria-hidden="true" />
+                </a>
               </div>
             </div>
           </FadeIn>

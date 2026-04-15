@@ -249,7 +249,7 @@ export function GovernanceProcessSection() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
                   >
-                    View the Olympia DAO Governance App
+                    View the Olympia DAO governance app
                     <ArrowRight size={14} aria-hidden="true" />
                   </a>
                 </div>
