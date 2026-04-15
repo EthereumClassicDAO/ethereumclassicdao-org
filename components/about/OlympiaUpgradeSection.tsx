@@ -6,16 +6,16 @@ export function OlympiaUpgradeSection() {
     <>
       <SectionDivider />
       <section
-        aria-labelledby="the-olympia-upgrade-heading"
+        aria-labelledby="olympia-overview-heading"
         className="section-gradient geo-circle relative py-28"
       >
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2
-              id="the-olympia-upgrade-heading"
+              id="olympia-overview-heading"
               className="text-3xl font-bold tracking-tight"
             >
-              The Olympia Upgrade
+              Olympia Overview
             </h2>
             <div className="mt-4 rounded-xl p-8 border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] space-y-4 text-base leading-relaxed text-[var(--text-secondary)]">
               <p>
