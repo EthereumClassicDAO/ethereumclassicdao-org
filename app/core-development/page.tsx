@@ -210,7 +210,7 @@ const upgrades: Upgrade[] = [
   },
   {
     name: "Thanos",
-    subtitle: "ETCHash + MESS",
+    subtitle: "ETChash + MESS",
     block: "Block 11,700,000",
     date: "2020-11-28",
     type: "etc-native",
@@ -221,9 +221,9 @@ const upgrades: Upgrade[] = [
       { name: "ECIP-1100", url: "https://ecips.ethereumclassic.org/ECIPs/ecip-1100" },
     ],
     eips: [],
-    keyChanges: ["ETCHash algorithm", "DAG growth reduction", "MESS finality mechanism", "GPU mining preserved", "All Ethash ASICs absorbed post-Merge"],
+    keyChanges: ["ETChash algorithm", "DAG growth reduction", "MESS finality mechanism", "GPU mining preserved", "All Ethash ASICs absorbed post-Merge"],
     description:
-      "Introduced ETCHash — a modified DAG growth algorithm keeping ETC mineable on GPU hardware — and MESS (Modified Exponential Subjective Scoring) for chain finality. Following Ethereum's Merge, ETC absorbed a significant portion of the global GPU mining network and every purpose-built Ethash ASIC miner — the only chain still running an ETChash-compatible algorithm.",
+      "Introduced ETChash — a modified DAG growth algorithm keeping ETC mineable on GPU hardware — and MESS (Modified Exponential Subjective Scoring) for chain finality. Following Ethereum's Merge, ETC absorbed a significant portion of the global GPU mining network and every purpose-built Ethash ASIC miner — the only chain still running an ETChash-compatible algorithm.",
     status: "complete",
   },
   {
@@ -342,7 +342,7 @@ export default function TimelinePage() {
   return (
     <main>
       <section className="hero-gradient noise-overlay relative pt-32 pb-20">
-        <div className="relative z-10 mx-auto max-w-4xl px-6">
+        <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
             <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
               ECIP-1066

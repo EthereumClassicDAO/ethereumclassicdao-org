@@ -9,6 +9,23 @@ export const metadata: Metadata = {
   title: "ETC Client Implementations — Fukuii and Core-Geth",
   description:
     "Independent Ethereum Classic client implementations. Fukuii (Scala) is the primary client for the Olympia era — purpose-built for ETC protocol stewardship. Core-Geth (Go) is actively maintained through Olympia. ETC plugins for Besu, Erigon, Go-Ethereum, and Nethermind are planned post-Olympia.",
+  keywords: [
+    "Fukuii",
+    "Core-Geth",
+    "Ethereum Classic client",
+    "ETC node",
+    "Scala blockchain client",
+    "Go Ethereum Classic",
+    "ETC full node",
+    "blockchain client implementation",
+    "SNAP sync",
+    "ETChash",
+    "Olympia node upgrade",
+    "ETC node operator",
+    "ETC RPC node",
+    "Mordor testnet client",
+    "ETC client software",
+  ],
 };
 
 const clients = [
@@ -80,7 +97,7 @@ export default async function ClientsPage() {
   return (
     <main>
       <section className="hero-gradient relative pt-32 pb-16">
-        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
+        <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
           <FadeIn>
             <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl">
               Client{" "}

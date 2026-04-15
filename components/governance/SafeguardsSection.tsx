@@ -29,7 +29,7 @@ export function SafeguardsSection() {
   return (
     <>
       <section aria-labelledby="safeguards-heading" className="section-gradient py-28">
-        <div className="mx-auto max-w-4xl px-6">
+        <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2 id="safeguards-heading" className="text-3xl font-bold tracking-tight">Safeguards</h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">

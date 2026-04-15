@@ -12,7 +12,7 @@ const audiences = [
     icon: Pickaxe,
     heading: "Miners",
     description:
-      "The only Proof-of-Work blockchain with native smart contracts. ETCHash supports both ASIC and GPU hardware, absorbing significant Ethereum mining infrastructure post-Merge. Contribute to the network's security budget and earn block rewards.",
+      "The only Proof-of-Work blockchain with native smart contracts. ETChash supports both ASIC and GPU hardware, absorbing significant Ethereum mining infrastructure post-Merge. Contribute to the network's security budget and earn block rewards.",
   },
   {
     icon: Landmark,

@@ -18,7 +18,7 @@ export function WhatWeDoSection() {
     },
     {
       question: "Hashrate Incentive Alignment",
-      answer: "Billions of dollars in globally distributed mining infrastructure secures Ethereum Classic, the largest Proof-of-Work smart contract platform. We ensure that the economics of mining ETC directly fund the protocol work that keeps the network worth mining. When ETC faced a wave of 51% attacks in 2020, we responded with the Thanos upgrade. When corporate interests attempted to change the mining algorithm ahead of The Merge in a way that would have disenfranchised the existing miner base, we held the line and protected ETCHash miners. We monitor network security continuously and serve as the active response layer when threats emerge. We are building the decentralized funding mechanisms that keep miner software current and PoW economically viable long-term. Domestic US mining operations are positioned under the Mined in America Act, aligned with our Wyoming DAO LLC registration and a decade of ETC core development.",
+      answer: "Billions of dollars in globally distributed mining infrastructure secures Ethereum Classic, the largest Proof-of-Work smart contract platform. We ensure that the economics of mining ETC directly fund the protocol work that keeps the network worth mining. When ETC faced a wave of 51% attacks in 2020, we responded with the Thanos upgrade. When corporate interests attempted to change the mining algorithm ahead of The Merge in a way that would have disenfranchised the existing miner base, we held the line and protected ETChash miners. We monitor network security continuously and serve as the active response layer when threats emerge. We are building the decentralized funding mechanisms that keep miner software current and PoW economically viable long-term. Domestic US mining operations are positioned under the Mined in America Act, aligned with our Wyoming DAO LLC registration and a decade of ETC core development.",
     },
     {
       question: "Global Regulatory Navigation",
@@ -30,7 +30,7 @@ export function WhatWeDoSection() {
     <>
       <SectionDivider />
       <section aria-labelledby="what-we-do-heading" className="section-deep py-28">
-        <div className="mx-auto max-w-3xl px-6">
+        <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2 id="what-we-do-heading" className="text-3xl font-bold tracking-tight">What We Do</h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">

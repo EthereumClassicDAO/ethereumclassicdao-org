@@ -13,6 +13,28 @@ export const metadata: Metadata = {
   title: "Build on Ethereum Classic — EVM Developer Ecosystem",
   description:
     "Full EVM compatibility on Ethereum Classic. Foundry, Hardhat, wagmi, viem, and ethers.js work without modification. Chain IDs: 61 (mainnet), 63 (Mordor testnet). GPU and ASIC mining. Institutional access via ETCG. The same toolchain used for Ethereum deploys to ETC after Olympia.",
+  keywords: [
+    "Ethereum Classic developer tools",
+    "EVM compatibility",
+    "Foundry ETC",
+    "Hardhat ETC",
+    "wagmi ETC",
+    "viem ETC",
+    "ethers.js ETC",
+    "chain ID 61",
+    "Mordor testnet",
+    "chain ID 63",
+    "ETC mining",
+    "ETChash",
+    "ASIC mining ETC",
+    "GPU mining ETC",
+    "ETCG",
+    "Grayscale ETC",
+    "Solidity ETC",
+    "EVM smart contracts",
+    "ETC RPC",
+    "deploy Ethereum Classic",
+  ],
 };
 
 export default function EcosystemPage() {

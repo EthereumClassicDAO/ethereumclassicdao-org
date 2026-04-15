@@ -152,7 +152,7 @@ export function HowItWorksSection() {
     <>
       <SectionDivider variant="strong" />
       <section aria-labelledby="binding-on-chain-protocol-governance-heading" className="section-deep py-28">
-        <div className="mx-auto max-w-4xl px-6">
+        <div className="mx-auto max-w-5xl px-6">
           {/* Core Development Governance */}
           <FadeIn>
             <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">

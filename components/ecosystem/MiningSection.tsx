@@ -117,7 +117,7 @@ export async function MiningSection() {
   ]);
   const stats = [
     { value: `${hashrateTHs.toFixed(1)}`, unit: "TH/s", label: "Network Hashrate" },
-    { value: "ETCHash", label: "Mining Algorithm" },
+    { value: "ETChash", label: "Mining Algorithm" },
     { value: "GPU + ASIC", label: "Compatible Hardware" },
   ];
 
@@ -196,7 +196,7 @@ export async function MiningSection() {
             <FadeIn>
               <h3 className="text-xl font-bold tracking-tight">Mining Equipment</h3>
               <p className="mt-2 text-sm text-[var(--text-muted)]">
-                ETCHash supports dedicated ASIC hardware and consumer GPU rigs,
+                ETChash supports dedicated ASIC hardware and consumer GPU rigs,
                 distributing hashrate across a broad base of independent
                 operators. ASIC efficiency enables commercial-scale operations;
                 GPU accessibility brings in global retail miners — together
@@ -240,7 +240,7 @@ export async function MiningSection() {
                 <h3 className="text-xl font-bold tracking-tight">Mining Pools</h3>
               </div>
               <p className="mt-2 text-sm text-[var(--text-muted)]">
-                Active ETCHash mining pools contributing to Ethereum Classic&apos;s
+                Active ETChash mining pools contributing to Ethereum Classic&apos;s
                 security budget. Pool selection affects expected earnings
                 variance, payout frequency, and infrastructure dependence.
                 Hashrate is estimated from recent block attribution — larger

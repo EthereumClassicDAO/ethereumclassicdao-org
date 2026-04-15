@@ -32,11 +32,13 @@ const thesisPoints: ThesisPoint[] = [
     number: "04",
     title: "Proven Track Record",
     body: "The original Ethereum Virtual Machine, running continuously since July 2015. Zero protocol-level failures. Immutable ledger. The longest continuously operating smart contract platform in production.",
+    link: { href: "/core-development", label: "Development Timeline →" },
   },
   {
     number: "05",
     title: "Deepest PoW Smart Contract Liquidity",
     body: "300+ exchanges across every time zone, GPU mining hardware accessible at retail, and institutional ASIC infrastructure. ETC/USD has operated as a continuous 24/7 spot market since 2016 — the longest-running fiat price discovery mechanism of any programmable blockchain. Fiat pairs span major currencies across the Americas, Europe, Asia-Pacific, the Middle East, and emerging markets.",
+    link: { href: "/ecosystem", label: "Ecosystem Overview →" },
   },
 ];
 
