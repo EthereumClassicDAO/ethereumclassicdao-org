@@ -34,17 +34,21 @@ export function Accordion({
         <div key={i}>
           <button
             onClick={() => toggle(i)}
+            aria-expanded={openSet.has(i)}
+            aria-controls={`accordion-panel-${i}`}
             className="flex w-full items-center justify-between py-5 text-left text-sm font-semibold transition-colors hover:text-[var(--text-primary)]"
           >
             {item.question}
             <ChevronDown
               size={16}
+              aria-hidden="true"
               className={`shrink-0 text-[var(--text-subtle)] transition-transform duration-200 ${
                 openSet.has(i) ? "rotate-180" : ""
               }`}
             />
           </button>
           <div
+            id={`accordion-panel-${i}`}
             className="grid transition-all duration-300"
             style={{
               gridTemplateRows: openSet.has(i) ? "1fr" : "0fr",

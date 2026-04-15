@@ -16,15 +16,21 @@ function DigitBox({ value, label }: { value: number; label: string }) {
 }
 
 export function ActivationCountdown() {
-  const [secondsLeft, setSecondsLeft] = useState<number>(() =>
-    Math.max(0, Math.floor((FALLBACK_TARGET_MS - Date.now()) / 1000))
-  );
+  // Initialize to 0 on server to avoid SSR/CSR hydration mismatch.
+  // On the client, compute fresh from Date.now() on each tick so the value
+  // stays accurate without calling setState synchronously in an effect body.
+  const [secondsLeft, setSecondsLeft] = useState<number>(0);
 
   useEffect(() => {
-    const id = setInterval(() => {
-      setSecondsLeft((prev) => (prev > 0 ? prev - 1 : 0));
-    }, 1000);
-    return () => clearInterval(id);
+    const update = () =>
+      setSecondsLeft(Math.max(0, Math.floor((FALLBACK_TARGET_MS - Date.now()) / 1000)));
+    // Populate on next tick (async) so the first frame shows a real value
+    const immediate = setTimeout(update, 0);
+    const id = setInterval(update, 1000);
+    return () => {
+      clearTimeout(immediate);
+      clearInterval(id);
+    };
   }, []);
 
   const days = Math.floor(secondsLeft / 86400);
@@ -33,8 +39,13 @@ export function ActivationCountdown() {
   const secs = secondsLeft % 60;
 
   return (
-    <div className="rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] p-6 text-center">
-      <div className="mb-4 flex justify-center gap-4">
+    <div
+      role="timer"
+      aria-label="Olympia mainnet activation countdown — activation block pending"
+      className="rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] p-6 text-center"
+    >
+      {/* aria-hidden: digits change every second and would be announced continuously by screen readers */}
+      <div aria-hidden="true" className="mb-4 flex justify-center gap-4">
         <DigitBox value={days} label="Days" />
         <DigitBox value={hours} label="Hours" />
         <DigitBox value={minutes} label="Minutes" />
@@ -44,7 +55,7 @@ export function ActivationCountdown() {
         * Countdown is set to January 1, 2027 until the ETC mainnet activation block is set
       </p>
       <div className="mb-2 flex items-center justify-center gap-2">
-        <span className="h-2 w-2 animate-pulse rounded-full bg-[var(--brand-green)]" />
+        <span aria-hidden="true" className="h-2 w-2 animate-pulse rounded-full bg-[var(--brand-green)]" />
         <span className="text-sm font-medium text-[var(--brand-green)]">Activation Block Pending</span>
       </div>
       <p className="text-sm text-[var(--text-muted)]">

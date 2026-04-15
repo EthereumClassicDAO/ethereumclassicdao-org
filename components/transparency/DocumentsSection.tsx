@@ -56,7 +56,7 @@ export function DocumentsSection() {
                       className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
                     >
                       View document
-                      <ExternalLink size={12} />
+                      <ExternalLink size={12} aria-hidden="true" />
                     </a>
                   </div>
                 ) : (

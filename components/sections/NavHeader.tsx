@@ -43,10 +43,10 @@ export function NavHeader() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--divider)] bg-[var(--bg-overlay)] backdrop-blur-md">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <nav aria-label="Main navigation" className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 shrink-0">
-          <Image src="/logo.svg" alt="" width={28} height={28} />
+        <Link href="/" aria-label="Ethereum Classic DAO — home" className="flex items-center gap-3 shrink-0">
+          <Image src="/logo.svg" alt="" width={28} height={28} aria-hidden="true" />
           <span className="text-sm font-semibold tracking-tight">
             Ethereum Classic DAO
           </span>
@@ -93,6 +93,7 @@ export function NavHeader() {
                   }}
                   aria-expanded={desktopOpen === group.label}
                   aria-haspopup="true"
+                  aria-controls={`desktop-menu-${group.label}`}
                 >
                   {group.label}
                   <ChevronDown
@@ -107,7 +108,7 @@ export function NavHeader() {
 
                 {desktopOpen === group.label && (
                   <div className="absolute left-0 top-full min-w-[180px] pt-1.5">
-                    <ul className="rounded-xl border border-[var(--divider)] bg-[var(--bg-overlay)] py-1.5 shadow-lg backdrop-blur-md list-none m-0 p-0">
+                    <ul id={`desktop-menu-${group.label}`} className="rounded-xl border border-[var(--divider)] bg-[var(--bg-overlay)] py-1.5 shadow-lg backdrop-blur-md list-none m-0 p-0">
                       {group.items.map((item) => (
                         <li key={item.href}>
                           <Link
@@ -145,6 +146,7 @@ export function NavHeader() {
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden"
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
         >
           {mobileOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>
@@ -192,6 +194,7 @@ export function NavHeader() {
                         ? "var(--text-primary)"
                         : "var(--text-muted)",
                     }}
+                    aria-expanded={mobileExpanded === group.label}
                   >
                     {group.label}
                     <ChevronDown

@@ -25,14 +25,14 @@ export function StewardshipSection() {
               className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
             >
               View the full protocol development timeline
-              <ArrowRight size={14} />
+              <ArrowRight size={14} aria-hidden="true" />
             </a>
           </FadeIn>
 
           <FadeIn delay={80}>
             <div className="mt-10 rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] p-8">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.12)]">
-                <Heart size={20} className="text-[var(--brand-green)]" />
+                <Heart size={20} aria-hidden="true" className="text-[var(--brand-green)]" />
               </div>
               <p className="mt-4 text-lg font-semibold">The ETC Cooperative</p>
               <p className="mt-1 text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">
@@ -119,7 +119,7 @@ export function StewardshipSection() {
                   className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
                 >
                   Learn more about the ETC Cooperative
-                  <ArrowRight size={14} />
+                  <ArrowRight size={14} aria-hidden="true" />
                 </a>
               </div>
             </div>
@@ -128,7 +128,7 @@ export function StewardshipSection() {
           <FadeIn delay={160}>
             <div className="mt-6 rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] p-8">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.12)]">
-                <Building2 size={20} className="text-[var(--brand-green)]" />
+                <Building2 size={20} aria-hidden="true" className="text-[var(--brand-green)]" />
               </div>
               <p className="mt-4 text-lg font-semibold">Grayscale Investments</p>
               <p className="mt-1 text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">
@@ -205,7 +205,7 @@ export function StewardshipSection() {
                   className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
                 >
                   View the Grayscale Ethereum Classic Trust
-                  <ArrowRight size={14} />
+                  <ArrowRight size={14} aria-hidden="true" />
                 </a>
               </div>
             </div>

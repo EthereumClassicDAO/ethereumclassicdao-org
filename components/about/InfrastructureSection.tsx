@@ -123,7 +123,7 @@ export async function InfrastructureSection() {
                 </p>
               </div>
               <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-[var(--brand-green)]/30 bg-[var(--brand-green)]/10 px-2.5 py-1 font-mono text-[10px] text-[var(--brand-green)]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" />
+                <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" />
                 Live
               </span>
             </div>
@@ -148,6 +148,7 @@ export async function InfrastructureSection() {
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                     <item.icon
                       size={20}
+                      aria-hidden="true"
                       className="text-[var(--brand-green)]"
                     />
                   </div>
@@ -163,7 +164,7 @@ export async function InfrastructureSection() {
             <FadeIn delay={infrastructure.length * 80} className="h-full">
               <div className="flex h-full gap-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
-                  <Pickaxe size={20} className="text-[var(--brand-green)]" />
+                  <Pickaxe size={20} aria-hidden="true" className="text-[var(--brand-green)]" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold">Mining Infrastructure</p>

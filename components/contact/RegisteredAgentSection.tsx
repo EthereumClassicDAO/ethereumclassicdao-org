@@ -57,6 +57,7 @@ export function RegisteredAgentSection() {
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                   <ch.icon
                     size={20}
+                    aria-hidden="true"
                     className="text-[var(--brand-green)]"
                   />
                 </div>
@@ -83,6 +84,7 @@ export function RegisteredAgentSection() {
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--border-subtle)]">
                 <FileText
                   size={20}
+                  aria-hidden="true"
                   className="text-[var(--text-subtle)]"
                 />
               </div>
@@ -101,7 +103,7 @@ export function RegisteredAgentSection() {
                   className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-[var(--text-subtle)] transition-colors hover:text-[var(--text-primary)]"
                 >
                   Wyoming Secretary of State Filing
-                  <ExternalLink size={12} />
+                  <ExternalLink size={12} aria-hidden="true" />
                 </a>
               </div>
             </div>

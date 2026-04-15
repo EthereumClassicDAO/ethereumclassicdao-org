@@ -15,6 +15,12 @@ export function FadeIn({
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    // Skip animation for users who prefer reduced motion
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const t = setTimeout(() => setVisible(true), 0);
+      return () => clearTimeout(t);
+    }
+
     const el = ref.current;
     if (!el) return;
 

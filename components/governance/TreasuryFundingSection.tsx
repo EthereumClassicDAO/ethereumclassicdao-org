@@ -168,7 +168,7 @@ export function TreasuryFundingSection() {
             <FadeIn delay={0}>
               <div className="flex h-full flex-col rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
-                  <Flame size={20} className="text-[var(--brand-green)]" />
+                  <Flame size={20} aria-hidden="true" className="text-[var(--brand-green)]" />
                 </div>
                 <p className="mt-4 text-sm font-semibold">Basefee Revenue</p>
                 <p className="mt-2 flex-1 text-xs leading-relaxed text-[var(--text-muted)]">
@@ -185,7 +185,7 @@ export function TreasuryFundingSection() {
             <FadeIn delay={80}>
               <div className="flex h-full flex-col rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
-                  <HandCoins size={20} className="text-[var(--brand-green)]" />
+                  <HandCoins size={20} aria-hidden="true" className="text-[var(--brand-green)]" />
                 </div>
                 <p className="mt-4 text-sm font-semibold">On-Chain Donations</p>
                 <p className="mt-2 flex-1 text-xs leading-relaxed text-[var(--text-muted)]">
@@ -202,7 +202,7 @@ export function TreasuryFundingSection() {
             <FadeIn delay={160}>
               <div className="flex h-full flex-col rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
-                  <Pickaxe size={20} className="text-[var(--brand-green)]" />
+                  <Pickaxe size={20} aria-hidden="true" className="text-[var(--brand-green)]" />
                 </div>
                 <p className="mt-4 text-sm font-semibold">Mining Contributions</p>
                 <p className="mt-2 flex-1 text-xs leading-relaxed text-[var(--text-muted)]">
@@ -238,6 +238,7 @@ export function TreasuryFundingSection() {
                         <div className="relative mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-[var(--border-strong)] bg-[var(--bg-elevated)]">
                           <step.icon
                             size={18}
+                            aria-hidden="true"
                             className="text-[var(--brand-green)]"
                           />
                         </div>
@@ -254,7 +255,7 @@ export function TreasuryFundingSection() {
                 {/* Feedback loop */}
                 <FadeIn delay={600}>
                   <div className="mt-6 flex items-center justify-center gap-2 rounded-lg border border-dashed border-[var(--divider)] py-3 px-4">
-                    <RotateCcw size={13} className="text-[var(--brand-green)]" />
+                    <RotateCcw size={13} aria-hidden="true" className="text-[var(--brand-green)]" />
                     <p className="text-xs text-[var(--text-subtle)]">
                       Futarchy markets generate transaction volume → additional basefee → treasury — self-reinforcing
                     </p>
@@ -271,6 +272,7 @@ export function TreasuryFundingSection() {
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--border-strong)] bg-[var(--bg-elevated)]">
                       <step.icon
                         size={16}
+                        aria-hidden="true"
                         className="text-[var(--brand-green)]"
                       />
                     </div>
@@ -285,7 +287,7 @@ export function TreasuryFundingSection() {
               ))}
               <FadeIn delay={500}>
                 <div className="flex items-start gap-3 rounded-lg border border-dashed border-[var(--divider)] p-3">
-                  <RotateCcw size={14} className="mt-0.5 shrink-0 text-[var(--brand-green)]" />
+                  <RotateCcw size={14} aria-hidden="true" className="mt-0.5 shrink-0 text-[var(--brand-green)]" />
                   <p className="text-xs text-[var(--text-subtle)]">
                     Futarchy markets generate basefee revenue that feeds back into the treasury — self-reinforcing
                   </p>
@@ -323,7 +325,7 @@ export function TreasuryFundingSection() {
                 <FadeIn key={s.name} delay={i * 80} className="h-full">
                   <div className="flex h-full gap-3 rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-4 transition-colors hover:border-[var(--border-glow)]">
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
-                      <s.icon size={16} className="text-[var(--brand-green)]" />
+                      <s.icon size={16} aria-hidden="true" className="text-[var(--brand-green)]" />
                     </div>
                     <div>
                       <p className="text-sm font-semibold">{s.name}</p>
@@ -346,7 +348,7 @@ export function TreasuryFundingSection() {
                 className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
               >
                 View the Olympia Treasury Dashboard
-                <ArrowRight size={14} />
+                <ArrowRight size={14} aria-hidden="true" />
               </a>
             </div>
           </FadeIn>
@@ -386,7 +388,7 @@ export function TreasuryFundingSection() {
               <FadeIn key={item.title} delay={i * 100} className="h-full">
                 <div className="h-full rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-6 transition-colors hover:border-[var(--border-glow)]">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
-                    <item.icon size={20} className="text-[var(--brand-green)]" />
+                    <item.icon size={20} aria-hidden="true" className="text-[var(--brand-green)]" />
                   </div>
                   <p className="mt-4 text-base font-semibold">{item.title}</p>
                   <span className="mt-1.5 inline-block rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">

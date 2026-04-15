@@ -60,7 +60,7 @@ export function EtcIntersectionSection() {
                 <div className="rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-6 h-full">
                   <div className="flex items-center gap-3">
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
-                      <col.icon size={16} className="text-[var(--brand-green)]" />
+                      <col.icon size={16} aria-hidden="true" className="text-[var(--brand-green)]" />
                     </div>
                     <div>
                       <p className="text-sm font-semibold">{col.heading}</p>
