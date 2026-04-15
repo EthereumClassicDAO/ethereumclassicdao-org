@@ -133,9 +133,9 @@ export function TreasuryFundingSection() {
               Treasury Funding
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              The Olympia Treasury is funded by the basefee revenue that
-              EIP-1559 already removes from miner rewards on every
-              transaction. Block rewards and tips go entirely to miners
+              The Olympia Treasury is funded by basefee revenue — the
+              portion of every transaction fee that was set to be
+              destroyed under EIP-1559. Block rewards and tips go entirely to miners
               unchanged. No new issuance, no tax on mining income, no
               inflation. The treasury grows proportionally with network
               activity: more transactions, more basefee, more development
