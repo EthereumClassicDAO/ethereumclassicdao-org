@@ -20,7 +20,7 @@ const SITE_URL = "https://ethereumclassicdao.org";
 const TITLE =
   "Ethereum Classic DAO — Building Software & Infrastructure for Global Adoption of Ethereum Classic";
 const DESCRIPTION =
-  "Ethereum Classic DAO LLC builds the software and infrastructure for global adoption of Ethereum Classic, the only Proof-of-Work blockchain with full EVM compatibility. Classified as a digital commodity under the CLARITY Act, a decentralized asset under MiCA, and a recognized crypto-asset on Japan's FSA Green List. Core client development, ecosystem infrastructure, and regulated stablecoin platform positioning under the GENIUS Act.";
+  "Ethereum Classic DAO LLC builds the software and infrastructure for global adoption of Ethereum Classic — the only Proof-of-Work blockchain with native Fusaka EVM smart contracts. The Olympia upgrade delivers full EVM alignment: Foundry, Hardhat, wagmi, and every Ethereum tool works on ETC without modification. Classified as a digital commodity under the CLARITY Act, a decentralized asset under MiCA, and a recognized crypto-asset on Japan's FSA Green List.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

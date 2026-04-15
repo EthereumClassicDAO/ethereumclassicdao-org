@@ -35,7 +35,7 @@ export function DocumentsSection() {
     <>
       <SectionDivider />
       <section aria-labelledby="documents-heading" className="section-gradient py-20">
-        <div className="mx-auto max-w-3xl px-6">
+        <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2 id="documents-heading" className="text-xl font-bold">Documents</h2>
           </FadeIn>

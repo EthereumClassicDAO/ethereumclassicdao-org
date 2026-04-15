@@ -2,24 +2,26 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { OlympiaUpgradeSection } from "@/components/about/OlympiaUpgradeSection";
 import { RoadmapSection } from "@/components/about/RoadmapSection";
+import { PropertiesSection } from "@/components/ecosystem/PropertiesSection";
 import { ActivationCountdown } from "@/components/ui/ActivationCountdown";
 import { ExternalLink, CheckCircle2, Flame, Landmark, Cpu, Layers, Code2, ShieldCheck } from "lucide-react";
 import { Accordion } from "@/components/ui/Accordion";
 
 export const metadata: Metadata = {
-  title: "Olympia Upgrade: EIP-1559, Protocol Treasury, and Fusaka EVM Alignment for Ethereum Classic",
+  title: "Olympia Upgrade: Fusaka EVM Alignment, EIP-1559 Fee Market, and Protocol Treasury for Ethereum Classic",
   description:
-    "Olympia is Ethereum Classic's most significant protocol upgrade. Adds EIP-1559 fee market, a protocol-controlled treasury for open-source core development, and full Fusaka EVM alignment including Dencun, Pectra, and Fusaka, positioning ETC as the Proof-of-Work infrastructure layer for institutional and sovereign adoption. Node upgrade guides for Fukuii and Core-Geth.",
+    "Olympia is Ethereum Classic's most significant protocol upgrade. Full Fusaka EVM alignment closes years of tooling divergence — Foundry, Hardhat, wagmi, viem, and ethers.js work on ETC without modification. EIP-1559 fee market redirects the basefee to a protocol-managed treasury, funding open-source core development without foundation dependency. Node upgrade guides for Fukuii and Core-Geth.",
   keywords: [
     "Olympia upgrade",
     "Ethereum Classic upgrade",
+    "Fusaka EVM",
+    "EVM alignment",
+    "ECIP-1121",
     "EIP-1559",
     "ECIP-1111",
     "ECIP-1112",
-    "ECIP-1121",
-    "Fusaka EVM",
-    "EVM alignment",
     "protocol treasury",
     "Ethereum Classic node upgrade",
     "Fukuii",
@@ -32,6 +34,10 @@ export const metadata: Metadata = {
     "Cancun",
     "EVM upgrade",
     "Solidity compatibility",
+    "Foundry ETC",
+    "Hardhat ETC",
+    "wagmi ETC",
+    "viem ETC",
     "EIP-7702",
     "EIP-2537",
     "BLS12-381",
@@ -226,31 +232,35 @@ export default function UpgradePage() {
     <main>
       {/* Hero */}
       <section className="hero-gradient relative pt-32 pb-16">
-        <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
+        <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl">
-              Olympia{" "}
-              <span className="text-[var(--brand-green)]">Upgrade</span>
+            <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
+              Olympia
+            </p>
+            <h1 className="mt-4 mb-4 text-4xl font-bold tracking-tight md:text-5xl">
+              The{" "}
+              <span className="text-[var(--brand-green)]">Olympia</span>{" "}
+              Upgrade
             </h1>
           </FadeIn>
           <FadeIn delay={100}>
-            <p className="mx-auto max-w-3xl text-lg text-[var(--text-muted)]">
-              The Olympia era marks a shift from reactive maintenance to active
-              development on the longest-running EVM and the only Proof-of-Work
-              smart contract platform in the world.
+            <p className="text-lg text-[var(--text-muted)]">
+              Olympia delivers three protocol changes in a single activation on
+              the longest-running EVM and the only Proof-of-Work smart contract
+              platform in the world.
             </p>
-            <ul className="mx-auto mt-6 max-w-3xl space-y-3 text-left text-sm text-[var(--text-muted)]">
+            <ul className="mt-6 space-y-3 text-left text-sm text-[var(--text-muted)]">
               <li className="flex gap-3">
                 <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
-                <span><span className="font-semibold text-white">EIP-1559 fee market:</span> fee market parity with Ethereum — predictable base fees, type 2 transaction support, and the tooling compatibility the entire EVM ecosystem assumes. Unlike Ethereum where the basefee is burned, ETC redirects it to the protocol treasury</span>
+                <span><span className="font-semibold text-white">Fusaka EVM alignment:</span> the headline change &mdash; closes years of execution-layer divergence from Ethereum in a single fork. Every Solidity compiler version, every deployment tool (Foundry, Hardhat), and every major library (wagmi, viem, ethers.js) works on ETC without modification, patching, or ETC-specific overrides. One codebase, every EVM chain. ETC could not credibly claim this before Olympia. After Olympia, it can.</span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
-                <span><span className="font-semibold text-white">Protocol treasury:</span> seeded by basefee revenue and voluntary contributions, funding open-source core development, infrastructure, and long-term network security</span>
+                <span><span className="font-semibold text-white">EIP-1559 fee market:</span> predictable base fees, type 2 transaction support, and the fee market parity the entire EVM ecosystem assumes. Unlike Ethereum where the basefee is burned, ETC redirects it to the protocol treasury &mdash; funding open-source core development without any foundation or donor dependency</span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
-                <span><span className="font-semibold text-white">Fusaka EVM alignment:</span> closes years of divergence in a single upgrade, so every current Ethereum tool, library, and framework works on ETC without modification</span>
+                <span><span className="font-semibold text-white">Protocol treasury:</span> seeded by basefee revenue and voluntary contributions, governed on-chain by the Olympia DAO, funding core development, infrastructure, and long-term network security. Block rewards and tips remain completely untouched and go entirely to miners</span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
@@ -458,6 +468,11 @@ export default function UpgradePage() {
         </div>
       </section>
 
+      {/* Olympia Upgrade */}
+      <OlympiaUpgradeSection />
+
+      <PropertiesSection />
+
       {/* Roadmap */}
       <RoadmapSection />
 
@@ -552,11 +567,9 @@ export default function UpgradePage() {
         </div>
       </section>
 
-      <SectionDivider />
-
       {/* FAQ */}
       <section className="section-gradient py-16 px-6">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-5xl">
           <FadeIn>
             <h2 className="mb-2 text-2xl font-bold tracking-tight">
               Frequently Asked Questions
@@ -570,6 +583,24 @@ export default function UpgradePage() {
           </FadeIn>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqItems.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+              },
+            })),
+          }),
+        }}
+      />
     </main>
   );
 }

@@ -33,7 +33,7 @@ export function ETCDecentralizationSection() {
   return (
     <>
       <SectionDivider />
-      <section aria-labelledby="why-decentralization-is-the-regulatory-advantage-heading" className="section-gradient relative py-28">
+      <section aria-labelledby="why-decentralization-is-the-regulatory-advantage-heading" className="section-alt relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2 id="why-decentralization-is-the-regulatory-advantage-heading" className="text-3xl font-bold tracking-tight">

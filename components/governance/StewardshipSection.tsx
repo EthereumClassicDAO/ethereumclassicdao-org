@@ -7,7 +7,7 @@ export function StewardshipSection() {
     <>
       <SectionDivider />
       <section aria-labelledby="built-on-a-decade-of-commitment-heading" className="section-gradient py-28">
-        <div className="mx-auto max-w-4xl px-6">
+        <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
             <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
               Institutional Stewardship

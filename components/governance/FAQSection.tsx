@@ -101,7 +101,7 @@ export function FAQSection() {
     <>
       <SectionDivider />
       <section aria-labelledby="frequently-asked-questions-heading" className="section-gradient py-28">
-        <div className="mx-auto max-w-3xl px-6">
+        <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2 id="frequently-asked-questions-heading" className="text-3xl font-bold tracking-tight">
               Frequently Asked Questions

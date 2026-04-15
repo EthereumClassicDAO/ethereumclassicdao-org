@@ -222,7 +222,7 @@ Ethereum Classic mainnet upgrades from genesis through Olympia (sourced from ECI
 9. **Atlantis / Byzantium** (Block 8,772,000, 2019-09-12) — ECIP-1054. ZK precompiles, REVERT opcode, receipt status.
 10. **Agharta / Constantinople** (Block 9,583,000, 2020-01-11) — ECIP-1056. Bitwise shift, CREATE2, EXTCODEHASH.
 11. **Phoenix / Istanbul** (Block 10,500,839, 2020-06-01) — ECIP-1088. BLAKE2 precompile, CHAINID opcode.
-12. **Thanos / ETCHash + MESS** (Block 11,700,000, 2020-11-28) — ECIP-1099, ECIP-1100. ETCHash algorithm, MESS finality.
+12. **Thanos / ETChash + MESS** (Block 11,700,000, 2020-11-28) — ECIP-1099, ECIP-1100. ETChash algorithm, MESS finality.
 13. **Magneto / Berlin** (Block 13,189,133, 2021-07-23) — ECIP-1103. Typed transactions, access lists, cold storage repricing.
 14. **Mystique / London (partial)** (Block 14,525,000, 2022-02-12) — ECIP-1104. Gas refund reduction, 0xEF prefix reserved.
 15. **Spiral / Shanghai** (Block 19,250,000, 2024-02-04) — ECIP-1109. PUSH0, warm COINBASE, initcode limit.
