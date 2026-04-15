@@ -56,20 +56,23 @@ const ecips = [
     icon: Flame,
     description:
       "Unlike Ethereum where the basefee is burned, ETC redirects it to the protocol treasury — the mechanism that funds open-source core development without any foundation or donor dependency. Dynamic gas pricing delivers predictable fees for users and applications. Fully additive: legacy transactions remain valid indefinitely. Miner block rewards and tips remain completely untouched.",
+    tags: ["London"],
   },
   {
     ecip: "ECIP-1112",
     title: "Protocol Treasury",
     icon: Landmark,
     description:
-      "A protocol-controlled vault funded by basefee revenue and voluntary contributions. For the first time, institutions, developers, and network stakeholders can directly fund Ethereum Classic's core development and critical infrastructure without fielding their own team. Miners receive everything they do today: block rewards and tips remain completely untouched.",
+      "A protocol-controlled vault funded by basefee revenue and voluntary contributions — delivering on the treasury model first identified during the 2022 Mystique upgrade, when EIP-1559 was deferred pending a decision on where the basefee should flow. For the first time, institutions, developers, and network stakeholders can directly fund Ethereum Classic's core development and critical infrastructure without fielding their own team. Miners receive everything they do today: block rewards and tips remain completely untouched.",
+    tags: ["Mystique", "ETC Native"],
   },
   {
     ecip: "ECIP-1121",
     title: "Fusaka EVM Alignment",
     icon: Cpu,
     description:
-      "Building on Mystique and Spiral, Olympia delivers the remaining EVM execution-layer improvements from Dencun, Pectra, and Fusaka, covering every improvement that is independent of Proof-of-Stake and blob data availability. Exchanges and wallets gain modern RPC compatibility and standard transaction support. Developers gain full access to every current Ethereum tool, library, and framework. One codebase, every EVM chain.",
+      "Building on Mystique and Spiral, ECIP-1121 fills the remaining Shanghai gaps from Spiral's partial implementation and delivers the full execution-layer improvements from Dencun, Pectra, and Fusaka — covering every improvement independent of Proof-of-Stake and blob data availability. Developers gain full access to every current Ethereum tool, library, and framework. One codebase, every EVM chain.",
+    tags: ["Shanghai", "Dencun", "Pectra", "Fusaka"],
   },
 ];
 
@@ -133,12 +136,12 @@ const faqItems = [
   {
     question: "What does EVM alignment to Fusaka actually mean for builders?",
     answer:
-      "ECIP-1121 closes years of EVM divergence in a single upgrade, delivering every execution-layer improvement from Dencun, Pectra, and Fusaka that is independent of Proof-of-Stake and blob data availability. Before Olympia, ETC lagged behind on these EIPs, creating real friction for developers deploying across EVM chains. After Olympia, Solidity 0.8.x, Foundry, Hardhat, wagmi, viem, and ethers.js all work on ETC without modification, patching, or ETC-specific overrides. One codebase deploys to every EVM chain. ETC could not credibly claim full tooling compatibility before Olympia. After Olympia, it can.",
+      "ECIP-1121 closes years of EVM divergence in a single upgrade, filling the remaining Shanghai gaps from Spiral's partial implementation and delivering every execution-layer improvement from Dencun, Pectra, and Fusaka that is independent of Proof-of-Stake and blob data availability. Before Olympia, ETC lagged behind on these EIPs, creating real friction for developers deploying across EVM chains. After Olympia, Solidity 0.8.x, Foundry, Hardhat, wagmi, viem, and ethers.js all work on ETC without modification, patching, or ETC-specific overrides. One codebase deploys to every EVM chain. ETC could not credibly claim full tooling compatibility before Olympia. After Olympia, it can.",
   },
   {
     question: "How does the protocol treasury work?",
     answer:
-      "The Olympia Treasury is funded by EIP-1559 basefee revenue, voluntary on-chain donations, and mining rewards directed to the treasury address. Block rewards and tips remain completely untouched and go entirely to miners. Futarchy prediction market activity generates additional transaction volume that flows back into the treasury as basefee revenue. Any stakeholder, whether exchanges, custodians, miners, investment product issuers, or institutions holding ETC on behalf of fund shareholders, can contribute directly on-chain with no overhead. Stakeholders who prefer a traditional giving model can contribute through the ETC Cooperative, a US 501(c)(3) non-profit that accepts tax-deductible donations.",
+      "The Olympia Treasury is funded by EIP-1559 basefee revenue and voluntary on-chain donations. Block rewards and tips remain completely untouched and go entirely to miners. Futarchy prediction market activity generates additional transaction volume that flows back into the treasury as basefee revenue. Any stakeholder, whether exchanges, custodians, miners, investment product issuers, or institutions holding ETC on behalf of fund shareholders, can contribute directly on-chain with no overhead. Stakeholders who prefer a traditional giving model can contribute through the ETC Cooperative, a US 501(c)(3) non-profit that accepts tax-deductible donations.",
   },
   {
     question: "How was Olympia tested before mainnet?",
@@ -319,7 +322,7 @@ export default function UpgradePage() {
               const Icon = item.icon;
               return (
                 <FadeIn key={item.ecip} delay={i * 80} className="h-full">
-                  <div className="h-full rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-6">
+                  <div className="flex h-full flex-col rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-6">
                     <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
                       <Icon size={20} className="text-[var(--brand-green)]" />
                     </div>
@@ -327,9 +330,23 @@ export default function UpgradePage() {
                       {item.ecip}
                     </p>
                     <h3 className="mt-1 text-base font-semibold">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--text-muted)]">
                       {item.description}
                     </p>
+                    <div className="mt-4 flex flex-wrap gap-1.5">
+                      {item.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className={
+                            tag === "ETC Native" || tag === "Mystique"
+                              ? "rounded-full border border-[#00ffae]/30 bg-[#00ffae]/10 px-2.5 py-0.5 font-mono text-[10px] text-[#00ffae]"
+                              : "rounded-full border border-violet-500/20 bg-violet-500/10 px-2.5 py-0.5 font-mono text-[10px] text-violet-400"
+                          }
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </FadeIn>
               );
@@ -392,9 +409,8 @@ export default function UpgradePage() {
           {/* Divergence callout */}
           <FadeIn delay={120}>
             <div className="mb-8 rounded-xl border border-[rgba(0,255,174,0.3)] bg-[rgba(0,255,174,0.05)] p-5 text-sm text-[var(--text-muted)]">
-              <span className="font-semibold text-white">ETC context: </span>
               Ethereum Classic implemented partial London EIPs in Mystique (2022) and partial Shanghai EIPs in Spiral (2024), deliberately deferring the EIP-1559 fee market for independent governance design.
-              ECIP-1111 now delivers those deferred London EIPs. ECIP-1121 advances the execution layer through Dencun, Pectra, and Fusaka, covering every EVM improvement that is independent of Proof-of-Stake and blob data availability.
+              ECIP-1111 delivers the deferred London fee market EIPs. ECIP-1121 fills the remaining Shanghai gaps from Spiral&rsquo;s partial implementation and advances the execution layer through Dencun, Pectra, and Fusaka, covering every EVM improvement that is independent of Proof-of-Stake and blob data availability.
               Together, Olympia brings ETC to full Fusaka execution-layer parity.
             </div>
           </FadeIn>
@@ -435,7 +451,7 @@ export default function UpgradePage() {
           {/* Blobs excluded note */}
           <FadeIn delay={160}>
             <p className="mb-8 text-xs text-[var(--text-muted)] italic">
-              Explicitly excluded: all blob-dependent EIPs (
+              Blob data scaling deferred: (
               {["EIP-4844", "EIP-7516", "EIP-7691"].map((eip, i, arr) => (
                 <span key={eip}>
                   <a
@@ -449,13 +465,19 @@ export default function UpgradePage() {
                   {i < arr.length - 1 && ", "}
                 </span>
               ))}
-              ). Ethereum Classic is a pure Layer 1 execution chain with no data availability requirement: blobs are L2 scaffolding ETC does not need.
+              ) are deferred. Blob-based data availability is an L2 scaling approach — Ethereum Classic is a pure execution layer and does not require it at this time. Proof-of-Stake consensus changes are not applicable: Ethereum Classic is committed to Proof-of-Work long term.
             </p>
           </FadeIn>
 
           {/* Developer tooling */}
           <FadeIn delay={200}>
-            <h3 className="mb-4 text-base font-semibold">Developer Tooling: Works Without Modification</h3>
+            <div className="mb-4 flex flex-wrap items-center gap-3">
+              <h3 className="text-base font-semibold">Developer Tooling: Works Without Modification</h3>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#00ffae]/30 bg-[#00ffae]/10 px-3 py-0.5 text-xs font-medium text-[#00ffae]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#00ffae]" />
+                Modern LTS Stack
+              </span>
+            </div>
             <div className="grid gap-4 sm:grid-cols-3">
               {devTools.map((tool) => (
                 <div key={tool.name} className="h-full rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-4">

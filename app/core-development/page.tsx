@@ -265,7 +265,7 @@ const upgrades: Upgrade[] = [
     eips: ["EIP-3651", "EIP-3855", "EIP-3860", "EIP-6049"],
     keyChanges: ["Warm COINBASE access", "PUSH0 opcode", "Initcode size limit", "SELFDESTRUCT deprecation notice"],
     description:
-      "Shanghai parity, excluding Proof-of-Stake validator withdrawals not applicable to Ethereum Classic. Warm COINBASE access, PUSH0 opcode, and initcode size limit. The most recently completed ETC network upgrade.",
+      "Partial Shanghai parity, excluding Proof-of-Stake validator withdrawals not applicable to Ethereum Classic. Warm COINBASE access, PUSH0 opcode, and initcode size limit. Remaining Shanghai gaps are filled by the Olympia upgrade.",
     status: "complete",
   },
   {

@@ -25,23 +25,42 @@ export function OlympiaUpgradeSection() {
                 treasury.
               </p>
               <p>
-                The headline change is full Fusaka EVM parity &mdash; closing
-                years of execution-layer divergence from Ethereum in a single
-                fork. Every Solidity compiler version, every deployment tool
-                (Foundry, Hardhat), and every major library (wagmi, viem,
-                ethers.js) works on ETC without modification, patching, or
-                ETC-specific overrides. One codebase deploys to every EVM
-                chain. ETC could not credibly claim this before Olympia.
-                After Olympia, it can.
+                The EVM alignment is the most technically expansive change.
+                Ethereum Classic implemented partial London EIPs in Mystique
+                (2022) and partial Shanghai EIPs in Spiral (2024), each time
+                deferring the changes tied to Proof-of-Stake or requiring
+                independent design work. Olympia completes that arc in a
+                single upgrade boundary: ECIP-1111 delivers the London fee
+                market deferred by Mystique, and ECIP-1121 fills the
+                remaining Shanghai gaps from Spiral and advances through
+                Dencun, Pectra, and Fusaka. Every Solidity compiler version,
+                every deployment tool (Foundry, Hardhat), and every major
+                library (wagmi, viem, ethers.js) works on ETC without
+                modification or ETC-specific overrides.
               </p>
               <p>
-                The EIP-1559 fee market redirects the basefee &mdash; value
-                that would otherwise be destroyed &mdash; to a
-                protocol-managed treasury. Block rewards and tips remain
-                completely untouched and go entirely to miners. Anyone can
-                submit proposals on-chain. Members vote on resource allocation
-                and execute decisions. Every step is transparent and
-                verifiable on-chain.
+                <strong>One codebase deploys to every EVM chain.</strong>
+              </p>
+              <p>
+                Ethereum Classic gains immediate access to the full depth of
+                the EVM developer ecosystem &mdash; the tooling, the
+                infrastructure, the libraries, and the developer base already
+                built around it &mdash; <strong>without friction or custom onboarding.</strong>
+              </p>
+              <p>
+                The EIP-1559 fee market delivers on a decision first reached
+                in 2022: during the Mystique upgrade, ETC developers deferred
+                the basefee mechanism to resolve where the basefee should
+                flow. The answer &mdash; a protocol treasury rather than
+                burning &mdash; was identified then and is formalized now.
+                The basefee, value that would otherwise be destroyed,
+                is redirected to a protocol-managed vault. Block rewards
+                and tips remain completely untouched and go entirely to
+                miners. Governance over that treasury is on-chain, open to
+                any ETC account, and verifiable at every step.
+              </p>
+              <p>
+                <strong>The first protocol-native funding model in Ethereum Classic&rsquo;s history &mdash; no foundation or donor dependency.</strong>
               </p>
             </div>
           </FadeIn>
