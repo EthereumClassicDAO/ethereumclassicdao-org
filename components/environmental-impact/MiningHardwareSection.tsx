@@ -37,9 +37,9 @@ export function MiningHardwareSection() {
                   GPU Mining: Retail Accessible
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
-                  AMD and NVIDIA GPUs are available at consumer electronics
-                  stores globally. Any individual with a gaming PC can
-                  participate in ETC network security. This is what
+                  AMD, NVIDIA, and Intel GPUs are available at consumer
+                  electronics stores globally. Any individual with a gaming PC
+                  can participate in ETC network security. This is what
                   &ldquo;permissionless&rdquo; means at the hardware layer:
                   truly accessible to anyone, in any jurisdiction, without
                   specialist procurement.
