@@ -107,13 +107,13 @@ export default async function ClientsPage() {
             </h1>
           </FadeIn>
           <FadeIn delay={100}>
-            <p className="mt-4 max-w-2xl text-lg text-[var(--text-muted)]">
+            <p className="mt-4 text-lg text-[var(--text-muted)]">
               Multi-client architecture following best practices in client execution
               and enterprise-grade features.
             </p>
           </FadeIn>
           <FadeIn delay={180}>
-            <div className="mt-8 max-w-2xl">
+            <div className="mt-8">
               <div className="mb-3 flex items-end gap-3">
                 <p className="text-3xl font-bold font-mono text-[var(--brand-green)]">
                   {hashrateTHs.toFixed(1)}{" "}
