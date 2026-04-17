@@ -7,12 +7,12 @@
    ========================================== */
 
 :root {
-  /* Brand — light mode uses darker shade for WCAG AA on white */
-  --brand-green: #00a87a;
-  --brand-green-hover: #009e72;
-  --brand-green-active: #008c64;
-  --brand-green-muted: #007a53;
-  --brand-green-subtle: rgba(0, 168, 122, 0.08);
+  /* Brand — light mode uses darker shade for WCAG AA on white (5.4:1 contrast) */
+  --brand-green: #007a53;
+  --brand-green-hover: #006644;
+  --brand-green-active: #005238;
+  --brand-green-muted: #004d30;
+  --brand-green-subtle: rgba(0, 122, 83, 0.08);
 
   /* Light mode backgrounds */
   --background: #f8faf9;
@@ -37,8 +37,8 @@
   --border-default: #e2e8f0;
   --border-subtle: rgba(0, 0, 0, 0.04);
   --border-strong: rgba(0, 0, 0, 0.16);
-  --border-brand: rgba(0, 168, 122, 0.3);
-  --border-glow: rgba(0, 168, 122, 0.15);
+  --border-brand: rgba(0, 122, 83, 0.25);
+  --border-glow: rgba(0, 122, 83, 0.12);
   --divider: rgba(0, 0, 0, 0.06);
 
   /* Semantic */
@@ -140,12 +140,12 @@ body {
   background:
     radial-gradient(
       ellipse 120% 60% at 50% -30%,
-      rgba(0, 168, 122, 0.06) 0%,
+      rgba(0, 122, 83, 0.06) 0%,
       transparent 60%
     ),
     radial-gradient(
       ellipse 80% 40% at 20% 20%,
-      rgba(0, 168, 122, 0.03) 0%,
+      rgba(0, 122, 83, 0.03) 0%,
       transparent 50%
     ),
     radial-gradient(
@@ -182,12 +182,12 @@ body {
   background:
     radial-gradient(
       ellipse 120% 60% at 50% -30%,
-      rgba(0, 168, 122, 0.04) 0%,
+      rgba(0, 122, 83, 0.04) 0%,
       transparent 60%
     ),
     radial-gradient(
       ellipse 80% 40% at 20% 20%,
-      rgba(0, 168, 122, 0.02) 0%,
+      rgba(0, 122, 83, 0.02) 0%,
       transparent 50%
     ),
     linear-gradient(180deg, var(--background) 0%, var(--bg-surface) 40%, var(--background) 100%);
@@ -261,7 +261,7 @@ body {
   background:
     radial-gradient(
       ellipse 100% 80% at 50% 100%,
-      rgba(0, 168, 122, 0.03) 0%,
+      rgba(0, 122, 83, 0.03) 0%,
       transparent 60%
     ),
     linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-elevated) 50%, var(--bg-surface) 100%);

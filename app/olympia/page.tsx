@@ -339,7 +339,7 @@ export default function UpgradePage() {
                           key={tag}
                           className={
                             tag === "ETC Native" || tag === "Mystique"
-                              ? "rounded-full border border-[#00ffae]/30 bg-[#00ffae]/10 px-2.5 py-0.5 font-mono text-[10px] text-[#00ffae]"
+                              ? "rounded-full border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] px-2.5 py-0.5 font-mono text-[10px] text-[var(--brand-green)]"
                               : "rounded-full border border-violet-500/20 bg-violet-500/10 px-2.5 py-0.5 font-mono text-[10px] text-violet-400"
                           }
                         >
@@ -373,14 +373,14 @@ export default function UpgradePage() {
           {/* Fork Timeline */}
           <FadeIn delay={80}>
             <div className="mb-8 relative">
-              <div className="hidden md:block absolute top-[22px] left-[calc(16.67%-1px)] right-[calc(16.67%-1px)] h-px bg-[rgba(0,255,174,0.3)]" />
+              <div className="hidden md:block absolute top-[22px] left-[calc(16.67%-1px)] right-[calc(16.67%-1px)] h-px bg-[var(--border-brand)]" />
               <div className="flex flex-col md:flex-row gap-6 md:gap-0 md:justify-between">
                 {forkTimeline.map((fork, i) => (
                   <div key={fork.name} className="relative flex md:flex-col md:items-center md:w-1/3 gap-4 md:gap-0">
                     {i < forkTimeline.length - 1 && (
-                      <div className="md:hidden absolute left-[17px] top-[38px] bottom-[-22px] w-px bg-[rgba(0,255,174,0.3)]" />
+                      <div className="md:hidden absolute left-[17px] top-[38px] bottom-[-22px] w-px bg-[var(--border-brand)]" />
                     )}
-                    <div className="shrink-0 flex h-9 w-9 items-center justify-center rounded-full border border-[rgba(0,255,174,0.4)] bg-[rgba(0,255,174,0.08)] font-mono text-xs font-bold text-[var(--brand-green)] relative z-10">
+                    <div className="shrink-0 flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] font-mono text-xs font-bold text-[var(--brand-green)] relative z-10">
                       {String(i + 1).padStart(2, "0")}
                     </div>
                     <div className="md:mt-4 md:text-center">
@@ -473,8 +473,8 @@ export default function UpgradePage() {
           <FadeIn delay={200}>
             <div className="mb-4 flex flex-wrap items-center gap-3">
               <h3 className="text-base font-semibold">Developer Tooling: Works Without Modification</h3>
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-[#00ffae]/30 bg-[#00ffae]/10 px-3 py-0.5 text-xs font-medium text-[#00ffae]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#00ffae]" />
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] px-3 py-0.5 text-xs font-medium text-[var(--brand-green)]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]" />
                 Modern LTS Stack
               </span>
             </div>
