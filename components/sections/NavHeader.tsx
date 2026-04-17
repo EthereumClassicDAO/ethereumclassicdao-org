@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Logo } from "@/components/ui/Logo";
 
 const topLinks = [
   { label: "About", href: "/about" },
@@ -46,7 +46,7 @@ export function NavHeader() {
       <nav aria-label="Main navigation" className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link href="/" aria-label="Ethereum Classic DAO — home" className="flex items-center gap-3 shrink-0">
-          <Image src="/logo.svg" alt="" width={28} height={28} aria-hidden="true" />
+          <Logo size={28} className="text-[var(--brand-green)]" />
           <span className="text-sm font-semibold tracking-tight">
             Ethereum Classic DAO
           </span>

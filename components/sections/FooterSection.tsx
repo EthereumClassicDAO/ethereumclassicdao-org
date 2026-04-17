@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { Logo } from "@/components/ui/Logo";
 
 interface FooterLink {
   label: string;
@@ -97,7 +97,7 @@ export function FooterSection() {
             {/* Brand column */}
             <div className="lg:col-span-1">
               <span className="flex items-center gap-2 text-sm font-semibold tracking-tight">
-                <Image src="/logo.svg" alt="" width={20} height={20} />
+                <Logo size={20} className="text-[var(--brand-green)]" />
                 ETC DAO
               </span>
               <div className="mt-4 flex items-center gap-3">
