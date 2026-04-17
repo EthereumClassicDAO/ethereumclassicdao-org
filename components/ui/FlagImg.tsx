@@ -22,8 +22,12 @@ const FLAG_MAP: Record<string, string> = {
   "🇮🇩": "1f1ee-1f1e9", // ID
   "🇳🇿": "1f1f3-1f1ff", // NZ
   "🇵🇱": "1f1f5-1f1f1", // PL
+  "🇨🇦": "1f1e8-1f1e6", // CA
+  "🇸🇪": "1f1f8-1f1ea", // SE
   "🌏": "1f30f", // Asia-Pacific globe
   "🌍": "1f30d", // Africa/Europe globe
+  "🌎": "1f30e", // Americas globe
+  "🌐": "1f310", // Global/network globe
 };
 
 interface Props {
