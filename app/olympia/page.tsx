@@ -255,19 +255,19 @@ export default function UpgradePage() {
             <ul className="mt-6 space-y-3 text-left text-sm text-[var(--text-muted)]">
               <li className="flex gap-3">
                 <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
-                <span><span className="font-semibold text-white">Fusaka EVM alignment:</span> the headline change &mdash; closes years of execution-layer divergence from Ethereum in a single fork. Every Solidity compiler version, every deployment tool (Foundry, Hardhat), and every major library (wagmi, viem, ethers.js) works on ETC without modification, patching, or ETC-specific overrides. One codebase, every EVM chain. ETC could not credibly claim this before Olympia. After Olympia, it can.</span>
+                <span><span className="font-semibold text-[var(--text-primary)]">Fusaka EVM alignment:</span> the headline change &mdash; closes years of execution-layer divergence from Ethereum in a single fork. Every Solidity compiler version, every deployment tool (Foundry, Hardhat), and every major library (wagmi, viem, ethers.js) works on ETC without modification, patching, or ETC-specific overrides. One codebase, every EVM chain. ETC could not credibly claim this before Olympia. After Olympia, it can.</span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
-                <span><span className="font-semibold text-white">EIP-1559 fee market:</span> predictable base fees, type 2 transaction support, and the fee market parity the entire EVM ecosystem assumes. Unlike Ethereum where the basefee is burned, ETC redirects it to the protocol treasury &mdash; funding open-source core development without any foundation or donor dependency</span>
+                <span><span className="font-semibold text-[var(--text-primary)]">EIP-1559 fee market:</span> predictable base fees, type 2 transaction support, and the fee market parity the entire EVM ecosystem assumes. Unlike Ethereum where the basefee is burned, ETC redirects it to the protocol treasury &mdash; funding open-source core development without any foundation or donor dependency</span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
-                <span><span className="font-semibold text-white">Protocol treasury:</span> seeded by basefee revenue and voluntary contributions, governed on-chain by the Olympia DAO, funding core development, infrastructure, and long-term network security. Block rewards and tips remain completely untouched and go entirely to miners</span>
+                <span><span className="font-semibold text-[var(--text-primary)]">Protocol treasury:</span> seeded by basefee revenue and voluntary contributions, governed on-chain by the Olympia DAO, funding core development, infrastructure, and long-term network security. Block rewards and tips remain completely untouched and go entirely to miners</span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-0.5 shrink-0 text-[var(--brand-green)]">—</span>
-                <span><span className="font-semibold text-white">Institutional infrastructure:</span> the Proof-of-Work foundation for regulated stablecoin issuance (<a href="https://classicusd.com" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">Classic USD</a>, MiCA and GENIUS Act-compliant), digital commodity classification under the CLARITY Act, and the broadest cross-jurisdictional institutional access profile of any Proof-of-Work smart contract network</span>
+                <span><span className="font-semibold text-[var(--text-primary)]">Institutional infrastructure:</span> the Proof-of-Work foundation for regulated stablecoin issuance (<a href="https://classicusd.com" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">Classic USD</a>, MiCA and GENIUS Act-compliant), digital commodity classification under the CLARITY Act, and the broadest cross-jurisdictional institutional access profile of any Proof-of-Work smart contract network</span>
               </li>
             </ul>
           </FadeIn>

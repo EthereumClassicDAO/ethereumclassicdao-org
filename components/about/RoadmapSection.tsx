@@ -6,11 +6,11 @@ const stages = [
     title: "Consensus Upgrades",
     status: "complete" as const,
     description:
-      "EIP-1559 fee market, protocol treasury funded by basefee revenue, and full Fusaka EVM parity in a single upgrade. Every Ethereum tool and framework works on ETC without modification.",
+      "Full Fusaka EVM parity in a single upgrade — every Ethereum tool and framework works on ETC without modification. EIP-1559 fee market and protocol treasury funded by basefee revenue complete the package.",
     deliverables: [
+      "Fusaka EVM parity: Dencun, Pectra, Fusaka EIPs (ECIP-1121)",
       "EIP-1559 fee market (ECIP-1111)",
       "Protocol treasury funded by basefee (ECIP-1112)",
-      "Fusaka EVM parity: Dencun, Pectra, Fusaka EIPs (ECIP-1121)",
     ],
   },
   {

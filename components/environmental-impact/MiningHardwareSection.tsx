@@ -100,9 +100,9 @@ export function MiningHardwareSection() {
 
           <FadeIn>
             <p className="mt-10 border-l-2 border-[var(--brand-green)] pl-4 text-sm text-[var(--text-muted)]">
-              No other smart contract platform has both retail GPU accessibility
-              and institutional ASIC infrastructure, giving ETC the widest
-              possible mining participation curve.
+              No other proof of work network or smart contract platform has both
+              retail GPU accessibility and institutional ASIC infrastructure,
+              giving ETC the widest possible mining participation curve.
             </p>
           </FadeIn>
 
