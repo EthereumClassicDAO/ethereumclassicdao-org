@@ -17,12 +17,13 @@ const stages = [
     title: "Core Governance",
     status: "active" as const,
     description:
-      "On-chain governance with membership-based voting and a full proposal lifecycle: submit, vote, queue, execute. Core development funding moves to an open, transparent, on-chain process. On-chain sanctions screening throughout the governance process. Any stakeholder — exchanges, custodians, miners, institutions, or individuals — can contribute directly on-chain or through the ETC Cooperative for tax-deductible donations.",
+      "Core development funding moves on-chain — open to any developer, infrastructure provider, or critical service operator worldwide. No private employment contracts. No prior relationships required.",
     deliverables: [
+      "Full proposal lifecycle: submit, vote, queue, execute",
       "Governance and treasury contracts with timelock execution",
-      "Membership-based voting with sanctions compliance",
-      "On-chain sanctions screening",
-      "Open proposal process with competitive bidding",
+      "Membership-based voting with on-chain sanctions screening",
+      "Open competitive bidding — any EVM developer or infrastructure provider can participate",
+      "Core developers, infrastructure providers, and critical services funded on merit",
       "Direct on-chain contributions and ETC Cooperative donation channel",
     ],
   },
@@ -30,32 +31,41 @@ const stages = [
     title: "Prediction Markets",
     status: "research" as const,
     description:
-      "Futarchy-assisted governance uses prediction markets to inform treasury allocation, providing financially-backed public signals alongside on-chain member votes.",
+      "Open prediction markets give any ETC holder a financial stake in monitoring protocol development — no membership required. Market activity generates basefee revenue that flows back into the treasury, creating a self-reinforcing loop between public participation and protocol funding.",
     deliverables: [
+      "Open to anyone with an ETC account — no membership required",
+      "Financially incentivizes the public to monitor and evaluate protocol proposals",
+      "Onboards new participants to ETC through active market engagement",
+      "Market activity generates basefee transactions — compounds the treasury flywheel",
       "Conditional outcome tokens",
-      "Market-informed proposal ranking",
-      "Open participation for any stakeholder",
+      "Market-informed proposal ranking alongside formal DAO votes",
+      "Accurate predictions earn financial rewards — holding governance accountable",
     ],
   },
   {
     title: "Treasury Distribution",
     status: "future" as const,
     description:
-      "Governance-controlled smoothing curve (ECIP-1115) optionally supplements miner security budgets as fixed-emission block subsidies decline, without touching consensus-layer rewards.",
+      "A smart contract smoothing curve is the only technically feasible way to supplement miner security budgets as fixed-emission block subsidies decline — without touching consensus-layer rewards. Implemented at the contract layer, parameters are adjustable through governance without a hard fork, making it uniquely modular. ECIP-1115 and ECIP-1017 are a complementary system: ECIP-1017's predictable 5M20 emission schedule defines the decline curve; ECIP-1115 lets the treasury respond to it dynamically.",
     deliverables: [
+      "Only technically feasible approach to smoothing — contract layer, no consensus changes",
       "Treasury smoothing algorithm (ECIP-1115)",
-      "Modeling through ECIP-1017 emission events",
-      "Parameters adjustable without a hard fork",
+      "Complements ECIP-1017's 5M20 emission schedule — treasury responds as subsidies decline",
+      "Parameters adjustable through governance without a hard fork",
+      "Modular by design — can be tuned, paused, or deprecated independently",
     ],
   },
   {
     title: "Protocol Integration",
     status: "future" as const,
     description:
-      "Proven governance mechanisms elevated from the contract layer to consensus, making treasury rules immutable at the protocol level.",
+      "Where empirical evidence supports it, proven governance mechanisms are elevated from the contract layer into native protocol upgrades — hardcoded at consensus, immutable by design. The same path ECIP-1017 took with the emission schedule: battle-tested logic becomes a permanent property of the chain.",
     deliverables: [
+      "Contract-layer mechanisms earn consensus elevation through demonstrated performance",
+      "Follows the ECIP-1017 precedent — proven rules encoded natively into the protocol",
       "Consensus-level governance encoding",
-      "Immutable treasury rules",
+      "Immutable treasury rules — no longer dependent on contract deployment or upgradability",
+      "Each elevation requires empirical evidence and a standard ECIP process",
     ],
   },
 ];
