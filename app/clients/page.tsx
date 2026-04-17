@@ -97,22 +97,24 @@ export default async function ClientsPage() {
   return (
     <main>
       <section className="hero-gradient relative pt-32 pb-16">
-        <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
+        <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl">
-              Client{" "}
-              <span className="text-[var(--brand-green)]">Implementations</span>
+            <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
+              Software
+            </p>
+            <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
+              <span className="text-[var(--brand-green)]">Client</span> Implementations
             </h1>
           </FadeIn>
           <FadeIn delay={100}>
-            <p className="mx-auto max-w-2xl text-lg text-[var(--text-muted)]">
+            <p className="mt-4 max-w-2xl text-lg text-[var(--text-muted)]">
               Multi-client architecture following best practices in client execution
               and enterprise-grade features.
             </p>
           </FadeIn>
           <FadeIn delay={180}>
-            <div className="mx-auto mt-8 max-w-2xl">
-              <div className="mb-3 flex items-end justify-center gap-3">
+            <div className="mt-8 max-w-2xl">
+              <div className="mb-3 flex items-end gap-3">
                 <p className="text-3xl font-bold font-mono text-[var(--brand-green)]">
                   {hashrateTHs.toFixed(1)}{" "}
                   <span className="text-base font-normal">TH/s</span>
