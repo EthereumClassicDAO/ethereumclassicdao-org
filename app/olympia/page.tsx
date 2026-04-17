@@ -490,6 +490,86 @@ export default function UpgradePage() {
         </div>
       </section>
 
+      <SectionDivider />
+
+      {/* Why EVM Alignment Matters */}
+      <section className="section-alt py-16 px-6">
+        <div className="mx-auto max-w-5xl">
+          <FadeIn>
+            <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
+              Why It Matters
+            </p>
+            <h2 className="mt-2 mb-3 text-2xl font-bold tracking-tight">
+              EVM Parity Is Infrastructure Access
+            </h2>
+            <p className="mb-10 max-w-3xl text-sm leading-relaxed text-[var(--text-muted)]">
+              The EVM is not just a smart contract runtime. It is the shared standard that wallets,
+              exchanges, oracles, bridges, security tools, and millions of developers build against.
+              When a blockchain diverges from that standard, it falls outside the default support
+              scope of every product in the ecosystem. Olympia ends that for Ethereum Classic.
+            </p>
+          </FadeIn>
+
+          <div className="grid gap-6 sm:grid-cols-2">
+            <FadeIn delay={60}>
+              <div className="h-full rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-6">
+                <p className="mb-2 text-sm font-semibold">Wallets and Exchanges</p>
+                <p className="text-sm leading-relaxed text-[var(--text-muted)]">
+                  MetaMask, Ledger, Coinbase Wallet, and exchange settlement systems are built
+                  and tested against the current EVM spec. When ETC runs the same execution
+                  layer, adding ETC support is not a custom integration — it is a configuration.
+                  Every security patch and feature update that ships for EVM compatibility
+                  covers ETC from day one, without anyone at those companies doing extra work.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={120}>
+              <div className="h-full rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-6">
+                <p className="mb-2 text-sm font-semibold">Oracles, Bridges, and DeFi Infrastructure</p>
+                <p className="text-sm leading-relaxed text-[var(--text-muted)]">
+                  Chainlink, Pyth, LayerZero, and the rest of the EVM peripheral ecosystem
+                  make integration decisions based on one criterion: does the target chain run
+                  compatible EVM? Before Olympia, the honest answer for ETC was &ldquo;mostly.&rdquo;
+                  After Olympia, it is &ldquo;yes.&rdquo; That single change unlocks integrations
+                  that were previously unavailable — not because ETC lacked demand, but because
+                  it lacked parity.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={180}>
+              <div className="h-full rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-6">
+                <p className="mb-2 text-sm font-semibold">The EVM Developer Community</p>
+                <p className="text-sm leading-relaxed text-[var(--text-muted)]">
+                  Millions of Solidity developers, auditors, and protocol engineers have spent
+                  years building on the EVM. Their knowledge, tooling, and mental models
+                  transfer to ETC without modification after Olympia. ETC does not need to
+                  recruit a parallel developer ecosystem or produce custom onboarding
+                  documentation. It inherits the one that already exists — immediately,
+                  on activation.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={240}>
+              <div className="h-full rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-6">
+                <p className="mb-2 text-sm font-semibold">Security and Operational Best Practices</p>
+                <p className="text-sm leading-relaxed text-[var(--text-muted)]">
+                  EVM parity means ETC benefits from the security research, auditing tools,
+                  and compiler improvements the Ethereum development community produces
+                  continuously. Slither, Echidna, Mythril, and Foundry&apos;s fuzzing
+                  infrastructure are all built against the current EVM spec. Running a
+                  divergent execution layer meant ETC was increasingly outside the coverage
+                  these tools provided. Olympia closes that gap — security tooling improvements
+                  flow to ETC automatically as they ship to the EVM.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* Olympia Upgrade */}
       <OlympiaUpgradeSection />
 
