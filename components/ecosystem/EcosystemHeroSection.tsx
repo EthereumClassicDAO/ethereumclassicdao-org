@@ -37,7 +37,7 @@ export function EcosystemHeroSection() {
             Ecosystem
           </p>
           <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
-            Build on Ethereum Classic
+            <span className="text-[var(--brand-green)]">Build</span> on Ethereum Classic
           </h1>
           <p className="mt-4 text-lg text-[var(--text-muted)]">
             The only Proof-of-Work blockchain with native EVM smart contracts

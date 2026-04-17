@@ -28,7 +28,7 @@ export function InvestmentHeroSection() {
             Institutional Products
           </p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
-            Institutional Access to Ethereum Classic
+            Institutional <span className="text-[var(--brand-green)]">Access</span> to Ethereum Classic
           </h1>
           <p className="mt-4 text-base text-[var(--text-muted)]">
             ETC has had regulated investment product exposure since May 2018

@@ -100,7 +100,7 @@ export default async function ClientsPage() {
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
             <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
-              Software
+              Network Software
             </p>
             <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
               <span className="text-[var(--brand-green)]">Client</span> Implementations
@@ -132,8 +132,8 @@ export default async function ClientsPage() {
 
       <SectionDivider />
 
-      <section className="section-alt py-16 px-6">
-        <div className="mx-auto max-w-5xl">
+      <section className="section-alt py-16">
+        <div className="mx-auto max-w-5xl px-6">
           <div className="grid gap-6 md:grid-cols-2">
             {clients.map((client, i) => (
               <FadeIn key={client.name} delay={i * 80} className="h-full">
