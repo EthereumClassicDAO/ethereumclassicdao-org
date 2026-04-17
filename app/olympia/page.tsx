@@ -146,7 +146,7 @@ const faqItems = [
   {
     question: "How was Olympia tested before mainnet?",
     answer:
-      "Olympia activates on the Mordor testnet first. Mordor is Ethereum Classic's Proof-of-Work testnet and mirrors mainnet conditions closely. Multiple independent client implementations run the Mordor fork before any mainnet activation is scheduled. Cross-client validation using the Hive integration testing framework confirms consensus compatibility across implementations. The mainnet activation block is not set until Mordor has run cleanly and major network stakeholders, including exchanges, custodians, and mining pools, have confirmed readiness.",
+      "Olympia activates on the Mordor testnet first. Mordor is Ethereum Classic's Proof-of-Work testnet and mirrors mainnet conditions closely. Multiple independent client implementations run the Mordor fork before any mainnet activation is scheduled. Cross-client validation using the Hive integration testing framework confirms consensus compatibility across implementations. The mainnet activation block is announced with sufficient lead time for exchanges, custodians, and mining pools to schedule their upgrades. The process follows the same sequence used for every previous ETC hard fork.",
   },
   {
     question: "When is the mainnet activation block?",
