@@ -14,7 +14,7 @@ const safeguards = [
     title: "Sanctions Screening",
     ecip: "ECIP-1119",
     description:
-      "The governance system includes on-chain sanctions compliance at three layers: proposal submission, active voting, and execution. Sanctioned addresses cannot participate in governance or receive treasury funds.",
+      "The governance system includes on-chain sanctions compliance throughout the governance process. Sanctioned addresses cannot participate in governance or receive treasury funds.",
   },
   {
     icon: Fingerprint,

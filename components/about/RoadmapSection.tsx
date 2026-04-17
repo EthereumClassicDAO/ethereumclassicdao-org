@@ -17,11 +17,13 @@ const stages = [
     title: "Core Governance",
     status: "active" as const,
     description:
-      "On-chain governance with membership-based voting and a full proposal lifecycle: submit, vote, queue, execute. Core development funding moves to an open, transparent, on-chain process.",
+      "On-chain governance with membership-based voting and a full proposal lifecycle: submit, vote, queue, execute. Core development funding moves to an open, transparent, on-chain process. On-chain sanctions screening throughout the governance process. Any stakeholder — exchanges, custodians, miners, institutions, or individuals — can contribute directly on-chain or through the ETC Cooperative for tax-deductible donations.",
     deliverables: [
       "Governance and treasury contracts with timelock execution",
       "Membership-based voting with sanctions compliance",
+      "On-chain sanctions screening",
       "Open proposal process with competitive bidding",
+      "Direct on-chain contributions and ETC Cooperative donation channel",
     ],
   },
   {

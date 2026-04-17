@@ -77,7 +77,7 @@ const faqItems: { question: string; answer: ReactNode }[] = [
   {
     question: "How are treasury funds protected from misuse?",
     answer:
-      "Multiple safeguards protect treasury funds. A configurable timelock delay on all approved proposals gives the community time to review before execution. Three-layer on-chain sanctions screening at proposal submission, voting, and execution prevents sanctioned addresses from participating or receiving funds. Non-transferable voting tokens prevent vote buying. All governance mechanics are implemented through OpenZeppelin's Governor 5.x framework — an audited contract suite with a multi-year deployment record across the EVM ecosystem. All treasury transactions are publicly recorded and independently verifiable on-chain. The Wyoming DAO LLC provides an additional layer of legal accountability for real-world execution.",
+      "Multiple safeguards protect treasury funds. A configurable timelock delay on all approved proposals gives the community time to review before execution. On-chain sanctions screening prevents sanctioned addresses from participating or receiving funds. Non-transferable voting tokens prevent vote buying. All governance mechanics are implemented through OpenZeppelin's Governor 5.x framework — an audited contract suite with a multi-year deployment record across the EVM ecosystem. All treasury transactions are publicly recorded and independently verifiable on-chain. The Wyoming DAO LLC provides an additional layer of legal accountability for real-world execution.",
   },
   {
     question: "Is Ethereum Classic a security or commodity?",
