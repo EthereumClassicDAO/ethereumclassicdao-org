@@ -34,7 +34,7 @@ const clients = [
     language: "Scala",
     languageColor: "#DC322F",
     role: "Primary",
-    roleColor: "#00ffae",
+    roleColor: "brand",
     description:
       "Purpose-built for Ethereum Classic — an independent implementation designed from the ground up for performance, security, and protocol parity. Primary client for the Olympia upgrade.",
     docsUrl: "https://github.com/ethereumclassic/fukuii#readme",
@@ -151,11 +151,19 @@ export default async function ClientsPage() {
                     <div>
                       <h2 className="font-semibold">{client.name}</h2>
                       <span
-                        className="rounded-full px-2 py-0.5 text-xs font-medium"
-                        style={{
-                          backgroundColor: `${client.roleColor}15`,
-                          color: client.roleColor,
-                        }}
+                        className={`rounded-full px-2 py-0.5 text-xs font-medium ${
+                          client.roleColor === "brand"
+                            ? "bg-[var(--brand-green-subtle)] text-[var(--brand-green)]"
+                            : ""
+                        }`}
+                        style={
+                          client.roleColor !== "brand"
+                            ? {
+                                backgroundColor: `${client.roleColor}15`,
+                                color: client.roleColor,
+                              }
+                            : undefined
+                        }
                       >
                         {client.role}
                       </span>
