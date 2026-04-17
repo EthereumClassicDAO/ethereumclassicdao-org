@@ -43,7 +43,7 @@ export function RegulationHeroSection() {
             Regulatory Framework
           </p>
           <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
-            Ethereum Classic in the Regulated Era
+            Ethereum Classic in the <span className="text-[var(--brand-green)]">Regulated Era</span>
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-[var(--text-muted)]">
             ETC sits at the intersection of three major global frameworks,

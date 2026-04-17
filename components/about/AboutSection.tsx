@@ -50,7 +50,7 @@ export function AboutSection() {
             About
           </p>
           <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
-            About Ethereum Classic DAO
+            About Ethereum Classic <span className="text-[var(--brand-green)]">DAO</span>
           </h1>
 
           <div className="mt-8 space-y-6 text-base leading-relaxed text-[var(--text-secondary)]">

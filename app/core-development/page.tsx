@@ -348,7 +348,7 @@ export default function TimelinePage() {
               ECIP-1066
             </p>
             <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
-              Core Development Timeline
+              <span className="text-[var(--brand-green)]">Core Development</span> Timeline
             </h1>
             <p className="mt-4 text-base text-[var(--text-muted)]">
               A decade of uninterrupted Proof-of-Work operation — every

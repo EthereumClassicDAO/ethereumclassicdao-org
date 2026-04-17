@@ -36,7 +36,7 @@ export function RegisteredAgentSection() {
             Connect
           </p>
           <h1 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
-            Get Involved
+            Get <span className="text-[var(--brand-green)]">Involved</span>
           </h1>
           <p className="mt-4 max-w-xl text-lg text-[var(--text-muted)]">
             Ethereum Classic DAO is built in public. Follow development,
