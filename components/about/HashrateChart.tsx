@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTheme } from "next-themes";
 import {
   AreaChart,
   Area,
@@ -25,6 +26,9 @@ const PERIODS: { key: TimePeriod; label: string }[] = [
 
 export function HashrateChart({ histories, currentTHs }: Props) {
   const [period, setPeriod] = useState<TimePeriod>("week");
+  const { resolvedTheme } = useTheme();
+  // Dark mode: neon green. Light mode: accessible dark green (matches --brand-green).
+  const chartGreen = resolvedTheme === "light" ? "#007a53" : "#00ffae";
   const data = histories[period];
 
   if (!data || data.length === 0) {
@@ -56,7 +60,7 @@ export function HashrateChart({ histories, currentTHs }: Props) {
               onClick={() => setPeriod(key)}
               className={`rounded-md px-2.5 py-1 font-mono text-[10px] transition-colors duration-150 ${
                 period === key
-                  ? "bg-[var(--brand-green)] text-black font-semibold"
+                  ? "bg-[var(--brand-green)] text-white dark:text-black font-semibold"
                   : "text-[var(--text-subtle)] hover:text-[var(--text-muted)]"
               }`}
             >
@@ -70,8 +74,8 @@ export function HashrateChart({ histories, currentTHs }: Props) {
         <AreaChart data={data} margin={{ top: 4, right: 0, left: 0, bottom: 0 }}>
           <defs>
             <linearGradient id="hashrateGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#00ffae" stopOpacity={0.18} />
-              <stop offset="95%" stopColor="#00ffae" stopOpacity={0} />
+              <stop offset="5%" stopColor={chartGreen} stopOpacity={0.18} />
+              <stop offset="95%" stopColor={chartGreen} stopOpacity={0} />
             </linearGradient>
           </defs>
           <XAxis
@@ -105,11 +109,11 @@ export function HashrateChart({ histories, currentTHs }: Props) {
           <Area
             type="monotone"
             dataKey="hashrateTHs"
-            stroke="#00ffae"
+            stroke={chartGreen}
             strokeWidth={1.5}
             fill="url(#hashrateGrad)"
             dot={false}
-            activeDot={{ r: 3, fill: "#00ffae", strokeWidth: 0 }}
+            activeDot={{ r: 3, fill: chartGreen, strokeWidth: 0 }}
           />
         </AreaChart>
       </ResponsiveContainer>
