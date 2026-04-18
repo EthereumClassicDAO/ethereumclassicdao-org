@@ -70,13 +70,11 @@ export function OlympiaEcosystemSection() {
               Coordinating Organizations
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Ethereum Classic&rsquo;s governance architecture is coordinated
-              across four active layers &mdash; Ethereum Classic DAO LLC as
-              the Wyoming-registered legal entity, the Olympia DAO as the
-              on-chain governance protocol, the Olympia Treasury as the
-              protocol-funded resource pool, and the Ethereum Classic network
-              itself &mdash; built on nearly a decade of foundational work by
-              the ETC Cooperative and Grayscale Investments.
+              Ethereum Classic&rsquo;s governance infrastructure is
+              coordinated across legal, protocol, treasury, and network
+              layers &mdash; alongside the foundational organizations whose
+              decade of funded development and regulated institutional access
+              built the foundation it continues.
             </p>
           </FadeIn>
 
