@@ -72,9 +72,10 @@ export function OlympiaEcosystemSection() {
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Ethereum Classic&rsquo;s governance infrastructure is
               coordinated across legal, protocol, treasury, and network
-              layers &mdash; alongside the foundational organizations whose
-              decade of funded development and regulated institutional access
-              built the foundation it continues.
+              layers, alongside the foundational organizations &mdash; the
+              ETC Cooperative and Grayscale Investments &mdash; whose decade
+              of funded development and regulated institutional access built
+              the foundation this infrastructure continues.
             </p>
           </FadeIn>
 
