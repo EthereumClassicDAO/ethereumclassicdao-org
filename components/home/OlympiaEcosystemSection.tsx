@@ -1,4 +1,4 @@
-import { Building2, Vote, Landmark, Network } from "lucide-react";
+import { Building2, Vote, Landmark, Network, HeartHandshake, BarChart3 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
@@ -39,6 +39,24 @@ const entities = [
     href: "https://ethereumclassic.org",
     highlighted: false,
   },
+  {
+    icon: HeartHandshake,
+    name: "ETC Cooperative",
+    role: "Foundational Organization",
+    description:
+      "Founded in 2017 by and composed of Ethereum Classic's earliest core contributors, ETC Cooperative is a US 501(c)(3) non-profit that contributed millions of dollars to Ethereum Classic's client teams and infrastructure — backing every hard fork, every client release, and every cross-client coordination effort since Atlantis. Ethereum Classic DAO LLC and Olympia DAO build on that foundational work, extending it into protocol-native governance and treasury infrastructure.",
+    href: "https://etccooperative.org",
+    highlighted: false,
+  },
+  {
+    icon: BarChart3,
+    name: "Grayscale Investments",
+    role: "Regulated Investment Products",
+    description:
+      "Grayscale pioneered regulated institutional access to Ethereum Classic in 2018 — years before Bitcoin ETFs existed as a product category — and became a major institutional donor to the ETC Cooperative, indirectly funding the core client development of the network underpinning their product. The Grayscale Ethereum Classic Trust (ETCG) trades on OTCQX and is accessible through Charles Schwab, Fidelity, and Interactive Brokers.",
+    href: "https://grayscale.com/crypto-products/grayscale-ethereum-classic-trust/",
+    highlighted: false,
+  },
 ];
 
 export function OlympiaEcosystemSection() {
@@ -52,18 +70,13 @@ export function OlympiaEcosystemSection() {
               Coordinating Organizations
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Ethereum Classic&rsquo;s governance architecture is organized
-              across four distinct layers: Ethereum Classic DAO LLC as the
-              Wyoming-registered legal entity providing the institutional
-              counterparty for compliance, vendor contracts, and regulatory
-              reporting; the Olympia DAO as the on-chain governance protocol
-              handling binding protocol decisions through transparent voting
-              and execution; the Olympia Treasury as the protocol-funded
-              resource pool directing basefee revenue and on-chain
-              contributions to core development; and the Ethereum Classic
-              network itself &mdash; the settlement infrastructure and
-              institutional asset that all governance decisions ultimately
-              serve.
+              Ethereum Classic&rsquo;s governance architecture is coordinated
+              across four active layers &mdash; Ethereum Classic DAO LLC as
+              the Wyoming-registered legal entity, the Olympia DAO as the
+              on-chain governance protocol, the Olympia Treasury as the
+              protocol-funded resource pool, and the Ethereum Classic network
+              itself &mdash; built on nearly a decade of foundational work by
+              the ETC Cooperative and Grayscale Investments.
             </p>
           </FadeIn>
 
