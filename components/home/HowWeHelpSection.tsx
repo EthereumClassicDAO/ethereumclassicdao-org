@@ -9,7 +9,7 @@ export function HowWeHelpSection() {
     {
       icon: GitBranch,
       title: "Core Client Development",
-      description: "The technical and principled stewards of Ethereum Classic since inception — every client decision, network upgrade, and emergency response has been coordinated through us. A decade of accumulated domain knowledge drives every protocol decision: knowing not just what to build, but how to honor ETC's foundational principles while adapting to an evolving blockchain landscape. We are the humans behind billions of dollars in network value, driven to deliver a first-in-class Proof-of-Work smart contract experience for every stakeholder the network serves.",
+      description: "The contributors behind Ethereum Classic DAO LLC have been the technical and principled stewards of Ethereum Classic since inception — every client decision, network upgrade, and emergency response coordinated by those same contributors across every ETC upgrade since 2016. A decade of accumulated domain knowledge drives every protocol decision: knowing not just what to build, but how to honor ETC's foundational principles while adapting to an evolving blockchain landscape. We are the humans behind billions of dollars in network value, driven to deliver a first-in-class Proof-of-Work smart contract experience for every stakeholder the network serves.",
     },
     {
       icon: Vote,

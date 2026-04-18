@@ -9,7 +9,7 @@ export function WhatWeDoSection() {
     {
       question: "Core Client Development",
       answer:
-        "The technical and principled stewards of Ethereum Classic since inception, we maintain and coordinate the client software that runs the network. Every client decision, network upgrade, and emergency response has been coordinated through us — a decade of accumulated domain knowledge that drives every protocol decision. We maintain EVM protocol parity with Ethereum so that every Solidity contract, development tool, and institutional integration built for the EVM works on Ethereum Classic without modification. Multiple independent implementations ensure no single point of failure in the protocol stack. We are driven to deliver a first-in-class Proof-of-Work smart contract experience for every stakeholder the network serves.",
+        "The contributors behind Ethereum Classic DAO LLC have been the technical and principled stewards of Ethereum Classic since inception — every client decision, network upgrade, and emergency response coordinated by those same contributors across every ETC upgrade since 2016. A decade of accumulated domain knowledge drives every protocol decision. We maintain EVM protocol parity with Ethereum so that every Solidity contract, development tool, and institutional integration built for the EVM works on Ethereum Classic without modification. Multiple independent implementations ensure no single point of failure in the protocol stack. We are driven to deliver a first-in-class Proof-of-Work smart contract experience for every stakeholder the network serves.",
     },
     {
       question: "Critical Infrastructure",
