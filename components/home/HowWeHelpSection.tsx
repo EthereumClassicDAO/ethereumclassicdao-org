@@ -20,7 +20,7 @@ export function HowWeHelpSection() {
     {
       icon: Pickaxe,
       title: "Hashrate Incentive Alignment",
-      description: "Billions of dollars in globally distributed mining infrastructure secures Ethereum Classic, the largest Proof-of-Work smart contract platform. As core developers, we positioned ETC as the PoW EVM in 2018, implemented the Thanos upgrade in response to the 2020 51% attacks, and defended the ETChash miner base from corporate capture ahead of The Merge. We are building the decentralized funding mechanisms that keep miner software current and PoW economically viable long-term. Domestic US mining operations are positioned under the Mined in America Act, aligned with our Wyoming DAO LLC registration and a decade of ETC core development.",
+      description: "Billions of dollars in globally distributed mining infrastructure secures Ethereum Classic, the largest Proof-of-Work smart contract platform. The contributors behind Ethereum Classic DAO LLC positioned ETC as the PoW EVM in 2018, implemented the Thanos upgrade in response to the 2020 51% attacks, and defended the ETChash miner base from corporate capture ahead of The Merge. We are building the decentralized funding mechanisms that keep miner software current and PoW economically viable long-term. Domestic US mining operations are positioned under the Mined in America Act, aligned with our Wyoming DAO LLC registration and a decade of ETC core development.",
     },
     {
       icon: Scale,
