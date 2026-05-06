@@ -1,85 +1,97 @@
 import type { MetadataRoute } from "next";
+import { execSync } from "child_process";
+
+function gitDate(filePath: string): Date {
+  try {
+    const iso = execSync(`git log -1 --format="%cI" -- "${filePath}"`, {
+      encoding: "utf8",
+      cwd: process.cwd(),
+    }).trim();
+    return iso ? new Date(iso) : new Date();
+  } catch {
+    return new Date();
+  }
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://ethereumclassicdao.org";
-  const now = new Date();
 
   return [
     {
       url: base,
-      lastModified: now,
+      lastModified: gitDate("app/page.tsx"),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${base}/about`,
-      lastModified: now,
+      lastModified: gitDate("app/about/page.tsx"),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${base}/governance`,
-      lastModified: now,
+      lastModified: gitDate("app/governance/page.tsx"),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${base}/ecosystem`,
-      lastModified: now,
+      lastModified: gitDate("app/ecosystem/page.tsx"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${base}/transparency`,
-      lastModified: now,
+      lastModified: gitDate("app/transparency/page.tsx"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${base}/clients`,
-      lastModified: now,
+      lastModified: gitDate("app/clients/page.tsx"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${base}/olympia`,
-      lastModified: now,
+      lastModified: gitDate("app/olympia/page.tsx"),
       changeFrequency: "weekly",
       priority: 0.95,
     },
     {
       url: `${base}/core-development`,
-      lastModified: now,
+      lastModified: gitDate("app/core-development/page.tsx"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${base}/contact`,
-      lastModified: now,
+      lastModified: gitDate("app/contact/page.tsx"),
       changeFrequency: "yearly",
       priority: 0.6,
     },
     {
       url: `${base}/privacy`,
-      lastModified: now,
+      lastModified: gitDate("app/privacy/page.tsx"),
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${base}/regulation`,
-      lastModified: now,
+      lastModified: gitDate("app/regulation/page.tsx"),
       changeFrequency: "weekly",
       priority: 0.85,
     },
     {
       url: `${base}/environmental-impact`,
-      lastModified: now,
+      lastModified: gitDate("app/environmental-impact/page.tsx"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${base}/investment-products`,
-      lastModified: now,
+      lastModified: gitDate("app/investment-products/page.tsx"),
       changeFrequency: "weekly",
       priority: 0.85,
     },
