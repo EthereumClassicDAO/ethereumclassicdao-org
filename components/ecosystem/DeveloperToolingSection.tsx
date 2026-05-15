@@ -234,12 +234,12 @@ export function DeveloperToolingSection() {
             ETC is supported by 50+ wallet applications across hardware,
             browser, mobile, and desktop. See the full list at{" "}
             <a
-              href="https://ethereumclassic.org/services/wallets"
+              href="https://ethereumclassic.com/services/wallets"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[var(--brand-green)] hover:underline"
             >
-              ethereumclassic.org
+              ethereumclassic.com
             </a>
             .
           </p>

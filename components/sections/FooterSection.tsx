@@ -52,7 +52,7 @@ const columns: { heading: string; links: FooterLink[] }[] = [
       },
       {
         label: "Ethereum Classic",
-        href: "https://ethereumclassic.org",
+        href: "https://ethereumclassic.com",
         external: true,
       },
     ],

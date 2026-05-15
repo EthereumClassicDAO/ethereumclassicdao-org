@@ -8,7 +8,7 @@ import { HashrateChart } from "@/components/about/HashrateChart";
 export const metadata: Metadata = {
   title: "ETC Client Implementations — Fukuii and Core-Geth",
   description:
-    "Independent Ethereum Classic client implementations. Fukuii (Scala) is the primary client for the Olympia era — purpose-built for ETC protocol stewardship. Core-Geth (Go) is actively maintained through Olympia. ETC plugins for Besu, Erigon, Go-Ethereum, and Nethermind are planned post-Olympia.",
+    "Independent Ethereum Classic client implementations. Fukuii (Scala) is the primary client for the Olympia era — purpose-built for ETC protocol stewardship. Core-Geth (Go) is actively maintained through Olympia. ETC plugins for Besu, Erigon, Go-Ethereum, Nethermind, and Reth are planned post-Olympia.",
   keywords: [
     "Fukuii",
     "Core-Geth",
@@ -36,7 +36,7 @@ const clients = [
     role: "Primary",
     roleColor: "brand",
     description:
-      "Purpose-built for Ethereum Classic — an independent implementation designed from the ground up for performance, security, and protocol parity. Primary client for the Olympia upgrade.",
+      "EVM-compliant execution layer client in Scala 3. Native PoW consensus for ETC and Mordor; pairs with any consensus client via Engine API V1–V4 for post-Merge Ethereum. Forked from Mantis, purpose-built for the Olympia era.",
     docsUrl: "https://github.com/ethereumclassic/fukuii#readme",
     releasesUrl: "https://github.com/ethereumclassic/fukuii/releases",
   },
@@ -85,6 +85,14 @@ const plugins = [
     releasesUrl: "https://github.com/ethereumclassic/nethermind/releases",
     docsUrl: "https://github.com/ethereumclassic/nethermind#readme",
     description: "A plugin that adds ETC support into the Nethermind codebase.",
+  },
+  {
+    name: "Reth",
+    language: "Rust",
+    languageColor: "#DEA584",
+    releasesUrl: "https://github.com/ethereumclassic/reth-etc/releases",
+    docsUrl: "https://github.com/ethereumclassic/reth-etc#readme",
+    description: "A plugin that adds ETC support into the Reth codebase.",
   },
 ];
 
@@ -207,7 +215,7 @@ export default async function ClientsPage() {
             </p>
           </FadeIn>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {plugins.map((plugin, i) => (
               <FadeIn key={plugin.name} delay={300 + i * 80} className="h-full">
                 <div className="h-full rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-5">

@@ -26,7 +26,7 @@ const resources = [
     icon: Globe,
     name: "Ethereum Classic",
     description: "Network documentation and community resources",
-    href: "https://ethereumclassic.org",
+    href: "https://ethereumclassic.com",
   },
   {
     icon: Search,
@@ -38,7 +38,7 @@ const resources = [
     icon: BookOpen,
     name: "ETC Knowledge Base",
     description: "Protocol specifications and developer guides",
-    href: "https://ethereumclassic.org/knowledge",
+    href: "https://ethereumclassic.com/knowledge",
   },
 ];
 

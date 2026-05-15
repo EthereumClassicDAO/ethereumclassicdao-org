@@ -36,7 +36,7 @@ const entities = [
     role: "Network Protocol",
     description:
       "The largest Proof-of-Work smart contract platform, trading on 300+ markets across 20+ global exchanges with fiat pairs spanning every major currency region. Recognized across leading global regulatory frameworks in the US, EU, UK, Japan, and UAE — the broadest institutional access profile of any Proof-of-Work network.",
-    href: "https://ethereumclassic.org",
+    href: "https://ethereumclassic.com",
     highlighted: false,
   },
   {
