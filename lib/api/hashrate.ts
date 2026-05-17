@@ -1,9 +1,8 @@
 // ETC network hashrate — current value + multi-timeframe history
 // ISR: revalidates at most once per hour (not per page request)
 // Sources:
-//   Current:  2miners /api/stats → nodes[0].networkhashps (H/s)
-//   History:  Blockscout /api/v2/blocks/{height} → difficulty / avg_block_time → TH/s
-//             14 sampled blocks per timeframe, all fetched in parallel at ISR build time
+//   Current:  Blockscout /api/v2/blocks/{height} → difficulty / avg_block_time → TH/s
+//   History:  same formula, 14 sampled blocks per timeframe, all fetched in parallel
 
 const BLOCKSCOUT = "https://etc.blockscout.com/api/v2";
 const ETC_AVG_BLOCK_TIME_S = 13;
@@ -17,24 +16,28 @@ export interface HashratePoint {
 
 export type HashrateHistories = Record<TimePeriod, HashratePoint[]>;
 
-// ─── Current hashrate (2miners) ──────────────────────────────────────────────
-
-interface TwoMinersStats {
-  nodes: Array<{ networkhashps: string }>;
-}
+// ─── Current hashrate (Blockscout difficulty) ─────────────────────────────────
 
 const FALLBACK_THS = 210;
 
+interface BlockscoutStats {
+  total_blocks: string;
+}
+
 export async function fetchHashrateTHs(): Promise<number> {
   try {
-    const res = await fetch("https://etc.2miners.com/api/stats", {
+    const statsRes = await fetch(`${BLOCKSCOUT}/stats`, {
       next: { revalidate: 3600 },
     });
-    if (!res.ok) throw new Error(`2miners ${res.status}`);
-    const data: TwoMinersStats = await res.json();
-    const hps = parseFloat(data.nodes?.[0]?.networkhashps ?? "0");
-    if (!hps) throw new Error("No hashrate data");
-    return Math.round((hps / 1e12) * 10) / 10;
+    if (!statsRes.ok) throw new Error(`stats ${statsRes.status}`);
+    const stats: BlockscoutStats = await statsRes.json();
+    const currentHeight = parseInt(stats.total_blocks, 10);
+    if (!currentHeight) throw new Error("no height");
+    const block = await fetchBlock(currentHeight);
+    if (!block) throw new Error("no block");
+    const difficulty = parseFloat(block.difficulty);
+    if (!difficulty) throw new Error("no difficulty");
+    return Math.round((difficulty / ETC_AVG_BLOCK_TIME_S / 1e12) * 10) / 10;
   } catch {
     return FALLBACK_THS;
   }
@@ -46,10 +49,6 @@ interface BlockscoutBlock {
   difficulty: string;
   timestamp: string;
   height: number;
-}
-
-interface BlockscoutStats {
-  total_blocks: string;
 }
 
 const NUM_POINTS = 14;

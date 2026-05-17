@@ -28,7 +28,7 @@ const FALLBACK: EtcStats = {
   totalBlocks: 24_182_000,
   totalTransactions: 142_750_000,
   totalAddresses: 601_000_000,
-  averageBlockTimeMs: 11_000,
+  averageBlockTimeMs: 13_000,
   transactionsToday: 9_600,
   gasPriceAvg: 8.0,
   networkUtilization: 0.35,
