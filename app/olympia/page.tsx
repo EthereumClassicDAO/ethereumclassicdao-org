@@ -92,9 +92,9 @@ const clients = [
       "Replace the existing binary",
       "Restart your node. Fukuii automatically follows the Olympia fork.",
     ],
-    dockerImage: "ghcr.io/ethereumclassic/fukuii",
-    githubUrl: "https://github.com/ethereumclassic/fukuii/releases",
-    docsUrl: "https://github.com/ethereumclassic/fukuii#readme",
+    dockerImage: "ghcr.io/chippr-robotics/fukuii:latest",
+    githubUrl: "https://github.com/chippr-robotics/fukuii/releases",
+    docsUrl: "https://chippr-robotics.github.io/fukuii",
   },
   {
     name: "Core-Geth",

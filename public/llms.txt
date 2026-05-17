@@ -69,14 +69,14 @@ Futarchy Markets (ECIP-1117, ECIP-1118): Open prediction markets where anyone ca
 - Markets: 300+ active markets across 20+ major global exchanges
 - Fiat pairs: ETC/USD, ETC/EUR, ETC/KRW, ETC/TRY, ETC/GBP, ETC/IDR, ETC/INR, ETC/BRL, ETC/NZD, ETC/JPY, ETC/PLN
 - Crypto pairs: ETC/USDC, ETC/USDT, ETC/FDUSD, ETC/BTC, ETC/ETH, ETC/BNB, ETC/LTC, ETC/DOGE, ETC/XRP
-- Independent clients: fukuii (Scala, primary, fukuii.com), core-geth (Go, maintenance); ETC plugins for Besu, Erigon, Go-Ethereum, Nethermind, Reth planned post-Olympia
+- Independent clients: Fukuii (Scala, fukuii.com — multi-network EL client, ETC primary), Core-Geth (Go, maintenance); ETC plugins for Besu, Erigon, Go-Ethereum, Nethermind, Reth planned post-Olympia
 - Network origin: July 30, 2015 (genesis block — oldest EVM-compatible blockchain)
 - Chain IDs: 61 (mainnet), 63 (Mordor testnet)
 
 ## Client Implementations
 
 Two active clients at Olympia launch:
-- **fukuii** — Purpose-built for Ethereum Classic. Primary client for the Olympia era, designed for long-term protocol stewardship.
+- **Fukuii** (fukuii.com) — Ethereum execution layer client in Scala 3 with pluggable consensus. Native PoW for ETC mainnet and Mordor; Engine API V1–V4 for Sepolia and ETH mainnet. Pairs with any consensus client. The primary ETC client for the Olympia era. By Chippr Robotics LLC.
 - **core-geth** — The legacy ETC client, actively maintained and carried forward through Olympia for network continuity. Scheduled to phase out as Fukuii assumes the primary role. The upstream go-ethereum plugin architecture is the long-term replacement for maintaining a dedicated fork.
 
 ETC plugins for Besu, Erigon, Go-Ethereum, Nethermind, and Reth are planned for future release — compatibility layers that bring ETC support to major upstream clients without maintaining full forks.
@@ -202,7 +202,7 @@ Taking that model on-chain and open-sourcing it through smart contracts is only 
 
 Node operators must upgrade before the Olympia activation block. Clients available:
 
-- **Fukuii** (fukuii.com) — Primary client for the Olympia era. Purpose-built for Ethereum Classic and designed for long-term protocol stewardship.
+- **Fukuii** (fukuii.com) — Ethereum execution layer client in Scala 3 with pluggable consensus. Native PoW for ETC mainnet and Mordor; Engine API V1–V4 for Sepolia and ETH mainnet. Pairs with Lighthouse, Prysm, Teku, Lodestar, or Nimbus. The primary ETC client for the Olympia era. By Chippr Robotics LLC.
 - **Core-Geth** — Legacy client, actively maintained and carried through Olympia. Scheduled to phase out as Fukuii assumes the primary role.
 
 Prerequisites: 8 GB RAM, 500 GB SSD. Block rewards and tips remain untouched; only EIP-1559 basefee is redirected to the treasury.
