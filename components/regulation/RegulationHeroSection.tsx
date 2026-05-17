@@ -8,9 +8,9 @@ const frameworks = [
     jurisdiction: "United States",
     label: "Digital Commodity Profile",
     status: "badge-pending" as const,
-    statusLabel: "Pending Senate",
+    statusLabel: "Senate Floor Pending",
     description:
-      "Passed the US House in July 2025. ETC's PoW consensus and decentralized issuance profile positions it as a digital commodity candidate, subject to CFTC jurisdiction for derivatives, with spot markets open under existing law.",
+      "Passed the US House on July 17, 2025. Passed the Senate Banking Committee 15-9 on May 14, 2026. Now advances to the Senate floor — must reconcile with Agriculture Committee version, requires 60-vote threshold. White House targets July 4, 2026 enactment. ETC's PoW consensus and decentralized issuance profile positions it as a digital commodity candidate under CFTC jurisdiction.",
   },
   {
     icon: Globe,
