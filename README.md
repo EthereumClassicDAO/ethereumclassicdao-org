@@ -1,72 +1,55 @@
 # EthereumClassicDAO.org
 
-Institutional website for **Ethereum Classic DAO LLC**, a Wyoming-registered DAO LLC (Filing ID 2025-001671865). The legal entity behind Ethereum Classic's Olympia DAO governance infrastructure.
+Institutional website for **Ethereum Classic DAO LLC**, a Wyoming-registered DAO LLC. The legal entity building software, governance infrastructure, and institutional frameworks for Ethereum Classic — the largest Proof-of-Work blockchain with native EVM smart contracts.
 
-**URL:** [ethereumclassicdao.org](https://ethereumclassicdao.org)
-
-## Features
-
-- Institutional positioning for the largest Proof-of-Work smart contract platform
-- Live network stats (Blockscout API v2 + CoinGecko, ISR 10min)
-- 7 pages: Home, About, Governance, Ecosystem, Transparency, Contact, Privacy
-- 30+ section components across page-scoped directories
-- Light/dark theme toggle
-- Scroll-triggered fade-up animations (Intersection Observer)
-- Responsive, mobile-first
+**Website:** [ethereumclassicdao.org](https://ethereumclassicdao.org)
 
 ## Pages
 
-| Page | Content |
-|------|---------|
-| **Home** | Mission hero, ETC overview (live data), network stats, governance process, what we do, how we help, Olympia ecosystem |
-| **About** | Organization, infrastructure, leadership (headshots), values, roadmap |
-| **Governance** | How it works, treasury funding flow, safeguards, FAQ |
-| **Ecosystem** | Network config (EVM versions), developer tooling (8 categories), clients, mining, equipment (ASIC+GPU), institutional products |
-| **Transparency** | Principles, reports, documents |
-| **Contact** | Registered agent, engagement channels |
-| **Privacy** | Legal/compliance |
+- **Home** — Mission, live network stats, governance overview
+- **About** — Organization, infrastructure, leadership, values, roadmap
+- **Governance** — Three-layer governance architecture, protocol treasury, on-chain proposals
+- **Clients** — ETC client implementations: Fukuii (Scala) and Core-Geth (Go)
+- **Core Development** — ETC network upgrade timeline from genesis through Olympia
+- **Ecosystem** — Developer tooling, mining infrastructure, institutional products
+- **Investment Products** — ETCG, Grayscale product lifecycle, TradFi access
+- **Regulation** — Regulatory landscape: CLARITY Act, MiCA, Japan FSA
+- **Environmental Impact** — Proof-of-Work energy context and mining network
+- **Olympia** — The Olympia protocol upgrade
+- **Transparency** — Principles, reports, documents
+- **Contact** — Registered agent, engagement channels
 
-## Tech Stack
+## Built With
 
-| Layer | Technology |
-|-------|------------|
-| Framework | Next.js 16 (App Router, Turbopack) |
-| UI | React 19, TypeScript 5 (strict) |
-| Styling | Tailwind CSS 4, CSS custom properties |
-| Icons | Lucide React |
-| Package Manager | pnpm 10 |
+- [Next.js 16](https://nextjs.org) (App Router)
+- [React 19](https://react.dev) + [TypeScript](https://www.typescriptlang.org) (strict)
+- [Tailwind CSS 4](https://tailwindcss.com)
+- [Lucide React](https://lucide.dev)
 
-## Quick Start
+## Development
 
 ```bash
 pnpm install
-pnpm dev          # Dev server (Turbopack)
-pnpm build        # Production build
-pnpm lint         # ESLint
-pnpm typecheck    # TypeScript check
+pnpm dev        # Dev server
+pnpm build      # Production build
+pnpm lint       # Lint
+pnpm typecheck  # Type check
 ```
 
-## Design
-
-- **Brand:** Olympia tokens — `#00ffae` green accent, `#0a0f10` dark background
-- **Logo:** ETC diamond (pure vector SVG from olympia-brand repo)
-- **Fonts:** Inter (body) + JetBrains Mono (code)
-- **Tone:** Institutional, confident, factual — like Solana Foundation or Stellar Enterprise Fund
-
-## Branch Strategy
-
-| Branch | Purpose |
-|--------|---------|
-| `main` | Production — deployed after Olympia activates on ETC mainnet |
-| `demo_v0.3` | Active development — aligned with 9-contract governance stack |
-| `demo_v0.2` | Preserved — spec-compliant, 7 pages, live stats, light/dark theme |
-| `demo_v0.1` | Preserved snapshot — fast-iteration development, not ECIP-aligned |
-
-## Related Repos
+## Related
 
 - [olympia-brand](https://github.com/olympiadao/olympia-brand) — Design tokens, logos, favicons
 - [olympiadao-org](https://github.com/olympiadao/olympiadao-org) — Olympia DAO landing page
 - [olympiatreasury-org](https://github.com/olympiadao/olympiatreasury-org) — Treasury dashboard
 - [olympia-app](https://github.com/olympiadao/olympia-app) — Governance UI
-- [olympia-governance-contracts](https://github.com/olympiadao/olympia-governance-contracts) — Governor, Executor, ECFPRegistry
+- [olympia-governance-contracts](https://github.com/olympiadao/olympia-governance-contracts) — Governor, Executor, Registry
 - [olympia-treasury-contract](https://github.com/olympiadao/olympia-treasury-contract) — Treasury vault
+
+## Ethereum Classic Core Developers
+
+- [Cody Burns](https://github.com/realcodywburns)
+- [Chris Mercer](https://github.com/chris-mercer)
+
+## License
+
+[Apache 2.0](LICENSE)
