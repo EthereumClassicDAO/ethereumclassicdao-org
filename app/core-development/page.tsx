@@ -283,21 +283,23 @@ const upgrades: Upgrade[] = [
       { name: "ECIP-1121", url: "https://ecips.ethereumclassic.org/ECIPs/ecip-1121" },
     ],
     eips: [
-      "EIP-1559",
-      "EIP-3198",
       "EIP-1153",
+      "EIP-1559",
       "EIP-2537",
       "EIP-2935",
+      "EIP-3198",
       "EIP-5656",
       "EIP-6780",
       "EIP-7623",
       "EIP-7642",
       "EIP-7702",
+      "EIP-7823",
       "EIP-7825",
       "EIP-7883",
       "EIP-7910",
       "EIP-7934",
       "EIP-7935",
+      "EIP-7939",
       "EIP-7951",
     ],
     keyChanges: ["EIP-1559 fee market (ECIP-1111)", "Protocol treasury (ECIP-1112)", "Fusaka EVM alignment (ECIP-1121)", "DAO governance: core dev, infrastructure, security"],
@@ -481,7 +483,7 @@ export default function TimelinePage() {
                               href={`https://eips.ethereum.org/EIPS/${eip.toLowerCase()}`}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="rounded bg-[rgba(139,92,246,0.08)] px-1.5 py-0.5 font-mono text-[10px] text-violet-400 transition-colors hover:text-violet-300 hover:bg-[rgba(139,92,246,0.14)]"
+                              className="rounded bg-[var(--color-violet-bg)] px-1.5 py-0.5 font-mono text-[10px] text-[var(--color-violet)] transition-colors hover:bg-[var(--color-violet)]/15 hover:text-[var(--color-violet)]/80"
                             >
                               {eip}
                             </a>

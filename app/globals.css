@@ -46,6 +46,10 @@
   --color-error: #ef4444;
   --color-warning: #f59e0b;
   --color-info: #0ea5e9;
+
+  /* EIP badge — violet */
+  --color-violet: #6d28d9;
+  --color-violet-bg: rgba(109, 40, 217, 0.08);
 }
 
 .dark {
@@ -88,6 +92,10 @@
   --color-error: #ef4444;
   --color-warning: #f59e0b;
   --color-info: #38bdf8;
+
+  /* EIP badge — violet */
+  --color-violet: #a78bfa;
+  --color-violet-bg: rgba(167, 139, 250, 0.1);
 }
 
 @theme inline {
