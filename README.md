@@ -4,21 +4,6 @@ Institutional website for **Ethereum Classic DAO LLC**, a Wyoming-registered DAO
 
 **Website:** [ethereumclassicdao.org](https://ethereumclassicdao.org)
 
-## Pages
-
-- **Home** — Mission, live network stats, governance overview
-- **About** — Organization, infrastructure, leadership, values, roadmap
-- **Governance** — Three-layer governance architecture, protocol treasury, on-chain proposals
-- **Clients** — ETC client implementations: Fukuii (Scala) and Core-Geth (Go)
-- **Core Development** — ETC network upgrade timeline from genesis through Olympia
-- **Ecosystem** — Developer tooling, mining infrastructure, institutional products
-- **Investment Products** — ETCG, Grayscale product lifecycle, TradFi access
-- **Regulation** — Regulatory landscape: CLARITY Act, MiCA, Japan FSA
-- **Environmental Impact** — Proof-of-Work energy context and mining network
-- **Olympia** — The Olympia protocol upgrade
-- **Transparency** — Principles, reports, documents
-- **Contact** — Registered agent, engagement channels
-
 ## Built With
 
 - [Next.js 16](https://nextjs.org) (App Router)
