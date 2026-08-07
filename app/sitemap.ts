@@ -66,6 +66,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${base}/timeline`,
+      lastModified: gitDate("app/timeline/page.tsx"),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${base}/contact`,
       lastModified: gitDate("app/contact/page.tsx"),
       changeFrequency: "yearly",
