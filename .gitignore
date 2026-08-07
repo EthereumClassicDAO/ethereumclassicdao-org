@@ -46,17 +46,41 @@ next-env.d.ts
 # secrets & credentials
 credentials.json
 service-account.json
+
+# SSH keys — *.key does not match these, they are extensionless
+id_rsa
+id_ecdsa
+id_ed25519
+
+# Package-registry auth. These carry registry tokens (_authToken, npmAuthIdent).
+# A committed .npmrc can also silently weaken install-time supply-chain settings:
+# pnpm honors kebab-case keys there, so `minimum-release-age=0` disables the
+# machine-wide release-age gate for this project.
+.npmrc
+.yarnrc
+.yarnrc.yml
+service-account.json
 secrets/
 keystore/
 *.keystore
 wallet.json
 mnemonic.txt
 
-# Claude Code working directory (local only)
-.claude/
-CLAUDE.md
+# Claude Code — this directory is TRACKED so repo-local agents, skills and rules
+# travel with the repo. Only machine-local and agent-written state is held back.
+# Do not invert this into a blanket ignore: an agent inside an ignored directory
+# never reaches a clone.
+.claude/settings.local.json
+.claude/worktrees/
+.claude/agent-memory-local/
+.claude/launch.json
+.claude/scheduled_tasks.json
+CLAUDE.local.md
+.claude/**/*.local.*
+.claude/**/*-local/
 
-# Internal development directory
+# Internal development directory — session notes, design briefs, dev logs.
+# Private material belongs here, never in .claude/ or CLAUDE.md.
 .local/
 
 # Planning & internal docs

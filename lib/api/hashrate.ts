@@ -4,10 +4,10 @@
 //   Current:  Blockscout /api/v2/blocks/{height} → difficulty / avg_block_time → TH/s
 //   History:  same formula, 14 sampled blocks per timeframe, all fetched in parallel
 //
-// Block time comes from Blockscout's own `average_block_time`, not a constant.
-// A hardcoded 13s over-reported every figure on the site by ~4.9%: measured over
-// 10,000 blocks the real average is ~13.6s, and /stats already carries it in the
-// same response this module was fetching for the block height.
+// Block time is read from Blockscout's `average_block_time`, never hardcoded.
+// ETC's average drifts with difficulty, so a fixed divisor skews every hashrate
+// figure on the site; /stats carries the live value in the same response this
+// module already fetches for the block height.
 
 const BLOCKSCOUT = "https://etc.blockscout.com/api/v2";
 
