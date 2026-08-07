@@ -75,7 +75,7 @@ const stakeholders: { icon: ElementType; name: string; path: ReactNode }[] = [
           href="https://www.otcmarkets.com/stock/ETCG/quote"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:text-white transition-colors"
+          className="underline underline-offset-2 hover:text-[var(--text-primary)] transition-colors"
         >
           ETCG
         </a>{" "}
@@ -104,7 +104,7 @@ const stakeholders: { icon: ElementType; name: string; path: ReactNode }[] = [
           href="https://classicusd.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:text-white transition-colors"
+          className="underline underline-offset-2 hover:text-[var(--text-primary)] transition-colors"
         >
           Classic USD
         </a>
@@ -113,7 +113,7 @@ const stakeholders: { icon: ElementType; name: string; path: ReactNode }[] = [
           href="https://etcswap.org"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:text-white transition-colors"
+          className="underline underline-offset-2 hover:text-[var(--text-primary)] transition-colors"
         >
           ETCswap
         </a>

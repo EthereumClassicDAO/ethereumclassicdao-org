@@ -27,7 +27,7 @@ export default function PrivacyPage() {
           <FadeIn>
             <div className="mt-12 space-y-8 text-base leading-relaxed text-[var(--text-secondary)]">
               <div>
-                <h2 className="text-lg font-semibold text-white">
+                <h2 className="text-lg font-semibold text-[var(--text-primary)]">
                   No Data Collection
                 </h2>
                 <p className="mt-3">
@@ -39,7 +39,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-lg font-semibold text-white">
+                <h2 className="text-lg font-semibold text-[var(--text-primary)]">
                   External Links
                 </h2>
                 <p className="mt-3">
@@ -52,7 +52,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-lg font-semibold text-white">
+                <h2 className="text-lg font-semibold text-[var(--text-primary)]">
                   Hosting
                 </h2>
                 <p className="mt-3">
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
               </div>
 
               <div>
-                <h2 className="text-lg font-semibold text-white">Contact</h2>
+                <h2 className="text-lg font-semibold text-[var(--text-primary)]">Contact</h2>
                 <p className="mt-3">
                   For questions about this privacy policy, contact us through
                   the channels listed on our{" "}

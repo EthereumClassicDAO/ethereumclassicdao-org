@@ -22,7 +22,7 @@ const infrastructure: { icon: ElementType; category: string; details: ReactNode 
           href="https://www.coingecko.com/en/coins/ethereum-classic#markets"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:text-white transition-colors"
+          className="underline underline-offset-2 hover:text-[var(--text-primary)] transition-colors"
         >
           300+ active markets
         </a>
@@ -46,7 +46,7 @@ const infrastructure: { icon: ElementType; category: string; details: ReactNode 
           href="https://www.otcmarkets.com/stock/ETCG/quote"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:text-white transition-colors"
+          className="underline underline-offset-2 hover:text-[var(--text-primary)] transition-colors"
         >
           ETCG
         </a>
@@ -64,7 +64,7 @@ const infrastructure: { icon: ElementType; category: string; details: ReactNode 
           href="https://wyobiz.wyo.gov/business/FilingDetails.aspx?eFNum=101157225123250204055197221085227098244002050082"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:text-white transition-colors"
+          className="underline underline-offset-2 hover:text-[var(--text-primary)] transition-colors"
         >
           Filing ID 2025-001671865
         </a>
@@ -81,7 +81,7 @@ const infrastructure: { icon: ElementType; category: string; details: ReactNode 
           href="https://classicusd.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:text-white transition-colors"
+          className="underline underline-offset-2 hover:text-[var(--text-primary)] transition-colors"
         >
           Classic USD
         </a>{" "}
@@ -90,7 +90,7 @@ const infrastructure: { icon: ElementType; category: string; details: ReactNode 
           href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/2376957"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:text-white transition-colors"
+          className="underline underline-offset-2 hover:text-[var(--text-primary)] transition-colors"
         >
           NMLS #2376957
         </a>
@@ -181,7 +181,7 @@ export async function InfrastructureSection() {
                       href="https://www.congress.gov/bill/119th-congress/senate-bill/4251"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline underline-offset-2 hover:text-white transition-colors"
+                      className="underline underline-offset-2 hover:text-[var(--text-primary)] transition-colors"
                     >
                       Mined in America Act
                     </a>
