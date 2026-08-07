@@ -334,7 +334,7 @@ export default function UpgradePage() {
             </p>
           </FadeIn>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {ecips.map((item, i) => {
               const Icon = item.icon;
               return (
