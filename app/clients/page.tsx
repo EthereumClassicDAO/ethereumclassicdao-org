@@ -49,7 +49,7 @@ const clients = [
     language: "Go",
     languageColor: "#00ADD8",
     role: "Maintained",
-    roleTheme: "violet" as const,
+    roleTheme: "muted" as const,
     description:
       "A go-ethereum derivative maintained for Ethereum Classic, in maintenance only. It implements the full Olympia specification — ECIP-1111, 1112, 1121 and 1122 — and its Mordor sync is confirmed, so existing operators have a supported path through the upgrade. New deployments should use Fukuii.",
     websiteUrl: "https://github.com/ethereumclassic/core-geth",
@@ -170,7 +170,7 @@ export default async function ClientsPage() {
                         className={`rounded-full px-2 py-0.5 text-xs font-medium ${
                           client.roleTheme === "brand"
                             ? "bg-[var(--brand-green-subtle)] text-[var(--brand-green)]"
-                            : "bg-[var(--color-violet-bg)] text-[var(--color-violet)]"
+                            : "bg-[var(--border-subtle)] text-[var(--text-secondary)]"
                         }`}
                       >
                         {client.role}
