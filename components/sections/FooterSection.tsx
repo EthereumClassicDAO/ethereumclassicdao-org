@@ -43,6 +43,7 @@ const columns: { heading: string; links: FooterLink[] }[] = [
     links: [
       { label: "Olympia Upgrade", href: "/olympia" },
       { label: "Core Development", href: "/core-development" },
+      { label: "Olympia Rollout", href: "/timeline" },
       { label: "Clients", href: "/clients" },
       { label: "Developer Tooling", href: "/ecosystem#tooling" },
       {

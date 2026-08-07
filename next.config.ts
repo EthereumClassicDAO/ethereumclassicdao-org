@@ -12,8 +12,7 @@ const nextConfig: NextConfig = {
       { source: "/governance.html", destination: "/governance",           permanent: true },
       { source: "/fees.html",       destination: "/governance",           permanent: true },
       { source: "/vision.html",     destination: "/about",                permanent: true },
-      { source: "/timeline",         destination: "/core-development",     permanent: true },
-      { source: "/timeline.html",   destination: "/core-development",     permanent: true },
+      { source: "/timeline.html",   destination: "/timeline",             permanent: true },
     ];
   },
 };

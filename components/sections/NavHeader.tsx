@@ -18,6 +18,7 @@ const dropdownGroups = [
     items: [
       { label: "Governance", href: "/governance" },
       { label: "Core Development", href: "/core-development" },
+      { label: "Olympia Rollout", href: "/timeline" },
       { label: "Clients", href: "/clients" },
       { label: "Ecosystem", href: "/ecosystem" },
     ],
