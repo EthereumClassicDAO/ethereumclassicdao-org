@@ -50,6 +50,11 @@ export const metadata: Metadata = {
   ],
 };
 
+// A tag names either an ETC-native mechanism or an Ethereum upgrade the EVM
+// alignment tracks. ETC-native reads green, Ethereum upgrades read violet.
+// Anything absent here falls through to violet, so add ETC tags to this set.
+const ETC_NATIVE_TAGS = new Set(["ETC Native", "Mystique", "MESS"]);
+
 const ecips = [
   {
     ecip: "ECIP-1111",
@@ -355,9 +360,9 @@ export default function UpgradePage() {
                         <span
                           key={tag}
                           className={
-                            tag === "ETC Native" || tag === "Mystique"
+                            ETC_NATIVE_TAGS.has(tag)
                               ? "rounded-full border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] px-2.5 py-0.5 font-mono text-[10px] text-[var(--brand-green)]"
-                              : "rounded-full border border-violet-500/20 bg-violet-500/10 px-2.5 py-0.5 font-mono text-[10px] text-violet-400"
+                              : "rounded-full border border-[var(--color-violet)]/20 bg-[var(--color-violet-bg)] px-2.5 py-0.5 font-mono text-[10px] text-[var(--color-violet)]"
                           }
                         >
                           {tag}

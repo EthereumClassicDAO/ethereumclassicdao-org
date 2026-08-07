@@ -441,8 +441,8 @@ body {
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
-  background: rgba(56, 189, 248, 0.1);
-  color: var(--color-info);
+  background: var(--brand-green-subtle);
+  color: var(--brand-green);
 }
 
 .badge-research {
@@ -465,8 +465,8 @@ body {
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
-  background: var(--border-subtle);
-  color: var(--text-subtle);
+  background: var(--color-sky-bg);
+  color: var(--color-sky);
 }
 
 /* ==========================================
