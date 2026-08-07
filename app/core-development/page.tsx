@@ -350,7 +350,7 @@ const typeLabels: Record<UpgradeType, string> = {
 
 const typeBadge: Record<UpgradeType, string> = {
   genesis: "bg-[rgba(0,255,174,0.12)] text-[var(--brand-green)]",
-  "evm-parity": "bg-[rgba(255,255,255,0.05)] text-[var(--text-muted)]",
+  "evm-parity": "bg-[var(--color-violet-bg)] text-[var(--color-violet)]",
   "etc-native": "bg-[rgba(0,255,174,0.08)] text-[var(--brand-green)]",
   monetary: "bg-[rgba(0,255,174,0.08)] text-[var(--brand-green)]",
   "fork-moment": "bg-[rgba(255,255,255,0.06)] text-[var(--text-secondary)]",
