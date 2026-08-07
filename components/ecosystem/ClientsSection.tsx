@@ -63,7 +63,7 @@ export function ClientsSection() {
                       {primaryClient.status}
                     </span>
                     <span className="inline-flex items-center rounded-full bg-[var(--brand-green-subtle)] px-2.5 py-0.5 text-xs font-semibold text-[var(--brand-green)]">
-                      Olympia Client
+                      ETC-native
                     </span>
                   </div>
                   <p className="mt-1 text-sm text-[var(--text-subtle)]">

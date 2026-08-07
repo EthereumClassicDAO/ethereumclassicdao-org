@@ -51,7 +51,7 @@ const clients = [
     role: "Maintained",
     roleColor: "#a78bfa",
     description:
-      "A go-ethereum derivative maintained for Ethereum Classic — the established client, carried forward through the Olympia upgrade for network continuity. Core-Geth is scheduled to phase out as Fukuii assumes the primary client role in the Olympia era. The upstream go-ethereum plugin architecture is the long-term path, replacing the need for a dedicated fork.",
+      "A go-ethereum derivative maintained for Ethereum Classic, in maintenance only. It implements the full Olympia specification — ECIP-1111, 1112, 1121 and 1122 — and its Mordor sync is confirmed, so existing operators have a supported path through the upgrade. New deployments should use Fukuii.",
     websiteUrl: "https://github.com/ethereumclassic/core-geth",
     docsUrl: "https://github.com/ethereumclassic/core-geth#readme",
     releasesUrl: "https://github.com/ethereumclassic/core-geth/releases",

@@ -90,7 +90,7 @@ const clients = [
     name: "Fukuii",
     language: "Scala",
     languageColor: "#DC322F",
-    role: "Primary Client · Enterprise Grade",
+    badges: ["Primary", "Enterprise", "ETC-native"],
     version: "TBD",
     runtime: "JDK 25+",
     disk: "500 GB+ (SNAP sync)",
@@ -109,7 +109,7 @@ const clients = [
     name: "Core-Geth",
     language: "Go",
     languageColor: "#00ADD8",
-    role: "Legacy Client · Maintenance Mode",
+    badges: ["Maintained", "go-ethereum derivative"],
     version: "TBD",
     runtime: "Go 1.26+",
     disk: "500 GB+ (full sync)",
@@ -575,8 +575,18 @@ export default function UpgradePage() {
                     <div>
                       <h3 className="font-semibold">{client.name}</h3>
                       <span className="text-xs text-[var(--text-muted)]">
-                        {client.role} · {client.language}
+                        {client.language}
                       </span>
+                      <div className="mt-1 flex flex-wrap gap-1">
+                        {client.badges.map((badge) => (
+                          <span
+                            key={badge}
+                            className="rounded-full bg-[var(--brand-green-subtle)] px-2 py-0.5 text-[10px] font-medium text-[var(--brand-green)]"
+                          >
+                            {badge}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                     <span className="ml-auto rounded-full border border-[rgba(255,255,255,0.1)] px-3 py-1 font-mono text-xs text-[var(--text-muted)]">
                       Version: {client.version}
