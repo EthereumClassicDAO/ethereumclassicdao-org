@@ -64,7 +64,7 @@ const stages: Stage[] = [
     description:
       "A futarchy track running as a subordinate DAO alongside membership voting, never replacing it. Traders hold conditional positions on ETC's price under a proposal accepted and rejected, and the branch priced higher wins. Collateral is ETC and Classic USD, both already live, and it is custodied by the conditional-token contracts rather than by the treasury. Its only interface to the treasury is an ordinary funding proposal, like any other applicant.",
     dependsOn:
-      "Stage 2 for the funding path. The conditional-token contracts and their ERC-1155 wrapper are not yet deployed to Ethereum Classic, but that is deployment work rather than a capability gap — they target EVM semantics ETC has had since Spiral in 2024 and could be deployed today, before Olympia activates. Stage 3's position is a sequencing choice. The streaming-disbursement half can proceed ahead of the markets themselves.",
+      "Stage 2 for the funding path. It also needs the conditional-token contracts and an ERC-1155 wrapper on Ethereum Classic — deployment work rather than a capability gap, since both target EVM semantics ETC has had since Spiral in 2024 and are permissionless to deploy. Stage 3's position is a sequencing choice, not a technical dependency. The streaming-disbursement half can proceed ahead of the markets themselves.",
   },
   {
     stage: "Stage 4",
