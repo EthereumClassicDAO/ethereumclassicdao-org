@@ -8,13 +8,16 @@ import { HashrateChart } from "@/components/about/HashrateChart";
 export const metadata: Metadata = {
   title: "ETC Client Implementations — Fukuii and Core-Geth",
   description:
-    "Fukuii (Scala) is a multi-network Ethereum execution layer client — native PoW for ETC and Mordor, Engine API for Sepolia and ETH mainnet. Core-Geth (Go) is actively maintained through the Olympia upgrade. ETC plugins for Besu, Erigon, Go-Ethereum, Nethermind, and Reth are planned post-Olympia.",
+    "Fukuii (Scala 3) is Ethereum Classic's first native client — an EVM execution client running several networks at once in one JVM process, where a further network is configuration rather than a new client. Core-Geth (Go), a go-ethereum derivative, is maintained through the Olympia upgrade. ETC compatibility plugins extend support to Besu, Erigon, Ethrex, Go-Ethereum, Nethermind, and Reth.",
   keywords: [
     "Fukuii",
     "Core-Geth",
     "Ethereum Classic client",
     "ETC node",
     "Scala blockchain client",
+    "EVM execution client",
+    "JVM Ethereum client",
+    "multi-network EVM client",
     "Go Ethereum Classic",
     "ETC full node",
     "blockchain client implementation",
@@ -36,10 +39,10 @@ const clients = [
     role: "Primary",
     roleColor: "brand",
     description:
-      "Ethereum execution layer client in Scala 3 — native Proof-of-Work consensus for Ethereum Classic and Mordor, plus Engine API V1–V4 for post-Merge Ethereum. Pairs with Lighthouse, Prysm, Teku, Lodestar, or Nimbus to run Sepolia and ETH mainnet. One binary, four networks. The primary ETC client for the Olympia era.",
-    websiteUrl: "https://fukuii.com",
-    docsUrl: "https://chippr-robotics.github.io/fukuii",
-    releasesUrl: "https://github.com/chippr-robotics/fukuii/releases",
+      "EVM execution client in Scala 3 — one binary runs several networks at once in one JVM process, each isolated with its own state, metrics, and configuration. A further network is configuration rather than a new client. Consensus is selected per deployment: native Proof-of-Work for Ethereum Classic and Mordor, or Proof-of-Stake with a built-in consensus layer or an external client over the Engine API. Ethereum Classic's first native client — built ground-up for ETC rather than derived from an Ethereum client — and the primary ETC client for the Olympia era.",
+    websiteUrl: "https://fukuii.org",
+    docsUrl: "https://docs.fukuii.org",
+    releasesUrl: "https://github.com/fukuii-project/fukuii-cli/releases",
   },
   {
     name: "Core-Geth",
@@ -48,52 +51,55 @@ const clients = [
     role: "Maintained",
     roleColor: "#a78bfa",
     description:
-      "The legacy ETC client, actively maintained and carried forward through the Olympia upgrade for network continuity. Core-Geth is scheduled to phase out as Fukuii assumes the primary client role in the Olympia era. The upstream go-ethereum plugin architecture is the long-term path, replacing the need for a dedicated fork.",
+      "A go-ethereum derivative maintained for Ethereum Classic — the established client, carried forward through the Olympia upgrade for network continuity. Core-Geth is scheduled to phase out as Fukuii assumes the primary client role in the Olympia era. The upstream go-ethereum plugin architecture is the long-term path, replacing the need for a dedicated fork.",
     websiteUrl: "https://github.com/ethereumclassic/core-geth",
     docsUrl: "https://github.com/ethereumclassic/core-geth#readme",
     releasesUrl: "https://github.com/ethereumclassic/core-geth/releases",
   },
 ];
 
+// Cards link the upstream project each plugin targets.
 const plugins = [
   {
     name: "Besu",
     language: "Java",
     languageColor: "#B07219",
-    releasesUrl: "https://github.com/ethereumclassic/besu/releases",
-    docsUrl: "https://github.com/ethereumclassic/besu#readme",
+    upstreamUrl: "https://github.com/besu-eth/besu",
     description: "A plugin that adds ETC support into the Besu codebase.",
   },
   {
     name: "Erigon",
     language: "Go",
     languageColor: "#00ADD8",
-    releasesUrl: "https://github.com/ethereumclassic/erigon/releases",
-    docsUrl: "https://github.com/ethereumclassic/erigon#readme",
+    upstreamUrl: "https://github.com/erigontech/erigon",
     description: "A plugin that adds ETC support into the Erigon codebase.",
+  },
+  {
+    name: "Ethrex",
+    language: "Rust",
+    languageColor: "#DEA584",
+    upstreamUrl: "https://github.com/lambdaclass/ethrex",
+    description: "A plugin that adds ETC support into the Ethrex codebase.",
   },
   {
     name: "Go-Ethereum",
     language: "Go",
     languageColor: "#00ADD8",
-    releasesUrl: "https://github.com/ethereumclassic/go-ethereum/releases",
-    docsUrl: "https://github.com/ethereumclassic/go-ethereum#readme",
+    upstreamUrl: "https://github.com/ethereum/go-ethereum",
     description: "A plugin that adds ETC support into the Go-Ethereum codebase.",
   },
   {
     name: "Nethermind",
     language: "C#",
     languageColor: "#178600",
-    releasesUrl: "https://github.com/ethereumclassic/nethermind/releases",
-    docsUrl: "https://github.com/ethereumclassic/nethermind#readme",
+    upstreamUrl: "https://github.com/NethermindEth/nethermind",
     description: "A plugin that adds ETC support into the Nethermind codebase.",
   },
   {
     name: "Reth",
     language: "Rust",
     languageColor: "#DEA584",
-    releasesUrl: "https://github.com/ethereumclassic/reth/releases",
-    docsUrl: "https://github.com/ethereumclassic/reth#readme",
+    upstreamUrl: "https://github.com/paradigmxyz/reth",
     description: "A plugin that adds ETC support into the Reth codebase.",
   },
 ];
@@ -222,12 +228,12 @@ export default async function ClientsPage() {
               ETC Plugins
             </h2>
             <p className="mb-6 text-sm text-[var(--text-muted)]">
-              ETC compatibility layers for major upstream clients — bringing Ethereum Classic
-              support to the broader Ethereum client ecosystem without maintaining full forks.
+              ETC compatibility layers that bring Ethereum Classic support to major upstream
+              clients without maintaining full forks.
             </p>
           </FadeIn>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {plugins.map((plugin, i) => (
               <FadeIn key={plugin.name} delay={300 + i * 80} className="h-full">
                 <div className="h-full rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-5">
@@ -260,20 +266,12 @@ export default async function ClientsPage() {
 
                   <div className="mt-3 flex gap-3">
                     <a
-                      href={plugin.releasesUrl}
+                      href={plugin.upstreamUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-xs font-medium text-[var(--brand-green)] transition hover:opacity-80"
                     >
-                      Releases <ExternalLink size={11} />
-                    </a>
-                    <a
-                      href={plugin.docsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs font-medium text-[var(--brand-green)] transition hover:opacity-80"
-                    >
-                      Docs <ExternalLink size={11} />
+                      Upstream <ExternalLink size={11} />
                     </a>
                   </div>
                 </div>

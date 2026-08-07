@@ -21,7 +21,7 @@ const phases = [
     status: "complete" as const,
     period: "2025 Q1 – 2025 Q4",
     description:
-      "Three independent client implementations built and tested. Core-Geth (Go), Hyperledger Besu (Java), and Fukuii (Scala) each implement the full Olympia specification independently, ensuring no single point of failure.",
+      "Two client implementations built and tested. Fukuii (Scala), Ethereum Classic's first native client, and Core-Geth (Go), a go-ethereum derivative, each implement the full Olympia specification, so no single codebase is a point of failure.",
   },
   {
     name: "Governance Contracts",

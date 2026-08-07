@@ -5,8 +5,8 @@ const primaryClient = {
   name: "Fukuii",
   language: "Scala",
   description:
-    "Purpose-built for Ethereum Classic, an independent implementation designed from the ground up for performance, security, and protocol parity. Primary client for the Olympia upgrade.",
-  github: "https://github.com/ethereumclassic/fukuii",
+    "Ethereum Classic's first native client — built ground-up for ETC rather than derived from an Ethereum client. An EVM execution client in Scala 3: one binary runs several networks at once in one JVM process, with consensus selected per deployment. Primary client for the Olympia upgrade.",
+  github: "https://github.com/fukuii-project/fukuii-cli",
   status: "Primary",
 };
 
@@ -15,7 +15,7 @@ const secondaryClients = [
     name: "Core-Geth",
     language: "Go",
     description:
-      "The established ETC mainnet client, continuing in a maintenance role through the Olympia upgrade and beyond. Go-based implementation with broad infrastructure support.",
+      "A go-ethereum derivative maintained for Ethereum Classic, continuing in a maintenance role through the Olympia upgrade and beyond. Broad infrastructure support across the Go ecosystem.",
     github: "https://github.com/ethereumclassic/core-geth",
     status: "Maintained",
   },
@@ -23,9 +23,9 @@ const secondaryClients = [
     name: "ETC Plugins",
     language: "",
     description:
-      "ETC compatibility layers for Besu, Erigon, Go-Ethereum, and Nethermind bring Ethereum Classic support to the broader Ethereum client ecosystem without maintaining full forks.",
+      "ETC compatibility layers for Besu, Erigon, Ethrex, Go-Ethereum, Nethermind, and Reth bring Ethereum Classic support to the broader Ethereum client ecosystem without maintaining full forks.",
     github: "/clients",
-    status: "Plugins",
+    status: "Future",
   },
 ];
 
@@ -41,12 +41,12 @@ export function ClientsSection() {
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Multi-client architecture eliminates single points of failure at
-              the protocol layer. Independent implementations in distinct
-              languages, maintained by separate teams, ensure the network can
-              withstand the discontinuation or compromise of any single
-              codebase. Fukuii, Core-Geth, and ETC compatibility plugins for
-              Besu, Erigon, Go-Ethereum, and Nethermind provide implementation
-              diversity without fragmenting the ecosystem.
+              the protocol layer. Fukuii is Ethereum Classic&rsquo;s first native
+              client; Core-Geth is a go-ethereum derivative maintained for ETC.
+              Distinct codebases in distinct languages, maintained by separate
+              teams, mean the network can withstand the discontinuation or
+              compromise of any single one. ETC compatibility plugins extend that
+              reach to Besu, Erigon, Ethrex, Go-Ethereum, Nethermind, and Reth.
             </p>
           </FadeIn>
 

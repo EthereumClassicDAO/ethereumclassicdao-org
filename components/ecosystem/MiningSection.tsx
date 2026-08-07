@@ -171,7 +171,7 @@ export async function MiningSection() {
                 participation, decentralizing hashrate across geographies and
                 reducing supply chain risk. Run{" "}
                 <a
-                  href="https://github.com/ethereumclassic/fukuii"
+                  href="https://github.com/fukuii-project/fukuii-cli"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-mono font-semibold text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
