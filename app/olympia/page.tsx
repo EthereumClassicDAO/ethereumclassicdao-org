@@ -335,7 +335,7 @@ export default function UpgradePage() {
               What Olympia Brings to Ethereum Classic
             </h2>
             <p className="mb-8 text-sm text-[var(--text-muted)]">
-              Four protocol changes in a single activation: a fee market that funds a protocol-controlled treasury, Glamsterdam-era EVM alignment that closes years of tooling divergence so every Ethereum library and framework works on ETC without modification, client security parameters that restore chain-reorganization resistance, and the institutional access profile that follows. All of it on the only Proof-of-Work smart contract platform in the world.
+              Four protocol changes in a single activation: an EIP-1559 fee market that redirects the basefee rather than burning it, a protocol treasury that receives it and funds core development without foundation or donor dependency, Glamsterdam-era EVM alignment that closes years of tooling divergence so every Ethereum library and framework works on ETC without modification, and client security parameters that restore chain-reorganization resistance. All of it on the only Proof-of-Work smart contract platform in the world.
             </p>
           </FadeIn>
 
