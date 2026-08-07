@@ -188,7 +188,7 @@ const evmCategories = [
     icon: Layers,
     eips: ["EIP-7623", "EIP-7702", "EIP-7823", "EIP-7825", "EIP-7883", "EIP-7935"],
     description:
-      "Account delegation, cheaper calldata, gas limit enforcement, MODEXP input bounds, opcode repricing, and jumpdest removal. Reduces transaction costs and enables smart account patterns without protocol changes.",
+      "Account delegation for EOAs, recalibrated calldata and MODEXP pricing, MODEXP input bounds, a per-transaction gas cap, and a 60M default gas limit. Aligns gas accounting with real resource cost and enables smart account patterns without protocol changes.",
   },
   {
     title: "EVM Safety",

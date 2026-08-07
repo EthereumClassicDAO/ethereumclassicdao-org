@@ -30,10 +30,10 @@ The Olympia era marks a shift from reactive maintenance to active development on
 **ECIP-1121 — EVM Compatibility:** Advances the ETC execution layer through Dencun (Cancun-Deneb), Pectra (Prague-Electra), Fusaka (Fulu-Osaka), and Glamsterdam (Gloas-Amsterdam). ETC implemented partial London EIPs in Mystique (2022) and partial Shanghai EIPs in Spiral (2024), deferring the EIP-1559 fee market for independent governance design. ECIP-1111 delivers those deferred London fee market EIPs (EIP-1559 + EIP-3198). ECIP-1121 fills the remaining Shanghai gaps from Spiral's partial implementation and delivers the execution-layer EIPs from Dencun, Pectra, Fusaka, and Glamsterdam that are independent of Proof-of-Stake and blob data availability.
 
 Included EIP categories:
-- Gas & State Access: EIP-7702 (account delegation), EIP-7623 (calldata cost), EIP-7825 (gas limit cap), EIP-7883 (MODEXP price fix), EIP-7935 (gas limit default)
+- Gas & State Access: EIP-7702 (account delegation for EOAs), EIP-7623 (increased calldata cost), EIP-7823 (MODEXP input upper bounds), EIP-7825 (per-transaction gas cap), EIP-7883 (MODEXP gas cost increase), EIP-7935 (60M default gas limit)
 - EVM Safety: EIP-6780 (SELFDESTRUCT restriction), EIP-7934 (RLP block size limit), EIP-7910 (eth_config RPC method), EIP-7997 (deterministic CREATE2 factory predeploy, same address as every other EVM chain)
 - Cryptographic Precompiles: EIP-2537 (BLS12-381 for ZK-friendly proofs), EIP-7951 (P256VERIFY for WebAuthn / passkeys)
-- Execution Context: EIP-5656 (MCOPY memory copy), EIP-2935 (historical block hashes in state), EIP-1153 (transient storage TSTORE/TLOAD)
+- Execution Context: EIP-5656 (MCOPY memory copy), EIP-2935 (historical block hashes in state), EIP-1153 (transient storage TSTORE/TLOAD), EIP-7939 (CLZ count-leading-zeros opcode)
 - Networking (activates via devp2p capability negotiation, no hard fork): EIP-7642 (eth/69, retains total difficulty for PoW chain selection, drops receipt bloom filters), EIP-7975 (eth/70, paginated receipts for blocks above the p2p size limit)
 
 Explicitly excluded: all blob-dependent EIPs (EIP-4844, EIP-7516, EIP-7691). Ethereum Classic is a pure Layer 1 execution chain with no data availability requirement: blobs are L2 scaffolding ETC does not need.

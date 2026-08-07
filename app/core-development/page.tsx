@@ -301,6 +301,8 @@ const upgrades: Upgrade[] = [
       "EIP-7935",
       "EIP-7939",
       "EIP-7951",
+      "EIP-7975",
+      "EIP-7997",
     ],
     keyChanges: ["EIP-1559 fee market (ECIP-1111)", "Protocol treasury (ECIP-1112)", "Glamsterdam EVM alignment (ECIP-1121)", "DAO governance: core dev, infrastructure, security"],
     description:

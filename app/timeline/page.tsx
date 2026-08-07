@@ -14,7 +14,7 @@ const phases = [
     status: "complete" as const,
     period: "2024 Q3 – 2025 Q2",
     description:
-      "Five core ECIPs drafted and submitted: ECIP-1111 (EIP-1559 Fee Market), ECIP-1112 (Protocol Treasury), ECIP-1113 (DAO Governance), ECIP-1114 (ECFP Funding Process), ECIP-1121 (EVM Alignment with Glamsterdam). Community review on the ECIP repository.",
+      "Five core ECIPs drafted and submitted: ECIP-1111 (EIP-1559 Fee Market), ECIP-1112 (Protocol Treasury), ECIP-1113 (DAO Governance), ECIP-1114 (OFP Funding Process), ECIP-1121 (EVM Alignment with Glamsterdam). Community review on the ECIP repository.",
   },
   {
     name: "Client Implementation",
@@ -28,14 +28,14 @@ const phases = [
     status: "complete" as const,
     period: "2025 Q3 – 2026 Q1",
     description:
-      "Smart contract suite deployed and tested: OlympiaTreasury, OlympiaGovernor, OlympiaExecutor, TimelockController, ECFPRegistry, SanctionsOracle, OlympiaMemberNFT. Demo v0.3 deployed to both Mordor testnet and ETC mainnet.",
+      "Smart contract suite deployed and tested: OlympiaTreasury, OlympiaGovernor, OlympiaExecutor, TimelockController, OFPRegistry, SanctionsOracle, CoreNFT. Demo v0.3 deployed to both Mordor testnet and ETC mainnet.",
   },
   {
     name: "Testnet Deployment",
     status: "active" as const,
     period: "2026 Q1 – Present",
     description:
-      "Mordor testnet deployment and validation. All three clients syncing and producing blocks. Cross-client compatibility verified through the Hive integration testing framework. SNAP sync validated between clients.",
+      "Mordor testnet deployment and validation. Both clients syncing and producing blocks. Cross-client compatibility verified through the Hive integration testing framework. SNAP sync validated between clients.",
   },
   {
     name: "Olympia Upgrade Core Developers Call",

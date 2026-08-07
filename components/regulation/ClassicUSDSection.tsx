@@ -26,7 +26,7 @@ const attributes: { icon: typeof ShieldCheck; title: string; description: ReactN
     icon: FileCheck,
     title: "Smart Contract Security",
     description:
-      "ERC-20 standard with transparent proxy pattern (EIP-1967). Role-based access control, pause mechanism, multi-signature requirements, and timelock delays for all significant protocol changes.",
+      "ERC-20 standard with transparent proxy pattern (ERC-1967). Role-based access control, pause mechanism, multi-signature requirements, and timelock delays for all significant protocol changes.",
   },
 ];
 
@@ -99,7 +99,7 @@ export function ClassicUSDSection() {
                       { label: "Network", value: "Ethereum Classic · Chain 61" },
                       { label: "Backing", value: "1:1 USD · Segregated" },
                       { label: "Issuer", value: <><a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/2376957" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">Brale Inc. · NMLS #2376957</a></> },
-                      { label: "Standard", value: "ERC-20 · EIP-1967 Proxy" },
+                      { label: "Standard", value: "ERC-20 · ERC-1967 Proxy" },
                     ] as { label: string; value: ReactNode }[]).map((item) => (
                       <div key={item.label}>
                         <p className="text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">{item.label}</p>
