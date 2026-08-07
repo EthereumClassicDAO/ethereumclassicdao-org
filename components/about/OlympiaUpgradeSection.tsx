@@ -20,9 +20,9 @@ export function OlympiaUpgradeSection() {
             <div className="mt-4 rounded-xl p-8 border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] space-y-4 text-base leading-relaxed text-[var(--text-secondary)]">
               <p>
                 Olympia is Ethereum Classic&rsquo;s most significant protocol
-                upgrade. Three changes arrive in a single activation: Fusaka
-                EVM alignment, EIP-1559 fee market, and a protocol-managed
-                treasury.
+                upgrade. Three changes arrive in a single activation:
+                Glamsterdam EVM alignment, EIP-1559 fee market, and a
+                protocol-managed treasury.
               </p>
               <p>
                 The EVM alignment is the most technically expansive change.
@@ -33,7 +33,8 @@ export function OlympiaUpgradeSection() {
                 single upgrade boundary: ECIP-1111 delivers the London fee
                 market deferred by Mystique, and ECIP-1121 fills the
                 remaining Shanghai gaps from Spiral and advances through
-                Dencun, Pectra, and Fusaka. Every Solidity compiler version,
+                Dencun, Pectra, Fusaka, and Glamsterdam. Every Solidity
+                compiler version,
                 every deployment tool (Foundry, Hardhat), and every major
                 library (wagmi, viem, ethers.js) works on ETC without
                 modification or ETC-specific overrides.

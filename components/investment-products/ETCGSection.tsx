@@ -243,7 +243,7 @@ export async function ETCGSection() {
                 {[
                   "Unique regulatory surface: ETC inherits the commodity profile that Bitcoin established for Proof-of-Work networks and the programmable finance frameworks that Ethereum established for smart contract platforms. It is the only network that occupies both positions simultaneously.",
                   "Classic USD ($USC) by Brale is live on ETC mainnet: a 1:1 USD-backed stablecoin issued under US money transmission licensing. First regulated stablecoin on a Proof-of-Work EVM.",
-                  "Olympia upgrade: EIP-1559 fee market with basefee-funded protocol treasury and full Fusaka EVM parity. Every current Ethereum tool, library, and framework works on ETC without modification.",
+                  "Olympia upgrade: EIP-1559 fee market with basefee-funded protocol treasury and Glamsterdam-era EVM parity. Every current Ethereum tool, library, and framework works on ETC without modification.",
                   "Original EVM, in continuous operation since July 2015. Longer operational track record than any competing smart contract platform.",
                   "Post-Merge infrastructure: the largest Proof-of-Work network with native smart contracts, having absorbed significant Ethereum mining capacity. Retail GPU access and institutional ASIC hardware available.",
                   "300+ exchanges, 17 fiat currency pairs, continuous ETC/USD price discovery since 2016. The liquidity depth required for a credible global stablecoin settlement layer.",

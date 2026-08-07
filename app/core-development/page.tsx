@@ -270,9 +270,9 @@ const upgrades: Upgrade[] = [
   },
   {
     name: "Olympia",
-    subtitle: "Fusaka + EIP-1559 + DAO Governance",
+    subtitle: "Glamsterdam + EIP-1559 + DAO Governance",
     block: "Pending Activation Block",
-    date: "Before 2027",
+    date: "2027",
     type: "olympia",
     additionalTags: ["etc-native", "evm-parity"],
     ecip: null,
@@ -302,9 +302,9 @@ const upgrades: Upgrade[] = [
       "EIP-7939",
       "EIP-7951",
     ],
-    keyChanges: ["EIP-1559 fee market (ECIP-1111)", "Protocol treasury (ECIP-1112)", "Fusaka EVM alignment (ECIP-1121)", "DAO governance: core dev, infrastructure, security"],
+    keyChanges: ["EIP-1559 fee market (ECIP-1111)", "Protocol treasury (ECIP-1112)", "Glamsterdam EVM alignment (ECIP-1121)", "DAO governance: core dev, infrastructure, security"],
     description:
-      "EVM alignment to Fusaka, incorporating EIPs spanning London, Dencun, Pectra, and Fusaka on a single upgrade boundary. Introduces EIP-1559 with basefee directed to a protocol treasury — the funding model first identified during the 2022 Mystique upgrade. On-chain DAO governance, built on the OpenZeppelin 5.x contract suite, is scoped to core client software, critical infrastructure, and network security, with funding proposals open to any ETC account. A subsequent phase introduces open futarchy prediction markets — public staking on protocol outcomes with rewards for accurate predictions.",
+      "EVM alignment to Glamsterdam, incorporating EIPs spanning London, Dencun, Pectra, Fusaka, and Glamsterdam on a single upgrade boundary. Introduces EIP-1559 with basefee directed to a protocol treasury — the funding model first identified during the 2022 Mystique upgrade. On-chain DAO governance, built on the OpenZeppelin 5.x contract suite, is scoped to core client software, critical infrastructure, and network security, with funding proposals open to any ETC account. A subsequent phase introduces open futarchy prediction markets — public staking on protocol outcomes with rewards for accurate predictions.",
     status: "upcoming",
   },
 ];

@@ -6,9 +6,9 @@ const stages = [
     title: "Consensus Upgrades",
     status: "complete" as const,
     description:
-      "Full Fusaka EVM parity in a single upgrade — every Ethereum tool and framework works on ETC without modification. EIP-1559 fee market and protocol treasury funded by basefee revenue complete the package.",
+      "Glamsterdam-era EVM parity in a single upgrade — every Ethereum tool and framework works on ETC without modification. EIP-1559 fee market and protocol treasury funded by basefee revenue complete the package.",
     deliverables: [
-      "Fusaka EVM parity: Dencun, Pectra, Fusaka EIPs (ECIP-1121)",
+      "Glamsterdam EVM parity: Dencun, Pectra, Fusaka, and Glamsterdam EIPs (ECIP-1121)",
       "EIP-1559 fee market (ECIP-1111)",
       "Protocol treasury funded by basefee (ECIP-1112)",
     ],
@@ -46,13 +46,13 @@ const stages = [
     title: "Treasury Distribution",
     status: "future" as const,
     description:
-      "A smart contract smoothing curve is the only technically feasible way to supplement miner security budgets as fixed-emission block subsidies decline — without touching consensus-layer rewards. Implemented at the contract layer, parameters are adjustable through governance without a hard fork, making it uniquely modular. ECIP-1115 and ECIP-1017 are a complementary system: ECIP-1017's predictable 5M20 emission schedule defines the decline curve; ECIP-1115 lets the treasury respond to it dynamically.",
+      "A smoothing curve supplements miner security budgets as fixed-emission block subsidies decline. It arrives in two stages, deliberately. ECIP-1115 runs it at the contract layer, where the allocation fraction, window, and curve shape are adjustable through governance without a hard fork — so the network can find the right curve empirically while ECIP-1017 block rewards are still securing it. Once a curve is proven, ECIP-1116 graduates it: a hard fork embeds that curve into block finalization, paid by the protocol rather than disbursed from the treasury, and no longer adjustable by governance. ECIP-1017's predictable 5M20 emission schedule defines the decline curve this responds to.",
     deliverables: [
-      "Only technically feasible approach to smoothing — contract layer, no consensus changes",
-      "Treasury smoothing algorithm (ECIP-1115)",
+      "Treasury smoothing algorithm at the contract layer (ECIP-1115)",
+      "Parameters adjustable through governance without a hard fork during the experimental stage",
+      "Consensus-layer hardening of the proven curve (ECIP-1116) — a later, separate hard fork",
       "Complements ECIP-1017's 5M20 emission schedule — treasury responds as subsidies decline",
-      "Parameters adjustable through governance without a hard fork",
-      "Modular by design — can be tuned, paused, or deprecated independently",
+      "Sequenced by design: experiment while block rewards still secure the network, harden before they stop",
     ],
   },
   {

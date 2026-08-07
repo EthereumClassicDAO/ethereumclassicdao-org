@@ -14,7 +14,7 @@ const phases = [
     status: "complete" as const,
     period: "2024 Q3 – 2025 Q2",
     description:
-      "Five core ECIPs drafted and submitted: ECIP-1111 (EIP-1559 Fee Market), ECIP-1112 (Protocol Treasury), ECIP-1113 (DAO Governance), ECIP-1114 (ECFP Funding Process), ECIP-1121 (EVM Alignment with Fusaka). Community review on the ECIP repository.",
+      "Five core ECIPs drafted and submitted: ECIP-1111 (EIP-1559 Fee Market), ECIP-1112 (Protocol Treasury), ECIP-1113 (DAO Governance), ECIP-1114 (ECFP Funding Process), ECIP-1121 (EVM Alignment with Glamsterdam). Community review on the ECIP repository.",
   },
   {
     name: "Client Implementation",
