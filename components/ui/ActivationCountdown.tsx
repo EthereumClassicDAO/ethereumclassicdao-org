@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const FALLBACK_TARGET_MS = new Date("2027-01-01T00:00:00Z").getTime();
+const FALLBACK_TARGET_MS = new Date("2027-03-31T00:00:00Z").getTime();
 
 function DigitBox({ value, label }: { value: number; label: string }) {
   return (
@@ -52,7 +52,7 @@ export function ActivationCountdown() {
         <DigitBox value={secs} label="Seconds" />
       </div>
       <p className="mb-4 text-[10px] italic text-[var(--text-muted)] opacity-60">
-        * Countdown is set to January 1, 2027 until the ETC mainnet activation block is set
+        * Countdown is set to March 31, 2027 until the ETC mainnet activation block is set
       </p>
       <div className="mb-2 flex items-center justify-center gap-2">
         <span aria-hidden="true" className="h-2 w-2 animate-pulse rounded-full bg-[var(--brand-green)]" />
