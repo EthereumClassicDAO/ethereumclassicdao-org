@@ -220,13 +220,15 @@ Ethereum Classic mainnet upgrades from genesis through Olympia (sourced from ECI
 7. **Gotham / 5M20** (Block 5,000,000, 2017-12-11) — ECIP-1017. Fixed monetary policy, 210,700,000 max supply.
 8. **Defuse Difficulty Bomb** (Block 5,900,000, 2018-05-29) — ECIP-1041. Difficulty bomb permanently removed.
 9. **Atlantis / Byzantium** (Block 8,772,000, 2019-09-12) — ECIP-1054. ZK precompiles, REVERT opcode, receipt status.
-10. **Agharta / Constantinople** (Block 9,583,000, 2020-01-11) — ECIP-1056. Bitwise shift, CREATE2, EXTCODEHASH.
+10. **Agharta / Constantinople** (Block 9,573,000, 2020-01-11) — ECIP-1056. Bitwise shift, CREATE2, EXTCODEHASH.
 11. **Phoenix / Istanbul** (Block 10,500,839, 2020-06-01) — ECIP-1088. BLAKE2 precompile, CHAINID opcode.
-12. **Thanos / ETChash + MESS** (Block 11,700,000, 2020-11-28) — ECIP-1099, ECIP-1100. ETChash algorithm, MESS finality.
-13. **Magneto / Berlin** (Block 13,189,133, 2021-07-23) — ECIP-1103. Typed transactions, access lists, cold storage repricing.
-14. **Mystique / London (partial)** (Block 14,525,000, 2022-02-12) — ECIP-1104. Gas refund reduction, 0xEF prefix reserved.
-15. **Spiral / Shanghai** (Block 19,250,000, 2024-02-04) — ECIP-1109. PUSH0, warm COINBASE, initcode limit.
-16. **Olympia / Glamsterdam** (Pending activation, 2027) — ECIP-1111, ECIP-1112, ECIP-1121. EIP-1559 fee market, protocol treasury, Glamsterdam EVM alignment (18 EIPs spanning London through Glamsterdam).
+12. **MESS Default: On / ECBP-1100** (Block 11,380,000, 2020-10-09) — ECIP-1100. Exponential chain scoring replaces linear total difficulty, raising the cost of low-hashrate reorganization attacks.
+13. **Thanos / ETChash** (Block 11,700,000, 2020-11-28) — ECIP-1099. ETChash algorithm, DAG growth reduction, GPU mining preserved.
+14. **Magneto / Berlin** (Block 13,189,133, 2021-07-23) — ECIP-1103. Typed transactions, access lists, cold storage repricing.
+15. **Mystique / London (partial)** (Block 14,525,000, 2022-02-12) — ECIP-1104. Gas refund reduction, 0xEF prefix reserved.
+16. **Spiral / Shanghai** (Block 19,250,000, 2024-02-04) — ECIP-1109. PUSH0, warm COINBASE, initcode limit.
+17. **MESS Default: Off / ECBP-1110** (Block 19,250,000, 2024-02-04) — ECIP-1110. Default set to off after a period of low hashrate; set back to on at Olympia by ECIP-1122.
+18. **Olympia / Glamsterdam** (Pending activation, 2027) — ECIP-1111, ECIP-1112, ECIP-1121, ECIP-1122. EIP-1559 fee market, protocol treasury, Glamsterdam EVM alignment (18 EIPs spanning London through Glamsterdam).
 
 ## Olympia Upgrade FAQ
 

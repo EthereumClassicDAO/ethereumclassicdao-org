@@ -6,7 +6,7 @@ import { PropertiesSection } from "@/components/ecosystem/PropertiesSection";
 export const metadata: Metadata = {
   title: "Core Development Timeline | Ethereum Classic DAO",
   description:
-    "Every network upgrade applied to Ethereum Classic mainnet — from the Frontier genesis block in July 2015 through Olympia. 16 completed upgrades sourced from ECIP-1066.",
+    "Every network upgrade applied to Ethereum Classic mainnet — from the Frontier genesis block in July 2015 through Olympia. 17 completed upgrades sourced from ECIP-1066.",
 };
 
 type UpgradeType =
@@ -176,7 +176,7 @@ const upgrades: Upgrade[] = [
   {
     name: "Agharta",
     subtitle: "Constantinople + Petersburg",
-    block: "Block 9,583,000",
+    block: "Block 9,573,000",
     date: "2020-01-11",
     type: "evm-parity",
     ecip: "ECIP-1056",
@@ -209,8 +209,22 @@ const upgrades: Upgrade[] = [
     status: "complete",
   },
   {
+    name: "MESS Default: On",
+    subtitle: "ECBP-1100",
+    block: "Block 11,380,000",
+    date: "2020-10-09",
+    type: "etc-native",
+    ecip: "ECIP-1100",
+    ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1100",
+    eips: [],
+    keyChanges: ["ECBP-1100 default set to on", "Exponential chain scoring replaces linear total difficulty", "Raises the cost of low-hashrate reorganization attacks"],
+    description:
+      "MESS scores competing chains exponentially rather than linearly by total difficulty, making a deep reorganization far more expensive to mount than accumulated difficulty alone would suggest. Enabled as a client default rather than a consensus rule — a non-implementing client provides weaker reorg resistance without forking from the canonical chain.",
+    status: "complete",
+  },
+  {
     name: "Thanos",
-    subtitle: "ETChash + MESS",
+    subtitle: "ETChash",
     block: "Block 11,700,000",
     date: "2020-11-28",
     type: "etc-native",
@@ -218,12 +232,11 @@ const upgrades: Upgrade[] = [
     ecipUrl: null,
     ecips: [
       { name: "ECIP-1099", url: "https://ecips.ethereumclassic.org/ECIPs/ecip-1099" },
-      { name: "ECIP-1100", url: "https://ecips.ethereumclassic.org/ECIPs/ecip-1100" },
     ],
     eips: [],
-    keyChanges: ["ETChash algorithm", "DAG growth reduction", "MESS finality mechanism", "GPU mining preserved", "All Ethash ASICs absorbed post-Merge"],
+    keyChanges: ["ETChash algorithm", "DAG growth reduction", "GPU mining preserved", "All Ethash ASICs absorbed post-Merge"],
     description:
-      "Introduced ETChash — a modified DAG growth algorithm keeping ETC mineable on GPU hardware — and MESS (Modified Exponential Subjective Scoring) for chain finality. Following Ethereum's Merge, ETC absorbed a significant portion of the global GPU mining network and every purpose-built Ethash ASIC miner — the only chain still running an ETChash-compatible algorithm.",
+      "Introduced ETChash — a modified DAG growth algorithm keeping ETC mineable on GPU hardware. Following Ethereum's Merge, ETC absorbed a significant portion of the global GPU mining network and every purpose-built Ethash ASIC miner — the only chain still running an ETChash-compatible algorithm.",
     status: "complete",
   },
   {
@@ -269,6 +282,20 @@ const upgrades: Upgrade[] = [
     status: "complete",
   },
   {
+    name: "MESS Default: Off",
+    subtitle: "ECBP-1110",
+    block: "Block 19,250,000",
+    date: "2024-02-04",
+    type: "etc-native",
+    ecip: "ECIP-1110",
+    ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1110",
+    eips: [],
+    keyChanges: ["ECBP-1100 default set to off", "Chain scoring returns to linear total difficulty", "Default set back to on at Olympia by ECIP-1122"],
+    description:
+      "The ECBP-1100 default was set to off following a period of low network hashrate, at the same block as Spiral. The resulting gap in chain reorganization resistance is closed by ECIP-1122, which sets the default back to on at the Olympia activation block.",
+    status: "complete",
+  },
+  {
     name: "Olympia",
     subtitle: "Glamsterdam + EIP-1559 + DAO Governance",
     block: "Pending Activation Block",
@@ -281,6 +308,7 @@ const upgrades: Upgrade[] = [
       { name: "ECIP-1111", url: "https://ecips.ethereumclassic.org/ECIPs/ecip-1111" },
       { name: "ECIP-1112", url: "https://ecips.ethereumclassic.org/ECIPs/ecip-1112" },
       { name: "ECIP-1121", url: "https://ecips.ethereumclassic.org/ECIPs/ecip-1121" },
+      { name: "ECIP-1122", url: "https://ecips.ethereumclassic.org/ECIPs/ecip-1122" },
     ],
     eips: [
       "EIP-1153",
