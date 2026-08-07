@@ -50,6 +50,18 @@
   /* EIP badge — violet */
   --color-violet: #6d28d9;
   --color-violet-bg: rgba(109, 40, 217, 0.08);
+
+  /* Status accents. Each pairs a dark value here with a bright one under
+     .dark, the same way --brand-green does. The bright values alone fail
+     WCAG AA on the light background — sky read 2.04:1, amber 2.05:1,
+     orange 2.67:1. These are 10–12px badge labels, so the target is 4.5:1
+     (normal text), not the 3.0:1 large-text threshold. */
+  --color-sky: #0369a1;
+  --color-sky-bg: rgba(3, 105, 161, 0.08);
+  --color-amber: #b45309;
+  --color-amber-bg: rgba(180, 83, 9, 0.08);
+  --color-orange: #c2410c;
+  --color-orange-bg: rgba(194, 65, 12, 0.08);
 }
 
 .dark {
@@ -96,6 +108,14 @@
   /* EIP badge — violet */
   --color-violet: #a78bfa;
   --color-violet-bg: rgba(167, 139, 250, 0.1);
+
+  /* Status accents — bright variants for the dark background */
+  --color-sky: #38bdf8;
+  --color-sky-bg: rgba(56, 189, 248, 0.1);
+  --color-amber: #f59e0b;
+  --color-amber-bg: rgba(245, 158, 11, 0.12);
+  --color-orange: #f97316;
+  --color-orange-bg: rgba(249, 115, 22, 0.12);
 }
 
 @theme inline {

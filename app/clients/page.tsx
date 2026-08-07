@@ -37,7 +37,7 @@ const clients = [
     language: "Scala",
     languageColor: "#DC322F",
     role: "Primary",
-    roleColor: "brand",
+    roleTheme: "brand" as const,
     description:
       "EVM execution client in Scala 3 — one binary runs several networks at once in one JVM process, each isolated with its own state, metrics, and configuration. A further network is configuration rather than a new client. Consensus is selected per deployment: native Proof-of-Work for Ethereum Classic and Mordor, or Proof-of-Stake with a built-in consensus layer or an external client over the Engine API. Ethereum Classic's first native client — built ground-up for ETC rather than derived from an Ethereum client — and the primary ETC client for the Olympia era.",
     websiteUrl: "https://fukuii.org",
@@ -49,7 +49,7 @@ const clients = [
     language: "Go",
     languageColor: "#00ADD8",
     role: "Maintained",
-    roleColor: "#a78bfa",
+    roleTheme: "violet" as const,
     description:
       "A go-ethereum derivative maintained for Ethereum Classic, in maintenance only. It implements the full Olympia specification — ECIP-1111, 1112, 1121 and 1122 — and its Mordor sync is confirmed, so existing operators have a supported path through the upgrade. New deployments should use Fukuii.",
     websiteUrl: "https://github.com/ethereumclassic/core-geth",
@@ -168,18 +168,10 @@ export default async function ClientsPage() {
                       <h2 className="font-semibold">{client.name}</h2>
                       <span
                         className={`rounded-full px-2 py-0.5 text-xs font-medium ${
-                          client.roleColor === "brand"
+                          client.roleTheme === "brand"
                             ? "bg-[var(--brand-green-subtle)] text-[var(--brand-green)]"
-                            : ""
+                            : "bg-[var(--color-violet-bg)] text-[var(--color-violet)]"
                         }`}
-                        style={
-                          client.roleColor !== "brand"
-                            ? {
-                                backgroundColor: `${client.roleColor}15`,
-                                color: client.roleColor,
-                              }
-                            : undefined
-                        }
                       >
                         {client.role}
                       </span>
@@ -250,10 +242,10 @@ export default async function ClientsPage() {
                     <div>
                       <h3 className="font-semibold">{plugin.name}</h3>
                       <div className="flex items-center gap-1.5">
-                        <span className="rounded-full bg-[#38bdf815] px-2 py-0.5 text-xs font-medium text-[#38bdf8]">
+                        <span className="rounded-full bg-[var(--color-sky-bg)] px-2 py-0.5 text-xs font-medium text-[var(--color-sky)]">
                           Plugin
                         </span>
-                        <span className="rounded-full bg-[#f59e0b15] px-2 py-0.5 text-xs font-medium text-[#f59e0b]">
+                        <span className="rounded-full bg-[var(--color-amber-bg)] px-2 py-0.5 text-xs font-medium text-[var(--color-amber)]">
                           Future
                         </span>
                       </div>

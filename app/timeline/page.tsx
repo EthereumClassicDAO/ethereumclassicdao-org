@@ -96,11 +96,11 @@ const statusConfig: Record<StageStatus, { label: string; className: string }> = 
   },
   scheduled: {
     label: "Scheduled",
-    className: "rounded-full bg-[rgba(56,189,248,0.1)] px-2 py-0.5 text-xs font-medium text-[#38bdf8]",
+    className: "rounded-full bg-[var(--color-sky-bg)] px-2 py-0.5 text-xs font-medium text-[var(--color-sky)]",
   },
   research: {
     label: "Research",
-    className: "rounded-full bg-[rgba(167,139,250,0.12)] px-2 py-0.5 text-xs font-medium text-[var(--color-violet)]",
+    className: "rounded-full bg-[var(--color-violet-bg)] px-2 py-0.5 text-xs font-medium text-[var(--color-violet)]",
   },
   future: {
     label: "Future",
@@ -187,7 +187,7 @@ export default function TimelinePage() {
                           <span
                             className={
                               stage.hardFork
-                                ? "rounded-full bg-[rgba(245,158,11,0.12)] px-2 py-0.5 font-mono text-[10px] text-[#f59e0b]"
+                                ? "rounded-full bg-[var(--color-amber-bg)] px-2 py-0.5 font-mono text-[10px] text-[var(--color-amber)]"
                                 : "rounded-full bg-[rgba(255,255,255,0.05)] px-2 py-0.5 font-mono text-[10px] text-[var(--text-muted)]"
                             }
                           >
