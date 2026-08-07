@@ -65,7 +65,7 @@ Futarchy Markets (ECIP-1117, ECIP-1118): Open prediction markets where anyone ca
 
 ## Network Statistics
 
-- Hashrate: 170+ TH/s (largest PoW smart contract network, absorbed Ethereum mining infrastructure post-Merge)
+- Hashrate: the largest Proof-of-Work smart contract network by hashrate; absorbed significant Ethereum mining infrastructure post-Merge. The live figure is published on the site, derived from on-chain block difficulty and the network's measured average block time
 - Markets: 300+ active markets across 20+ major global exchanges
 - Fiat pairs: ETC/USD, ETC/EUR, ETC/KRW, ETC/TRY, ETC/GBP, ETC/IDR, ETC/INR, ETC/BRL, ETC/NZD, ETC/JPY, ETC/PLN
 - Crypto pairs: ETC/USDC, ETC/USDT, ETC/FDUSD, ETC/BTC, ETC/ETH, ETC/BNB, ETC/LTC, ETC/DOGE, ETC/XRP

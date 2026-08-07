@@ -1,13 +1,18 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
-import { fetchHashrateTHs, fetchAllHashrateHistories } from "@/lib/api/hashrate";
+import {
+  fetchHashrate,
+  fetchAllHashrateHistories,
+  HASHRATE_FALLBACK_NOTE,
+} from "@/lib/api/hashrate";
 import { HashrateChart } from "@/components/about/HashrateChart";
 
 export async function GlobalHashrateSection() {
-  const [hashrateTHs, hashrateHistories] = await Promise.all([
-    fetchHashrateTHs(),
+  const [hashrate, hashrateHistories] = await Promise.all([
+    fetchHashrate(),
     fetchAllHashrateHistories(),
   ]);
+  const hashrateTHs = hashrate.ths;
 
   return (
     <>
@@ -63,7 +68,9 @@ export async function GlobalHashrateSection() {
                   Current Network Hashrate
                 </p>
                 <p className="mt-0.5 text-xs text-[var(--text-subtle)]">
-                  Updated hourly &middot; Source: 2miners
+                  {hashrate.isFallback
+                    ? "Estimate — live data unavailable"
+                    : "Updated hourly · Source: Blockscout"}
                 </p>
               </div>
             </div>
@@ -80,9 +87,10 @@ export async function GlobalHashrateSection() {
           {/* Source note */}
           <FadeIn delay={260}>
             <p className="mt-6 text-xs text-[var(--text-subtle)] italic">
-              Hashrate data sourced from 2miners pool API. Historical data
-              calculated from on-chain block difficulty and block time via
-              Blockscout.
+              Current and historical hashrate are both calculated from on-chain
+              block difficulty and the network&rsquo;s measured average block
+              time, via Blockscout.
+              {hashrate.isFallback ? ` * ${HASHRATE_FALLBACK_NOTE}` : ""}
             </p>
           </FadeIn>
         </div>

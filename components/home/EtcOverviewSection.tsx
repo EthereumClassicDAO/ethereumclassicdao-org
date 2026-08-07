@@ -110,8 +110,9 @@ export async function EtcOverviewSection({ stats }: { stats: EtcStats }) {
           </FadeIn>
 
           <p className="mt-4 text-xs text-[var(--text-subtle)]">
-            * Hashrate approximate, based on pool data. Data refreshes every
-            10 minutes.
+            * Hashrate is derived from on-chain block difficulty and the
+            network&rsquo;s measured average block time, via Blockscout.
+            Refreshed hourly.
           </p>
         </div>
       </section>
