@@ -47,7 +47,7 @@ const phases = [
   {
     name: "Mainnet Activation",
     status: "upcoming" as const,
-    period: "TBD",
+    period: "2027 (expected)",
     description:
       "Olympia activates on ETC mainnet at the agreed-upon block. EIP-1559 fee market goes live, basefee begins flowing to the protocol treasury. Block rewards and tips remain completely untouched.",
   },
