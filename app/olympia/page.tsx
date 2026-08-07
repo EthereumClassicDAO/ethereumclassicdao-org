@@ -330,7 +330,7 @@ export default function UpgradePage() {
               What Olympia Brings to Ethereum Classic
             </h2>
             <p className="mb-8 text-sm text-[var(--text-muted)]">
-              Three protocol upgrades in a single activation: a fee market that funds a protocol-controlled treasury, Glamsterdam EVM alignment that closes years of tooling divergence so every Ethereum library and framework works on ETC without modification, and the institutional access profile that follows. Delivered to the only Proof-of-Work smart contract platform in the world.
+              Four protocol changes in a single activation: a fee market that funds a protocol-controlled treasury, Glamsterdam-era EVM alignment that closes years of tooling divergence so every Ethereum library and framework works on ETC without modification, client security parameters that restore chain-reorganization resistance, and the institutional access profile that follows. All of it on the only Proof-of-Work smart contract platform in the world.
             </p>
           </FadeIn>
 

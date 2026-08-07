@@ -4,21 +4,23 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 const stages = [
   {
     title: "Consensus Upgrades",
-    status: "complete" as const,
+    status: "active" as const,
     description:
-      "Glamsterdam-era EVM parity in a single upgrade — every Ethereum tool and framework works on ETC without modification. EIP-1559 fee market and protocol treasury funded by basefee revenue complete the package.",
+      "The hard fork itself, and the only stage that changes consensus rules until the last one. Glamsterdam-era EVM alignment means every Ethereum tool and framework works on ETC without modification. The EIP-1559 fee market redirects the basefee to a protocol treasury rather than burning it, and the treasury contract deploys at this fork — the governance suite that spends from it does not.",
     deliverables: [
-      "Glamsterdam EVM parity: Dencun, Pectra, Fusaka, and Glamsterdam EIPs (ECIP-1121)",
-      "EIP-1559 fee market (ECIP-1111)",
-      "Protocol treasury funded by basefee (ECIP-1112)",
+      "Glamsterdam-era EVM alignment: Dencun, Pectra, Fusaka, and Glamsterdam EIPs (ECIP-1121)",
+      "EIP-1559 fee market with basefee redirected to the treasury (ECIP-1111)",
+      "Protocol treasury contract deployed at the fork (ECIP-1112)",
+      "Client security parameters: minimum miner tip, network-authoritative gas target, MESS restored (ECIP-1122)",
     ],
   },
   {
     title: "Core Governance",
     status: "active" as const,
     description:
-      "Core development funding moves on-chain — open to any developer, infrastructure provider, or critical service operator worldwide. No private employment contracts. No prior relationships required.",
+      "Core development funding moves on-chain — open to any developer, infrastructure provider, or critical service operator worldwide. No private employment contracts. No prior relationships required. These are contracts on a chain whose rules are already settled, so no fork is involved; the gap after the first stage is the audit window for them, and the treasury accrues revenue throughout it.",
     deliverables: [
+      "Governance suite deploys after the fork, against addresses reserved before it",
       "Full proposal lifecycle: submit, vote, queue, execute",
       "Governance and treasury contracts with timelock execution",
       "Membership-based voting with on-chain sanctions screening",
@@ -31,14 +33,14 @@ const stages = [
     title: "Prediction Markets",
     status: "research" as const,
     description:
-      "Open prediction markets give any ETC holder a financial stake in monitoring protocol development — no membership required. Market activity generates basefee revenue that flows back into the treasury, creating a self-reinforcing loop between public participation and protocol funding.",
+      "Open prediction markets give any ETC holder a financial stake in monitoring protocol development — no membership required. Traders hold positions on ETC's price under a proposal accepted and rejected, and the branch priced higher wins. Market activity generates basefee revenue that flows back into the treasury, creating a self-reinforcing loop between public participation and protocol funding.",
     deliverables: [
       "Open to anyone with an ETC account — no membership required",
       "Financially incentivizes the public to monitor and evaluate protocol proposals",
       "Onboards new participants to ETC through active market engagement",
       "Market activity generates basefee transactions — compounds the treasury flywheel",
-      "Conditional outcome tokens",
-      "Market-informed proposal ranking alongside formal DAO votes",
+      "Collateral is ETC and Classic USD, both already live, custodied outside the treasury",
+      "Market-informed proposal ranking alongside formal DAO votes — a signal layer, never binding",
       "Accurate predictions earn financial rewards — holding governance accountable",
     ],
   },
@@ -46,26 +48,26 @@ const stages = [
     title: "Treasury Distribution",
     status: "future" as const,
     description:
-      "A smoothing curve supplements miner security budgets as fixed-emission block subsidies decline. It arrives in two stages, deliberately. ECIP-1115 runs it at the contract layer, where the allocation fraction, window, and curve shape are adjustable through governance without a hard fork — so the network can find the right curve empirically while ECIP-1017 block rewards are still securing it. Once a curve is proven, ECIP-1116 graduates it: a hard fork embeds that curve into block finalization, paid by the protocol rather than disbursed from the treasury, and no longer adjustable by governance. ECIP-1017's predictable 5M20 emission schedule defines the decline curve this responds to.",
+      "A smoothing curve supplements miner security budgets as fixed-emission block subsidies decline, spreading each block's contribution across a future window so the payout is steady rather than volatile. ECIP-1115 runs it at the contract layer, where the allocation fraction, window, and curve shape are all adjustable through governance without a fork. That is the point of putting it here first: the network learns the right curve by running it, while ECIP-1017 block rewards still secure the chain and a mistake is cheap to correct.",
     deliverables: [
-      "Treasury smoothing algorithm at the contract layer (ECIP-1115)",
-      "Parameters adjustable through governance without a hard fork during the experimental stage",
-      "Consensus-layer hardening of the proven curve (ECIP-1116) — a later, separate hard fork",
-      "Complements ECIP-1017's 5M20 emission schedule — treasury responds as subsidies decline",
-      "Sequenced by design: experiment while block rewards still secure the network, harden before they stop",
+      "Treasury smoothing curve at the contract layer (ECIP-1115)",
+      "Allocation fraction, window length, and curve shape adjustable through governance, no fork required",
+      "Funded through the ordinary proposal process — each candidate curve is paid like any other line item",
+      "Complements ECIP-1017's 5M20 emission schedule — the treasury responds as subsidies decline",
+      "Runs while block rewards still secure the network, so the curve is measured rather than assumed",
     ],
   },
   {
     title: "Protocol Integration",
     status: "future" as const,
     description:
-      "Where empirical evidence supports it, proven governance mechanisms are elevated from the contract layer into native protocol upgrades — hardcoded at consensus, immutable by design. The same path ECIP-1017 took with the emission schedule: battle-tested logic becomes a permanent property of the chain.",
+      "The second hard fork, and the only other stage that changes consensus rules. Once the smoothing curve has been demonstrated in production, ECIP-1116 embeds that curve into block finalization — paid by the protocol rather than disbursed from the treasury, and no longer adjustable by governance. Changing it afterward costs a fork, which is precisely the guarantee being bought: a security budget that no longer depends on continued cooperation at the moment it matters most.",
     deliverables: [
-      "Contract-layer mechanisms earn consensus elevation through demonstrated performance",
+      "Consensus-layer hardening of the demonstrated curve (ECIP-1116)",
+      "Paid at block finalization rather than disbursed from the treasury — governance leaves the payment path",
+      "Cannot activate until the contract-layer stage has produced real observational data",
       "Follows the ECIP-1017 precedent — proven rules encoded natively into the protocol",
-      "Consensus-level governance encoding",
-      "Immutable treasury rules — no longer dependent on contract deployment or upgradability",
-      "Each elevation requires empirical evidence and a standard ECIP process",
+      "Parameters deliberately unset until measured; hardening an unmeasured number repeats the mistake the staging avoids",
     ],
   },
 ];
@@ -102,11 +104,9 @@ export function RoadmapSection() {
                     <div className="flex flex-col items-center">
                       <div
                         className={`h-3 w-3 shrink-0 rounded-full ${
-                          stage.status === "complete"
-                            ? "bg-[var(--brand-green)]"
-                            : stage.status === "active"
-                              ? "bg-[var(--brand-green)] animate-pulse"
-                              : "bg-[var(--border-strong)]"
+                          stage.status === "active"
+                            ? "bg-[var(--brand-green)] animate-pulse"
+                            : "bg-[var(--border-strong)]"
                         }`}
                       />
                       {i < stages.length - 1 && (
