@@ -297,7 +297,7 @@ const upgrades: Upgrade[] = [
   },
   {
     name: "Olympia",
-    subtitle: "Glamsterdam + EIP-1559 + DAO Governance",
+    subtitle: "Glamsterdam",
     block: "Pending Activation Block",
     date: "2027",
     type: "olympia",
