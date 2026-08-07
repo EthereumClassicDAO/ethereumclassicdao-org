@@ -58,7 +58,7 @@
      (normal text), not the 3.0:1 large-text threshold. */
   --color-sky: #0369a1;
   --color-sky-bg: rgba(3, 105, 161, 0.08);
-  --color-amber: #b45309;
+  --color-amber: #92400e;
   --color-amber-bg: rgba(180, 83, 9, 0.08);
   --color-orange: #c2410c;
   --color-orange-bg: rgba(194, 65, 12, 0.08);
@@ -453,8 +453,8 @@ body {
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
-  background: rgba(245, 158, 11, 0.1);
-  color: var(--color-warning);
+  background: var(--color-amber-bg);
+  color: var(--color-amber);
 }
 
 .badge-future {
