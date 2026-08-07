@@ -50,6 +50,7 @@ export const metadata: Metadata = {
     "ETF",
     "blockchain infrastructure",
     "ECIP-1121",
+    "ECIP-1122",
     "Glamsterdam",
     "Fusaka",
     "EVM upgrade",

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     "Glamsterdam EVM",
     "EVM alignment",
     "ECIP-1121",
+    "ECIP-1122",
     "EIP-1559",
     "ECIP-1111",
     "ECIP-1112",
@@ -73,6 +74,14 @@ const ecips = [
     description:
       "Building on Mystique and Spiral, ECIP-1121 fills the remaining Shanghai gaps from Spiral's partial implementation and delivers the execution-layer improvements from Dencun, Pectra, and Fusaka that are independent of Proof-of-Stake and blob data availability, then carries that work into Glamsterdam. Developers gain access to every current Ethereum tool, library, and framework. One codebase, every EVM chain.",
     tags: ["Shanghai", "Dencun", "Pectra", "Fusaka", "Glamsterdam"],
+  },
+  {
+    ecip: "ECIP-1122",
+    title: "Network Security Client Configuration",
+    icon: ShieldCheck,
+    description:
+      "Three parameters every Olympia client enforces identically: a 1 gwei minimum effective miner tip, so miners keep an economic incentive to process transactions once the basefee is redirected; a network-authoritative gas target that overrides operator flags, closing the gas-limit manipulation vector demonstrated in 2024; and MESS re-activation, restoring the chain-reorganization resistance that was switched off at Spiral. These are chain configuration rather than consensus rules — a client that omits them provides weaker guarantees without forking.",
+    tags: ["ETC Native", "MESS"],
   },
 ];
 

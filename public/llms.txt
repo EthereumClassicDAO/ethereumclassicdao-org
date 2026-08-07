@@ -21,13 +21,15 @@ ETC is recognized across leading global regulatory frameworks in the US, EU, UK,
 
 ## Olympia — Ethereum Classic's Most Significant Protocol Upgrade
 
-The Olympia era marks a shift from reactive maintenance to active development on the longest-running EVM and the only Proof-of-Work smart contract platform in the world. Three client-facing ECIPs form the core of the upgrade:
+The Olympia era marks a shift from reactive maintenance to active development on the longest-running EVM and the only Proof-of-Work smart contract platform in the world. Four client-facing ECIPs form the core of the upgrade, all activating at the same block:
 
 **ECIP-1111 — EIP-1559 Fee Market:** Adds the most widely adopted transaction format in the EVM ecosystem to Ethereum Classic. Dynamic gas pricing delivers predictable fees for users and applications. Fully additive: legacy transactions remain valid indefinitely. Unlike Ethereum where the basefee is burned, ETC redirects it to the protocol treasury. Miner block rewards and tips remain completely untouched.
 
 **ECIP-1112 — Protocol Treasury:** A protocol-controlled vault funded by basefee revenue and voluntary contributions — delivering on the treasury model first identified during the 2022 Mystique upgrade, when EIP-1559 was deferred pending a decision on where the basefee should flow. For the first time, institutions, developers, and network stakeholders can directly fund Ethereum Classic's core development and critical infrastructure without fielding their own team. Only on-chain governance can release funds: no admin keys, no multisig.
 
 **ECIP-1121 — EVM Compatibility:** Advances the ETC execution layer through Dencun (Cancun-Deneb), Pectra (Prague-Electra), Fusaka (Fulu-Osaka), and Glamsterdam (Gloas-Amsterdam). ETC implemented partial London EIPs in Mystique (2022) and partial Shanghai EIPs in Spiral (2024), deferring the EIP-1559 fee market for independent governance design. ECIP-1111 delivers those deferred London fee market EIPs (EIP-1559 + EIP-3198). ECIP-1121 fills the remaining Shanghai gaps from Spiral's partial implementation and delivers the execution-layer EIPs from Dencun, Pectra, Fusaka, and Glamsterdam that are independent of Proof-of-Stake and blob data availability.
+
+**ECIP-1122 — Network Security Client Configuration:** Three parameters every Olympia-compatible client enforces identically. A 1 gwei minimum effective miner tip (`MIN_MINER_TIP`), so miners retain an economic incentive to process transactions once the basefee is redirected — combined with ECIP-1111's 1 gwei basefee floor this sets a 2 gwei minimum gas price. A network-authoritative gas target schedule (Spiral era 8M, Olympia era 60M) that overrides operator `--miner.gaslimit` flags, closing the gas-limit manipulation vector demonstrated in 2024. And MESS re-activation at the Olympia block, restoring the chain-reorganization resistance switched off at Spiral. These are chain configuration rather than consensus rules: a client that omits them offers weaker guarantees but does not fork from the canonical chain.
 
 Included EIP categories:
 - Gas & State Access: EIP-7702 (account delegation for EOAs), EIP-7623 (increased calldata cost), EIP-7823 (MODEXP input upper bounds), EIP-7825 (per-transaction gas cap), EIP-7883 (MODEXP gas cost increase), EIP-7935 (60M default gas limit)
