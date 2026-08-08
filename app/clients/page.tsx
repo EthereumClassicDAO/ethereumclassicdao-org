@@ -153,7 +153,7 @@ export default async function ClientsPage() {
           <div className="grid gap-6 md:grid-cols-2">
             {clients.map((client, i) => (
               <FadeIn key={client.name} delay={i * 80} className="h-full">
-                <div className="h-full rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-6">
+                <div className="h-full rounded-xl border border-[var(--border-default)] bg-[var(--bg-elevated)] p-6">
                   <div className="flex items-center gap-3">
                     <span
                       className="flex h-10 w-10 items-center justify-center rounded-lg text-sm font-bold"
@@ -228,7 +228,7 @@ export default async function ClientsPage() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {plugins.map((plugin, i) => (
               <FadeIn key={plugin.name} delay={300 + i * 80} className="h-full">
-                <div className="h-full rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-5">
+                <div className="h-full rounded-xl border border-[var(--border-default)] bg-[var(--bg-elevated)] p-5">
                   <div className="flex items-center gap-3">
                     <span
                       className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-sm font-bold"

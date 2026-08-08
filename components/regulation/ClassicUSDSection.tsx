@@ -135,7 +135,7 @@ export function ClassicUSDSection() {
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {attributes.map((a, i) => (
               <FadeIn key={a.title} delay={i * 60} className="h-full">
-                <div className="h-full rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-5">
+                <div className="h-full rounded-xl border border-[var(--border-default)] bg-[var(--bg-elevated)] p-5">
                   <div className="flex items-center gap-3">
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--brand-green-subtle)]">
                       <a.icon size={16} className="text-[var(--brand-green)]" />

@@ -344,7 +344,7 @@ export default function UpgradePage() {
               const Icon = item.icon;
               return (
                 <FadeIn key={item.ecip} delay={i * 80} className="h-full">
-                  <div className="flex h-full flex-col rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-6">
+                  <div className="flex h-full flex-col rounded-xl border border-[var(--border-default)] bg-[var(--bg-elevated)] p-6">
                     <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
                       <Icon size={20} className="text-[var(--brand-green)]" />
                     </div>
@@ -443,7 +443,7 @@ export default function UpgradePage() {
               const Icon = cat.icon;
               return (
                 <FadeIn key={cat.title} delay={i * 60} className="h-full">
-                  <div className="h-full rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-5">
+                  <div className="h-full rounded-xl border border-[var(--border-default)] bg-[var(--bg-elevated)] p-5">
                     <div className="mb-3 flex items-center gap-2">
                       <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[rgba(0,255,174,0.08)]">
                         <Icon size={16} className="text-[var(--brand-green)]" />
@@ -502,7 +502,7 @@ export default function UpgradePage() {
             </div>
             <div className="grid gap-4 sm:grid-cols-3">
               {devTools.map((tool) => (
-                <div key={tool.name} className="h-full rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-4">
+                <div key={tool.name} className="h-full rounded-xl border border-[var(--border-default)] bg-[var(--bg-elevated)] p-4">
                   <p className="mb-1 text-sm font-semibold">{tool.name}</p>
                   <p className="text-xs leading-relaxed text-[var(--text-muted)]">{tool.description}</p>
                 </div>
@@ -534,7 +534,7 @@ export default function UpgradePage() {
                   body: "Slither, Echidna, Mythril, and Foundry\u2019s fuzzing infrastructure are maintained against the current EVM spec. Running a divergent execution layer placed ETC increasingly outside the coverage these tools provided. Olympia closes that gap. Security research, compiler improvements, and audit tooling all flow to ETC automatically as they ship to the EVM — no backporting required.",
                 },
               ].map((item) => (
-                <div key={item.title} className="rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-5">
+                <div key={item.title} className="rounded-xl border border-[var(--border-default)] bg-[var(--bg-elevated)] p-5">
                   <p className="mb-2 text-sm font-semibold">{item.title}</p>
                   <p className="text-xs leading-relaxed text-[var(--text-muted)]">{item.body}</p>
                 </div>
@@ -566,7 +566,7 @@ export default function UpgradePage() {
           <div className="space-y-6">
             {clients.map((client, i) => (
               <FadeIn key={client.name} delay={i * 80}>
-                <div className="rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-6">
+                <div className="rounded-xl border border-[var(--border-default)] bg-[var(--bg-elevated)] p-6">
                   <div className="flex flex-wrap items-center gap-3 mb-4">
                     <span
                       className="flex h-10 w-10 items-center justify-center rounded-lg text-sm font-bold"
@@ -593,7 +593,7 @@ export default function UpgradePage() {
                         ))}
                       </div>
                     </div>
-                    <span className="ml-auto rounded-full border border-[rgba(255,255,255,0.1)] px-3 py-1 font-mono text-xs text-[var(--text-muted)]">
+                    <span className="ml-auto rounded-full border border-[var(--border-strong)] px-3 py-1 font-mono text-xs text-[var(--text-muted)]">
                       Version: {client.version}
                     </span>
                   </div>

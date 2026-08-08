@@ -353,13 +353,13 @@ const typeBadge: Record<UpgradeType, string> = {
   "evm-parity": "bg-[var(--color-violet-bg)] text-[var(--color-violet)]",
   "etc-native": "bg-[rgba(0,255,174,0.08)] text-[var(--brand-green)]",
   monetary: "bg-[rgba(0,255,174,0.08)] text-[var(--brand-green)]",
-  "fork-moment": "bg-[rgba(255,255,255,0.06)] text-[var(--text-secondary)]",
+  "fork-moment": "bg-[var(--border-subtle)] text-[var(--text-secondary)]",
   olympia: "bg-[rgba(0,255,174,0.12)] text-[var(--brand-green)]",
 };
 
 const dotStyle: Record<UpgradeStatus | "fork-moment" | "olympia", string> = {
   complete: "bg-[var(--brand-green)]",
-  upcoming: "bg-[rgba(255,255,255,0.2)] ring-2 ring-[rgba(255,255,255,0.1)]",
+  upcoming: "bg-[var(--border-strong)] ring-2 ring-[var(--border-strong)]",
   "fork-moment": "bg-white ring-2 ring-white/20",
   olympia: "bg-[var(--brand-green)] animate-pulse",
 };
@@ -427,7 +427,7 @@ export default function TimelinePage() {
         <div className="mx-auto max-w-3xl">
           <div className="relative">
             {/* Vertical gradient line */}
-            <div className="absolute left-[15px] top-0 bottom-0 w-px bg-gradient-to-b from-[rgba(255,255,255,0.06)] via-[rgba(0,255,174,0.2)] to-[var(--brand-green)]" />
+            <div className="absolute left-[15px] top-0 bottom-0 w-px bg-gradient-to-b from-[var(--border-default)] via-[var(--brand-green)]/40 to-[var(--brand-green)]" />
 
             <div className="space-y-4">
               {upgrades.map((upgrade, i) => (
@@ -442,10 +442,10 @@ export default function TimelinePage() {
                     <div
                       className={`rounded-xl border p-5 ${
                         upgrade.type === "fork-moment"
-                          ? "border-[rgba(255,255,255,0.12)] bg-[rgba(255,255,255,0.03)]"
+                          ? "border-[var(--border-strong)] bg-[var(--border-subtle)]"
                           : upgrade.type === "olympia"
                             ? "border-[var(--border-brand)] bg-[var(--brand-green-subtle)]"
-                            : "border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)]"
+                            : "border-[var(--border-default)] bg-[var(--bg-elevated)]"
                       }`}
                     >
                       {/* Header row */}
@@ -494,7 +494,7 @@ export default function TimelinePage() {
                           {upgrade.keyChanges.map((change) => (
                             <span
                               key={change}
-                              className="rounded bg-[rgba(255,255,255,0.04)] px-2 py-0.5 text-[10px] text-[var(--text-subtle)]"
+                              className="rounded bg-[var(--border-subtle)] px-2 py-0.5 text-[10px] text-[var(--text-subtle)]"
                             >
                               {change}
                             </span>

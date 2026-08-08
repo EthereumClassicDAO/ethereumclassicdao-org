@@ -104,7 +104,7 @@ const statusConfig: Record<StageStatus, { label: string; className: string }> = 
   },
   future: {
     label: "Future",
-    className: "rounded-full bg-[rgba(255,255,255,0.05)] px-2 py-0.5 text-xs font-medium text-[var(--text-muted)]",
+    className: "rounded-full bg-[var(--border-subtle)] px-2 py-0.5 text-xs font-medium text-[var(--text-muted)]",
   },
 };
 
@@ -161,7 +161,7 @@ export default function TimelinePage() {
           </FadeIn>
 
           <div className="relative">
-            <div className="absolute left-[15px] top-0 bottom-0 w-px bg-[rgba(255,255,255,0.08)]" />
+            <div className="absolute left-[15px] top-0 bottom-0 w-px bg-[var(--border-strong)]" />
 
             <div className="space-y-8">
               {stages.map((stage, i) => {
@@ -177,7 +177,7 @@ export default function TimelinePage() {
                         }`}
                       />
 
-                      <div className="rounded-xl border border-[rgba(255,255,255,0.06)] bg-[var(--bg-elevated)] p-5">
+                      <div className="rounded-xl border border-[var(--border-default)] bg-[var(--bg-elevated)] p-5">
                         <div className="mb-2 flex flex-wrap items-center gap-2">
                           <span className="font-mono text-xs text-[var(--brand-green)]">
                             {stage.stage}
@@ -188,7 +188,7 @@ export default function TimelinePage() {
                             className={
                               stage.hardFork
                                 ? "rounded-full bg-[var(--color-amber-bg)] px-2 py-0.5 font-mono text-[10px] text-[var(--color-amber)]"
-                                : "rounded-full bg-[rgba(255,255,255,0.05)] px-2 py-0.5 font-mono text-[10px] text-[var(--text-muted)]"
+                                : "rounded-full bg-[var(--border-subtle)] px-2 py-0.5 font-mono text-[10px] text-[var(--text-muted)]"
                             }
                           >
                             {stage.hardFork ? "Hard fork" : "No fork"}
