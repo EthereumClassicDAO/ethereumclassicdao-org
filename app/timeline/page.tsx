@@ -60,9 +60,9 @@ const stages: Stage[] = [
     name: "Prediction Markets",
     status: "scheduled",
     hardFork: false,
-    ecips: ["ECIP-1117", "ECIP-1118"],
+    ecips: ["ECIP-1117", "ECIP-1118", "ECIP-1119"],
     description:
-      "A futarchy track running as a subordinate DAO alongside membership voting, never replacing it. Traders hold conditional positions on ETC's price under a proposal accepted and rejected, and the branch priced higher wins. Collateral is ETC and Classic USD, both already live, and it is custodied by the conditional-token contracts rather than by the treasury. Its only interface to the treasury is an ordinary funding proposal, like any other applicant.",
+      "A futarchy track running as a subordinate DAO alongside membership voting, never replacing it. Traders hold conditional positions on ETC's price under a proposal accepted and rejected, and the branch priced higher wins. Collateral is ETC and Classic USD, both already live, and it is custodied by the conditional-token contracts rather than by the treasury. Its only interface to the treasury is an ordinary funding proposal, like any other applicant. The sanctions compliance oracle deployed in Stage 2 applies here as well, because funds move.",
     dependsOn:
       "Stage 2 for the funding path. It also needs the conditional-token contracts and an ERC-1155 wrapper on Ethereum Classic — deployment work rather than a capability gap, since both target EVM semantics ETC has had since Spiral in 2024 and are permissionless to deploy. Stage 3's position is a sequencing choice, not a technical dependency. The streaming-disbursement half can proceed ahead of the markets themselves.",
   },
