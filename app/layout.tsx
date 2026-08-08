@@ -73,10 +73,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: SITE_URL,
+    url: "./",
     siteName: "Ethereum Classic DAO",
-    title: TITLE,
-    description: DESCRIPTION,
     images: [
       {
         url: `${SITE_URL}/og-image.png`,
@@ -89,12 +87,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: TITLE,
-    description: DESCRIPTION,
     images: [`${SITE_URL}/og-image.png`],
   },
   alternates: {
-    canonical: SITE_URL,
+    // Relative, so each route canonicalises to ITSELF. An absolute URL here
+    // is inherited by every child route and asks Google to drop them.
+    canonical: "./",
   },
   robots: {
     index: true,
@@ -104,6 +102,7 @@ export const metadata: Metadata = {
       follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
   appleWebApp: {
