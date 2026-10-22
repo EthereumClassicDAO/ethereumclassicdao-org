@@ -2,6 +2,12 @@
 
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import {
+  CHAINLIST_ETC_URL,
+  CHAINLIST_MORDOR_URL,
+  ETC_RPC_URL,
+  MORDOR_RPC_URL,
+} from "@/lib/network-links";
 
 interface EvmVersion {
   name: string;
@@ -24,7 +30,7 @@ const networks: NetworkConfig[] = [
     name: "ETC Mainnet",
     chainId: "61",
     currency: "ETC",
-    rpc: "https://etc.rivet.link",
+    rpc: ETC_RPC_URL,
     explorer: "https://etc.blockscout.com",
     consensus: "Proof-of-Work",
     evmVersions: [
@@ -40,7 +46,7 @@ const networks: NetworkConfig[] = [
     name: "Mordor Testnet",
     chainId: "63",
     currency: "METC",
-    rpc: "https://rpc.mordor.etccooperative.org",
+    rpc: MORDOR_RPC_URL,
     explorer: "https://etc-mordor.blockscout.com",
     consensus: "Proof-of-Work",
     evmVersions: [
@@ -84,7 +90,7 @@ export function NetworkConfigSection() {
               Network Configuration
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Production RPC endpoints, chain IDs, and explorer URLs for
+              Chain IDs, public RPC endpoints, and explorer URLs for
               Ethereum Classic mainnet (Chain 61) and Mordor testnet (Chain
               63). Drop-in configuration for MetaMask, Hardhat, Foundry, and
               any EVM-compatible toolchain. Both networks run Proof-of-Work
@@ -194,6 +200,33 @@ export function NetworkConfigSection() {
               </FadeIn>
             ))}
           </div>
+
+          <FadeIn delay={200}>
+            <p className="mt-6 text-xs leading-relaxed text-[var(--text-subtle)]">
+              ChainList carries the public endpoints other operators publish,
+              for{" "}
+              <a
+                href={CHAINLIST_ETC_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--brand-green)] hover:underline"
+              >
+                Ethereum Classic
+              </a>{" "}
+              and{" "}
+              <a
+                href={CHAINLIST_MORDOR_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--brand-green)] hover:underline"
+              >
+                Mordor
+              </a>
+              . A public endpoint is another operator&rsquo;s node: it can rate
+              limit, fall behind, or stop. Anything you depend on should run
+              against a node you control.
+            </p>
+          </FadeIn>
         </div>
       </section>
     </>

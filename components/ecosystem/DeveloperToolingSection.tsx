@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { CHAINLIST_ETC_URL, ETC_RPC_URL } from "@/lib/network-links";
 
 interface Tool {
   name: string;
@@ -27,7 +28,7 @@ const categories: ToolCategory[] = [
       {
         name: "Foundry",
         description: "Blazing fast Rust-based toolchain: forge, cast, anvil. Write tests in Solidity.",
-        config: "--rpc-url https://etc.rivet.link --chain 61",
+        config: `--rpc-url ${ETC_RPC_URL} --chain 61`,
         href: "https://getfoundry.sh",
       },
       {
@@ -44,7 +45,7 @@ const categories: ToolCategory[] = [
       {
         name: "ethers.js v6",
         description: "Complete JavaScript library for Ethereum interaction. Wallet management, contract calls, event listening.",
-        config: 'new JsonRpcProvider("https://etc.rivet.link")',
+        config: `new JsonRpcProvider("${ETC_RPC_URL}")`,
         href: "https://docs.ethers.org",
       },
       {
@@ -56,7 +57,7 @@ const categories: ToolCategory[] = [
       {
         name: "web3.js v4",
         description: "The original JavaScript Ethereum library. Broad ecosystem support and plugin architecture.",
-        config: 'new Web3("https://etc.rivet.link")',
+        config: `new Web3("${ETC_RPC_URL}")`,
         href: "https://docs.web3js.org",
       },
       {
@@ -102,7 +103,7 @@ const categories: ToolCategory[] = [
       },
       {
         name: "MetaMask",
-        description: "Browser wallet. Add ETC as a custom network with Chain ID 61 and the Rivet RPC endpoint.",
+        description: "Browser wallet. Add ETC as a custom network with Chain ID 61 and a public RPC endpoint.",
         href: "https://metamask.io",
       },
       {
@@ -126,10 +127,10 @@ const categories: ToolCategory[] = [
     heading: "Infrastructure",
     tools: [
       {
-        name: "Rivet",
-        description: "High-availability RPC provider for Ethereum Classic. Free tier available.",
-        config: "https://etc.rivet.link",
-        href: "https://rivet.cloud",
+        name: "ChainList",
+        description: "The public RPC endpoints Ethereum Classic operators publish, with the chain parameters each one needs.",
+        config: CHAINLIST_ETC_URL,
+        href: CHAINLIST_ETC_URL,
       },
       {
         name: "Blockscout",
@@ -176,8 +177,8 @@ export function DeveloperToolingSection() {
               means the full Ethereum development toolchain works on ETC
               without modification. Hardhat, Foundry, ethers.js, viem, wagmi
               — every major tool connects with a single configuration
-              parameter. Set Chain ID to 61, point your RPC at
-              etc.rivet.link, and deploy.
+              parameter. Set Chain ID to 61, point your RPC at a public
+              endpoint or your own node, and deploy.
             </p>
           </FadeIn>
 
