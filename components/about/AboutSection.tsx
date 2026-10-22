@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 const buildItems = [
   {
     icon: GitBranch,
-    text: "Core network software: independent client implementations ensuring no single point of failure",
+    text: "Core network software: the Core-Geth client, the network's bootnodes and its peer discovery lists, maintained in the community's own repositories",
   },
   {
     icon: Vote,
@@ -55,11 +55,14 @@ export function AboutSection() {
 
           <div className="mt-8 space-y-6 text-base leading-relaxed text-[var(--text-secondary)]">
             <p>
-              Ethereum Classic DAO LLC is the legal entity for the Olympia
-              DAO, utilizing Wyoming&rsquo;s DAO LLC framework to maintain
-              core software, critical infrastructure, and hashrate incentives
-              for the world&rsquo;s largest Proof-of-Work smart contract
-              platform. The LLC ensures proper reporting and active compliance
+              Ethereum Classic DAO LLC is the standing legal entity that
+              maintains and funds Ethereum Classic&rsquo;s public goods (the
+              Core-Geth client, the network&rsquo;s bootnodes and its peer
+              discovery lists) as the funder of last resort, for the
+              world&rsquo;s largest Proof-of-Work smart contract platform.
+              Ethereum Classic&rsquo;s core developers and community contributors
+              do the day-to-day work, and the DAO does not control or lead
+              Ethereum Classic. The LLC ensures proper reporting and active compliance
               across leading global regulatory frameworks in the US, EU, UK, Japan, and UAE.
             </p>
             <p>

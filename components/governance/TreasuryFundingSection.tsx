@@ -13,7 +13,6 @@ import {
   Cpu,
   TrendingUp,
   User,
-  Heart,
   RotateCcw,
   Layers,
   Route,
@@ -87,11 +86,6 @@ const stakeholders: { icon: ElementType; name: string; path: ReactNode }[] = [
     icon: User,
     name: "Individual Holders",
     path: "Any wallet worldwide can contribute — a single on-chain transaction",
-  },
-  {
-    icon: Heart,
-    name: "ETC Cooperative",
-    path: "US 501(c)(3) non-profit accepting tax-deductible donations in any amount",
   },
   {
     icon: Layers,
@@ -217,8 +211,7 @@ export function TreasuryFundingSection() {
                 <p className="mt-2 flex-1 text-xs leading-relaxed text-[var(--text-muted)]">
                   Any stakeholder worldwide can contribute directly with a
                   single transaction. Exchanges, custodians, investment product
-                  issuers, DeFi protocols, and individual holders. Tax-advantaged
-                  contributions route through the ETC Cooperative.
+                  issuers, DeFi protocols, and individual holders.
                 </p>
                 <p className="mt-4 text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">
                   Permissionless · Any Amount · Any Wallet
@@ -340,10 +333,7 @@ export function TreasuryFundingSection() {
                 block rewards to the treasury address, investment product
                 issuers growing the on-chain funding base alongside their
                 AUM, and individual holders sending any amount from any
-                wallet worldwide. For contributions that benefit from
-                tax-advantaged treatment, the ETC Cooperative accepts
-                donations as a US 501(c)(3) non-profit and directs them
-                to the Olympia Treasury.
+                wallet worldwide.
               </p>
             </FadeIn>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

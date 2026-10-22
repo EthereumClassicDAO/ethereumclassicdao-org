@@ -9,13 +9,13 @@ export function HowWeHelpSection() {
     {
       icon: GitBranch,
       title: "Core Client Development",
-      description: "The contributors behind Ethereum Classic DAO LLC have been the technical and principled stewards of Ethereum Classic since inception — every client decision, network upgrade, and emergency response coordinated by those same contributors across every ETC upgrade since 2016. A decade of accumulated domain knowledge drives every protocol decision: knowing not just what to build, but how to honor ETC's foundational principles while adapting to an evolving blockchain landscape. We are the humans behind billions of dollars in network value, driven to deliver a first-in-class Proof-of-Work smart contract experience for every stakeholder the network serves.",
+      description: "Ethereum Classic DAO LLC is the standing legal entity that maintains and funds Core-Geth, the recommended Ethereum Classic client, as the funder of last resort; Ethereum Classic's core developers do the day-to-day work in the community's own GitHub organization. The contributors behind Ethereum Classic DAO LLC have been the technical and principled stewards of Ethereum Classic since inception — every client decision, network upgrade, and emergency response coordinated by those same contributors across every ETC upgrade since 2016. A decade of accumulated domain knowledge drives every protocol decision: knowing not just what to build, but how to honor ETC's foundational principles while adapting to an evolving blockchain landscape. We are the humans behind billions of dollars in network value, driven to deliver a first-in-class Proof-of-Work smart contract experience for every stakeholder the network serves.",
     },
     {
       icon: Vote,
       title: "Critical Infrastructure",
       description:
-        "Public RPC endpoints, block explorers, oracle networks, and institutional custody integrations all operate under service agreements that require a named legal counterparty — that entity is us. Vendor contracts, regulatory reporting, and institutional relationships cannot be executed by ad-hoc coordination; a mature network requires a formal structure. As the off-chain legal wrapper for on-chain governance, we hold the agreements, execute the decisions, and provide the organizational continuity that Ethereum Classic's second decade requires.",
+        "The bootnodes and peer discovery lists that Core-Geth nodes start from are run and published from the community's own repositories, with the servers and domains behind them paid for by the DAO. Public RPC endpoints, block explorers, oracle networks, and institutional custody integrations all operate under service agreements that require a named legal counterparty — that entity is us. Vendor contracts, regulatory reporting, and institutional relationships cannot be executed by ad-hoc coordination; a mature network requires a formal structure. As the off-chain legal wrapper for on-chain governance, we hold the agreements, execute the decisions, and provide the organizational continuity that Ethereum Classic's second decade requires.",
     },
     {
       icon: Pickaxe,

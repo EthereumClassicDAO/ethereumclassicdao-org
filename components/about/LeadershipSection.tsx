@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { COOPERATIVE_ARCHIVE_URL } from "@/lib/network-links";
 
 const team = [
   {
@@ -25,9 +26,9 @@ const orgs = [
     name: "ETC Cooperative",
     role: "Foundational Organization",
     description:
-      "Founded in 2017 by and composed of Ethereum Classic's earliest core contributors, ETC Cooperative is a US 501(c)(3) non-profit that contributed millions of dollars to Ethereum Classic's client teams and infrastructure — backing every hard fork, every client release, and every cross-client coordination effort since Atlantis. Ethereum Classic DAO LLC and Olympia DAO build on that foundational work, extending it into protocol-native governance and treasury infrastructure.",
-    href: "https://etccooperative.org",
-    label: "etccooperative.org",
+      "The ETC Cooperative, a US 501(c)(3) non-profit founded in 2017 by Ethereum Classic's earliest core contributors, contributed millions of dollars to Ethereum Classic's client teams and infrastructure — backing every hard fork, every client release, and every cross-client coordination effort since Atlantis. It entered maintenance mode at the end of 2024, and the services it maintained continue in the ethereumclassic organization. Ethereum Classic DAO LLC and Olympia DAO build on that foundational work, extending it into protocol-native governance and treasury infrastructure.",
+    href: COOPERATIVE_ARCHIVE_URL,
+    label: "etccooperative.org (archived)",
   },
   {
     name: "Grayscale Investments",
@@ -55,9 +56,16 @@ export function LeadershipSection() {
               core development and infrastructure for nearly a decade, sustained
               in large part by distributed ETCG holders whose management fees
               backed the network before protocol-native funding existed. Ethereum
-              Classic DAO LLC is the institutional expression of that continuity
-              — the same contributors, the same commitment, built to grow with the network and the global adoption of blockchain infrastructure.
+              Classic DAO LLC is the institutional expression of that continuity:
+              it stewards the network&rsquo;s public goods today, in the
+              community&rsquo;s own repositories — the same contributors, the same commitment, built to grow with the network and the global adoption of blockchain infrastructure.
             </p>
+            <Link
+              href="/stewardship"
+              className="mt-4 inline-flex items-center text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--text-primary)]"
+            >
+              How this work is maintained and funded &rarr;
+            </Link>
           </FadeIn>
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -96,7 +104,7 @@ export function LeadershipSection() {
           </div>
 
           <FadeIn>
-            <h3 className="mt-16 text-xl font-bold">Key Partners</h3>
+            <h3 className="mt-16 text-xl font-bold">Foundational Organizations</h3>
             <p className="mt-2 text-sm text-[var(--text-muted)]">
               The organizations whose decade of funded development and regulated institutional access built the foundation Ethereum Classic DAO LLC continues.
             </p>

@@ -10,7 +10,7 @@ import { InfrastructureSection } from "@/components/about/InfrastructureSection"
 export const metadata: Metadata = {
   title: "About Ethereum Classic DAO LLC",
   description:
-    "Ethereum Classic DAO LLC is a Wyoming-registered DAO LLC building the software, governance infrastructure, and institutional frameworks for Ethereum Classic — the largest Proof-of-Work blockchain with native EVM smart contracts. Recognized under the CLARITY Act, MiCA, and Japan's FSA Green List.",
+    "Ethereum Classic DAO LLC is the Wyoming DAO LLC that maintains and funds Ethereum Classic's public goods as the funder of last resort, building the governance and institutional frameworks for the largest Proof-of-Work blockchain with native EVM smart contracts. Ethereum Classic is a digital commodity candidate under the CLARITY Act, a decentralized asset under MiCA, and recognized on Japan's FSA Green List.",
 };
 
 export default function AboutPage() {

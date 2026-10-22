@@ -17,16 +17,25 @@ export function StewardshipSection() {
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Olympia is the culmination of years of funded, principled stewardship
-              by the organization that has kept Ethereum Classic&apos;s core development
+              by the organizations that kept Ethereum Classic&apos;s core development
               alive and moving forward.
             </p>
-            <a
-              href="/core-development"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
-            >
-              View the full protocol development timeline
-              <ArrowRight size={14} aria-hidden="true" />
-            </a>
+            <div className="mt-4 flex flex-wrap gap-x-8 gap-y-2">
+              <a
+                href="/core-development"
+                className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+              >
+                View the full protocol development timeline
+                <ArrowRight size={14} aria-hidden="true" />
+              </a>
+              <a
+                href="/stewardship"
+                className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+              >
+                Who maintains and funds this work today
+                <ArrowRight size={14} aria-hidden="true" />
+              </a>
+            </div>
           </FadeIn>
 
           <FadeIn delay={80}>
@@ -36,7 +45,7 @@ export function StewardshipSection() {
               </div>
               <p className="mt-4 text-lg font-semibold">The ETC Cooperative</p>
               <p className="mt-1 text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">
-                US 501(c)(3) Non-Profit · Core Dev Funder Since 2017 · Every Hard Fork Since Atlantis
+                US 501(c)(3) Non-Profit · Core Dev Funder From 2017 · Every Hard Fork Since Atlantis
               </p>
 
               {/* Track record */}
@@ -44,15 +53,15 @@ export function StewardshipSection() {
                 Track Record
               </p>
               <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
-                The ETC Cooperative comprises Ethereum Classic&apos;s earliest core
-                contributors and is backed by its largest stakeholders. Since
-                inception, the Cooperative has funded ETC&apos;s core client
+                The ETC Cooperative was formed by Ethereum Classic&apos;s earliest
+                core contributors and backed by its largest stakeholders. From
+                its inception, the Cooperative funded ETC&apos;s core client
                 development, <strong className="text-[var(--text-primary)] font-medium">contributed millions toward every upgrade cycle
                 since Atlantis</strong>, and carried the critical infrastructure service
                 contracts that kept the network running when institutional
                 support was scarce. Every hard fork, every client release, and
-                every cross-client coordination effort was backed by their
-                balance sheet.
+                every cross-client coordination effort of that period was backed
+                by its balance sheet.
               </p>
 
               {/* Transition */}
@@ -72,6 +81,16 @@ export function StewardshipSection() {
                   last resort</strong> — carrying core development and infrastructure on
                   a private balance sheet until the on-chain framework existed.
                   Olympia is that framework.
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
+                  The Cooperative entered maintenance mode at the end of 2024.
+                  Ethereum Classic DAO LLC maintains and funds the
+                  network&apos;s public goods, the Core-Geth client, the
+                  bootnodes and the discovery lists, in the community&apos;s own
+                  repositories, with the day-to-day work done by Ethereum
+                  Classic&apos;s core developers, and does so today as{" "}
+                  <strong className="text-[var(--text-primary)] font-medium">funder of last resort</strong>.
+                  Olympia exists so that the network no longer needs one.
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
                   The Ethereum Classic DAO LLC, a Wyoming-registered DAO LLC,
@@ -99,9 +118,7 @@ export function StewardshipSection() {
                   public participation.
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                  ETC Cooperative continues as a foundational steward — focused
-                  on treasury fund health, institutional relationships, and
-                  growing the resources available to the network. Olympia is
+                  Olympia is
                   coming online as global regulatory frameworks are coalescing
                   around Proof-of-Work networks simultaneously. A public,
                   transparent, on-chain funding framework is precisely what
@@ -113,12 +130,10 @@ export function StewardshipSection() {
 
               <div className="mt-6">
                 <a
-                  href="https://etccooperative.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/stewardship"
                   className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
                 >
-                  Learn more about the ETC Cooperative
+                  How the Cooperative&apos;s work continues
                   <ArrowRight size={14} aria-hidden="true" />
                 </a>
               </div>
@@ -201,11 +216,7 @@ export function StewardshipSection() {
                   precedent set with Bitcoin and Ethereum — <strong className="text-[var(--text-primary)] font-medium">a publicly auditable
                   treasury provides the on-chain mechanism for ETF product
                   issuers to contribute back to the network underpinning their
-                  product</strong>. For institutions and individuals seeking a
-                  tax-advantaged vehicle, the ETC Cooperative remains the
-                  conduit — a US 501(c)(3) non-profit that directs contributions
-                  to the Olympia Treasury. On-chain or off-chain, the
-                  destination is the same open treasury.
+                  product</strong>.
                 </p>
               </div>
 

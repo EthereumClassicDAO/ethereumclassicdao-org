@@ -27,10 +27,12 @@ export function MissionSection() {
           </h1>
           <p className="mt-6 text-xl text-[var(--text-secondary)] md:text-2xl">
             The original Ethereum codebase, running continuously since July
-            2015 without rollbacks or rewrites. Ethereum Classic DAO LLC builds
-            and maintains the protocol software, critical infrastructure, and
-            institutional framework for the largest Proof-of-Work smart
-            contract platform.
+            2015 without rollbacks or rewrites. Ethereum Classic DAO LLC is the
+            standing legal entity that maintains and funds the public goods its
+            nodes depend on (the Core-Geth client, the network&rsquo;s bootnodes
+            and its peer discovery lists) as the funder of last resort. Ethereum
+            Classic&rsquo;s core developers and community contributors do the
+            day-to-day work.
           </p>
           <p className="mt-4 text-base text-[var(--text-muted)]">
             Ethereum Classic inherits two distinct regulatory trajectories: the
@@ -99,13 +101,29 @@ export function MissionSection() {
         </div>
 
         <FadeIn delay={620}>
-          <Link
-            href="/regulation"
-            className="mt-6 inline-flex items-center gap-2 text-xs font-medium text-[var(--brand-green)] transition-colors hover:underline underline-offset-4"
-          >
-            View the regulatory landscape
-            <span aria-hidden="true">→</span>
-          </Link>
+          <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2">
+            <Link
+              href="/stewardship"
+              className="inline-flex items-center gap-2 text-xs font-medium text-[var(--brand-green)] transition-colors hover:underline underline-offset-4"
+            >
+              How this work is maintained and funded
+              <span aria-hidden="true">→</span>
+            </Link>
+            <Link
+              href="/public-goods"
+              className="inline-flex items-center gap-2 text-xs font-medium text-[var(--brand-green)] transition-colors hover:underline underline-offset-4"
+            >
+              What is maintained
+              <span aria-hidden="true">→</span>
+            </Link>
+            <Link
+              href="/regulation"
+              className="inline-flex items-center gap-2 text-xs font-medium text-[var(--brand-green)] transition-colors hover:underline underline-offset-4"
+            >
+              View the regulatory landscape
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
         </FadeIn>
       </div>
     </section>

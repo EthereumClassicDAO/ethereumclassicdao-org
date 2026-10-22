@@ -1,6 +1,7 @@
 import { Building2, Vote, Landmark, Network, HeartHandshake, BarChart3 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { COOPERATIVE_ARCHIVE_URL } from "@/lib/network-links";
 
 const entities = [
   {
@@ -8,8 +9,8 @@ const entities = [
     name: "Ethereum Classic DAO LLC",
     role: "Legal Entity",
     description:
-      "The legal wrapper for the Olympia DAO under Wyoming's DAO LLC framework. Ensures global regulatory compliance and proper reporting, with alignment to federal digital asset legislation including the CLARITY Act, GENIUS Act, and Mined in America Act.",
-    href: "https://ethereumclassicdao.org",
+      "The standing legal entity that maintains and funds Ethereum Classic's public goods (the Core-Geth client, the bootnodes and the peer discovery lists) as the funder of last resort; Ethereum Classic's core developers do the day-to-day work. Ensures global regulatory compliance and proper reporting, with alignment to federal digital asset legislation including the CLARITY Act, GENIUS Act, and Mined in America Act.",
+    href: "/stewardship",
     highlighted: true,
   },
   {
@@ -44,8 +45,8 @@ const entities = [
     name: "ETC Cooperative",
     role: "Foundational Organization",
     description:
-      "Founded in 2017 by and composed of Ethereum Classic's earliest core contributors, ETC Cooperative is a US 501(c)(3) non-profit that contributed millions of dollars to Ethereum Classic's client teams and infrastructure — backing every hard fork, every client release, and every cross-client coordination effort since Atlantis. Ethereum Classic DAO LLC and Olympia DAO build on that foundational work, extending it into protocol-native governance and treasury infrastructure.",
-    href: "https://etccooperative.org",
+      "The ETC Cooperative, a US 501(c)(3) non-profit founded in 2017 by Ethereum Classic's earliest core contributors, contributed millions of dollars to Ethereum Classic's client teams and infrastructure — backing every hard fork, every client release, and every cross-client coordination effort since Atlantis. It entered maintenance mode at the end of 2024, and the services it maintained continue in the ethereumclassic organization. Ethereum Classic DAO LLC and Olympia DAO build on that foundational work, extending it into protocol-native governance and treasury infrastructure.",
+    href: COOPERATIVE_ARCHIVE_URL,
     highlighted: false,
   },
   {

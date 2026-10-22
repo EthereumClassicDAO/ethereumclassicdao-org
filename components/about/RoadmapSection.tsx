@@ -11,7 +11,7 @@ const stages = [
       "Glamsterdam-era EVM alignment: Dencun, Pectra, Fusaka, and Glamsterdam EIPs (ECIP-1121)",
       "EIP-1559 fee market with basefee redirected to the treasury (ECIP-1111)",
       "Protocol treasury contract deployed at the fork (ECIP-1112)",
-      "Client security parameters: minimum miner tip, network-authoritative gas target, MESS restored (ECIP-1122)",
+      "A minimum miner tip of one gwei (ECIP-1122)",
     ],
   },
   {
@@ -26,7 +26,7 @@ const stages = [
       "Membership-based voting with on-chain sanctions screening",
       "Open competitive bidding — any EVM developer or infrastructure provider can participate",
       "Core developers, infrastructure providers, and critical services funded on merit",
-      "Direct on-chain contributions and ETC Cooperative donation channel",
+      "Direct on-chain contributions from any stakeholder",
     ],
   },
   {

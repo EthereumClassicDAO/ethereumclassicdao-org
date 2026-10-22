@@ -217,9 +217,6 @@ export function GovernanceProcessSection() {
                       emergency protocol responses. The treasury is funded
                       continuously by basefee revenue, on-chain donations, and
                       miners directing hashpower to the treasury address.
-                      Stakeholders who prefer a traditional giving model can also
-                      contribute through the ETC Cooperative, a US 501(c)(3)
-                      non-profit that accepts tax-deductible donations.
                     </p>
                     <p className="mt-3 text-sm text-[var(--text-muted)]">
                       Any stakeholder, whether exchanges, custodians, miners,

@@ -8,11 +8,17 @@ import { PropertiesSection } from "@/components/ecosystem/PropertiesSection";
 import { ActivationCountdown } from "@/components/ui/ActivationCountdown";
 import { ExternalLink, CheckCircle2, Flame, Landmark, Cpu, Layers, Code2, ShieldCheck, Network } from "lucide-react";
 import { Accordion } from "@/components/ui/Accordion";
+import {
+  CORE_GETH_DOCS_URL,
+  CORE_GETH_RELEASES_URL,
+  FUKUII_DOCS_URL,
+  FUKUII_RELEASES_URL,
+} from "@/lib/network-links";
 
 export const metadata: Metadata = {
   title: "Olympia Upgrade: Glamsterdam EVM Alignment, EIP-1559 Fee Market, and Protocol Treasury for Ethereum Classic",
   description:
-    "Olympia is Ethereum Classic's most significant protocol upgrade. Glamsterdam-era EVM alignment closes years of tooling divergence — Foundry, Hardhat, wagmi, viem, and ethers.js work on ETC without modification. EIP-1559 fee market redirects the basefee to a protocol-managed treasury, funding open-source core development without foundation dependency. Node upgrade guides for Fukuii and Core-Geth.",
+    "Olympia is Ethereum Classic's most significant protocol upgrade. Glamsterdam-era EVM alignment closes years of tooling divergence — Foundry, Hardhat, wagmi, viem, and ethers.js work on ETC without modification. EIP-1559 fee market redirects the basefee to a protocol-managed treasury, funding open-source core development without foundation dependency. Node upgrade guides for Core-Geth and Fukuii.",
   keywords: [
     "Olympia upgrade",
     "Ethereum Classic upgrade",
@@ -82,39 +88,20 @@ const ecips = [
   },
   {
     ecip: "ECIP-1122",
-    title: "Network Security Client Configuration",
+    title: "Miner Tip Floor",
     icon: ShieldCheck,
     description:
-      "Three parameters every Olympia client enforces identically: a 1 gwei minimum effective miner tip, so miners keep an economic incentive to process transactions once the basefee is redirected; a network-authoritative gas target that overrides operator flags, closing the gas-limit manipulation vector demonstrated in 2024; and MESS re-activation, restoring the chain-reorganization resistance that was switched off at Spiral. These are chain configuration rather than consensus rules — a client that omits them provides weaker guarantees without forking.",
-    tags: ["ETC Native", "MESS"],
+      "One value every conforming client enforces identically: MIN_MINER_TIP, a minimum effective tip of one gwei per unit of gas, applied at transaction-pool admission and at block production and not replaced by an operator-supplied value. It applies to the legacy transactions Ethereum Classic carries today. It is not a consensus rule, and no block becomes invalid under it.",
+    tags: ["ETC Native"],
   },
 ];
 
 const clients = [
   {
-    name: "Fukuii",
-    language: "Scala",
-    languageColor: "#DC322F",
-    badges: ["Primary", "Enterprise", "ETC-native"],
-    version: "TBD",
-    runtime: "JDK 25+",
-    disk: "500 GB+ (SNAP sync)",
-    ram: "8 GB minimum",
-    steps: [
-      "Stop your running Fukuii node",
-      "Download the Olympia-compatible release from GitHub",
-      "Replace the existing binary",
-      "Restart your node. Fukuii automatically follows the Olympia fork.",
-    ],
-    dockerImage: "ghcr.io/fukuii-project/fukuii-cli:latest",
-    githubUrl: "https://github.com/fukuii-project/fukuii-cli/releases",
-    docsUrl: "https://docs.fukuii.org",
-  },
-  {
     name: "Core-Geth",
     language: "Go",
     languageColor: "#00ADD8",
-    badges: ["Maintained", "go-ethereum derivative"],
+    badges: ["Recommended", "go-ethereum derivative"],
     version: "TBD",
     runtime: "Go 1.26+",
     disk: "500 GB+ (full sync)",
@@ -126,8 +113,27 @@ const clients = [
       "Restart your node. It will automatically follow the Olympia fork.",
     ],
     dockerImage: "ghcr.io/ethereumclassic/core-geth",
-    githubUrl: "https://github.com/ethereumclassic/core-geth/releases",
-    docsUrl: "https://github.com/ethereumclassic/core-geth#readme",
+    githubUrl: CORE_GETH_RELEASES_URL,
+    docsUrl: CORE_GETH_DOCS_URL,
+  },
+  {
+    name: "Fukuii",
+    language: "Scala",
+    languageColor: "#DC322F",
+    badges: ["ETC-native", "Enterprise"],
+    version: "TBD",
+    runtime: "JDK 25+",
+    disk: "500 GB+ (SNAP sync)",
+    ram: "8 GB minimum",
+    steps: [
+      "Stop your running Fukuii node",
+      "Download the Olympia-compatible release from GitHub",
+      "Replace the existing binary",
+      "Restart your node. Fukuii automatically follows the Olympia fork.",
+    ],
+    dockerImage: "ghcr.io/chippr-robotics/fukuii:latest",
+    githubUrl: FUKUII_RELEASES_URL,
+    docsUrl: FUKUII_DOCS_URL,
   },
 ];
 
@@ -135,12 +141,12 @@ const faqItems = [
   {
     question: "Who is coordinating the Olympia upgrade?",
     answer:
-      "Olympia is coordinated by the same developers, organizations, and community stewards who have delivered every Ethereum Classic network upgrade since 2016: Gotham, Die Hard, Defuse Difficulty Bomb, Thanos, and the full EVM compatibility series spanning Gas Reprice, Atlantis, Agharta, Phoenix, Magneto, Mystique, and Spiral. The ETC Cooperative, a US 501(c)(3) non-profit, funds Ethereum Classic's client development teams and has managed the hard fork coordination process throughout that history. Stakeholder outreach, client release sequencing, and cross-client testing are all established practice. Olympia is a significant upgrade carried forward by a team with a clean delivery record across a decade of ETC network upgrades.",
+      "Olympia is coordinated by the same developers and community stewards who have delivered every Ethereum Classic network upgrade since 2016: Gotham, Die Hard, Defuse Difficulty Bomb, Thanos, and the full EVM compatibility series spanning Gas Reprice, Atlantis, Agharta, Phoenix, Magneto, Mystique, and Spiral. Client development through those upgrades was funded in turn by ETCDEV, ETC Labs and the ETC Cooperative. Ethereum Classic's core developers and community contributors do the day-to-day work on Core-Geth today, with Ethereum Classic DAO LLC the standing legal entity that maintains and funds it as the funder of last resort. Stakeholder outreach, client release sequencing, and cross-client testing are all established practice. Olympia is a significant upgrade carried forward by a team with a clean delivery record across a decade of ETC network upgrades.",
   },
   {
     question: "What role has the ETC Cooperative played, and what changes with Olympia?",
     answer:
-      "The ETC Cooperative is a US 501(c)(3) non-profit that has funded Ethereum Classic's core client development for years, contributing millions of dollars to the network's client teams and infrastructure through every upgrade cycle. Every hard fork, every client release, and every cross-client coordination effort has been backed by their balance sheet. Olympia is what they were building toward: a protocol-native funding model that does not depend on any single organization's continued generosity. The Olympia Treasury, governed on-chain by the Olympia DAO and executed by the Wyoming DAO LLC, extends beyond institutional dependency with a durable financial foundation that scales with network usage. The model changes, not the commitment. The ETC Cooperative continues as an active steward, and any developer, mining operation, hardware manufacturer, or individual worldwide can now contribute directly on-chain without fielding a team or managing a non-profit to do it.",
+      "The ETC Cooperative, a US 501(c)(3) non-profit founded in 2017, funded Ethereum Classic's core client development for years, contributing millions of dollars to the network's client teams and infrastructure through every upgrade cycle. Every hard fork, every client release, and every cross-client coordination effort of that period was backed by its balance sheet. It entered maintenance mode at the end of 2024, and the services it maintained continue in the ethereumclassic organization, where Ethereum Classic's core developers do the day-to-day work and Ethereum Classic DAO LLC maintains and funds them today as the funder of last resort. Olympia is what that work was building toward: a protocol-native funding model that does not depend on any single organization's continued generosity. The Olympia Treasury, governed on-chain by the Olympia DAO and executed by the Wyoming DAO LLC, extends beyond institutional dependency with a durable financial foundation that scales with network usage. Any developer, mining operation, hardware manufacturer, or individual worldwide can contribute directly on-chain without fielding a team or managing a non-profit to do it.",
   },
   {
     question: "What is Grayscale's role in Ethereum Classic's development?",
@@ -155,7 +161,7 @@ const faqItems = [
   {
     question: "How does the protocol treasury work?",
     answer:
-      "The Olympia Treasury is funded by EIP-1559 basefee revenue and voluntary on-chain donations. Block rewards and tips remain completely untouched and go entirely to miners. Futarchy prediction market activity generates additional transaction volume that flows back into the treasury as basefee revenue. Any stakeholder, whether exchanges, custodians, miners, investment product issuers, or institutions holding ETC on behalf of fund shareholders, can contribute directly on-chain with no overhead. Stakeholders who prefer a traditional giving model can contribute through the ETC Cooperative, a US 501(c)(3) non-profit that accepts tax-deductible donations.",
+      "The Olympia Treasury is funded by EIP-1559 basefee revenue and voluntary on-chain donations. Block rewards and tips remain completely untouched and go entirely to miners. Futarchy prediction market activity generates additional transaction volume that flows back into the treasury as basefee revenue. Any stakeholder, whether exchanges, custodians, miners, investment product issuers, or institutions holding ETC on behalf of fund shareholders, can contribute directly on-chain with no overhead.",
   },
   {
     question: "How was Olympia tested before mainnet?",
@@ -185,7 +191,7 @@ const faqItems = [
   {
     question: "Can I roll back if something goes wrong?",
     answer:
-      "In the unlikely event of a critical issue after activation, the same client teams that have managed every ETC emergency response since 2016 would coordinate a patch release promptly. The established stakeholder communication channels, including the ETC Cooperative, client maintainers, and major exchange contacts, are the same ones used for every previous upgrade. Olympia has broader test coverage across more independent client implementations than any previous ETC hard fork, and the Mordor testnet run provides a real network validation environment before mainnet activation.",
+      "In the unlikely event of a critical issue after activation, the same client teams that have managed every ETC emergency response since 2016 would coordinate a patch release promptly. Stakeholders are reached through the core developers' security contact at ethereumclassic.net, the client maintainers, and major exchange contacts. Olympia has broader test coverage across more independent client implementations than any previous ETC hard fork, and the Mordor testnet run provides a real network validation environment before mainnet activation.",
   },
 ];
 

@@ -290,9 +290,9 @@ const upgrades: Upgrade[] = [
     ecip: "ECIP-1110",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1110",
     eips: [],
-    keyChanges: ["ECBP-1100 default set to off", "Chain scoring returns to linear total difficulty", "Default set back to on at Olympia by ECIP-1122"],
+    keyChanges: ["ECBP-1100 default set to off", "Chain scoring returns to linear total difficulty", "--mess and --mess=false override either default"],
     description:
-      "The ECBP-1100 default was set to off following a period of low network hashrate, at the same block as Spiral. The resulting gap in chain reorganization resistance is closed by ECIP-1122, which sets the default back to on at the Olympia activation block.",
+      "ECBP-1110 set the ECBP-1100 default to off at the Spiral block, after a surge of hashrate in 2023. MESS had been a temporary patch against an adjacent Proof-of-Work chain, Ethereum mainnet before its move to Proof-of-Stake, whose hashrate dwarfed Ethereum Classic's. A Core-Geth release ships one of the two defaults, ECBP-1100's (on) or ECBP-1110's (off from this block), and --mess or --mess=false overrides it. Every node in a fleet should carry the same setting.",
     status: "complete",
   },
   {
@@ -332,7 +332,7 @@ const upgrades: Upgrade[] = [
       "EIP-7975",
       "EIP-7997",
     ],
-    keyChanges: ["EIP-1559 fee market (ECIP-1111)", "Protocol treasury (ECIP-1112)", "Glamsterdam EVM alignment (ECIP-1121)", "Client security config: miner tip floor, gas target, MESS (ECIP-1122)", "DAO governance: core dev, infrastructure, security"],
+    keyChanges: ["EIP-1559 fee market (ECIP-1111)", "Protocol treasury (ECIP-1112)", "Glamsterdam EVM alignment (ECIP-1121)", "Miner tip floor (ECIP-1122)", "DAO governance: core dev, infrastructure, security"],
     description:
       "EVM alignment to Glamsterdam, incorporating EIPs spanning London, Dencun, Pectra, Fusaka, and Glamsterdam on a single upgrade boundary. Introduces EIP-1559 with basefee directed to a protocol treasury — the funding model first identified during the 2022 Mystique upgrade. On-chain DAO governance, built on the OpenZeppelin 5.x contract suite, is scoped to core client software, critical infrastructure, and network security, with funding proposals open to any ETC account. A subsequent phase introduces open futarchy prediction markets — public staking on protocol outcomes with rewards for accurate predictions.",
     status: "upcoming",
@@ -385,8 +385,9 @@ export default function TimelinePage() {
             <p className="mt-4 text-base text-[var(--text-muted)]">
               A decade of uninterrupted Proof-of-Work operation — every
               network upgrade applied to Ethereum Classic mainnet. Each upgrade
-              coordinated across independent client teams, funded by the ETC
-              Cooperative and institutional partners, and ratified through the
+              coordinated across independent client teams, funded in turn by
+              ETCDEV, ETC Labs, the ETC Cooperative and institutional partners,
+              and ratified through the
               Ethereum Classic Improvement Proposal process. Full EVM parity delivered through every cycle — from Gas Reprice
               to Spiral — tracking every major Ethereum protocol advancement
               on the largest Proof-of-Work smart contract platform and the
