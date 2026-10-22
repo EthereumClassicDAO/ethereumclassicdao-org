@@ -1,17 +1,27 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { ExternalLink } from "lucide-react";
 import { fetchHashrateTHs, fetchAllHashrateHistories } from "@/lib/api/hashrate";
 import { HashrateChart } from "@/components/about/HashrateChart";
+import {
+  CORE_GETH_DOCS_URL,
+  CORE_GETH_HOMEPAGE_URL,
+  CORE_GETH_LATEST_RELEASE_URL,
+  FUKUII_DOCS_URL,
+  FUKUII_HOMEPAGE_URL,
+  FUKUII_RELEASES_URL,
+} from "@/lib/network-links";
 
 export const metadata: Metadata = {
-  title: "ETC Client Implementations — Fukuii and Core-Geth",
+  title: "Ethereum Classic Clients — Core-Geth and Fukuii",
   description:
-    "Fukuii (Scala 3) is Ethereum Classic's first native client — an EVM execution client running several networks at once in one JVM process, where a further network is configuration rather than a new client. Core-Geth (Go), a go-ethereum derivative, is maintained through the Olympia upgrade. ETC compatibility plugins extend support to Besu, Erigon, Ethrex, Go-Ethereum, Nethermind, and Reth.",
+    "Core-Geth (Go), a go-ethereum derivative released and maintained in the ethereumclassic organization, is the recommended client for Ethereum Classic: run its v1.13 line. Fukuii (Scala 3) is a native Ethereum Classic client and an alternative, an EVM execution client running several networks at once in one JVM process, where a further network is configuration rather than a new client. ETC compatibility plugins extend support to Besu, Erigon, Ethrex, Go-Ethereum, Nethermind, and Reth.",
   keywords: [
-    "Fukuii",
     "Core-Geth",
+    "Core-Geth release",
+    "Fukuii",
     "Ethereum Classic client",
     "ETC node",
     "Scala blockchain client",
@@ -33,28 +43,28 @@ export const metadata: Metadata = {
 
 const clients = [
   {
-    name: "Fukuii",
-    language: "Scala",
-    languageColor: "#DC322F",
-    role: "Primary",
-    roleTheme: "brand" as const,
-    description:
-      "EVM execution client in Scala 3 — one binary runs several networks at once in one JVM process, each isolated with its own state, metrics, and configuration. A further network is configuration rather than a new client. Consensus is selected per deployment: native Proof-of-Work for Ethereum Classic and Mordor, or Proof-of-Stake with a built-in consensus layer or an external client over the Engine API. Ethereum Classic's first native client — built ground-up for ETC rather than derived from an Ethereum client — and the primary ETC client for the Olympia era.",
-    websiteUrl: "https://fukuii.org",
-    docsUrl: "https://docs.fukuii.org",
-    releasesUrl: "https://github.com/fukuii-project/fukuii-cli/releases",
-  },
-  {
     name: "Core-Geth",
     language: "Go",
     languageColor: "#00ADD8",
-    role: "Maintained",
+    role: "Recommended",
+    roleTheme: "brand" as const,
+    description:
+      "The recommended client for Ethereum Classic: a go-ethereum derivative released and maintained in the ethereumclassic organization, the community's own on GitHub. Not native, and not a plugin. Run the v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code and is built with a supported Go toolchain. Take the current release from that repository, where every release file carries a checksum and a build attestation.",
+    websiteUrl: CORE_GETH_HOMEPAGE_URL,
+    docsUrl: CORE_GETH_DOCS_URL,
+    releasesUrl: CORE_GETH_LATEST_RELEASE_URL,
+  },
+  {
+    name: "Fukuii",
+    language: "Scala",
+    languageColor: "#DC322F",
+    role: "ETC-native",
     roleTheme: "muted" as const,
     description:
-      "A go-ethereum derivative maintained for Ethereum Classic, in maintenance only. It implements the full Olympia specification — ECIP-1111, 1112, 1121 and 1122 — and its Mordor sync is confirmed, so existing operators have a supported path through the upgrade. New deployments should use Fukuii.",
-    websiteUrl: "https://github.com/ethereumclassic/core-geth",
-    docsUrl: "https://github.com/ethereumclassic/core-geth#readme",
-    releasesUrl: "https://github.com/ethereumclassic/core-geth/releases",
+      "A native Ethereum Classic client and an alternative to Core-Geth, built ground-up for ETC rather than derived from an Ethereum client. An EVM execution client in Scala 3: one binary runs several networks at once in one JVM process, each isolated with its own state, metrics, and configuration, and a further network is configuration rather than a new client. Consensus is selected per deployment: native Proof-of-Work for Ethereum Classic and Mordor, or Proof-of-Stake with a built-in consensus layer or an external client over the Engine API.",
+    websiteUrl: FUKUII_HOMEPAGE_URL,
+    docsUrl: FUKUII_DOCS_URL,
+    releasesUrl: FUKUII_RELEASES_URL,
   },
 ];
 
@@ -214,6 +224,20 @@ export default async function ClientsPage() {
               </FadeIn>
             ))}
           </div>
+
+          <FadeIn delay={200}>
+            <p className="mt-6 text-sm text-[var(--text-muted)]">
+              Core-Geth is one of the public goods maintained in the
+              ethereumclassic organization, alongside the network&rsquo;s
+              bootnodes and peer discovery lists.{" "}
+              <Link
+                href="/public-goods"
+                className="font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--text-primary)]"
+              >
+                What is maintained, and where &rarr;
+              </Link>
+            </p>
+          </FadeIn>
 
           <FadeIn delay={250}>
             <h2 className="mt-14 mb-2 text-xl font-bold tracking-tight">

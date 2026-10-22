@@ -6,7 +6,7 @@ const audiences = [
     icon: Code,
     heading: "Developers",
     description:
-      "Full EVM compatibility — every framework, library, and IDE that targets Ethereum works on ETC without modification. Set Chain ID 61, point your RPC at etc.rivet.link, and deploy. No forks, no modifications, no bridge risk.",
+      "Full EVM compatibility — every framework, library, and IDE that targets Ethereum works on ETC without modification. Set Chain ID 61, point your RPC at a public endpoint or your own node, and deploy. No forks, no modifications, no bridge risk.",
   },
   {
     icon: Pickaxe,

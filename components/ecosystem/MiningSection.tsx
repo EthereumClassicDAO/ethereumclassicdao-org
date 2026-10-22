@@ -5,6 +5,7 @@ import { fetchHashrateTHs, fetchAllHashrateHistories } from "@/lib/api/hashrate"
 import { fetchPoolHashrates, type PoolHashrates } from "@/lib/api/pool-hashrate";
 import { PoolsTable, type PoolRow } from "@/components/ecosystem/PoolsTable";
 import { HashrateChart } from "@/components/about/HashrateChart";
+import { CORE_GETH_LATEST_RELEASE_URL } from "@/lib/network-links";
 
 interface Equipment {
   name: string;
@@ -158,7 +159,7 @@ export async function MiningSection() {
             ))}
           </div>
 
-          {/* Body copy + fukuii link */}
+          {/* Body copy + client link */}
           <FadeIn delay={300}>
             <div className="mt-8">
               <p className="text-sm leading-relaxed text-[var(--text-muted)]">
@@ -171,12 +172,12 @@ export async function MiningSection() {
                 participation, decentralizing hashrate across geographies and
                 reducing supply chain risk. Run{" "}
                 <a
-                  href="https://github.com/fukuii-project/fukuii-cli"
+                  href={CORE_GETH_LATEST_RELEASE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-mono font-semibold text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
                 >
-                  fukuii
+                  Core-Geth
                 </a>{" "}
                 to participate in block production and earn ETC rewards.
               </p>

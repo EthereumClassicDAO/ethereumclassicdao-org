@@ -1,23 +1,28 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import {
+  CORE_GETH_LATEST_RELEASE_URL,
+  FUKUII_REPO_URL,
+} from "@/lib/network-links";
 
-const primaryClient = {
-  name: "Fukuii",
-  language: "Scala",
+const featuredClient = {
+  name: "Core-Geth",
+  language: "Go",
   description:
-    "Ethereum Classic's first native client — built ground-up for ETC rather than derived from an Ethereum client. An EVM execution client in Scala 3: one binary runs several networks at once in one JVM process, with consensus selected per deployment. Primary client for the Olympia upgrade.",
-  github: "https://github.com/fukuii-project/fukuii-cli",
-  status: "Primary",
+    "The recommended client for Ethereum Classic: a go-ethereum derivative released and maintained in the ethereumclassic organization, the community's own on GitHub. Not native, and not a plugin. Run the v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code.",
+  href: CORE_GETH_LATEST_RELEASE_URL,
+  status: "Recommended",
+  tag: "go-ethereum derivative",
 };
 
 const secondaryClients = [
   {
-    name: "Core-Geth",
-    language: "Go",
+    name: "Fukuii",
+    language: "Scala",
     description:
-      "A go-ethereum derivative maintained for Ethereum Classic, continuing in a maintenance role through the Olympia upgrade and beyond. Broad infrastructure support across the Go ecosystem.",
-    github: "https://github.com/ethereumclassic/core-geth",
-    status: "Maintained",
+      "A native Ethereum Classic client and an alternative to Core-Geth, built ground-up for ETC rather than derived from an Ethereum client. An EVM execution client in Scala 3: one binary runs several networks at once in one JVM process, with consensus selected per deployment.",
+    github: FUKUII_REPO_URL,
+    status: "ETC-native",
   },
   {
     name: "ETC Plugins",
@@ -41,8 +46,10 @@ export function ClientsSection() {
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Multi-client architecture eliminates single points of failure at
-              the protocol layer. Fukuii is Ethereum Classic&rsquo;s first native
-              client; Core-Geth is a go-ethereum derivative maintained for ETC.
+              the protocol layer. Core-Geth is the recommended client, a
+              go-ethereum derivative released and maintained in the
+              ethereumclassic organization; Fukuii, a native Ethereum Classic
+              client, is an alternative to it.
               Distinct codebases in distinct languages, maintained by separate
               teams, mean the network can withstand the discontinuation or
               compromise of any single one. ETC compatibility plugins extend that
@@ -50,37 +57,35 @@ export function ClientsSection() {
             </p>
           </FadeIn>
 
-          {/* Primary client — featured */}
+          {/* Recommended client — featured */}
           <FadeIn delay={100}>
             <div className="mt-10 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] shadow-[0_0_24px_var(--border-glow)] p-8 transition-colors hover:border-[var(--border-glow)]">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-wrap items-center gap-3">
                     <p className="text-xl font-bold font-mono">
-                      {primaryClient.name}
+                      {featuredClient.name}
                     </p>
                     <span className="badge-available">
-                      {primaryClient.status}
+                      {featuredClient.status}
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-[var(--brand-green-subtle)] px-2.5 py-0.5 text-xs font-semibold text-[var(--brand-green)]">
-                      ETC-native
-                    </span>
+                    <span className="badge-pending">{featuredClient.tag}</span>
                   </div>
                   <p className="mt-1 text-sm text-[var(--text-subtle)]">
-                    {primaryClient.language}
+                    {featuredClient.language}
                   </p>
                 </div>
               </div>
               <p className="mt-4 text-base leading-relaxed text-[var(--text-muted)]">
-                {primaryClient.description}
+                {featuredClient.description}
               </p>
               <a
-                href={primaryClient.github}
+                href={featuredClient.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-5 inline-flex items-center text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
               >
-                View on GitHub →
+                Get the current release →
               </a>
             </div>
           </FadeIn>
