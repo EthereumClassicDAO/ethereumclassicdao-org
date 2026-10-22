@@ -45,7 +45,7 @@ const structuredData = [
     "@type": "SoftwareSourceCode",
     name: "Core-Geth",
     description:
-      "The recommended execution client for Ethereum Classic: a go-ethereum derivative released and maintained in the ethereumclassic organization.",
+      "The recommended execution client for Ethereum Classic: a go-ethereum derivative kept as a public good in the ethereumclassic organization, open to contributions from anyone and reviewed and maintained by Ethereum Classic's core developers.",
     url: CORE_GETH_HOMEPAGE_URL,
     codeRepository: CORE_GETH_REPO_URL,
     programmingLanguage: "Go",
@@ -53,6 +53,11 @@ const structuredData = [
       "@type": "Organization",
       name: "Ethereum Classic core developers",
       url: ETC_ORG_URL,
+    },
+    contributor: {
+      "@type": "Organization",
+      name: "Ethereum Classic community contributors",
+      url: CORE_GETH_REPO_URL,
     },
     funder: {
       "@type": "Organization",
