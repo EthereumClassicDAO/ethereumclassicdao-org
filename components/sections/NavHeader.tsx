@@ -9,6 +9,7 @@ import { Logo } from "@/components/ui/Logo";
 
 const topLinks = [
   { label: "About", href: "/about" },
+  { label: "Stewardship", href: "/stewardship" },
   { label: "Olympia", href: "/olympia" },
 ];
 
@@ -16,6 +17,7 @@ const dropdownGroups = [
   {
     label: "Protocol",
     items: [
+      { label: "Public Goods", href: "/public-goods" },
       { label: "Governance", href: "/governance" },
       { label: "Core Development", href: "/core-development" },
       { label: "Olympia Rollout", href: "/timeline" },

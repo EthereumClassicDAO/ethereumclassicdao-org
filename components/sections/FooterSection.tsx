@@ -41,6 +41,7 @@ const columns: { heading: string; links: FooterLink[] }[] = [
   {
     heading: "Build",
     links: [
+      { label: "Public Goods", href: "/public-goods" },
       { label: "Olympia Upgrade", href: "/olympia" },
       { label: "Core Development", href: "/core-development" },
       { label: "Olympia Rollout", href: "/timeline" },
@@ -62,6 +63,8 @@ const columns: { heading: string; links: FooterLink[] }[] = [
     heading: "Organization",
     links: [
       { label: "About", href: "/about" },
+      { label: "Stewardship", href: "/stewardship" },
+      { label: "Sponsor", href: "/stewardship#sponsor" },
       { label: "Leadership", href: "/about#leadership" },
       { label: "Contact", href: "/contact" },
       {

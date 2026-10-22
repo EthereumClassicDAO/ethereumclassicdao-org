@@ -30,6 +30,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${base}/stewardship`,
+      lastModified: gitDate("app/stewardship/page.tsx"),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${base}/public-goods`,
+      lastModified: gitDate("app/public-goods/page.tsx"),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
       url: `${base}/governance`,
       lastModified: gitDate("app/governance/page.tsx"),
       changeFrequency: "weekly",
