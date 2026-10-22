@@ -48,12 +48,13 @@ app/                    → routes; each page composes section components
   layout.tsx            → root layout: fonts, metadata, JSON-LD, nav, footer
   globals.css           → design tokens + Tailwind @theme (light + dark)
 components/
-  ui/                   → FadeIn, SectionDivider, PropertyCard, Accordion,
+  ui/                   → FadeIn, SectionDivider, PropertyCard, Accordion, Cite,
                           ActivationCountdown, HashrateChart
   sections/             → NavHeader, FooterSection
   <page>/               → section components, one directory per page
 lib/
   utils.ts              → cn() class-merge helper
+  network-links.ts      → shared URLs for clients, public goods and contacts
   api/                  → live data fetchers (see below)
 public/
   llms.txt              → machine-readable site summary; keep in sync with page copy
@@ -109,9 +110,12 @@ fallback must label it as an estimate.
   ECIP-1121 includes two of Glamsterdam's seven execution-layer EIPs; the rest are
   blocked on EIP-7928 and EIP-4788 dependencies, not on Proof-of-Stake grounds.
 - **Activation:** targeted for 2027. The activation *block* is TBD.
-- **Clients:** Fukuii is ETC's first native client. Core-Geth is a go-ethereum
-  derivative. Besu, Erigon, Ethrex, Go-Ethereum, Nethermind and Reth are ETC
-  *plugins* — never "overlays".
+- **Clients:** Core-Geth is the recommended client to run, a go-ethereum
+  derivative released and maintained in the `ethereumclassic` organization; run
+  the v1.13 line. It is not native and not a plugin. Fukuii is a native ETC
+  client and a credible alternative, never "first native client", "primary",
+  "most popular" or Core-Geth's successor. Besu, Erigon, Ethrex, Go-Ethereum,
+  Nethermind and Reth are ETC *plugins*, never "overlays".
 - **Governance:** the Olympia DAO makes binding decisions via OpenZeppelin Governor
   5.x. Futarchy (ECIP-1117/1118) is an open signal layer and a Child-DAO, never
   binding.
@@ -162,6 +166,7 @@ they disagree, the spec wins and the site is corrected.
 
 | Subject | Authority |
 |---|---|
-| Olympia ECIPs (1111–1122) | the ECIPs repository |
+| Core-Geth, clients, v1.12/v1.13, security, MESS defaults | coregeth.com, docs.coregeth.com and `ethereumclassic/core-geth` |
+| Olympia ECIPs (1111–1122), and ECBP-1100/1110 (MESS) | the ECIPs repository |
 | EIP contents and dependencies | `eips.ethereum.org` |
-| Fukuii positioning and URLs | fukuii.org and `fukuii-cli/NOTICE` |
+| Fukuii positioning and URLs | fukuii.com and `chippr-robotics/fukuii` |
