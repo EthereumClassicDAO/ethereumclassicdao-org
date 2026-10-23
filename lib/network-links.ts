@@ -44,6 +44,9 @@ export const CHAINLIST_MORDOR_URL = "https://chainlist.org/chain/63";
 // Network dashboard
 export const NODES_REPO_URL = `${ETC_ORG_URL}/nodes`;
 
+// Block explorer
+export const EXPLORER_REPO_URL = `${ETC_ORG_URL}/explorer`;
+
 // Community social media (twitter-together)
 export const TWITTER_TOGETHER_REPO_URL = `${ETC_ORG_URL}/twitter-together`;
 

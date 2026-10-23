@@ -15,6 +15,7 @@ import {
   BLOCK_EXPLORER_STATUS,
   SOCIAL_MEDIA_STATUS,
   NODES_REPO_URL,
+  EXPLORER_REPO_URL,
   TWITTER_TOGETHER_REPO_URL,
 } from "@/lib/network-links";
 
@@ -98,7 +99,7 @@ const goods: PublicGood[] = [
     live: false,
     description:
       "A public explorer for Ethereum Classic and Mordor, served from the organization's own infrastructure, so anyone can look up blocks, transactions, addresses and contracts without depending on a third-party service.",
-    links: [],
+    links: [{ label: "Repository", href: EXPLORER_REPO_URL }],
   },
   {
     icon: Megaphone,
