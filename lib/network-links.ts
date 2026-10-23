@@ -41,6 +41,12 @@ export const MORDOR_RPC_URL = "https://etc-mordor.blockscout.com/api/eth-rpc";
 export const CHAINLIST_ETC_URL = "https://chainlist.org/chain/61";
 export const CHAINLIST_MORDOR_URL = "https://chainlist.org/chain/63";
 
+// Network dashboard
+export const NODES_REPO_URL = `${ETC_ORG_URL}/nodes`;
+
+// Community social media (twitter-together)
+export const TWITTER_TOGETHER_REPO_URL = `${ETC_ORG_URL}/twitter-together`;
+
 // Contacts
 export const SECURITY_EMAIL = "security@ethereumclassic.net";
 export const SPONSOR_EMAIL = "donations@ethereumclassic.net";
@@ -58,3 +64,4 @@ export const COOPERATIVE_STATUS =
 export const PUBLIC_RPC_STATUS = "In preparation";
 export const NETWORK_DASHBOARD_STATUS = "In preparation";
 export const BLOCK_EXPLORER_STATUS = "In preparation";
+export const SOCIAL_MEDIA_STATUS = "In preparation";

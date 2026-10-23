@@ -27,8 +27,9 @@ The software and services Ethereum Classic nodes depend on, maintained in the et
 - **Peer discovery lists** — Signed DNS lists of Ethereum Classic and Mordor nodes, rebuilt every night from a crawl of the network and committed to https://github.com/ethereumclassic/discv4-dns-lists. Published under ethereumclassic.net, ethclassic.net and ethereumclassic.network.
 - **Bootnodes** — The entry points a new node contacts first, run by the Core-Geth maintainers and built into the client.
 - **Public JSON-RPC** — Endpoints under ethereumclassic.net, run from the organization's repositories. ChainList lists the endpoints other operators publish: https://chainlist.org/chain/61 (mainnet) and https://chainlist.org/chain/63 (Mordor).
-- **Network dashboard** — A public view of Ethereum Classic's network health, served from the organization's own infrastructure alongside the public endpoints. In preparation.
+- **Network dashboard** — A public view of Ethereum Classic's network health, served from the organization's own infrastructure alongside the public endpoints. Repository: https://github.com/ethereumclassic/nodes. In preparation.
 - **Block explorer** — A public explorer for Ethereum Classic and Mordor, served from the organization's own infrastructure. In preparation.
+- **Community social media** — The project's social media, run by the community through twitter-together: posts are proposed and reviewed as pull requests. Repository: https://github.com/ethereumclassic/twitter-together. In preparation.
 
 A repository in the community's organization stays where it is no matter who maintains or funds it. Each one has more than one admin and more than one maintainer, and changes reach the client's main branch only through a pull request approved by a reviewer other than its author: https://github.com/ethereumclassic/core-geth/blob/main/.github/CONTRIBUTING.md
 

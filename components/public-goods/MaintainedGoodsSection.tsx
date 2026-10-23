@@ -1,4 +1,4 @@
-import { Activity, Boxes, Cpu, Radar, Server, Globe, ExternalLink, type LucideIcon } from "lucide-react";
+import { Activity, Boxes, Cpu, Megaphone, Radar, Server, Globe, ExternalLink, type LucideIcon } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import {
@@ -13,6 +13,9 @@ import {
   PUBLIC_RPC_STATUS,
   NETWORK_DASHBOARD_STATUS,
   BLOCK_EXPLORER_STATUS,
+  SOCIAL_MEDIA_STATUS,
+  NODES_REPO_URL,
+  TWITTER_TOGETHER_REPO_URL,
 } from "@/lib/network-links";
 
 interface PublicGood {
@@ -85,7 +88,7 @@ const goods: PublicGood[] = [
     live: false,
     description:
       "A public view of Ethereum Classic's network health, served from the organization's own infrastructure alongside the public endpoints, so operators and integrators can read the state of the network and its peers without standing up their own indexer.",
-    links: [],
+    links: [{ label: "Repository", href: NODES_REPO_URL }],
   },
   {
     icon: Boxes,
@@ -96,6 +99,16 @@ const goods: PublicGood[] = [
     description:
       "A public explorer for Ethereum Classic and Mordor, served from the organization's own infrastructure, so anyone can look up blocks, transactions, addresses and contracts without depending on a third-party service.",
     links: [],
+  },
+  {
+    icon: Megaphone,
+    name: "Community social media",
+    kind: "Community tweeting",
+    status: SOCIAL_MEDIA_STATUS,
+    live: false,
+    description:
+      "The project's social media, run by the community through twitter-together: posts are proposed and reviewed as pull requests, so anyone can help shape Ethereum Classic's public voice and the record of what was posted stays public.",
+    links: [{ label: "Repository", href: TWITTER_TOGETHER_REPO_URL }],
   },
 ];
 
@@ -110,8 +123,8 @@ export function MaintainedGoodsSection() {
               What Is Maintained
             </h2>
             <p className="mt-3 max-w-3xl text-base text-[var(--text-muted)]">
-              The software and services the network depends on, each built and
-              documented in public.
+              The shared software and services the Ethereum Classic community
+              builds and maintains in the open.
             </p>
           </FadeIn>
 
