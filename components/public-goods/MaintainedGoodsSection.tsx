@@ -1,4 +1,4 @@
-import { Activity, Cpu, Radar, Server, Globe, ExternalLink, type LucideIcon } from "lucide-react";
+import { Activity, Boxes, Cpu, Radar, Server, Globe, ExternalLink, type LucideIcon } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import {
@@ -12,6 +12,7 @@ import {
   PUBLIC_RPC_DOCS_URL,
   PUBLIC_RPC_STATUS,
   NETWORK_DASHBOARD_STATUS,
+  BLOCK_EXPLORER_STATUS,
 } from "@/lib/network-links";
 
 interface PublicGood {
@@ -86,6 +87,16 @@ const goods: PublicGood[] = [
       "A public view of Ethereum Classic's network health, served from the organization's own infrastructure alongside the public endpoints, so operators and integrators can read the state of the network and its peers without standing up their own indexer.",
     links: [],
   },
+  {
+    icon: Boxes,
+    name: "Block explorer",
+    kind: "Chain explorer",
+    status: BLOCK_EXPLORER_STATUS,
+    live: false,
+    description:
+      "A public explorer for Ethereum Classic and Mordor, served from the organization's own infrastructure, so anyone can look up blocks, transactions, addresses and contracts without depending on a third-party service.",
+    links: [],
+  },
 ];
 
 export function MaintainedGoodsSection() {
@@ -99,7 +110,8 @@ export function MaintainedGoodsSection() {
               What Is Maintained
             </h2>
             <p className="mt-3 max-w-3xl text-base text-[var(--text-muted)]">
-              Five services, each built and documented in public.
+              The software and services the network depends on, each built and
+              documented in public.
             </p>
           </FadeIn>
 
