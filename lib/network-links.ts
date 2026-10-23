@@ -56,3 +56,4 @@ export const COOPERATIVE_ARCHIVE_URL =
 export const COOPERATIVE_STATUS =
   "Maintenance mode since the end of 2024 · dissolution scheduled by the end of 2026";
 export const PUBLIC_RPC_STATUS = "In preparation";
+export const NETWORK_DASHBOARD_STATUS = "In preparation";

@@ -8,7 +8,7 @@ export const publicGoodsFaq: { question: string; answer: string }[] = [
   {
     question: "What are Ethereum Classic's public goods?",
     answer:
-      "The shared software and services the network depends on: the Core-Geth client, the network's bootnodes, the peer discovery lists, and public JSON-RPC endpoints. They are maintained in the ethereumclassic organization on GitHub.",
+      "The shared software and services the network depends on: the Core-Geth client, the network's bootnodes, the peer discovery lists, public JSON-RPC endpoints, and a network dashboard. They are maintained in the ethereumclassic organization on GitHub.",
   },
   {
     question: "Which Ethereum Classic client should I run?",

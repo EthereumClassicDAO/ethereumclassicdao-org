@@ -1,4 +1,4 @@
-import { Cpu, Radar, Server, Globe, ExternalLink, type LucideIcon } from "lucide-react";
+import { Activity, Cpu, Radar, Server, Globe, ExternalLink, type LucideIcon } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import {
@@ -11,6 +11,7 @@ import {
   DISCOVERY_LISTS_REPO_URL,
   PUBLIC_RPC_DOCS_URL,
   PUBLIC_RPC_STATUS,
+  NETWORK_DASHBOARD_STATUS,
 } from "@/lib/network-links";
 
 interface PublicGood {
@@ -75,6 +76,16 @@ const goods: PublicGood[] = [
       { label: "ChainList", href: CHAINLIST_ETC_URL },
     ],
   },
+  {
+    icon: Activity,
+    name: "Network dashboard",
+    kind: "Network status",
+    status: NETWORK_DASHBOARD_STATUS,
+    live: false,
+    description:
+      "A public view of Ethereum Classic's network health, served from the organization's own infrastructure alongside the public endpoints, so operators and integrators can read the state of the network and its peers without standing up their own indexer.",
+    links: [],
+  },
 ];
 
 export function MaintainedGoodsSection() {
@@ -88,7 +99,7 @@ export function MaintainedGoodsSection() {
               What Is Maintained
             </h2>
             <p className="mt-3 max-w-3xl text-base text-[var(--text-muted)]">
-              Four services, each built and documented in public.
+              Five services, each built and documented in public.
             </p>
           </FadeIn>
 
@@ -113,19 +124,21 @@ export function MaintainedGoodsSection() {
                     <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--text-muted)]">
                       {good.description}
                     </p>
-                    <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
-                      {good.links.map((link) => (
-                        <a
-                          key={link.label}
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-xs font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--text-primary)]"
-                        >
-                          {link.label} <ExternalLink size={11} aria-hidden="true" />
-                        </a>
-                      ))}
-                    </div>
+                    {good.links.length > 0 && (
+                      <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+                        {good.links.map((link) => (
+                          <a
+                            key={link.label}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-xs font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--text-primary)]"
+                          >
+                            {link.label} <ExternalLink size={11} aria-hidden="true" />
+                          </a>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </FadeIn>
               );
