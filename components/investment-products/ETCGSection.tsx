@@ -183,7 +183,7 @@ export async function ETCGSection() {
                     ETCG historically traded at premiums as high as 458% during
                     the trust&apos;s early years when supply was constrained and
                     institutional demand was high. The current{" "}
-                    <span className="font-semibold text-red-400">
+                    <span data-live="" className="font-semibold text-red-400">
                       {premiumLabel}
                     </span>{" "}
                     discount reflects the absence of an active redemption
@@ -200,7 +200,7 @@ export async function ETCGSection() {
                 ) : (
                   <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
                     ETCG is trading at a{" "}
-                    <span className="font-semibold text-[var(--brand-green)]">
+                    <span data-live="" className="font-semibold text-[var(--brand-green)]">
                       {premiumLabel}
                     </span>{" "}
                     premium to NAV. Trust-phase premiums reflect constrained
