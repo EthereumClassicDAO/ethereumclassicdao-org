@@ -114,7 +114,7 @@ export function PoolsTable({
 
   return (
     <>
-    <div className="overflow-hidden rounded-xl border border-[var(--divider)]">
+    <div data-live="" className="overflow-hidden rounded-xl border border-[var(--divider)]">
       {/* Always-visible top rows */}
       <table className="w-full text-sm">
         <thead>

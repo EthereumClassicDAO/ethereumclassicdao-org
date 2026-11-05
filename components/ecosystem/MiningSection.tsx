@@ -116,8 +116,8 @@ export async function MiningSection() {
     fetchAllHashrateHistories(),
     fetchPoolHashrates(),
   ]);
-  const stats = [
-    { value: `${hashrateTHs.toFixed(1)}`, unit: "TH/s", label: "Network Hashrate" },
+  const stats: { value: string; unit?: string; label: string; live?: boolean }[] = [
+    { value: `${hashrateTHs.toFixed(1)}`, unit: "TH/s", label: "Network Hashrate", live: true },
     { value: "ETChash", label: "Mining Algorithm" },
     { value: "GPU + ASIC", label: "Compatible Hardware" },
   ];
@@ -147,7 +147,7 @@ export async function MiningSection() {
             {stats.map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 80}>
                 <div className="rounded-xl bg-[var(--bg-elevated)] border border-[var(--divider)] p-5">
-                  <p className="text-2xl font-bold font-mono text-[var(--brand-green)]">
+                  <p data-live={stat.live ? "" : undefined} className="text-2xl font-bold font-mono text-[var(--brand-green)]">
                     {stat.value}
                     {stat.unit && (
                       <span className="ml-1 text-sm font-normal">{stat.unit}</span>

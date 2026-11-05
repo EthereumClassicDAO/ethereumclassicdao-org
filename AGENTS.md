@@ -16,7 +16,7 @@ Proof-of-Work smart contract platform.
 ```bash
 pnpm install       # install dependencies
 pnpm dev           # dev server (Turbopack)
-pnpm build         # production build
+pnpm build         # production build, then scripts/sitemap.mjs writes public/sitemap.xml
 pnpm start         # production server
 pnpm lint          # ESLint
 pnpm typecheck     # tsc --noEmit
@@ -58,6 +58,9 @@ lib/
   api/                  → live data fetchers (see below)
 public/
   llms.txt              → machine-readable site summary; keep in sync with page copy
+  sitemap.xml           → written by scripts/sitemap.mjs during `pnpm build`; not tracked
+scripts/
+  sitemap.mjs           → dates each sitemap entry by its page's content (see Live data)
 ```
 
 **Composition rule:** a page imports section components. Do not inline sections
@@ -81,6 +84,17 @@ source; 2Miners is a pool identity in the address map, not an API. Never hardcod
 a hashrate figure in prose — a standing "170+ TH/s" went stale and had to be
 removed. `fetchHashrate()` returns `{ths, isFallback}`; anything rendering a
 fallback must label it as an estimate.
+
+**Mark every element that renders a live figure with `data-live`.** After
+`next build`, `scripts/sitemap.mjs` compares each page it built with the same
+page live: the title, description, canonical, robots rules, structured data, and
+the text and links inside `<main>`. An unchanged page keeps the date the live
+sitemap gives it; a changed, new or unreadable page takes the build's time. It
+leaves out every element carrying `data-live`, with its contents, so a figure
+that changes on revalidation is not counted as an edit. A live figure without
+the attribute restamps its page on every deploy, and an editorial sentence
+inside a `data-live` element is never compared, so mark the value rather than
+the section around it.
 
 ## Design system
 

@@ -37,11 +37,12 @@ export async function NetworkSecuritySection() {
     fetchAllHashrateHistories(),
   ]);
 
-  const stats = [
+  const stats: { value: string; label: string; detail: string; live?: boolean }[] = [
     {
       value: `${hashrateTHs.toFixed(1)} TH/s`,
       label: "Network Hashrate",
       detail: "Live — updated hourly",
+      live: true,
     },
     {
       value: "July 2015",
@@ -113,7 +114,7 @@ export async function NetworkSecuritySection() {
             {stats.map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 60} className="h-full">
                 <div className="h-full rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-5">
-                  <p className="font-mono text-xl font-bold text-[var(--brand-green)]">
+                  <p data-live={stat.live ? "" : undefined} className="font-mono text-xl font-bold text-[var(--brand-green)]">
                     {stat.value}
                   </p>
                   <p className="mt-1 text-xs font-medium text-[var(--text-primary)]">

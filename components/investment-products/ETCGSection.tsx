@@ -110,9 +110,9 @@ export async function ETCGSection() {
               <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
                 <div>
                   <p className="text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">Share Price</p>
-                  <p className="mt-1 text-2xl font-bold tracking-tight">{formatUSD(etcgStats.sharePrice)}</p>
+                  <p data-live="" className="mt-1 text-2xl font-bold tracking-tight">{formatUSD(etcgStats.sharePrice)}</p>
                   {etcgStats.priceChangePercent !== 0 && (
-                    <span className={`text-xs ${etcgStats.priceChangePercent >= 0 ? "text-[var(--brand-green)]" : "text-red-400"}`}>
+                    <span data-live="" className={`text-xs ${etcgStats.priceChangePercent >= 0 ? "text-[var(--brand-green)]" : "text-red-400"}`}>
                       {etcgStats.priceChangePercent >= 0 ? "+" : ""}
                       {etcgStats.priceChangePercent.toFixed(2)}%
                     </span>
@@ -120,17 +120,17 @@ export async function ETCGSection() {
                 </div>
                 <div>
                   <p className="text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">NAV per Share</p>
-                  <p className="mt-1 text-2xl font-bold tracking-tight">{formatUSD(nav)}</p>
-                  <p className="text-[10px] text-[var(--text-subtle)]">{ETCG_ETC_PER_SHARE} ETC × {formatUSD(etcPrice)}</p>
+                  <p data-live="" className="mt-1 text-2xl font-bold tracking-tight">{formatUSD(nav)}</p>
+                  <p data-live="" className="text-[10px] text-[var(--text-subtle)]">{ETCG_ETC_PER_SHARE} ETC × {formatUSD(etcPrice)}</p>
                 </div>
                 <div>
                   <p className="text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">Premium / Discount</p>
-                  <p className={`mt-1 text-2xl font-bold tracking-tight ${premiumColor}`}>{premiumLabel}</p>
+                  <p data-live="" className={`mt-1 text-2xl font-bold tracking-tight ${premiumColor}`}>{premiumLabel}</p>
                   <p className="text-[10px] text-[var(--text-subtle)]">vs NAV</p>
                 </div>
                 <div>
                   <p className="text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">AUM (Est.)</p>
-                  <p className="mt-1 text-2xl font-bold tracking-tight">{formatUSD(aum)}</p>
+                  <p data-live="" className="mt-1 text-2xl font-bold tracking-tight">{formatUSD(aum)}</p>
                   <p className="text-[10px] text-[var(--text-subtle)]">shares × ETC/share × price</p>
                 </div>
               </div>

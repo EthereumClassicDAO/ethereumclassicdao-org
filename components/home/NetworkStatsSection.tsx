@@ -34,6 +34,7 @@ function OverviewTable({ heading, rows }: { heading: string; rows: Row[] }) {
               {row.label}
             </span>
             <span
+              data-live=""
               className={`text-sm font-mono font-medium ${
                 row.color === "green"
                   ? "text-[var(--color-success)]"

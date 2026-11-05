@@ -37,8 +37,8 @@ const columns = [
 
 export async function ETCUniquePositionSection() {
   const hashrateTHs = await fetchHashrateTHs();
-  const stats = [
-    { value: `${hashrateTHs.toFixed(1)} TH/s`, label: "Network Hashrate", detail: "Globally distributed" },
+  const stats: { value: string; label: string; detail: string; live?: boolean }[] = [
+    { value: `${hashrateTHs.toFixed(1)} TH/s`, label: "Network Hashrate", detail: "Globally distributed", live: true },
     ...staticStats,
   ];
 
@@ -80,7 +80,7 @@ export async function ETCUniquePositionSection() {
                   key={s.label}
                   className="rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] p-5"
                 >
-                  <p className="text-xl font-bold tracking-tight">{s.value}</p>
+                  <p data-live={s.live ? "" : undefined} className="text-xl font-bold tracking-tight">{s.value}</p>
                   <p className="mt-0.5 text-xs font-medium">{s.label}</p>
                   <p className="mt-1 text-[10px] text-[var(--text-subtle)]">{s.detail}</p>
                 </div>

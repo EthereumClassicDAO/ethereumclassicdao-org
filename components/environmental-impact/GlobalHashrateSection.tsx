@@ -60,14 +60,14 @@ export async function GlobalHashrateSection() {
           <FadeIn delay={100}>
             <div className="mt-10 flex items-end gap-4">
               <div>
-                <p className="font-mono text-4xl font-bold text-[var(--brand-green)]">
+                <p data-live="" className="font-mono text-4xl font-bold text-[var(--brand-green)]">
                   {hashrateTHs.toFixed(1)}{" "}
                   <span className="text-lg font-normal">TH/s</span>
                 </p>
                 <p className="mt-1 text-sm font-medium text-[var(--text-primary)]">
                   Current Network Hashrate
                 </p>
-                <p className="mt-0.5 text-xs text-[var(--text-subtle)]">
+                <p data-live="" className="mt-0.5 text-xs text-[var(--text-subtle)]">
                   {hashrate.isFallback
                     ? "Estimate — live data unavailable"
                     : "Updated hourly · Source: Blockscout"}

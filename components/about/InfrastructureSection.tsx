@@ -114,7 +114,7 @@ export async function InfrastructureSection() {
           <FadeIn>
             <div className="flex items-end gap-4">
               <div>
-                <p className="text-4xl font-bold font-mono text-[var(--brand-green)]">
+                <p data-live="" className="text-4xl font-bold font-mono text-[var(--brand-green)]">
                   {hashrateTHs.toFixed(1)}{" "}
                   <span className="text-lg">TH/s</span>
                 </p>

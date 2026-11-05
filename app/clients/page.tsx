@@ -166,7 +166,7 @@ export default async function ClientsPage() {
           <FadeIn delay={180}>
             <div className="mt-8">
               <div className="mb-3 flex items-end gap-3">
-                <p className="text-3xl font-bold font-mono text-[var(--brand-green)]">
+                <p data-live="" className="text-3xl font-bold font-mono text-[var(--brand-green)]">
                   {hashrateTHs.toFixed(1)}{" "}
                   <span className="text-base font-normal">TH/s</span>
                 </p>

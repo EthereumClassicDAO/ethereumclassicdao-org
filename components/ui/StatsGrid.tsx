@@ -21,7 +21,7 @@ export function StatsGrid({
         {stats.map((s, i) => (
           <FadeIn key={s.label} delay={i * 100}>
             <div>
-              <p className="text-4xl font-bold font-mono tracking-tight text-[var(--brand-green)] md:text-5xl">
+              <p data-live="" className="text-4xl font-bold font-mono tracking-tight text-[var(--brand-green)] md:text-5xl">
                 {s.value}
                 {s.unit && (
                   <span className="ml-1 text-lg text-[var(--text-muted)] md:text-xl">
@@ -34,6 +34,7 @@ export function StatsGrid({
               </p>
               {s.context && (
                 <p
+                  data-live=""
                   className={`mt-1 text-xs ${
                     s.contextColor === "green"
                       ? "text-[var(--color-success)]"
@@ -57,7 +58,7 @@ export function StatsGrid({
       {stats.map((s, i) => (
         <FadeIn key={s.label} delay={i * 100} className="h-full">
           <div className="h-full rounded-xl border-t-2 border-[var(--brand-green)] bg-[var(--bg-elevated)] p-6">
-            <p className="text-3xl font-bold font-mono tracking-tight text-[var(--brand-green)] md:text-4xl">
+            <p data-live="" className="text-3xl font-bold font-mono tracking-tight text-[var(--brand-green)] md:text-4xl">
               {s.value}
               {s.unit && (
                 <span className="ml-1 text-sm text-[var(--text-muted)]">
@@ -68,6 +69,7 @@ export function StatsGrid({
             <p className="mt-2 text-sm font-semibold">{s.label}</p>
             {s.context && (
               <p
+                data-live=""
                 className={`mt-1 text-xs ${
                   s.contextColor === "green"
                     ? "text-[var(--color-success)]"

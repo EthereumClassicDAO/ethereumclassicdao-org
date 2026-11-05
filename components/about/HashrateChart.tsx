@@ -33,7 +33,7 @@ export function HashrateChart({ histories, currentTHs }: Props) {
 
   if (!data || data.length === 0) {
     return (
-      <div className="flex h-40 items-center justify-center rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)]">
+      <div data-live="" className="flex h-40 items-center justify-center rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)]">
         <p className="text-xs text-[var(--text-subtle)]">
           {currentTHs.toFixed(1)} TH/s — chart unavailable
         </p>
@@ -46,7 +46,7 @@ export function HashrateChart({ histories, currentTHs }: Props) {
   const pad = Math.max((max - min) * 0.2, 5);
 
   return (
-    <div className="mt-5 rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] px-4 pb-3 pt-4">
+    <div data-live="" className="mt-5 rounded-xl border border-[var(--divider)] bg-[var(--bg-elevated)] px-4 pb-3 pt-4">
       {/* Header row */}
       <div className="mb-3 flex items-center justify-between gap-2">
         <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-subtle)]">
