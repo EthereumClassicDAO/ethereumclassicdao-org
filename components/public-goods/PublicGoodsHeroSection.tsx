@@ -21,15 +21,14 @@ export function PublicGoodsHeroSection() {
             the client that follows the chain, the bootnodes a new node contacts
             first, and the peer discovery lists it starts from. They are
             maintained in the{" "}
-            <Cite href={ETC_ORG_URL}>ethereumclassic organization</Cite> on
-            GitHub, the community&rsquo;s own since July 2016, where anyone can
-            read how each one is built and run.
+            <Cite href={ETC_ORG_URL}>ethereumclassic GitHub organization</Cite>,
+            where anyone can read how each one is built and run.
           </p>
           <p className="mt-4 text-base text-[var(--text-muted)]">
             Ethereum Classic&rsquo;s core developers and community contributors
             do the day-to-day work, and Ethereum Classic DAO LLC is the standing
-            legal entity that maintains and funds them as the funder of last
-            resort. Who maintains and funds this work, and how to sponsor it, is
+            legal entity that maintains and funds these public goods as the
+            funder of last resort. Who maintains and funds this work, and how to sponsor it, is
             set out under stewardship.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">

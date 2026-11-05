@@ -14,6 +14,7 @@ export const CORE_GETH_RELEASES_URL = `${CORE_GETH_REPO_URL}/releases`;
 export const CORE_GETH_HOMEPAGE_URL = "https://coregeth.com";
 export const CORE_GETH_DOCS_URL = "https://docs.coregeth.com/";
 export const CORE_GETH_INSTALL_URL = `${CORE_GETH_DOCS_URL}getting-started/installation/`;
+export const CORE_GETH_MIGRATION_URL = `${CORE_GETH_DOCS_URL}tutorials/v1.13.0-migration/`;
 export const CORE_GETH_HISTORY_URL = `${CORE_GETH_DOCS_URL}about/project-history/`;
 export const CORE_GETH_AUDIT_URL = `${CORE_GETH_HOMEPAGE_URL}/security/2026-03-core-geth-v1.12-security-audit/`;
 export const BOOTNODES_DOCS_URL = `${CORE_GETH_DOCS_URL}guides/bootnodes-and-discovery/`;
@@ -22,6 +23,13 @@ export const PUBLIC_RPC_DOCS_URL = `${COOPERATIVE_TRANSITION_URL}#public-json-rp
 export const SUPPORT_URL = `${CORE_GETH_DOCS_URL}support/`;
 export const CORE_GETH_SPONSOR_URL = `${CORE_GETH_HOMEPAGE_URL}/sponsor/`;
 export const CORE_GETH_SECURITY_URL = `${CORE_GETH_HOMEPAGE_URL}/security/`;
+export const CORE_GETH_ABOUT_URL = `${CORE_GETH_HOMEPAGE_URL}/about/`;
+/** Each platform's release files, with their checksums and attestation checks. */
+export const CORE_GETH_DOWNLOADS_URL = `${CORE_GETH_HOMEPAGE_URL}/downloads/`;
+/** Moving a v1.12 node to the v1.13 line. */
+export const CORE_GETH_UPGRADE_URL = `${CORE_GETH_DOWNLOADS_URL}#upgrade`;
+/** The discovery flag, for a v1.12 node that cannot move yet. */
+export const CORE_GETH_DISCOVERY_FLAG_URL = `${CORE_GETH_DOWNLOADS_URL}#discovery-flag`;
 /** How a change reaches the client's main branch. */
 export const CORE_GETH_REVIEW_POLICY_URL = `${CORE_GETH_REPO_URL}/blob/main/.github/CONTRIBUTING.md`;
 
@@ -36,8 +44,6 @@ export const FUKUII_RELEASES_URL = `${FUKUII_REPO_URL}/releases`;
 export const FUKUII_DOCS_URL = "https://docs.fukuii.com";
 
 // Public JSON-RPC
-export const ETC_RPC_URL = "https://etc.blockscout.com/api/eth-rpc";
-export const MORDOR_RPC_URL = "https://etc-mordor.blockscout.com/api/eth-rpc";
 export const CHAINLIST_ETC_URL = "https://chainlist.org/chain/61";
 export const CHAINLIST_MORDOR_URL = "https://chainlist.org/chain/63";
 
@@ -62,8 +68,7 @@ export const COOPERATIVE_ARCHIVE_URL =
   "https://web.archive.org/web/20250205192722/https://etccooperative.org/";
 
 // Status badges
-export const COOPERATIVE_STATUS =
-  "Maintenance mode since the end of 2024 · dissolution scheduled by the end of 2026";
+export const COOPERATIVE_STATUS = "Maintenance mode since the end of 2024 · due to dissolve";
 export const PUBLIC_RPC_STATUS = "In preparation";
 export const NETWORK_DASHBOARD_STATUS = "In preparation";
 export const BLOCK_EXPLORER_STATUS = "In preparation";

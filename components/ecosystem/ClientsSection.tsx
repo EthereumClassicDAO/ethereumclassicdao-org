@@ -1,7 +1,12 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { Cite } from "@/components/ui/Cite";
 import {
+  CORE_GETH_DISCOVERY_FLAG_URL,
+  CORE_GETH_DOWNLOADS_URL,
   CORE_GETH_LATEST_RELEASE_URL,
+  CORE_GETH_MIGRATION_URL,
+  CORE_GETH_UPGRADE_URL,
   FUKUII_REPO_URL,
 } from "@/lib/network-links";
 
@@ -9,7 +14,7 @@ const featuredClient = {
   name: "Core-Geth",
   language: "Go",
   description:
-    "The recommended client for Ethereum Classic: a go-ethereum derivative released and maintained in the ethereumclassic organization, the community's own on GitHub. Not native, and not a plugin. Run the v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code.",
+    "The recommended client for Ethereum Classic: a go-ethereum derivative released and maintained in the ethereumclassic organization. Not native, and not a plugin. Run the v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code.",
   href: CORE_GETH_LATEST_RELEASE_URL,
   status: "Recommended",
   tag: "go-ethereum derivative",
@@ -48,7 +53,7 @@ export function ClientsSection() {
               Multi-client architecture eliminates single points of failure at
               the protocol layer. Core-Geth is the recommended client, a
               go-ethereum derivative released and maintained in the
-              ethereumclassic organization; Fukuii, a native Ethereum Classic
+              ethereumclassic GitHub organization; Fukuii, a native Ethereum Classic
               client, is an alternative to it.
               Distinct codebases in distinct languages, maintained by separate
               teams, mean the network can withstand the discontinuation or
@@ -79,14 +84,41 @@ export function ClientsSection() {
               <p className="mt-4 text-base leading-relaxed text-[var(--text-muted)]">
                 {featuredClient.description}
               </p>
-              <a
-                href={featuredClient.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
-              >
-                Get the current release →
-              </a>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
+                Every node still on a v1.12 release should move to the v1.13
+                line:{" "}
+                <Cite href={CORE_GETH_UPGRADE_URL}>Downloads on coregeth.com</Cite>{" "}
+                has the commands and checksums, and the{" "}
+                <Cite href={CORE_GETH_MIGRATION_URL}>migration guide</Cite> has
+                the steps, including the required P2P node key rotation. A v1.12
+                node that cannot move yet can{" "}
+                <Cite href={CORE_GETH_DISCOVERY_FLAG_URL}>
+                  add the{" "}
+                  <code className="whitespace-nowrap font-mono">--discovery.dns</code>{" "}
+                  flag
+                </Cite>{" "}
+                to read the ethereumclassic organization&rsquo;s peer discovery
+                lists, a small step that closes none of the flaws the audits
+                found in the v1.12 line.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+                <a
+                  href={featuredClient.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+                >
+                  Get the current release →
+                </a>
+                <a
+                  href={CORE_GETH_DOWNLOADS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+                >
+                  Downloads →
+                </a>
+              </div>
             </div>
           </FadeIn>
 

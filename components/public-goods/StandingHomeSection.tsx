@@ -14,7 +14,7 @@ const properties = [
   {
     label: "Where it lives",
     value: "ethereumclassic",
-    detail: "The community's organization since July 2016",
+    detail: "GitHub organization since July 2016",
   },
   {
     label: "Who can change it",
@@ -24,7 +24,7 @@ const properties = [
   {
     label: "How a change lands",
     value: "Reviewed pull request",
-    detail: "Approved by a reviewer other than its author",
+    detail: "Needs an approving review and the required checks",
   },
 ];
 
@@ -61,7 +61,7 @@ export function StandingHomeSection() {
               Before that, this work moved each time the organization carrying
               it closed or left. The client changed repositories, and the
               bootnodes and discovery lists changed operators. A repository in
-              the community&rsquo;s organization stays where it is no matter who
+              the ethereumclassic organization stays where it is no matter who
               maintains or funds it, which is what makes it a fixed place for
               the network to point at.
             </p>

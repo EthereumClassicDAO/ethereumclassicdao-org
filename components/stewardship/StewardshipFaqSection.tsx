@@ -8,7 +8,7 @@ export const stewardshipFaq: { question: string; answer: string }[] = [
   {
     question: "Who maintains Core-Geth?",
     answer:
-      "Ethereum Classic's core developers and open community contributions do the day-to-day work, in the ethereumclassic organization on GitHub. Ethereum Classic DAO LLC is the standing legal entity that maintains and funds that work as the funder of last resort, and it took up Core-Geth's maintenance in February 2026.",
+      "Ethereum Classic's core developers and open community contributions do the day-to-day work, in the ethereumclassic GitHub organization. Ethereum Classic DAO LLC is the standing legal entity that maintains and funds that work as the funder of last resort, and it took up Core-Geth's maintenance in February 2026.",
   },
   {
     question: "What is Ethereum Classic DAO LLC's role?",

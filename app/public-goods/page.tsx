@@ -7,14 +7,19 @@ import {
   PublicGoodsFaqSection,
   publicGoodsFaq,
 } from "@/components/public-goods/PublicGoodsFaqSection";
-import { CORE_GETH_HOMEPAGE_URL, CORE_GETH_REPO_URL, ETC_ORG_URL } from "@/lib/network-links";
+import {
+  CORE_GETH_DOCS_URL,
+  CORE_GETH_HOMEPAGE_URL,
+  CORE_GETH_REPO_URL,
+  ETC_ORG_URL,
+} from "@/lib/network-links";
 
 const SITE_URL = "https://ethereumclassicdao.org";
 
 export const metadata: Metadata = {
-  title: "Ethereum Classic Public Goods — Core-Geth, Bootnodes, and Peer Discovery",
+  title: "Ethereum Classic Public Goods: Core-Geth",
   description:
-    "The software and services Ethereum Classic nodes depend on: the Core-Geth client, the network's bootnodes, the peer discovery lists, and public JSON-RPC. The day-to-day work is done by Ethereum Classic's core developers in the ethereumclassic GitHub organization, with Ethereum Classic DAO LLC the standing legal entity that maintains and funds them as the funder of last resort. Where to get the current Core-Geth release and who to contact.",
+    "Core-Geth, the bootnodes and the peer discovery lists Ethereum Classic nodes depend on: where to get the current release and how to move a v1.12 node.",
   keywords: [
     "Ethereum Classic public goods",
     "Core-Geth",
@@ -45,8 +50,9 @@ const structuredData = [
     "@type": "SoftwareSourceCode",
     name: "Core-Geth",
     description:
-      "The recommended execution client for Ethereum Classic: a go-ethereum derivative kept as a public good in the ethereumclassic organization, open to contributions from anyone and reviewed and maintained by Ethereum Classic's core developers.",
+      "The recommended execution client for Ethereum Classic: a go-ethereum derivative kept as a public good in the ethereumclassic GitHub organization, open to contributions from anyone and reviewed and maintained by Ethereum Classic's core developers.",
     url: CORE_GETH_HOMEPAGE_URL,
+    sameAs: [CORE_GETH_REPO_URL, CORE_GETH_DOCS_URL],
     codeRepository: CORE_GETH_REPO_URL,
     programmingLanguage: "Go",
     maintainer: {

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     absolute: "Ethereum Classic DAO — Stewarding ETC Core Development & Public Goods",
   },
   description:
-    "Ethereum Classic DAO LLC is the standing legal entity that maintains and funds Ethereum Classic's public goods (the Core-Geth client, the network's bootnodes and peer discovery lists) as the funder of last resort. Ethereum Classic's core developers and community contributors do the day-to-day work in the community's own repositories. Ethereum Classic is the largest Proof-of-Work blockchain with native EVM smart contracts. A Wyoming DAO LLC, incorporated May 2025.",
+    "Ethereum Classic DAO LLC is the standing legal entity that maintains and funds Ethereum Classic's public goods (the Core-Geth client, the network's bootnodes and peer discovery lists) as the funder of last resort. Ethereum Classic's core developers and community contributors do the day-to-day work in the ethereumclassic GitHub organization. Ethereum Classic is the largest Proof-of-Work blockchain with native EVM smart contracts. A Wyoming DAO LLC, incorporated May 2025.",
 };
 import { NetworkStatsSection } from "@/components/home/NetworkStatsSection";
 import { EtcIntersectionSection } from "@/components/home/EtcIntersectionSection";

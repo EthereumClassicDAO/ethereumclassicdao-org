@@ -2,9 +2,14 @@ import Link from "next/link";
 import { ArrowRight, ExternalLink, Mail } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { Cite } from "@/components/ui/Cite";
 import {
+  CORE_GETH_DISCOVERY_FLAG_URL,
+  CORE_GETH_DOWNLOADS_URL,
   CORE_GETH_INSTALL_URL,
   CORE_GETH_LATEST_RELEASE_URL,
+  CORE_GETH_MIGRATION_URL,
+  CORE_GETH_UPGRADE_URL,
   SECURITY_EMAIL,
 } from "@/lib/network-links";
 
@@ -20,15 +25,33 @@ export function RunANodeSection() {
                 <h2 id="run-a-node-heading" className="text-xl font-bold tracking-tight">
                   Running a Node
                 </h2>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--text-muted)]">
-                  Core-Geth is the recommended client for Ethereum Classic. Take
-                  the current release from ethereumclassic/core-geth; the
-                  latest-release link always resolves to it. Releases from the
-                  v1.13 series onward are published only from that repository,
-                  so a node that follows the previous one does not see them. The
-                  installation guide covers each platform, and how to verify
-                  that a download was built by the repository&rsquo;s own
+                <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
+                  Core-Geth is the recommended client for Ethereum Classic: run
+                  the v1.13 line. Take the current release from
+                  ethereumclassic/core-geth; the latest-release link always
+                  resolves to it. Releases from the v1.13 line onward are
+                  published only from that repository, so a node that follows
+                  the previous repository, etclabscore/core-geth, does not see
+                  them. The installation guide covers each platform, and how to
+                  verify that a download was built by the repository&rsquo;s own
                   release workflow.
+                </p>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--text-muted)]">
+                  Every node still on a v1.12 release should move to the v1.13
+                  line:{" "}
+                  <Cite href={CORE_GETH_UPGRADE_URL}>Downloads on coregeth.com</Cite>{" "}
+                  has the commands and checksums, and the{" "}
+                  <Cite href={CORE_GETH_MIGRATION_URL}>migration guide</Cite> has
+                  the steps, including the required P2P node key rotation. A
+                  v1.12 node that cannot move yet can{" "}
+                  <Cite href={CORE_GETH_DISCOVERY_FLAG_URL}>
+                    add the{" "}
+                    <code className="whitespace-nowrap font-mono">--discovery.dns</code>{" "}
+                    flag
+                  </Cite>{" "}
+                  to read the ethereumclassic organization&rsquo;s peer discovery
+                  lists, a small step that closes none of the flaws the audits
+                  found in the v1.12 line.
                 </p>
                 <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
                   <a
@@ -38,6 +61,14 @@ export function RunANodeSection() {
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--text-primary)]"
                   >
                     Current release <ExternalLink size={13} aria-hidden="true" />
+                  </a>
+                  <a
+                    href={CORE_GETH_DOWNLOADS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--text-primary)]"
+                  >
+                    Downloads <ExternalLink size={13} aria-hidden="true" />
                   </a>
                   <a
                     href={CORE_GETH_INSTALL_URL}

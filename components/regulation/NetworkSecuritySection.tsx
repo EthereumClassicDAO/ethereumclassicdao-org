@@ -27,7 +27,7 @@ const securityProperties = [
     icon: History,
     title: "Continuous Security Record",
     description:
-      "Ethereum Classic has operated under Proof-of-Work consensus since July 2015. The Thanos upgrade and MESS finality mechanism, implemented after the 2020 network security events, strengthened chain reorganization resistance.",
+      "Ethereum Classic has operated under Proof-of-Work consensus since July 2015. The Thanos upgrade and the MESS chain-scoring rule, implemented after the 2020 network security events, strengthened chain reorganization resistance.",
   },
 ];
 

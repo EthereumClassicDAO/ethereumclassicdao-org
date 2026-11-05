@@ -12,9 +12,9 @@ import {
 const SITE_URL = "https://ethereumclassicdao.org";
 
 export const metadata: Metadata = {
-  title: "Stewardship — Who Maintains and Funds Ethereum Classic's Public Goods",
+  title: "Who Maintains and Funds Core-Geth",
   description:
-    "Ethereum Classic's core developers and community contributors do the day-to-day work on its public goods (the Core-Geth client, the bootnodes and the peer discovery lists) in the community's own repositories. Ethereum Classic DAO LLC is the standing legal entity that maintains and funds them as the funder of last resort. How the work passed from ETCDEV to ETC Labs to the ETC Cooperative, why it needs sponsors, how to reach the core developers and maintainers, and why Olympia was proposed.",
+    "Ethereum Classic's core developers do the work on Core-Geth; Ethereum Classic DAO LLC maintains and funds it as the funder of last resort. How to sponsor it.",
   keywords: [
     "who maintains Core-Geth",
     "Core-Geth maintainer",

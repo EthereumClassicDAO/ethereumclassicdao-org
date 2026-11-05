@@ -86,8 +86,8 @@ export function StewardshipSection() {
                   The Cooperative entered maintenance mode at the end of 2024.
                   Ethereum Classic DAO LLC maintains and funds the
                   network&apos;s public goods, the Core-Geth client, the
-                  bootnodes and the discovery lists, in the community&apos;s own
-                  repositories, with the day-to-day work done by Ethereum
+                  bootnodes and the discovery lists, in the ethereumclassic GitHub
+                  organization, with the day-to-day work done by Ethereum
                   Classic&apos;s core developers, and does so today as{" "}
                   <strong className="text-[var(--text-primary)] font-medium">funder of last resort</strong>.
                   Olympia exists so that the network no longer needs one.

@@ -2,22 +2,28 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { Cite } from "@/components/ui/Cite";
+import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 import { ExternalLink } from "lucide-react";
 import { fetchHashrateTHs, fetchAllHashrateHistories } from "@/lib/api/hashrate";
 import { HashrateChart } from "@/components/about/HashrateChart";
 import {
+  CORE_GETH_DISCOVERY_FLAG_URL,
   CORE_GETH_DOCS_URL,
+  CORE_GETH_DOWNLOADS_URL,
   CORE_GETH_HOMEPAGE_URL,
   CORE_GETH_LATEST_RELEASE_URL,
+  CORE_GETH_MIGRATION_URL,
+  CORE_GETH_UPGRADE_URL,
   FUKUII_DOCS_URL,
   FUKUII_HOMEPAGE_URL,
   FUKUII_RELEASES_URL,
 } from "@/lib/network-links";
 
 export const metadata: Metadata = {
-  title: "Ethereum Classic Clients — Core-Geth and Fukuii",
+  title: "Ethereum Classic Clients: Core-Geth",
   description:
-    "Core-Geth (Go), a go-ethereum derivative released and maintained in the ethereumclassic organization, is the recommended client for Ethereum Classic: run its v1.13 line. Fukuii (Scala 3) is a native Ethereum Classic client and an alternative, an EVM execution client running several networks at once in one JVM process, where a further network is configuration rather than a new client. ETC compatibility plugins extend support to Besu, Erigon, Ethrex, Go-Ethereum, Nethermind, and Reth.",
+    "Core-Geth is the recommended Ethereum Classic client: run the v1.13 line, and move a v1.12 node to it. Fukuii, a native ETC client, is an alternative.",
   keywords: [
     "Core-Geth",
     "Core-Geth release",
@@ -49,8 +55,27 @@ const clients = [
     role: "Recommended",
     roleTheme: "brand" as const,
     description:
-      "The recommended client for Ethereum Classic: a go-ethereum derivative released and maintained in the ethereumclassic organization, the community's own on GitHub. Not native, and not a plugin. Run the v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code and is built with a supported Go toolchain. Take the current release from that repository, where every release file carries a checksum and a build attestation.",
+      "The recommended client for Ethereum Classic: a go-ethereum derivative released and maintained in the ethereumclassic GitHub organization. Not native, and not a plugin. Run the v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code and is built with a supported Go toolchain. Take the current release from ethereumclassic/core-geth, where every release file carries a checksum and a build attestation.",
+    note: (
+      <>
+        Every node still on a v1.12 release should move to the v1.13 line:{" "}
+        <Cite href={CORE_GETH_UPGRADE_URL}>Downloads on coregeth.com</Cite> has
+        the commands and checksums, and the{" "}
+        <Cite href={CORE_GETH_MIGRATION_URL}>migration guide</Cite> has the
+        steps, including the required P2P node key rotation. A v1.12 node that
+        cannot move yet can{" "}
+        <Cite href={CORE_GETH_DISCOVERY_FLAG_URL}>
+          add the{" "}
+          <code className="whitespace-nowrap font-mono">--discovery.dns</code>{" "}
+          flag
+        </Cite>{" "}
+        to read the ethereumclassic organization&rsquo;s peer discovery lists, a
+        small step that closes none of the flaws the audits found in the v1.12
+        line.
+      </>
+    ),
     websiteUrl: CORE_GETH_HOMEPAGE_URL,
+    downloadsUrl: CORE_GETH_DOWNLOADS_URL,
     docsUrl: CORE_GETH_DOCS_URL,
     releasesUrl: CORE_GETH_LATEST_RELEASE_URL,
   },
@@ -191,8 +216,13 @@ export default async function ClientsPage() {
                   <p className="mt-4 text-sm leading-relaxed text-[var(--text-muted)]">
                     {client.description}
                   </p>
+                  {client.note && (
+                    <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
+                      {client.note}
+                    </p>
+                  )}
 
-                  <div className="mt-4 flex gap-3">
+                  <div className="mt-4 flex flex-wrap gap-3">
                     {client.websiteUrl && (
                       <a
                         href={client.websiteUrl}
@@ -201,6 +231,16 @@ export default async function ClientsPage() {
                         className="inline-flex items-center gap-1 text-sm text-[var(--brand-green)] transition hover:opacity-80"
                       >
                         Website <ExternalLink size={12} />
+                      </a>
+                    )}
+                    {client.downloadsUrl && (
+                      <a
+                        href={client.downloadsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-sm text-[var(--brand-green)] transition hover:opacity-80"
+                      >
+                        Downloads <ExternalLink size={12} />
                       </a>
                     )}
                     <a
@@ -296,6 +336,7 @@ export default async function ClientsPage() {
           </div>
         </div>
       </section>
+      <BreadcrumbJsonLd name="Clients" path="/clients" />
     </main>
   );
 }

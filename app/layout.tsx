@@ -20,7 +20,7 @@ const SITE_URL = "https://ethereumclassicdao.org";
 const TITLE =
   "Ethereum Classic DAO — Building Software & Infrastructure for Global Adoption of Ethereum Classic";
 const DESCRIPTION =
-  "Ethereum Classic DAO LLC is the standing legal entity that maintains and funds Ethereum Classic's public goods (the Core-Geth client, the network's bootnodes and peer discovery lists) as the funder of last resort. Ethereum Classic's core developers and community contributors do the day-to-day work in the community's own GitHub organization. Ethereum Classic is the only Proof-of-Work blockchain with native EVM smart contracts. The proposed Olympia upgrade would advance the execution layer through Glamsterdam and give core development a funding source in the protocol. A digital commodity candidate under the CLARITY Act, a decentralized asset under MiCA, and a recognized crypto-asset on Japan's FSA Green List.";
+  "Ethereum Classic DAO LLC is the standing legal entity that maintains and funds Ethereum Classic's public goods (the Core-Geth client, the network's bootnodes and peer discovery lists) as the funder of last resort. Ethereum Classic's core developers and community contributors do the day-to-day work in the ethereumclassic GitHub organization. Ethereum Classic is the only Proof-of-Work blockchain with native EVM smart contracts. The proposed Olympia upgrade would advance the execution layer through Glamsterdam and give core development a funding source in the protocol. A digital commodity candidate under the CLARITY Act, a decentralized asset under MiCA, and a recognized crypto-asset on Japan's FSA Green List.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -160,7 +160,7 @@ const websiteJsonLd = {
   name: "Ethereum Classic DAO",
   url: "https://ethereumclassicdao.org",
   description:
-    "Institutional website for Ethereum Classic DAO LLC, the Wyoming DAO LLC that maintains and funds Ethereum Classic's public goods as the funder of last resort, building the governance and institutional frameworks for the largest Proof-of-Work blockchain with native EVM smart contracts.",
+    "Institutional website for Ethereum Classic DAO LLC, the Wyoming DAO LLC that maintains and funds Ethereum Classic's public goods as the funder of last resort; Ethereum Classic's core developers do the day-to-day work.",
   publisher: {
     "@type": "Organization",
     name: "Ethereum Classic DAO LLC",

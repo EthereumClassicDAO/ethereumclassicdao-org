@@ -59,7 +59,7 @@ export function SponsorSection() {
               manufacturers, block explorers and RPC providers all depend on a
               client that follows the network and on peer discovery that works
               every night. The developers who do the work are in place, and
-              so is the standing entity that maintains and funds them. What the work needs is steady
+              so is the standing legal entity that maintains and funds it. What the work needs is steady
               funding from those who depend on it.
             </p>
           </FadeIn>

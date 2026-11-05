@@ -8,7 +8,7 @@ export const publicGoodsFaq: { question: string; answer: string }[] = [
   {
     question: "What are Ethereum Classic's public goods?",
     answer:
-      "The shared software and services the Ethereum Classic community builds and maintains in the open: the Core-Geth client, the network's bootnodes, the peer discovery lists, public JSON-RPC endpoints, a network dashboard, a block explorer, and the project's community social media. They are kept in the ethereumclassic organization on GitHub.",
+      "The shared software and services the Ethereum Classic community builds and maintains in the open: the Core-Geth client, the network's bootnodes, the peer discovery lists, public JSON-RPC endpoints, a network dashboard, a block explorer, and the project's community social media. They are kept in the ethereumclassic GitHub organization.",
   },
   {
     question: "Which Ethereum Classic client should I run?",
@@ -18,7 +18,7 @@ export const publicGoodsFaq: { question: string; answer: string }[] = [
   {
     question: "Where are Core-Geth releases published?",
     answer:
-      "In ethereumclassic/core-geth, the community's repository. Releases from the v1.13 series onward are published only there, so a node tracking the previous repository, etclabscore/core-geth, does not see them.",
+      "In ethereumclassic/core-geth, the client's repository in the ethereumclassic GitHub organization. Releases from the v1.13 line onward are published only there, so a node tracking the previous repository, etclabscore/core-geth, does not see them.",
   },
   {
     question: "How does a new Ethereum Classic node find its first peers?",
@@ -37,7 +37,7 @@ export const publicGoodsFaq: { question: string; answer: string }[] = [
   {
     question: "Who maintains and pays for these services?",
     answer:
-      "Ethereum Classic's core developers and community contributors do the day-to-day work. Ethereum Classic DAO LLC is the standing legal entity that maintains and funds them today as the funder of last resort. The stewardship page covers the arrangement and how to sponsor it.",
+      "Ethereum Classic's core developers and community contributors do the day-to-day work. Ethereum Classic DAO LLC is the standing legal entity that maintains and funds these services today as the funder of last resort. The stewardship page covers the arrangement and how to sponsor it.",
   },
 ];
 

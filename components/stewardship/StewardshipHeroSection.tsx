@@ -6,7 +6,7 @@ const entityCards = [
   {
     label: "Who does the work",
     value: "Ethereum Classic core developers",
-    detail: "In the community's ethereumclassic organization on GitHub",
+    detail: "In the ethereumclassic organization",
   },
   {
     label: "Legal entity",
@@ -36,8 +36,8 @@ export function StewardshipHeroSection() {
             Ethereum Classic&rsquo;s core developers and community contributors
             do the day-to-day work on its public goods: the Core-Geth client,
             the network&rsquo;s bootnodes and its peer discovery lists. The work
-            is done in the community&rsquo;s own repositories, and it stays there
-            no matter who maintains or funds it. Ethereum Classic DAO LLC is the
+            is done in the ethereumclassic GitHub organization, and it stays
+            there no matter who maintains or funds it. Ethereum Classic DAO LLC is the
             standing legal entity that maintains and funds that work: the
             counterpart a sponsor contracts with, which receives and reports the
             funding.

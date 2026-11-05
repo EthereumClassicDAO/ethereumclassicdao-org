@@ -5,6 +5,7 @@ import { Cite } from "@/components/ui/Cite";
 import {
   COOPERATIVE_RETROSPECTIVE_URL,
   COOPERATIVE_STATUS,
+  CORE_GETH_ABOUT_URL,
   CORE_GETH_AUDIT_URL,
   CORE_GETH_HISTORY_URL,
   CORE_GETH_RELEASES_URL,
@@ -17,14 +18,14 @@ const organizations = [
   {
     name: "ETCDEV",
     years: "2016 to 2018",
-    role: "Supported Classic Geth, the client whose developers went on to form ETC Labs Core.",
+    role: "Supported Ethereum Classic's first clients, Classic Geth among them.",
     status: "Closed in 2018",
     current: false,
   },
   {
     name: "ETC Labs",
     years: "2019 to 2021",
-    role: "With ETC Core, led development through the fork and rebrand of multi-geth to Core-Geth.",
+    role: "With ETC Core, led development through the fork and rebrand of Multi-Geth to Core-Geth.",
     status: "Left the ecosystem in 2021",
     current: false,
   },
@@ -51,8 +52,8 @@ const milestones = [
     source: CORE_GETH_HISTORY_URL,
   },
   {
-    when: "21 December 2024",
-    what: "Core-Geth maintenance moves to ethereumclassic/core-geth, the move the ETC Cooperative's published roadmap of July 2024 had proposed.",
+    when: "December 21, 2024",
+    what: "ethereumclassic/core-geth is created from etclabscore/core-geth, the move the ETC Cooperative's published roadmap of July 2024 had proposed.",
     source: `${CORE_GETH_HISTORY_URL}#this-repository`,
   },
   {
@@ -71,8 +72,8 @@ const milestones = [
     source: CORE_GETH_AUDIT_URL,
   },
   {
-    when: "14 September 2026",
-    what: "The v1.13 series ships, the first release line published from the community's repository, with the organization's bootnodes and discovery lists built in.",
+    when: "September 14, 2026",
+    what: "The v1.13 line begins, the first release line published from ethereumclassic/core-geth, with the ethereumclassic organization's bootnodes and discovery lists built in.",
     source: CORE_GETH_RELEASES_URL,
   },
 ];
@@ -178,7 +179,10 @@ export function LineageSection() {
             <p className="mt-8 text-sm text-[var(--text-muted)]">
               The full account, with the commit and release behind each step, is
               in{" "}
-              <Cite href={CORE_GETH_HISTORY_URL}>Core-Geth&rsquo;s project history</Cite>.
+              <Cite href={CORE_GETH_HISTORY_URL}>Core-Geth&rsquo;s project history</Cite>,
+              and the{" "}
+              <Cite href={CORE_GETH_ABOUT_URL}>About page on coregeth.com</Cite>{" "}
+              sets out the same lineage.
             </p>
           </FadeIn>
         </div>

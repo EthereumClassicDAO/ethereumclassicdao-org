@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 const buildItems = [
   {
     icon: GitBranch,
-    text: "Core network software: the Core-Geth client, the network's bootnodes and its peer discovery lists, maintained in the community's own repositories",
+    text: "Core network software: the Core-Geth client, the network's bootnodes and its peer discovery lists, maintained in the ethereumclassic GitHub organization",
   },
   {
     icon: Vote,

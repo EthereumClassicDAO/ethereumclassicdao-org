@@ -8,9 +8,10 @@ import { PropertiesSection } from "@/components/ecosystem/PropertiesSection";
 import { ActivationCountdown } from "@/components/ui/ActivationCountdown";
 import { ExternalLink, CheckCircle2, Flame, Landmark, Cpu, Layers, Code2, ShieldCheck, Network } from "lucide-react";
 import { Accordion } from "@/components/ui/Accordion";
+import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 import {
   CORE_GETH_DOCS_URL,
-  CORE_GETH_RELEASES_URL,
+  CORE_GETH_LATEST_RELEASE_URL,
   FUKUII_DOCS_URL,
   FUKUII_RELEASES_URL,
 } from "@/lib/network-links";
@@ -103,17 +104,17 @@ const clients = [
     languageColor: "#00ADD8",
     badges: ["Recommended", "go-ethereum derivative"],
     version: "TBD",
-    runtime: "Go 1.26+",
+    runtime: "None (Go 1.26+ to build)",
     disk: "500 GB+ (full sync)",
     ram: "8 GB minimum",
     steps: [
       "Stop your running Core-Geth node",
       "Download the Olympia-compatible release from GitHub",
-      "Replace the existing binary or update via package manager",
+      "Replace the existing binary, or pull the new container image",
       "Restart your node. It will automatically follow the Olympia fork.",
     ],
     dockerImage: "ghcr.io/ethereumclassic/core-geth",
-    githubUrl: CORE_GETH_RELEASES_URL,
+    githubUrl: CORE_GETH_LATEST_RELEASE_URL,
     docsUrl: CORE_GETH_DOCS_URL,
   },
   {
@@ -146,7 +147,7 @@ const faqItems = [
   {
     question: "What role has the ETC Cooperative played, and what changes with Olympia?",
     answer:
-      "The ETC Cooperative, a US 501(c)(3) non-profit founded in 2017, funded Ethereum Classic's core client development for years, contributing millions of dollars to the network's client teams and infrastructure through every upgrade cycle. Every hard fork, every client release, and every cross-client coordination effort of that period was backed by its balance sheet. It entered maintenance mode at the end of 2024, and the services it maintained continue in the ethereumclassic organization, where Ethereum Classic's core developers do the day-to-day work and Ethereum Classic DAO LLC maintains and funds them today as the funder of last resort. Olympia is what that work was building toward: a protocol-native funding model that does not depend on any single organization's continued generosity. The Olympia Treasury, governed on-chain by the Olympia DAO and executed by the Wyoming DAO LLC, extends beyond institutional dependency with a durable financial foundation that scales with network usage. Any developer, mining operation, hardware manufacturer, or individual worldwide can contribute directly on-chain without fielding a team or managing a non-profit to do it.",
+      "The ETC Cooperative, a US 501(c)(3) non-profit founded in 2017, funded Ethereum Classic's core client development for years, contributing millions of dollars to the network's client teams and infrastructure through every upgrade cycle. Every hard fork, every client release, and every cross-client coordination effort of that period was backed by its balance sheet. It entered maintenance mode at the end of 2024, and the services it maintained continue in the ethereumclassic organization, where Ethereum Classic's core developers do the day-to-day work and Ethereum Classic DAO LLC maintains and funds those services today as the funder of last resort. Olympia is what that work was building toward: a protocol-native funding model that does not depend on any single organization's continued generosity. The Olympia Treasury, governed on-chain by the Olympia DAO and executed by the Wyoming DAO LLC, extends beyond institutional dependency with a durable financial foundation that scales with network usage. Any developer, mining operation, hardware manufacturer, or individual worldwide can contribute directly on-chain without fielding a team or managing a non-profit to do it.",
   },
   {
     question: "What is Grayscale's role in Ethereum Classic's development?",
@@ -693,6 +694,7 @@ export default function UpgradePage() {
           }),
         }}
       />
+      <BreadcrumbJsonLd name="Olympia" path="/olympia" />
     </main>
   );
 }

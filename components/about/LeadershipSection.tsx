@@ -58,7 +58,7 @@ export function LeadershipSection() {
               backed the network before protocol-native funding existed. Ethereum
               Classic DAO LLC is the institutional expression of that continuity:
               it stewards the network&rsquo;s public goods today, in the
-              community&rsquo;s own repositories — the same contributors, the same commitment, built to grow with the network and the global adoption of blockchain infrastructure.
+              ethereumclassic organization: the same contributors, the same commitment, built to grow with the network and the global adoption of blockchain infrastructure.
             </p>
             <Link
               href="/stewardship"
