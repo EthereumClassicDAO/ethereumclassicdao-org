@@ -55,6 +55,8 @@ export async function ETCGSection() {
     premium !== null
       ? `${premium >= 0 ? "+" : ""}${premium.toFixed(1)}%`
       : "—";
+  // The context paragraph says "discount" or "premium" in words, so it takes the unsigned size.
+  const premiumSize = premium !== null ? `${Math.abs(premium).toFixed(1)}%` : "—";
   const premiumColor =
     premium !== null && premium >= 0
       ? "text-[var(--brand-green)]"
@@ -184,7 +186,7 @@ export async function ETCGSection() {
                     the trust&apos;s early years when supply was constrained and
                     institutional demand was high. The current{" "}
                     <span data-live="" className="font-semibold text-red-400">
-                      {premiumLabel}
+                      {premiumSize}
                     </span>{" "}
                     discount reflects the absence of an active redemption
                     mechanism — not a change in the underlying asset. ETF
@@ -193,15 +195,13 @@ export async function ETCGSection() {
                     at a similar discount in January 2024. ETHE followed in July
                     2024. Active protocol development and a credible ETF
                     conversion pipeline are the primary catalysts for discount
-                    compression in closed-end digital asset trusts. Olympia is
-                    the most significant ETC protocol upgrade in the network&apos;s
-                    history.
+                    compression in closed-end digital asset trusts.
                   </p>
                 ) : (
                   <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
                     ETCG is trading at a{" "}
                     <span data-live="" className="font-semibold text-[var(--brand-green)]">
-                      {premiumLabel}
+                      {premiumSize}
                     </span>{" "}
                     premium to NAV. Trust-phase premiums reflect constrained
                     supply relative to institutional demand — the same dynamic
