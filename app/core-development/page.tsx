@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { PropertiesSection } from "@/components/ecosystem/PropertiesSection";
+import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Core Development Timeline | Ethereum Classic DAO",
+  title: "Ethereum Classic Core Development Timeline",
   description:
     "Every network upgrade applied to Ethereum Classic mainnet — from the Frontier genesis block in July 2015 through Olympia. 17 completed upgrades sourced from ECIP-1066.",
 };
@@ -34,6 +35,14 @@ interface Upgrade {
   description: string;
   status: UpgradeStatus;
 }
+
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+const DATE_FORMAT = new Intl.DateTimeFormat("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+});
 
 const upgrades: Upgrade[] = [
   {
@@ -479,7 +488,13 @@ export default function TimelinePage() {
                             {upgrade.block}
                           </p>
                           <p className="font-mono text-[10px] text-[var(--text-subtle)]">
-                            {upgrade.date}
+                            {ISO_DATE.test(upgrade.date) ? (
+                              <time dateTime={upgrade.date}>
+                                {DATE_FORMAT.format(new Date(upgrade.date))}
+                              </time>
+                            ) : (
+                              upgrade.date
+                            )}
                           </p>
                         </div>
                       </div>
@@ -572,6 +587,7 @@ export default function TimelinePage() {
         </div>
       </section>
       <PropertiesSection />
+      <BreadcrumbJsonLd name="Core Development" path="/core-development" />
     </main>
   );
 }
