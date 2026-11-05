@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Olympia Staged Rollout",
@@ -237,6 +238,7 @@ export default function TimelinePage() {
           </FadeIn>
         </div>
       </section>
+      <BreadcrumbJsonLd name="Olympia Staged Rollout" path="/timeline" />
     </main>
   );
 }

@@ -8,6 +8,7 @@ import { InstitutionalProductsSection } from "@/components/ecosystem/Institution
 import { IntegrationsSection } from "@/components/ecosystem/IntegrationsSection";
 import { DeveloperLinksSection } from "@/components/ecosystem/DeveloperLinksSection";
 import { PropertiesSection } from "@/components/ecosystem/PropertiesSection";
+import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Build on Ethereum Classic — EVM Developer Ecosystem",
@@ -49,6 +50,7 @@ export default function EcosystemPage() {
       <InstitutionalProductsSection />
       <IntegrationsSection />
       <PropertiesSection />
+      <BreadcrumbJsonLd name="Ecosystem" path="/ecosystem" />
     </main>
   );
 }

@@ -5,6 +5,7 @@ import { TreasuryFundingSection } from "@/components/governance/TreasuryFundingS
 import { StewardshipSection } from "@/components/governance/StewardshipSection";
 import { FAQSection } from "@/components/governance/FAQSection";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Olympia Governance Architecture",
@@ -40,6 +41,7 @@ export default function GovernancePage() {
       <SectionDivider />
       <StewardshipSection />
       <FAQSection />
+      <BreadcrumbJsonLd name="Governance" path="/governance" />
     </main>
   );
 }

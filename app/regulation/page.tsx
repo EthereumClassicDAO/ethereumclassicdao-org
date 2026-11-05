@@ -6,6 +6,7 @@ import { ClassicUSDSection } from "@/components/regulation/ClassicUSDSection";
 import { ETCMarketDepthSection } from "@/components/regulation/ETCMarketDepthSection";
 import { NetworkSecuritySection } from "@/components/regulation/NetworkSecuritySection";
 import { ETCDecentralizationSection } from "@/components/regulation/ETCDecentralizationSection";
+import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Ethereum Classic Regulatory Compliance — CLARITY Act, MiCA, GENIUS Act, FSA Green List",
@@ -45,6 +46,7 @@ export default function RegulationPage() {
       <ETCMarketDepthSection />
       <NetworkSecuritySection />
       <ETCDecentralizationSection />
+      <BreadcrumbJsonLd name="Regulation" path="/regulation" />
     </main>
   );
 }

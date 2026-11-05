@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -89,6 +90,7 @@ export default function PrivacyPage() {
           </FadeIn>
         </div>
       </section>
+      <BreadcrumbJsonLd name="Privacy Policy" path="/privacy" />
     </main>
   );
 }

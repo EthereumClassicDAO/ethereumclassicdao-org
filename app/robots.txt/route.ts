@@ -2,42 +2,46 @@ export function GET() {
   const body = `User-agent: *
 Allow: /
 
+# Search engines
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: DuckDuckBot
+User-agent: Slurp
+User-agent: Baiduspider
+User-agent: YandexBot
+Allow: /
+
+# AI crawlers: permitted to crawl, index, answer from and train on this site
 User-agent: GPTBot
-Allow: /
-
+User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
 User-agent: Anthropic-AI
-Allow: /
-
+User-agent: Claude-Web
 User-agent: Google-Extended
-Allow: /
-
+User-agent: Applebot-Extended
 User-agent: PerplexityBot
-Allow: /
-
+User-agent: Perplexity-User
+User-agent: meta-externalagent
+User-agent: meta-externalfetcher
+User-agent: meta-webindexer
+User-agent: CCBot
 User-agent: Cohere-AI
+User-agent: Bytespider
+User-agent: iaskspider
+User-agent: Omgilibot
 Allow: /
 
+# Link previews
 User-agent: facebookexternalhit
-Allow: /
-
 User-agent: Twitterbot
-Allow: /
-
 User-agent: LinkedInBot
-Allow: /
-
 User-agent: Discordbot
+User-agent: Slackbot
 Allow: /
-
-Content-Signal: ai-train=yes
-Content-Signal: search=yes
-Content-Signal: ai-input=yes
 
 Sitemap: https://ethereumclassicdao.org/sitemap.xml
 `;

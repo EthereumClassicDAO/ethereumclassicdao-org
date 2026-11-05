@@ -5,6 +5,7 @@ import { GrayscaleProductLifecycleSection } from "@/components/investment-produc
 import { TradFiAccessSection } from "@/components/investment-products/TradFiAccessSection";
 import { FutureIssuersSection } from "@/components/investment-products/FutureIssuersSection";
 import { InvestmentThesisSection } from "@/components/investment-products/InvestmentThesisSection";
+import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "ETC Institutional Investment Products — ETCG, ETF Pipeline, TradFi Access",
@@ -39,6 +40,7 @@ export default function InvestmentProductsPage() {
       <TradFiAccessSection />
       <FutureIssuersSection />
       <InvestmentThesisSection />
+      <BreadcrumbJsonLd name="Investment Products" path="/investment-products" />
     </main>
   );
 }

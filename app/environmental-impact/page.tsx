@@ -7,6 +7,7 @@ import { ETCAsEnergyMarketSection } from "@/components/environmental-impact/ETCA
 import { MiningHardwareSection } from "@/components/environmental-impact/MiningHardwareSection";
 import { GlobalHashrateSection } from "@/components/environmental-impact/GlobalHashrateSection";
 import { EquipmentSection } from "@/components/ecosystem/EquipmentSection";
+import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Proof-of-Work as Energy Infrastructure — ETC Mining, Hashrate, and Stranded Energy",
@@ -42,6 +43,7 @@ export default function EnvironmentalImpactPage() {
       <MiningHardwareSection />
       <GlobalHashrateSection />
       <EquipmentSection />
+      <BreadcrumbJsonLd name="Environmental Impact" path="/environmental-impact" />
     </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ReportsSection } from "@/components/transparency/ReportsSection";
 import { PrinciplesSection } from "@/components/transparency/PrinciplesSection";
 import { DocumentsSection } from "@/components/transparency/DocumentsSection";
+import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Transparency & Disclosures",
@@ -15,6 +16,7 @@ export default function TransparencyPage() {
       <ReportsSection />
       <PrinciplesSection />
       <DocumentsSection />
+      <BreadcrumbJsonLd name="Transparency" path="/transparency" />
     </main>
   );
 }

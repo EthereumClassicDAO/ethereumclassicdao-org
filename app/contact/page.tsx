@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { RegisteredAgentSection } from "@/components/contact/RegisteredAgentSection";
 import { NetworkContactsSection } from "@/components/contact/NetworkContactsSection";
 import { ChannelsSection } from "@/components/contact/ChannelsSection";
+import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Contact Ethereum Classic DAO LLC",
@@ -15,6 +16,7 @@ export default function ContactPage() {
       <RegisteredAgentSection />
       <NetworkContactsSection />
       <ChannelsSection />
+      <BreadcrumbJsonLd name="Contact" path="/contact" />
     </main>
   );
 }
