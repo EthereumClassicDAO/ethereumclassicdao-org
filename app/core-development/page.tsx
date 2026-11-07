@@ -3,16 +3,18 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { PropertiesSection } from "@/components/ecosystem/PropertiesSection";
 import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
+import { eipsIn } from "@/lib/olympia-eips";
 
 export const metadata: Metadata = {
   title: "Ethereum Classic Core Development Timeline",
   description:
-    "Every network upgrade applied to Ethereum Classic mainnet — from the Frontier genesis block in July 2015 through Olympia. 17 completed upgrades sourced from ECIP-1066.",
+    "Every network upgrade applied to Ethereum Classic mainnet, from the Frontier genesis block of July 2015 to Spiral in 2024, and the proposed Olympia upgrade.",
 };
 
 type UpgradeType =
   | "genesis"
   | "evm-parity"
+  | "evm-alignment"
   | "etc-native"
   | "monetary"
   | "fork-moment"
@@ -121,7 +123,7 @@ const upgrades: Upgrade[] = [
     block: "Block 3,000,000",
     date: "2017-01-13",
     type: "etc-native",
-    additionalTags: ["evm-parity"],
+    additionalTags: ["evm-alignment"],
     ecip: "ECIP-1010",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1010",
     eips: ["EIP-155", "EIP-160"],
@@ -267,13 +269,13 @@ const upgrades: Upgrade[] = [
     subtitle: "London (partial)",
     block: "Block 14,525,000",
     date: "2022-02-12",
-    type: "evm-parity",
+    type: "evm-alignment",
     ecip: "ECIP-1104",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1104",
     eips: ["EIP-3529", "EIP-3541"],
-    keyChanges: ["Gas refund reduction", "0xEF bytecode prefix reserved", "EIP-1559 deferred to Olympia"],
+    keyChanges: ["Gas refund reduction", "0xEF bytecode prefix reserved", "EIP-1559 and EIP-3198 omitted"],
     description:
-      "Partial London parity — gas refunds reduced, 0xEF bytecode prefix reserved — without EIP-1559. The fee market was deliberately deferred to gather empirical data on adoption and gas dynamics, and to resolve where the basefee should flow: burned as on Ethereum, or redirected to a protocol treasury. The 2021 developer consensus landed on the treasury model, a position formalized four years later with the Olympia upgrade.",
+      "Part of London: gas refunds reduced and the 0xEF bytecode prefix reserved. ECIP-1104 omitted EIP-1559, as it would conflict with the monetary policy set in ECIP-1017, and the BASEFEE opcode, which depends on it. The proposed Olympia upgrade would activate EIP-1559 with the base fee credited to a treasury rather than burned (ECIP-1111).",
     status: "complete",
   },
   {
@@ -287,7 +289,7 @@ const upgrades: Upgrade[] = [
     eips: ["EIP-3651", "EIP-3855", "EIP-3860", "EIP-6049"],
     keyChanges: ["Warm COINBASE access", "PUSH0 opcode", "Initcode size limit", "SELFDESTRUCT deprecation notice"],
     description:
-      "Partial Shanghai parity, excluding Proof-of-Stake validator withdrawals not applicable to Ethereum Classic. Warm COINBASE access, PUSH0 opcode, and initcode size limit. Remaining Shanghai gaps are filled by the Olympia upgrade.",
+      "Shanghai's EVM changes: warm COINBASE access, the PUSH0 opcode, the initcode size limit, and the SELFDESTRUCT deprecation notice. ECIP-1109 omitted EIP-4399 and EIP-4895, Proof-of-Stake changes that do not apply to Ethereum Classic.",
     status: "complete",
   },
   {
@@ -307,43 +309,29 @@ const upgrades: Upgrade[] = [
   {
     name: "Olympia",
     subtitle: "Glamsterdam",
-    block: "Pending Activation Block",
-    date: "2027",
+    block: "Activation block TBD",
+    date: "Targeted for 2027",
     type: "olympia",
-    additionalTags: ["etc-native", "evm-parity"],
+    additionalTags: ["etc-native", "evm-alignment"],
     ecip: null,
     ecipUrl: null,
     ecips: [
       { name: "ECIP-1111", url: "https://ecips.ethereumclassic.org/ECIPs/ecip-1111" },
       { name: "ECIP-1112", url: "https://ecips.ethereumclassic.org/ECIPs/ecip-1112" },
       { name: "ECIP-1121", url: "https://ecips.ethereumclassic.org/ECIPs/ecip-1121" },
-      { name: "ECIP-1122", url: "https://ecips.ethereumclassic.org/ECIPs/ecip-1122" },
     ],
-    eips: [
-      "EIP-1153",
-      "EIP-1559",
-      "EIP-2537",
-      "EIP-2935",
-      "EIP-3198",
-      "EIP-5656",
-      "EIP-6780",
-      "EIP-7623",
-      "EIP-7642",
-      "EIP-7702",
-      "EIP-7823",
-      "EIP-7825",
-      "EIP-7883",
-      "EIP-7910",
-      "EIP-7934",
-      "EIP-7935",
-      "EIP-7939",
-      "EIP-7951",
-      "EIP-7975",
-      "EIP-7997",
+    // The EIPs that would activate at the Olympia block, from ECIP-1121's own rows.
+    eips: [...eipsIn("core"), ...eipsIn("modified")]
+      .map((row) => row.eip)
+      .sort((x, y) => x - y)
+      .map((n) => `EIP-${n}`),
+    keyChanges: [
+      "EIP-1559, with the base fee credited rather than destroyed (ECIP-1111)",
+      "The Sovereignty Vault, the Treasury's permanent address (ECIP-1112)",
+      "EVM alignment through Glamsterdam (ECIP-1121)",
     ],
-    keyChanges: ["EIP-1559 fee market (ECIP-1111)", "Protocol treasury (ECIP-1112)", "Glamsterdam EVM alignment (ECIP-1121)", "Miner tip floor (ECIP-1122)", "DAO governance: core dev, infrastructure, security"],
     description:
-      "EVM alignment to Glamsterdam, incorporating EIPs spanning London, Dencun, Pectra, Fusaka, and Glamsterdam on a single upgrade boundary. Introduces EIP-1559 with basefee directed to a protocol treasury — the funding model first identified during the 2022 Mystique upgrade. On-chain DAO governance, built on the OpenZeppelin 5.x contract suite, is scoped to core client software, critical infrastructure, and network security, with funding proposals open to any ETC account. A subsequent phase introduces open futarchy prediction markets — public staking on protocol outcomes with rewards for accurate predictions.",
+      "A proposed upgrade, targeted for 2027, whose ECIPs are drafts. ECIP-1121 would advance the execution layer through Dencun, Pectra and Fusaka and carry that work into Glamsterdam, adopting part of Glamsterdam's set. ECIP-1111 would activate EIP-1559 with the base fee credited to the Sovereignty Vault address rather than destroyed. The governance contracts that would spend from that address would deploy before the fork, as the Olympia page describes.",
     status: "upcoming",
   },
 ];
@@ -351,6 +339,7 @@ const upgrades: Upgrade[] = [
 const typeLabels: Record<UpgradeType, string> = {
   genesis: "Genesis",
   "evm-parity": "EVM Parity",
+  "evm-alignment": "EVM Alignment",
   "etc-native": "ETC Native",
   monetary: "Monetary Policy",
   "fork-moment": "Defining Moment",
@@ -360,6 +349,7 @@ const typeLabels: Record<UpgradeType, string> = {
 const typeBadge: Record<UpgradeType, string> = {
   genesis: "bg-[rgba(0,255,174,0.12)] text-[var(--brand-green)]",
   "evm-parity": "bg-[var(--color-violet-bg)] text-[var(--color-violet)]",
+  "evm-alignment": "bg-[var(--color-sky-bg)] text-[var(--color-sky)]",
   "etc-native": "bg-[rgba(0,255,174,0.08)] text-[var(--brand-green)]",
   monetary: "bg-[rgba(0,255,174,0.08)] text-[var(--brand-green)]",
   "fork-moment": "bg-[var(--border-subtle)] text-[var(--text-secondary)]",
@@ -392,18 +382,17 @@ export default function TimelinePage() {
               <span className="text-[var(--brand-green)]">Core Development</span> Timeline
             </h1>
             <p className="mt-4 text-base text-[var(--text-muted)]">
-              A decade of uninterrupted Proof-of-Work operation — every
-              network upgrade applied to Ethereum Classic mainnet. Each upgrade
-              coordinated across independent client teams, funded in turn by
-              ETCDEV, ETC Labs, the ETC Cooperative and institutional partners,
-              and ratified through the
-              Ethereum Classic Improvement Proposal process. Full EVM parity delivered through every cycle — from Gas Reprice
-              to Spiral — tracking every major Ethereum protocol advancement
-              on the largest Proof-of-Work smart contract platform and the
-              only PoW EVM.
+              Every network upgrade applied to Ethereum Classic mainnet, across
+              more than a decade of uninterrupted Proof-of-Work operation. Each
+              was coordinated across independent client teams, supported in turn
+              by ETCDEV, ETC Labs and the ETC Cooperative, and ratified through the
+              Ethereum Classic Improvement Proposal process. Each cycle from Gas
+              Reprice to Spiral brought Ethereum&rsquo;s execution-layer changes
+              to Ethereum Classic, in full or in part, on the largest
+              Proof-of-Work smart contract platform and the only PoW EVM.
             </p>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Olympia is next.
+              Olympia is the proposed next upgrade.
             </p>
           </FadeIn>
 
@@ -413,6 +402,7 @@ export default function TimelinePage() {
                 [
                   ["genesis", "Genesis"],
                   ["evm-parity", "EVM Parity"],
+                  ["evm-alignment", "EVM Alignment"],
                   ["etc-native", "ETC Native"],
                   ["monetary", "Monetary Policy"],
                   ["fork-moment", "Defining Moment"],
