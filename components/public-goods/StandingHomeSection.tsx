@@ -9,24 +9,7 @@ import {
   CORE_GETH_REVIEW_POLICY_URL,
   ETC_ORG_URL,
 } from "@/lib/network-links";
-
-const properties = [
-  {
-    label: "Where it lives",
-    value: "ethereumclassic",
-    detail: "GitHub organization since July 2016",
-  },
-  {
-    label: "Who can change it",
-    value: "More than one maintainer",
-    detail: "Each repository has more than one admin",
-  },
-  {
-    label: "How a change lands",
-    value: "Reviewed pull request",
-    detail: "Needs an approving review and the required checks",
-  },
-];
+import { OWN_ORGANIZATION_PROPERTIES } from "@/lib/public-goods";
 
 const records = [
   {
@@ -68,7 +51,7 @@ export function StandingHomeSection() {
           </FadeIn>
 
           <div className="mt-10 grid gap-3 sm:grid-cols-3">
-            {properties.map((p, i) => (
+            {OWN_ORGANIZATION_PROPERTIES.map((p, i) => (
               <FadeIn key={p.label} delay={i * 80} className="h-full">
                 <div className="flex h-full flex-col justify-between rounded-lg border-l-2 border-[var(--brand-green)] bg-[var(--bg-elevated)] p-4">
                   <p className="text-[10px] font-mono uppercase tracking-wider text-[var(--brand-green)]">

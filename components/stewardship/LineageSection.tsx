@@ -3,16 +3,12 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { Cite } from "@/components/ui/Cite";
 import {
-  COOPERATIVE_RETROSPECTIVE_URL,
   COOPERATIVE_STATUS,
   CORE_GETH_ABOUT_URL,
   CORE_GETH_AUDIT_URL,
   CORE_GETH_HISTORY_URL,
-  CORE_GETH_RELEASES_URL,
 } from "@/lib/network-links";
-
-const WYOMING_FILING_URL =
-  "https://wyobiz.wyo.gov/business/FilingDetails.aspx?eFNum=101157225123250204055197221085227098244002050082";
+import { MAINTENANCE_RECORD } from "@/lib/maintenance-record";
 
 const organizations = [
   {
@@ -42,39 +38,6 @@ const organizations = [
     role: "The standing legal entity that maintains and funds the client, the bootnodes and the discovery lists as the funder of last resort. It took up Core-Geth's maintenance in February 2026, with the day-to-day work done by Ethereum Classic's core developers.",
     status: "Current",
     current: true,
-  },
-];
-
-const milestones = [
-  {
-    when: "June 2024",
-    what: "Core-Geth v1.12.20 is released from etclabscore/core-geth, the last stable release before a 21-month gap in security maintenance.",
-    source: CORE_GETH_HISTORY_URL,
-  },
-  {
-    when: "December 21, 2024",
-    what: "ethereumclassic/core-geth is created from etclabscore/core-geth, the move the ETC Cooperative's published roadmap of July 2024 had proposed.",
-    source: `${CORE_GETH_HISTORY_URL}#this-repository`,
-  },
-  {
-    when: "End of 2024",
-    what: "The ETC Cooperative enters maintenance mode. Its 2024 retrospective states that “it will be up to other stakeholders to take on any required maintenance of the ETC client”.",
-    source: COOPERATIVE_RETROSPECTIVE_URL,
-  },
-  {
-    when: "May 2025",
-    what: "Ethereum Classic DAO LLC is launched in Wyoming.",
-    source: WYOMING_FILING_URL,
-  },
-  {
-    when: "February 2026",
-    what: "Ethereum Classic core developers resume Core-Geth maintenance in ethereumclassic/core-geth, funded by the DAO as the funder of last resort: patching the outstanding vulnerabilities, moving to a supported Go toolchain, and rebuilding the release pipeline.",
-    source: CORE_GETH_AUDIT_URL,
-  },
-  {
-    when: "September 14, 2026",
-    what: "The v1.13 line begins, the first release line published from ethereumclassic/core-geth, with the ethereumclassic organization's bootnodes and discovery lists built in.",
-    source: CORE_GETH_RELEASES_URL,
   },
 ];
 
@@ -150,14 +113,14 @@ export function LineageSection() {
 
           <FadeIn delay={220}>
             <ol className="mt-8 space-y-4 border-l border-[var(--divider)] pl-6">
-              {milestones.map((m) => (
-                <li key={m.when} className="relative">
+              {MAINTENANCE_RECORD.map((m) => (
+                <li key={`${m.iso}-${m.when}`} className="relative">
                   <span
                     aria-hidden="true"
                     className="absolute -left-[1.6875rem] top-1.5 h-1.5 w-1.5 rounded-full bg-[var(--brand-green)]"
                   />
                   <p className="font-mono text-xs uppercase tracking-wider text-[var(--brand-green)]">
-                    {m.when}
+                    <time dateTime={m.iso}>{m.when}</time>
                   </p>
                   <p className="mt-1 text-sm leading-relaxed text-[var(--text-muted)]">
                     {m.what}{" "}
