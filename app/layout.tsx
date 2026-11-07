@@ -20,7 +20,7 @@ const SITE_URL = "https://ethereumclassicdao.org";
 const TITLE =
   "Ethereum Classic DAO — Building Software & Infrastructure for Global Adoption of Ethereum Classic";
 const DESCRIPTION =
-  "Ethereum Classic DAO LLC is the standing legal entity that maintains and funds Ethereum Classic's public goods (the Core-Geth client, the network's bootnodes and peer discovery lists) as the funder of last resort. Ethereum Classic's core developers and community contributors do the day-to-day work in the ethereumclassic GitHub organization. Ethereum Classic is the only Proof-of-Work blockchain with native EVM smart contracts. The proposed Olympia upgrade would advance the execution layer through Glamsterdam and give core development a funding source in the protocol. A digital commodity candidate under the CLARITY Act, a decentralized asset under MiCA, and a recognized crypto-asset on Japan's FSA Green List.";
+  "Ethereum Classic DAO LLC maintains and funds Core-Geth, the bootnodes and the peer discovery lists as funder of last resort. Core developers do the work.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -54,7 +54,6 @@ export const metadata: Metadata = {
     "ETF",
     "blockchain infrastructure",
     "ECIP-1121",
-    "ECIP-1122",
     "Glamsterdam",
     "Fusaka",
     "EVM upgrade",
@@ -84,7 +83,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Ethereum Classic DAO — Building Software & Infrastructure for Global Adoption",
+        alt: "Ethereum Classic DAO: Building Software & Infrastructure for Global Adoption",
         type: "image/png",
       },
     ],
@@ -131,14 +130,15 @@ const organizationJsonLd = {
   url: "https://ethereumclassicdao.org",
   logo: "https://ethereumclassicdao.org/logo.svg",
   description:
-    "Wyoming DAO LLC: the standing legal entity that maintains and funds Ethereum Classic's public goods (the Core-Geth client, the network's bootnodes and its peer discovery lists) as the funder of last resort. Ethereum Classic's core developers and community contributors do the day-to-day work.",
+    "A Wyoming DAO LLC, formed in May 2025, and the standing legal entity that maintains and funds Ethereum Classic's public goods (the Core-Geth client, the network's bootnodes and its peer discovery lists) as the funder of last resort. Ethereum Classic's core developers and community contributors do the day-to-day work.",
   foundingDate: "2025-05",
   knowsAbout: [
     "Ethereum Classic",
     "Core-Geth",
+    "Execution client maintenance",
+    "Peer discovery",
     "Proof-of-Work",
     "Ethereum Virtual Machine",
-    "On-chain governance",
   ],
   legalName: "Ethereum Classic DAO LLC",
   address: {
@@ -149,8 +149,6 @@ const organizationJsonLd = {
   sameAs: [
     "https://x.com/ethclassicdao",
     "https://github.com/EthereumClassicDAO",
-    "https://olympiadao.org",
-    "https://app.olympiadao.org",
   ],
 };
 
