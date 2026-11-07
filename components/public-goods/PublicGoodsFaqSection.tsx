@@ -13,7 +13,7 @@ export const publicGoodsFaq: { question: string; answer: string }[] = [
   {
     question: "Which Ethereum Classic client should I run?",
     answer:
-      "Core-Geth is the recommended client: run its v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code. Take the current release from github.com/ethereumclassic/core-geth/releases/latest, which always resolves to it. Fukuii, a native Ethereum Classic client, is listed as an alternative on the clients page.",
+      "Core-Geth is the recommended client: run its v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code. Take the current release from github.com/ethereumclassic/core-geth/releases/latest, which always resolves to it. Fukuii, which its maintainers mark alpha, is an alternative to try beside it, on the clients page.",
   },
   {
     question: "Where are Core-Geth releases published?",

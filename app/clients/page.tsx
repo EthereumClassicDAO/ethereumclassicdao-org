@@ -17,13 +17,15 @@ import {
   CORE_GETH_UPGRADE_URL,
   FUKUII_DOCS_URL,
   FUKUII_HOMEPAGE_URL,
-  FUKUII_RELEASES_URL,
+  FUKUII_LATEST_RELEASE_URL,
+  FUKUII_STATUS,
+  PLUGINS_STATUS,
 } from "@/lib/network-links";
 
 export const metadata: Metadata = {
   title: "Ethereum Classic Clients: Core-Geth",
   description:
-    "Core-Geth is the recommended Ethereum Classic client: run the v1.13 line, and move a v1.12 node to it. Fukuii, a native ETC client, is an alternative.",
+    "Core-Geth is the recommended Ethereum Classic client: run the v1.13 line, and move a v1.12 node to it. Fukuii, in alpha, is an alternative to try.",
   keywords: [
     "Core-Geth",
     "Core-Geth release",
@@ -32,14 +34,11 @@ export const metadata: Metadata = {
     "ETC node",
     "Scala blockchain client",
     "EVM execution client",
-    "JVM Ethereum client",
-    "multi-network EVM client",
     "Go Ethereum Classic",
     "ETC full node",
     "blockchain client implementation",
     "SNAP sync",
     "ETChash",
-    "Olympia node upgrade",
     "ETC node operator",
     "ETC RPC node",
     "Mordor testnet client",
@@ -83,13 +82,14 @@ const clients = [
     name: "Fukuii",
     language: "Scala",
     languageColor: "#DC322F",
-    role: "ETC-native",
+    role: "Alternative",
     roleTheme: "muted" as const,
+    status: FUKUII_STATUS,
     description:
-      "A native Ethereum Classic client and an alternative to Core-Geth, built ground-up for ETC rather than derived from an Ethereum client. An EVM execution client in Scala 3: one binary runs several networks at once in one JVM process, each isolated with its own state, metrics, and configuration, and a further network is configuration rather than a new client. Consensus is selected per deployment: native Proof-of-Work for Ethereum Classic and Mordor, or Proof-of-Stake with a built-in consensus layer or an external client over the Engine API.",
+      "An EVM-compliant execution client in Scala 3 with pluggable consensus: native Proof-of-Work for Ethereum Classic and Mordor, and the Engine API for post-Merge Ethereum networks, paired with a consensus client. It continues IOHK's Mantis client and is maintained by Chippr Robotics LLC under Apache 2.0. Its maintainers mark it alpha, not yet recommended for production-critical workloads, so it is an alternative to try beside Core-Geth, the recommended client.",
     websiteUrl: FUKUII_HOMEPAGE_URL,
     docsUrl: FUKUII_DOCS_URL,
-    releasesUrl: FUKUII_RELEASES_URL,
+    releasesUrl: FUKUII_LATEST_RELEASE_URL,
   },
 ];
 
@@ -100,42 +100,42 @@ const plugins = [
     language: "Java",
     languageColor: "#B07219",
     upstreamUrl: "https://github.com/besu-eth/besu",
-    description: "A plugin that adds ETC support into the Besu codebase.",
+    description: "A plugin that would add ETC support to the Besu codebase.",
   },
   {
     name: "Erigon",
     language: "Go",
     languageColor: "#00ADD8",
     upstreamUrl: "https://github.com/erigontech/erigon",
-    description: "A plugin that adds ETC support into the Erigon codebase.",
+    description: "A plugin that would add ETC support to the Erigon codebase.",
   },
   {
     name: "Ethrex",
     language: "Rust",
     languageColor: "#DEA584",
     upstreamUrl: "https://github.com/lambdaclass/ethrex",
-    description: "A plugin that adds ETC support into the Ethrex codebase.",
+    description: "A plugin that would add ETC support to the Ethrex codebase.",
   },
   {
     name: "Go-Ethereum",
     language: "Go",
     languageColor: "#00ADD8",
     upstreamUrl: "https://github.com/ethereum/go-ethereum",
-    description: "A plugin that adds ETC support into the Go-Ethereum codebase.",
+    description: "A plugin that would add ETC support to the Go-Ethereum codebase.",
   },
   {
     name: "Nethermind",
     language: "C#",
     languageColor: "#178600",
     upstreamUrl: "https://github.com/NethermindEth/nethermind",
-    description: "A plugin that adds ETC support into the Nethermind codebase.",
+    description: "A plugin that would add ETC support to the Nethermind codebase.",
   },
   {
     name: "Reth",
     language: "Rust",
     languageColor: "#DEA584",
     upstreamUrl: "https://github.com/paradigmxyz/reth",
-    description: "A plugin that adds ETC support into the Reth codebase.",
+    description: "A plugin that would add ETC support to the Reth codebase.",
   },
 ];
 
@@ -159,8 +159,9 @@ export default async function ClientsPage() {
           </FadeIn>
           <FadeIn delay={100}>
             <p className="mt-4 text-lg text-[var(--text-muted)]">
-              Multi-client architecture following best practices in client execution
-              and enterprise-grade features.
+              Core-Geth is the recommended client for Ethereum Classic. Fukuii is
+              an alternative to try beside it, and ETC plugins for upstream
+              clients are planned.
             </p>
           </FadeIn>
           <FadeIn delay={180}>
@@ -201,15 +202,22 @@ export default async function ClientsPage() {
                     </span>
                     <div>
                       <h2 className="font-semibold">{client.name}</h2>
-                      <span
-                        className={`rounded-full px-2 py-0.5 text-xs font-medium ${
-                          client.roleTheme === "brand"
-                            ? "bg-[var(--brand-green-subtle)] text-[var(--brand-green)]"
-                            : "bg-[var(--border-subtle)] text-[var(--text-secondary)]"
-                        }`}
-                      >
-                        {client.role}
-                      </span>
+                      <div className="flex flex-wrap items-center gap-1.5">
+                        <span
+                          className={`rounded-full px-2 py-0.5 text-xs font-medium ${
+                            client.roleTheme === "brand"
+                              ? "bg-[var(--brand-green-subtle)] text-[var(--brand-green)]"
+                              : "bg-[var(--border-subtle)] text-[var(--text-secondary)]"
+                          }`}
+                        >
+                          {client.role}
+                        </span>
+                        {client.status && (
+                          <span className="rounded-full bg-[var(--border-subtle)] px-2 py-0.5 text-xs font-medium text-[var(--text-secondary)]">
+                            {client.status}
+                          </span>
+                        )}
+                      </div>
                     </div>
                   </div>
 
@@ -284,8 +292,9 @@ export default async function ClientsPage() {
               ETC Plugins
             </h2>
             <p className="mb-6 text-sm text-[var(--text-muted)]">
-              ETC compatibility layers that bring Ethereum Classic support to major upstream
-              clients without maintaining full forks.
+              Planned compatibility layers that would bring Ethereum Classic support
+              to upstream clients without maintaining full forks. A plugin is not a
+              client implementation.
             </p>
           </FadeIn>
 
@@ -309,8 +318,8 @@ export default async function ClientsPage() {
                         <span className="rounded-full bg-[var(--color-sky-bg)] px-2 py-0.5 text-xs font-medium text-[var(--color-sky)]">
                           Plugin
                         </span>
-                        <span className="rounded-full bg-[var(--color-amber-bg)] px-2 py-0.5 text-xs font-medium text-[var(--color-amber)]">
-                          Future
+                        <span className="rounded-full bg-[var(--border-subtle)] px-2 py-0.5 text-xs font-medium text-[var(--text-secondary)]">
+                          {PLUGINS_STATUS}
                         </span>
                       </div>
                     </div>

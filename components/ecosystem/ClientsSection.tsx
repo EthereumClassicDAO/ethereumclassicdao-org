@@ -8,6 +8,8 @@ import {
   CORE_GETH_MIGRATION_URL,
   CORE_GETH_UPGRADE_URL,
   FUKUII_REPO_URL,
+  FUKUII_STATUS,
+  PLUGINS_STATUS,
 } from "@/lib/network-links";
 
 const featuredClient = {
@@ -25,17 +27,17 @@ const secondaryClients = [
     name: "Fukuii",
     language: "Scala",
     description:
-      "A native Ethereum Classic client and an alternative to Core-Geth, built ground-up for ETC rather than derived from an Ethereum client. An EVM execution client in Scala 3: one binary runs several networks at once in one JVM process, with consensus selected per deployment.",
+      "An EVM-compliant execution client in Scala 3 with pluggable consensus, continuing IOHK's Mantis client and maintained by Chippr Robotics LLC. Its maintainers mark it alpha: an alternative to try beside Core-Geth.",
     github: FUKUII_REPO_URL,
-    status: "ETC-native",
+    status: `Alternative · ${FUKUII_STATUS}`,
   },
   {
     name: "ETC Plugins",
     language: "",
     description:
-      "ETC compatibility layers for Besu, Erigon, Ethrex, Go-Ethereum, Nethermind, and Reth bring Ethereum Classic support to the broader Ethereum client ecosystem without maintaining full forks.",
+      "Planned compatibility layers for Besu, Erigon, Ethrex, Go-Ethereum, Nethermind and Reth, which would bring Ethereum Classic support to those upstream clients without maintaining full forks. A plugin is not a client implementation.",
     github: "/clients",
-    status: "Future",
+    status: PLUGINS_STATUS,
   },
 ];
 
@@ -50,21 +52,19 @@ export function ClientsSection() {
               Client Implementations
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Multi-client architecture eliminates single points of failure at
-              the protocol layer. Core-Geth is the recommended client, a
-              go-ethereum derivative released and maintained in the
-              ethereumclassic GitHub organization; Fukuii, a native Ethereum Classic
-              client, is an alternative to it.
-              Distinct codebases in distinct languages, maintained by separate
-              teams, mean the network can withstand the discontinuation or
-              compromise of any single one. ETC compatibility plugins extend that
-              reach to Besu, Erigon, Ethrex, Go-Ethereum, Nethermind, and Reth.
+              Core-Geth is the recommended client, a go-ethereum derivative
+              released and maintained in the ethereumclassic GitHub organization.
+              Fukuii, an execution client in Scala 3 that Chippr Robotics LLC
+              maintains as a continuation of IOHK&rsquo;s Mantis, is an
+              alternative to try beside it; its maintainers mark it alpha. ETC
+              plugins for Besu, Erigon, Ethrex, Go-Ethereum, Nethermind and Reth
+              are planned.
             </p>
           </FadeIn>
 
           {/* Recommended client — featured */}
           <FadeIn delay={100}>
-            <div className="mt-10 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] shadow-[0_0_24px_var(--border-glow)] p-8 transition-colors hover:border-[var(--border-glow)]">
+            <div className="mt-10 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-brand)] p-8 transition-colors hover:border-[var(--border-glow)]">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
                   <div className="flex flex-wrap items-center gap-3">
