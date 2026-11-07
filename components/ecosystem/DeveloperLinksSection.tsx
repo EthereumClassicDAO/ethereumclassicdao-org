@@ -1,6 +1,5 @@
 import {
   Github,
-  LayoutDashboard,
   BookOpen,
   Globe,
   Search,
@@ -15,12 +14,6 @@ const resources = [
     name: "GitHub Organization",
     description: "Client implementations, ECIPs, and EVM developer resources",
     href: "https://github.com/ethereumclassic",
-  },
-  {
-    icon: LayoutDashboard,
-    name: "Governance App",
-    description: "Proposal submission, voting, and execution",
-    href: "https://app.olympiadao.org",
   },
   {
     icon: Globe,
@@ -53,15 +46,14 @@ export function DeveloperLinksSection() {
               Developer Resources
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              The full breadth of Ethereum development infrastructure —
-              client libraries, on-chain analytics, governance tooling, and
-              protocol documentation — configured for Ethereum Classic. Same
-              EVM specification, same standards, same developer experience.
-              Everything you need to ship on ETC is already familiar.
+              Ethereum&rsquo;s development infrastructure, configured for
+              Ethereum Classic: client libraries, on-chain analytics and protocol
+              documentation. The EVM through Shanghai, the same standards, and a
+              developer experience that is already familiar.
             </p>
           </FadeIn>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {resources.map((r, i) => (
               <FadeIn key={r.name} delay={i * 80}>
                 <PropertyCard

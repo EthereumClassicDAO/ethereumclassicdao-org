@@ -28,7 +28,7 @@ const categories: ToolCategory[] = [
       {
         name: "Foundry",
         description: "Blazing fast Rust-based toolchain: forge, cast, anvil. Write tests in Solidity.",
-        config: "--rpc-url $ETC_RPC_URL --chain 61",
+        config: "--rpc-url $ETC_RPC_URL --chain 61 --legacy",
         href: "https://getfoundry.sh",
       },
       {
@@ -173,12 +173,12 @@ export function DeveloperToolingSection() {
               Developer Tooling
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Ethereum Classic tracks the Ethereum EVM specification, which
-              means the full Ethereum development toolchain works on ETC
-              without modification. Hardhat, Foundry, ethers.js, viem, wagmi
-              — every major tool connects with a single configuration
-              parameter. Set Chain ID to 61, point your RPC at an endpoint
-              from ChainList or your own node, and deploy.
+              Ethereum Classic&rsquo;s EVM is the Shanghai set, so
+              Ethereum&rsquo;s development toolchain works on ETC: Hardhat,
+              Foundry, ethers.js, viem and wagmi connect through a chain
+              configuration. Set Chain ID to 61, point your RPC at an endpoint
+              from ChainList or your own node, send legacy transactions, since
+              ETC has no EIP-1559 fee market today, and deploy.
             </p>
           </FadeIn>
 

@@ -83,8 +83,8 @@ export function NetworkConfigSection() {
               Ethereum Classic mainnet (Chain 61) and Mordor testnet (Chain
               63). Drop-in configuration for MetaMask, Hardhat, Foundry, and
               any EVM-compatible toolchain. Both networks run Proof-of-Work
-              consensus under the Spiral EVM specification, with the Olympia
-              upgrade pending activation on both chains.
+              consensus under the Spiral EVM specification. Olympia, a proposed
+              upgrade whose activation blocks are TBD, would apply to both.
             </p>
           </FadeIn>
 
@@ -176,7 +176,7 @@ export function NetworkConfigSection() {
 
                     <div className="flex items-center justify-between">
                       <dt className="text-xs font-mono uppercase tracking-wider text-[var(--text-subtle)]">
-                        Next Upgrade
+                        Proposed Upgrade
                       </dt>
                       <dd className="text-sm font-mono font-semibold">
                         <EvmLabel versions={net.nextUpgrade} />

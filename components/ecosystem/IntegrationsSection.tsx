@@ -24,8 +24,8 @@ const categories = [
   {
     icon: Radio,
     heading: "Oracles & Data",
-    body: "ETC's long Proof-of-Work block history, full JSON-RPC parity with Ethereum, and open Blockscout API make it a reliable substrate for on-chain data services. Standard EVM event logs, deterministic block ordering, and chain-native timestamp security provide the primitives oracle networks and data indexers expect.",
-    detail: "JSON-RPC Parity · Blockscout API · EVM Events",
+    body: "ETC's long Proof-of-Work block history, the standard Ethereum JSON-RPC APIs, and open Blockscout API make it a reliable substrate for on-chain data services. Standard EVM event logs, deterministic block ordering, and chain-native timestamp security provide the primitives oracle networks and data indexers expect.",
+    detail: "Standard JSON-RPC · Blockscout API · EVM Events",
   },
 ];
 
