@@ -41,9 +41,14 @@ export const DISCOVERY_SUPPORT_URL = `${DISCOVERY_LISTS_REPO_URL}/blob/main/docs
 export const FUKUII_HOMEPAGE_URL = "https://fukuii.com";
 export const FUKUII_REPO_URL = "https://github.com/chippr-robotics/fukuii";
 export const FUKUII_RELEASES_URL = `${FUKUII_REPO_URL}/releases`;
+/** The newest Fukuii release not marked pre-release. */
+export const FUKUII_LATEST_RELEASE_URL = `${FUKUII_RELEASES_URL}/latest`;
 export const FUKUII_DOCS_URL = "https://docs.fukuii.com";
+export const FUKUII_STATUS_PAGE_URL = `${FUKUII_DOCS_URL}/STATUS/`;
+export const FUKUII_MAINTAINER = "Chippr Robotics LLC";
 
 // Public JSON-RPC
+export const PUBLIC_RPC_REPO_URL = `${ETC_ORG_URL}/public-rpc`;
 export const CHAINLIST_ETC_URL = "https://chainlist.org/chain/61";
 export const CHAINLIST_MORDOR_URL = "https://chainlist.org/chain/63";
 
@@ -56,6 +61,10 @@ export const EXPLORER_REPO_URL = `${ETC_ORG_URL}/explorer`;
 // Community social media (twitter-together)
 export const TWITTER_TOGETHER_REPO_URL = `${ETC_ORG_URL}/twitter-together`;
 
+// Ethereum Classic DAO LLC
+export const WYOMING_FILING_URL =
+  "https://wyobiz.wyo.gov/business/FilingDetails.aspx?eFNum=101157225123250204055197221085227098244002050082";
+
 // Contacts
 export const SECURITY_EMAIL = "security@ethereumclassic.net";
 export const SPONSOR_EMAIL = "donations@ethereumclassic.net";
@@ -67,9 +76,33 @@ export const COOPERATIVE_RETROSPECTIVE_URL =
 export const COOPERATIVE_ARCHIVE_URL =
   "https://web.archive.org/web/20250205192722/https://etccooperative.org/";
 
+// ECIPs and EIPs
+export const ecipUrl = (n: number) => `https://ecips.ethereumclassic.org/ECIPs/ecip-${n}`;
+export const eipUrl = (n: number) => `https://eips.ethereum.org/EIPS/eip-${n}`;
+
+// Olympia
+export const OLYMPIA_DAO_URL = "https://olympiadao.org";
+export const OLYMPIA_TREASURY_SITE_URL = "https://olympiatreasury.org";
+export const OLYMPIA_APP_URL = "https://app.olympiadao.org";
+export const OLYMPIA_GITHUB_URL = "https://github.com/olympiadao";
+/** The placeholder the countdown runs to: a target, never an activation date. */
+export const OLYMPIA_TARGET_ISO = "2027-12-31T00:00:00Z";
+/** The target as Month D, YYYY, formatted in UTC so it reads the same in every time zone. */
+export const OLYMPIA_TARGET_LABEL = new Intl.DateTimeFormat("en-US", {
+  timeZone: "UTC",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+}).format(new Date(OLYMPIA_TARGET_ISO));
+
 // Status badges
 export const COOPERATIVE_STATUS = "Maintenance mode since the end of 2024 · due to dissolve";
 export const PUBLIC_RPC_STATUS = "In preparation";
 export const NETWORK_DASHBOARD_STATUS = "In preparation";
 export const BLOCK_EXPLORER_STATUS = "In preparation";
 export const SOCIAL_MEDIA_STATUS = "In preparation";
+export const OLYMPIA_STATUS = "Proposed · Draft ECIPs · Activation block TBD";
+/** Fukuii's maturity, as its maintainers label it. */
+export const FUKUII_STATUS = "Alpha";
+/** The ETC plugin framework for upstream clients. */
+export const PLUGINS_STATUS = "Planned";

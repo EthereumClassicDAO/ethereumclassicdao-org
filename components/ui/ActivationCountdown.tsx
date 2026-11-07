@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { OLYMPIA_STATUS, OLYMPIA_TARGET_ISO, OLYMPIA_TARGET_LABEL } from "@/lib/network-links";
 
-const FALLBACK_TARGET_MS = new Date("2027-03-31T00:00:00Z").getTime();
+const TARGET_MS = new Date(OLYMPIA_TARGET_ISO).getTime();
 
 function DigitBox({ value, label }: { value: number; label: string }) {
   return (
@@ -23,7 +24,7 @@ export function ActivationCountdown() {
 
   useEffect(() => {
     const update = () =>
-      setSecondsLeft(Math.max(0, Math.floor((FALLBACK_TARGET_MS - Date.now()) / 1000)));
+      setSecondsLeft(Math.max(0, Math.floor((TARGET_MS - Date.now()) / 1000)));
     // Populate on next tick (async) so the first frame shows a real value
     const immediate = setTimeout(update, 0);
     const id = setInterval(update, 1000);
@@ -41,7 +42,7 @@ export function ActivationCountdown() {
   return (
     <div
       role="timer"
-      aria-label="Olympia mainnet activation countdown — activation block pending"
+      aria-label={`Countdown to ${OLYMPIA_TARGET_LABEL}, a placeholder target; the Olympia activation block is TBD`}
       className="rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] p-6 text-center"
     >
       {/* aria-hidden: digits change every second and would be announced continuously by screen readers */}
@@ -52,17 +53,20 @@ export function ActivationCountdown() {
         <DigitBox value={secs} label="Seconds" />
       </div>
       <p className="mb-4 text-[10px] italic text-[var(--text-muted)] opacity-60">
-        * Countdown is set to March 31, 2027 until the ETC mainnet activation block is set
+        * The countdown runs to{" "}
+        <time dateTime={OLYMPIA_TARGET_ISO}>{OLYMPIA_TARGET_LABEL}</time>, a placeholder
+        target rather than an activation date, until the activation block is set
       </p>
       <div className="mb-2 flex items-center justify-center gap-2">
-        <span aria-hidden="true" className="h-2 w-2 animate-pulse rounded-full bg-[var(--brand-green)]" />
-        <span className="text-sm font-medium text-[var(--brand-green)]">Activation Block Pending</span>
+        <span aria-hidden="true" className="h-2 w-2 rounded-full bg-[var(--brand-green)]" />
+        <span className="text-sm font-medium text-[var(--brand-green)]">{OLYMPIA_STATUS}</span>
       </div>
       <p className="text-sm text-[var(--text-muted)]">
-        Olympia is in final testing on the Mordor Testnet. Activation Block: TBD
+        Olympia is targeted for mainnet activation in 2027.
       </p>
       <p className="mt-1 text-xs text-[var(--text-muted)] opacity-60">
-        The exact block number will be announced after the Olympia Upgrade core developers call.
+        The activation blocks for Mordor and mainnet are decided at the Olympia Core
+        Devs Call and recorded in ECIP-1111.
       </p>
     </div>
   );
