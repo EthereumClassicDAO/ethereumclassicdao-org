@@ -19,8 +19,8 @@ export function OlympiaResolutionSection() {
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--text-muted)]">
               Olympia was proposed to close this gap in the protocol itself. Its
               specifications are drafts. As proposed, it would add a fee market
-              in which the basefee of every transaction is credited to a
-              protocol treasury rather than destroyed, and on-chain governance
+              in which the base fee of every transaction is credited to a
+              treasury at a permanent address rather than destroyed, and on-chain governance
               through which that treasury could fund core client development,
               critical infrastructure and network security: the work described
               on this page. Block rewards and tips would go entirely to miners,
@@ -43,7 +43,7 @@ export function OlympiaResolutionSection() {
                 href="/olympia"
                 className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--text-primary)]"
               >
-                The Olympia upgrade
+                The Olympia proposal
                 <ArrowRight size={14} aria-hidden="true" />
               </Link>
               <Link

@@ -13,7 +13,7 @@ const channels = [
     icon: Github,
     title: "GitHub",
     description:
-      "Open-source repositories for all Olympia governance infrastructure, client software, and tooling.",
+      "The DAO's public repositories, this website among them. Core-Geth is published from the ethereumclassic organization.",
     href: "https://github.com/EthereumClassicDAO",
     cta: "View repositories",
   },
@@ -21,7 +21,7 @@ const channels = [
     icon: Vote,
     title: "Olympia DAO",
     description:
-      "Submit proposals and participate in on-chain governance.",
+      "The Olympia proposal's own site: how Olympia DAO would govern, admit members and fund work.",
     href: "https://olympiadao.org",
     cta: "Visit olympiadao.org",
   },
@@ -40,8 +40,8 @@ export function RegisteredAgentSection() {
           </h1>
           <p className="mt-4 max-w-xl text-lg text-[var(--text-muted)]">
             Ethereum Classic DAO is built in public. Follow development,
-            contribute to open-source infrastructure, or participate in
-            governance.
+            contribute to open-source infrastructure, or read and discuss the
+            Olympia proposal.
           </p>
         </FadeIn>
 

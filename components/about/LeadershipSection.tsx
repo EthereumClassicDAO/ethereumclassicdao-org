@@ -16,7 +16,7 @@ const team = [
     name: "Chris Mercer",
     title: "Organizing Member",
     photo: "/chris-mercer.jpeg",
-    bio: "Core contributor since Ethereum Classic's first year, active across governance, client development, and the application layer. Deployed Classic USD — a MiCA and GENIUS Act-compliant stablecoin — on Ethereum Classic, building the composable DeFi and governance infrastructure the network's institutional utility depends on. Leads the application layer and on-chain governance architecture underpinning ETC's institutional and developer ecosystem.",
+    bio: "Core contributor since Ethereum Classic's first year, active across governance, client development and the application layer. Deployed Classic USD, a MiCA- and GENIUS Act-aligned stablecoin, on Ethereum Classic, and builds the composable DeFi infrastructure the network's institutional use depends on. Leads the application layer, and the on-chain governance architecture the Olympia proposal specifies.",
     github: "https://github.com/chris-mercer",
   },
 ];
@@ -26,7 +26,7 @@ const orgs = [
     name: "ETC Cooperative",
     role: "Foundational Organization",
     description:
-      "The ETC Cooperative, a US 501(c)(3) non-profit founded in 2017 by Ethereum Classic's earliest core contributors, contributed millions of dollars to Ethereum Classic's client teams and infrastructure — backing every hard fork, every client release, and every cross-client coordination effort since Atlantis. It entered maintenance mode at the end of 2024, and the services it maintained continue in the ethereumclassic organization. Ethereum Classic DAO LLC and Olympia DAO build on that foundational work, extending it into protocol-native governance and treasury infrastructure.",
+      "The ETC Cooperative, a US 501(c)(3) non-profit founded in 2017 by Ethereum Classic's earliest core contributors, contributed millions of dollars to Ethereum Classic's client teams and infrastructure, and from January 2022 funded and maintained Core-Geth through the Mystique and Spiral upgrades, alongside the peer discovery lists, the bootnodes and the public JSON-RPC endpoints. It entered maintenance mode at the end of 2024, and the public goods it maintained continue in the ethereumclassic organization, where Ethereum Classic DAO LLC maintains and funds them as the funder of last resort.",
     href: COOPERATIVE_ARCHIVE_URL,
     label: "etccooperative.org (archived)",
   },
@@ -55,7 +55,7 @@ export function LeadershipSection() {
               existed. The ETC Cooperative formalized that work in 2017, funding
               core development and infrastructure for nearly a decade, sustained
               in large part by distributed ETCG holders whose management fees
-              backed the network before protocol-native funding existed. Ethereum
+              backed the network, with no funding source in the protocol. Ethereum
               Classic DAO LLC is the institutional expression of that continuity:
               it stewards the network&rsquo;s public goods today, in the
               ethereumclassic organization: the same contributors, the same commitment, built to grow with the network and the global adoption of blockchain infrastructure.

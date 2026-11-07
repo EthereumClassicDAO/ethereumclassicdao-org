@@ -7,7 +7,7 @@ import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: "Transparency & Disclosures",
   description:
-    "Public reports, governance disclosures, and treasury documentation for Ethereum Classic DAO LLC. Covers operational reporting, governance decisions, development funding, and the open development model established by Olympia.",
+    "Public reports and disclosures from Ethereum Classic DAO LLC: donations received, administrative costs, fiat conversions and proposal execution records.",
 };
 
 export default function TransparencyPage() {

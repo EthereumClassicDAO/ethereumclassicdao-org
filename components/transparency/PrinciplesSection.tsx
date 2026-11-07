@@ -7,25 +7,25 @@ const principles = [
     icon: Eye,
     title: "Transparency",
     description:
-      "All governance operations, treasury movements, and organizational decisions are disclosed publicly. On-chain records provide independently verifiable proof of every action.",
+      "Organizational decisions and financial activity are disclosed in periodic public reports. Under the Olympia proposal, every Treasury movement would also leave an on-chain record anyone can verify.",
   },
   {
     icon: Link2,
     title: "Immutability",
     description:
-      "Governance records are stored on-chain and cannot be altered or deleted. The blockchain provides a permanent, tamper-proof audit trail for every proposal, vote, and execution.",
+      "Under the Olympia proposal, governance would run on-chain: every proposal, vote and execution would be a permanent record on Ethereum Classic that cannot be altered or deleted.",
   },
   {
     icon: Network,
     title: "Decentralization",
     description:
-      "No single point of control or failure. Independent client implementations, permissionless proposal submission, and community-driven governance ensure resilience.",
+      "No single point of control or failure: independent client implementations, repositories with more than one maintainer, and, under the Olympia proposal, funding proposals any address may submit, subject to the Governor's proposal threshold.",
   },
   {
     icon: Scale,
     title: "Compliance",
     description:
-      "Operating within the Wyoming DAO LLC regulatory framework. On-chain sanctions screening, registered agent, and periodic public reporting demonstrate institutional responsibility.",
+      "Operating within the Wyoming DAO LLC regulatory framework, with a registered agent and periodic public reporting. Under the Olympia proposal, the voting interface would screen each funding proposal's recipient against a sanctions list (ECIP-1119).",
   },
 ];
 

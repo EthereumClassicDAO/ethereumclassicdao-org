@@ -13,19 +13,19 @@ const values = [
     icon: Network,
     title: "Decentralization",
     description:
-      "Multiple independent client implementations, distributed GPU and ASIC mining infrastructure across multiple continents, and on-chain governance execution — ETC has no single point of control. The absence of a central issuer or controlling party is not merely an architectural choice: it is the basis for ETC's digital commodity classification under US and EU frameworks. Decentralization is both a technical property and a legal one.",
+      "Multiple independent client implementations and GPU and ASIC mining infrastructure distributed across continents: ETC has no single point of control. The absence of a central issuer or controlling party is not merely an architectural choice: it is what positions ETC for digital commodity classification in the US and as a decentralized asset under MiCA. Decentralization is both a technical property and a legal one.",
   },
   {
     icon: Eye,
     title: "Transparency",
     description:
-      "Ethereum Classic's development history is a decade of public ECIPs, open repositories, and on-chain activity anyone can verify — building in the open is not a new policy, it is how this network has always operated. The Olympia governance infrastructure formalizes that culture: every treasury allocation, governance vote, and protocol execution is permanently recorded on-chain and publicly verifiable without permission or access request. Ethereum Classic DAO LLC operates under Wyoming's DAO LLC framework with financial disclosures traceable from on-chain proposal submission through execution. Institutional transparency here is structural — it is not a reporting obligation layered on top of operations; it is how the operations are built.",
+      "Ethereum Classic's development history is more than a decade of public ECIPs, open repositories and on-chain activity anyone can verify: building in the open is how this network has always operated. Ethereum Classic DAO LLC publishes periodic reports under Wyoming's DAO LLC framework. Under the Olympia proposal, every Treasury allocation and governance vote would also be recorded on-chain, publicly verifiable without permission or an access request.",
   },
   {
     icon: Leaf,
     title: "Sustainability",
     description:
-      "The Olympia upgrade routes EIP-1559 basefee revenue to a protocol-managed treasury — block rewards and tips remain entirely with miners. Voluntary on-chain donations and mining contributions to the treasury address add further depth; what once required fielding a dedicated non-profit now takes a single transaction. As futarchy prediction markets mature, that activity feeds back as additional basefee revenue, creating a self-reinforcing loop that scales with adoption. But the deeper sustainability is organizational: core development is no longer tied to any single employer or grant cycle. Any developer across the entire EVM ecosystem can contribute and compete for treasury funding on equal terms — a distributed contributor base with no single point of failure, and no backroom relationships required.",
+      "As proposed, Olympia would credit the EIP-1559 base fee to a treasury that only on-chain governance could spend, while block rewards and priority-fee tips stay with miners. Anyone could also add to it by choice: sending ETC to its address or, for a miner, naming it as a block's beneficiary. The deeper sustainability is organizational: core development would no longer depend on a single employer or grant cycle, and funding would be decided in public, by proposal and vote, on the same terms for every contributor.",
   },
 ];
 

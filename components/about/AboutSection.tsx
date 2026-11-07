@@ -8,7 +8,7 @@ const buildItems = [
   },
   {
     icon: Vote,
-    text: "On-chain governance infrastructure: proposal, voting, execution, and treasury management",
+    text: "A legal wrapper for Olympia DAO, as ECIP-1114 contemplates it: the off-chain acts an on-chain organization cannot perform, downstream of Olympia DAO in authority and with no role until Olympia DAO is operating",
   },
   {
     icon: Pickaxe,

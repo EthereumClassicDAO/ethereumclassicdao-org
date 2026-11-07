@@ -4,7 +4,7 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 import { fetchHashrateTHs } from "@/lib/api/hashrate";
 const staticStats = [
   { value: "July 2015", label: "In Production Since", detail: "Longest-running EVM" },
-  { value: "Glamsterdam", label: "EVM Parity", detail: "Ethereum execution layer, PoS-independent" },
+  { value: "Glamsterdam", label: "Proposed EVM Alignment", detail: "Through the Olympia upgrade" },
   { value: "GPU + ASIC", label: "Hardware Access", detail: "Retail to institutional" },
 ];
 
@@ -16,7 +16,7 @@ const columns = [
     points: [
       "No pre-mine, no foundation controlling the protocol, no issuer.",
       "Mining hardware is globally distributed, permissionless to acquire.",
-      "Block rewards and tips go to miners — the treasury is funded by basefee, not inflation.",
+      "Block rewards and tips go to miners. Under the Olympia proposal, a treasury would be funded by the base fee rather than by new issuance.",
       "CLARITY Act digital commodity classification path: same PoW profile as Bitcoin.",
       "Energy demand that can co-locate with any power source, anywhere in the world.",
     ],
@@ -26,7 +26,7 @@ const columns = [
     heading: "From the EVM",
     subheading: "Ethereum's regulatory trajectory",
     points: [
-      "Full Solidity and EVM compatibility — every Ethereum tool, library, and framework works without modification.",
+      "Solidity and EVM compatibility through Shanghai: Ethereum's tools, libraries and frameworks work with ETC.",
       <><a href="https://classicusd.com" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">Classic USD</a> ($USC) by Brale: a live, 1:1 USD-backed stablecoin on a PoW chain.</>,
       "GENIUS Act-compliant stablecoin infrastructure, the first on any Proof-of-Work network.",
       <><a href="https://etcswap.org" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">ETCswap</a> V2 and V3 provide on-chain liquidity for composable DeFi with a regulated stable base.</>,

@@ -7,19 +7,19 @@ const properties = [
   {
     icon: Vote,
     name: "Olympia DAO",
-    description: "Governance landing page",
+    description: "The Olympia proposal's own site",
     href: "https://olympiadao.org",
   },
   {
     icon: Landmark,
     name: "Olympia Treasury",
-    description: "Treasury monitoring dashboard",
+    description: "The treasury site",
     href: "https://olympiatreasury.org",
   },
   {
     icon: Github,
     name: "GitHub",
-    description: "Open-source repositories",
+    description: "The DAO's public repositories",
     href: "https://github.com/EthereumClassicDAO",
   },
 ];
@@ -31,10 +31,10 @@ export function ChannelsSection() {
       <section aria-labelledby="ecosystem-properties-heading" className="section-alt py-20">
         <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 id="ecosystem-properties-heading" className="text-xl font-bold">Ecosystem Properties</h2>
+            <h2 id="ecosystem-properties-heading" className="text-xl font-bold">Web Properties</h2>
             <p className="mt-3 text-sm text-[var(--text-muted)]">
-              The Olympia governance ecosystem spans multiple open-source web
-              properties.
+              The Olympia proposal is developed in the open on sites of its own,
+              and the DAO&rsquo;s repositories are public on GitHub.
             </p>
           </FadeIn>
 

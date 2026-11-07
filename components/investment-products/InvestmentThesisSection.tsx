@@ -19,9 +19,9 @@ const thesisPoints: ThesisPoint[] = [
   },
   {
     number: "02",
-    title: "Olympia Upgrade",
-    body: "EIP-1559 fee market redirects basefee to a protocol-managed treasury for the first time on ETC. On-chain DAO governance controls resource allocation. First programmable monetary policy on a Proof-of-Work EVM.",
-    link: { href: "/olympia", label: "Olympia Upgrade →" },
+    title: "The Olympia Proposal",
+    body: "A proposed upgrade, targeted for 2027, whose ECIPs are drafts. It would activate EIP-1559 with the base fee credited to a treasury rather than destroyed, spendable only through on-chain governance, and align the EVM with Ethereum's through Glamsterdam. Issuance and the ECIP-1017 supply cap would not change.",
+    link: { href: "/olympia", label: "The Olympia proposal →" },
   },
   {
     number: "03",
@@ -67,11 +67,10 @@ export function InvestmentThesisSection() {
           <FadeIn delay={80}>
             <div className="mt-8 rounded-xl border border-[var(--border-brand)] bg-[var(--brand-green-subtle)] p-6">
               <p className="text-sm font-semibold leading-relaxed text-[var(--text-primary)]">
-                ETC is the only Proof-of-Work network with both programmable
-                monetary policy — the ECIP-1017 emission schedule, fixed at
-                210,700,000 ETC maximum supply — and programmable fiscal policy:
-                the Olympia basefee treasury and on-chain governance controlling
-                resource allocation. No other PoW network has both.
+                ETC&rsquo;s monetary policy is fixed by ECIP-1017: an emission
+                schedule capped at 210,700,000 ETC. The Olympia proposal would add
+                a fiscal layer without changing it, with the EIP-1559 base fee
+                credited to a treasury that only on-chain governance could spend.
               </p>
             </div>
           </FadeIn>

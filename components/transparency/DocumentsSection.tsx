@@ -11,7 +11,7 @@ const documents = [
   {
     name: "Governance Records",
     status: "pending" as const,
-    note: "Following Mordor testnet activation",
+    note: "Once Olympia DAO is operating",
   },
   {
     name: "Quarterly Reports",

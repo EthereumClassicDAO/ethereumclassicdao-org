@@ -36,7 +36,7 @@ export const stewardshipFaq: { question: string; answer: string }[] = [
   {
     question: "How would Olympia change the funding?",
     answer:
-      "Olympia is a proposal, and its specifications are drafts. As proposed, it would credit the basefee of every transaction to a protocol treasury, and on-chain governance would allocate that treasury to core client development, critical infrastructure and network security, giving this work a funding source in the protocol. Until a funding source like that is in place, the work depends on sponsors and on the DAO as the funder of last resort.",
+      "Olympia is a proposal, and its specifications are drafts. As proposed, it would credit the base fee of every transaction to a treasury, and on-chain governance would allocate that treasury to core client development, critical infrastructure and network security, giving this work a funding source in the protocol. Until a funding source like that is in place, the work depends on sponsors and on the DAO as the funder of last resort.",
   },
 ];
 
