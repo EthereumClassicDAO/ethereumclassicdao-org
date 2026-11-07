@@ -11,9 +11,9 @@ import { PropertiesSection } from "@/components/ecosystem/PropertiesSection";
 import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Build on Ethereum Classic — EVM Developer Ecosystem",
+  title: "Ethereum Classic Developer Ecosystem",
   description:
-    "Full EVM compatibility on Ethereum Classic. Foundry, Hardhat, wagmi, viem, and ethers.js work without modification. Chain IDs: 61 (mainnet), 63 (Mordor testnet). GPU and ASIC mining. Institutional access via ETCG. The same toolchain used for Ethereum deploys to ETC after Olympia.",
+    "Build on Ethereum Classic with Foundry, Hardhat, wagmi, viem and ethers.js: Chain IDs 61 (mainnet) and 63 (Mordor), public RPC endpoints, and the explorers.",
   keywords: [
     "Ethereum Classic developer tools",
     "EVM compatibility",

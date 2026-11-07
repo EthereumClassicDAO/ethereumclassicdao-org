@@ -7,7 +7,7 @@ import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: "Contact Ethereum Classic DAO LLC",
   description:
-    "Official communication channels for Ethereum Classic DAO LLC (Filing ID 2025-001671865), the security and operator contact for Ethereum Classic's core developers and maintainers, and the sponsorship contact for the network's client and infrastructure.",
+    "Contact Ethereum Classic DAO LLC: its official channels, the security and operator address for ETC's core developers, and the sponsorship address.",
 };
 
 export default function ContactPage() {

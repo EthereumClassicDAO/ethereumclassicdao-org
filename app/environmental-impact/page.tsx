@@ -10,9 +10,9 @@ import { EquipmentSection } from "@/components/ecosystem/EquipmentSection";
 import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Proof-of-Work as Energy Infrastructure — ETC Mining, Hashrate, and Stranded Energy",
+  title: "Proof-of-Work as Energy Infrastructure",
   description:
-    "Ethereum Classic's Proof-of-Work network functions as programmable, elastic energy demand. Stranded hydroelectric, flared wellhead gas, curtailed renewables, and off-peak industrial power all find a buyer. The largest Proof-of-Work network with native smart contracts, operating continuously since July 2015.",
+    "Ethereum Classic's Proof-of-Work mining as flexible energy demand: a buyer for stranded hydro, flared gas and curtailed renewables, on GPU and ASIC hardware.",
   keywords: [
     "Proof-of-Work energy",
     "ETC mining energy",

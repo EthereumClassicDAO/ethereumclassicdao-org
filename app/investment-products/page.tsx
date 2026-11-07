@@ -8,9 +8,9 @@ import { InvestmentThesisSection } from "@/components/investment-products/Invest
 import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "ETC Institutional Investment Products — ETCG, ETF Pipeline, TradFi Access",
+  title: "Institutional Access to Ethereum Classic",
   description:
-    "Grayscale Ethereum Classic Trust (ETCG) has traded on OTCQX since 2018. Available at Charles Schwab, Fidelity, Interactive Brokers, and major US brokerages. The Grayscale product lifecycle from closed-end trust to ETF conversion, and the landscape of issuers with infrastructure to bring future ETC products to market.",
+    "The Grayscale Ethereum Classic Trust (ETCG), on OTCQX since 2018 and at major US brokerages, and the trust-to-ETF conversion path GBTC and ETHE took.",
   keywords: [
     "ETCG",
     "Grayscale Ethereum Classic Trust",

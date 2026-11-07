@@ -9,9 +9,9 @@ import { ETCDecentralizationSection } from "@/components/regulation/ETCDecentral
 import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Ethereum Classic Regulatory Compliance — CLARITY Act, MiCA, GENIUS Act, FSA Green List",
+  title: "Regulation: CLARITY Act, MiCA, GENIUS Act",
   description:
-    "Ethereum Classic inherits two distinct regulatory trajectories: the digital commodity path that Proof-of-Work networks established under the CLARITY Act, and the programmable finance frameworks being built around smart contract platforms under the GENIUS Act and MiCA. Classic USD ($USC) is live on ETC mainnet — the first GENIUS Act-aligned stablecoin on a Proof-of-Work EVM.",
+    "ETC's regulatory profile: a digital commodity candidate under the CLARITY Act, a decentralized asset under MiCA, and a GENIUS Act-aligned stablecoin platform.",
   keywords: [
     "CLARITY Act",
     "MiCA",
