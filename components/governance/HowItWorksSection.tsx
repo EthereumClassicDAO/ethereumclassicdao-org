@@ -1,118 +1,116 @@
+import Link from "next/link";
 import {
   FileText,
   Vote,
   Clock,
   Zap,
   FileCheck,
-  TrendingUp,
-  BarChart2,
-  Scale,
-  Lightbulb,
+  Sprout,
+  Shuffle,
+  CheckCircle,
+  RefreshCw,
   ArrowRight,
   GitBranch,
   Server,
-  CheckCircle,
+  ScrollText,
 } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
+import { OLYMPIA_DAO_URL, ecipUrl } from "@/lib/network-links";
 
-const formalSteps = [
+const proposalSteps = [
   {
     icon: FileText,
     number: "01",
-    title: "Propose",
+    title: "Submit",
     description:
-      "Any ETC account can submit a funding proposal on-chain. Proposals define the funding request, the rationale, and the scope of work.",
+      "The author calls the Governor's propose() from their own address. Any address can submit while the proposal threshold is zero; above it, submitting takes that much voting power, which only members hold. The description names a category, the recipient and the amount, with a content-addressed reference to the detail.",
   },
   {
     icon: Vote,
     number: "02",
     title: "Vote",
     description:
-      "Members vote on-chain during a defined voting period using non-transferable membership NFTs. Votes are transparent and immutable. Voting mechanics are governed by the OpenZeppelin Governor 5.x contract suite.",
+      "CoreNFT members vote For, Against or Abstain during the voting period, one non-delegable vote each. The interface they vote through screens every address the proposal would pay against a sanctions list, and offers no way to vote in favor of a designated one.",
   },
   {
     icon: Clock,
     number: "03",
     title: "Queue",
     description:
-      "Approved proposals enter a configurable security timelock. This delay gives the community time to review and react before execution is triggered.",
+      "A proposal that passes is scheduled in the Timelock. The schedule is public, and the Governor can still cancel it during the delay.",
   },
   {
     icon: Zap,
     number: "04",
     title: "Execute",
     description:
-      "After the timelock expires, proposals execute on-chain without manual intervention. Treasury transfers and governance actions are fully auditable.",
+      "After the delay the Timelock executes it, paying from the Treasury's own balance. A batch is sized to fit within one transaction.",
   },
   {
     icon: FileCheck,
     number: "05",
-    title: "Disclose",
+    title: "Record",
     description:
-      "All outcomes are publicly recorded and independently verifiable. Proposal execution records, treasury movements, and governance decisions form a permanent on-chain record.",
+      "Every proposal, vote, schedule and payment can be reconstructed from the contracts' event logs alone.",
   },
 ];
 
-const futarchySteps = [
+const seasonSteps = [
   {
-    icon: TrendingUp,
+    icon: Sprout,
     number: "01",
-    title: "Open",
+    title: "Seed",
     description:
-      "Anyone opens a prediction market on a proposed protocol outcome. No membership required.",
+      "An ordinary funding proposal seeds one season with a specific sum, and may confine it to a theme. It names every destination the season's funds may reach.",
   },
   {
-    icon: BarChart2,
+    icon: Shuffle,
     number: "02",
-    title: "Speculate",
+    title: "Allocate",
     description:
-      "Public participants stake on outcomes, bringing new users onto ETC and generating transaction volume that flows as basefee revenue into the protocol treasury.",
+      "The body's model, published before the season opens, chooses among those destinations: a conditional market, a published allocation strategy, a modular on-chain vote, or a process that is not a contract.",
   },
   {
-    icon: Scale,
+    icon: CheckCircle,
     number: "03",
-    title: "Resolve",
+    title: "Settle",
     description:
-      "Markets settle when the underlying governance event executes on-chain. Participants are financially rewarded for accurate predictions.",
+      "The season closes when its allocation settles. Unless the seeding proposal says otherwise, an unallocated remainder returns to the Treasury.",
   },
   {
-    icon: Lightbulb,
+    icon: RefreshCw,
     number: "04",
-    title: "Signal",
+    title: "Decide again",
     description:
-      "Market prices feed back as on-chain signal into future governance decisions, creating a self-reinforcing loop between public participation and core development capacity.",
+      "No season is automatic. Each is a new proposal, voted under the same quorum as client maintenance and security response.",
   },
 ];
 
-const powSteps = [
+const protocolSteps = [
   {
-    icon: Vote,
+    icon: ScrollText,
     number: "01",
-    title: "DAO Approval",
-    description:
-      "Olympia DAO votes to approve a protocol upgrade through the on-chain governance process. Proposals require quorum and majority to pass.",
+    title: "Propose",
+    description: "A change to Ethereum Classic is written as an ECIP and goes through the ECIP process, ECIP-1000.",
   },
   {
     icon: GitBranch,
     number: "02",
-    title: "Client Releases",
-    description:
-      "Independent client teams publish compatible implementations of the approved upgrade. Multiple implementations ensure no single point of failure.",
+    title: "Implement",
+    description: "Client teams publish releases that implement it, each on its maintainers' own schedule.",
   },
   {
     icon: Server,
     number: "03",
-    title: "Network Adoption",
-    description:
-      "Miners, exchanges, wallets, and node operators upgrade their software. Each participant signals support by running the new implementation.",
+    title: "Adopt",
+    description: "Node operators, miners, exchanges and wallets upgrade to those releases ahead of the activation block.",
   },
   {
     icon: CheckCircle,
     number: "04",
-    title: "Distributed Consensus",
-    description:
-      "The upgrade achieves activation when the broader network has adopted the new software — distributed participation across all three tiers made real.",
+    title: "Activate",
+    description: "The change takes effect at its activation block, on the nodes that run it.",
   },
 ];
 
@@ -120,7 +118,7 @@ function StepCard({
   step,
   delay,
 }: {
-  step: (typeof formalSteps)[number];
+  step: (typeof proposalSteps)[number];
   delay: number;
 }) {
   return (
@@ -147,150 +145,125 @@ function StepCard({
   );
 }
 
+function EcipChips({ ecips }: { ecips: number[] }) {
+  return (
+    <div className="mt-3 flex gap-2">
+      {ecips.map((n) => (
+        <a
+          key={n}
+          href={ecipUrl(n)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)] transition-colors hover:text-[var(--text-primary)]"
+        >
+          ECIP-{n}
+        </a>
+      ))}
+    </div>
+  );
+}
+
 export function HowItWorksSection() {
   return (
     <>
       <SectionDivider variant="strong" />
-      <section aria-labelledby="binding-on-chain-protocol-governance-heading" className="section-deep py-28">
+      <section aria-labelledby="funding-proposals-heading" className="section-deep py-28">
         <div className="mx-auto max-w-5xl px-6">
-          {/* Core Development Governance */}
+          {/* Funding proposals */}
           <FadeIn>
             <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
-              Core Development Governance
+              Olympia DAO
             </p>
-            <h2 id="binding-on-chain-protocol-governance-heading" className="mt-2 text-3xl font-bold tracking-tight">
-              Binding On-Chain Protocol Governance
+            <h2 id="funding-proposals-heading" className="mt-2 text-3xl font-bold tracking-tight">
+              How a Funding Proposal Would Pass
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Five stages from proposal submission to on-chain execution. Core
-              protocol decisions — client software upgrades, infrastructure
-              contracts, security bounties, treasury allocations, and emergency
-              responses — are governed by the Olympia DAO through the
-              OpenZeppelin Governor 5.x framework. No hiring manager, no
-              employment contract, no preferred vendor. Any EVM developer
-              worldwide can submit a proposal, compete for funded work, and
-              earn payment on delivery. The protocol governs itself.
+              A funding proposal is an ordinary OpenZeppelin Governor proposal that
+              spends from the Treasury, and there is no other route to it. It
+              declares one of five categories: Core Development, Critical
+              Infrastructure, Network Security, Ecosystem Growth, or Other. Funding
+              usually follows the work: the common case is paying for a
+              contribution the network can already inspect. A commitment that runs
+              in stages is paid in tranches, each its own proposal, with nothing
+              held between them.
             </p>
-            <div className="mt-3 flex gap-2">
-              <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
-                ECIP-1113
-              </span>
-              <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
-                ECIP-1114
-              </span>
-              <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
-                ECIP-1119
-              </span>
-            </div>
+            <EcipChips ecips={[1113, 1114, 1118, 1119]} />
             <div className="mt-4">
               <a
-                href="https://olympiadao.org"
+                href={OLYMPIA_DAO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
               >
-                View the Olympia DAO governance app
+                Visit the Olympia DAO site
                 <ArrowRight size={14} aria-hidden="true" />
               </a>
             </div>
           </FadeIn>
 
           <div className="mt-10 space-y-6">
-            {formalSteps.map((step, i) => (
+            {proposalSteps.map((step, i) => (
               <StepCard key={step.title} step={step} delay={i * 80} />
             ))}
           </div>
 
-          {/* Futarchy Markets */}
+          {/* Ecosystem Growth DAOs */}
           <FadeIn>
             <div className="mt-20">
               <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
-                Futarchy Markets
+                Ecosystem Growth DAOs
               </p>
-              <h2 id="open-prediction-markets-and-public-signal-heading" className="mt-2 text-3xl font-bold tracking-tight">
-                Open Prediction Markets and Public Signal
+              <h2 id="ecosystem-growth-daos-heading" className="mt-2 text-3xl font-bold tracking-tight">
+                Seasons Funded, Allocation Delegated
               </h2>
               <p className="mt-3 text-base text-[var(--text-muted)]">
-                Open to anyone, no membership required. Anyone can open a
-                prediction market on a proposed protocol outcome, stake on
-                the result, and earn financial rewards for accurate
-                predictions. Market participants bring new users onto ETC,
-                generating transaction volume that flows as basefee revenue
-                into the Olympia Treasury. This creates a self-reinforcing
-                loop: public participation funds the protocol it is
-                predicting on. Market prices become on-chain signal that
-                informs future governance decisions and holds the DAO
-                publicly accountable to stakeholders who have real financial
-                skin in the game.
+                An Ecosystem Growth DAO is a body scoped to growing what is built on
+                Ethereum Classic, open to anyone without membership, application
+                or CoreNFT. Olympia DAO would fund it without governing it: Olympia
+                DAO would decide whether to fund each season, how much, and within
+                what theme, and the body would decide to whom. Client development,
+                network security and critical infrastructure would stay with
+                Olympia DAO.
               </p>
-              <div className="mt-3 flex gap-2">
-                <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
-                  ECIP-1117
-                </span>
-                <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
-                  ECIP-1118
-                </span>
-              </div>
+              <EcipChips ecips={[1113, 1117]} />
+            </div>
+          </FadeIn>
+
+          <div className="mt-10 space-y-6">
+            {seasonSteps.map((step, i) => (
+              <StepCard key={step.title} step={step} delay={i * 80} />
+            ))}
+          </div>
+
+          {/* Protocol change */}
+          <FadeIn>
+            <div className="mt-20">
+              <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
+                Protocol Change
+              </p>
+              <h2 id="protocol-change-heading" className="mt-2 text-3xl font-bold tracking-tight">
+                Upgrades Stay With the ECIP Process
+              </h2>
+              <p className="mt-3 text-base text-[var(--text-muted)]">
+                Neither DAO replaces the ECIP process, and a passed funding proposal
+                confers no authority over a specification. Every node operator,
+                miner, exchange and wallet takes part through the client release it
+                runs: an upgrade becomes real when the network runs it.
+              </p>
               <div className="mt-4">
-                <a
-                  href="https://olympiadao.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/clients"
                   className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
                 >
-                  View the Olympia DAO futarchy markets
+                  Choose and run a client
                   <ArrowRight size={14} aria-hidden="true" />
-                </a>
+                </Link>
               </div>
             </div>
           </FadeIn>
 
           <div className="mt-10 space-y-6">
-            {futarchySteps.map((step, i) => (
-              <StepCard key={step.title} step={step} delay={i * 80} />
-            ))}
-          </div>
-
-          {/* Network Participant Layer */}
-          <FadeIn>
-            <div className="mt-20">
-              <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
-                Network Participant Layer
-              </p>
-              <h2 id="software-adoption-as-governance-signal-heading" className="mt-2 text-3xl font-bold tracking-tight">
-                Software Adoption as Governance Signal
-              </h2>
-              <p className="mt-3 text-base text-[var(--text-muted)]">
-                Every node operator, mining pool, exchange, and wallet provider
-                participates in governance through the client software they choose
-                to run. When the DAO approves a protocol upgrade and independent
-                client teams publish compatible releases, network adoption is the
-                final step. An upgrade becomes real when the infrastructure that
-                secures, settles, and routes ETC transactions upgrades to support
-                it. No membership required, no market position to open — running
-                the software is the governance act.
-              </p>
-              <div className="mt-3 flex gap-2">
-                <span className="rounded-full bg-[rgba(0,255,174,0.08)] px-2.5 py-0.5 text-[10px] font-mono text-[var(--brand-green)]">
-                  Software Releases
-                </span>
-              </div>
-              <div className="mt-4">
-                <a
-                  href="https://github.com/ethereumclassic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
-                >
-                  View Ethereum Classic client software releases
-                  <ArrowRight size={14} aria-hidden="true" />
-                </a>
-              </div>
-            </div>
-          </FadeIn>
-
-          <div className="mt-10 space-y-6">
-            {powSteps.map((step, i) => (
+            {protocolSteps.map((step, i) => (
               <StepCard key={step.title} step={step} delay={i * 80} />
             ))}
           </div>

@@ -45,7 +45,7 @@ export function StewardshipSection() {
               </div>
               <p className="mt-4 text-lg font-semibold">The ETC Cooperative</p>
               <p className="mt-1 text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">
-                US 501(c)(3) Non-Profit · Core Dev Funder From 2017 · Every Hard Fork Since Atlantis
+                US 501(c)(3) Non-Profit · Public Goods From 2017 · Core-Geth From January 2022
               </p>
 
               {/* Track record */}
@@ -54,14 +54,12 @@ export function StewardshipSection() {
               </p>
               <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
                 The ETC Cooperative was formed by Ethereum Classic&apos;s earliest
-                core contributors and backed by its largest stakeholders. From
-                its inception, the Cooperative funded ETC&apos;s core client
-                development, <strong className="text-[var(--text-primary)] font-medium">contributed millions toward every upgrade cycle
-                since Atlantis</strong>, and carried the critical infrastructure service
-                contracts that kept the network running when institutional
-                support was scarce. Every hard fork, every client release, and
-                every cross-client coordination effort of that period was backed
-                by its balance sheet.
+                core contributors and backed by its largest stakeholders. It funded
+                Ethereum Classic&apos;s public goods from 2017, and from January
+                2022 it <strong className="text-[var(--text-primary)] font-medium">funded and maintained Core-Geth through the
+                Mystique and Spiral upgrades</strong>, alongside the peer discovery
+                lists, the bootnodes and the public JSON-RPC endpoints the network
+                depended on.
               </p>
 
               {/* Transition */}
@@ -73,14 +71,11 @@ export function StewardshipSection() {
                   The operating model changes, not the commitment.
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                  Olympia delivers on what the ETC Cooperative was built toward:
-                  the early vision of a Community Fund, the founding ETC
-                  principles of open development and programmable funding
-                  mechanisms, and the original mission of decentralizing the
-                  project itself. The Cooperative acted as the <strong className="text-[var(--text-primary)] font-medium">organization of
-                  last resort</strong> — carrying core development and infrastructure on
-                  a private balance sheet until the on-chain framework existed.
-                  Olympia is that framework.
+                  Each organization that carried this work did so on its own
+                  balance sheet, for as long as it could. Olympia was proposed to
+                  give the work a funding source in the protocol itself, one that
+                  would not close or leave: the early idea of a community fund,
+                  written as an on-chain treasury that governance spends in public.
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
                   The Cooperative entered maintenance mode at the end of 2024.
@@ -90,16 +85,16 @@ export function StewardshipSection() {
                   organization, with the day-to-day work done by Ethereum
                   Classic&apos;s core developers, and does so today as{" "}
                   <strong className="text-[var(--text-primary)] font-medium">funder of last resort</strong>.
-                  Olympia exists so that the network no longer needs one.
+                  Olympia was proposed so that the network would no longer need one.
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                  The Ethereum Classic DAO LLC, a Wyoming-registered DAO LLC,
-                  handles what on-chain governance cannot directly execute:
-                  off-chain contracts, vendor agreements, regulatory reporting,
-                  and milestone disbursements that require a named legal
-                  counterparty. <strong className="text-[var(--text-primary)] font-medium">On-chain decisions, off-chain execution</strong> —
-                  bridging the Olympia governance layer to the operational
-                  requirements of a mature network.
+                  ECIP-1114 names Ethereum Classic DAO LLC as the legal wrapper it
+                  contemplates for Olympia DAO, for the off-chain acts an on-chain
+                  organization cannot perform, such as signing the engagement for an
+                  audit the DAO has voted to fund. The LLC would be{" "}
+                  <strong className="text-[var(--text-primary)] font-medium">downstream of Olympia DAO in authority</strong>:
+                  it carries out what a passed proposal has fixed, holds no on-chain
+                  role, and holds no role in Olympia until Olympia DAO is operating.
                 </p>
               </div>
 
@@ -109,21 +104,16 @@ export function StewardshipSection() {
                   What Opens Up
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                  Core development is no longer gated behind a hiring manager
-                  or employment contract. Olympia opens the door to the entire
-                  EVM ecosystem: <strong className="text-[var(--text-primary)] font-medium">any developer worldwide can submit a proposal,
-                  bid competitively for funded work, and contribute on equal
-                  terms</strong>. Proposals, funding requests, emergency response,
-                  security bounties — all on-chain, auditable, and open to
-                  public participation.
+                  Under Olympia, funding for core development would not depend on
+                  employment by any one organization. <strong className="text-[var(--text-primary)] font-medium">Work would be proposed,
+                  voted on and paid in public, by the same process for every
+                  contributor</strong>, from client maintenance and security response to
+                  infrastructure.
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                  Olympia is
-                  coming online as global regulatory frameworks are coalescing
-                  around Proof-of-Work networks simultaneously. A public,
-                  transparent, on-chain funding framework is precisely what
-                  compliance-oriented institutions require to engage
-                  confidently: <strong className="text-[var(--text-primary)] font-medium">auditable allocations, documented outcomes, no
+                  A public funding process is also what compliance-oriented
+                  institutions look for before they take part:{" "}
+                  <strong className="text-[var(--text-primary)] font-medium">auditable allocations, documented outcomes, no
                   backroom relationships</strong>.
                 </p>
               </div>
@@ -164,10 +154,9 @@ export function StewardshipSection() {
                 development of the network underpinning their product. No other
                 investment product issuer was doing this at the time. What
                 Grayscale was practicing on Ethereum Classic in 2018 is now a
-                recognized industry trend — <strong className="text-[var(--text-primary)] font-medium">ETF issuers funding protocol
+                recognized industry trend: <strong className="text-[var(--text-primary)] font-medium">ETF issuers funding protocol
                 development, corporate treasuries reinvesting in network
-                ecosystems</strong>. They were years ahead of an industry that has only
-                recently caught up.
+                ecosystems</strong>.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
                 The deeper point is who ETCG represents. Grayscale is the
@@ -187,20 +176,14 @@ export function StewardshipSection() {
                 <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
                   With Olympia
                 </p>
-                <p className="mt-3 text-base font-semibold text-[var(--brand-green)]">
-                  Grayscale leads again.
-                </p>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                  From pioneering the institutional off-chain funding model to
-                  supporting the first Proof-of-Work network to take it fully
-                  on-chain. This is only possible on Ethereum Classic.{" "}
-                  <strong className="text-[var(--text-primary)] font-medium">Bitcoin, Litecoin, and Dogecoin have no native smart
-                  contract functionality</strong> — their core development funding
-                  depends entirely on off-chain organizations, personal
-                  relationships, and institutional trust. Olympia DAO eliminates
-                  that dependency. Any stakeholder worldwide can contribute
-                  directly, without intermediaries, without preferred
-                  relationships, and without asking permission.
+                  <strong className="text-[var(--text-primary)] font-medium">Bitcoin, Litecoin and Dogecoin have no native smart
+                  contract functionality</strong>, so their core development funding
+                  depends on off-chain organizations, personal relationships and
+                  institutional trust. Olympia proposes an on-chain path on
+                  Ethereum Classic instead: once the Treasury&apos;s address is
+                  published, any stakeholder could contribute to it directly,
+                  without an intermediary or a preferred relationship.
                 </p>
               </div>
 
@@ -210,13 +193,11 @@ export function StewardshipSection() {
                   The ETF Pipeline
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                  The timing of Olympia&apos;s activation aligns directly with the
-                  trust-to-ETF conversion pipeline Grayscale has established.
-                  As the ETCG trust moves toward ETF structure — following the
-                  precedent set with Bitcoin and Ethereum — <strong className="text-[var(--text-primary)] font-medium">a publicly auditable
-                  treasury provides the on-chain mechanism for ETF product
-                  issuers to contribute back to the network underpinning their
-                  product</strong>.
+                  Grayscale converted its Bitcoin and Ethereum trusts to ETFs, and
+                  ETCG is a trust that could follow the same pipeline. Under
+                  Olympia, <strong className="text-[var(--text-primary)] font-medium">a publicly auditable treasury would give an ETF
+                  issuer an on-chain way to contribute back to the network
+                  underpinning its product</strong>.
                 </p>
               </div>
 

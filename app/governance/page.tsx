@@ -1,34 +1,32 @@
 import type { Metadata } from "next";
 import { GovernanceHeroSection } from "@/components/governance/GovernanceHeroSection";
 import { HowItWorksSection } from "@/components/governance/HowItWorksSection";
-import { TreasuryFundingSection } from "@/components/governance/TreasuryFundingSection";
 import { StewardshipSection } from "@/components/governance/StewardshipSection";
 import { FAQSection } from "@/components/governance/FAQSection";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Olympia Governance Architecture",
+  title: "Olympia Governance, as Proposed",
   description:
-    "Three-layer governance for Ethereum Classic: binding on-chain DAO decisions via OpenZeppelin Governor 5.x, open futarchy prediction markets for public participation, and the network participant layer. Protocol treasury funded by EIP-1559 basefee. Wyoming DAO LLC executes on-chain approvals in the real world.",
+    "Olympia DAO would spend its Treasury only by votes of CoreNFT members, fund Ecosystem Growth DAOs by season, and leave protocol change to ECIP-1000.",
   keywords: [
     "Olympia DAO",
     "on-chain governance",
     "OpenZeppelin Governor",
-    "futarchy",
-    "prediction markets",
+    "CoreNFT",
+    "Olympia Funding Proposal",
+    "Ecosystem Growth DAO",
+    "milestone funding",
+    "sanctions screening",
     "protocol treasury",
-    "EIP-1559 basefee",
-    "ECIP-1112",
+    "EIP-1559 base fee",
+    "ECIP-1113",
+    "ECIP-1114",
+    "ECIP-1117",
     "Ethereum Classic governance",
     "Wyoming DAO LLC",
-    "blockchain governance",
-    "decentralized governance",
-    "membership NFT",
-    "treasury DAO",
-    "on-chain proposal",
     "DAO voting",
-    "governance smart contract",
   ],
 };
 
@@ -37,7 +35,6 @@ export default function GovernancePage() {
     <main>
       <GovernanceHeroSection />
       <HowItWorksSection />
-      <TreasuryFundingSection />
       <SectionDivider />
       <StewardshipSection />
       <FAQSection />

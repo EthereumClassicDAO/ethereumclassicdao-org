@@ -2,34 +2,35 @@ import { type ReactNode } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { Accordion } from "@/components/ui/Accordion";
+import { WYOMING_FILING_URL } from "@/lib/network-links";
 
 const faqItems: { question: string; answer: ReactNode }[] = [
   {
     question: "What is a DAO LLC?",
     answer: (
       <>
-        A DAO LLC is a legal entity recognized under Wyoming law that wraps a decentralized autonomous organization in a traditional corporate structure. It provides limited liability protection to members while preserving on-chain governance. Ethereum Classic DAO LLC was registered in Wyoming in 2025 (Filing ID{" "}
+        A DAO LLC is a limited liability company formed under Wyoming&apos;s Decentralized Autonomous Organization Supplement, which recognizes a DAO as a form of LLC and gives its members limited liability. Ethereum Classic DAO LLC was registered in Wyoming in 2025 (Filing ID{" "}
         <a
-          href="https://wyobiz.wyo.gov/business/FilingDetails.aspx?eFNum=101157225123250204055197221085227098244002050082"
+          href={WYOMING_FILING_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="text-[var(--brand-green)] transition hover:opacity-80"
         >
           2025-001671865
         </a>
-        ). The Wyoming DAO LLC executes on-chain decisions in the real world, including contracts, vendor agreements, and institutional relationships, on behalf of what the Olympia DAO approves on-chain.
+        ). ECIP-1114 names it as the legal wrapper it contemplates for Olympia DAO, for the off-chain acts an on-chain organization cannot perform: once Olympia DAO is operating, it would carry out the off-chain obligations a passed proposal has fixed, such as the engagement for an audit the DAO voted to fund. It is downstream of Olympia DAO in authority, holds no on-chain role, and until Olympia DAO is operating holds no role in anything ECIP-1114 specifies.
       </>
     ),
   },
   {
     question: "Who is responsible for the Olympia upgrade?",
     answer:
-      "Olympia is coordinated by the same developers and community stewards who have delivered every Ethereum Classic network upgrade since 2016: Gotham, Die Hard, Defuse Difficulty Bomb, Thanos, and the full EVM compatibility series spanning Gas Reprice, Atlantis, Agharta, Phoenix, Magneto, Mystique, and Spiral. Client development through those upgrades was funded in turn by ETCDEV, ETC Labs and the ETC Cooperative. Ethereum Classic's core developers and community contributors do the day-to-day work on Core-Geth today, with Ethereum Classic DAO LLC the standing legal entity that maintains and funds it as the funder of last resort. Stakeholder outreach, client release sequencing, and cross-client testing are all established practice. Olympia is a significant upgrade carried forward by a team with a clean delivery record across a decade of ETC network upgrades.",
+      "Olympia is a set of draft ECIPs in the ECIPs repository, and it follows the ECIP process, ECIP-1000. Its activation blocks are decided at the Olympia Core Devs Call and recorded in ECIP-1111. Client releases that implement it are their maintainers' to publish: Core-Geth's from ethereumclassic/core-geth, where Ethereum Classic's core developers do the day-to-day work and Ethereum Classic DAO LLC maintains and funds it today as the funder of last resort.",
   },
   {
     question: "What role has the ETC Cooperative played, and what changes with Olympia?",
     answer:
-      "The ETC Cooperative, a US 501(c)(3) non-profit founded in 2017, funded Ethereum Classic's core client development for years, contributing millions of dollars to the network's client teams and infrastructure through every upgrade cycle. Every hard fork, every client release, and every cross-client coordination effort of that period was backed by its balance sheet. It entered maintenance mode at the end of 2024, and the services it maintained continue in the ethereumclassic organization, where Ethereum Classic's core developers do the day-to-day work and Ethereum Classic DAO LLC maintains and funds those services today as the funder of last resort. Olympia is what that work was building toward: a protocol-native funding model that does not depend on any single organization's continued generosity. Any developer, mining operation, hardware manufacturer, investment product issuer, or individual worldwide can contribute directly on-chain without fielding a team or managing a non-profit to do it. The regulatory clarity now taking shape globally — ETC positioned as a digital commodity candidate under the CLARITY Act, a decentralized asset under MiCA (in force December 2024), listed on Japan's FSA Green List, and qualifying infrastructure for stablecoin issuance under the GENIUS Act, with parallel frameworks advancing across the UK, UAE, Hong Kong, and major Asia-Pacific jurisdictions — means the full spectrum of participants can engage with confidence.",
+      "The ETC Cooperative, a US 501(c)(3) non-profit, funded Ethereum Classic's public goods from 2017, and funded and maintained Core-Geth from January 2022 through the Mystique and Spiral upgrades. It entered maintenance mode at the end of 2024, and the services it maintained continue in the ethereumclassic organization, where Ethereum Classic's core developers do the day-to-day work and Ethereum Classic DAO LLC maintains and funds those services today as the funder of last resort. Olympia was proposed to give that work a funding source in the protocol, one that would not depend on any single organization's continued support.",
   },
   {
     question: "What is the significance of Grayscale's support for Ethereum Classic?",
@@ -45,46 +46,46 @@ const faqItems: { question: string; answer: ReactNode }[] = [
         >
           ETCG
         </a>
-        ) in 2018, years before Bitcoin ETFs existed as a product category, and simultaneously became a major institutional donor to the ETC Cooperative — pioneering what is now recognized industry practice: investment product issuers directly funding the protocol development underlying their products. The ETCG trust is itself a vehicle through which a globally distributed pool of retail and institutional investors participate in ETC&apos;s network — Grayscale is the product issuer, but the capital base is decentralized. The funding that reached ETC&apos;s core development through the Cooperative did not originate from a single centralized entity. What Grayscale was doing in 2018, the rest of the industry has only recently caught up to. With Olympia, Grayscale leads again — from pioneering the institutional off-chain funding model to supporting the first Proof-of-Work network to take that model fully on-chain. This is only possible on Ethereum Classic: Bitcoin, Litecoin, and Dogecoin have no native smart contract functionality and depend entirely on off-chain organizations and institutional goodwill to fund development. Grayscale, as one of the largest stakeholders in the ETC network, has proven consistently aligned to ETC&apos;s core principles — contributing material funding to codify those principles into ETC&apos;s development infrastructure. With Olympia, those efforts move on-chain. Contributions are open to all. Access is open to all. ETC&apos;s self-sovereignty is no longer dependent on any single institution&apos;s continued generosity.
+        ) in 2018, years before Bitcoin ETFs existed as a product category, and became a major institutional donor to the ETC Cooperative, indirectly funding the core client development of the network underpinning its product. The trust&apos;s capital comes from a globally distributed pool of retail and institutional investors, so the funding that reached Ethereum Classic&apos;s development through the Cooperative did not originate with a single entity. Bitcoin, Litecoin and Dogecoin have no native smart contracts, so their development funding depends on off-chain organizations. Olympia proposes an on-chain path instead: once the Treasury&apos;s address is published, any holder, through ETCG, a direct wallet or any future product, could contribute to it directly.
       </>
     ),
   },
   {
     question: "How is the Treasury funded?",
     answer:
-      "The Olympia Treasury is funded primarily by basefee revenue — the portion of every transaction fee redirected to the treasury automatically under the Olympia protocol rules. Block rewards and tips go entirely to miners unchanged. Voluntary on-chain donations and mining operations that choose to direct a portion of block rewards to the treasury address add to that base. Futarchy prediction market activity generates additional transaction volume that compounds the basefee flywheel. Any stakeholder — exchanges, custodians, miners, investment product issuers, or institutions holding ETC on behalf of fund shareholders — can contribute directly on-chain with no overhead.",
+      "As proposed, by the EIP-1559 base fee, which ECIP-1111 would credit to the Treasury transaction by transaction. Ethereum destroys that fee, and Ethereum Classic does not charge one today, so nothing is taken from what miners earn: block rewards and priority-fee tips go to miners unchanged. Once its address is published, anyone could also contribute to it directly, and a miner could name it as a block's beneficiary; no ECIP requires either.",
   },
   {
     question: "Who can participate in governance?",
     answer:
-      "Three systems operate in parallel. Binding protocol decisions are made by Olympia DAO members holding non-transferable membership NFTs — any EVM developer worldwide can submit proposals and bid for development funds, infrastructure contracts, or service agreements with no employment relationship or preferred vendor status required. Public participation is open to everyone through futarchy prediction markets, where anyone can stake on proposal outcomes without membership and earn financial rewards for accurate predictions. The network participant layer provides a third governance signal: miners, exchanges, wallets, and infrastructure providers govern through the client software they run. The three tiers are mutually dependent — developers build and maintain the protocol, users interact and generate value, and network participants run the software that secures and routes it.",
+      "Olympia DAO's members, the Core Contributors holding CoreNFT, would vote on funding proposals. After a published bootstrap list, members are admitted by a governance vote on a contributor's record, one at a time, with no committee. Submitting a proposal is open to any address while the proposal threshold is zero, and to members above it. Ecosystem Growth DAOs are open to anyone without membership. Node operators, miners and exchanges take part in protocol change through the client releases they run.",
   },
   {
     question: "How does voting work?",
     answer:
-      "Governance operates on three complementary layers. The Olympia DAO uses non-transferable membership NFTs for binding protocol decisions scoped to core client software, critical infrastructure, network security, treasury allocation, and emergency responses — governed by the OpenZeppelin Governor 5.x contract suite, which defines the full voting, quorum, timelock, and proposal lifecycle parameters. Open futarchy prediction markets allow anyone to stake on proposal outcomes without membership, earn financial rewards for accurate predictions, and generate basefee revenue that flows back to the protocol treasury. The network participant layer provides a third governance signal: miners, exchanges, wallets, and infrastructure providers run the software that makes the network real. Protocol changes achieve distributed consensus when the broader network adopts them — an expression of interdependence across all three tiers.",
+      "Each member holds one CoreNFT, a soulbound token carrying one vote that cannot be delegated or transferred. Votes are For, Against or Abstain. A proposal passes when it reaches quorum and its For votes exceed its Against votes, and it then waits out the Timelock's delay before it executes. Quorum, the voting delay, the voting period and the Timelock delay are on-chain settings, changed only by proposal.",
   },
   {
     question: "What does EVM alignment to Glamsterdam mean for builders?",
     answer:
-      "Olympia closes years of EVM divergence in a single upgrade. ECIP-1121 delivers the remaining execution-layer improvements from Dencun, Pectra, Fusaka, and Glamsterdam that are independent of Proof-of-Stake and blob data availability. ECIP-1121 also resolves the SELFDESTRUCT restriction deferred by Spiral — EIP-6049 (included in Spiral) was a deprecation notice only; EIP-6780 delivers the actual enforcement, restricting SELFDESTRUCT to the deployment transaction. After Olympia, Solidity 0.8.x, Foundry, Hardhat, wagmi, viem, and ethers.js all work on ETC without modification, patching, or ETC-specific forks. One codebase deploys to every EVM chain. Before Olympia, ETC could not claim full compatibility with current Ethereum tooling. After Olympia, it can.",
+      "ECIP-1121 would advance Ethereum Classic's execution layer through Dencun, Pectra and Fusaka and carry that work into Glamsterdam, adopting most of the execution-layer EIPs that do not depend on Proof-of-Stake or blob data availability. Contracts could use transient storage, MCOPY, the BLS12-381 and secp256r1 precompiles and EIP-7702 account code, and with EIP-1559 active, tooling that assumes type-2 transactions would no longer need an Ethereum Classic-specific path.",
   },
   {
     question: "When does Olympia activate?",
     answer:
-      "Olympia is targeted for mainnet activation in 2027. Olympia activates on Mordor testnet first. The mainnet activation block is announced after a successful Mordor run and a coordinated stakeholder readiness check with exchanges, mining pools, node operators, and infrastructure providers. The process follows the same sequence used for every previous ETC hard fork. All client implementations publish Olympia-compatible releases well before activation.",
+      "Olympia is a proposal, targeted for mainnet activation in 2027. Its activation blocks for Mordor and mainnet are TBD: they are decided at the Olympia Core Devs Call and recorded in ECIP-1111, once the governance contracts are deployed, reviewed and rehearsed on Mordor.",
   },
   {
     question: "How are treasury funds protected from misuse?",
     answer:
-      "Multiple safeguards protect treasury funds. A configurable timelock delay on all approved proposals gives the community time to review before execution. On-chain sanctions screening prevents sanctioned addresses from participating or receiving funds. Non-transferable voting tokens prevent vote buying. All governance mechanics are implemented through OpenZeppelin's Governor 5.x framework — an audited contract suite with a multi-year deployment record across the EVM ecosystem. All treasury transactions are publicly recorded and independently verifiable on-chain. The Wyoming DAO LLC provides an additional layer of legal accountability for real-world execution.",
+      "As specified, funds leave only by a proposal that passes a vote, waits out a public timelock delay and executes through the Governor, and there is no admin key, multisig or committee. The contracts that hold or move funds are unmodified OpenZeppelin, CoreNFT votes cannot be bought or delegated, and the interface members vote through screens each recipient against a sanctions list (ECIP-1119). Every action is reconstructible from event logs, and no off-chain entity can unilaterally approve or veto one.",
   },
   {
     question: "Is Ethereum Classic a security or commodity?",
     answer:
     (
       <>
-        ETC&apos;s three-layer governance architecture strengthens its regulatory profile across all major frameworks. In the EU, ETC qualifies as a decentralized asset under MiCA, in force since December 2024, exempt from per-asset issuer requirements. In Japan, ETC is recognized on the FSA Green List. In the US, ETC is positioned as a digital commodity candidate under the CLARITY Act, pending Senate passage. The Olympia DAO, futarchy markets, and the network participant layer together ensure no single party controls the protocol — the core decentralization criterion each framework applies.{" "}
+        In the EU, ETC qualifies as a decentralized asset under MiCA, in force since December 2024, exempt from per-asset issuer requirements. In Japan, ETC is recognized on the FSA Green List. In the US, ETC is positioned as a digital commodity candidate under the CLARITY Act, pending Senate passage. As a Proof-of-Work network with no pre-mine, no ICO and no foundation controlling the protocol, Ethereum Classic has no single party that controls it.{" "}
         <a
           href="/regulation"
           className="text-[var(--brand-green)] transition hover:opacity-80"
@@ -107,13 +108,10 @@ export function FAQSection() {
               Frequently Asked Questions
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Technical questions about how governance works, institutional
-              questions about the DAO LLC structure and regulatory profile,
-              and practical questions about who can participate and how
-              the treasury is funded. If you are an exchange, custodian,
-              investment product issuer, mining operation, or developer
-              evaluating engagement with the Olympia ecosystem, the answers
-              to the most common questions are here.
+              Technical questions about how Olympia&apos;s governance would work,
+              institutional questions about the DAO LLC and the regulatory
+              profile, and practical questions about who could take part and how
+              the Treasury would be funded.
             </p>
           </FadeIn>
 
