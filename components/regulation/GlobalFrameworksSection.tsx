@@ -197,11 +197,11 @@ export function GlobalFrameworksSection() {
               compliant listing requirements. For custodians, it means
               jurisdictional clarity on what assets they can hold. For
               investment product issuers, it means commodity versus security
-              resolution. ETC&rsquo;s regulatory profile travels well: it qualifies
-              as a digital commodity in commodity-first frameworks, as a
-              decentralized asset in MiCA, and as a proven stablecoin platform
-              under payment-focused legislation. The same asset, recognized
-              across every major framework, without modification.
+              resolution. ETC&rsquo;s regulatory profile travels well: it is a
+              digital commodity candidate in commodity-first frameworks, a
+              decentralized asset in MiCA, and a proven stablecoin platform
+              under payment-focused legislation. The same asset carries the same
+              profile under each of them.
             </p>
           </FadeIn>
 
