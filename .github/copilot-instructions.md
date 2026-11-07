@@ -1,8 +1,8 @@
 # Copilot Instructions — ethereumclassicdao-org
 
 Institutional website for **Ethereum Classic DAO LLC**, a Wyoming-registered DAO LLC
-(Filing ID 2025-001671865), the organizational entity behind Ethereum Classic's
-Olympia DAO.
+(Filing ID 2025-001671865) that maintains and funds Ethereum Classic's public goods
+as the funder of last resort, while Ethereum Classic's core developers do the work.
 
 This file is deliberately self-contained rather than a pointer to `AGENTS.md`.
 Copilot reads `AGENTS.md` on some surfaces and not others, and this is a public
@@ -63,14 +63,34 @@ Brand green inverts between themes (`#007a53` light, `#00ffae` dark), so
 ## Content rules
 
 - Tone: confident, institutional, understated. No hype, no superlatives.
-- Olympia advances the execution layer through Dencun, Pectra and Fusaka and
-  carries that work into Glamsterdam. **Do not write "full Glamsterdam parity"** —
-  ECIP-1121 takes two of Glamsterdam's seven execution-layer EIPs.
-- Fukuii is ETC's first native client; Core-Geth is a go-ethereum derivative;
-  Besu, Erigon, Ethrex, Go-Ethereum, Nethermind and Reth are ETC **plugins**
+- **Olympia is a proposal.** Its ECIPs are drafts and the ECIPs repository is the
+  authority, so write about it with "would" and "as proposed", and keep its status
+  in the `OLYMPIA_STATUS` constant rather than in sentences.
+- As proposed, Olympia advances the execution layer through Dencun, Pectra and
+  Fusaka and carries that work into Glamsterdam. **Do not write "full Glamsterdam
+  parity"**: ECIP-1121 adopts only part of Glamsterdam's set, and EIP lists come
+  from its own rows.
+- Activation is targeted for 2027 and its block is TBD. The countdown's target is a
+  placeholder, never an activation date.
+- Core-Geth is the recommended client, a go-ethereum derivative maintained in the
+  `ethereumclassic` organization: run the v1.13 line. Fukuii is an alternative to
+  try, in alpha, maintained by Chippr Robotics LLC as the continuation of IOHK's
+  Mantis client; describe it from its maintainers' pages, never as "native" or
+  "first native client". Besu, Erigon, Ethrex, Go-Ethereum, Nethermind and Reth are
+  planned ETC **plugins**, and a plugin is not counted as a client.
+- Client links point at `/clients`. Olympia pages cover Olympia readiness only, and
+  Olympia's own URLs sit in the navigation under the Olympia menu alone.
+- Fees: there is no base fee on Ethereum Classic before Olympia, so nothing is
+  "discarded" or taken from miners; Ethereum burns its base fee rather than funding
+  its development with it; under Olympia the base fee goes to the Treasury, not to
+  miners. Read fee figures from Blockscout; never type one into copy.
+- Olympia governance copy follows ECIP-1113, 1114, 1117, 1118 and 1119. The LLC's
+  relation to Olympia DAO follows ECIP-1114 and the wording in
+  `components/olympia/LegalWrapperSection.tsx`; it is legal content, so ask first.
 - Naming: "Ethereum Classic's Olympia DAO", never "OlympiaDAO"
 - **Never say:** "off-chain administrative executor", "subordinate to on-chain
-  governance", SHALL/MUST NOT, ECIP-1120 in rendered content
+  governance", SHALL/MUST NOT, ECIP-1120 in rendered content, hash-bound tuples,
+  governance pipeline
 - Never hardcode a hashrate figure — it is fetched live and a hardcoded one
   went stale
 - Write timeless: no "coming soon" or "future work" in prose; put mutable status
