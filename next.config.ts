@@ -8,11 +8,11 @@ const nextConfig: NextConfig = {
       { source: "/fukuii.html",     destination: "/clients",              permanent: true },
       { source: "/roadmap.html",    destination: "/olympia",              permanent: true },
       { source: "/impact.html",     destination: "/environmental-impact", permanent: true },
-      { source: "/treasury.html",   destination: "/governance",           permanent: true },
+      { source: "/treasury.html",   destination: "/treasury",             permanent: true },
       { source: "/governance.html", destination: "/governance",           permanent: true },
       { source: "/fees.html",       destination: "/governance",           permanent: true },
       { source: "/vision.html",     destination: "/about",                permanent: true },
-      { source: "/timeline.html",   destination: "/timeline",             permanent: true },
+      { source: "/timeline.html",   destination: "/olympia#activation",   permanent: true },
     ];
   },
 };

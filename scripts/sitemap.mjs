@@ -177,8 +177,8 @@ function xmlEscape(s) {
 }
 
 /**
- * Every prerendered page under `dir`, as its route and file, except the 404, the error page and any
- * page that asks not to be indexed.
+ * Every prerendered page under `dir`, as its route and file, except the 404, the error page, a page
+ * that only redirects and any page that asks not to be indexed.
  *
  * @param {string} dir
  * @returns {Promise<{ route: string, file: string, html: string }[]>}
@@ -199,6 +199,12 @@ async function builtPages(dir) {
   for (const file of files) {
     const rel = relative(dir, file).split(sep).join("/").replace(/\.html$/, "");
     if (/(^|\/)_(not-found|global-error)$/.test(rel)) continue;
+    // A redirect is prerendered with its status in the page's .meta file, and is not a page to list.
+    const status = await readFile(file.replace(/\.html$/, ".meta"), "utf8").then(
+      (meta) => JSON.parse(meta).status,
+      () => undefined,
+    );
+    if (typeof status === "number" && status >= 300 && status < 400) continue;
     const html = await readFile(file, "utf8");
     const robots = [...html.matchAll(/<meta\b[^>]*>/gi)]
       .map(([tag]) => attributes(tag))

@@ -10,27 +10,34 @@ import { Logo } from "@/components/ui/Logo";
 const topLinks = [
   { label: "About", href: "/about" },
   { label: "Stewardship", href: "/stewardship" },
-  { label: "Olympia", href: "/olympia" },
 ];
 
+// Olympia sits last: it groups one upgrade, where Protocol and Institutional
+// describe the network in general. Ordering reflects that scope, not importance.
 const dropdownGroups = [
   {
     label: "Protocol",
     items: [
       { label: "Public Goods", href: "/public-goods" },
-      { label: "Governance", href: "/governance" },
       { label: "Core Development", href: "/core-development" },
-      { label: "Olympia Rollout", href: "/timeline" },
       { label: "Clients", href: "/clients" },
       { label: "Ecosystem", href: "/ecosystem" },
     ],
   },
   {
-    label: "Markets",
+    label: "Institutional",
     items: [
       { label: "Regulation", href: "/regulation" },
       { label: "Energy Infrastructure", href: "/environmental-impact" },
       { label: "Investment Products", href: "/investment-products" },
+    ],
+  },
+  {
+    label: "Olympia",
+    items: [
+      { label: "Olympia Overview", href: "/olympia" },
+      { label: "Treasury", href: "/treasury" },
+      { label: "Governance", href: "/governance" },
     ],
   },
 ];

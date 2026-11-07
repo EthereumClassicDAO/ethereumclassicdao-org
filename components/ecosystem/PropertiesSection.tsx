@@ -1,58 +1,66 @@
+import Link from "next/link";
 import { Vote, Landmark, LayoutDashboard, Github } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { PropertyCard } from "@/components/ui/PropertyCard";
+import {
+  OLYMPIA_APP_URL,
+  OLYMPIA_DAO_URL,
+  OLYMPIA_GITHUB_URL,
+  OLYMPIA_TREASURY_SITE_URL,
+} from "@/lib/network-links";
 
 const properties = [
   {
     icon: Vote,
     name: "Olympia DAO",
-    description: "Protocol governance — upgrade coordination, ECIP ratification, and network-wide signaling",
-    href: "https://olympiadao.org",
+    description: "The proposal's own site: how Olympia DAO would govern, admit members and fund work",
+    href: OLYMPIA_DAO_URL,
   },
   {
     icon: Landmark,
     name: "Olympia Treasury",
-    description: "Real-time treasury monitoring — funding allocation, balance, and disbursement history",
-    href: "https://olympiatreasury.org",
+    description: "The treasury site: how the Treasury at the Sovereignty Vault address would be funded and spent",
+    href: OLYMPIA_TREASURY_SITE_URL,
   },
   {
     icon: LayoutDashboard,
     name: "Governance App",
-    description: "Proposal submission, on-chain voting, and execution tooling for network contributors",
-    href: "https://app.olympiadao.org",
+    description: "The application through which proposals would be composed, voted on and executed",
+    href: OLYMPIA_APP_URL,
   },
   {
     icon: Github,
     name: "GitHub",
-    description: "Client implementations, governance contracts, and protocol infrastructure — all open-source",
-    href: "https://github.com/olympiadao",
+    description: "Olympia's open-source repositories: the governance contracts and the Olympia sites",
+    href: OLYMPIA_GITHUB_URL,
   },
 ];
 
-export function PropertiesSection() {
+/** Olympia's sites. `hubLink` adds a link to /olympia, for the pages other than the hub itself. */
+export function PropertiesSection({ hubLink = true }: { hubLink?: boolean }) {
   return (
     <>
       <SectionDivider variant="strong" />
-      <section aria-labelledby="olympia-governance-framework-heading" className="section-alt py-28">
+      <section aria-labelledby="olympia-sites-heading" className="section-alt py-28">
         <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 id="olympia-governance-framework-heading" className="text-3xl font-bold tracking-tight">
-              Olympia Governance Framework
+            <h2 id="olympia-sites-heading" className="text-3xl font-bold tracking-tight">
+              Olympia&rsquo;s Sites
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Operational infrastructure for core developers, protocol
-              contributors, and network security stakeholders. Governance
-              tooling, treasury monitoring, and open-source repositories for
-              those coordinating on critical infrastructure and emergency
-              response.
+              Olympia is a proposal, developed in the open on sites of its own.
+              Its ECIPs are drafts, and the ECIPs repository remains the
+              authority on what it specifies.
             </p>
-            <a
-              href="/governance"
-              className="mt-4 inline-flex items-center text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
-            >
-              Learn about Olympia governance →
-            </a>
+            {hubLink && (
+              <Link
+                href="/olympia"
+                className="mt-4 inline-flex items-center text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
+              >
+                The Olympia proposal →
+              </Link>
+            )}
           </FadeIn>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2">

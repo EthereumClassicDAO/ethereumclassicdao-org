@@ -9,43 +9,12 @@ interface FooterLink {
 
 const columns: { heading: string; links: FooterLink[] }[] = [
   {
-    heading: "Governance",
-    links: [
-      { label: "How It Works", href: "/governance" },
-      { label: "Treasury Funding", href: "/governance#treasury" },
-      { label: "Safeguards", href: "/governance#safeguards" },
-      { label: "FAQ", href: "/governance#faq" },
-    ],
-  },
-  {
-    heading: "Ecosystem",
-    links: [
-      { label: "Olympia DAO", href: "https://olympiadao.org", external: true },
-      {
-        label: "Olympia Treasury",
-        href: "https://olympiatreasury.org",
-        external: true,
-      },
-      {
-        label: "Governance App",
-        href: "https://app.olympiadao.org",
-        external: true,
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/EthereumClassicDAO",
-        external: true,
-      },
-    ],
-  },
-  {
     heading: "Build",
     links: [
       { label: "Public Goods", href: "/public-goods" },
-      { label: "Olympia Upgrade", href: "/olympia" },
       { label: "Core Development", href: "/core-development" },
-      { label: "Olympia Rollout", href: "/timeline" },
       { label: "Clients", href: "/clients" },
+      { label: "Ecosystem", href: "/ecosystem" },
       { label: "Developer Tooling", href: "/ecosystem#tooling" },
       {
         label: "Block Explorer",
@@ -75,11 +44,22 @@ const columns: { heading: string; links: FooterLink[] }[] = [
     ],
   },
   {
-    heading: "Markets",
+    heading: "Institutional",
     links: [
       { label: "Regulation", href: "/regulation" },
       { label: "Environmental Impact", href: "/environmental-impact" },
       { label: "Investment Products", href: "/investment-products" },
+    ],
+  },
+  {
+    heading: "Olympia",
+    links: [
+      { label: "Olympia Overview", href: "/olympia" },
+      { label: "Treasury", href: "/treasury" },
+      { label: "Governance", href: "/governance" },
+      { label: "olympiadao.org", href: "https://olympiadao.org", external: true },
+      { label: "olympiatreasury.org", href: "https://olympiatreasury.org", external: true },
+      { label: "Governance App", href: "https://app.olympiadao.org", external: true },
     ],
   },
   {
@@ -97,7 +77,7 @@ export function FooterSection() {
       <SectionDivider />
       <footer className="section-alt noise-overlay relative py-16">
         <div className="relative z-10 mx-auto max-w-6xl px-6">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-7">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
             {/* Brand column */}
             <div className="lg:col-span-1">
               <span className="flex items-center gap-2 text-sm font-semibold tracking-tight">
