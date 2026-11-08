@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 
 type UpgradeType =
   | "genesis"
-  | "evm-parity"
   | "evm-alignment"
   | "etc-native"
   | "monetary"
@@ -66,7 +65,7 @@ const upgrades: Upgrade[] = [
     subtitle: null,
     block: "Block 200,000",
     date: "2015-09-07",
-    type: "evm-parity",
+    type: "evm-alignment",
     ecip: null,
     ecipUrl: null,
     eips: [],
@@ -80,7 +79,7 @@ const upgrades: Upgrade[] = [
     subtitle: null,
     block: "Block 1,150,000",
     date: "2016-03-14",
-    type: "evm-parity",
+    type: "evm-alignment",
     ecip: null,
     ecipUrl: null,
     eips: ["EIP-2", "EIP-7", "EIP-8"],
@@ -108,7 +107,7 @@ const upgrades: Upgrade[] = [
     subtitle: "Tangerine Whistle",
     block: "Block 2,500,000",
     date: "2016-10-24",
-    type: "evm-parity",
+    type: "evm-alignment",
     ecip: "ECIP-1015",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1015",
     eips: ["EIP-150"],
@@ -166,7 +165,7 @@ const upgrades: Upgrade[] = [
     subtitle: "Byzantium",
     block: "Block 8,772,000",
     date: "2019-09-12",
-    type: "evm-parity",
+    type: "evm-alignment",
     ecip: "ECIP-1054",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1054",
     eips: [
@@ -181,7 +180,7 @@ const upgrades: Upgrade[] = [
     ],
     keyChanges: ["ZK-proof precompiles (BN128)", "REVERT opcode", "Return data opcodes", "Receipt status codes"],
     description:
-      "Byzantium parity. Added precompiles for elliptic curve arithmetic enabling ZK-proof compatibility, REVERT opcode, and receipt status codes.",
+      "Aligned with Byzantium. Added precompiles for elliptic curve arithmetic enabling ZK-proof compatibility, REVERT opcode, and receipt status codes.",
     status: "complete",
   },
   {
@@ -189,13 +188,13 @@ const upgrades: Upgrade[] = [
     subtitle: "Constantinople + Petersburg",
     block: "Block 9,573,000",
     date: "2020-01-11",
-    type: "evm-parity",
+    type: "evm-alignment",
     ecip: "ECIP-1056",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1056",
     eips: ["EIP-145", "EIP-1014", "EIP-1052"],
     keyChanges: ["Bitwise shift opcodes", "CREATE2 (deterministic deployment)", "EXTCODEHASH opcode", "Petersburg security fixes"],
     description:
-      "Constantinople and Petersburg parity. Introduced bitwise shifting opcodes, CREATE2 for deterministic contract deployment, and EXTCODEHASH.",
+      "Aligned with Constantinople and Petersburg. Introduced bitwise shifting opcodes, CREATE2 for deterministic contract deployment, and EXTCODEHASH.",
     status: "complete",
   },
   {
@@ -203,7 +202,7 @@ const upgrades: Upgrade[] = [
     subtitle: "Istanbul",
     block: "Block 10,500,839",
     date: "2020-06-01",
-    type: "evm-parity",
+    type: "evm-alignment",
     ecip: "ECIP-1088",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1088",
     eips: [
@@ -216,7 +215,7 @@ const upgrades: Upgrade[] = [
     ],
     keyChanges: ["BLAKE2 precompile", "BN precompile repricing", "CHAINID opcode", "Calldata cost reduction"],
     description:
-      "Istanbul parity. Added BLAKE2 precompile, repriced elliptic curve operations, chain ID opcode, and improved gas cost accuracy for storage operations.",
+      "Aligned with Istanbul. Added BLAKE2 precompile, repriced elliptic curve operations, chain ID opcode, and improved gas cost accuracy for storage operations.",
     status: "complete",
   },
   {
@@ -255,13 +254,13 @@ const upgrades: Upgrade[] = [
     subtitle: "Berlin",
     block: "Block 13,189,133",
     date: "2021-07-23",
-    type: "evm-parity",
+    type: "evm-alignment",
     ecip: "ECIP-1103",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1103",
     eips: ["EIP-2565", "EIP-2929", "EIP-2718", "EIP-2930"],
     keyChanges: ["Cold storage repricing", "Typed transaction envelopes", "Access lists (EIP-2930)", "ModExp repricing"],
     description:
-      "Berlin parity. Repriced cold storage access operations, introduced typed transaction envelopes, and added optional access lists for gas optimization.",
+      "Aligned with Berlin. Repriced cold storage access operations, introduced typed transaction envelopes, and added optional access lists for gas optimization.",
     status: "complete",
   },
   {
@@ -283,7 +282,7 @@ const upgrades: Upgrade[] = [
     subtitle: "Shanghai",
     block: "Block 19,250,000",
     date: "2024-02-04",
-    type: "evm-parity",
+    type: "evm-alignment",
     ecip: "ECIP-1109",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1109",
     eips: ["EIP-3651", "EIP-3855", "EIP-3860", "EIP-6049"],
@@ -338,7 +337,6 @@ const upgrades: Upgrade[] = [
 
 const typeLabels: Record<UpgradeType, string> = {
   genesis: "Genesis",
-  "evm-parity": "EVM Parity",
   "evm-alignment": "EVM Alignment",
   "etc-native": "ETC Native",
   monetary: "Monetary Policy",
@@ -348,7 +346,6 @@ const typeLabels: Record<UpgradeType, string> = {
 
 const typeBadge: Record<UpgradeType, string> = {
   genesis: "bg-[rgba(0,255,174,0.12)] text-[var(--brand-green)]",
-  "evm-parity": "bg-[var(--color-violet-bg)] text-[var(--color-violet)]",
   "evm-alignment": "bg-[var(--color-sky-bg)] text-[var(--color-sky)]",
   "etc-native": "bg-[rgba(0,255,174,0.08)] text-[var(--brand-green)]",
   monetary: "bg-[rgba(0,255,174,0.08)] text-[var(--brand-green)]",
@@ -401,7 +398,6 @@ export default function TimelinePage() {
               {(
                 [
                   ["genesis", "Genesis"],
-                  ["evm-parity", "EVM Parity"],
                   ["evm-alignment", "EVM Alignment"],
                   ["etc-native", "ETC Native"],
                   ["monetary", "Monetary Policy"],
