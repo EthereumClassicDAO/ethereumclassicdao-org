@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
       { source: "/fees.html",       destination: "/governance",           permanent: true },
       { source: "/vision.html",     destination: "/about",                permanent: true },
       { source: "/timeline.html",   destination: "/olympia#activation",   permanent: true },
+      // Routes this site has retired
+      { source: "/timeline",        destination: "/olympia#activation",   permanent: true },
     ];
   },
 };
