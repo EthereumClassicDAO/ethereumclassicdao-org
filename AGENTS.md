@@ -138,7 +138,13 @@ the section around it.
   Robotics LLC. Describe it from its maintainers' pages only, never as native,
   "first native client", "primary", "most popular" or Core-Geth's successor.
   Besu, Erigon, Ethrex, Go-Ethereum, Nethermind and Reth are planned ETC
-  *plugins*, never "overlays", and a plugin is never counted as a client.
+  *plugins*, never "overlays", and a plugin is never counted as a client. Pages
+  state what a plugin is with `PLUGIN_POSITION` (`lib/network-links.ts`), which
+  `public/llms.txt` mirrors: "A plugin is not a client implementation. It adds
+  Ethereum Classic support to a client another project maintains, so that
+  codebase and the decisions about it stay with that project, outside Ethereum
+  Classic's control. A plugin is no substitute for Fukuii, an independent
+  client, or for Core-Geth, a full implementation downstream of go-ethereum."
 - **Client links** go to `/clients`, which holds across network upgrades. Olympia
   pages carry only Olympia readiness, and Olympia's own URLs appear in the
   navigation only under its Olympia menu.

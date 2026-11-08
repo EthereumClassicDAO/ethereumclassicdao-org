@@ -77,7 +77,13 @@ Brand green inverts between themes (`#007a53` light, `#00ffae` dark), so
   try, in alpha, maintained by Chippr Robotics LLC as the continuation of IOHK's
   Mantis client; describe it from its maintainers' pages, never as "native" or
   "first native client". Besu, Erigon, Ethrex, Go-Ethereum, Nethermind and Reth are
-  planned ETC **plugins**, and a plugin is not counted as a client.
+  planned ETC **plugins**, and a plugin is not counted as a client. Pages state what
+  a plugin is with `PLUGIN_POSITION` (`lib/network-links.ts`), mirrored in
+  `public/llms.txt`: "A plugin is not a client implementation. It adds Ethereum
+  Classic support to a client another project maintains, so that codebase and the
+  decisions about it stay with that project, outside Ethereum Classic's control. A
+  plugin is no substitute for Fukuii, an independent client, or for Core-Geth, a
+  full implementation downstream of go-ethereum."
 - Client links point at `/clients`. Olympia pages cover Olympia readiness only, and
   Olympia's own URLs sit in the navigation under the Olympia menu alone.
 - Fees: there is no base fee on Ethereum Classic before Olympia, so nothing is

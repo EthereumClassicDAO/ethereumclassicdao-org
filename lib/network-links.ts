@@ -106,3 +106,8 @@ export const OLYMPIA_STATUS = "Proposed · Draft ECIPs · Activation block TBD";
 export const FUKUII_STATUS = "Alpha";
 /** The ETC plugin framework for upstream clients. */
 export const PLUGINS_STATUS = "Planned";
+
+// ETC plugins
+/** What a plugin is, in the words every page uses; public/llms.txt mirrors it. */
+export const PLUGIN_POSITION =
+  "A plugin is not a client implementation. It adds Ethereum Classic support to a client another project maintains, so that codebase and the decisions about it stay with that project, outside Ethereum Classic's control. A plugin is no substitute for Fukuii, an independent client, or for Core-Geth, a full implementation downstream of go-ethereum.";

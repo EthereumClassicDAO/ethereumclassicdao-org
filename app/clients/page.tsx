@@ -20,6 +20,7 @@ import {
   FUKUII_LATEST_RELEASE_URL,
   FUKUII_STATUS,
   PLUGINS_STATUS,
+  PLUGIN_POSITION,
 } from "@/lib/network-links";
 
 export const metadata: Metadata = {
@@ -292,9 +293,8 @@ export default async function ClientsPage() {
               ETC Plugins
             </h2>
             <p className="mb-6 text-sm text-[var(--text-muted)]">
-              Planned compatibility layers that would bring Ethereum Classic support
-              to upstream clients without maintaining full forks. A plugin is not a
-              client implementation.
+              Planned compatibility layers for Besu, Erigon, Ethrex, Go-Ethereum,
+              Nethermind and Reth. {PLUGIN_POSITION}
             </p>
           </FadeIn>
 

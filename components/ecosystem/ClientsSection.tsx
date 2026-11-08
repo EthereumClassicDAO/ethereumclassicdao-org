@@ -10,6 +10,7 @@ import {
   FUKUII_REPO_URL,
   FUKUII_STATUS,
   PLUGINS_STATUS,
+  PLUGIN_POSITION,
 } from "@/lib/network-links";
 
 const featuredClient = {
@@ -34,8 +35,7 @@ const secondaryClients = [
   {
     name: "ETC Plugins",
     language: "",
-    description:
-      "Planned compatibility layers for Besu, Erigon, Ethrex, Go-Ethereum, Nethermind and Reth, which would bring Ethereum Classic support to those upstream clients without maintaining full forks. A plugin is not a client implementation.",
+    description: `Planned compatibility layers for Besu, Erigon, Ethrex, Go-Ethereum, Nethermind and Reth. ${PLUGIN_POSITION}`,
     github: "/clients",
     status: PLUGINS_STATUS,
   },
