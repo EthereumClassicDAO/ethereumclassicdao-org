@@ -36,7 +36,9 @@ yarn-error.log*
 # env files
 .env
 .env.*
-!.env.example
+# Every example file is a template that must reach a clone, .env.local.example included;
+# end-anchored, so .env.example.local stays ignored.
+!.env*.example
 
 # vercel
 .vercel
@@ -48,6 +50,7 @@ next-env.d.ts
 # secrets & credentials
 credentials.json
 service-account.json
+secrets/
 
 # SSH keys — *.key does not match these, they are extensionless
 id_rsa
@@ -61,12 +64,16 @@ id_ed25519
 .npmrc
 .yarnrc
 .yarnrc.yml
-service-account.json
-secrets/
+
+# Blockchain & crypto
 keystore/
 *.keystore
 wallet.json
 mnemonic.txt
+# A node's data directory: its private key, a rotated copy of it, and the RPC secret.
+nodekey
+nodekey.*
+jwtsecret
 
 # Claude Code — this directory is TRACKED so repo-local agents, skills and rules
 # travel with the repo. Only machine-local and agent-written state is held back.
