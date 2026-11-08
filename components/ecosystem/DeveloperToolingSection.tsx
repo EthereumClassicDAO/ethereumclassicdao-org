@@ -22,20 +22,25 @@ const categories: ToolCategory[] = [
       {
         name: "Hardhat",
         description: "Industry-standard development environment for compiling, testing, and deploying Solidity contracts.",
-        config: "chainId: 61 in hardhat.config.ts",
+        config: 'chainId: 61 and evmVersion: "shanghai" in hardhat.config.ts',
         href: "https://hardhat.org",
       },
       {
         name: "Foundry",
         description: "Blazing fast Rust-based toolchain: forge, cast, anvil. Write tests in Solidity.",
-        config: "--rpc-url $ETC_RPC_URL --chain 61 --legacy",
+        config: "--rpc-url $ETC_RPC_URL --chain 61 --legacy --evm-version shanghai",
         href: "https://getfoundry.sh",
       },
       {
         name: "Remix IDE",
         description: "Browser-based Solidity IDE with built-in compiler, debugger, and deployment tools.",
-        config: "Deploy → Injected Provider (MetaMask on Chain 61)",
+        config: "EVM version shanghai · Deploy → Injected Provider (MetaMask on Chain 61)",
         href: "https://remix.ethereum.org",
+      },
+      {
+        name: "OpenZeppelin Contracts",
+        description: "A library for secure smart contract development: standard tokens, access control and upgradeable contracts.",
+        href: "https://docs.openzeppelin.com/contracts",
       },
     ],
   },
@@ -55,27 +60,33 @@ const categories: ToolCategory[] = [
         href: "https://viem.sh",
       },
       {
-        name: "web3.js v4",
-        description: "The original JavaScript Ethereum library. Broad ecosystem support and plugin architecture.",
-        config: "new Web3(process.env.ETC_RPC_URL)",
-        href: "https://docs.web3js.org",
+        name: "web3.py",
+        description: "A Python interface for Ethereum and EVM chains: contracts, accounts and transactions.",
+        config: 'Web3(Web3.HTTPProvider(os.environ["ETC_RPC_URL"]))',
+        href: "https://web3py.readthedocs.io",
+      },
+      {
+        name: "Alloy",
+        description: "Rust libraries for Ethereum and EVM chains: providers, transports and contract bindings.",
+        config: "ProviderBuilder::new().connect_http(rpc_url)",
+        href: "https://alloy.rs",
       },
       {
         name: "wagmi",
         description: "React hooks for Ethereum. Type-safe wallet connections, contract interactions, and chain management.",
-        config: "chains: [ethereumClassic]",
+        config: "chains: [classic], transports: { [classic.id]: http(process.env.ETC_RPC_URL) }",
         href: "https://wagmi.sh",
       },
       {
         name: "RainbowKit",
         description: "Beautiful wallet connection UI for React. Supports 100+ wallets with a polished connect flow.",
-        config: "chains: [ethereumClassic]",
+        config: "chains: [classic]",
         href: "https://www.rainbowkit.com",
       },
       {
         name: "Scaffold-ETH 2",
         description: "Full-stack dApp starter with Next.js, Hardhat, and wagmi. Rapid prototyping for EVM chains.",
-        config: "targetNetworks: [chains.ethereumClassic]",
+        config: "targetNetworks: [chains.classic]",
         href: "https://scaffoldeth.io",
       },
       {
@@ -138,6 +149,12 @@ const categories: ToolCategory[] = [
         config: "https://etc.blockscout.com",
         href: "https://etc.blockscout.com",
       },
+      {
+        name: "Sourcify",
+        description: "Open-source verification of Solidity and Vyper source against deployed bytecode, on Ethereum Classic and Mordor.",
+        config: "forge verify-contract --verifier sourcify --chain 61",
+        href: "https://sourcify.dev",
+      },
     ],
   },
   {
@@ -151,12 +168,22 @@ const categories: ToolCategory[] = [
       {
         name: "Mythril",
         description: "Symbolic execution engine for EVM bytecode. Finds reentrancy, integer overflow, and access control issues.",
-        href: "https://mythx.io",
+        href: "https://github.com/ConsenSysDiligence/mythril",
       },
       {
         name: "Echidna",
         description: "Property-based fuzzer for smart contracts. Write invariants in Solidity and let Echidna find violations.",
         href: "https://github.com/crytic/echidna",
+      },
+      {
+        name: "Medusa",
+        description: "Parallelized, coverage-guided Solidity fuzzer by Trail of Bits, built on go-ethereum and inspired by Echidna.",
+        href: "https://github.com/crytic/medusa",
+      },
+      {
+        name: "Aderyn",
+        description: "Solidity static analyzer by Cyfrin, written in Rust, that integrates into your editor.",
+        href: "https://github.com/Cyfrin/aderyn",
       },
     ],
   },
@@ -176,7 +203,9 @@ export function DeveloperToolingSection() {
               Ethereum Classic&rsquo;s EVM is the Shanghai set, so
               Ethereum&rsquo;s development toolchain works on ETC: Hardhat,
               Foundry, ethers.js, viem and wagmi connect through a chain
-              configuration. Set Chain ID to 61, point your RPC at an endpoint
+              configuration. Set Chain ID to 61 and compile for the Shanghai EVM:
+              current Solidity compiles for a later EVM by default, and its code
+              can use opcodes ETC does not have. Point your RPC at an endpoint
               from ChainList or your own node, send legacy transactions, since
               ETC has no EIP-1559 fee market today, and deploy.
             </p>

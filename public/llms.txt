@@ -62,7 +62,7 @@ Ethereum Classic has no protocol-layer funding mechanism for its critical infras
 
 Ethereum Classic DAO LLC is the standing legal entity that maintains and funds Ethereum Classic's public goods (the Core-Geth client, the network's bootnodes and its peer discovery lists) as the funder of last resort. Ethereum Classic's core developers and community contributors do the day-to-day work in the ethereumclassic GitHub organization, and the DAO does not control or lead Ethereum Classic. It is a Wyoming DAO LLC (Filing ID 2025-001671865). The LLC builds software, ecosystem infrastructure, and hashrate incentives for the world's largest Proof-of-Work smart contract platform, while maintaining active compliance across global regulatory frameworks including MiCA (EU), CLARITY Act (US), GENIUS Act (US), FSA Green List (Japan), FSMA (UK), and VARA (UAE).
 
-Ethereum Classic (ETC) is the only Proof-of-Work blockchain with native EVM smart contracts. The frameworks, libraries and IDEs that target Ethereum work with Ethereum Classic: set chain ID 61 (mainnet) or 63 (Mordor testnet), and send legacy transactions, since Ethereum Classic has no EIP-1559 fee market today. Its EVM is the Shanghai set the Spiral upgrade activated in 2024.
+Ethereum Classic (ETC) is the only Proof-of-Work blockchain with native EVM smart contracts. The frameworks, libraries and IDEs that target Ethereum work with Ethereum Classic: set chain ID 61 (mainnet) or 63 (Mordor testnet), compile for the Shanghai EVM, since current Solidity compiles for a later EVM by default and its code can use opcodes Ethereum Classic does not have, and send legacy transactions, since Ethereum Classic has no EIP-1559 fee market today. Its EVM is the Shanghai set the Spiral upgrade activated in 2024.
 
 ETC is recognized across leading global regulatory frameworks in the US, EU, UK, Japan, and UAE — a digital commodity candidate under the CLARITY Act (US), decentralized asset under MiCA (EU), and active compliance across GENIUS Act (US), FSA Green List (Japan), FSMA (UK), and VARA (UAE). Classic USD ($USC), issued by Brale Inc. (NMLS #2376957), is a live proof of GENIUS Act and MiCA-aligned stablecoin deployment on ETC mainnet.
 
@@ -96,11 +96,11 @@ ETC plugins for Besu, Erigon, Ethrex, Go-Ethereum, Nethermind and Reth are plann
 
 ## Developer Tooling
 
-- Smart Contract Development: Hardhat, Foundry (forge/cast/anvil; pass --legacy, since Ethereum Classic has no EIP-1559 fee market today), Remix IDE, OpenZeppelin Contracts 5.x
-- Client Libraries: ethers.js v6, viem, web3.js v4
-- Wallets: 50+ wallet integrations including hardware wallets, browser extensions, and mobile wallets
-- Infrastructure: Public RPC endpoints, block explorers, oracle networks
-- Security: Slither, Mythril, Echidna
+- Smart Contract Development: Hardhat, Foundry (forge/cast/anvil; pass --legacy, since Ethereum Classic has no EIP-1559 fee market today, and --evm-version shanghai), Remix IDE, OpenZeppelin Contracts 5.x. Compile for the Shanghai EVM: evmVersion "shanghai" in Hardhat, evm_version = "shanghai" in Foundry
+- Client Libraries: ethers.js v6, viem, web3.py, Alloy, wagmi, RainbowKit, Scaffold-ETH 2, thirdweb SDK. viem and wagmi export chain 61 as `classic`; pass your own RPC transport
+- Wallets: Ledger, Trezor, MetaMask, Trust Wallet, Rabby, Exodus
+- Infrastructure: ChainList (public RPC endpoints: https://chainlist.org/chain/61), Blockscout (explorer and verification: https://etc.blockscout.com), Sourcify (contract verification on Ethereum Classic and Mordor: https://sourcify.dev)
+- Security: Slither, Mythril, Echidna, Medusa, Aderyn
 
 ## Regulatory Framework
 
