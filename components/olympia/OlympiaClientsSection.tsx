@@ -24,10 +24,10 @@ const clients = [
   {
     name: "Fukuii",
     badges: ["Alternative", FUKUII_STATUS],
-    body: `An alternative to try beside Core-Geth, which its maintainers mark alpha. ${FUKUII_MAINTAINER} publishes its releases and its readiness for Olympia from chippr-robotics/fukuii.`,
+    body: `An alternative to try beside Core-Geth, which ${FUKUII_MAINTAINER} maintains and marks alpha: run its current release. Its releases, and its readiness for Olympia, are published from chippr-robotics/fukuii.`,
     links: [
-      { label: "Latest release", href: FUKUII_LATEST_RELEASE_URL },
       { label: "Documentation", href: FUKUII_DOCS_URL },
+      { label: "Current release", href: FUKUII_LATEST_RELEASE_URL },
     ],
   },
 ];
@@ -43,9 +43,11 @@ export function OlympiaClientsSection() {
               Client Readiness
             </h2>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[var(--text-muted)]">
-              No released client implements Olympia, and its activation block is
-              TBD. A client&rsquo;s readiness for Olympia is what its maintainers
-              publish. To choose and run a client today, see{" "}
+              Olympia is in development and targeted for mainnet activation in
+              2027, so neither client&rsquo;s releases are ready for it. Its
+              activation block is TBD, and a client&rsquo;s Olympia release is the
+              one that sets it. A client&rsquo;s readiness for Olympia is what its
+              maintainers publish. To choose and run a client today, see{" "}
               <Link
                 href="/clients"
                 className="font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--text-primary)]"

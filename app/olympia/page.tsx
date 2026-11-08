@@ -49,7 +49,7 @@ const faqItems: { question: string; answer: string }[] = [
   {
     question: "Is Olympia active?",
     answer:
-      "No. Olympia is a proposal: its ECIPs are drafts and its activation block is TBD. It is targeted for mainnet activation in 2027, and no released client implements it.",
+      "No. Olympia is a proposal in development: its ECIPs are drafts, its activation block is TBD, and neither client's releases are ready for it. It is targeted for mainnet activation in 2027.",
   },
   {
     question: "When would Olympia activate?",
@@ -89,7 +89,7 @@ const faqItems: { question: string; answer: string }[] = [
   {
     question: "Which client should I run?",
     answer:
-      "Core-Geth, the recommended client: run its v1.13 line. Fukuii, which its maintainers mark alpha, is an alternative to try beside it. No released client implements Olympia.",
+      "Core-Geth, the recommended client: run its v1.13 line. Fukuii, which its maintainers mark alpha, is an alternative to try beside it: run its current release. Neither client's releases are ready for Olympia, which is in development and targeted for mainnet activation in 2027.",
   },
   {
     question: "What happens to a node that does not upgrade?",

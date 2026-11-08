@@ -256,7 +256,7 @@ Wyoming Secretary of State Filing: https://wyobiz.wyo.gov/business/FilingDetails
 
 Status: Proposed · Draft ECIPs · Activation block TBD. Page: https://ethereumclassicdao.org/olympia
 
-Olympia is a proposed upgrade to Ethereum Classic, targeted for mainnet activation in 2027. Its ECIPs are drafts, and the ECIPs repository (https://github.com/ethereumclassic/ECIPs) is the authority on what they specify. No released client implements it. As proposed, it would advance the execution layer through Dencun, Pectra and Fusaka, carrying that work into Glamsterdam, and credit the EIP-1559 base fee to a treasury that only on-chain governance could spend, giving this work a funding source in the protocol. The site's countdown runs to December 31, 2027, a placeholder target rather than an activation date, until the activation block is set.
+Olympia is a proposed upgrade to Ethereum Classic, targeted for mainnet activation in 2027. Its ECIPs are drafts, and the ECIPs repository (https://github.com/ethereumclassic/ECIPs) is the authority on what they specify. It is in development, and neither client's releases are ready for it. As proposed, it would advance the execution layer through Dencun, Pectra and Fusaka, carrying that work into Glamsterdam, and credit the EIP-1559 base fee to a treasury that only on-chain governance could spend, giving this work a funding source in the protocol. The site's countdown runs to December 31, 2027, a placeholder target rather than an activation date, until the activation block is set.
 
 ### What Olympia proposes
 
@@ -333,7 +333,10 @@ No off-chain entity can unilaterally approve or veto a governance action, the LL
 
 ### Client readiness
 
-No released client implements Olympia, and its activation block is TBD. A client's readiness for Olympia is what its maintainers publish: Core-Geth's at https://coregeth.com/downloads/, and Fukuii's from https://github.com/chippr-robotics/fukuii, where Chippr Robotics LLC publishes its releases. To choose and run a client today, see https://ethereumclassicdao.org/clients
+Olympia is in development and targeted for mainnet activation in 2027, so neither client's releases are ready for it. Its activation block is TBD, and a client's Olympia release is the one that sets it. A client's readiness for Olympia is what its maintainers publish. To choose and run a client today, see https://ethereumclassicdao.org/clients
+
+- Core-Geth, the recommended client: run its v1.13 line. Its releases, and its readiness for Olympia, are published from https://github.com/ethereumclassic/core-geth. Downloads: https://coregeth.com/downloads/. Current release: https://github.com/ethereumclassic/core-geth/releases/latest
+- Fukuii, an alternative to try beside Core-Geth, which Chippr Robotics LLC maintains and marks alpha: run its current release. Its releases, and its readiness for Olympia, are published from https://github.com/chippr-robotics/fukuii. Documentation: https://docs.fukuii.com. Current release: https://github.com/chippr-robotics/fukuii/releases/latest
 
 ### Olympia's sites
 
@@ -352,7 +355,7 @@ Olympia is a proposal, developed in the open on sites of its own. Its ECIPs are 
 From https://ethereumclassicdao.org/olympia
 
 **Is Olympia active?**
-No. Olympia is a proposal: its ECIPs are drafts and its activation block is TBD. It is targeted for mainnet activation in 2027, and no released client implements it.
+No. Olympia is a proposal in development: its ECIPs are drafts, its activation block is TBD, and neither client's releases are ready for it. It is targeted for mainnet activation in 2027.
 
 **When would Olympia activate?**
 It is targeted for mainnet activation in 2027. The activation blocks for Mordor and mainnet are decided at the Olympia Core Devs Call and recorded in ECIP-1111, and both read TBD. Before an activation block is scheduled, the governance contracts are deployed, reviewed and rehearsed on Mordor, and the Treasury's address is published.
@@ -376,7 +379,7 @@ ECIP-1114 names Ethereum Classic DAO LLC as the legal wrapper it contemplates fo
 No. ECIP-1121 includes Glamsterdam and adopts part of its set. Some of its EIPs are blocked on a dependency that is out of scope, and those tied to Proof-of-Stake or blob data availability are excluded or deferred. The EIP lists on the Olympia page give each one.
 
 **Which client should I run?**
-Core-Geth, the recommended client: run its v1.13 line. Fukuii, which its maintainers mark alpha, is an alternative to try beside it. No released client implements Olympia.
+Core-Geth, the recommended client: run its v1.13 line. Fukuii, which its maintainers mark alpha, is an alternative to try beside it: run its current release. Neither client's releases are ready for Olympia, which is in development and targeted for mainnet activation in 2027.
 
 **What happens to a node that does not upgrade?**
 Once the activation blocks are set and client releases implement them, a node that has not moved to such a release by the activation block stops following the chain at that block. Operators move by the steps their client's maintainers publish.
