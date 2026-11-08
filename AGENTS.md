@@ -165,7 +165,14 @@ tuples, governance pipeline.
 
 **Write timeless.** No "future work", "coming soon", "planned post-X". Describe
 what a thing is; put mutable status in a structured field such as a badge, so
-changing it later is one edit rather than a prose hunt.
+changing it later is one edit rather than a prose hunt. Word release links and
+versions so a client's next release leaves them true, and the client cards need
+no edit each release: link the release as `releases/latest`
+(`CORE_GETH_LATEST_RELEASE_URL`, `FUKUII_LATEST_RELEASE_URL`), never a tag, and
+recommend a range that outlives a patch. "The v1.13 line" does; v1.13.0 goes
+stale the day v1.13.1 ships. A version stays where the context is that version,
+such as the CVEs a v1.12 release carries and the move from it to the v1.13 line.
+The same holds for any tool a page tells a reader to run.
 
 ## Boundaries
 

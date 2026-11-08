@@ -94,7 +94,14 @@ Brand green inverts between themes (`#007a53` light, `#00ffae` dark), so
 - Never hardcode a hashrate figure — it is fetched live and a hardcoded one
   went stale
 - Write timeless: no "coming soon" or "future work" in prose; put mutable status
-  in a badge or status field
+  in a badge or status field. Word release links and versions so a client's next
+  release leaves them true, and the client cards need no edit each release: link
+  the release as `releases/latest` (`CORE_GETH_LATEST_RELEASE_URL`,
+  `FUKUII_LATEST_RELEASE_URL`), never a tag, and recommend a range that outlives
+  a patch. "The v1.13 line" does; v1.13.0 goes stale the day v1.13.1 ships. A
+  version stays where the context is that version, such as the CVEs a v1.12
+  release carries and the move from it to the v1.13 line. The same holds for
+  any tool a page tells a reader to run.
 
 ## Boundaries
 
