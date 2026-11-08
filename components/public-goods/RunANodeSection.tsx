@@ -6,9 +6,7 @@ import { Cite } from "@/components/ui/Cite";
 import {
   CORE_GETH_DISCOVERY_FLAG_URL,
   CORE_GETH_DOWNLOADS_URL,
-  CORE_GETH_INSTALL_URL,
   CORE_GETH_LATEST_RELEASE_URL,
-  CORE_GETH_MIGRATION_URL,
   CORE_GETH_UPGRADE_URL,
   SECURITY_EMAIL,
 } from "@/lib/network-links";
@@ -32,18 +30,20 @@ export function RunANodeSection() {
                   resolves to it. Releases from the v1.13 line onward are
                   published only from that repository, so a node that follows
                   the previous repository, etclabscore/core-geth, does not see
-                  them. The installation guide covers each platform, and how to
-                  verify that a download was built by the repository&rsquo;s own
-                  release workflow.
+                  them. Downloads on coregeth.com has the install steps for each
+                  platform, and how to verify that a download was built by the
+                  repository&rsquo;s own release workflow.
                 </p>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--text-muted)]">
-                  Every node still on a v1.12 release should move to the v1.13
-                  line:{" "}
+                  Every v1.12 release ships known-vulnerable code, and one of
+                  those flaws was exploited against the Core-Geth v1.12 bootnodes
+                  in March 2026, so every node still on a v1.12 release should
+                  move to the v1.13 line:{" "}
                   <Cite href={CORE_GETH_UPGRADE_URL}>Downloads on coregeth.com</Cite>{" "}
-                  has the commands and checksums, and the{" "}
-                  <Cite href={CORE_GETH_MIGRATION_URL}>migration guide</Cite> has
-                  the steps, including the required P2P node key rotation. A
-                  v1.12 node that cannot move yet can{" "}
+                  has the steps for each platform, with the commands, the
+                  checksums and the P2P node key rotation, which is required
+                  because CVE-2026-26315 leaks bits of that key. A v1.12 node
+                  that cannot move yet can{" "}
                   <Cite href={CORE_GETH_DISCOVERY_FLAG_URL}>
                     add the{" "}
                     <code className="whitespace-nowrap font-mono">--discovery.dns</code>{" "}
@@ -69,14 +69,6 @@ export function RunANodeSection() {
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--text-primary)]"
                   >
                     Downloads <ExternalLink size={13} aria-hidden="true" />
-                  </a>
-                  <a
-                    href={CORE_GETH_INSTALL_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--text-primary)]"
-                  >
-                    Installation guide <ExternalLink size={13} aria-hidden="true" />
                   </a>
                   <Link
                     href="/clients"

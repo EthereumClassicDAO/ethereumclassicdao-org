@@ -5,13 +5,11 @@ import {
   CORE_GETH_SPONSOR_URL,
   DISCOVERY_SUPPORT_URL,
   SPONSOR_EMAIL,
-  SUPPORT_URL,
 } from "@/lib/network-links";
 
 // Each public good publishes its own support page; the routes are the same.
 const sponsorLinks = [
   { label: "Sponsor Core-Geth", href: CORE_GETH_SPONSOR_URL },
-  { label: "Sponsorship routes and credits", href: SUPPORT_URL },
   { label: "Sponsor the peer discovery lists", href: DISCOVERY_SUPPORT_URL },
 ];
 

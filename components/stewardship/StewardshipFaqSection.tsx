@@ -26,7 +26,7 @@ export const stewardshipFaq: { question: string; answer: string }[] = [
   },
   {
     question: "How do I sponsor Ethereum Classic's core development?",
-    answer: `Write to ${SPONSOR_EMAIL}, which reaches the Ethereum Classic core developers and maintainers. Organizations can sponsor through an invoiced maintenance agreement, and a direct transfer is possible to an address provided on request. coregeth.com/sponsor sets out who maintains the client and how sponsorship works, and the documentation's support page at docs.coregeth.com/support publishes the routes and credits sponsors. No donation address is published anywhere.`,
+    answer: `Write to ${SPONSOR_EMAIL}, which reaches the Ethereum Classic core developers and maintainers. Organizations can sponsor through an invoiced maintenance agreement, and a direct transfer is possible to an address provided on request. coregeth.com/sponsor sets out who maintains the client, how sponsorship works and where sponsors are credited. No donation address is published anywhere.`,
   },
   {
     question: "Does a sponsor get influence over the client?",

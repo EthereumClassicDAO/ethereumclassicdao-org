@@ -131,7 +131,7 @@ the section around it.
 - **Activation:** targeted for 2027. The activation *block* is TBD, and the
   countdown's target (`OLYMPIA_TARGET_ISO`) is a placeholder, not an activation date.
 - **Clients:** Core-Geth is the recommended client to run, a go-ethereum
-  derivative released and maintained in the `ethereumclassic` organization; run
+  downstream released and maintained in the `ethereumclassic` organization; run
   the v1.13 line. It is not native and not a plugin. Fukuii is an alternative to
   try beside it, in alpha: an EVM-compliant execution client in Scala 3 with
   pluggable consensus, continuing IOHK's Mantis client and maintained by Chippr

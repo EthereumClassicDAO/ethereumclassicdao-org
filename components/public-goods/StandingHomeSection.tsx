@@ -4,7 +4,7 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 import { Cite } from "@/components/ui/Cite";
 import {
   COOPERATIVE_TRANSITION_URL,
-  CORE_GETH_HISTORY_URL,
+  CORE_GETH_ABOUT_URL,
   CORE_GETH_REPO_URL,
   CORE_GETH_REVIEW_POLICY_URL,
   ETC_ORG_URL,
@@ -16,7 +16,7 @@ const records = [
     label: "Where each service the ETC Cooperative maintained continues",
     href: COOPERATIVE_TRANSITION_URL,
   },
-  { label: "Core-Geth project history", href: CORE_GETH_HISTORY_URL },
+  { label: "Where Core-Geth came from, and who carries it", href: CORE_GETH_ABOUT_URL },
   { label: "How a change reaches Core-Geth", href: CORE_GETH_REVIEW_POLICY_URL },
 ];
 

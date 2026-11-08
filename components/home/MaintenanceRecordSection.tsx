@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { Cite } from "@/components/ui/Cite";
 import { MAINTENANCE_RECORD } from "@/lib/maintenance-record";
-import { CORE_GETH_HISTORY_URL, CORE_GETH_SECURITY_URL } from "@/lib/network-links";
+import { CORE_GETH_ABOUT_URL, CORE_GETH_SECURITY_URL } from "@/lib/network-links";
 
 export function MaintenanceRecordSection() {
   return (
@@ -52,10 +52,9 @@ export function MaintenanceRecordSection() {
 
           <FadeIn delay={160}>
             <p className="mt-8 max-w-3xl text-sm text-[var(--text-muted)]">
-              The full account is in{" "}
-              <Cite href={CORE_GETH_HISTORY_URL}>Core-Geth&rsquo;s project history</Cite>, and
-              every release and audit is on{" "}
-              <Cite href={CORE_GETH_SECURITY_URL}>coregeth.com&rsquo;s security page</Cite>.
+              The full account is on coregeth.com:{" "}
+              <Cite href={CORE_GETH_ABOUT_URL}>where Core-Geth came from, and who carries it</Cite>,
+              and <Cite href={CORE_GETH_SECURITY_URL}>every release and audit</Cite>.
             </p>
             <Link
               href="/stewardship"

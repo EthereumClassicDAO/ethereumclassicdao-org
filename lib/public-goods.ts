@@ -39,7 +39,7 @@ export const PUBLIC_GOODS: readonly PublicGood[] = [
     status: "Maintained",
     live: true,
     description:
-      "The recommended client for Ethereum Classic, a go-ethereum derivative that implements the network's consensus rules and its Proof-of-Work chain selection. Upstream go-ethereum no longer supports Ethereum Classic, so those rules are maintained here rather than inherited. Each release is built by the repository's own workflow, with a checksum and a build attestation beside every file.",
+      "The recommended client for Ethereum Classic, a go-ethereum downstream that implements the network's consensus rules and its Proof-of-Work chain selection. Upstream go-ethereum no longer supports Ethereum Classic, so those rules are maintained here rather than inherited. Each release is built by the repository's own workflow, with a checksum and a build attestation beside every file.",
     repo: CORE_GETH_REPO_URL,
     links: [
       { label: "Current release", href: CORE_GETH_LATEST_RELEASE_URL },

@@ -1,8 +1,9 @@
 import {
   COOPERATIVE_RETROSPECTIVE_URL,
+  CORE_GETH_ABOUT_URL,
   CORE_GETH_AUDIT_URL,
-  CORE_GETH_HISTORY_URL,
   CORE_GETH_RELEASES_URL,
+  CORE_GETH_SECURITY_URL,
   DISCOVERY_LISTS_REPO_URL,
   WYOMING_FILING_URL,
 } from "@/lib/network-links";
@@ -19,21 +20,20 @@ export interface MaintenanceEntry {
 
 /**
  * How Core-Geth's maintenance reached the ethereumclassic organization, oldest first. Each entry
- * follows Core-Geth's project history and coregeth.com's release history, and links the record it
- * rests on.
+ * follows coregeth.com's About page and release history, and links the record it rests on.
  */
 export const MAINTENANCE_RECORD: readonly MaintenanceEntry[] = [
   {
     when: "June 2024",
     iso: "2024-06",
     what: "Core-Geth v1.12.20 is released from etclabscore/core-geth, the last stable release before a 21-month gap in security maintenance.",
-    source: CORE_GETH_HISTORY_URL,
+    source: CORE_GETH_SECURITY_URL,
   },
   {
     when: "December 21, 2024",
     iso: "2024-12-21",
     what: "ethereumclassic/core-geth is created from etclabscore/core-geth, the move the ETC Cooperative's published roadmap of July 2024 had proposed.",
-    source: `${CORE_GETH_HISTORY_URL}#this-repository`,
+    source: CORE_GETH_ABOUT_URL,
   },
   {
     when: "End of 2024",

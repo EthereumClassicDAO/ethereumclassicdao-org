@@ -5,7 +5,6 @@ import {
   CORE_GETH_DISCOVERY_FLAG_URL,
   CORE_GETH_DOWNLOADS_URL,
   CORE_GETH_LATEST_RELEASE_URL,
-  CORE_GETH_MIGRATION_URL,
   CORE_GETH_UPGRADE_URL,
   FUKUII_REPO_URL,
   FUKUII_STATUS,
@@ -17,10 +16,10 @@ const featuredClient = {
   name: "Core-Geth",
   language: "Go",
   description:
-    "The recommended client for Ethereum Classic: a go-ethereum derivative released and maintained in the ethereumclassic organization. Not native, and not a plugin. Run the v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code.",
+    "The recommended client for Ethereum Classic: a go-ethereum downstream released and maintained in the ethereumclassic organization. Not native, and not a plugin. Run the v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code.",
   href: CORE_GETH_LATEST_RELEASE_URL,
   status: "Recommended",
-  tag: "go-ethereum derivative",
+  tag: "go-ethereum downstream",
 };
 
 const secondaryClients = [
@@ -52,7 +51,7 @@ export function ClientsSection() {
               Client Implementations
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Core-Geth is the recommended client, a go-ethereum derivative
+              Core-Geth is the recommended client, a go-ethereum downstream
               released and maintained in the ethereumclassic GitHub organization.
               Fukuii, an execution client in Scala 3 that Chippr Robotics LLC
               maintains as a continuation of IOHK&rsquo;s Mantis, is an
@@ -85,13 +84,15 @@ export function ClientsSection() {
                 {featuredClient.description}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                Every node still on a v1.12 release should move to the v1.13
-                line:{" "}
+                Every v1.12 release ships known-vulnerable code, and one of those
+                flaws was exploited against the Core-Geth v1.12 bootnodes in March
+                2026, so every node still on a v1.12 release should move to the
+                v1.13 line:{" "}
                 <Cite href={CORE_GETH_UPGRADE_URL}>Downloads on coregeth.com</Cite>{" "}
-                has the commands and checksums, and the{" "}
-                <Cite href={CORE_GETH_MIGRATION_URL}>migration guide</Cite> has
-                the steps, including the required P2P node key rotation. A v1.12
-                node that cannot move yet can{" "}
+                has the steps for each platform, with the commands, the checksums
+                and the P2P node key rotation, which is required because
+                CVE-2026-26315 leaks bits of that key. A v1.12 node that cannot
+                move yet can{" "}
                 <Cite href={CORE_GETH_DISCOVERY_FLAG_URL}>
                   add the{" "}
                   <code className="whitespace-nowrap font-mono">--discovery.dns</code>{" "}

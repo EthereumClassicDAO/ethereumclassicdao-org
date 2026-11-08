@@ -72,7 +72,7 @@ Brand green inverts between themes (`#007a53` light, `#00ffae` dark), so
   from its own rows.
 - Activation is targeted for 2027 and its block is TBD. The countdown's target is a
   placeholder, never an activation date.
-- Core-Geth is the recommended client, a go-ethereum derivative maintained in the
+- Core-Geth is the recommended client, a go-ethereum downstream maintained in the
   `ethereumclassic` organization: run the v1.13 line. Fukuii is an alternative to
   try, in alpha, maintained by Chippr Robotics LLC as the continuation of IOHK's
   Mantis client; describe it from its maintainers' pages, never as "native" or

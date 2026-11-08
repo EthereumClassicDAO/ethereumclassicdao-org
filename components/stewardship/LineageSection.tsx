@@ -6,7 +6,7 @@ import {
   COOPERATIVE_STATUS,
   CORE_GETH_ABOUT_URL,
   CORE_GETH_AUDIT_URL,
-  CORE_GETH_HISTORY_URL,
+  CORE_GETH_SECURITY_URL,
 } from "@/lib/network-links";
 import { MAINTENANCE_RECORD } from "@/lib/maintenance-record";
 
@@ -140,12 +140,11 @@ export function LineageSection() {
 
           <FadeIn delay={280}>
             <p className="mt-8 text-sm text-[var(--text-muted)]">
-              The full account, with the commit and release behind each step, is
-              in{" "}
-              <Cite href={CORE_GETH_HISTORY_URL}>Core-Geth&rsquo;s project history</Cite>,
-              and the{" "}
-              <Cite href={CORE_GETH_ABOUT_URL}>About page on coregeth.com</Cite>{" "}
-              sets out the same lineage.
+              The full account is on coregeth.com: the{" "}
+              <Cite href={CORE_GETH_ABOUT_URL}>About page</Cite> sets out the same
+              lineage, and the{" "}
+              <Cite href={CORE_GETH_SECURITY_URL}>security page</Cite> dates every
+              release from v1.12.20 on.
             </p>
           </FadeIn>
         </div>
