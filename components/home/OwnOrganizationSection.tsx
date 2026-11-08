@@ -12,7 +12,7 @@ export function OwnOrganizationSection() {
         <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2 id="own-organization-heading" className="text-3xl font-bold tracking-tight">
-              Kept in the Project&rsquo;s Own Organization
+              Kept in the ethereumclassic Organization
             </h2>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--text-muted)]">
               Every repository in the ethereumclassic organization has more than

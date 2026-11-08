@@ -18,7 +18,7 @@ ethereumclassic.net is the domain for these public goods. The peer discovery tre
 
 Security and operator contact, for mining pools, exchanges and service providers: security@ethereumclassic.net. A person answers it: one of the core developers who maintain this work.
 
-## Kept in the Project's Own Organization
+## Kept in the ethereumclassic Organization
 
 Every repository in the ethereumclassic organization has more than one admin and more than one maintainer, so no single person or employer is a point of failure. The repositories stay where they are no matter who maintains or funds them, so the software Ethereum Classic runs on belongs to the network rather than to whoever is paying for it that year (https://coregeth.com/sponsor/). Every change reaches the client's main branch through a pull request that needs an approving review and the project's required checks: https://github.com/ethereumclassic/core-geth/blob/main/.github/CONTRIBUTING.md
 

@@ -15,7 +15,7 @@ export function OlympiaPointerSection() {
               Olympia
             </p>
             <h2 id="olympia-pointer-heading" className="mt-2 text-3xl font-bold tracking-tight">
-              A Proposed Upgrade
+              An Upgrade in Development
             </h2>
             <p className="mt-4">
               <span className="badge-pending">{OLYMPIA_STATUS}</span>
