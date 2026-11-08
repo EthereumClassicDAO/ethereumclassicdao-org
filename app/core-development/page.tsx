@@ -300,9 +300,9 @@ const upgrades: Upgrade[] = [
     ecip: "ECIP-1110",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1110",
     eips: [],
-    keyChanges: ["ECBP-1100 default set to off", "Chain scoring returns to linear total difficulty", "--mess and --mess=false override either default"],
+    keyChanges: ["Recommends shipping MESS off", "Chain scoring returns to linear total difficulty", "--mess and --mess=false override either default"],
     description:
-      "ECBP-1110 set the ECBP-1100 default to off at the Spiral block, after a surge of hashrate in 2023. MESS had been a temporary patch against an adjacent Proof-of-Work chain, Ethereum mainnet before its move to Proof-of-Stake, whose hashrate dwarfed Ethereum Classic's. A Core-Geth release ships one of the two defaults, ECBP-1100's (on) or ECBP-1110's (off from this block), and --mess or --mess=false overrides it. Every node in a fleet should carry the same setting.",
+      "ECBP-1110 recommends that clients ship MESS off from the Spiral block, after a surge of hashrate in 2023. MESS had been a temporary patch against an adjacent Proof-of-Work chain, Ethereum mainnet before its move to Proof-of-Stake, whose hashrate dwarfed Ethereum Classic's. Like ECBP-1100, it is a best practice rather than a consensus rule: MESS changes which of two competing chains a node prefers, never whether a block is valid. A Core-Geth release ships one of the two defaults, ECBP-1100's (on) or ECBP-1110's (off from this block), and --mess or --mess=false overrides it. v1.13.0 ships MESS on, on Ethereum Classic and Mordor, because every v1.12 node on the network carried severe vulnerabilities when it was released, and v1.13.1 turns it off by default again. Every node in a fleet should carry the same setting.",
     status: "complete",
   },
   {
