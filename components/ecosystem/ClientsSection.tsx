@@ -1,11 +1,9 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
-import { Cite } from "@/components/ui/Cite";
+import { V12MoveNote } from "@/components/ui/V12MoveNote";
 import {
-  CORE_GETH_DISCOVERY_FLAG_URL,
   CORE_GETH_DOWNLOADS_URL,
   CORE_GETH_LATEST_RELEASE_URL,
-  CORE_GETH_UPGRADE_URL,
   FUKUII_REPO_URL,
   FUKUII_STATUS,
   PLUGINS_STATUS,
@@ -16,7 +14,7 @@ const featuredClient = {
   name: "Core-Geth",
   language: "Go",
   description:
-    "The recommended client for Ethereum Classic: a go-ethereum downstream released and maintained in the ethereumclassic organization. Not native, and not a plugin. Run the v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code.",
+    "The recommended client for Ethereum Classic: a go-ethereum downstream released and maintained in the ethereumclassic organization. Run the v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code.",
   href: CORE_GETH_LATEST_RELEASE_URL,
   status: "Recommended",
   tag: "go-ethereum downstream",
@@ -83,25 +81,7 @@ export function ClientsSection() {
               <p className="mt-4 text-base leading-relaxed text-[var(--text-muted)]">
                 {featuredClient.description}
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                Every v1.12 release ships known-vulnerable code, and one of those
-                flaws was exploited against the Core-Geth v1.12 bootnodes in March
-                2026, so every node still on a v1.12 release should move to the
-                v1.13 line:{" "}
-                <Cite href={CORE_GETH_UPGRADE_URL}>Downloads on coregeth.com</Cite>{" "}
-                has the steps for each platform, with the commands, the checksums
-                and the P2P node key rotation, which is required because
-                CVE-2026-26315 leaks bits of that key. A v1.12 node that cannot
-                move yet can{" "}
-                <Cite href={CORE_GETH_DISCOVERY_FLAG_URL}>
-                  add the{" "}
-                  <code className="whitespace-nowrap font-mono">--discovery.dns</code>{" "}
-                  flag
-                </Cite>{" "}
-                to read the ethereumclassic organization&rsquo;s peer discovery
-                lists, a small step that closes none of the flaws the audits
-                found in the v1.12 line.
-              </p>
+              <V12MoveNote className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]" />
               <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
                 <a
                   href={featuredClient.href}
@@ -109,7 +89,7 @@ export function ClientsSection() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--brand-green-hover)]"
                 >
-                  Get the current release →
+                  Get the latest release →
                 </a>
                 <a
                   href={CORE_GETH_DOWNLOADS_URL}

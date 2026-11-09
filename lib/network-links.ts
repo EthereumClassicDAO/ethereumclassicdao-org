@@ -8,7 +8,7 @@ export const ETC_ORG_URL = "https://github.com/ethereumclassic";
 
 // Core-Geth
 export const CORE_GETH_REPO_URL = `${ETC_ORG_URL}/core-geth`;
-/** Always resolves to the current release. */
+/** Always resolves to the latest release. */
 export const CORE_GETH_LATEST_RELEASE_URL = `${CORE_GETH_REPO_URL}/releases/latest`;
 export const CORE_GETH_RELEASES_URL = `${CORE_GETH_REPO_URL}/releases`;
 export const CORE_GETH_HOMEPAGE_URL = "https://coregeth.com";
@@ -22,10 +22,12 @@ export const CORE_GETH_SECURITY_URL = `${CORE_GETH_HOMEPAGE_URL}/security/`;
 export const CORE_GETH_ABOUT_URL = `${CORE_GETH_HOMEPAGE_URL}/about/`;
 /** Each platform's release files, with their checksums and attestation checks. */
 export const CORE_GETH_DOWNLOADS_URL = `${CORE_GETH_HOMEPAGE_URL}/downloads/`;
-/** Moving a v1.12 node to the v1.13 line. */
-export const CORE_GETH_UPGRADE_URL = `${CORE_GETH_DOWNLOADS_URL}#upgrade`;
-/** The discovery flag, for a v1.12 node that cannot move yet. */
-export const CORE_GETH_DISCOVERY_FLAG_URL = `${CORE_GETH_DOWNLOADS_URL}#discovery-flag`;
+/** Moving a v1.12 node to the v1.13 line, one step at a time on each platform. */
+export const CORE_GETH_MIGRATE_URL = `${CORE_GETH_HOMEPAGE_URL}/guides/migrate/`;
+/** The migration guide's check of what a node runs, with the resync for a release older than v1.12.17. */
+export const CORE_GETH_MIGRATE_CHECK_URL = `${CORE_GETH_MIGRATE_URL}#check`;
+/** Keeping a v1.12 node that cannot move yet finding peers. */
+export const CORE_GETH_DISCOVERY_GUIDE_URL = `${CORE_GETH_HOMEPAGE_URL}/guides/discovery/`;
 /** How a change reaches the client's main branch. */
 export const CORE_GETH_REVIEW_POLICY_URL = `${CORE_GETH_REPO_URL}/blob/main/.github/CONTRIBUTING.md`;
 

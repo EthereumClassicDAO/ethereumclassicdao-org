@@ -2,12 +2,10 @@ import Link from "next/link";
 import { ArrowRight, ExternalLink, Mail } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
-import { Cite } from "@/components/ui/Cite";
+import { V12MoveNote } from "@/components/ui/V12MoveNote";
 import {
-  CORE_GETH_DISCOVERY_FLAG_URL,
   CORE_GETH_DOWNLOADS_URL,
   CORE_GETH_LATEST_RELEASE_URL,
-  CORE_GETH_UPGRADE_URL,
   SECURITY_EMAIL,
 } from "@/lib/network-links";
 
@@ -25,34 +23,18 @@ export function RunANodeSection() {
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
                   Core-Geth is the recommended client for Ethereum Classic: run
-                  the v1.13 line. Take the current release from
-                  ethereumclassic/core-geth; the latest-release link always
-                  resolves to it. Releases from the v1.13 line onward are
+                  the v1.13 line. Take the latest release from
+                  ethereumclassic/core-geth; the Latest release link below
+                  always resolves to it. Releases from the v1.13 line onward are
                   published only from that repository, so a node that follows
                   the previous repository, etclabscore/core-geth, does not see
                   them. Downloads on coregeth.com has the install steps for each
-                  platform, and how to verify that a download was built by the
-                  repository&rsquo;s own release workflow.
+                  platform, and shows how to verify that a download was built by
+                  the repository&rsquo;s own release workflow.
                 </p>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--text-muted)]">
-                  Every v1.12 release ships known-vulnerable code, and one of
-                  those flaws was exploited against the Core-Geth v1.12 bootnodes
-                  in March 2026, so every node still on a v1.12 release should
-                  move to the v1.13 line:{" "}
-                  <Cite href={CORE_GETH_UPGRADE_URL}>Downloads on coregeth.com</Cite>{" "}
-                  has the steps for each platform, with the commands, the
-                  checksums and the P2P node key rotation, which is required
-                  because CVE-2026-26315 leaks bits of that key. A v1.12 node
-                  that cannot move yet can{" "}
-                  <Cite href={CORE_GETH_DISCOVERY_FLAG_URL}>
-                    add the{" "}
-                    <code className="whitespace-nowrap font-mono">--discovery.dns</code>{" "}
-                    flag
-                  </Cite>{" "}
-                  to read the ethereumclassic organization&rsquo;s peer discovery
-                  lists, a small step that closes none of the flaws the audits
-                  found in the v1.12 line.
-                </p>
+                <div className="flex-1">
+                  <V12MoveNote className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]" />
+                </div>
                 <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
                   <a
                     href={CORE_GETH_LATEST_RELEASE_URL}
@@ -60,7 +42,7 @@ export function RunANodeSection() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--text-primary)]"
                   >
-                    Current release <ExternalLink size={13} aria-hidden="true" />
+                    Latest release <ExternalLink size={13} aria-hidden="true" />
                   </a>
                   <a
                     href={CORE_GETH_DOWNLOADS_URL}
@@ -89,11 +71,11 @@ export function RunANodeSection() {
                   Security and Operator Contact
                 </h2>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--text-muted)]">
-                  Mining pools, exchanges and service providers reach the people
-                  who maintain this work at one address. A person answers it: one
-                  of the core developers who maintain the client. It also takes
-                  private vulnerability reports, and subscriptions to release
-                  and security announcements.
+                  Mining pools, exchanges and service providers have one address
+                  for the people who maintain these public goods. A person
+                  answers it: one of the core developers who maintain the client.
+                  The same address takes private vulnerability reports and
+                  subscriptions to release and security announcements.
                 </p>
                 <a
                   href={`mailto:${SECURITY_EMAIL}`}

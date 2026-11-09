@@ -2,18 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
-import { Cite } from "@/components/ui/Cite";
+import { V12MoveNote } from "@/components/ui/V12MoveNote";
 import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 import { ExternalLink } from "lucide-react";
 import { fetchHashrateTHs, fetchAllHashrateHistories } from "@/lib/api/hashrate";
 import { HashrateChart } from "@/components/about/HashrateChart";
 import {
-  CORE_GETH_DISCOVERY_FLAG_URL,
   CORE_GETH_DOCS_URL,
   CORE_GETH_DOWNLOADS_URL,
   CORE_GETH_HOMEPAGE_URL,
   CORE_GETH_LATEST_RELEASE_URL,
-  CORE_GETH_UPGRADE_URL,
   FUKUII_DOCS_URL,
   FUKUII_HOMEPAGE_URL,
   FUKUII_LATEST_RELEASE_URL,
@@ -38,7 +36,7 @@ export const metadata: Metadata = {
     "ETC full node",
     "blockchain client implementation",
     "SNAP sync",
-    "ETChash",
+    "Etchash",
     "ETC node operator",
     "ETC RPC node",
     "Mordor testnet client",
@@ -54,26 +52,8 @@ const clients = [
     role: "Recommended",
     roleTheme: "brand" as const,
     description:
-      "The recommended client for Ethereum Classic: a go-ethereum downstream released and maintained in the ethereumclassic GitHub organization. Not native, and not a plugin. Run the v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code and is built with a supported Go toolchain. Take the current release from ethereumclassic/core-geth, where every release file carries a checksum and a build attestation.",
-    note: (
-      <>
-        Every v1.12 release ships known-vulnerable code, and one of those flaws
-        was exploited against the Core-Geth v1.12 bootnodes in March 2026, so
-        every node still on a v1.12 release should move to the v1.13 line:{" "}
-        <Cite href={CORE_GETH_UPGRADE_URL}>Downloads on coregeth.com</Cite> has
-        the steps for each platform, with the commands, the checksums and the
-        P2P node key rotation, which is required because CVE-2026-26315 leaks
-        bits of that key. A v1.12 node that cannot move yet can{" "}
-        <Cite href={CORE_GETH_DISCOVERY_FLAG_URL}>
-          add the{" "}
-          <code className="whitespace-nowrap font-mono">--discovery.dns</code>{" "}
-          flag
-        </Cite>{" "}
-        to read the ethereumclassic organization&rsquo;s peer discovery lists, a
-        small step that closes none of the flaws the audits found in the v1.12
-        line.
-      </>
-    ),
+      "The recommended client for Ethereum Classic: a go-ethereum downstream released and maintained in the ethereumclassic GitHub organization. Run the v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code and is built with a supported Go toolchain. Take the latest release from ethereumclassic/core-geth, where every release file carries a checksum and a build attestation.",
+    note: <V12MoveNote className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]" />,
     websiteUrl: CORE_GETH_HOMEPAGE_URL,
     downloadsUrl: CORE_GETH_DOWNLOADS_URL,
     docsUrl: CORE_GETH_DOCS_URL,
@@ -225,11 +205,7 @@ export default async function ClientsPage() {
                   <p className="mt-4 text-sm leading-relaxed text-[var(--text-muted)]">
                     {client.description}
                   </p>
-                  {client.note && (
-                    <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                      {client.note}
-                    </p>
-                  )}
+                  {client.note}
 
                   <div className="mt-4 flex flex-wrap gap-3">
                     {client.websiteUrl && (
@@ -258,7 +234,7 @@ export default async function ClientsPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-sm text-[var(--brand-green)] transition hover:opacity-80"
                     >
-                      Releases <ExternalLink size={12} />
+                      Latest release <ExternalLink size={12} />
                     </a>
                     <a
                       href={client.docsUrl}
