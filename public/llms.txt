@@ -1,70 +1,70 @@
 # Ethereum Classic DAO
 
-> Ethereum Classic DAO LLC, formed in Wyoming in May 2025, is the standing legal entity that maintains and funds Ethereum Classic's public goods (the Core-Geth client, the network's bootnodes and its peer discovery lists) as the funder of last resort. Ethereum Classic's core developers and community contributors do the day-to-day work, in the ethereumclassic GitHub organization. Ethereum Classic is the only Proof-of-Work blockchain with native EVM smart contracts and the largest such network by hashrate: a digital commodity candidate under the CLARITY Act (Senate Banking Committee passed 15-9, May 2026, Senate floor pending), a decentralized asset under MiCA, and a recognized crypto-asset on Japan's FSA Green List. Olympia, a proposed upgrade whose ECIPs are drafts, is described in the last section.
+> Ethereum Classic DAO LLC, formed in Wyoming in May 2025, is the standing legal entity that maintains and funds Ethereum Classic's public goods (the Core-Geth client, the network's bootnodes and its peer discovery lists) as the funder of last resort. Ethereum Classic's core developers and community contributors do the day-to-day work, in the ethereumclassic GitHub organization. Ethereum Classic is the only mature Proof-of-Work blockchain with native smart contracts: a digital commodity candidate under the CLARITY Act (passed by the House and the Senate Banking Committee; a Senate cloture vote failed 49-50 on September 15, 2026), an asset with no issuer under MiCA, and a listed crypto-asset on Japan's JVCEA Green List. Olympia, a proposed upgrade whose ECIPs are drafts, is described in the last section.
 
 ## Public Goods
 
-The software and services Ethereum Classic nodes depend on, kept in public repositories in the ethereumclassic GitHub organization (https://github.com/ethereumclassic). Ethereum Classic's core developers and community contributors do the day-to-day work, and Ethereum Classic DAO LLC maintains and funds that work as the funder of last resort. Page: https://ethereumclassicdao.org/public-goods
+The public goods Ethereum Classic relies on, kept in public repositories in the ethereumclassic GitHub organization (https://github.com/ethereumclassic). Ethereum Classic's core developers and community contributors do the day-to-day work, and today Ethereum Classic DAO maintains and funds these public goods as the funder of last resort. Page: https://ethereumclassicdao.org/public-goods
 
-- **Core-Geth** (maintained): the recommended execution client, a go-ethereum downstream. Current release: https://github.com/ethereumclassic/core-geth/releases/latest. Documentation: https://docs.coregeth.com/. Upstream go-ethereum no longer supports Ethereum Classic, so its consensus rules are maintained in this repository. Releases from the v1.13 line onward are published only there. Every v1.12 release ships known-vulnerable code, and one of those flaws was exploited against the Core-Geth v1.12 bootnodes in March 2026, so every node still on a v1.12 release should move to the v1.13 line: https://coregeth.com/downloads/#upgrade has the steps for each platform, with the commands, the checksums and the P2P node key rotation, which is required because CVE-2026-26315 leaks bits of that key. A v1.12 node that cannot move yet can add the --discovery.dns flag (https://coregeth.com/downloads/#discovery-flag), a small step that closes none of the flaws the audits found in the v1.12 line. Repository: https://github.com/ethereumclassic/core-geth
-- **Peer discovery lists** (maintained): signed DNS lists of Ethereum Classic and Mordor nodes, rebuilt every night from a crawl of the network and committed to https://github.com/ethereumclassic/discv4-dns-lists. Published under ethereumclassic.net, ethclassic.net and ethereumclassic.network.
+- **Core-Geth** (maintained): the recommended execution client, a go-ethereum downstream. Latest release: https://github.com/ethereumclassic/core-geth/releases/latest. Documentation: https://docs.coregeth.com/. Upstream go-ethereum no longer supports Ethereum Classic, so its consensus rules are maintained in this repository. Releases from the v1.13 line onward are published only there. Every v1.12 release ships known-vulnerable code, and one of those flaws was exploited against the Core-Geth v1.12 bootnodes in March 2026, so every node still on a v1.12 release should move to the v1.13 line. The migration guide on coregeth.com (https://coregeth.com/guides/migrate/) takes a node on v1.12.17 or later through the move one step at a time on each platform: its chain data carries over, and its P2P node key is rotated, which is required because CVE-2026-26315 leaks bits of that key. If a step goes wrong, the guide's rollback puts the v1.12 binary back only while the cause is found, and its last step deletes that binary once the node is stable. A v1.12 node that cannot move yet can read the peer discovery lists and bootnodes the v1.13 line ships (https://coregeth.com/guides/discovery/), a small step that closes none of the flaws the audits found in the v1.12 line. Neither route works for a node on a release older than v1.12.17. Those releases do not schedule the Spiral upgrade, so such a node left the Ethereum Classic network at block 19,250,000, on February 5, 2024, and has followed an obsolete chain since. It cannot move in place, and resyncing is its only way back: remove the chain database, rename the P2P node key and install a v1.13 release, which syncs the chain again. The migration guide's Check what your node runs gives those steps: https://coregeth.com/guides/migrate/#check. Repository: https://github.com/ethereumclassic/core-geth
+- **Peer discovery lists** (maintained): signed DNS lists of nodes on Ethereum Classic and on Mordor, its testnet, rebuilt every night from a crawl of the network and committed to https://github.com/ethereumclassic/discv4-dns-lists. Published under ethereumclassic.net, ethclassic.net and ethereumclassic.network.
 - **Bootnodes** (running): the entry points a new node contacts first, for Ethereum Classic and for Mordor, run by the Core-Geth maintainers and built into the client.
 - **Public JSON-RPC** (in preparation): endpoints for Ethereum Classic and Mordor at rpc.ethereumclassic.net, run from https://github.com/ethereumclassic/public-rpc so that more than one maintainer can rebuild or move the service. ChainList lists the endpoints Ethereum Classic operators publish: https://chainlist.org/chain/61 (mainnet) and https://chainlist.org/chain/63 (Mordor).
 - **Network dashboard** (in preparation): a public view of Ethereum Classic's network health at nodes.ethereumclassic.net, served from the organization's own infrastructure alongside the public endpoints. Repository: https://github.com/ethereumclassic/nodes
 - **Block explorer** (in preparation): a public explorer for Ethereum Classic and Mordor, served from the organization's own infrastructure. Repository: https://github.com/ethereumclassic/explorer
-- **Community social media** (in preparation): the project's social media, run by the community through twitter-together: posts are proposed and reviewed as pull requests. Repository: https://github.com/ethereumclassic/twitter-together
+- **Community social media** (in preparation): Ethereum Classic's social media, run by the community through twitter-together, with posts proposed and reviewed as pull requests. Repository: https://github.com/ethereumclassic/twitter-together
 
-ethereumclassic.net is the domain for these public goods. The peer discovery trees are published under it, as under ethclassic.net and ethereumclassic.network, and it carries the security@ethereumclassic.net and donations@ethereumclassic.net addresses.
+ethereumclassic.net is the domain for these public goods. The peer discovery lists are published under it, and also under ethclassic.net and ethereumclassic.network, and it carries the security@ethereumclassic.net and donations@ethereumclassic.net addresses.
 
-Security and operator contact, for mining pools, exchanges and service providers: security@ethereumclassic.net. A person answers it: one of the core developers who maintain this work.
+Security and operator contact, for mining pools, exchanges and service providers: security@ethereumclassic.net. A person answers it: one of the core developers who maintain the client.
 
 ## Kept in the ethereumclassic Organization
 
 Every repository in the ethereumclassic organization has more than one admin and more than one maintainer, so no single person or employer is a point of failure. The repositories stay where they are no matter who maintains or funds them, so the software Ethereum Classic runs on belongs to the network rather than to whoever is paying for it that year (https://coregeth.com/sponsor/). Every change reaches the client's main branch through a pull request that needs an approving review and the project's required checks: https://github.com/ethereumclassic/core-geth/blob/main/.github/CONTRIBUTING.md
 
-Before you move a node, a pool or an application to a new source of software or data, confirm which organization publishes it: https://docs.coregeth.com/etc-cooperative-transition/
+Before you move a node, a pool or an application to a new source of software or data, confirm which organization publishes it. The Core-Geth documentation's ETC Cooperative transition page lists where each service continues: https://docs.coregeth.com/etc-cooperative-transition/
 
 ## The Maintenance Record
 
-How Core-Geth's maintenance reached the ethereumclassic organization, and the work the DAO has funded since it was formed. The full account is on coregeth.com: where Core-Geth came from, and who carries it (https://coregeth.com/about/), and every release and audit (https://coregeth.com/security/).
+How Core-Geth's maintenance reached the ethereumclassic organization, and the work Ethereum Classic DAO has funded since its formation. The full account is on coregeth.com: where Core-Geth came from, and who carries it (https://coregeth.com/about/), and every release and audit (https://coregeth.com/security/).
 
 - **June 2024:** Core-Geth v1.12.20 is released from etclabscore/core-geth, the last stable release before a 21-month gap in security maintenance.
 - **December 21, 2024:** ethereumclassic/core-geth is created from etclabscore/core-geth, the move the ETC Cooperative's published roadmap of July 2024 had proposed.
 - **End of 2024:** The ETC Cooperative enters maintenance mode. Its 2024 retrospective states that "it will be up to other stakeholders to take on any required maintenance of the ETC client".
 - **May 2025:** Ethereum Classic DAO LLC is formed in Wyoming.
-- **February 2026:** Ethereum Classic core developers resume Core-Geth maintenance in ethereumclassic/core-geth, funded by the DAO as the funder of last resort: patching the outstanding vulnerabilities, moving to a supported Go toolchain, and rebuilding the release pipeline.
+- **February 2026:** Ethereum Classic core developers resume Core-Geth maintenance in ethereumclassic/core-geth, funded by Ethereum Classic DAO as the funder of last resort: patching the outstanding vulnerabilities, moving to a supported Go toolchain, and rebuilding the release pipeline.
 - **February and March 2026:** Ethereum Classic core developers disclose their security work on the v1.12 line privately to the etclabscore/core-geth maintainers, and the v1.12.21 and v1.12.22 emergency releases are cut from that work on March 18 and 28, 2026. The same fixes are published in ethereumclassic/core-geth as 27 pull requests on March 20 and 21, 2026.
-- **August 28, 2026:** The bootnodes and the peer discovery lists move to the ethereumclassic organization: ethereumclassic/discv4-dns-lists is created to publish the lists, the first trees are published on September 10, 2026, and v1.13.0 ships with three Ethereum Classic and two Mordor bootnodes run by the Core-Geth maintainers.
-- **September 14, 2026:** Ethereum Classic core developers release the v1.13 line, the 2026 modernization and the first release line published from ethereumclassic/core-geth, which reads the new discovery lists by default.
+- **August 28, 2026:** The bootnodes and the peer discovery lists move to the ethereumclassic organization. ethereumclassic/discv4-dns-lists is created to publish the lists, and its first lists are published on September 10, 2026. The new bootnodes, three for Ethereum Classic and two for Mordor, are run by the Core-Geth maintainers and ship in v1.13.0.
+- **September 14, 2026:** Ethereum Classic core developers release the v1.13 line, the 2026 modernization of Core-Geth. It is the first release line published from ethereumclassic/core-geth, and it reads the new discovery lists by default.
 
 ## Stewardship
 
 Page: https://ethereumclassicdao.org/stewardship
 
-Ethereum Classic's core developers and community contributors do the day-to-day work on these public goods. Ethereum Classic DAO LLC is the standing legal entity that maintains and funds these public goods today as the funder of last resort: the client's development, the bootnode servers, and the domains the services are published under. Its commitment is that the network is never again left without security maintenance. It does not control or lead Ethereum Classic, and it is not the only organization that can fund this work. What the work needs is steady funding from the stakeholders who depend on it, so that the network's critical software no longer rests on a single backer. Who maintains Core-Geth and how to sponsor it: https://coregeth.com/sponsor/
+Ethereum Classic's core developers and community contributors do the day-to-day work on these public goods. Ethereum Classic DAO is the standing legal entity that maintains and funds these public goods today as the funder of last resort, paying for the client's development, the bootnode servers and the domains the services are published under. Its commitment is that the network is never again left without security maintenance. It does not control or lead Ethereum Classic, and it is not the only organization that can fund this work. What the work needs is steady funding from the stakeholders who depend on it, so that the network's critical software no longer rests on a single backer. Who maintains Core-Geth and how to sponsor it: https://coregeth.com/sponsor/
 
 Until this arrangement, the work moved each time the organization carrying it closed or left:
 
 - **ETCDEV** (funded this work 2016 to 2018): supported Ethereum Classic's first clients, Classic Geth among them. Closed in 2018.
 - **ETC Labs** (2019 to 2021): with ETC Core, led development through the fork and rebrand of Multi-Geth to Core-Geth. Left the ecosystem in 2021.
 - **ETC Cooperative** (2017 to 2026): funded and maintained Core-Geth from January 2022, and maintained other Ethereum Classic services. In maintenance mode since the end of 2024, as its 2024 retrospective states, and due to dissolve.
-- **Ethereum Classic DAO** (2025 to present): launched May 2025, the standing legal entity that maintains and funds these public goods as the funder of last resort. It took up Core-Geth's maintenance in February 2026, with the day-to-day work done by Ethereum Classic's core developers.
+- **Ethereum Classic DAO** (2025 to present): formed in May 2025, the standing legal entity that maintains and funds these public goods as the funder of last resort. Ethereum Classic DAO took up Core-Geth's maintenance in February 2026, with the day-to-day work done by Ethereum Classic's core developers.
 
 Each span is the years that organization funded Ethereum Classic public goods, which is longer than the years it funded Core-Geth.
 
-ethereumclassic/core-geth was created from etclabscore/core-geth on December 21, 2024, the move the ETC Cooperative's published roadmap of July 2024 had proposed. The Cooperative's 2024 retrospective states that "it will be up to other stakeholders to take on any required maintenance of the ETC client". Core-Geth went 21 months without security maintenance, from June 2024 to February 2026, and one of the flaws that gap left open was used against Core-Geth v1.12 bootnodes in March 2026. The v1.13 line, first released on September 14, 2026, is the first release line published from ethereumclassic/core-geth. Full record: https://coregeth.com/about/ and https://coregeth.com/security/
+ethereumclassic/core-geth was created from etclabscore/core-geth on December 21, 2024, the move the ETC Cooperative's published roadmap of July 2024 had proposed. The Cooperative's 2024 retrospective states that "it will be up to other stakeholders to take on any required maintenance of the ETC client". Core-Geth went 21 months without security maintenance, from June 2024 to February 2026, and one of the flaws that gap left open was used against the Core-Geth v1.12 bootnodes in March 2026. The v1.13 line, first released on September 14, 2026, is the first release line published from ethereumclassic/core-geth. Full record: https://coregeth.com/about/ and https://coregeth.com/security/
 
 Ethereum Classic has no protocol-layer funding mechanism for its critical infrastructure or its core developers, so no part of the network's fee or issuance revenue pays for this work. That gap is the reason Olympia was proposed, as the last section describes.
 
-**Sponsorship.** Stakeholders who depend on this infrastructure (mining pools, exchanges and custodians, issuers of Ethereum Classic financial products, mining hardware manufacturers, block explorers and RPC providers) can sponsor it. Sponsors reach the Ethereum Classic core developers and maintainers at donations@ethereumclassic.net. The routes are an invoiced maintenance agreement for organizations, or a direct transfer to an address provided on request, only ever in a reply from that address; if a large transfer is planned, send a small one first and confirm receipt. No donation address is published anywhere. Routes, and where sponsors are credited: https://coregeth.com/sponsor/ (Core-Geth) and https://github.com/ethereumclassic/discv4-dns-lists/blob/main/docs/support.md (peer discovery lists). Sponsorship buys no influence over consensus rules, release content, or what an audit reports, and being credited is not an endorsement of a sponsor's products or services.
+**Sponsorship.** Stakeholders who depend on this infrastructure (mining pools, exchanges and custodians, issuers of Ethereum Classic financial products, mining hardware manufacturers, block explorers and RPC providers) can sponsor it. Sponsors reach the Ethereum Classic core developers and maintainers at donations@ethereumclassic.net. The routes are an invoiced maintenance agreement for organizations, or a direct transfer to an address provided on request, only ever in a reply from that address; if you plan a large transfer, send a small one first and confirm by email that it arrived. No donation address is published anywhere. Routes, and where sponsors are credited: https://coregeth.com/sponsor/ (Core-Geth) and https://github.com/ethereumclassic/discv4-dns-lists/blob/main/docs/support.md (peer discovery lists). Sponsorship buys no influence over consensus rules, release content, or what an audit reports, and being credited is not an endorsement of a sponsor's products or services.
 
 ## About
 
-Ethereum Classic DAO LLC is the standing legal entity that maintains and funds Ethereum Classic's public goods (the Core-Geth client, the network's bootnodes and its peer discovery lists) as the funder of last resort. Ethereum Classic's core developers and community contributors do the day-to-day work in the ethereumclassic GitHub organization, and the DAO does not control or lead Ethereum Classic. It is a Wyoming DAO LLC (Filing ID 2025-001671865). The LLC builds software, ecosystem infrastructure, and hashrate incentives for the world's largest Proof-of-Work smart contract platform, while maintaining active compliance across global regulatory frameworks including MiCA (EU), CLARITY Act (US), GENIUS Act (US), FSA Green List (Japan), FSMA (UK), and VARA (UAE).
+Ethereum Classic DAO is the standing legal entity that maintains and funds Ethereum Classic's public goods (the Core-Geth client, the network's bootnodes and its peer discovery lists) as the funder of last resort. Ethereum Classic's core developers and community contributors do the day-to-day work in the ethereumclassic GitHub organization, and Ethereum Classic DAO does not control or lead Ethereum Classic. It is a Wyoming DAO LLC (Filing ID 2025-001671865).
 
-Ethereum Classic (ETC) is the only Proof-of-Work blockchain with native EVM smart contracts. The frameworks, libraries and IDEs that target Ethereum work with Ethereum Classic: set chain ID 61 (mainnet) or 63 (Mordor testnet), compile for the Shanghai EVM, since current Solidity compiles for a later EVM by default and its code can use opcodes Ethereum Classic does not have, and send legacy transactions, since Ethereum Classic has no EIP-1559 fee market today. Its EVM is the Shanghai set the Spiral upgrade activated in 2024.
+Ethereum Classic (ETC) is the only mature Proof-of-Work blockchain with native smart contracts. The frameworks, libraries and IDEs that target Ethereum work with Ethereum Classic. Set chain ID 61 (mainnet) or 63 (Mordor testnet) and compile for the Shanghai EVM, because current Solidity targets a later EVM by default and code compiled that way can use opcodes Ethereum Classic does not have. Send legacy transactions, because Ethereum Classic has no EIP-1559 fee market today. Its EVM is the Shanghai set the Spiral upgrade activated in 2024.
 
-ETC is recognized across leading global regulatory frameworks in the US, EU, UK, Japan, and UAE — a digital commodity candidate under the CLARITY Act (US), decentralized asset under MiCA (EU), and active compliance across GENIUS Act (US), FSA Green List (Japan), FSMA (UK), and VARA (UAE). Classic USD ($USC), issued by Brale Inc. (NMLS #2376957), is a live proof of GENIUS Act and MiCA-aligned stablecoin deployment on ETC mainnet.
+Ethereum Classic is a digital commodity candidate under the CLARITY Act (US), an asset with no issuer under MiCA (EU) and a listed crypto-asset on Japan's JVCEA Green List. Classic USD ($USC), issued by Brale Inc. (NMLS #2376957), is a live, GENIUS Act-aligned stablecoin on ETC mainnet.
 
 ## Legal Structure
 
@@ -73,30 +73,29 @@ ETC is recognized across leading global regulatory frameworks in the US, EU, UK,
 - **Filing ID:** 2025-001671865
 - **Framework:** Wyoming Decentralized Autonomous Organization Supplement
 - **Registered Agent:** 30 N Gould St Ste R, Sheridan, WY 82801
-- **Regulatory alignment:** MiCA (EU, decentralized asset, in force Dec 2024), CLARITY Act (US, digital commodity candidate, Senate Banking Committee passed 15-9 May 2026, Senate floor pending), GENIUS Act (US, stablecoin platform, signed Jul 2025), FSA Green List (Japan), FSMA (UK, implementation Oct 2027), VARA (UAE)
 
 ## Clients
 
 The client pages, which hold across network upgrades: https://ethereumclassicdao.org/clients
 
-- **Core-Geth** (coregeth.com): the recommended client, a go-ethereum downstream released and maintained for Ethereum Classic in the ethereumclassic GitHub organization. Not native, and not a plugin. Run the v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code and is built with a supported Go toolchain; every v1.12 release ships known-vulnerable code. Current release: https://github.com/ethereumclassic/core-geth/releases/latest. Downloads: https://coregeth.com/downloads/. Documentation: https://docs.coregeth.com/. Releases from the v1.13 line onward are published only from ethereumclassic/core-geth, so a node tracking the previous repository (etclabscore/core-geth) does not see them. Every release file carries a checksum and a build attestation.
+- **Core-Geth** (coregeth.com): the recommended client, a go-ethereum downstream released and maintained for Ethereum Classic in the ethereumclassic GitHub organization. Run the v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code and is built with a supported Go toolchain; every v1.12 release ships known-vulnerable code. Latest release: https://github.com/ethereumclassic/core-geth/releases/latest. Downloads: https://coregeth.com/downloads/. Documentation: https://docs.coregeth.com/. Releases from the v1.13 line onward are published only from ethereumclassic/core-geth, so a node tracking the previous repository (etclabscore/core-geth) does not see them. Every release file carries a checksum and a build attestation. A node on v1.12.17 or later moves to the v1.13 line with the migration guide: https://coregeth.com/guides/migrate/. A node on a release older than v1.12.17 left the network at the Spiral block and cannot move in place: it resyncs from scratch, as the migration guide's Check what your node runs explains: https://coregeth.com/guides/migrate/#check
 - **Fukuii** (fukuii.com), an alternative in alpha: an EVM-compliant execution client in Scala 3 with pluggable consensus: native Proof-of-Work for Ethereum Classic and Mordor, and the Engine API for post-Merge Ethereum networks, paired with a consensus client. It continues IOHK's Mantis client and is maintained by Chippr Robotics LLC under Apache 2.0. Its maintainers mark it alpha, not yet recommended for production-critical workloads, so it is an alternative to try beside Core-Geth, the recommended client. Latest release: https://github.com/chippr-robotics/fukuii/releases/latest. Documentation: https://docs.fukuii.com. Repository: https://github.com/chippr-robotics/fukuii
 
 ETC plugins for Besu, Erigon, Ethrex, Go-Ethereum, Nethermind and Reth are planned. A plugin is not a client implementation. It adds Ethereum Classic support to a client another project maintains, so that codebase and the decisions about it stay with that project, outside Ethereum Classic's control. A plugin is no substitute for Fukuii, an independent client, or for Core-Geth, a full implementation downstream of go-ethereum.
 
 ## Network Statistics
 
-- Hashrate: the largest Proof-of-Work smart contract network by hashrate; absorbed significant Ethereum mining infrastructure post-Merge. The live figure is published on the site, derived from on-chain block difficulty and the network's measured average block time
+- Hashrate: Ethereum Classic absorbed a significant share of Ethereum's mining infrastructure after the Merge. The live figure is published on the site, derived from on-chain block difficulty and the network's measured average block time
 - Markets: 300+ active markets across 20+ major global exchanges
-- Fiat pairs: ETC/USD, ETC/EUR, ETC/KRW, ETC/TRY, ETC/GBP, ETC/IDR, ETC/INR, ETC/BRL, ETC/NZD, ETC/JPY, ETC/PLN
-- Crypto pairs: ETC/USDC, ETC/USDT, ETC/FDUSD, ETC/BTC, ETC/ETH, ETC/BNB, ETC/LTC, ETC/DOGE, ETC/XRP
+- Fiat pairs include: ETC/USD, ETC/EUR, ETC/KRW, ETC/TRY, ETC/GBP, ETC/IDR, ETC/INR, ETC/BRL, ETC/NZD, ETC/JPY, ETC/PLN
+- Crypto pairs include: ETC/USDC, ETC/USDT, ETC/FDUSD, ETC/BTC, ETC/ETH, ETC/BNB, ETC/LTC, ETC/DOGE, ETC/XRP
 - Clients: Core-Geth (Go, the recommended client; run its v1.13 line) and Fukuii (Scala 3, an alternative to try, in alpha). ETC plugins for upstream clients are planned. A plugin is not a client implementation. It adds Ethereum Classic support to a client another project maintains, so that codebase and the decisions about it stay with that project, outside Ethereum Classic's control. A plugin is no substitute for Fukuii, an independent client, or for Core-Geth, a full implementation downstream of go-ethereum.
-- Network origin: July 30, 2015 (genesis block — oldest EVM-compatible blockchain)
+- Network origin: July 30, 2015 (the genesis block Ethereum Classic shares with Ethereum)
 - Chain IDs: 61 (mainnet), 63 (Mordor testnet)
 
 ## Developer Tooling
 
-- Smart Contract Development: Hardhat, Foundry (forge/cast/anvil; pass --legacy, since Ethereum Classic has no EIP-1559 fee market today, and --evm-version shanghai), Remix IDE, OpenZeppelin Contracts 5.x. Compile for the Shanghai EVM: evmVersion "shanghai" in Hardhat, evm_version = "shanghai" in Foundry
+- Smart Contract Development: Hardhat, Foundry (forge, cast and anvil; pass --evm-version shanghai, and --legacy because Ethereum Classic has no EIP-1559 fee market today), Remix IDE, OpenZeppelin Contracts. Compile for the Shanghai EVM: evmVersion "shanghai" in Hardhat, evm_version = "shanghai" in Foundry
 - Client Libraries: ethers.js v6, viem, web3.py, Alloy, wagmi, RainbowKit, Scaffold-ETH 2, thirdweb SDK. viem and wagmi export chain 61 as `classic`; pass your own RPC transport
 - Wallets: Ledger, Trezor, MetaMask, Trust Wallet, Rabby, Exodus
 - Infrastructure: ChainList (public RPC endpoints: https://chainlist.org/chain/61), Blockscout (explorer and verification: https://etc.blockscout.com), Sourcify (contract verification on Ethereum Classic and Mordor: https://sourcify.dev)
@@ -104,144 +103,154 @@ ETC plugins for Besu, Erigon, Ethrex, Go-Ethereum, Nethermind and Reth are plann
 
 ## Regulatory Framework
 
-Ethereum Classic sits at the intersection of two distinct regulatory trajectories: the digital commodity classification path that Proof-of-Work networks established, and the programmable finance frameworks being built around smart contract platforms. Its regulatory surface is additive — it captures both.
+Ethereum Classic sits at the intersection of two distinct regulatory trajectories: the digital commodity classification path that Proof-of-Work networks established, and the programmable finance frameworks being built around smart contract platforms, and it stands on both.
 
-**CLARITY Act (United States): digital commodity profile, Senate floor pending**
-ETC is positioned for digital commodity classification under the CLARITY Act, which passed the House on July 17, 2025 and the Senate Banking Committee 15-9 on May 14, 2026: the longest-running EVM, no pre-mine, no foundation controlling the protocol, and Proof-of-Work consensus matching Bitcoin's commodity profile. CFTC jurisdiction applies to derivatives; spot markets are governed by existing law.
+**CLARITY Act (United States): digital commodity profile, stalled in the Senate**
+ETC is positioned for digital commodity classification under the CLARITY Act, which passed the House on July 17, 2025 and the Senate Banking Committee 15-9 on May 14, 2026. A Senate cloture vote failed 49-50 on September 15, 2026, so the bill has not passed the Senate. ETC's profile: it continues the original Ethereum chain, running since July 2015, with no foundation controlling the protocol and no central issuer, and Proof-of-Work consensus matching Bitcoin's commodity profile. CFTC jurisdiction applies to derivatives; spot markets are governed by existing law.
 
-**GENIUS Act (United States) — Stablecoin Platform**
-ETC is a qualifying EVM for GENIUS Act-compliant stablecoin deployment. Classic USD ($USC), issued by Brale Inc. (NMLS #2376957), is the live proof: US-regulated, 1:1 USD-backed, deployed on ETC mainnet (contract: 0xDE093684c796204224BC081f937aa059D903c52a). OCC national trust bank charters now include custody of EVM assets.
+**GENIUS Act (United States): stablecoin platform**
+ETC is a working platform for GENIUS Act-aligned stablecoins. Classic USD ($USC), issued by Brale Inc. (NMLS #2376957), is live on ETC mainnet: US-regulated and 1:1 USD-backed (contract: 0xDE093684c796204224BC081f937aa059D903c52a). OCC national trust bank charters include custody of EVM assets.
 
-**MiCA (European Union) — Decentralized Asset**
-No central issuer means ETC is exempt from ART/EMT issuer requirements under MiCA. ETC may be traded by MiCA-licensed CASPs without per-asset approval. Decentralized Proof-of-Work removes any single point of regulatory failure.
+**MiCA (European Union): no issuer**
+Fully applied since December 30, 2024. ETC has no issuer, so MiCA's rules for asset-referenced and e-money tokens do not apply to it, and authorized crypto-asset service providers can offer it without a separate approval for the asset. Decentralized Proof-of-Work leaves no single point of regulatory or operational failure.
 
-**Mined in America Act (United States) — Domestic Mining Infrastructure**
-Establishes a voluntary "Mined in America" certification program for domestic PoW mining operations. Directs NIST and the Manufacturing Extension Partnership to support US manufacturing of mining hardware. Provides certified mining operations with access to existing federal energy and rural development programs. The Treasury procurement channel and capital gains exemption for certified miners are Bitcoin-specific. The certification framework, domestic hardware manufacturing support, and energy program access apply to all Proof-of-Work mining, including the ETChash operations securing Ethereum Classic's network.
+**Mined in America Act (United States): domestic mining infrastructure, a bill**
+A bill introduced in the Senate in March 2026 (S.4251). It would establish a voluntary "Mined in America" certification program for domestic PoW mining operations, direct NIST and the Manufacturing Extension Partnership to support US manufacturing of mining hardware, and give certified mining operations access to existing federal energy and rural development programs. Its Treasury procurement channel and capital gains exemption for certified miners are Bitcoin-specific; the certification framework, the support for domestic hardware manufacturing and the energy program access would apply to all Proof-of-Work mining, including the Etchash operations securing Ethereum Classic's network.
 
-**FSA Green List (Japan)**
-ETC is a recognized crypto-asset on Japan's Financial Services Agency Green List, enabling fast-track listing across all JVCEA-regulated Japanese exchanges.
+**Green List (Japan)**
+ETC is on the Green List kept by the JVCEA, the self-regulatory association of Japan's crypto exchanges, so JVCEA member exchanges can list it on a fast track.
 
 **Global Regulatory Wave (2025–2026)**
-- United States: GENIUS Act + CLARITY Act + OCC Trust Charters + Mined in America Act
-- European Union: MiCA (fully applied Dec 30, 2024; hard cutoff Jul 1, 2026) — CASP licensing, EMT/ART stablecoin rules
-- United Kingdom: FSMA Cryptoassets Regulations 2026 — 14 regulated activities, FCA + BoE dual stablecoin oversight
-- Asia-Pacific: Japan PSA, Hong Kong Stablecoins Ordinance, Australia AFSL, Singapore MAS — 1:1 fiat-backed stablecoins, VASP licensing
-- Middle East: UAE VARA v2.0, CBUAE Payment Tokens, Saudi CMA H2 2026 — AED-pegged stablecoins
-- Emerging Markets: South Africa CASP (300 licenses), Nigeria ISA 2025, Kenya VASP Act 2025
+- United States: GENIUS Act (law), CLARITY Act (stalled in the Senate), OCC trust charters, Mined in America Act (a bill)
+- European Union: MiCA (fully applied Dec 30, 2024; transitional period ended Jul 1, 2026): CASP licensing, EMT/ART stablecoin rules
+- United Kingdom: FSMA Cryptoassets Regulations 2026: 14 regulated activities, FCA and BoE dual stablecoin oversight
+- Asia-Pacific: Japan PSA, Hong Kong Stablecoins Ordinance, Australia AFSL, Singapore MAS: 1:1 fiat-backed stablecoins, VASP licensing
+- Middle East: UAE VARA v2.0, CBUAE Payment Tokens, Saudi CMA H2 2026: AED-pegged stablecoins
+- Emerging Markets: South Africa CASP (300+ licenses), Nigeria ISA 2025, Kenya VASP Act 2025
 
-## Classic USD ($USC) — Regulated Stablecoin on Ethereum Classic
+## Classic USD ($USC): Regulated Stablecoin on Ethereum Classic
 
-Classic USD is the first and leading fiat-backed stablecoin native to Ethereum Classic. It is the live demonstration of GENIUS Act-aligned stablecoin infrastructure on a Proof-of-Work EVM.
+Classic USD is a 1:1 USD-backed ERC-20 stablecoin issued natively on Ethereum Classic by Brale Inc., live on a Proof-of-Work EVM and aligned with the GENIUS Act.
 
 - **Symbol:** $USC (Classic USD)
 - **Backing:** 1:1 USD in segregated, regulated US bank accounts
-- **Issuer:** Brale Inc. — licensed money transmitter (NMLS #2376957)
+- **Issuer:** Brale Inc., a licensed money transmitter (NMLS #2376957)
 - **Redemption:** 1:1 USD, USDC (Circle), or USDP (Paxos)
 - **Network:** Ethereum Classic mainnet (Chain ID 61)
 - **Contract:** 0xDE093684c796204224BC081f937aa059D903c52a
-- **Reserve verification:** Third-party attestations, SOC 2 compliance, multi-sig, timelock
+- **Reserve verification:** third-party attestations; Brale's infrastructure is SOC 2 compliant
+- **Contract security:** ERC-1967 transparent proxy, role-based access control, a pause mechanism, multi-signature requirements and timelock delays for significant contract changes
 - **Website:** classicusd.com
 
-Classic USD proves ETC's EVM handles regulated financial instruments, enables composable DeFi with a USD stable base, and validates ETC as a GENIUS Act-compliant stablecoin platform. Brale's API-accessible platform opens a pathway for additional fiat-backed asset issuers.
+Classic USD shows ETC's EVM carrying regulated financial instruments in production, enables composable DeFi with a USD-stable base, and shows ETC working as a GENIUS Act-aligned stablecoin platform. Brale's API-accessible platform is a pathway for additional fiat-backed issuers.
 
 ## Energy and Proof-of-Work Infrastructure
 
 Ethereum Classic's Proof-of-Work network functions as a global, 24/7, permissionless buyer of last resort for stranded and excess energy worldwide.
 
 **How PoW transforms energy markets:**
-- Grid Stabilization: Miners are uniquely flexible electricity consumers that can ramp up or curtail in seconds. Grid operators contract with miners as demand-response resources.
-- Buyer of Last Resort: Remote hydro, stranded wind farms, and off-peak power plants gain a mobile, shippable, always-on buyer that co-locates with any power source.
+- Grid Stabilization: Miners are unusually flexible electricity consumers that can ramp up or curtail in seconds. Grid operators contract with miners as demand-response resources.
+- Buyer of Last Resort: Remote hydro, stranded wind farms, and off-peak power plants gain a mobile, shippable buyer that can co-locate with any power source.
 - Methane Conversion: Mining at oil field wellheads converts methane (80× more potent than CO₂ over 20 years) to CO₂ via combustion, reducing climate impact while generating economic returns from waste gas.
 - Bootstrapping Remote Grids: PoW mining provides the anchor customer that makes grid construction economically viable in regions lacking transmission infrastructure.
 
 **Stranded energy use cases:** Remote hydroelectric, flared wellhead gas, curtailed wind and solar, off-peak industrial power, landfill gas, geothermal in seismically active regions.
 
-**ETC as energy market:** Mining profitability is a direct function of ETC price × block reward ÷ energy cost. When energy is cheap, mining profitability rises, driving up hash rate and energy consumption. When energy is expensive, miners curtail operations, freeing capacity for other uses. With 300+ exchanges across every time zone, ETC markets offer true 24/7 price discovery, unlike energy futures, which close on weekends. Fiat pairs across major currencies let local energy producers price their output in local terms. ETC/USD spot markets have operated continuously since 2016.
+**ETC as energy market:** Mining profitability is a direct function of the ETC price, the block reward and energy cost. When energy is cheap, mining profitability rises, driving up hashrate and energy consumption. When energy is expensive, miners curtail operations, freeing capacity for other uses. With 300+ markets across every time zone, ETC offers 24/7 price discovery, unlike energy futures, which close on weekends. Fiat pairs across major currencies let local energy producers price their output in local terms. ETC/USD spot markets have operated continuously since 2016.
 
 **Dirty Coin documentary:** Directed by Alana Mediavilla, filmed over three years across four continents from rural Texas to the mountains of Malawi. Documents how Proof-of-Work mining reshapes energy economics and creates socio-economic opportunity in communities the traditional grid has never reached. Winner, Best National Documentary, Puerto Rico Film Festival 2025. See dirtycointhemovie.com.
 
-**Hardware:** GPU mining (retail accessible worldwide, any gaming PC can participate) and purpose-built ETChash ASIC hardware (institutional scale). ETC is the only smart contract platform with both retail GPU accessibility and institutional ASIC infrastructure — the widest mining participation curve of any programmable blockchain. The Mined in America Act establishes a voluntary federal certification program for domestic PoW mining and directs NIST to support domestic ASIC manufacturing — legislative recognition that the US government views Proof-of-Work mining as domestic energy infrastructure worth protecting and growing.
+**Hardware:** GPU mining (sold at retail worldwide; any gaming PC can take part) and Ethash and Etchash ASIC hardware (institutional scale). Together they give ETC a mining participation curve that runs from a single gaming PC to an industrial site. The Mined in America Act, a bill introduced in the Senate in March 2026, would establish a voluntary federal certification program for domestic Proof-of-Work mining and direct NIST to support domestic ASIC manufacturing.
 
 ## Institutional Stewardship
 
 **ETC Cooperative**
-The ETC Cooperative, a US 501(c)(3) non-profit founded in 2017, funded Ethereum Classic's public goods from then on, contributing millions of dollars to the network's client teams and infrastructure, and from January 2022 funded and maintained Core-Geth through the Mystique and Spiral upgrades, alongside the peer discovery lists, the bootnodes and the public JSON-RPC endpoints. It entered maintenance mode at the end of 2024, and the public goods it maintained continue in the ethereumclassic organization, where Ethereum Classic's core developers do the day-to-day work and Ethereum Classic DAO LLC maintains and funds them as the funder of last resort. See Stewardship above.
+The ETC Cooperative, a US 501(c)(3) non-profit founded in 2017, funded Ethereum Classic's public goods from then on, contributing millions of dollars to the network's client teams and infrastructure, and from January 2022 funded and maintained Core-Geth through the Mystique and Spiral upgrades, alongside the peer discovery lists, the bootnodes and the public JSON-RPC endpoints. It entered maintenance mode at the end of 2024, and the public goods it maintained continue in the ethereumclassic organization, where Ethereum Classic's core developers do the day-to-day work and Ethereum Classic DAO maintains and funds those public goods today as the funder of last resort. See Stewardship above.
 
 **Grayscale Investments: Pioneering Institutional Stewardship**
-Grayscale pioneered regulated institutional access to blockchain networks, launching the Grayscale Ethereum Classic Trust (ETCG) in 2018, years before Bitcoin ETFs existed as a product category. Alongside the product launch, Grayscale became a major institutional donor to the ETC Cooperative, indirectly funding the core client development of the network underpinning their product. No other investment product issuer was doing this at the time. What Grayscale was practicing on Ethereum Classic in 2018 is now a recognized trend across the industry: ETF issuers funding protocol development, corporate treasury strategies reinvesting in network ecosystems.
+Grayscale, which pioneered regulated institutional access to blockchain networks, launched the Grayscale Ethereum Classic Trust (ETCG) in 2017, years before Bitcoin ETFs existed as a product category. Alongside it, Grayscale became a major institutional donor to the ETC Cooperative, indirectly funding core client development for the network underpinning its product. Few, if any, investment product issuers were doing this at the time. What Grayscale practiced on Ethereum Classic then is now a recognized trend across the industry: ETF issuers funding protocol development, corporate treasury strategies reinvesting in network ecosystems.
 
 ## Institutional Investment Products
 
 **Grayscale Ethereum Classic Trust (ETCG)**
-- Ticker: ETCG — OTCQX Best Market
-- Established: May 10, 2018
-- Structure: Grantor trust (not a registered investment company). ETC flows directly as trust assets.
+- Ticker: ETCG, on OTCQX Best Market
+- Formed: April 2017 (operations from April 24, 2017); quoted on OTCQX since May 2018
+- Structure: Grantor trust (not a registered investment company). The trust holds ETC directly.
+- SEC reporting: since 2021 (10-K annually, 10-Q quarterly)
 - Custody: Coinbase Custody Trust Company, LLC
 - Sponsor: Grayscale Investments Sponsors, LLC (subsidiary of Digital Currency Group)
-- ETC per share: 0.785 (static, changes only when management fees are paid)
+- ETC per share: 0.785 at the end of 2025 (declines slowly as the sponsor's 2.5% annual fee is paid)
 - Shares outstanding: 13,993,800
 - Available through: Charles Schwab, Fidelity, E*Trade (Morgan Stanley), Interactive Brokers, Webull, and most major US brokerages
 - Data sources: Yahoo Finance (ETCG), Bloomberg (ETCG:US)
 
 **Grayscale Product Lifecycle:**
-1. Closed-End Trust (OTCQX) — private placement, 6-month lockup, no redemption, price deviates from NAV. ETCG completed this stage.
-2. SEC Reporting — 10-K/10-Q filings, IRA/brokerage eligible, institutional distribution. ETCG completed this stage (~2021).
-3. ETF Conversion — exchange-listed, redemption restores NAV parity, broadest access. GBTC converted January 2024. ETHE converted July 2024. ETCG is the natural next candidate.
+1. Closed-End Trust (OTCQX): private placement, 6-month lockup, no redemption, price deviates from NAV. ETCG completed this stage (May 2018).
+2. SEC Reporting: 10-K/10-Q filings, IRA/brokerage eligible, institutional distribution. ETCG completed this stage (2021).
+3. ETF Conversion: exchange-listed, redemption restores NAV parity, broadest access. GBTC converted in January 2024 and ETHE in July 2024. ETCG could follow the same path.
 
 **Precedent:**
-- GBTC: Trust inception Sep 2013 → ETF conversion Jan 2024 → ~$60B AUM
-- ETHE: Trust inception Dec 2017 → ETF conversion Jul 2024 → ~$16B AUM (BlackRock ETHA)
-- ETCG: Trust inception May 2018 → ETF conversion pending
+- GBTC: trust inception Sep 2013; converted to an ETF Jan 2024. The largest spot Bitcoin ETF since: BlackRock IBIT, ~$60B.
+- ETHE: trust inception Dec 2017; converted to an ETF Jul 2024. The largest spot Ethereum ETF since: BlackRock ETHA, ~$16B.
+- ETCG: trust inception Apr 2017; not yet converted.
 
 **Bitcoin ETF issuers with infrastructure to launch ETC products:** BlackRock (IBIT, $60B+), Fidelity (FBTC), VanEck (HODL), Invesco/Galaxy (BTCO), Franklin Templeton (EZBC), Ark Invest/21Shares (ARKB), Bitwise (BITB), Grayscale (GBTC/BTC Mini), Valkyrie (BRRR), WisdomTree (BTCW).
 
-**Ethereum ETF issuers:** BlackRock (ETHA, $16B+), Fidelity (FETH), VanEck (ETHV), Franklin Templeton (EZET), Grayscale (ETHE/ETH Mini), 21Shares.
+**Ethereum ETF issuers:** BlackRock (ETHA, $16B+), Fidelity (FETH), VanEck (ETHV), Franklin Templeton (EZET), Grayscale (ETHE/ETH Mini), 21Shares (CETH).
 
 **Investment thesis:**
-1. Unique regulatory surface: ETC inherits the commodity profile that Bitcoin established for Proof-of-Work networks and the programmable finance frameworks that Ethereum established for smart contract platforms. It is the only network that occupies both positions.
-2. Classic USD ($USC) by Brale is live on ETC mainnet: a 1:1 USD-backed stablecoin issued under US money transmission licensing. First regulated stablecoin on a Proof-of-Work EVM.
-3. Olympia, a proposed upgrade with draft ECIPs: EIP-1559 with the base fee credited to a treasury, and EVM alignment through Glamsterdam. Modern EVM tooling assumes EIP-1559, so integrators would no longer need an Ethereum Classic-specific path for it.
-4. Original EVM, in continuous operation since July 2015. Longer operational track record than any competing smart contract platform.
-5. Post-Merge infrastructure: largest Proof-of-Work network with native smart contracts. Retail GPU access and institutional ASIC hardware available.
-6. 300+ exchanges, fiat currency pairs across major global markets, continuous ETC/USD price discovery since 2016. Liquidity depth required for a credible global stablecoin settlement layer.
+1. Two regulatory paths: ETC inherits the commodity profile that Bitcoin established for Proof-of-Work networks and the programmable finance frameworks that Ethereum established for smart contract platforms, and as the only mature Proof-of-Work blockchain with native smart contracts, it holds both positions.
+2. Classic USD ($USC) by Brale is live on ETC mainnet: a 1:1 USD-backed stablecoin issued under US money transmission licensing and aligned with the GENIUS Act.
+3. Olympia, a proposed upgrade with draft ECIPs: EIP-1559 with the base fee credited to a treasury, and EVM alignment through Fusaka and into Glamsterdam. Modern EVM tooling assumes EIP-1559, so integrators would no longer need an Ethereum Classic-specific path for it.
+4. The original Ethereum chain, in continuous operation since July 2015: as long an operational track record as any smart contract platform.
+5. Post-Merge infrastructure: the only mature Proof-of-Work network with native smart contracts, having absorbed a significant share of Ethereum's mining capacity, with retail GPU access and institutional ASIC hardware.
+6. 300+ markets, fiat currency pairs across major global markets and continuous ETC/USD price discovery since 2016: the liquidity depth a credible global stablecoin settlement layer requires.
 
 ## Core Development Timeline
 
 Ethereum Classic mainnet upgrades from genesis to Spiral (sourced from ECIP-1066). Page: https://ethereumclassicdao.org/core-development
 
-1. **Frontier** (Block 1, 2015-07-30) — EVM genesis. First production smart contract platform.
-2. **Frontier Thawing** (Block 200,000, 2015-09-07) — Gas limit increase, difficulty adjustment.
-3. **Homestead** (Block 1,150,000, 2016-03-14) — EIP-2, EIP-7, EIP-8. First stable release.
-4. **ETH DAO Fork Rejected** (Block 1,920,000, 2016-07-20) — Defining moment. Code is Law upheld. ETC/ETH permanent split.
-5. **Gas Reprice / Tangerine Whistle** (Block 2,500,000, 2016-10-24) — ECIP-1015, EIP-150. IO opcode repricing.
-6. **Die Hard / Spurious Dragon** (Block 3,000,000, 2017-01-13) — ECIP-1010, EIP-155, EIP-160. Chain ID 61, difficulty bomb delayed.
-7. **Gotham / 5M20** (Block 5,000,000, 2017-12-11) — ECIP-1017. Fixed monetary policy, 210,700,000 max supply.
-8. **Defuse Difficulty Bomb** (Block 5,900,000, 2018-05-29) — ECIP-1041. Difficulty bomb permanently removed.
-9. **Atlantis / Byzantium** (Block 8,772,000, 2019-09-12) — ECIP-1054. ZK precompiles, REVERT opcode, receipt status.
-10. **Agharta / Constantinople** (Block 9,573,000, 2020-01-11) — ECIP-1056. Bitwise shift, CREATE2, EXTCODEHASH.
-11. **Phoenix / Istanbul** (Block 10,500,839, 2020-06-01) — ECIP-1088. BLAKE2 precompile, CHAINID opcode.
-12. **MESS Default: On / ECBP-1100** (Block 11,380,000, 2020-10-09) — ECIP-1100. Exponential chain scoring replaces linear total difficulty, raising the cost of low-hashrate reorganization attacks.
-13. **Thanos / ETChash** (Block 11,700,000, 2020-11-28) — ECIP-1099. ETChash algorithm, DAG growth reduction, GPU mining preserved.
-14. **Magneto / Berlin** (Block 13,189,133, 2021-07-23) — ECIP-1103. Typed transactions, access lists, cold storage repricing.
-15. **Mystique / London (partial)** (Block 14,525,000, 2022-02-12): ECIP-1104. Gas refund reduction, 0xEF prefix reserved. ECIP-1104 omitted EIP-1559, as it would conflict with the monetary policy set in ECIP-1017, and the BASEFEE opcode, which depends on it.
-16. **Spiral / Shanghai** (Block 19,250,000, 2024-02-04) — ECIP-1109. PUSH0, warm COINBASE, initcode limit.
-17. **MESS Default: Off / ECBP-1110** (Block 19,250,000, 2024-02-04): ECIP-1110. Recommends that clients ship MESS off from the Spiral block, after a surge of hashrate in 2023. Like ECBP-1100, a best practice rather than a consensus rule: MESS changes which of two competing chains a node prefers, never whether a block is valid. A Core-Geth release ships one of the two defaults, ECBP-1100's (on) or ECBP-1110's (off from this block); `--mess` and `--mess=false` override either, and every node in a fleet should carry the same setting. v1.13.0 ships MESS on, on Ethereum Classic and Mordor, because every v1.12 node on the network carried severe vulnerabilities when it was released, and v1.13.1 turns it off by default again.
+1. **Frontier** (Block 1, 2015-07-30): genesis of the original Ethereum chain, which Ethereum Classic continues. First production smart contract platform.
+2. **Frontier Thawing** (Block 200,000, 2015-09-07): Gas limit increase, difficulty adjustment.
+3. **Homestead** (Block 1,150,000, 2016-03-14): EIP-2, EIP-7, EIP-8. First stable release.
+4. **ETH DAO Fork Rejected** (Block 1,920,000, 2016-07-20): Ethereum Classic rejected the irregular state change that reversed the exploit of The DAO. Code is Law upheld; ETC and ETH permanently split.
+5. **Gas Reprice / Tangerine Whistle** (Block 2,500,000, 2016-10-24): ECIP-1015, EIP-150. IO opcode repricing.
+6. **Die Hard / Spurious Dragon** (Block 3,000,000, 2017-01-13): ECIP-1010, EIP-155, EIP-160. Chain ID 61, difficulty bomb delayed.
+7. **Gotham / 5M20** (Block 5,000,000, 2017-12-11): ECIP-1017. Fixed monetary policy, 210,700,000 max supply.
+8. **Defuse Difficulty Bomb** (Block 5,900,000, 2018-05-29): ECIP-1041. Difficulty bomb permanently removed.
+9. **Atlantis / Byzantium** (Block 8,772,000, 2019-09-12): ECIP-1054. Elliptic curve precompiles for zero-knowledge proof verification, REVERT opcode, receipt status codes.
+10. **Agharta / Constantinople** (Block 9,573,000, 2020-01-11): ECIP-1056. Bitwise shift, CREATE2, EXTCODEHASH.
+11. **Phoenix / Istanbul** (Block 10,500,839, 2020-06-01): ECIP-1088. BLAKE2 precompile, CHAINID opcode.
+12. **MESS Default: On / ECBP-1100** (Block 11,380,000, 2020-10-09): ECIP-1100. MESS (Modified Exponential Subjective Scoring) requires a competing chain to outweigh the local one by a factor that grows with how far back the two split, raising the cost of low-hashrate reorganization attacks.
+13. **Thanos / Etchash** (Block 11,700,000, 2020-11-28): ECIP-1099. Etchash algorithm, DAG growth reduction, GPU mining preserved.
+14. **Magneto / Berlin** (Block 13,189,133, 2021-07-23): ECIP-1103. Typed transactions, access lists, cold storage repricing.
+15. **Mystique / London (partial)** (Block 14,525,000, 2022-02-12): ECIP-1104. Gas refund reduction, 0xEF prefix reserved. ECIP-1104 left out two of London's changes: EIP-1559, which would conflict with the monetary policy set in ECIP-1017, and the BASEFEE opcode (EIP-3198), which depends on EIP-1559.
+16. **Spiral / Shanghai** (Block 19,250,000, 2024-02-05): ECIP-1109. Shanghai's EVM changes: warm COINBASE access, PUSH0, the initcode size limit and the SELFDESTRUCT deprecation notice. EIP-4399 and EIP-4895, Proof-of-Stake changes, were left out.
+17. **MESS Default: Off / ECBP-1110** (Block 19,250,000, 2024-02-05): ECIP-1110. Recommends that clients ship MESS off from the Spiral block, after a surge of hashrate in 2023. Like ECBP-1100, a best practice rather than a consensus rule: MESS changes which of two competing chains a node prefers, never whether a block is valid. A Core-Geth release ships one of the two defaults, ECBP-1100's (on) or ECBP-1110's (off from this block); `--mess` and `--mess=false` override either, and every node in a fleet should carry the same setting. v1.13.0 ships MESS on, on Ethereum Classic and Mordor, because every v1.12 node on the network carried severe vulnerabilities when it was released, and v1.13.1 turns it off by default again.
 
 Olympia, the proposed next upgrade (ECIP-1111, ECIP-1112 and ECIP-1121; activation block TBD, targeted for 2027), is described in the last section.
 
 ## Web Properties
 
 - ethereumclassicdao.org: this site (institutional)
+- ethereumclassicdao.org/about: Ethereum Classic DAO's work, members and values
 - ethereumclassicdao.org/stewardship: who maintains and funds Ethereum Classic's core software, and how to sponsor it
-- ethereumclassicdao.org/public-goods: Core-Geth, bootnodes, peer discovery lists and public RPC: what is maintained and where
-- ethereumclassicdao.org/clients: Core-Geth (recommended) and Fukuii (an alternative to try, in alpha), with the planned ETC plugins
+- ethereumclassicdao.org/public-goods: what is maintained and where: Core-Geth, the bootnodes, the peer discovery lists and public RPC
 - ethereumclassicdao.org/core-development: the full network upgrade history (ECIP-1066)
+- ethereumclassicdao.org/clients: Core-Geth (recommended) and Fukuii (an alternative to try, in alpha), with the planned ETC plugins
+- ethereumclassicdao.org/ecosystem: building on Ethereum Classic: development tools, chain IDs 61 (mainnet) and 63 (Mordor), public RPC endpoints and explorers
 - ethereumclassicdao.org/regulation: the global regulatory landscape and ETC's positioning
 - ethereumclassicdao.org/environmental-impact: Proof-of-Work energy economics and stranded energy
 - ethereumclassicdao.org/investment-products: the ETCG trust, the ETF lifecycle and institutional access
-- github.com/EthereumClassicDAO: the DAO's public repositories
-- github.com/ethereumclassic: the ethereumclassic GitHub organization: Core-Geth, the discovery lists, the ECIPs
-- coregeth.com: Core-Geth downloads and the v1.12 move, audits, project history and sponsorship
+- ethereumclassicdao.org/olympia: Olympia, a proposed upgrade whose ECIPs are drafts: EVM alignment through Fusaka and into Glamsterdam, and an EIP-1559 base fee credited to a treasury
+- ethereumclassicdao.org/treasury: the Olympia Treasury, as proposed
+- ethereumclassicdao.org/governance: how Olympia DAO would govern the Treasury, as proposed
+- ethereumclassicdao.org/transparency: Ethereum Classic DAO's reports and disclosures: donations received, administrative costs, fiat conversions and proposal execution records
+- ethereumclassicdao.org/contact: the official channels, the security and operator address, and the sponsorship address
+- ethereumclassicdao.org/privacy: the privacy policy: no cookies, and no personal data collected by the site
+- github.com/EthereumClassicDAO: Ethereum Classic DAO's public repositories
+- github.com/ethereumclassic: the ethereumclassic GitHub organization, home of Core-Geth, the discovery lists and the ECIPs
+- coregeth.com: Core-Geth downloads; guides to installing a node, moving a v1.12 node and keeping one finding peers until it moves; audits, project history and sponsorship
 - docs.coregeth.com: Core-Geth documentation
 
 ## Contact
@@ -256,19 +265,19 @@ Wyoming Secretary of State Filing: https://wyobiz.wyo.gov/business/FilingDetails
 
 Status: Proposed · Draft ECIPs · Activation block TBD. Page: https://ethereumclassicdao.org/olympia
 
-Olympia is a proposed upgrade to Ethereum Classic, targeted for mainnet activation in 2027. Its ECIPs are drafts, and the ECIPs repository (https://github.com/ethereumclassic/ECIPs) is the authority on what they specify. It is in development, and neither client's releases are ready for it. As proposed, it would advance the execution layer through Dencun, Pectra and Fusaka, carrying that work into Glamsterdam, and credit the EIP-1559 base fee to a treasury that only on-chain governance could spend, giving this work a funding source in the protocol. The site's countdown runs to December 31, 2027, a placeholder target rather than an activation date, until the activation block is set.
+Olympia is a proposed upgrade to Ethereum Classic, targeted for mainnet activation in 2027. Its ECIPs are drafts, and the ECIPs repository (https://github.com/ethereumclassic/ECIPs) is the authority on what they specify. It is in development, and neither client's releases are ready for it. As proposed, it would advance the execution layer through Dencun, Pectra and Fusaka and carry that work into Glamsterdam. It would also credit the EIP-1559 base fee to a treasury that only on-chain governance could spend, so that the maintenance of Ethereum Classic's public goods could have a funding source in the protocol. The site's countdown runs to December 31, 2027, a placeholder target rather than an activation date, until the activation block is set.
 
 ### What Olympia proposes
 
-- **ECIP-1111, Base Fee Market and Redirection** (at the activation block): Activates EIP-1559 and EIP-3198. Where Ethereum destroys the base fee, Ethereum Classic would credit it, transaction by transaction, to a permanent address held in chain configuration. Block rewards and priority-fee tips are unaffected.
-- **ECIP-1112, Sovereignty Vault** (before the fork): The permanent address at which base-fee revenue would accumulate: a stock OpenZeppelin transparent proxy, deployed and inspectable before the fork commits to it, whose logic can be repaired while the address stands.
-- **ECIP-1113, Olympia DAO Governance and Treasury** (before the fork): Olympia DAO: a Governor built from stock OpenZeppelin modules, the Timelock behind the Treasury proxy, and CoreNFT, a soulbound token carrying one non-delegable vote per member. It is the only route by which the balance at the Sovereignty Vault address could be spent.
-- **ECIP-1114, Olympia Funding Proposal Process** (process): A funding proposal is an ordinary Governor proposal that spends from the Treasury, with five categories and a description convention, and no contract of its own.
+- **ECIP-1111, Base Fee Market and Redirection** (at the activation block): Would activate EIP-1559 and EIP-3198. Where Ethereum destroys the base fee, Ethereum Classic would credit it, transaction by transaction, to a permanent address held in chain configuration. Block rewards and priority-fee tips would be unaffected.
+- **ECIP-1112, Sovereignty Vault** (before the fork): The permanent address at which base-fee revenue would accumulate: a stock OpenZeppelin transparent proxy, deployed and inspectable before the fork commits to it, whose logic could be repaired while the address stands.
+- **ECIP-1113, Olympia DAO Governance and Treasury** (before the fork): Olympia DAO: a Governor built from stock OpenZeppelin modules, the Timelock behind the Treasury proxy, and CoreNFT, a soulbound token carrying one non-delegable vote per member. It would be the only route by which the balance at the Sovereignty Vault address could be spent.
+- **ECIP-1114, Olympia Funding Proposal Process** (process): A funding proposal would be an ordinary Governor proposal that spends from the Treasury, with five categories and a description convention, and no contract of its own.
 - **ECIP-1115, Olympia Miner Security Budget Smoothing** (process): Funding proposals that would pay block producers from the base-fee revenue their blocks generated, spread across a window. No base fee is redirected, and nothing is owed until a proposal passes.
 - **ECIP-1116, Consensus-Layer: Sustainable Network Security Budget via Base Fee Miner Distribution** (a later hard fork): Would pay block producers a smoothed share of base-fee revenue at the consensus layer. It is a separate hard fork after Olympia, scheduled only once ECIP-1115 has demonstrated a curve.
 - **ECIP-1117, Olympia Ecosystem Growth DAOs** (process): Bodies scoped to growing what is built on Ethereum Classic and open to anyone, each funded one season at a time by a funding proposal. Client development, network security and critical infrastructure stay with Olympia DAO.
 - **ECIP-1118, Milestone-Structured Funding for Olympia Funding Proposals** (process): A funding commitment paid in tranches, each its own funding proposal and decided on the work behind it. Nothing is held between tranches.
-- **ECIP-1119, Sanctions Screening for Olympia Funding Proposals** (process): The interface a member votes through screens a proposal's recipient against a sanctions list and shows the result, with no way to vote in favor of a designated address. No contract, oracle or role is involved.
+- **ECIP-1119, Sanctions Screening for Olympia Funding Proposals** (process): The interface a member votes through would screen a proposal's recipient against a sanctions list and show the result, with no way to vote in favor of a designated address. No contract, oracle or role is involved.
 - **ECIP-1121, EVM Alignment Specification (Olympia Hardfork)** (at the activation block): Classifies every execution-layer EIP of Dencun, Pectra, Fusaka and Glamsterdam: adopted at the Olympia block, adopted with a modification, already in force, blocked by a dependency, deferred or excluded.
 
 ### Activation
@@ -276,14 +285,14 @@ Olympia is a proposed upgrade to Ethereum Classic, targeted for mainnet activati
 Olympia is a proposal, targeted for mainnet activation in 2027. Its activation blocks are TBD: ECIP-1121 says they are decided at the Olympia Core Devs Call, and ECIP-1111 is the only document that records them. The order the ECIPs set:
 
 1. The governance contracts deploy on Ethereum Classic as it runs today, in dependency order, with no address predicted or reserved: the Treasury's Timelock behind its proxy, then CoreNFT, then the Governor, which alone is granted the Timelock's roles to propose, execute and cancel. (ECIP-1113 §"Deployment and Activation")
-2. Their security review and multi-client validation on the Mordor testnet complete before the activation block is scheduled, rehearsed while the Treasury holds nothing. (ECIP-1113 §"Audit and Testnet Rollout")
-3. The Treasury's address is published with the network it is on, together with the verified source of every contract at and beneath it, where upgrade authority rests and its full role table, each reproducible from chain state. (ECIP-1112 §"Deployment and Publication")
+2. Their security review and multi-client validation on the Mordor testnet complete before the activation block is scheduled, with the whole process rehearsed while the Treasury holds nothing. (ECIP-1113 §"Audit and Testnet Rollout")
+3. The Treasury's address is published with the network it is on, together with three things, each reproducible from chain state: the verified source of every contract at and beneath it, where upgrade authority rests, and its full role table. (ECIP-1112 §"Deployment and Publication")
 4. The activation blocks for Mordor and for mainnet are set through open coordination, and ECIP-1111 is the only document that records them. Both read TBD. (ECIP-1111 §Implementation)
 5. At the activation block, EIP-1559 begins with the base fee credited to the Treasury's address, and the core EIPs ECIP-1121 adopts take effect. (ECIP-1121 §Activation)
 
 ECIP-1116, which would pay block producers from base-fee revenue at the consensus layer, is a separate hard fork after Olympia and is scheduled on its own.
 
-### EVM alignment through Glamsterdam (ECIP-1121)
+### EVM alignment into Glamsterdam (ECIP-1121)
 
 Glamsterdam is included without being adopted whole: ECIP-1121 adopts part of its set, holds four of its EIPs on a dependency, and defers or excludes those tied to blob data availability or Proof-of-Stake. Until the activation block, Ethereum Classic's EVM is the Shanghai set Spiral activated, and the instructions these EIPs add, such as TLOAD, TSTORE and MCOPY, are not valid on it before then (ECIP-1121 §"Instruction Set Before and After Activation"). Modern EVM tooling assumes EIP-1559, and ECIP-1111 would remove the Ethereum Classic-specific path that integrators maintain for it today.
 
@@ -320,23 +329,23 @@ Under Olympia the Treasury's balance would leave only through Olympia DAO, by fu
 
 - **Olympia DAO (ECIP-1113):** three contracts, each unmodified OpenZeppelin except CoreNFT, which holds no funds: the Treasury, a transparent proxy over a TimelockController at the Sovereignty Vault address; a Governor built from stock modules, which is the Timelock's sole executor; and CoreNFT, a soulbound membership token carrying one non-delegable vote per member. After a published bootstrap list, members are admitted one governed mint at a time, with no minting committee and no account that can admit anyone alone.
 - **A funding proposal (ECIP-1114, ECIP-1119):** an ordinary Governor proposal that spends from the Treasury. It declares one of five categories: Core Development, Critical Infrastructure, Network Security, Ecosystem Growth, or Other. There is no registry and no submission contract, and the category describes a proposal without gating it. Submit: the author calls the Governor from their own address, subject to the proposal threshold. Vote: CoreNFT members vote For, Against or Abstain, and the interface they vote through screens the recipient against a sanctions list. Queue: a passed proposal is scheduled in the Timelock, in public, for its delay. Execute: after the delay it executes, paying from the Treasury's own balance.
-- **Ecosystem Growth DAOs and milestones (ECIP-1117, ECIP-1118):** an Ecosystem Growth DAO is open to anyone and funded one season at a time by a funding proposal. Olympia DAO decides whether to seed a season, how much, and within what theme; the body's published model, which may be a conditional market, an allocation strategy, a vote or a process that is not a contract, decides which of the destinations the seeding proposal named receive it. Client development, network security and critical infrastructure stay with Olympia DAO. A milestone program pays in tranches, each its own funding proposal, decided on the work behind it.
-- **Protocol change stays with the ECIP process (ECIP-1000):** neither DAO replaces it. A change to Ethereum Classic remains an ECIP, and it takes effect when client teams release it and node operators, miners and exchanges run it. Funding a piece of work does not adopt a specification.
+- **Ecosystem Growth DAOs and milestones (ECIP-1117, ECIP-1118):** an Ecosystem Growth DAO is open to anyone and funded one season at a time by a funding proposal. Olympia DAO decides whether to seed a season, how much, and within what theme. The body's published model then decides which of the destinations the seeding proposal named receive the funds; that model may be a conditional market, an allocation strategy, a vote or a process that is not a contract. Client development, network security and critical infrastructure stay with Olympia DAO. A milestone program pays in tranches, each its own funding proposal, decided on the work behind it.
+- **Protocol change stays with the ECIP process (ECIP-1000):** neither Olympia DAO nor an Ecosystem Growth DAO replaces it. A change to Ethereum Classic remains an ECIP, and it takes effect when client teams release it and node operators, miners and exchanges run it. Funding a piece of work does not adopt a specification.
 
-### Ethereum Classic DAO LLC and Olympia
+### Ethereum Classic DAO and Olympia
 
 ECIP-1114 names Ethereum Classic DAO LLC, Wyoming Filing ID 2025-001671865, as the legal wrapper it contemplates for Olympia DAO. An on-chain organization has no legal personality: it cannot sign a contract, engage an auditor or pay a contractor in fiat. A registered entity supplies that personality for the off-chain acts, without acquiring authority over the on-chain organization.
 
-Once Olympia DAO is operating, the LLC would carry out the off-chain obligations a passed proposal has fixed. If the DAO votes to fund a security audit, for example, the LLC signs the engagement with the auditing firm; the proposal, not the LLC, set the auditor, the scope and the amount. In ECIP-1114's words, the LLC is downstream of Olympia DAO in authority: Olympia DAO is not its subsidiary, and the LLC holds no position in the ECIP process, which is ECIP-1000's.
+Once Olympia DAO is operating, Ethereum Classic DAO would carry out the off-chain obligations a passed proposal has fixed. If Olympia DAO votes to fund a security audit, for example, Ethereum Classic DAO signs the engagement with the auditing firm; the proposal, not Ethereum Classic DAO, set the auditor, the scope and the amount. In ECIP-1114's words, Ethereum Classic DAO is downstream of Olympia DAO in authority: Olympia DAO is not its subsidiary, and Ethereum Classic DAO holds no position in the ECIP process, which is ECIP-1000's.
 
-No off-chain entity can unilaterally approve or veto a governance action, the LLC holds no on-chain role, and the Treasury's balance moves only by a passed, timelocked proposal. Donations the LLC receives off-chain are its own and are accounted for separately. Until Olympia DAO is operating, the LLC holds no role in anything ECIP-1114 specifies. (ECIP-1114 §"Off-Chain Legal Interface and Donations"; ECIP-1113 §"Prohibited Features")
+No off-chain entity can unilaterally approve or veto a governance action, Ethereum Classic DAO holds no on-chain role, and the Treasury's balance moves only by a passed, timelocked proposal. Donations Ethereum Classic DAO receives off-chain are its own and are accounted for separately. Until Olympia DAO is operating, Ethereum Classic DAO holds no role in anything ECIP-1114 specifies. (ECIP-1114 §"Off-Chain Legal Interface and Donations"; ECIP-1113 §"Prohibited Features")
 
 ### Client readiness
 
-Olympia is in development and targeted for mainnet activation in 2027, so neither client's releases are ready for it. Its activation block is TBD, and a client's Olympia release is the one that sets it. A client's readiness for Olympia is what its maintainers publish. To choose and run a client today, see https://ethereumclassicdao.org/clients
+Olympia is in development and targeted for mainnet activation in 2027, so neither client's releases are ready for it. Its activation block is TBD, and a client's Olympia release is the one that sets it. Each client's maintainers publish its readiness for Olympia. To choose and run a client today, see https://ethereumclassicdao.org/clients
 
-- Core-Geth, the recommended client: run its v1.13 line. Its releases, and its readiness for Olympia, are published from https://github.com/ethereumclassic/core-geth. Downloads: https://coregeth.com/downloads/. Current release: https://github.com/ethereumclassic/core-geth/releases/latest
-- Fukuii, an alternative to try beside Core-Geth, which Chippr Robotics LLC maintains and marks alpha: run its current release. Its releases, and its readiness for Olympia, are published from https://github.com/chippr-robotics/fukuii. Documentation: https://docs.fukuii.com. Current release: https://github.com/chippr-robotics/fukuii/releases/latest
+- Core-Geth, the recommended client: run its v1.13 line. Its releases, and its readiness for Olympia, are published from https://github.com/ethereumclassic/core-geth. Downloads: https://coregeth.com/downloads/. Latest release: https://github.com/ethereumclassic/core-geth/releases/latest
+- Fukuii, an alternative to try beside Core-Geth. Chippr Robotics LLC maintains it and marks it alpha: run its latest release. Its releases, and its readiness for Olympia, are published from https://github.com/chippr-robotics/fukuii. Documentation: https://docs.fukuii.com. Latest release: https://github.com/chippr-robotics/fukuii/releases/latest
 
 ### Olympia's sites
 
@@ -361,7 +370,7 @@ No. Olympia is a proposal in development: its ECIPs are drafts, its activation b
 It is targeted for mainnet activation in 2027. The activation blocks for Mordor and mainnet are decided at the Olympia Core Devs Call and recorded in ECIP-1111, and both read TBD. Before an activation block is scheduled, the governance contracts are deployed, reviewed and rehearsed on Mordor, and the Treasury's address is published.
 
 **How would the base fee reach the Treasury?**
-ECIP-1111 activates EIP-1559 and credits each transaction's base fee to the Sovereignty Vault address, inside that transaction's own state transition, where Ethereum destroys it. The credit runs no contract code. Ethereum Classic has no base fee today, so nothing is taken from what miners earn now.
+ECIP-1111 activates EIP-1559 and credits each transaction's base fee to the Sovereignty Vault address, inside that transaction's own state transition, at the point where Ethereum destroys it. The credit runs no contract code. Ethereum Classic has no base fee today, so nothing is taken from what miners earn now.
 
 **Would miner rewards change?**
 No. ECIP-1111 leaves block rewards and priority-fee tips unaffected, and the base fee it introduces goes to the Treasury rather than to miners. Paying miners from base-fee revenue is the subject of ECIP-1115, through ordinary funding proposals, and of ECIP-1116, a separate hard fork after Olympia.
@@ -372,14 +381,14 @@ Only Olympia DAO, by a funding proposal that passes a vote of CoreNFT members, i
 **Would Olympia DAO decide protocol upgrades?**
 No. Protocol change remains with the ECIP process, ECIP-1000. A funding proposal can pay for work on Ethereum Classic without conferring any authority over its specification, and an upgrade takes effect only when client teams release it and the network runs it.
 
-**What would Ethereum Classic DAO LLC do?**
-ECIP-1114 names Ethereum Classic DAO LLC as the legal wrapper it contemplates for Olympia DAO, for the off-chain acts an on-chain organization cannot perform, without acquiring authority over it. Once Olympia DAO is operating, the LLC would carry out the off-chain obligations a passed proposal has fixed, such as signing the engagement for a security audit the DAO voted to fund. It is downstream of Olympia DAO in authority, holds no on-chain role and no position in the ECIP process, and holds no role in anything ECIP-1114 specifies until Olympia DAO is operating.
+**What would Ethereum Classic DAO do?**
+ECIP-1114 names Ethereum Classic DAO LLC as the legal wrapper it contemplates for Olympia DAO, for the off-chain acts an on-chain organization cannot perform, without acquiring authority over it. Once Olympia DAO is operating, Ethereum Classic DAO would carry out the off-chain obligations a passed proposal has fixed, such as signing the engagement for a security audit Olympia DAO voted to fund. Ethereum Classic DAO is downstream of Olympia DAO in authority, holds no on-chain role and no position in the ECIP process, and holds no role in anything ECIP-1114 specifies until Olympia DAO is operating.
 
 **Does Olympia adopt all of Glamsterdam?**
 No. ECIP-1121 includes Glamsterdam and adopts part of its set. Some of its EIPs are blocked on a dependency that is out of scope, and those tied to Proof-of-Stake or blob data availability are excluded or deferred. The EIP lists on the Olympia page give each one.
 
 **Which client should I run?**
-Core-Geth, the recommended client: run its v1.13 line. Fukuii, which its maintainers mark alpha, is an alternative to try beside it: run its current release. Neither client's releases are ready for Olympia, which is in development and targeted for mainnet activation in 2027.
+Core-Geth, the recommended client: run its v1.13 line. Fukuii, which its maintainers mark alpha, is an alternative to try beside it: run its latest release. Neither client's releases are ready for Olympia, which is in development and targeted for mainnet activation in 2027.
 
 **What happens to a node that does not upgrade?**
 Once the activation blocks are set and client releases implement them, a node that has not moved to such a release by the activation block stops following the chain at that block. Operators move by the steps their client's maintainers publish.
@@ -389,34 +398,34 @@ Once the activation blocks are set and client releases implement them, a node th
 From https://ethereumclassicdao.org/governance
 
 **What is a DAO LLC?**
-A DAO LLC is a limited liability company formed under Wyoming's Decentralized Autonomous Organization Supplement, which recognizes a DAO as a form of LLC and gives its members limited liability. Ethereum Classic DAO LLC was registered in Wyoming in 2025 (Filing ID 2025-001671865). ECIP-1114 names it as the legal wrapper it contemplates for Olympia DAO, for the off-chain acts an on-chain organization cannot perform: once Olympia DAO is operating, it would carry out the off-chain obligations a passed proposal has fixed, such as the engagement for an audit the DAO voted to fund. It is downstream of Olympia DAO in authority, holds no on-chain role, and until Olympia DAO is operating holds no role in anything ECIP-1114 specifies.
+A DAO LLC is a limited liability company formed under Wyoming's Decentralized Autonomous Organization Supplement, which recognizes a DAO as a form of LLC and gives its members limited liability. Ethereum Classic DAO LLC was registered in Wyoming in 2025 (Filing ID 2025-001671865). ECIP-1114 names Ethereum Classic DAO LLC as the legal wrapper it contemplates for Olympia DAO, for the off-chain acts an on-chain organization cannot perform: once Olympia DAO is operating, Ethereum Classic DAO would carry out the off-chain obligations a passed proposal has fixed, such as signing the engagement for an audit Olympia DAO voted to fund. Ethereum Classic DAO is downstream of Olympia DAO in authority, holds no on-chain role, and until Olympia DAO is operating holds no role in anything ECIP-1114 specifies.
 
 **Who is responsible for the Olympia upgrade?**
-Olympia is a set of draft ECIPs in the ECIPs repository, and it follows the ECIP process, ECIP-1000. Its activation blocks are decided at the Olympia Core Devs Call and recorded in ECIP-1111. Client releases that implement it are their maintainers' to publish: Core-Geth's from ethereumclassic/core-geth, where Ethereum Classic's core developers do the day-to-day work and Ethereum Classic DAO LLC maintains and funds it today as the funder of last resort.
+Olympia is a set of draft ECIPs in the ECIPs repository, and it follows the ECIP process, ECIP-1000. Its activation blocks are decided at the Olympia Core Devs Call and recorded in ECIP-1111. Client releases that implement it are their maintainers' to publish: Core-Geth's from ethereumclassic/core-geth, where Ethereum Classic's core developers do the day-to-day work and Ethereum Classic DAO maintains and funds the client today as the funder of last resort.
 
 **What role has the ETC Cooperative played, and what changes with Olympia?**
-The ETC Cooperative, a US 501(c)(3) non-profit, funded Ethereum Classic's public goods from 2017, and funded and maintained Core-Geth from January 2022 through the Mystique and Spiral upgrades. It entered maintenance mode at the end of 2024, and the services it maintained continue in the ethereumclassic organization, where Ethereum Classic's core developers do the day-to-day work and Ethereum Classic DAO LLC maintains and funds those services today as the funder of last resort. Olympia was proposed to give that work a funding source in the protocol, one that would not depend on any single organization's continued support.
+The ETC Cooperative, a US 501(c)(3) non-profit, funded Ethereum Classic's public goods from 2017, and funded and maintained Core-Geth from January 2022 through the Mystique and Spiral upgrades. It entered maintenance mode at the end of 2024, and the services it maintained continue in the ethereumclassic organization, where Ethereum Classic's core developers do the day-to-day work and Ethereum Classic DAO maintains and funds those services today as the funder of last resort. Olympia was proposed to give that work a funding source in the protocol, one that would not depend on any single organization's continued support.
 
 **What is the significance of Grayscale's support for Ethereum Classic?**
-Grayscale launched the Grayscale Ethereum Classic Trust (ETCG) in 2018, years before Bitcoin ETFs existed as a product category, and became a major institutional donor to the ETC Cooperative, indirectly funding the core client development of the network underpinning its product. The trust's capital comes from a globally distributed pool of retail and institutional investors, so the funding that reached Ethereum Classic's development through the Cooperative did not originate with a single entity. Bitcoin, Litecoin and Dogecoin have no native smart contracts, so their development funding depends on off-chain organizations. Olympia proposes an on-chain path instead: once the Treasury's address is published, any holder, through ETCG, a direct wallet or any future product, could contribute to it directly.
+Grayscale launched the Grayscale Ethereum Classic Trust (ETCG) in 2017, years before Bitcoin ETFs existed as a product category, and became a major institutional donor to the ETC Cooperative, indirectly funding the core client development of the network underpinning its product. The trust's capital comes from a globally distributed pool of retail and institutional investors, so the funding that reached Ethereum Classic's development through the Cooperative did not originate with a single entity. Bitcoin, Litecoin and Dogecoin have no native smart contracts, so their development funding depends on off-chain organizations. Olympia proposes an on-chain path instead: once the Treasury's address is published, any holder could contribute to it directly from a wallet, and so could the issuer of ETCG or of any future product.
 
-**How is the Treasury funded?**
-As proposed, by the EIP-1559 base fee, which ECIP-1111 would credit to the Treasury transaction by transaction. Ethereum destroys that fee, and Ethereum Classic does not charge one today, so nothing is taken from what miners earn: block rewards and priority-fee tips go to miners unchanged. Once its address is published, anyone could also contribute to it directly, and a miner could name it as a block's beneficiary; no ECIP requires either.
+**How would the Treasury be funded?**
+As proposed, by the EIP-1559 base fee, which ECIP-1111 would credit to the Treasury transaction by transaction. Ethereum destroys that fee, and Ethereum Classic does not charge one today, so nothing is taken from what miners earn: block rewards and priority-fee tips would go to miners unchanged. Once its address is published, anyone could also contribute to it directly, and a miner could name it as a block's beneficiary; no ECIP requires either.
 
-**Who can participate in governance?**
-Olympia DAO's members, the Core Contributors holding CoreNFT, would vote on funding proposals. After a published bootstrap list, members are admitted by a governance vote on a contributor's record, one at a time, with no committee. Submitting a proposal is open to any address while the proposal threshold is zero, and to members above it. Ecosystem Growth DAOs are open to anyone without membership. Node operators, miners and exchanges take part in protocol change through the client releases they run.
+**Who could participate in governance?**
+Olympia DAO's members, the Core Contributors holding CoreNFT, would vote on funding proposals. After a published bootstrap list, members would be admitted by a governance vote on a contributor's record, one at a time, with no committee. Submitting a proposal would be open to any address while the proposal threshold is zero, and to members above it. Ecosystem Growth DAOs would be open to anyone without membership. Node operators, miners and exchanges take part in protocol change through the client releases they run.
 
-**How does voting work?**
-Each member holds one CoreNFT, a soulbound token carrying one vote that cannot be delegated or transferred. Votes are For, Against or Abstain. A proposal passes when it reaches quorum and its For votes exceed its Against votes, and it then waits out the Timelock's delay before it executes. Quorum, the voting delay, the voting period and the Timelock delay are on-chain settings, changed only by proposal.
+**How would voting work?**
+Each member would hold one CoreNFT, a soulbound token carrying one vote that cannot be delegated or transferred. Votes would be For, Against or Abstain. A proposal would pass when it reaches quorum and its For votes exceed its Against votes, and it would then wait out the Timelock's delay before it executes. Quorum, the voting delay, the voting period and the Timelock delay would be on-chain settings, changed only by proposal.
 
-**What does EVM alignment to Glamsterdam mean for builders?**
+**What would EVM alignment through Fusaka and into Glamsterdam mean for builders?**
 ECIP-1121 would advance Ethereum Classic's execution layer through Dencun, Pectra and Fusaka and carry that work into Glamsterdam, adopting most of the execution-layer EIPs that do not depend on Proof-of-Stake or blob data availability. Contracts could use transient storage, MCOPY, the BLS12-381 and secp256r1 precompiles and EIP-7702 account code, and with EIP-1559 active, tooling that assumes type-2 transactions would no longer need an Ethereum Classic-specific path.
 
-**When does Olympia activate?**
-Olympia is a proposal, targeted for mainnet activation in 2027. Its activation blocks for Mordor and mainnet are TBD: they are decided at the Olympia Core Devs Call and recorded in ECIP-1111, once the governance contracts are deployed, reviewed and rehearsed on Mordor.
+**When would Olympia activate?**
+Olympia is a proposal, targeted for mainnet activation in 2027. Its activation blocks for Mordor and mainnet are TBD: they would be decided at the Olympia Core Devs Call and recorded in ECIP-1111, once the governance contracts are deployed, reviewed and rehearsed on Mordor.
 
-**How are treasury funds protected from misuse?**
-As specified, funds leave only by a proposal that passes a vote, waits out a public timelock delay and executes through the Governor, and there is no admin key, multisig or committee. The contracts that hold or move funds are unmodified OpenZeppelin, CoreNFT votes cannot be bought or delegated, and the interface members vote through screens each recipient against a sanctions list (ECIP-1119). Every action is reconstructible from event logs, and no off-chain entity can unilaterally approve or veto one.
+**How would treasury funds be protected from misuse?**
+As specified, funds would leave only by a proposal that passes a vote, waits out a public timelock delay and executes through the Governor, and there would be no admin key, multisig or committee. The contracts that hold or move funds would be unmodified OpenZeppelin, CoreNFT votes could not be bought or delegated, and the interface members vote through would screen each recipient against a sanctions list (ECIP-1119). Every action would be reconstructible from event logs, and no off-chain entity could unilaterally approve or veto one.
 
-**Is Ethereum Classic a security or commodity?**
-In the EU, ETC qualifies as a decentralized asset under MiCA, in force since December 2024, exempt from per-asset issuer requirements. In Japan, ETC is recognized on the FSA Green List. In the US, ETC is positioned as a digital commodity candidate under the CLARITY Act, pending Senate passage. As a Proof-of-Work network with no pre-mine, no ICO and no foundation controlling the protocol, Ethereum Classic has no single party that controls it. ETC's full regulatory profile: https://ethereumclassicdao.org/regulation
+**Is Ethereum Classic a security or a commodity?**
+In the EU, ETC has no issuer under MiCA, which has applied in full since December 30, 2024, so MiCA's rules for asset-referenced and e-money tokens do not apply to it. In Japan, ETC is listed on the JVCEA Green List. In the US, ETC is a digital commodity candidate under the CLARITY Act, which stalled in the Senate when a cloture vote failed on September 15, 2026. Ethereum Classic is a Proof-of-Work network with no foundation controlling the protocol and no central issuer. ETC's full regulatory profile: https://ethereumclassicdao.org/regulation
