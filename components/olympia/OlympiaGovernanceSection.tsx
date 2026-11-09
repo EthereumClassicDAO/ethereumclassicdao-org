@@ -33,13 +33,13 @@ const blocks = [
     icon: Sprout,
     label: "ECIP-1117 · ECIP-1118",
     title: "Ecosystem Growth DAOs and milestones",
-    body: "An Ecosystem Growth DAO is open to anyone and funded one season at a time by a funding proposal. Olympia DAO decides whether to seed a season, how much, and within what theme; the body's published model, which may be a conditional market, an allocation strategy, a vote or a process that is not a contract, decides which of the destinations the seeding proposal named receive it. Client development, network security and critical infrastructure stay with Olympia DAO. A milestone program pays in tranches, each its own funding proposal, decided on the work behind it.",
+    body: "An Ecosystem Growth DAO is open to anyone and funded one season at a time by a funding proposal. Olympia DAO decides whether to seed a season, how much, and within what theme. The body's published model then decides which of the destinations the seeding proposal named receive the funds; that model may be a conditional market, an allocation strategy, a vote or a process that is not a contract. Client development, network security and critical infrastructure stay with Olympia DAO. A milestone program pays in tranches, each its own funding proposal, decided on the work behind it.",
   },
   {
     icon: GitBranch,
     label: "ECIP-1000",
     title: "Protocol change stays with the ECIP process",
-    body: "Neither DAO replaces it. A change to Ethereum Classic remains an ECIP, and it takes effect when client teams release it and node operators, miners and exchanges run it. Funding a piece of work does not adopt a specification.",
+    body: "Neither Olympia DAO nor an Ecosystem Growth DAO replaces it. A change to Ethereum Classic remains an ECIP, and it takes effect when client teams release it and node operators, miners and exchanges run it. Funding a piece of work does not adopt a specification.",
   },
 ];
 

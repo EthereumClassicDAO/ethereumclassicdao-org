@@ -16,7 +16,7 @@ export function StewardshipSection() {
               Built on a Decade of Commitment
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Olympia is the culmination of years of funded, principled stewardship
+              Olympia was proposed after years of funded, principled stewardship
               by the organizations that kept Ethereum Classic&apos;s core development
               alive and moving forward.
             </p>
@@ -74,27 +74,30 @@ export function StewardshipSection() {
                   Each organization that carried this work did so on its own
                   balance sheet, for as long as it could. Olympia was proposed to
                   give the work a funding source in the protocol itself, one that
-                  would not close or leave: the early idea of a community fund,
-                  written as an on-chain treasury that governance spends in public.
+                  would not close or leave: the long-standing idea of a community
+                  fund, written as an on-chain treasury that governance would spend
+                  in public.
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
                   The Cooperative entered maintenance mode at the end of 2024.
-                  Ethereum Classic DAO LLC maintains and funds the
-                  network&apos;s public goods, the Core-Geth client, the
-                  bootnodes and the discovery lists, in the ethereumclassic GitHub
-                  organization, with the day-to-day work done by Ethereum
-                  Classic&apos;s core developers, and does so today as{" "}
-                  <strong className="text-[var(--text-primary)] font-medium">funder of last resort</strong>.
-                  Olympia was proposed so that the network would no longer need one.
+                  Today Ethereum Classic DAO maintains and funds the
+                  network&apos;s public goods (the Core-Geth client, the bootnodes
+                  and the discovery lists) in the ethereumclassic GitHub
+                  organization as the{" "}
+                  <strong className="text-[var(--text-primary)] font-medium">funder of last resort</strong>,
+                  with the day-to-day work done by Ethereum Classic&apos;s core
+                  developers. Olympia was proposed so that the network would no
+                  longer need a funder of last resort.
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
                   ECIP-1114 names Ethereum Classic DAO LLC as the legal wrapper it
                   contemplates for Olympia DAO, for the off-chain acts an on-chain
                   organization cannot perform, such as signing the engagement for an
-                  audit the DAO has voted to fund. The LLC would be{" "}
-                  <strong className="text-[var(--text-primary)] font-medium">downstream of Olympia DAO in authority</strong>:
-                  it carries out what a passed proposal has fixed, holds no on-chain
-                  role, and holds no role in Olympia until Olympia DAO is operating.
+                  audit Olympia DAO has voted to fund. Ethereum Classic DAO would be{" "}
+                  <strong className="text-[var(--text-primary)] font-medium">downstream of Olympia DAO in authority</strong>,
+                  carrying out what a passed proposal has fixed. Ethereum Classic DAO
+                  holds no on-chain role, and no role in Olympia until Olympia DAO is
+                  operating.
                 </p>
               </div>
 
@@ -137,7 +140,7 @@ export function StewardshipSection() {
               </div>
               <p className="mt-4 text-lg font-semibold">Grayscale Investments</p>
               <p className="mt-1 text-[10px] font-mono uppercase tracking-wider text-[var(--text-subtle)]">
-                ETCG Trust · Launched 2018 · Major Institutional Donor to ETC Cooperative
+                ETCG Trust · Launched 2017 · Major Institutional Donor to ETC Cooperative
               </p>
 
               {/* The precedent */}
@@ -145,29 +148,29 @@ export function StewardshipSection() {
                 The Precedent
               </p>
               <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
-                Grayscale pioneered regulated institutional access to blockchain
-                networks, launching the Grayscale Ethereum Classic Trust (ETCG)
-                in 2018, <strong className="text-[var(--text-primary)] font-medium">years before Bitcoin ETFs existed as a product
-                category</strong>. What made this particularly forward-looking was what
-                came alongside it: Grayscale became a major institutional donor
-                to the ETC Cooperative, indirectly funding the core client
-                development of the network underpinning their product. No other
-                investment product issuer was doing this at the time. What
-                Grayscale was practicing on Ethereum Classic in 2018 is now a
-                recognized industry trend: <strong className="text-[var(--text-primary)] font-medium">ETF issuers funding protocol
+                Grayscale, which pioneered regulated institutional access to
+                blockchain networks, launched the Grayscale Ethereum Classic Trust
+                (ETCG) in 2017, <strong className="text-[var(--text-primary)] font-medium">years before Bitcoin ETFs existed as a product
+                category</strong>. What made this forward-looking was what came
+                alongside it: Grayscale became a major institutional donor to the
+                ETC Cooperative, indirectly funding core client development for
+                the network underpinning its product. Few, if any, investment
+                product issuers were doing this at the time. What Grayscale
+                practiced on Ethereum Classic then is now a recognized industry
+                trend: <strong className="text-[var(--text-primary)] font-medium">ETF issuers funding protocol
                 development, corporate treasuries reinvesting in network
                 ecosystems</strong>.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
                 The deeper point is who ETCG represents. Grayscale is the
-                product issuer — but the capital base of the trust is a{" "}
+                product issuer, but the capital base of the trust is a{" "}
                 <strong className="text-[var(--text-primary)] font-medium">globally distributed pool of retail and institutional
                 holders</strong>. The funding that reached ETC&apos;s core development
-                through the Cooperative did not originate from a single
-                centralized entity. It originated from a decentralized body of
+                through the Cooperative did not originate with a single
+                centralized entity: it originated with a decentralized body of
                 investors whose capital flows through the product to the
                 network. ETC&apos;s development has been backed by decentralized
-                funding all along — Grayscale provided the regulated access
+                funding all along, and Grayscale provided the regulated access
                 vehicle that made it possible.
               </p>
 

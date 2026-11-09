@@ -21,17 +21,17 @@ export function TreasuryHeroSection() {
             As Olympia proposes it, the Treasury would fund Ethereum Classic&rsquo;s
             core development from the network&rsquo;s own use rather than from any
             single organization&rsquo;s continued support. ECIP-1111 would credit
-            the EIP-1559 base fee of every transaction to it, where Ethereum
-            destroys that fee, while block rewards and priority-fee tips go to
-            miners as they do today.
+            it with the EIP-1559 base fee of every transaction, a fee Ethereum
+            destroys, while block rewards and priority-fee tips would still go to
+            miners, as they do today.
           </p>
           <p className="mt-4 text-base text-[var(--text-muted)]">
-            Its address is the Sovereignty Vault (ECIP-1112), written into every
-            client&rsquo;s chain configuration by the activation fork and
+            Its address would be the Sovereignty Vault (ECIP-1112), written into
+            every client&rsquo;s chain configuration by the activation fork and
             changeable only by a further hard fork, so no on-chain party could
-            redirect the revenue. A stock OpenZeppelin transparent proxy sits at
-            that address, so a security fix can reach the logic behind it without
-            a chain split while the address stays where it is. The balance would
+            redirect the revenue. A stock OpenZeppelin transparent proxy would sit
+            at that address, so a security fix could reach the logic behind it
+            without a chain split while the address stays where it is. The balance would
             leave only through Olympia DAO&rsquo;s governance (ECIP-1113), with no
             admin key and no multisig.
           </p>

@@ -4,7 +4,7 @@ import { SectionDivider } from "@/components/ui/SectionDivider";
 import { ecipUrl } from "@/lib/network-links";
 
 /**
- * What ECIP-1114 contemplates for Ethereum Classic DAO LLC under Olympia. Every sentence is read
+ * What ECIP-1114 contemplates for Ethereum Classic DAO under Olympia. Every sentence is read
  * from ECIP-1114 §"Off-Chain Legal Interface and Donations" and ECIP-1113 §"Prohibited Features".
  */
 export function LegalWrapperSection() {
@@ -19,7 +19,7 @@ export function LegalWrapperSection() {
                 <Building2 size={20} aria-hidden="true" className="text-[var(--brand-green)]" />
               </div>
               <h2 id="legal-wrapper-heading" className="text-2xl font-bold tracking-tight">
-                Ethereum Classic DAO LLC and Olympia
+                Ethereum Classic DAO and Olympia
               </h2>
             </div>
             <div className="mt-5 max-w-3xl space-y-4 text-sm leading-relaxed text-[var(--text-muted)]">
@@ -32,21 +32,23 @@ export function LegalWrapperSection() {
                 without acquiring authority over the on-chain organization.
               </p>
               <p>
-                Once Olympia DAO is operating, the LLC would carry out the off-chain
-                obligations a passed proposal has fixed. If the DAO votes to fund a
-                security audit, for example, the LLC signs the engagement with the
-                auditing firm; the proposal, not the LLC, set the auditor, the scope
-                and the amount. In ECIP-1114&rsquo;s words, the LLC is downstream of
-                Olympia DAO in authority: Olympia DAO is not its subsidiary, and the
-                LLC holds no position in the ECIP process, which is ECIP-1000&rsquo;s.
+                Once Olympia DAO is operating, Ethereum Classic DAO would carry out
+                the off-chain obligations a passed proposal has fixed. If Olympia DAO
+                votes to fund a security audit, for example, Ethereum Classic DAO
+                signs the engagement with the auditing firm; the proposal, not
+                Ethereum Classic DAO, set the auditor, the scope and the amount. In
+                ECIP-1114&rsquo;s words, Ethereum Classic DAO is downstream of Olympia
+                DAO in authority: Olympia DAO is not its subsidiary, and Ethereum
+                Classic DAO holds no position in the ECIP process, which is
+                ECIP-1000&rsquo;s.
               </p>
               <p>
                 No off-chain entity can unilaterally approve or veto a governance
-                action, the LLC holds no on-chain role, and the Treasury&rsquo;s
-                balance moves only by a passed, timelocked proposal. Donations the
-                LLC receives off-chain are its own and are accounted for separately.
-                Until Olympia DAO is operating, the LLC holds no role in anything
-                ECIP-1114 specifies.
+                action, Ethereum Classic DAO holds no on-chain role, and the
+                Treasury&rsquo;s balance moves only by a passed, timelocked proposal.
+                Donations Ethereum Classic DAO receives off-chain are its own and are
+                accounted for separately. Until Olympia DAO is operating, Ethereum
+                Classic DAO holds no role in anything ECIP-1114 specifies.
               </p>
             </div>
             <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px] text-[var(--text-subtle)]">

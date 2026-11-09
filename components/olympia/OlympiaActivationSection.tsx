@@ -13,12 +13,12 @@ const sequence = [
   {
     ecip: 1113,
     cite: 'ECIP-1113 §"Audit and Testnet Rollout"',
-    step: "Their security review and multi-client validation on the Mordor testnet complete before the activation block is scheduled, rehearsed while the Treasury holds nothing.",
+    step: "Their security review and multi-client validation on the Mordor testnet complete before the activation block is scheduled, with the whole process rehearsed while the Treasury holds nothing.",
   },
   {
     ecip: 1112,
     cite: 'ECIP-1112 §"Deployment and Publication"',
-    step: "The Treasury's address is published with the network it is on, together with the verified source of every contract at and beneath it, where upgrade authority rests and its full role table, each reproducible from chain state.",
+    step: "The Treasury's address is published with the network it is on, together with three things, each reproducible from chain state: the verified source of every contract at and beneath it, where upgrade authority rests, and its full role table.",
   },
   {
     ecip: 1111,

@@ -18,16 +18,16 @@ const clients = [
     body: "The recommended client: run its v1.13 line. Its releases, and its readiness for Olympia, are published from ethereumclassic/core-geth.",
     links: [
       { label: "Downloads", href: CORE_GETH_DOWNLOADS_URL },
-      { label: "Current release", href: CORE_GETH_LATEST_RELEASE_URL },
+      { label: "Latest release", href: CORE_GETH_LATEST_RELEASE_URL },
     ],
   },
   {
     name: "Fukuii",
     badges: ["Alternative", FUKUII_STATUS],
-    body: `An alternative to try beside Core-Geth, which ${FUKUII_MAINTAINER} maintains and marks alpha: run its current release. Its releases, and its readiness for Olympia, are published from chippr-robotics/fukuii.`,
+    body: `An alternative to try beside Core-Geth. ${FUKUII_MAINTAINER} maintains it and marks it alpha: run its latest release. Its releases, and its readiness for Olympia, are published from chippr-robotics/fukuii.`,
     links: [
       { label: "Documentation", href: FUKUII_DOCS_URL },
-      { label: "Current release", href: FUKUII_LATEST_RELEASE_URL },
+      { label: "Latest release", href: FUKUII_LATEST_RELEASE_URL },
     ],
   },
 ];
@@ -46,8 +46,8 @@ export function OlympiaClientsSection() {
               Olympia is in development and targeted for mainnet activation in
               2027, so neither client&rsquo;s releases are ready for it. Its
               activation block is TBD, and a client&rsquo;s Olympia release is the
-              one that sets it. A client&rsquo;s readiness for Olympia is what its
-              maintainers publish. To choose and run a client today, see{" "}
+              one that sets it. Each client&rsquo;s maintainers publish its
+              readiness for Olympia. To choose and run a client today, see{" "}
               <Link
                 href="/clients"
                 className="font-medium text-[var(--brand-green)] transition-colors hover:text-[var(--text-primary)]"

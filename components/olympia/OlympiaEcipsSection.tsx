@@ -14,8 +14,9 @@ export function OlympiaEcipsSection() {
           <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[var(--text-muted)]">
             Olympia is a set of draft ECIPs. Some change consensus at the
             activation block, some specify the Treasury and the governance
-            deployed before it, and the rest are processes that run on those
-            contracts. Each is listed by its own title.
+            deployed before it, one describes a later hard fork, and the rest
+            are processes that run on those contracts. Each is listed by its own
+            title.
           </p>
         </FadeIn>
 

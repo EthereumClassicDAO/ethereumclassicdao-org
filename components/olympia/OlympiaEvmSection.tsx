@@ -70,7 +70,7 @@ export function OlympiaEvmSection() {
           <FadeIn>
             <p className="mb-1 font-mono text-xs text-[var(--brand-green)]">ECIP-1121</p>
             <h2 id="olympia-evm-heading" className="text-2xl font-bold tracking-tight">
-              EVM Alignment Through Glamsterdam
+              EVM Alignment Into Glamsterdam
             </h2>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[var(--text-muted)]">
               ECIP-1121 advances Ethereum Classic&rsquo;s execution layer through

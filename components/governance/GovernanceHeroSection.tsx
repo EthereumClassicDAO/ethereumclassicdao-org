@@ -22,17 +22,18 @@ export function GovernanceHeroSection() {
             Olympia DAO is the governance ECIP-1113 specifies: the only route by
             which the base fee accumulating at the Sovereignty Vault address could
             be spent. Its members, the Core Contributors holding CoreNFT, would vote
-            on funding proposals, screened at the vote and paid in milestones where
-            a program needs them. Ecosystem Growth DAOs would take a season&rsquo;s
-            funding by proposal and decide its allocation themselves.
+            on funding proposals. Each proposal&rsquo;s recipients would be
+            screened at the vote, and a program could be paid in milestones.
+            Ecosystem Growth DAOs would take a season&rsquo;s funding by proposal
+            and decide its allocation themselves.
           </p>
           <p className="mt-4 text-base text-[var(--text-muted)]">
             Protocol change stays with the ECIP process, and the network adopts an
-            upgrade by running a client release that implements it. Ethereum
-            Classic DAO LLC is the legal wrapper ECIP-1114 contemplates for Olympia
-            DAO, downstream of it in authority: once Olympia DAO is operating, the
-            LLC would carry out the off-chain obligations a passed proposal has
-            fixed, and it decides none of them.
+            upgrade by running a client release that implements it. ECIP-1114
+            names Ethereum Classic DAO LLC as the legal wrapper it contemplates for
+            Olympia DAO, downstream of Olympia DAO in authority: once Olympia DAO is
+            operating, Ethereum Classic DAO would carry out the off-chain
+            obligations a passed proposal has fixed, and would decide none of them.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
             {ecips.map((n) => (

@@ -27,28 +27,28 @@ export const OLYMPIA_ECIPS: readonly OlympiaEcip[] = [
     title: "Base Fee Market and Redirection",
     stage: "At the activation block",
     summary:
-      "Activates EIP-1559 and EIP-3198. Where Ethereum destroys the base fee, Ethereum Classic would credit it, transaction by transaction, to a permanent address held in chain configuration. Block rewards and priority-fee tips are unaffected.",
+      "Would activate EIP-1559 and EIP-3198. Where Ethereum destroys the base fee, Ethereum Classic would credit it, transaction by transaction, to a permanent address held in chain configuration. Block rewards and priority-fee tips would be unaffected.",
   },
   {
     number: 1112,
     title: "Sovereignty Vault",
     stage: "Before the fork",
     summary:
-      "The permanent address at which base-fee revenue would accumulate: a stock OpenZeppelin transparent proxy, deployed and inspectable before the fork commits to it, whose logic can be repaired while the address stands.",
+      "The permanent address at which base-fee revenue would accumulate: a stock OpenZeppelin transparent proxy, deployed and inspectable before the fork commits to it, whose logic could be repaired while the address stands.",
   },
   {
     number: 1113,
     title: "Olympia DAO Governance and Treasury",
     stage: "Before the fork",
     summary:
-      "Olympia DAO: a Governor built from stock OpenZeppelin modules, the Timelock behind the Treasury proxy, and CoreNFT, a soulbound token carrying one non-delegable vote per member. It is the only route by which the balance at the Sovereignty Vault address could be spent.",
+      "Olympia DAO: a Governor built from stock OpenZeppelin modules, the Timelock behind the Treasury proxy, and CoreNFT, a soulbound token carrying one non-delegable vote per member. It would be the only route by which the balance at the Sovereignty Vault address could be spent.",
   },
   {
     number: 1114,
     title: "Olympia Funding Proposal Process",
     stage: "Process",
     summary:
-      "A funding proposal is an ordinary Governor proposal that spends from the Treasury, with five categories and a description convention, and no contract of its own.",
+      "A funding proposal would be an ordinary Governor proposal that spends from the Treasury, with five categories and a description convention, and no contract of its own.",
   },
   {
     number: 1115,
@@ -83,7 +83,7 @@ export const OLYMPIA_ECIPS: readonly OlympiaEcip[] = [
     title: "Sanctions Screening for Olympia Funding Proposals",
     stage: "Process",
     summary:
-      "The interface a member votes through screens a proposal's recipient against a sanctions list and shows the result, with no way to vote in favor of a designated address. No contract, oracle or role is involved.",
+      "The interface a member votes through would screen a proposal's recipient against a sanctions list and show the result, with no way to vote in favor of a designated address. No contract, oracle or role is involved.",
   },
   {
     number: 1121,

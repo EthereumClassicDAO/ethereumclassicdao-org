@@ -179,7 +179,8 @@ export function HowItWorksSection() {
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               A funding proposal is an ordinary OpenZeppelin Governor proposal that
-              spends from the Treasury, and there is no other route to it. It
+              spends from the Treasury, and no other route reaches the
+              Treasury&rsquo;s funds. It
               declares one of five categories: Core Development, Critical
               Infrastructure, Network Security, Ecosystem Growth, or Other. Funding
               usually follows the work: the common case is paying for a
@@ -245,7 +246,8 @@ export function HowItWorksSection() {
                 Upgrades Stay With the ECIP Process
               </h2>
               <p className="mt-3 text-base text-[var(--text-muted)]">
-                Neither DAO replaces the ECIP process, and a passed funding proposal
+                Neither Olympia DAO nor an Ecosystem Growth DAO replaces the ECIP
+                process, and a passed funding proposal
                 confers no authority over a specification. Every node operator,
                 miner, exchange and wallet takes part through the client release it
                 runs: an upgrade becomes real when the network runs it.

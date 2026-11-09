@@ -216,10 +216,10 @@ export function TreasuryFundingSection() {
               </p>
               <p className="mt-3 text-base text-[var(--text-muted)]">
                 Once the Treasury&rsquo;s address is published, contributing would
-                need no organization to join, no application and no relationship:
-                one on-chain transaction to that address. ECIP-1113 requires any
-                interface or site that solicits contributions to publish it, for
-                every asset class.
+                take one on-chain transaction to that address, with no
+                organization to join, no application and no relationship needed.
+                ECIP-1113 requires any interface or site that solicits
+                contributions to publish that address, for every asset class.
               </p>
             </FadeIn>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">

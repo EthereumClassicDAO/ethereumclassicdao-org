@@ -15,9 +15,9 @@ import { OLYMPIA_STATUS } from "@/lib/network-links";
 const ECIPS_REPO_URL = "https://github.com/ethereumclassic/ECIPs";
 
 export const metadata: Metadata = {
-  title: "Olympia: EVM Alignment Through Glamsterdam",
+  title: "Olympia: EVM Alignment Into Glamsterdam",
   description:
-    "Olympia is a proposed Ethereum Classic upgrade: EVM alignment through Glamsterdam and an EIP-1559 base fee credited to a treasury. Draft ECIPs, block TBD.",
+    "A proposed Ethereum Classic upgrade: EVM alignment through Fusaka and into Glamsterdam, and an EIP-1559 base fee credited to a treasury. Draft ECIPs, block TBD.",
   keywords: [
     "Olympia upgrade",
     "Olympia proposal",
@@ -59,7 +59,7 @@ const faqItems: { question: string; answer: string }[] = [
   {
     question: "How would the base fee reach the Treasury?",
     answer:
-      "ECIP-1111 activates EIP-1559 and credits each transaction's base fee to the Sovereignty Vault address, inside that transaction's own state transition, where Ethereum destroys it. The credit runs no contract code. Ethereum Classic has no base fee today, so nothing is taken from what miners earn now.",
+      "ECIP-1111 activates EIP-1559 and credits each transaction's base fee to the Sovereignty Vault address, inside that transaction's own state transition, at the point where Ethereum destroys it. The credit runs no contract code. Ethereum Classic has no base fee today, so nothing is taken from what miners earn now.",
   },
   {
     question: "Would miner rewards change?",
@@ -77,9 +77,9 @@ const faqItems: { question: string; answer: string }[] = [
       "No. Protocol change remains with the ECIP process, ECIP-1000. A funding proposal can pay for work on Ethereum Classic without conferring any authority over its specification, and an upgrade takes effect only when client teams release it and the network runs it.",
   },
   {
-    question: "What would Ethereum Classic DAO LLC do?",
+    question: "What would Ethereum Classic DAO do?",
     answer:
-      "ECIP-1114 names Ethereum Classic DAO LLC as the legal wrapper it contemplates for Olympia DAO, for the off-chain acts an on-chain organization cannot perform, without acquiring authority over it. Once Olympia DAO is operating, the LLC would carry out the off-chain obligations a passed proposal has fixed, such as signing the engagement for a security audit the DAO voted to fund. It is downstream of Olympia DAO in authority, holds no on-chain role and no position in the ECIP process, and holds no role in anything ECIP-1114 specifies until Olympia DAO is operating.",
+      "ECIP-1114 names Ethereum Classic DAO LLC as the legal wrapper it contemplates for Olympia DAO, for the off-chain acts an on-chain organization cannot perform, without acquiring authority over it. Once Olympia DAO is operating, Ethereum Classic DAO would carry out the off-chain obligations a passed proposal has fixed, such as signing the engagement for a security audit Olympia DAO voted to fund. Ethereum Classic DAO is downstream of Olympia DAO in authority, holds no on-chain role and no position in the ECIP process, and holds no role in anything ECIP-1114 specifies until Olympia DAO is operating.",
   },
   {
     question: "Does Olympia adopt all of Glamsterdam?",
@@ -89,7 +89,7 @@ const faqItems: { question: string; answer: string }[] = [
   {
     question: "Which client should I run?",
     answer:
-      "Core-Geth, the recommended client: run its v1.13 line. Fukuii, which its maintainers mark alpha, is an alternative to try beside it: run its current release. Neither client's releases are ready for Olympia, which is in development and targeted for mainnet activation in 2027.",
+      "Core-Geth, the recommended client: run its v1.13 line. Fukuii, which its maintainers mark alpha, is an alternative to try beside it: run its latest release. Neither client's releases are ready for Olympia, which is in development and targeted for mainnet activation in 2027.",
   },
   {
     question: "What happens to a node that does not upgrade?",
@@ -142,9 +142,9 @@ export default function OlympiaPage() {
                 <span aria-hidden="true" className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[var(--brand-green)]" />
                 <span>
                   <span className="font-semibold text-[var(--text-primary)]">A base fee market (ECIP-1111):</span>{" "}
-                  EIP-1559 and EIP-3198, with the base fee credited to a permanent
-                  address where Ethereum destroys it. Block rewards and priority-fee
-                  tips are unaffected.
+                  EIP-1559 and EIP-3198, with the base fee, which Ethereum destroys,
+                  credited instead to a permanent address. Block rewards and
+                  priority-fee tips are unaffected.
                 </span>
               </li>
               <li className="flex gap-3">
