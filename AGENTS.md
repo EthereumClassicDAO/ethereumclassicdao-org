@@ -48,13 +48,20 @@ Read from `package.json`; versions below are the major series actually in use.
 app/                    → routes; each page composes section components
   layout.tsx            → root layout: fonts, metadata, JSON-LD, nav, footer
   globals.css           → design tokens + Tailwind @theme (light + dark)
+  robots.txt/route.ts   → serves /robots.txt
+  manifest.ts           → the web manifest
+  not-found.tsx         → sends an unknown path to the home page
 components/
-  ui/                   → FadeIn, SectionDivider, PropertyCard, Accordion, Cite,
-                          ActivationCountdown, HashrateChart
+  ui/                   → shared pieces: FadeIn, SectionDivider, PropertyCard,
+                          Accordion, Cite, StatsGrid, ActivationCountdown,
+                          V12MoveNote, BreadcrumbJsonLd, Logo, FlagImg, CryptoImg
   sections/             → NavHeader, FooterSection
-  <page>/               → section components, one directory per page
+  theme-*.tsx           → light and dark theme provider and toggle
+  <page>/               → section components, one directory per page;
+                          about/HashrateChart is shared by several pages
 lib/
   utils.ts              → cn() class-merge helper
+  format.ts             → number formatting for live figures
   network-links.ts      → shared URLs, and the status lines pages render
   *.ts                  → page data: public goods, maintenance record, Olympia
                           ECIPs, and ECIP-1121's EIP rows
@@ -71,15 +78,16 @@ into a page file.
 
 ## Live data
 
-The site is otherwise static, but four figures are fetched server-side with ISR
-(`next: { revalidate: 3600 }`):
+The site is otherwise static, but these figures are fetched server-side, and each
+fetcher sets its own ISR interval with `next: { revalidate }`:
 
 | Source | Module | Provides |
 |---|---|---|
 | Blockscout ETC | `lib/api/hashrate.ts` | network hashrate + multi-timeframe history |
 | Blockscout ETC | `lib/api/pool-hashrate.ts` | per-pool share, from block attribution |
 | Blockscout ETC | `lib/api/etc-stats.ts` | chain statistics |
-| CoinGecko | `lib/api/*` | market data |
+| CoinGecko | `lib/api/etc-stats.ts` | market data |
+| Yahoo Finance | `lib/api/etcg-stats.ts` | ETCG share price |
 
 **Hashrate is derived, not reported.** Block difficulty ÷ the network's own
 `average_block_time` from Blockscout `/stats`. There is exactly one upstream
@@ -120,8 +128,8 @@ the section around it.
 
 ## Content and positioning
 
-- **ETC claim:** the only Proof-of-Work blockchain with native EVM smart contracts;
-  the largest such network by hashrate
+- **ETC claim:** the only mature Proof-of-Work blockchain with native smart
+  contracts
 - **Olympia is a proposal: its ECIPs are drafts, and the ECIPs repository is the
   authority.** Write it in proposal voice ("would", "as proposed"), with its status
   in `OLYMPIA_STATUS` rather than in prose. As proposed, it advances the execution
@@ -154,10 +162,10 @@ the section around it.
   miner revenue. A fee figure is read from Blockscout, never typed into copy.
 - **Governance:** ECIP-1113, ECIP-1114, ECIP-1117, ECIP-1118 and ECIP-1119 govern
   the Olympia governance copy; read them in the ECIPs repository before writing it.
-- **The LLC and Olympia:** the LLC's relation to Ethereum Classic's Olympia DAO is
-  the one ECIP-1114 states. `components/olympia/LegalWrapperSection.tsx` carries
-  the site's wording, and a line on it anywhere else follows that section. It is
-  legal content: ask first.
+- **Ethereum Classic DAO and Olympia:** Ethereum Classic DAO's relation to
+  Ethereum Classic's Olympia DAO is the one ECIP-1114 states.
+  `components/olympia/LegalWrapperSection.tsx` carries the site's wording, and a
+  line on it anywhere else follows that section. It is legal content: ask first.
 - **Regulatory:** CLARITY Act digital-commodity classification is *pending* — write
   "positioned for" or "candidate for"
 - **Grayscale:** ETCG is a trust product. The ETF conversion pipeline may be
@@ -186,14 +194,16 @@ The same holds for any tool a page tells a reader to run.
 
 - `app/globals.css` — design tokens
 - `app/layout.tsx` — root layout, fonts, metadata, JSON-LD
-- `public/logo.svg`, `public/favicon.*`, `public/og-image.png` — brand assets,
-  do not regenerate
+- `public/logo.svg`, `public/og-image.png` and the icons (`app/favicon.ico`,
+  `app/icon.svg`, `app/apple-icon.png`, `public/android-chrome-*.png`): brand
+  assets, do not regenerate
 - `tsconfig.json`, `next.config.ts` — build configuration
 
 **Ask first**
 
 - New pages beyond the existing route set
-- Client-side JavaScript beyond the nav's mobile menu
+- A new client component: anything that needs `"use client"`, beyond the
+  components that already carry it
 - LLC registration details or legal content
 - Dependency changes — route these to the `sentinel` agent
 
@@ -207,8 +217,8 @@ The same holds for any tool a page tells a reader to run.
 
 ## Upstream sources of truth
 
-The Olympia content on this site is downstream of specs that live elsewhere. When
-they disagree, the spec wins and the site is corrected.
+This site's content on these subjects is downstream of the sources below. When a
+source and the site disagree, the source wins and the site is corrected.
 
 | Subject | Authority |
 |---|---|
@@ -216,3 +226,4 @@ they disagree, the spec wins and the site is corrected.
 | The Olympia ECIPs, as the ECIPs repository defines the suite, and ECBP-1100/1110 (MESS) | the ECIPs repository |
 | EIP contents and dependencies | `eips.ethereum.org` |
 | Fukuii positioning and URLs | fukuii.com, docs.fukuii.com and `chippr-robotics/fukuii` |
+| The peer discovery lists: what they carry, how they are built and published, and their funding | `ethereumclassic/discv4-dns-lists` |

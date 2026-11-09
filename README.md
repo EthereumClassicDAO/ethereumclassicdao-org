@@ -1,6 +1,6 @@
 # EthereumClassicDAO.org
 
-Institutional website for **Ethereum Classic DAO LLC**, a Wyoming-registered DAO LLC. The legal entity building software, governance infrastructure, and institutional frameworks for Ethereum Classic — the largest Proof-of-Work blockchain with native EVM smart contracts.
+Institutional website for **Ethereum Classic DAO LLC**, a Wyoming-registered DAO LLC (Filing ID 2025-001671865) that maintains and funds Ethereum Classic's public goods, the Core-Geth client, the bootnodes and the peer discovery lists, as the funder of last resort. Ethereum Classic's core developers and community contributors do the day-to-day work.
 
 **Website:** [ethereumclassicdao.org](https://ethereumclassicdao.org)
 
@@ -23,14 +23,16 @@ pnpm typecheck  # Type check
 
 ## Related
 
-- [olympia-brand](https://github.com/olympiadao/olympia-brand) — Design tokens, logos, favicons
-- [olympiadao-org](https://github.com/olympiadao/olympiadao-org) — Olympia DAO landing page
-- [olympiatreasury-org](https://github.com/olympiadao/olympiatreasury-org) — Treasury dashboard
-- [olympia-app](https://github.com/olympiadao/olympia-app) — Governance UI
-- [olympia-governance-contracts](https://github.com/olympiadao/olympia-governance-contracts) — Governor, Executor, Registry
-- [olympia-treasury-contract](https://github.com/olympiadao/olympia-treasury-contract) — Treasury vault
+- [olympia-brand](https://github.com/olympiadao/olympia-brand): design tokens, logos, favicons
+- [olympiadao-org](https://github.com/olympiadao/olympiadao-org): the Olympia DAO site
+- [olympiatreasury-org](https://github.com/olympiadao/olympiatreasury-org): the Olympia Treasury site
+- [olympia-app](https://github.com/olympiadao/olympia-app): the governance interface
+- [olympia-governance-contracts](https://github.com/olympiadao/olympia-governance-contracts): Olympia DAO's governance contracts
+- [olympia-treasury-contract](https://github.com/olympiadao/olympia-treasury-contract): the Treasury contract
 
-## Ethereum Classic Core Developers
+Olympia is a proposed upgrade, and its ECIPs are drafts.
+
+## Organizing Members
 
 - [Cody Burns](https://github.com/realcodywburns)
 - [Chris Mercer](https://github.com/chris-mercer)

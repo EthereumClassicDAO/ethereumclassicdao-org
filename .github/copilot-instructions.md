@@ -90,9 +90,10 @@ Brand green inverts between themes (`#007a53` light, `#00ffae` dark), so
   "discarded" or taken from miners; Ethereum burns its base fee rather than funding
   its development with it; under Olympia the base fee goes to the Treasury, not to
   miners. Read fee figures from Blockscout; never type one into copy.
-- Olympia governance copy follows ECIP-1113, 1114, 1117, 1118 and 1119. The LLC's
-  relation to Olympia DAO follows ECIP-1114 and the wording in
-  `components/olympia/LegalWrapperSection.tsx`; it is legal content, so ask first.
+- Olympia governance copy follows ECIP-1113, 1114, 1117, 1118 and 1119.
+  Ethereum Classic DAO's relation to Olympia DAO follows ECIP-1114 and the wording
+  in `components/olympia/LegalWrapperSection.tsx`; it is legal content, so ask
+  first.
 - Naming: "Ethereum Classic's Olympia DAO", never "OlympiaDAO"
 - **Never say:** "off-chain administrative executor", "subordinate to on-chain
   governance", SHALL/MUST NOT, ECIP-1120 in rendered content, hash-bound tuples,
@@ -115,7 +116,9 @@ Brand green inverts between themes (`#007a53` light, `#00ffae` dark), so
 
 - `app/globals.css` (design tokens)
 - `app/layout.tsx` (root layout, metadata, JSON-LD)
-- `public/` brand assets — `logo.svg`, `favicon.*`, `og-image.png`
+- Brand assets: `public/logo.svg`, `public/og-image.png` and the icons
+  (`app/favicon.ico`, `app/icon.svg`, `app/apple-icon.png`,
+  `public/android-chrome-*.png`)
 - `tsconfig.json`, `next.config.ts`
 
 **Never**
@@ -124,6 +127,9 @@ Brand green inverts between themes (`#007a53` light, `#00ffae` dark), so
 - "Demo · Mordor" badges — this is the real legal entity
 - Commit `.env` files, credentials, or anything under `.local/`
 
-**Note:** the site is otherwise static, but it *does* fetch live chain data
-server-side with ISR (`lib/api/`). "No data fetching" is not a rule here; "no
-client-side data fetching" is.
+**Note:** the site is otherwise static, but it *does* fetch live chain and market
+data server-side with ISR (`lib/api/`). "No data fetching" is not a rule here; "no
+client-side data fetching" is. Mark every element that renders a live figure with
+`data-live`: the sitemap step after `next build` leaves those elements out when it
+compares a page with its live version, so a revalidated figure does not count as an
+edit.
