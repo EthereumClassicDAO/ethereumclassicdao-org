@@ -8,7 +8,7 @@ import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: "About Ethereum Classic DAO LLC",
   description:
-    "About Ethereum Classic DAO LLC, the Wyoming DAO LLC that maintains and funds ETC's public goods as funder of last resort: its work, members and values.",
+    "About Ethereum Classic DAO LLC, the Wyoming DAO LLC that maintains and funds ETC's public goods as the funder of last resort: its work, members and values.",
 };
 
 export default function AboutPage() {

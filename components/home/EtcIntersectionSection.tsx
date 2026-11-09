@@ -4,10 +4,10 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 
 const regulatoryCards = [
-  { label: "CLARITY Act", value: "Digital Commodity", detail: "CFTC · United States" },
+  { label: "CLARITY Act", value: "Digital Commodity Candidate", detail: "CFTC · United States" },
   { label: "GENIUS Act", value: "Stablecoin Platform", detail: "United States" },
-  { label: "MiCA", value: "Decentralized Asset", detail: "European Union" },
-  { label: "Also Compliant", value: "UK · Japan · UAE", detail: "FSMA · FSA Green List · VARA" },
+  { label: "MiCA", value: "No Issuer", detail: "European Union" },
+  { label: "Green List", value: "Listed Crypto-Asset", detail: "JVCEA · Japan" },
 ];
 
 const columns = [
@@ -16,11 +16,11 @@ const columns = [
     heading: "From Proof-of-Work",
     subheading: "Bitcoin\u2019s regulatory trajectory",
     points: [
-      "No pre-mine, no foundation controlling the protocol, no issuer.",
+      "No foundation controlling the protocol and no central issuer.",
       "Mining hardware is globally distributed and permissionless to acquire.",
       "Block rewards and tips go to miners. Under the Olympia proposal, a treasury would be funded by the base fee rather than by new issuance.",
-      "CLARITY Act digital commodity classification path: same PoW profile as Bitcoin.",
-      "Energy demand that co-locates with any power source, anywhere in the world.",
+      "A digital commodity candidate under the CLARITY Act, with the same Proof-of-Work profile as Bitcoin.",
+      "Mining demand can co-locate with any power source, anywhere in the world.",
     ],
   },
   {
@@ -28,11 +28,11 @@ const columns = [
     heading: "From the EVM",
     subheading: "Ethereum\u2019s regulatory trajectory",
     points: [
-      "Solidity and EVM compatibility through Shanghai: Ethereum's tools, libraries and frameworks work with ETC.",
-      "Classic USD ($USC) by Brale: a live, 1:1 USD-backed stablecoin on a PoW chain — a first.",
-      "GENIUS Act-compliant stablecoin infrastructure, the first on any Proof-of-Work network.",
+      "Solidity and the EVM through Shanghai, so Ethereum's tools, libraries and frameworks work with ETC, with a legacy-transaction setting where a tool assumes EIP-1559.",
+      "Classic USD ($USC) by Brale: a live, 1:1 USD-backed stablecoin aligned with the GENIUS Act, on a Proof-of-Work network.",
+      "Under the Olympia proposal, EVM alignment would continue through Fusaka and into Glamsterdam.",
       "ETCswap V2 and V3 provide on-chain liquidity for composable DeFi with a regulated stable base.",
-      "MiCA decentralized asset classification: exempt from ART/EMT issuer obligations.",
+      "No issuer under MiCA, so the rules for asset-referenced and e-money tokens do not apply.",
     ],
   },
 ];
@@ -41,38 +41,35 @@ export function EtcIntersectionSection() {
   return (
     <>
       <SectionDivider />
-      <section aria-labelledby="the-only-pow-evm-heading" className="section-gradient relative py-28">
+      <section aria-labelledby="pow-evm-heading" className="section-gradient relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
             <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
               Network Architecture
             </p>
-            <h2 id="the-only-pow-evm-heading" className="mt-2 text-3xl font-bold tracking-tight">
-              The Only Proof-of-Work EVM
+            <h2 id="pow-evm-heading" className="mt-2 text-3xl font-bold tracking-tight">
+              Where Proof-of-Work Meets the EVM
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Ethereum Classic is not simply a Proof-of-Work network or simply a
               smart contract platform. It sits at the intersection of both,
               inheriting the commodity classification path that Bitcoin
               established and the programmable finance frameworks that Ethereum
-              established. Bitcoin has PoW without programmability. Ethereum has
-              the EVM without PoW. ETC has both &mdash; and its regulatory
-              surface is additive, not exclusive.
+              established. Bitcoin has Proof-of-Work without general-purpose smart
+              contracts, and Ethereum has the EVM without Proof-of-Work. ETC has
+              both, so it stands on both regulatory paths at once: a digital
+              commodity candidate under the CLARITY Act, an asset with no issuer
+              under MiCA, and a Proof-of-Work EVM with a live stablecoin aligned
+              with the GENIUS Act.
             </p>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              That surface is a digital commodity candidate under the CLARITY Act,
-              a decentralized asset under MiCA, and the only Proof-of-Work EVM with
-              a live GENIUS Act-aligned stablecoin.
-            </p>
-            <p className="mt-3 text-base text-[var(--text-muted)]">
-              Exchanges listing ETC require asset classification clarity.
-              Custodians settling ETC transactions require settlement finality
-              guarantees. Investment product issuers require commodity status.
-              Regulated stablecoin issuers require an immutable, neutral
-              settlement rail. Ethereum Classic DAO LLC gives the network a legal
-              counterpart for that work, an entity that can contract and can
-              receive and report funding, while Ethereum Classic&rsquo;s core
-              developers do the engineering.
+              Exchanges listing ETC need a clear asset classification. Custodians
+              need settlement finality, investment product issuers need commodity
+              status, and regulated stablecoin issuers need an immutable, neutral
+              settlement rail. For the software all of them rely on, Ethereum
+              Classic DAO is a legal counterpart: an entity that can sign
+              contracts and can receive and report funding, while Ethereum
+              Classic&rsquo;s core developers do the engineering.
             </p>
           </FadeIn>
 

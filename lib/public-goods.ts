@@ -42,7 +42,7 @@ export const PUBLIC_GOODS: readonly PublicGood[] = [
       "The recommended client for Ethereum Classic, a go-ethereum downstream that implements the network's consensus rules and its Proof-of-Work chain selection. Upstream go-ethereum no longer supports Ethereum Classic, so those rules are maintained here rather than inherited. Each release is built by the repository's own workflow, with a checksum and a build attestation beside every file.",
     repo: CORE_GETH_REPO_URL,
     links: [
-      { label: "Current release", href: CORE_GETH_LATEST_RELEASE_URL },
+      { label: "Latest release", href: CORE_GETH_LATEST_RELEASE_URL },
       { label: "Documentation", href: CORE_GETH_DOCS_URL },
       { label: "Repository", href: CORE_GETH_REPO_URL },
       { label: "Audits and security record", href: CORE_GETH_SECURITY_URL },
@@ -55,11 +55,11 @@ export const PUBLIC_GOODS: readonly PublicGood[] = [
     status: "Maintained",
     live: true,
     description:
-      "Signed lists of Ethereum Classic and Mordor nodes, published in DNS so that a client finds its first peers. The lists are rebuilt every night from a crawl of the network, and every published list is committed to the repository, so the record of what clients were given is public.",
+      "Signed lists of nodes on Ethereum Classic and on Mordor, its testnet, published in DNS so that a client finds its first peers. The lists are rebuilt every night from a crawl of the network, and every published list is committed to the repository, so the record of what clients were given is public.",
     repo: DISCOVERY_LISTS_REPO_URL,
     links: [
       { label: "Repository", href: DISCOVERY_LISTS_REPO_URL },
-      { label: "How discovery works", href: BOOTNODES_DOCS_URL },
+      { label: "Discovery in the documentation", href: BOOTNODES_DOCS_URL },
     ],
   },
   {
@@ -70,7 +70,7 @@ export const PUBLIC_GOODS: readonly PublicGood[] = [
     live: true,
     description:
       "The fixed entry points a node contacts when it has no peers yet, for Ethereum Classic and for Mordor. They are run by the Core-Geth maintainers and built into the client, so a new node reaches the network without configuration.",
-    links: [{ label: "Bootnodes and discovery", href: BOOTNODES_DOCS_URL }],
+    links: [{ label: "Bootnodes in the documentation", href: BOOTNODES_DOCS_URL }],
   },
   {
     icon: Globe,
@@ -83,7 +83,7 @@ export const PUBLIC_GOODS: readonly PublicGood[] = [
     repo: PUBLIC_RPC_REPO_URL,
     links: [
       { label: "Repository", href: PUBLIC_RPC_REPO_URL },
-      { label: "Where to connect", href: PUBLIC_RPC_DOCS_URL },
+      { label: "Endpoints in the documentation", href: PUBLIC_RPC_DOCS_URL },
       { label: "ChainList", href: CHAINLIST_ETC_URL },
     ],
   },
@@ -112,11 +112,11 @@ export const PUBLIC_GOODS: readonly PublicGood[] = [
   {
     icon: Megaphone,
     name: "Community social media",
-    kind: "Community tweeting",
+    kind: "Community posts",
     status: SOCIAL_MEDIA_STATUS,
     live: false,
     description:
-      "The project's social media, run by the community through twitter-together: posts are proposed and reviewed as pull requests, so anyone can help shape Ethereum Classic's public voice and the record of what was posted stays public.",
+      "Ethereum Classic's social media, run by the community through twitter-together: posts are proposed and reviewed as pull requests, so anyone can help shape Ethereum Classic's public voice and the record of what was posted stays public.",
     repo: TWITTER_TOGETHER_REPO_URL,
     links: [{ label: "Repository", href: TWITTER_TOGETHER_REPO_URL }],
   },

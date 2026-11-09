@@ -13,7 +13,7 @@ const channels = [
     icon: Github,
     title: "GitHub",
     description:
-      "The DAO's public repositories, this website among them. Core-Geth is published from the ethereumclassic organization.",
+      "Ethereum Classic DAO's public repositories, this website among them. Core-Geth is published from the ethereumclassic organization.",
     href: "https://github.com/EthereumClassicDAO",
     cta: "View repositories",
   },

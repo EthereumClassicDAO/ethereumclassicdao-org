@@ -11,20 +11,20 @@ export function OlympiaResolutionSection() {
         <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
             <p className="text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
-              The Resolution
+              The Proposal
             </p>
             <h2 id="olympia-resolution-heading" className="mt-2 text-3xl font-bold tracking-tight">
               Why Olympia Was Proposed
             </h2>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--text-muted)]">
               Olympia was proposed to close this gap in the protocol itself. Its
-              specifications are drafts. As proposed, it would add a fee market
-              in which the base fee of every transaction is credited to a
-              treasury at a permanent address rather than destroyed, and on-chain governance
-              through which that treasury could fund core client development,
-              critical infrastructure and network security: the work described
-              on this page. Block rewards and tips would go entirely to miners,
-              as they do today.
+              specifications are drafts. As proposed, it would add a fee market in
+              which the base fee of every transaction, which Ethereum destroys, is
+              credited instead to a treasury at a permanent address. It would also
+              add on-chain governance through which that treasury could
+              fund core client development, critical infrastructure and network
+              security: the work described on this page. Block rewards and tips
+              would go entirely to miners, as they do today.
             </p>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--text-muted)]">
               Each organization that carried this work did so on its own
@@ -32,11 +32,11 @@ export function OlympiaResolutionSection() {
               protocol would not close or leave.
             </p>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--text-muted)]">
-              The work does not wait for it. Ethereum Classic&rsquo;s core
+              The work does not wait for it. Today Ethereum Classic&rsquo;s core
               developers do the day-to-day work on the client and the
-              infrastructure today, the DAO maintains and funds them as the
-              funder of last resort, and sponsorship is how the stakeholders who
-              depend on them share that cost.
+              infrastructure, Ethereum Classic DAO funds that work as the funder
+              of last resort, and sponsorship is how the stakeholders who
+              depend on the software share the cost.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
               <Link

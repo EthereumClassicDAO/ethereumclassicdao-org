@@ -16,7 +16,7 @@ const team = [
     name: "Chris Mercer",
     title: "Organizing Member",
     photo: "/chris-mercer.jpeg",
-    bio: "Core contributor since Ethereum Classic's first year, active across governance, client development and the application layer. Deployed Classic USD, a MiCA- and GENIUS Act-aligned stablecoin, on Ethereum Classic, and builds the composable DeFi infrastructure the network's institutional use depends on. Leads the application layer, and the on-chain governance architecture the Olympia proposal specifies.",
+    bio: "Core contributor since Ethereum Classic's first year, active across governance, client development and the application layer. Deployed Classic USD, a GENIUS Act-aligned stablecoin, on Ethereum Classic, and builds the composable DeFi infrastructure the network's institutional use depends on. Leads work on the application layer and on the on-chain governance architecture the Olympia proposal specifies.",
     github: "https://github.com/chris-mercer",
   },
 ];
@@ -26,7 +26,7 @@ const orgs = [
     name: "ETC Cooperative",
     role: "Foundational Organization",
     description:
-      "The ETC Cooperative, a US 501(c)(3) non-profit founded in 2017 by Ethereum Classic's earliest core contributors, contributed millions of dollars to Ethereum Classic's client teams and infrastructure, and from January 2022 funded and maintained Core-Geth through the Mystique and Spiral upgrades, alongside the peer discovery lists, the bootnodes and the public JSON-RPC endpoints. It entered maintenance mode at the end of 2024, and the public goods it maintained continue in the ethereumclassic organization, where Ethereum Classic DAO LLC maintains and funds them as the funder of last resort.",
+      "The ETC Cooperative, a US 501(c)(3) non-profit founded in 2017 by Ethereum Classic's earliest core contributors, contributed millions of dollars to Ethereum Classic's client teams and infrastructure. From January 2022 it funded and maintained Core-Geth through the Mystique and Spiral upgrades, along with the peer discovery lists, the bootnodes and the public JSON-RPC endpoints. It entered maintenance mode at the end of 2024, and the public goods it maintained continue in the ethereumclassic organization, where Ethereum Classic DAO maintains and funds them today as the funder of last resort.",
     href: COOPERATIVE_ARCHIVE_URL,
     label: "etccooperative.org (archived)",
   },
@@ -34,7 +34,7 @@ const orgs = [
     name: "Grayscale Investments",
     role: "Regulated Investment Products",
     description:
-      "Grayscale pioneered regulated institutional access to Ethereum Classic in 2018 — years before Bitcoin ETFs existed as a product category — and became a major institutional donor to the ETC Cooperative, indirectly funding the core client development of the network underpinning their product. No other investment product issuer was doing this at the time. The Grayscale Ethereum Classic Trust (ETCG) trades on OTCQX and is accessible through Charles Schwab, Fidelity, and Interactive Brokers.",
+      "Grayscale pioneered regulated institutional access to Ethereum Classic in 2017, years before Bitcoin ETFs existed as a product category, and became a major institutional donor to the ETC Cooperative, indirectly funding core client development for the network underpinning its product. Few, if any, investment product issuers were doing this at the time. The Grayscale Ethereum Classic Trust (ETCG) is quoted on OTCQX and available through Charles Schwab, Fidelity and Interactive Brokers.",
     href: "https://grayscale.com/crypto-products/grayscale-ethereum-classic-trust/",
     label: "grayscale.com",
   },
@@ -49,16 +49,16 @@ export function LeadershipSection() {
           <FadeIn>
             <h2 id="leadership-heading" className="text-3xl font-bold tracking-tight">Leadership</h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Ethereum Classic has been stewarded since 2016 by a global network
-              of volunteer contributors — maintaining the chain, coordinating
-              upgrades, and building the ecosystem before any formal organization
-              existed. The ETC Cooperative formalized that work in 2017, funding
-              core development and infrastructure for nearly a decade, sustained
-              in large part by distributed ETCG holders whose management fees
-              backed the network, with no funding source in the protocol. Ethereum
-              Classic DAO LLC is the institutional expression of that continuity:
-              it stewards the network&rsquo;s public goods today, in the
-              ethereumclassic organization: the same contributors, the same commitment, built to grow with the network and the global adoption of blockchain infrastructure.
+              Ethereum Classic has been carried since 2016 by a global network of
+              contributors, many of them volunteers, who maintain the chain,
+              coordinate upgrades and build the ecosystem. The ETC Cooperative,
+              founded in 2017, funded core development and infrastructure for
+              nearly a decade with no funding source in the protocol, sustained
+              in large part by donations from Grayscale, whose Ethereum Classic
+              Trust is held by a widely distributed base of investors. Ethereum
+              Classic DAO continues that commitment today as the legal entity
+              behind the network&rsquo;s public goods in the ethereumclassic
+              organization, built to grow with the network.
             </p>
             <Link
               href="/stewardship"
@@ -106,7 +106,7 @@ export function LeadershipSection() {
           <FadeIn>
             <h3 className="mt-16 text-xl font-bold">Foundational Organizations</h3>
             <p className="mt-2 text-sm text-[var(--text-muted)]">
-              The organizations whose decade of funded development and regulated institutional access built the foundation Ethereum Classic DAO LLC continues.
+              The organizations whose funded development and regulated institutional access laid the foundation Ethereum Classic DAO builds on.
             </p>
           </FadeIn>
 

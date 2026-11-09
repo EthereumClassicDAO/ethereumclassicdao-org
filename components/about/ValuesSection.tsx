@@ -7,25 +7,25 @@ const values = [
     icon: Shield,
     title: "Immutability",
     description:
-      "Ethereum Classic exists because one network refused to roll back transactions in 2016. Every block since has held that line. Finality is not a feature to be toggled — it is the property that makes ETC viable as neutral settlement infrastructure across six regulatory jurisdictions. No counterparty can reverse a settled transaction, selectively freeze activity, or alter historical state. The original Ethereum chain, preserved without exception.",
+      "Ethereum Classic exists because, in 2016, its community refused to roll back the exploit of The DAO, and every block since has held that line. Finality is not a feature to be toggled: it is the property that makes ETC viable as neutral settlement infrastructure in every jurisdiction it serves. No counterparty can reverse a settled transaction by decree, selectively freeze activity or alter historical state. It is the original Ethereum chain, preserved without exception.",
   },
   {
     icon: Network,
     title: "Decentralization",
     description:
-      "Multiple independent client implementations and GPU and ASIC mining infrastructure distributed across continents: ETC has no single point of control. The absence of a central issuer or controlling party is not merely an architectural choice: it is what positions ETC for digital commodity classification in the US and as a decentralized asset under MiCA. Decentralization is both a technical property and a legal one.",
+      "Independent client implementations and GPU and ASIC mining infrastructure distributed across continents leave ETC with no single point of control. The absence of a central issuer or controlling party is not merely an architectural choice: it is what positions ETC for digital commodity classification in the US, and what keeps MiCA's rules for asset-referenced and e-money tokens from applying to it. Decentralization is both a technical property and a legal one.",
   },
   {
     icon: Eye,
     title: "Transparency",
     description:
-      "Ethereum Classic's development history is more than a decade of public ECIPs, open repositories and on-chain activity anyone can verify: building in the open is how this network has always operated. Ethereum Classic DAO LLC publishes periodic reports under Wyoming's DAO LLC framework. Under the Olympia proposal, every Treasury allocation and governance vote would also be recorded on-chain, publicly verifiable without permission or an access request.",
+      "Ethereum Classic's development history is more than a decade of public ECIPs, open repositories and on-chain activity anyone can verify: building in the open is how this network has always operated. Ethereum Classic DAO is committed to publishing periodic reports under Wyoming's DAO LLC framework. Under the Olympia proposal, every Treasury allocation and governance vote would also be recorded on-chain, publicly verifiable without permission or an access request.",
   },
   {
     icon: Leaf,
     title: "Sustainability",
     description:
-      "As proposed, Olympia would credit the EIP-1559 base fee to a treasury that only on-chain governance could spend, while block rewards and priority-fee tips stay with miners. Anyone could also add to it by choice: sending ETC to its address or, for a miner, naming it as a block's beneficiary. The deeper sustainability is organizational: core development would no longer depend on a single employer or grant cycle, and funding would be decided in public, by proposal and vote, on the same terms for every contributor.",
+      "As proposed, Olympia would credit the EIP-1559 base fee to a treasury that only on-chain governance could spend, while block rewards and priority-fee tips would stay with miners. Anyone could also add to it by choice, by sending ETC to its address or, for a miner, by naming it as a block's beneficiary. The deeper sustainability is organizational: core development would no longer depend on a single employer or grant cycle, and funding would be decided in public, by proposal and vote, on the same terms for every contributor.",
   },
 ];
 
@@ -38,7 +38,7 @@ export function ValuesSection() {
           <FadeIn>
             <h2 id="our-values-heading" className="text-3xl font-bold tracking-tight">Our Values</h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Ethereum Classic was built on properties that predate this organization and will outlast it. They are not aspirational statements — they are the constraints within which every decision is made, and the standard every proposal is measured against.
+              Ethereum Classic was built on properties that predate this organization and will outlast it. They are not aspirations: they are the constraints within which every decision is made, and the standard every proposal is measured against.
             </p>
           </FadeIn>
 

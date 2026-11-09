@@ -15,7 +15,7 @@ const contacts: {
     icon: ShieldCheck,
     title: "Security and operators",
     description:
-      "For mining pools, exchanges and service providers, for private vulnerability reports, and to subscribe to release and security announcements. A person answers it: one of the core developers who maintain the client.",
+      "For mining pools, exchanges and service providers, for private vulnerability reports, and for subscriptions to release and security announcements. A person answers this address: one of the core developers who maintain the client.",
     email: SECURITY_EMAIL,
     more: { label: "What is maintained", href: "/public-goods" },
   },
@@ -41,9 +41,9 @@ export function NetworkContactsSection() {
             </h2>
             <p className="mt-3 text-sm text-[var(--text-muted)]">
               The core developers who maintain Core-Geth, the bootnodes and the
-              peer discovery lists are reached on ethereumclassic.net, the
-              domain for the public goods maintained in the ethereumclassic
-              organization.
+              peer discovery lists can be reached at addresses on
+              ethereumclassic.net, the domain for the public goods maintained in
+              the ethereumclassic organization.
             </p>
           </FadeIn>
 

@@ -18,8 +18,8 @@ export function MaintenanceRecordSection() {
             </h2>
             <p className="mt-3 max-w-3xl text-base text-[var(--text-muted)]">
               How Core-Geth&rsquo;s maintenance reached the ethereumclassic
-              organization, and the work the DAO has funded since it was formed,
-              each step with the record it rests on.
+              organization, and the work Ethereum Classic DAO has funded since its
+              formation, each step with the record it rests on.
             </p>
           </FadeIn>
 

@@ -13,7 +13,7 @@ import { OWN_ORGANIZATION_PROPERTIES } from "@/lib/public-goods";
 
 const records = [
   {
-    label: "Where each service the ETC Cooperative maintained continues",
+    label: "Where each ETC Cooperative service continues, in the Core-Geth documentation",
     href: COOPERATIVE_TRANSITION_URL,
   },
   { label: "Where Core-Geth came from, and who carries it", href: CORE_GETH_ABOUT_URL },
@@ -33,10 +33,10 @@ export function StandingHomeSection() {
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--text-muted)]">
               The <Cite href={ETC_ORG_URL}>ethereumclassic organization</Cite>{" "}
               has held the Ethereum Classic community&rsquo;s shared resources
-              since July 2016: the website from the start, the ECIPs since 2018
-              and, since December 2024,{" "}
+              since July 2016: the community website from the start, the ECIPs
+              since 2018 and, since December 2024,{" "}
               <Cite href={CORE_GETH_REPO_URL}>Core-Geth</Cite>. Keeping a
-              reference client in the project&rsquo;s own organization is
+              reference client in the network&rsquo;s own organization is
               ordinary practice, as with Bitcoin Core at bitcoin/bitcoin and
               go-ethereum at ethereum/go-ethereum.
             </p>

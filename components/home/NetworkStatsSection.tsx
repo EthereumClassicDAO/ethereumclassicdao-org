@@ -62,7 +62,11 @@ export function NetworkStatsSection({ stats, hashrateTHs }: { stats: EtcStats; h
         | "green"
         | "red",
     },
-    { value: formatUSD(stats.marketCap), label: "Market Cap" },
+    {
+      value: formatUSD(stats.marketCap),
+      label: "Market Cap",
+      context: `Rank #${stats.marketCapRank} by market cap`,
+    },
     {
       value: formatCompact(stats.totalTransactions),
       label: "Total Transactions",
@@ -72,9 +76,10 @@ export function NetworkStatsSection({ stats, hashrateTHs }: { stats: EtcStats; h
 
   const sectionStats = [
     {
-      value: formatUSD(stats.marketCap),
-      label: "Market Capitalization",
-      context: `Rank #${stats.marketCapRank} by market cap`,
+      value: formatCompact(stats.circulatingSupply),
+      unit: "ETC",
+      label: "Circulating Supply",
+      context: `Of a ${formatSupply(stats.maxSupply)} maximum supply`,
     },
     {
       value: formatCompact(stats.totalAddresses),
@@ -98,7 +103,7 @@ export function NetworkStatsSection({ stats, hashrateTHs }: { stats: EtcStats; h
 
   const networkRows: Row[] = [
     { label: "Genesis Date", value: "July 30, 2015" },
-    { label: "Consensus", value: "Proof-of-Work (ETChash)" },
+    { label: "Consensus", value: "Proof-of-Work (Etchash)" },
     { label: "Chain ID", value: "61 (mainnet)" },
     { label: "Total Blocks", value: formatCompact(stats.totalBlocks) },
     {

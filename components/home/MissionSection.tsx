@@ -13,25 +13,29 @@ export function MissionSection() {
       <div className="relative z-10 mx-auto max-w-5xl px-6">
         <FadeIn>
           <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
-            Wyoming DAO LLC
+            Funder of last resort
           </p>
           <h1 className="mt-4 text-6xl font-bold leading-[0.9] tracking-[-0.04em] md:text-8xl">
             Ethereum Classic DAO
           </h1>
+          <p className="mt-6 text-2xl font-semibold leading-snug tracking-tight md:text-3xl">
+            Stewarding immutable infrastructure for{" "}
+            <span className="text-[var(--brand-green)]">programmable global finance</span>
+          </p>
           <p className="mt-6 text-xl text-[var(--text-secondary)] md:text-2xl">
             Formed in Wyoming in May 2025, Ethereum Classic DAO LLC is the legal
             entity behind Ethereum Classic&rsquo;s public goods: the Core-Geth
-            client, the network&rsquo;s bootnodes and its peer discovery lists. It paid for the
-            2026 modernization of Core-Geth, which Ethereum Classic&rsquo;s core
-            developers carried out, and it maintains and funds the work today as
-            the funder of last resort. The core developers and the community do
-            the day-to-day work.
+            client, the network&rsquo;s bootnodes and its peer discovery lists.
+            Today it maintains and funds these public goods as the funder of last
+            resort, while Ethereum Classic&rsquo;s core developers and community
+            contributors do the day-to-day work. Ethereum Classic DAO paid for
+            the 2026 modernization of Core-Geth, which the core developers
+            carried out.
           </p>
           <p className="mt-4 text-base text-[var(--text-muted)]">
-            Ethereum Classic is the original Ethereum codebase, running
-            continuously since July 2015 without rollbacks or rewrites. The DAO
-            does not control or lead it, and is not the only organization that
-            can fund its work.
+            Ethereum Classic continues the original Ethereum chain, running
+            since July 2015. Ethereum Classic DAO does not control or lead the network, and it is
+            not the only organization that can fund work on it.
           </p>
         </FadeIn>
 

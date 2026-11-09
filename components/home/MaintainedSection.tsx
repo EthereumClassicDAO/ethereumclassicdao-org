@@ -23,12 +23,12 @@ export function MaintainedSection() {
               What We Maintain
             </h2>
             <p className="mt-3 max-w-3xl text-base text-[var(--text-muted)]">
-              The public goods Ethereum Classic nodes depend on, kept in public
+              The public goods Ethereum Classic relies on, kept in public
               repositories in the{" "}
               <Cite href={ETC_ORG_URL}>ethereumclassic GitHub organization</Cite>.
               Ethereum Classic&rsquo;s core developers and community contributors
-              do the day-to-day work, and Ethereum Classic DAO LLC maintains and
-              funds that work as the funder of last resort.
+              do the day-to-day work, and today Ethereum Classic DAO maintains and
+              funds these public goods as the funder of last resort.
             </p>
           </FadeIn>
 
@@ -70,8 +70,8 @@ export function MaintainedSection() {
           <FadeIn delay={200}>
             <p className="mt-8 max-w-3xl text-sm leading-relaxed text-[var(--text-muted)]">
               <span className="font-semibold text-[var(--text-primary)]">ethereumclassic.net</span>{" "}
-              is the domain for these public goods. The peer discovery trees are
-              published under it, as under ethclassic.net and
+              is the domain for these public goods. The peer discovery lists are
+              published under it, and also under ethclassic.net and
               ethereumclassic.network, and it carries the{" "}
               <a href={`mailto:${SECURITY_EMAIL}`} className="underline underline-offset-2 transition-colors hover:text-[var(--text-primary)]">
                 {SECURITY_EMAIL}
@@ -80,9 +80,9 @@ export function MaintainedSection() {
               <a href={`mailto:${SPONSOR_EMAIL}`} className="underline underline-offset-2 transition-colors hover:text-[var(--text-primary)]">
                 {SPONSOR_EMAIL}
               </a>{" "}
-              addresses. The public endpoints are{" "}
+              addresses. The public JSON-RPC endpoints are served from{" "}
               <span className="whitespace-nowrap">{`rpc.ethereumclassic.net (${PUBLIC_RPC_STATUS.toLowerCase()})`}</span>{" "}
-              and the network dashboard is{" "}
+              and the network dashboard from{" "}
               <span className="whitespace-nowrap">{`nodes.ethereumclassic.net (${NETWORK_DASHBOARD_STATUS.toLowerCase()})`}</span>.
             </p>
             <Link

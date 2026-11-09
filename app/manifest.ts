@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Ethereum Classic DAO",
     short_name: "ETC DAO",
     description:
-      "Building the software and infrastructure for global adoption of Ethereum Classic — the largest Proof-of-Work smart contract platform.",
+      "Ethereum Classic DAO LLC maintains and funds Core-Geth, the bootnodes and the discovery lists as their funder of last resort. Core developers do the daily work.",
     start_url: "/",
     display: "standalone",
     background_color: "#0a0f10",

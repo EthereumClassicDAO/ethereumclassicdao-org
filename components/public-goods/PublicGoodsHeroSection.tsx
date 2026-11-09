@@ -26,10 +26,10 @@ export function PublicGoodsHeroSection() {
           </p>
           <p className="mt-4 text-base text-[var(--text-muted)]">
             Ethereum Classic&rsquo;s core developers and community contributors
-            do the day-to-day work, and Ethereum Classic DAO LLC is the standing
-            legal entity that maintains and funds these public goods as the
-            funder of last resort. Who maintains and funds this work, and how to sponsor it, is
-            set out under stewardship.
+            do the day-to-day work, and today Ethereum Classic DAO is the
+            standing legal entity that maintains and funds these public goods as
+            the funder of last resort. The stewardship page sets out how that
+            arrangement works and how to sponsor it.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">
             <a

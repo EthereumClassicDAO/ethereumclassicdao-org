@@ -47,11 +47,10 @@ export function OwnOrganizationSection() {
           <FadeIn delay={280}>
             <p className="mt-8 max-w-3xl text-sm leading-relaxed text-[var(--text-muted)]">
               Before you move a node, a pool or an application to a new source of
-              software or data,{" "}
-              <Cite href={COOPERATIVE_TRANSITION_URL}>
-                confirm which organization publishes it
-              </Cite>
-              .
+              software or data, confirm which organization publishes it. The
+              Core-Geth documentation&rsquo;s{" "}
+              <Cite href={COOPERATIVE_TRANSITION_URL}>ETC Cooperative transition</Cite>{" "}
+              page lists where each service continues.
             </p>
           </FadeIn>
         </div>

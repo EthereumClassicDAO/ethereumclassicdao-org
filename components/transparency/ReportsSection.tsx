@@ -31,7 +31,7 @@ const reportTypes = [
   {
     icon: FileOutput,
     label: "Proposal Execution Records",
-    description: "Corresponding identifiers for every off-chain disbursement",
+    description: "The proposal identifier behind every off-chain disbursement",
   },
 ];
 
@@ -48,8 +48,8 @@ export function ReportsSection() {
           </h1>
           <p className="mt-4 text-lg text-[var(--text-muted)]">
             Ethereum Classic DAO is committed to publishing periodic public
-            reports. All governance operations and financial activities will be
-            disclosed transparently.
+            reports, and to disclosing its governance operations and financial
+            activity in them.
           </p>
         </FadeIn>
 

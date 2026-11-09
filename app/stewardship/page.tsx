@@ -14,7 +14,7 @@ const SITE_URL = "https://ethereumclassicdao.org";
 export const metadata: Metadata = {
   title: "Who Maintains and Funds Core-Geth",
   description:
-    "Ethereum Classic's core developers do the work on Core-Geth; Ethereum Classic DAO LLC maintains and funds it as the funder of last resort. How to sponsor it.",
+    "Ethereum Classic's core developers do the work on Core-Geth; Ethereum Classic DAO maintains and funds it as the funder of last resort. How to sponsor it.",
   keywords: [
     "who maintains Core-Geth",
     "Core-Geth maintainer",

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     absolute: "Ethereum Classic DAO — Stewarding ETC Core Development & Public Goods",
   },
   description:
-    "Ethereum Classic DAO LLC, formed in May 2025, maintains and funds Core-Geth and ETC's public goods as funder of last resort. Core developers do the work.",
+    "Ethereum Classic DAO LLC, formed in May 2025, maintains and funds Core-Geth and ETC's public goods as their funder of last resort. Core developers do the work.",
   // The root route revalidates under the name /index, so the layout's relative "./" would resolve
   // the canonical and og:url to /index. These are absolute instead.
   alternates: { canonical: "/" },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: "https://ethereumclassicdao.org/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Ethereum Classic DAO: Building Software & Infrastructure for Global Adoption",
+        alt: "Ethereum Classic DAO: Stewarding immutable infrastructure for programmable global finance",
         type: "image/png",
       },
     ],

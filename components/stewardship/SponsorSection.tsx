@@ -22,12 +22,12 @@ const points: { icon: LucideIcon; title: string; body: string }[] = [
   {
     icon: Send,
     title: "A direct transfer",
-    body: "For anyone who prefers to send funds directly. An address is provided on request, only ever in a reply from the sponsorship address, and no donation address is published anywhere. If a large transfer is planned, send a small one first and confirm receipt at the same address.",
+    body: "For anyone who prefers to send funds directly. An address is provided on request, only ever in a reply from the sponsorship address, and no donation address is published anywhere. If you plan a large transfer, send a small one first and confirm by email that it arrived.",
   },
   {
     icon: BadgeCheck,
     title: "Sponsors are credited",
-    body: "A sponsoring organization is credited on the project's support page with its name, a link and the years it has contributed, and only when it wants to be. It can be credited for the specific work it funds.",
+    body: "A sponsoring organization is credited on the support page of the project it sponsors, with its name, a link and the years it has contributed, and only when it wants to be. It can be credited for the specific work it funds.",
   },
   {
     icon: ShieldOff,
@@ -55,10 +55,11 @@ export function SponsorSection() {
               infrastructure. Mining pools, exchanges and custodians, issuers of
               Ethereum Classic financial products, mining hardware
               manufacturers, block explorers and RPC providers all depend on a
-              client that follows the network and on peer discovery that works
-              every night. The developers who do the work are in place, and
-              so is the standing legal entity that maintains and funds it. What the work needs is steady
-              funding from those who depend on it.
+              client that follows the network and on peer discovery lists that
+              are rebuilt every night. The developers who do the work are in
+              place, and so is a standing legal entity that sponsors can contract
+              with. What is missing is steady funding from the organizations that
+              depend on the work.
             </p>
           </FadeIn>
 

@@ -8,12 +8,12 @@ export const publicGoodsFaq: { question: string; answer: string }[] = [
   {
     question: "What are Ethereum Classic's public goods?",
     answer:
-      "The shared software and services the Ethereum Classic community builds and maintains in the open: the Core-Geth client, the network's bootnodes, the peer discovery lists, public JSON-RPC endpoints, a network dashboard, a block explorer, and the project's community social media. They are kept in the ethereumclassic GitHub organization.",
+      "The shared software and services the Ethereum Classic community builds and maintains in the open: the Core-Geth client, the network's bootnodes, the peer discovery lists, public JSON-RPC endpoints, a network dashboard, a block explorer, and Ethereum Classic's community-run social media. They are kept in the ethereumclassic GitHub organization.",
   },
   {
     question: "Which Ethereum Classic client should I run?",
     answer:
-      "Core-Geth is the recommended client: run its v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code. Take the current release from github.com/ethereumclassic/core-geth/releases/latest, which always resolves to it. Fukuii, which its maintainers mark alpha, is an alternative to try beside it, on the clients page.",
+      "Core-Geth is the recommended client: run its v1.13 line, which closes all six client CVEs the audits found in the v1.12 client code. Take the latest release from github.com/ethereumclassic/core-geth/releases/latest, which always resolves to it. Fukuii, which its maintainers mark alpha, is an alternative to try beside it; the clients page covers both.",
   },
   {
     question: "Where are Core-Geth releases published?",
@@ -28,16 +28,16 @@ export const publicGoodsFaq: { question: string; answer: string }[] = [
   {
     question: "Which public RPC endpoint should I use for Ethereum Classic?",
     answer:
-      "ChainList lists the public endpoints Ethereum Classic operators publish, for chain 61 and for Mordor, chain 63. A public endpoint is another operator's node: it can rate limit, fall behind or stop, so anything you depend on should run against a node you control.",
+      "ChainList lists the public endpoints Ethereum Classic operators publish, for Ethereum Classic (chain 61) and for its Mordor testnet (chain 63). A public endpoint is another operator's node: it can rate limit, fall behind or stop, so anything you depend on should run against a node you control.",
   },
   {
     question: "Who do exchanges, mining pools and service providers contact?",
-    answer: `${SECURITY_EMAIL}. A person answers it: one of the core developers who maintain this work. The same address takes private vulnerability reports and subscriptions to release and security announcements.`,
+    answer: `${SECURITY_EMAIL}. A person answers it: one of the core developers who maintain the client. The same address takes private vulnerability reports and subscriptions to release and security announcements.`,
   },
   {
     question: "Who maintains and pays for these services?",
     answer:
-      "Ethereum Classic's core developers and community contributors do the day-to-day work. Ethereum Classic DAO LLC is the standing legal entity that maintains and funds these services today as the funder of last resort. The stewardship page covers the arrangement and how to sponsor it.",
+      "Ethereum Classic's core developers and community contributors do the day-to-day work. Ethereum Classic DAO is the standing legal entity that maintains and funds these services today as the funder of last resort. The stewardship page covers the arrangement and how to sponsor the work.",
   },
 ];
 

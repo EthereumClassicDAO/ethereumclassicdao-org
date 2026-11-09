@@ -18,9 +18,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 const SITE_URL = "https://ethereumclassicdao.org";
 const TITLE =
-  "Ethereum Classic DAO — Building Software & Infrastructure for Global Adoption of Ethereum Classic";
+  "Ethereum Classic DAO — Stewarding Immutable Infrastructure for Programmable Global Finance";
 const DESCRIPTION =
-  "Ethereum Classic DAO LLC maintains and funds Core-Geth, the bootnodes and the peer discovery lists as funder of last resort. Core developers do the work.";
+  "Ethereum Classic DAO LLC maintains and funds Core-Geth, the bootnodes and the discovery lists as their funder of last resort. Core developers do the daily work.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
     "CLARITY Act",
     "GENIUS Act",
     "MiCA",
-    "FSA Green List",
-    "decentralized asset",
+    "JVCEA Green List",
+    "no issuer",
     "regulated stablecoin",
     "stablecoin platform",
     "Japan crypto-asset",
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Ethereum Classic DAO: Building Software & Infrastructure for Global Adoption",
+        alt: "Ethereum Classic DAO: Stewarding immutable infrastructure for programmable global finance",
         type: "image/png",
       },
     ],

@@ -19,7 +19,7 @@ const properties = [
   {
     icon: Github,
     name: "GitHub",
-    description: "The DAO's public repositories",
+    description: "Ethereum Classic DAO's public repositories",
     href: "https://github.com/EthereumClassicDAO",
   },
 ];
@@ -34,7 +34,7 @@ export function ChannelsSection() {
             <h2 id="ecosystem-properties-heading" className="text-xl font-bold">Web Properties</h2>
             <p className="mt-3 text-sm text-[var(--text-muted)]">
               The Olympia proposal is developed in the open on sites of its own,
-              and the DAO&rsquo;s repositories are public on GitHub.
+              and Ethereum Classic DAO&rsquo;s repositories are public on GitHub.
             </p>
           </FadeIn>
 

@@ -47,7 +47,7 @@ const columns: { heading: string; links: FooterLink[] }[] = [
     heading: "Institutional",
     links: [
       { label: "Regulation", href: "/regulation" },
-      { label: "Environmental Impact", href: "/environmental-impact" },
+      { label: "Energy Infrastructure", href: "/environmental-impact" },
       { label: "Investment Products", href: "/investment-products" },
     ],
   },

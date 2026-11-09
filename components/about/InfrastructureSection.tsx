@@ -26,7 +26,7 @@ const infrastructure: { icon: ElementType; category: string; details: ReactNode 
         >
           300+ active markets
         </a>
-        {" "}across 20+ major global exchanges with 17 fiat currency pairs spanning every major currency region. Continuous ETC/USD price discovery since 2016 — the liquidity depth required for institutional portfolio allocation and stablecoin settlement.
+        {" "}across 20+ major global exchanges, with 17 fiat currency pairs spanning every major currency region and continuous ETC/USD price discovery since 2016: the liquidity depth institutional portfolio allocation and stablecoin settlement require.
       </>
     ),
   },
@@ -34,7 +34,7 @@ const infrastructure: { icon: ElementType; category: string; details: ReactNode 
     icon: Lock,
     category: "Institutional Custody",
     details:
-      "Fireblocks, Coinbase Custody, BitGo, Copper, and Bakkt provide the qualified custodian infrastructure required for institutional portfolio allocation — hedge funds, family offices, and regulated investment products. MPC security, insurance coverage, and SOC 2 compliance mean ETC moves through existing institutional settlement rails without bespoke custody arrangements.",
+      "Fireblocks, Coinbase Custody, BitGo, Copper and Bakkt provide the qualified custodian infrastructure institutional allocators need, for hedge funds, family offices and regulated investment products. MPC security, insurance coverage and SOC 2 compliance mean ETC moves through existing institutional settlement rails without bespoke custody arrangements.",
   },
   {
     icon: TrendingUp,
@@ -50,7 +50,7 @@ const infrastructure: { icon: ElementType; category: string; details: ReactNode 
         >
           ETCG
         </a>
-        ), trading on OTCQX since 2018 and accessible through Charles Schwab, Fidelity, and Interactive Brokers — the only regulated securities vehicle for Proof-of-Work smart contract exposure. Positioned for ETF conversion following Grayscale&apos;s established trust-to-ETF precedent with Bitcoin and Ethereum.
+        ), quoted on OTCQX since 2018 and available through Charles Schwab, Fidelity and Interactive Brokers: the oldest regulated securities vehicle for ETC exposure, positioned for ETF conversion on the trust-to-ETF path Grayscale took with Bitcoin and Ethereum.
       </>
     ),
   },
@@ -59,7 +59,7 @@ const infrastructure: { icon: ElementType; category: string; details: ReactNode 
     category: "Regulatory Status",
     details: (
       <>
-        Wyoming DAO LLC (
+        Ethereum Classic DAO LLC is a Wyoming DAO LLC (
         <a
           href="https://wyobiz.wyo.gov/business/FilingDetails.aspx?eFNum=101157225123250204055197221085227098244002050082"
           target="_blank"
@@ -68,7 +68,7 @@ const infrastructure: { icon: ElementType; category: string; details: ReactNode 
         >
           Filing ID 2025-001671865
         </a>
-        ), recognized across leading global regulatory frameworks in the US, EU, UK, Japan, and UAE: digital commodity candidate under the CLARITY Act, decentralized asset under MiCA, FSA Green List in Japan, and active compliance across FSMA, VARA, and GENIUS Act frameworks — the broadest institutional access profile of any Proof-of-Work network.
+        ). Ethereum Classic itself is a digital commodity candidate under the CLARITY Act, an asset with no issuer under MiCA and a listed crypto-asset on Japan&apos;s JVCEA Green List, and Classic USD makes it a GENIUS Act-aligned stablecoin platform.
       </>
     ),
   },
@@ -85,7 +85,7 @@ const infrastructure: { icon: ElementType; category: string; details: ReactNode 
         >
           Classic USD
         </a>{" "}
-        ($USC), a MiCA and GENIUS Act-compliant stablecoin issued by Brale Inc. (
+        ($USC), a GENIUS Act-aligned stablecoin issued by Brale Inc. (
         <a
           href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/2376957"
           target="_blank"
@@ -94,7 +94,7 @@ const infrastructure: { icon: ElementType; category: string; details: ReactNode 
         >
           NMLS #2376957
         </a>
-        ), deployed on Ethereum Classic mainnet — live proof of regulated stablecoin infrastructure on a Proof-of-Work network.
+        ) and deployed on Ethereum Classic mainnet: live, regulated stablecoin infrastructure on a Proof-of-Work network.
       </>
     ),
   },
@@ -119,7 +119,7 @@ export async function InfrastructureSection() {
                   <span className="text-lg">TH/s</span>
                 </p>
                 <p className="mt-1 text-xs font-mono text-[var(--text-subtle)]">
-                  Algorithm: ETChash · GPU + ASIC compatible
+                  Algorithm: Etchash · GPU + ASIC compatible
                 </p>
               </div>
               <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-[var(--brand-green)]/30 bg-[var(--brand-green)]/10 px-2.5 py-1 font-mono text-[10px] text-[var(--brand-green)]">
@@ -135,7 +135,7 @@ export async function InfrastructureSection() {
               Institutional Infrastructure
             </h2>
             <p className="mt-3 text-sm text-[var(--text-muted)]">
-              Ethereum Classic&apos;s institutional footprint spans global exchange coverage, regulated investment products, and institutional-grade custody — the rails that connect a decade of principled protocol development to the capital and regulatory frameworks of a global financial system.
+              Ethereum Classic&apos;s institutional footprint spans global exchange coverage, regulated investment products and institutional-grade custody: the rails that connect more than a decade of protocol development to the capital and regulatory frameworks of the global financial system.
             </p>
           </FadeIn>
 
@@ -169,14 +169,12 @@ export async function InfrastructureSection() {
                 <div>
                   <p className="text-sm font-semibold">Mining Infrastructure</p>
                   <p className="mt-1 text-sm text-[var(--text-muted)]">
-                    Billions of dollars in globally distributed GPU and ASIC mining
-                    infrastructure secures the only Proof-of-Work network with native
-                    smart contracts. When Ethereum transitioned to Proof-of-Stake in
-                    2022, Ethereum Classic absorbed the entire ETHash mining ecosystem
-                    — hashrate, GPU farms, and the ASIC manufacturing base including
-                    Bitmain and Jasminer — becoming the largest GPU and ETHash ASIC
-                    mining network in the world. Domestic US operations are positioned
-                    under the{" "}
+                    Globally distributed GPU and ASIC mining infrastructure secures
+                    the only mature Proof-of-Work network with native smart contracts.
+                    When Ethereum moved to Proof-of-Stake in 2022, Ethereum Classic
+                    absorbed a significant share of its Ethash mining ecosystem,
+                    from hashrate and GPU farms to the ASIC manufacturers that
+                    serve it, such as Bitmain and Jasminer. The{" "}
                     <a
                       href="https://www.congress.gov/bill/119th-congress/senate-bill/4251"
                       target="_blank"
@@ -185,7 +183,8 @@ export async function InfrastructureSection() {
                     >
                       Mined in America Act
                     </a>
-                    .
+                    , a bill introduced in the Senate in March 2026, would give
+                    domestic US operations a voluntary federal certification.
                   </p>
                 </div>
               </div>

@@ -11,7 +11,7 @@ const entityCards = [
   {
     label: "Legal entity",
     value: "Ethereum Classic DAO LLC",
-    detail: "Wyoming DAO LLC, launched May 2025",
+    detail: "Wyoming DAO LLC, formed in May 2025",
   },
   {
     label: "Funding today",
@@ -37,15 +37,15 @@ export function StewardshipHeroSection() {
             do the day-to-day work on its public goods: the Core-Geth client,
             the network&rsquo;s bootnodes and its peer discovery lists. The work
             is done in the ethereumclassic GitHub organization, and it stays
-            there no matter who maintains or funds it. Ethereum Classic DAO LLC is the
-            standing legal entity that maintains and funds that work: the
-            counterpart a sponsor contracts with, which receives and reports the
-            funding.
+            there no matter who maintains or funds it. Ethereum Classic DAO is
+            the standing legal entity that maintains and funds these public
+            goods: the counterpart a sponsor contracts with, and the entity that
+            receives and reports the funding.
           </p>
           <p className="mt-4 text-base text-[var(--text-muted)]">
-            Today the DAO maintains and funds that work as its funder of last resort, and
-            its commitment is that the network is never again left without
-            security maintenance. It does not control or lead Ethereum Classic,
+            Today it is their funder of last resort, and its commitment is that
+            the network is never again left without security maintenance.
+            It does not control or lead Ethereum Classic,
             and it is not the only organization that can fund this work. What
             the work needs is steady funding from the stakeholders who depend on
             it, so that the network&rsquo;s critical software no longer rests on

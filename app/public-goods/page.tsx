@@ -19,7 +19,7 @@ const SITE_URL = "https://ethereumclassicdao.org";
 export const metadata: Metadata = {
   title: "Ethereum Classic Public Goods: Core-Geth",
   description:
-    "Core-Geth, the bootnodes and the peer discovery lists Ethereum Classic nodes depend on: where to get the current release and how to move a v1.12 node.",
+    "Core-Geth, the bootnodes and the peer discovery lists Ethereum Classic nodes depend on: where to get the latest release and how to move a v1.12 node.",
   keywords: [
     "Ethereum Classic public goods",
     "Core-Geth",

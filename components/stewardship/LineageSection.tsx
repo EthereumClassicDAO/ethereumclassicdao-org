@@ -35,7 +35,7 @@ const organizations = [
   {
     name: "Ethereum Classic DAO",
     years: "2025 to present",
-    role: "The standing legal entity that maintains and funds the client, the bootnodes and the discovery lists as the funder of last resort. It took up Core-Geth's maintenance in February 2026, with the day-to-day work done by Ethereum Classic's core developers.",
+    role: "The standing legal entity that maintains and funds the client, the bootnodes and the discovery lists as the funder of last resort. Ethereum Classic DAO took up Core-Geth's maintenance in February 2026, with the day-to-day work done by Ethereum Classic's core developers.",
     status: "Current",
     current: true,
   },
@@ -53,9 +53,9 @@ export function LineageSection() {
             </h2>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--text-muted)]">
               Ethereum Classic&rsquo;s client and infrastructure have always
-              depended on an organization willing to carry them. Each one did,
-              and each one eventually closed or left, and the work moved with
-              it.
+              depended on an organization willing to carry them. One organization
+              after another took them on, and each eventually closed or left, so
+              the work had to move each time.
             </p>
           </FadeIn>
 
@@ -103,11 +103,11 @@ export function LineageSection() {
               <Cite href={CORE_GETH_AUDIT_URL}>
                 21 months without security maintenance
               </Cite>
-              , and one of the flaws that gap left open was used against
-              Core-Geth v1.12 bootnodes in March 2026. The Cooperative
-              had entered maintenance mode and stopped developing the client in
-              2025, and nothing in the protocol paid for anyone to take the work
-              over.
+              , and one of the flaws that gap left open was used against the
+              Core-Geth v1.12 bootnodes in March 2026. The Cooperative had entered
+              maintenance mode at the end of 2024 and stopped developing the
+              client in 2025, and nothing in the protocol paid for anyone to take
+              the work over.
             </p>
           </FadeIn>
 

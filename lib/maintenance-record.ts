@@ -50,7 +50,7 @@ export const MAINTENANCE_RECORD: readonly MaintenanceEntry[] = [
   {
     when: "February 2026",
     iso: "2026-02",
-    what: "Ethereum Classic core developers resume Core-Geth maintenance in ethereumclassic/core-geth, funded by the DAO as the funder of last resort: patching the outstanding vulnerabilities, moving to a supported Go toolchain, and rebuilding the release pipeline.",
+    what: "Ethereum Classic core developers resume Core-Geth maintenance in ethereumclassic/core-geth, funded by Ethereum Classic DAO as the funder of last resort: patching the outstanding vulnerabilities, moving to a supported Go toolchain, and rebuilding the release pipeline.",
     source: CORE_GETH_AUDIT_URL,
   },
   {
@@ -62,13 +62,13 @@ export const MAINTENANCE_RECORD: readonly MaintenanceEntry[] = [
   {
     when: "August 28, 2026",
     iso: "2026-08-28",
-    what: "The bootnodes and the peer discovery lists move to the ethereumclassic organization: ethereumclassic/discv4-dns-lists is created to publish the lists, the first trees are published on September 10, 2026, and v1.13.0 ships with three Ethereum Classic and two Mordor bootnodes run by the Core-Geth maintainers.",
+    what: "The bootnodes and the peer discovery lists move to the ethereumclassic organization. ethereumclassic/discv4-dns-lists is created to publish the lists, and its first lists are published on September 10, 2026. The new bootnodes, three for Ethereum Classic and two for Mordor, are run by the Core-Geth maintainers and ship in v1.13.0.",
     source: DISCOVERY_LISTS_REPO_URL,
   },
   {
     when: "September 14, 2026",
     iso: "2026-09-14",
-    what: "Ethereum Classic core developers release the v1.13 line, the 2026 modernization and the first release line published from ethereumclassic/core-geth, which reads the new discovery lists by default.",
+    what: "Ethereum Classic core developers release the v1.13 line, the 2026 modernization of Core-Geth. It is the first release line published from ethereumclassic/core-geth, and it reads the new discovery lists by default.",
     source: CORE_GETH_RELEASES_URL,
   },
 ];

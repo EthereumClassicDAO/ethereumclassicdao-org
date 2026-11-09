@@ -24,7 +24,7 @@ export function FundingGapSection() {
         <div className="mx-auto max-w-5xl px-6">
           <FadeIn>
             <h2 id="funding-gap-heading" className="text-3xl font-bold tracking-tight">
-              The Gap Behind the Instability
+              The Funding Gap
             </h2>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--text-muted)]">
               Ethereum Classic has no protocol-layer funding mechanism for its
@@ -41,17 +41,16 @@ export function FundingGapSection() {
               running it.
             </p>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--text-muted)]">
-              Ethereum Classic&rsquo;s core developers maintain this work, and
-              the DAO pays for it today. A funder of last resort keeps the work
-              alive. It does not make the work
-              sustainable, and it leaves the network one backer away from the
-              same gap.
+              Today Ethereum Classic&rsquo;s core developers do this work, and
+              Ethereum Classic DAO pays for it. A funder of last resort keeps the
+              work alive. It does not make the work sustainable, and it leaves
+              the network one backer away from the same gap.
             </p>
           </FadeIn>
 
           <FadeIn delay={100}>
             <p className="mt-10 text-xs font-mono uppercase tracking-wider text-[var(--brand-green)]">
-              What the DAO pays for today
+              What Ethereum Classic DAO pays for today
             </p>
           </FadeIn>
           <div className="mt-4 grid gap-3 sm:grid-cols-3">

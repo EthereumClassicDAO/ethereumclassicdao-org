@@ -8,15 +8,15 @@ const buildItems = [
   },
   {
     icon: Vote,
-    text: "A legal wrapper for Olympia DAO, as ECIP-1114 contemplates it: the off-chain acts an on-chain organization cannot perform, downstream of Olympia DAO in authority and with no role until Olympia DAO is operating",
+    text: "A legal wrapper for Olympia DAO, as ECIP-1114 contemplates it, for the off-chain acts an on-chain organization cannot perform: downstream of Olympia DAO in authority, and with no role until Olympia DAO is operating",
   },
   {
     icon: Pickaxe,
-    text: "Hashrate incentive alignment, ensuring network security through mining economics",
+    text: "Hashrate incentive alignment: network security through mining economics",
   },
   {
     icon: Scale,
-    text: "Global regulatory compliance: leading global regulatory frameworks across the US, EU, UK, Japan, and UAE, including digital commodity candidate under the CLARITY Act, decentralized asset under MiCA, and GENIUS Act-aligned stablecoin platform",
+    text: "Regulatory engagement on Ethereum Classic's profile: a digital commodity candidate under the CLARITY Act, an asset with no issuer under MiCA and a GENIUS Act-aligned stablecoin platform",
   },
 ];
 
@@ -25,19 +25,19 @@ const positions = [
     icon: Shield,
     title: "Proof-of-Work Security",
     description:
-      "The only EVM-compatible blockchain secured by Proof-of-Work consensus. Following Ethereum\u2019s transition to Proof-of-Stake, Ethereum Classic absorbed significant mining infrastructure and stands alone at the intersection of Bitcoin\u2019s security model and Ethereum\u2019s programmability.",
+      "The only mature Proof-of-Work blockchain with native smart contracts. After Ethereum\u2019s move to Proof-of-Stake, Ethereum Classic absorbed a significant share of its mining infrastructure, and it sits at the intersection of Bitcoin\u2019s security model and Ethereum\u2019s programmability.",
   },
   {
     icon: Building2,
-    title: "Institutional Infrastructure",
+    title: "Institutional Access",
     description:
-      "Listed on all major global exchanges with 300+ active markets. Institutional-grade custody from leading digital asset custodians. Regulated securities exposure via the Grayscale Ethereum Classic Trust (ETCG), trading on OTCQX since 2018 and positioned for ETF conversion, following Grayscale's established trust-to-ETF precedent with Bitcoin and Ethereum.",
+      "300+ active markets across 20+ major exchanges, institutional-grade custody from leading digital asset custodians, and regulated securities exposure through the Grayscale Ethereum Classic Trust (ETCG), quoted on OTCQX since 2018 and positioned for the trust-to-ETF conversion Grayscale has completed for Bitcoin and Ethereum.",
   },
   {
     icon: Scale,
-    title: "Regulatory Clarity",
+    title: "Regulatory Position",
     description:
-      "Wyoming DAO LLC under the Decentralized Autonomous Organization Supplement. ETC straddles two regulatory trajectories — digital commodity candidate under the CLARITY Act and decentralized asset under MiCA — recognized across leading global regulatory frameworks in the US, EU, UK, Japan, and UAE. The Grayscale Ethereum Classic Trust positions ETC as a second-wave ETF candidate, the only Proof-of-Work smart contract platform in that pipeline.",
+      "ETC stands on two regulatory paths: it is a digital commodity candidate under the CLARITY Act and an asset with no issuer under MiCA, and Classic USD makes it a GENIUS Act-aligned stablecoin platform. The Grayscale Ethereum Classic Trust positions ETC as a candidate for the next wave of ETF conversions.",
   },
 ];
 
@@ -55,25 +55,21 @@ export function AboutSection() {
 
           <div className="mt-8 space-y-6 text-base leading-relaxed text-[var(--text-secondary)]">
             <p>
-              Ethereum Classic DAO LLC is the standing legal entity that
+              Ethereum Classic DAO is the standing legal entity that
               maintains and funds Ethereum Classic&rsquo;s public goods (the
               Core-Geth client, the network&rsquo;s bootnodes and its peer
-              discovery lists) as the funder of last resort, for the
-              world&rsquo;s largest Proof-of-Work smart contract platform.
-              Ethereum Classic&rsquo;s core developers and community contributors
-              do the day-to-day work, and the DAO does not control or lead
-              Ethereum Classic. The LLC ensures proper reporting and active compliance
-              across leading global regulatory frameworks in the US, EU, UK, Japan, and UAE.
+              discovery lists) as the funder of last resort. Ethereum
+              Classic&rsquo;s core developers and community contributors do the
+              day-to-day work, and Ethereum Classic DAO does not control or lead
+              the network. It is registered in Wyoming as a DAO LLC.
             </p>
             <p>
-              Ethereum Classic is the only EVM-compatible blockchain secured
-              by Proof-of-Work, combining Bitcoin&rsquo;s security model
-              with Ethereum&rsquo;s programmability. This places ETC at the
-              intersection of two distinct regulatory trajectories — the
-              commodity classification path that Proof-of-Work networks
-              established, and the programmable finance frameworks being built
-              around smart contract platforms — giving it an additive
-              regulatory surface.
+              Ethereum Classic is the only mature Proof-of-Work blockchain with
+              native smart contracts, combining Bitcoin&rsquo;s security model with
+              Ethereum&rsquo;s programmability. That places ETC at the
+              intersection of two regulatory paths: the commodity classification
+              path that Proof-of-Work networks established, and the programmable
+              finance frameworks being built around smart contract platforms.
             </p>
           </div>
         </FadeIn>
@@ -106,8 +102,8 @@ export function AboutSection() {
           <div className="mt-16">
             <h2 className="text-xl font-bold">Why Ethereum Classic</h2>
             <p className="mt-3 text-sm text-[var(--text-muted)]">
-              What makes Ethereum Classic uniquely positioned for institutional
-              adoption and long-term sustainability.
+              What positions Ethereum Classic for institutional adoption and
+              long-term sustainability.
             </p>
             <div className="mt-6 space-y-6">
               {positions.map((p, i) => (
