@@ -7,7 +7,7 @@ const attributes: { icon: typeof ShieldCheck; title: string; description: ReactN
   {
     icon: ShieldCheck,
     title: "US-Regulated Issuer",
-    description: <>Issued by <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/2376957" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">Brale Inc. (NMLS #2376957)</a>, a licensed money transmitter operating under US Bank Secrecy Act and state money transmission regulations. Compliant with GENIUS Act stablecoin issuance requirements.</>,
+    description: <>Issued by <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/2376957" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">Brale Inc. (NMLS #2376957)</a>, a licensed money transmitter operating under the US Bank Secrecy Act and state money transmission regulations. Aligned with the GENIUS Act&rsquo;s stablecoin issuance requirements.</>,
   },
   {
     icon: Coins,
@@ -19,21 +19,21 @@ const attributes: { icon: typeof ShieldCheck; title: string; description: ReactN
     icon: ArrowLeftRight,
     title: "Redeemable at Par",
     description:
-      "USC redeems 1:1 for USD, USDC (Circle), or USDP (Paxos) via the Brale platform. Deposits via ACH (1-3 business days) or wire (same-day). No slippage. Perfect 1:1 conversion.",
+      "USC redeems 1:1 for USD, USDC (Circle) or USDP (Paxos) through the Brale platform. Deposits arrive by ACH (1 to 3 business days) or by wire (same day), with no slippage.",
     link: { label: "Mint or Redeem on the Brale Platform", href: "https://app.brale.xyz" },
   },
   {
     icon: FileCheck,
     title: "Smart Contract Security",
     description:
-      "ERC-20 standard with transparent proxy pattern (ERC-1967). Role-based access control, pause mechanism, multi-signature requirements, and timelock delays for all significant protocol changes.",
+      "ERC-20 standard with transparent proxy pattern (ERC-1967). Role-based access control, a pause mechanism, multi-signature requirements and timelock delays for significant contract changes.",
   },
 ];
 
 const whyItMatters: { icon: ElementType; text: ReactNode }[] = [
   {
     icon: BadgeCheck,
-    text: "Proves ETC's EVM handles regulated financial instruments at production scale",
+    text: "Shows ETC's EVM carrying regulated financial instruments in production",
   },
   {
     icon: Layers,
@@ -41,7 +41,7 @@ const whyItMatters: { icon: ElementType; text: ReactNode }[] = [
   },
   {
     icon: Scale,
-    text: "First deployment validates ETC as a GENIUS Act-compliant stablecoin platform",
+    text: "Shows ETC working as a platform for stablecoins aligned with the GENIUS Act",
   },
   {
     icon: Link2,
@@ -53,34 +53,31 @@ export function ClassicUSDSection() {
   return (
     <>
       <SectionDivider variant="strong" />
-      <section aria-labelledby="classic-usd-the-definitive-regulated-stablecoin-on-ethereum-classic-heading" className="section-deep relative py-28">
+      <section aria-labelledby="classic-usd-heading" className="section-deep relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
             <p className="text-sm font-mono uppercase tracking-widest text-[var(--brand-green)]">
               Regulated Stablecoin
             </p>
-            <h2 id="classic-usd-the-definitive-regulated-stablecoin-on-ethereum-classic-heading" className="mt-2 text-3xl font-bold tracking-tight">
-              Classic USD: The Definitive Regulated Stablecoin on Ethereum
-              Classic
+            <h2 id="classic-usd-heading" className="mt-2 text-3xl font-bold tracking-tight">
+              Classic USD: A Regulated Stablecoin on Ethereum Classic
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Classic USD ($USC) is the first fiat-backed stablecoin issued
-              natively on Ethereum Classic — a 1:1 USD-backed ERC-20 token
-              issued by Brale Inc. under US money transmission licensing, with
-              reserves held in segregated regulated US bank accounts and
-              independently attested. It is not a bridged asset or a wrapped
-              version of a token from another chain. It was designed for ETC
-              and deployed on ETC mainnet.
+              Classic USD ($USC) is a 1:1 USD-backed ERC-20 stablecoin issued
+              natively on Ethereum Classic by Brale Inc., a licensed US money
+              transmitter, with reserves held in segregated, regulated US bank
+              accounts and independently attested.
+              It is not a bridged or wrapped token from another chain; it was
+              designed for ETC and deployed on ETC mainnet.
             </p>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               The GENIUS Act, signed July 18, 2025, established the first
               federal framework for payment stablecoin issuance in the United
-              States. Classic USD meets those requirements: licensed issuer,
-              1:1 liquid reserves, par-value redemption, and third-party
-              attestations. Its existence on ETC demonstrates that a
-              Proof-of-Work EVM can serve as compliant infrastructure for
-              regulated financial instruments — not in theory, but in
-              production.
+              States. Classic USD is aligned with its requirements: a licensed
+              issuer, 1:1 liquid reserves, par-value redemption and third-party
+              attestations. Its presence on ETC shows that a Proof-of-Work EVM
+              can carry regulated financial instruments in production, not only
+              in theory.
             </p>
           </FadeIn>
 

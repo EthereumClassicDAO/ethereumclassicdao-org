@@ -11,14 +11,14 @@ import { BreadcrumbJsonLd } from "@/components/ui/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: "Regulation: CLARITY Act, MiCA, GENIUS Act",
   description:
-    "ETC's regulatory profile: a digital commodity candidate under the CLARITY Act, a decentralized asset under MiCA, and a GENIUS Act-aligned stablecoin platform.",
+    "ETC's regulatory profile: a digital commodity candidate under the CLARITY Act, an asset with no issuer under MiCA, and a GENIUS Act-aligned stablecoin platform.",
   keywords: [
     "CLARITY Act",
     "MiCA",
     "GENIUS Act",
-    "FSA Green List",
+    "JVCEA Green List",
     "digital commodity",
-    "decentralized asset",
+    "no issuer",
     "regulated stablecoin",
     "Classic USD",
     "USC stablecoin",

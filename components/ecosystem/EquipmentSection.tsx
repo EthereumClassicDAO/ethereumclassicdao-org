@@ -39,17 +39,17 @@ const asicMiners: Equipment[] = [
 const gpuManufacturers: Equipment[] = [
   {
     name: "NVIDIA",
-    detail: "GeForce RTX series, high-performance ETChash mining with CUDA cores",
+    detail: "GeForce RTX series, high-performance Etchash mining with CUDA cores",
     href: "https://www.nvidia.com",
   },
   {
     name: "AMD",
-    detail: "Radeon RX series, competitive ETChash performance and efficiency",
+    detail: "Radeon RX series, competitive Etchash performance and efficiency",
     href: "https://www.amd.com",
   },
   {
     name: "Intel",
-    detail: "Arc series GPUs, with emerging ETChash support",
+    detail: "Arc series GPUs, with emerging Etchash support",
     href: "https://www.intel.com",
   },
 ];
@@ -91,15 +91,14 @@ export function EquipmentSection() {
               Mining Equipment
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              When Ethereum transitioned to Proof-of-Stake, ETC absorbed the
-              majority of the ETHash mining ecosystem — bringing established
-              manufacturers like Bitmain and Jasminer into a network with a
-              fixed monetary policy and no transition risk. ETChash supports
-              both ASIC efficiency for commercial-grade operations and GPU
-              accessibility for global participation. This dual-compatibility
-              decentralizes hashrate across geographies, diversifies miner
-              composition, and reduces supply chain risk on the equipment that
-              secures the network.
+              When Ethereum moved to Proof-of-Stake, ETC absorbed a significant
+              share of its Ethash mining ecosystem, and established
+              manufacturers such as Bitmain and Jasminer now build Etchash
+              hardware for a network with a fixed monetary policy and no planned
+              move away from Proof-of-Work. Etchash runs on both ASICs, for
+              commercial operations, and GPUs, which anyone can buy, so hashrate
+              is spread across geographies, miners are more varied, and supply
+              chain risk on the equipment that secures the network is reduced.
             </p>
           </FadeIn>
 

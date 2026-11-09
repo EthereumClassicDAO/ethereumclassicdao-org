@@ -32,7 +32,7 @@ const networks: NetworkConfig[] = [
     ],
     nextUpgrade: [
       { name: "Olympia", ethOrigin: false },
-      { name: "Glamsterdam", ethOrigin: true },
+      { name: "Glamsterdam (partial)", ethOrigin: true },
     ],
   },
   {
@@ -48,7 +48,7 @@ const networks: NetworkConfig[] = [
     ],
     nextUpgrade: [
       { name: "Olympia", ethOrigin: false },
-      { name: "Glamsterdam", ethOrigin: true },
+      { name: "Glamsterdam (partial)", ethOrigin: true },
     ],
   },
 ];
@@ -60,9 +60,12 @@ function EvmLabel({ versions }: { versions: EvmVersion[] }) {
     <span>
       {primary && <span>{primary.name}</span>}
       {secondary && (
-        <span className="ml-1.5 text-[10px] font-normal text-violet-400">
-          {secondary.name}
-        </span>
+        <>
+          {" "}
+          <span className="text-[10px] font-normal text-violet-400">
+            / {secondary.name}
+          </span>
+        </>
       )}
     </span>
   );
@@ -80,10 +83,10 @@ export function NetworkConfigSection() {
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Chain IDs, where to find public RPC endpoints, and explorer URLs for
-              Ethereum Classic mainnet (Chain 61) and Mordor testnet (Chain
-              63). Drop-in configuration for MetaMask, Hardhat, Foundry, and
-              any EVM-compatible toolchain. Both networks run Proof-of-Work
-              consensus under the Spiral EVM specification. Olympia, a proposed
+              Ethereum Classic mainnet (chain 61) and the Mordor testnet (chain
+              63), ready to drop into MetaMask, Hardhat, Foundry or any
+              EVM-compatible toolchain. Both networks run Proof-of-Work consensus
+              with the Spiral EVM, which matches Shanghai. Olympia, a proposed
               upgrade whose activation blocks are TBD, would apply to both.
             </p>
           </FadeIn>

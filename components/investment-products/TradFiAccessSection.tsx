@@ -31,16 +31,16 @@ export function TradFiAccessSection() {
               ETC in Traditional Finance
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              ETCG trades through standard brokerage infrastructure &mdash; no
-              crypto exchange account, no self-custody wallet, no seed phrase,
-              and no special onboarding. Search the ticker at any major brokerage
-              and it settles alongside equities and ETFs with standard T+1
-              settlement and the same tax reporting your brokerage already
-              provides. It is IRA-eligible at major full-service platforms,
-              meaning ETC exposure is accessible within the retirement account
-              structures that most institutional mandates and individual
-              investors already use. For allocators who cannot hold crypto
-              directly, ETCG is the current path.
+              ETCG trades through standard brokerage infrastructure, with no
+              crypto exchange account, no self-custody wallet, no seed phrase and
+              no special onboarding. Search for the ticker at any major
+              brokerage, and it settles alongside equities and ETFs with standard
+              T+1 settlement and the tax reporting your brokerage already
+              provides. It is IRA-eligible at major full-service platforms, so
+              ETC exposure fits the retirement account structures most
+              institutional mandates and individual investors already use. For
+              allocators who cannot hold crypto directly, ETCG is the current
+              path.
             </p>
           </FadeIn>
 
@@ -73,10 +73,10 @@ export function TradFiAccessSection() {
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-[var(--divider)] pt-6">
               <span className="shrink-0 font-mono text-[10px] uppercase tracking-widest text-[var(--text-subtle)]">
                 Track on
-              </span>
+              </span>{" "}
               {dataSources.map((d) => (
                 <span key={d.label} className="text-sm text-[var(--text-muted)]">
-                  {d.label}{" "}
+                  {" "}{d.label}{" "}
                   <a
                     href={d.href}
                     target="_blank"
@@ -86,7 +86,7 @@ export function TradFiAccessSection() {
                     {d.ticker}
                   </a>
                 </span>
-              ))}
+              ))}{" "}
               <span className="ml-auto text-xs italic text-[var(--text-subtle)] opacity-60">
                 OTC security. Not investment advice.
               </span>

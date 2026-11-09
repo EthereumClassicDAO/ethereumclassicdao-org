@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "Mordor testnet",
     "chain ID 63",
     "ETC mining",
-    "ETChash",
+    "Etchash",
     "ASIC mining ETC",
     "GPU mining ETC",
     "ETCG",

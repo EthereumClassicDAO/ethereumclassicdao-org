@@ -13,17 +13,15 @@ export function MiningHardwareSection() {
               Accessible Hardware at Every Scale
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              ETC has the widest mining participation curve of any smart
-              contract platform, spanning consumer electronics stores to
-              purpose-built ASIC deployments at industrial stranded energy
-              sites. This range is not incidental &mdash; it is what makes ETC
+              ETC&rsquo;s mining participation runs from consumer electronics
+              stores to purpose-built ASIC deployments at industrial stranded
+              energy sites. That range is not incidental: it is what makes ETC
               viable for stranded energy projects at every scale. A pilot
               installation testing a small remote hydro site uses GPU hardware
-              available at retail. A commercial wellhead gas operation
-              committing long-term capital uses institutional ASIC hardware
-              purpose-built for the ETChash algorithm. No other smart contract
-              platform retained PoW consensus, so no other smart contract
-              platform has both ends of this curve.
+              bought at retail, while a commercial wellhead gas operation
+              committing long-term capital uses institutional ASIC hardware built
+              for Ethash and Etchash. As the only mature smart contract platform
+              on Proof-of-Work, ETC offers both ends of that range.
             </p>
           </FadeIn>
 
@@ -37,12 +35,11 @@ export function MiningHardwareSection() {
                   GPU Mining: Retail Accessible
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
-                  AMD, NVIDIA, and Intel GPUs are available at consumer
-                  electronics stores globally. Any individual with a gaming PC
-                  can participate in ETC network security. This is what
-                  &ldquo;permissionless&rdquo; means at the hardware layer:
-                  truly accessible to anyone, in any jurisdiction, without
-                  specialist procurement.
+                  AMD, NVIDIA and Intel GPUs are sold by consumer electronics
+                  retailers worldwide, and anyone with a gaming PC can help
+                  secure ETC. This is what &ldquo;permissionless&rdquo; means at
+                  the hardware layer: accessible to anyone, in any jurisdiction,
+                  without specialist procurement.
                 </p>
                 <ul className="mt-4 space-y-1.5">
                   {[
@@ -72,16 +69,16 @@ export function MiningHardwareSection() {
                   ASIC Hardware: Institutional Scale
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
-                  Specialized Ethash/ETChash ASIC miners purpose-built for ETC
-                  deliver higher efficiency than GPUs and are optimized for the
-                  ETChash algorithm. Available from specialized manufacturers,
-                  they enable industrial-scale deployments at stranded energy
-                  sites, remote hydro installations, and wellhead gas locations.
+                  Specialized Ethash and Etchash ASIC miners deliver higher
+                  efficiency than GPUs. Available from specialized manufacturers,
+                  they make industrial-scale deployments possible at stranded
+                  energy sites, remote hydro installations and wellhead gas
+                  locations.
                 </p>
                 <ul className="mt-4 space-y-1.5">
                   {[
                     "Higher hash efficiency than GPU",
-                    "Purpose-built for ETChash algorithm",
+                    "Built for Ethash and Etchash",
                     "Industrial deployment at scale",
                     "Optimized for stranded energy sites",
                   ].map((p) => (
@@ -100,9 +97,9 @@ export function MiningHardwareSection() {
 
           <FadeIn>
             <p className="mt-10 border-l-2 border-[var(--brand-green)] pl-4 text-sm text-[var(--text-muted)]">
-              No other proof of work network or smart contract platform has both
-              retail GPU accessibility and institutional ASIC infrastructure,
-              giving ETC the widest possible mining participation curve.
+              Retail GPU accessibility and institutional ASIC infrastructure
+              together give ETC a mining participation curve that runs from a
+              single gaming PC to an industrial site.
             </p>
           </FadeIn>
 
@@ -113,11 +110,11 @@ export function MiningHardwareSection() {
               </p>
               <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
                 As proposed, Olympia would credit the EIP-1559 base fee to a
-                treasury that only on-chain governance could spend, giving the
-                client software mining operations depend on a funding source in
-                the protocol. The base fee is paid by the transactions in each
-                block rather than by miners, and block rewards and priority-fee
-                tips would still go to miners. The upgrade is targeted for 2027,
+                treasury that only on-chain governance could spend, so that the
+                client software mining operations depend on would have a funding
+                source in the protocol. The base fee would be paid by the
+                transactions in each block rather than by miners, and block
+                rewards and priority-fee tips would still go to miners. The upgrade is targeted for 2027,
                 and its ECIPs are drafts.
               </p>
             </div>
@@ -129,17 +126,18 @@ export function MiningHardwareSection() {
                 Mined in America Act
               </p>
               <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
-                The Mined in America Act establishes a voluntary federal
-                certification program for domestic digital asset mining
-                operations, directs NIST and the Manufacturing Extension
-                Partnership to support US manufacturing of mining equipment,
-                and provides certified operations with access to existing
-                federal energy and rural development programs. A Treasury
-                procurement channel and capital gains exemption apply to
-                certified Bitcoin miners. The certification framework, domestic
-                hardware manufacturing support, and energy infrastructure
-                provisions apply to all Proof-of-Work mining &mdash; including
-                the ETChash operations securing Ethereum Classic&apos;s network.
+                The Mined in America Act, a bill introduced in the Senate in March
+                2026, would establish a voluntary federal certification program
+                for domestic digital asset mining operations, direct NIST and the
+                Manufacturing Extension Partnership to support US manufacturing
+                of mining equipment, and give certified operations access to
+                existing federal energy and rural development programs. Its
+                Treasury procurement channel and capital gains exemption would
+                apply to certified Bitcoin miners, while the certification
+                framework, the support for domestic hardware manufacturing and
+                the energy provisions would apply to all Proof-of-Work mining,
+                including the Etchash operations securing Ethereum
+                Classic&apos;s network.
               </p>
             </div>
           </FadeIn>

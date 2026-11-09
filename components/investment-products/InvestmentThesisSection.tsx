@@ -14,30 +14,30 @@ const thesisPoints: ThesisPoint[] = [
   {
     number: "01",
     title: "Regulatory Clarity",
-    body: "ETC inherits the commodity classification path that Proof-of-Work networks established and the programmable finance frameworks being built around smart contract platforms. Its regulatory surface spans both trajectories: digital commodity candidate (CLARITY Act), decentralized asset (MiCA), stablecoin platform (GENIUS Act).",
+    body: "ETC inherits the commodity classification path that Proof-of-Work networks established and the programmable finance frameworks being built around smart contract platforms, so it stands on both: a digital commodity candidate (CLARITY Act), an asset with no issuer (MiCA) and a stablecoin platform (GENIUS Act).",
     link: { href: "/regulation", label: "Regulatory Framework →" },
   },
   {
     number: "02",
     title: "The Olympia Proposal",
-    body: "A proposed upgrade, targeted for 2027, whose ECIPs are drafts. It would activate EIP-1559 with the base fee credited to a treasury rather than destroyed, spendable only through on-chain governance, and align the EVM with Ethereum's through Glamsterdam. Issuance and the ECIP-1017 supply cap would not change.",
+    body: "A proposed upgrade, targeted for 2027, whose ECIPs are drafts. It would activate EIP-1559 with the base fee credited to a treasury rather than destroyed, spendable only through on-chain governance, and bring EVM alignment through Fusaka and into Glamsterdam. Issuance and the ECIP-1017 supply cap would not change.",
     link: { href: "/olympia", label: "The Olympia proposal →" },
   },
   {
     number: "03",
     title: "Regulated Stablecoin Infrastructure",
-    body: <>Classic USD ($USC) is live on ETC mainnet, the first GENIUS Act-aligned stablecoin on a Proof-of-Work EVM. Issued by Brale Inc. (NMLS #2376957), 1:1 USD backed, integrated with <a href="https://etcswap.org" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">ETCswap</a> V2/V3.</>,
+    body: <>Classic USD ($USC), a stablecoin aligned with the GENIUS Act, is live on ETC mainnet. Issued by Brale Inc. (NMLS #2376957), 1:1 USD backed, integrated with <a href="https://etcswap.org" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">ETCswap</a> V2/V3.</>,
   },
   {
     number: "04",
     title: "Proven Track Record",
-    body: "The original Ethereum Virtual Machine, running continuously since July 2015. Zero protocol-level failures. Immutable ledger. The longest continuously operating smart contract platform in production.",
+    body: "The original Ethereum chain, running continuously since July 2015 with no rollback of its ledger: as long a production record as any smart contract platform.",
     link: { href: "/core-development", label: "Development Timeline →" },
   },
   {
     number: "05",
     title: "Deepest PoW Smart Contract Liquidity",
-    body: "300+ exchanges across every time zone, GPU mining hardware accessible at retail, and institutional ASIC infrastructure. ETC/USD has operated as a continuous 24/7 spot market since 2016 — the longest-running fiat price discovery mechanism of any programmable blockchain. Fiat pairs span major currencies across the Americas, Europe, Asia-Pacific, the Middle East, and emerging markets.",
+    body: "300+ markets across every time zone, GPU mining hardware sold at retail, and institutional ASIC infrastructure. ETC/USD has operated as a continuous 24/7 spot market since 2016, one of the longest-running fiat price discovery mechanisms of any programmable blockchain. Fiat pairs span major currencies across the Americas, Europe, Asia-Pacific, the Middle East and emerging markets.",
     link: { href: "/ecosystem", label: "Ecosystem Overview →" },
   },
 ];
@@ -53,14 +53,14 @@ export function InvestmentThesisSection() {
               The ETC Investment Case
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Five structural properties that differentiate Ethereum Classic in
-              the institutional digital asset landscape. Each addresses a
-              specific institutional requirement: regulatory classification
-              certainty, protocol upgrade credibility, compliant settlement
-              infrastructure, operational track record, and market liquidity
-              depth. Together they describe a network that arrived at this
-              moment as it was designed &mdash; not retrofitted to match a
-              regulatory environment it didn&rsquo;t anticipate.
+              Five structural properties set Ethereum Classic apart in the
+              institutional digital asset landscape. Each addresses a specific
+              institutional requirement: regulatory classification, protocol
+              upgrade credibility, regulated settlement infrastructure,
+              operational track record and market liquidity. Together they
+              describe a network that arrived at this moment as it was designed,
+              not retrofitted to match a regulatory environment it did not
+              anticipate.
             </p>
           </FadeIn>
 

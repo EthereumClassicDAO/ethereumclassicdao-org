@@ -7,12 +7,12 @@ const regions = [
     region: "United States",
     flag: "🇺🇸",
     framework: "GENIUS Act · CLARITY Act · OCC Trust Charters · Mined in America Act",
-    effective: "Jul 2025 · Senate floor 2026",
+    effective: "GENIUS Jul 2025 · CLARITY stalled",
     keyRules: [
-      "Stablecoin reserves 1:1 liquid assets (GENIUS Act, signed Jul 18, 2025)",
-      "SEC/CFTC jurisdictional perimeter clarified for digital commodities (CLARITY Act — Senate Banking passed May 2026; floor vote pending)",
+      "GENIUS Act, signed July 18, 2025: stablecoin reserves held 1:1 in liquid assets",
+      "CLARITY Act: would set the SEC/CFTC perimeter for digital commodities; passed the Senate Banking Committee in May 2026, and a Senate cloture vote failed in September 2026",
       "OCC approved national trust bank charters for digital asset custody",
-      "Mined in America Act: voluntary federal certification for domestic PoW mining; NIST support for US ASIC manufacturing",
+      "Mined in America Act, introduced in the Senate in March 2026: would create voluntary federal certification for domestic PoW mining and support US ASIC manufacturing",
       "FDIC framework for bank-issued payment stablecoins under development",
     ],
   },
@@ -25,8 +25,8 @@ const regions = [
       "14 regulated CASP activities requiring EU authorization",
       "E-Money Tokens (EMTs): 1:1 fiat backing, par-value redemption",
       "Asset-Referenced Tokens (ARTs): reserve asset requirements",
-      "ETC qualifies as decentralized asset — exempt from ART/EMT issuer obligations",
-      "€5M minimum fine or 3–12.5% of annual turnover for violations",
+      "ETC has no issuer, so the rules for asset-referenced and e-money tokens do not apply to it",
+      "Maximum fines of at least €5M, or 3% to 12.5% of annual turnover, depending on the breach",
     ],
   },
   {
@@ -48,7 +48,7 @@ const regions = [
     framework: "Japan PSA · South Korea FSC/FSS · Hong Kong SFC · Singapore MAS · Taiwan FSC",
     effective: "2024–2026",
     keyRules: [
-      "Japan: only banks, fund transfer providers, and trust companies may issue stablecoins (PSA amendment 2023); FSA Green List includes ETC",
+      "Japan: only banks, fund transfer providers, and trust companies may issue stablecoins (PSA amendment 2023); the JVCEA Green List includes ETC",
       "South Korea: Virtual Asset User Protection Act in force Jul 2024; FSC/FSS VASP registration enforced",
       "Hong Kong: Stablecoins Ordinance effective Aug 1, 2025; SFC VASP licensing regime fully operational",
       "Singapore: MAS Payment Services Act; VASP licensing deadline Jun 30, 2025; stablecoin framework 2026",
@@ -71,13 +71,13 @@ const regions = [
   {
     region: "South Asia",
     flag: "🇮🇳",
-    framework: "India SEBI · RBI · 30% Crypto Tax · G20 Crypto Framework Host",
+    framework: "India FIU-IND · RBI · 30% Crypto Tax · G20 Crypto Framework Host",
     effective: "2022–present",
     keyRules: [
       "30% flat tax on all crypto gains + 1% TDS on transactions above ₹10,000 (Finance Act 2022)",
-      "SEBI regulates crypto asset services; RBI maintains oversight of fiat on/off ramps",
-      "India hosted G20 presidency in 2023 and led development of the FSB/IMF global crypto policy framework",
-      "No blanket ban — crypto is legal to hold and trade under compliance obligations",
+      "Crypto exchanges register with FIU-IND under anti-money-laundering rules; RBI oversees fiat on- and off-ramps",
+      "India hosted the G20 presidency in 2023 and led development of the FSB/IMF global crypto policy framework",
+      "No blanket ban: crypto is legal to hold and trade under compliance obligations",
       "1.4 billion population with one of the world's largest and most active retail crypto markets",
     ],
   },
@@ -101,9 +101,9 @@ const regions = [
     effective: "2021–2026",
     keyRules: [
       "Brazil: BCB VASP authorization required from Feb 2026; compliance deadline Nov 2026; ETC/BRL pair active",
-      "Mexico: Fintech Law (Ley Fintech) 2018 — CNBV and Banxico joint oversight; ITFs authorized",
+      "Mexico: Fintech Law (Ley Fintech) 2018, with joint CNBV and Banxico oversight; ITFs authorized",
       "Argentina: CNV supervision of crypto exchanges; widespread peso-crypto trading amid currency controls",
-      "El Salvador: Bitcoin declared legal tender 2021; Chivo wallet national payments infrastructure",
+      "El Salvador: Bitcoin declared legal tender in 2021; a 2025 reform made accepting it voluntary",
       "Panama: Law 129 (May 2022) permits commercial use of crypto without legal tender designation",
     ],
   },
@@ -150,7 +150,7 @@ const regions = [
     effective: "Dec 2024 (MiCA)",
     keyRules: [
       "Sweden, Denmark, Finland: EU members, MiCA fully in force Dec 30, 2024",
-      "Norway: EEA/EFTA member — MiCA applies through EEA agreement; Finanstilsynet oversight",
+      "Norway: an EEA/EFTA member, where MiCA applies through the EEA agreement; Finanstilsynet oversight",
       "Sweden: Finansinspektionen among first EU regulators to issue comprehensive MiCA implementation guidance",
       "Nordic markets have high retail crypto participation; Sweden's Riksbank pioneered CBDC research (e-krona pilot)",
     ],
@@ -162,7 +162,7 @@ const regions = [
     effective: "2024–present",
     keyRules: [
       "Capital Markets Law amendments 2024: crypto exchanges require CMB/SPK (Capital Markets Board) authorization",
-      "AML/CFT regulations aligned to FATF standards — Turkey exited the FATF Grey List in June 2024",
+      "AML/CFT regulations aligned to FATF standards; Turkey exited the FATF Grey List in June 2024",
       "ETC/TRY fiat pair active on Turkish exchanges with significant local retail trading volume",
       "Istanbul-based exchanges serve as a bridge between EU and Middle East crypto markets",
     ],
@@ -173,9 +173,9 @@ const regions = [
     framework: "Russia DFA Law 2021 · China 2021 Ban · PBOC e-CNY · Hong Kong SFC (separate)",
     effective: "2021–present",
     keyRules: [
-      "Russia: Digital Financial Assets (DFA) Law 2021 — PoW mining is legal; using crypto for domestic payments restricted; CBR oversight",
-      "China: Trading and mining banned since Sept 2021; PBOC developing e-CNY (digital yuan) as state-controlled alternative",
-      "China: Hong Kong operates under a fully separate SFC licensing regime — crypto trading fully legal for licensed VASPs",
+      "Russia: the Digital Financial Assets (DFA) Law of 2021 restricts using crypto for domestic payments, and a 2024 law legalized mining; CBR oversight",
+      "China: Trading and mining banned since September 2021; PBOC developing e-CNY (digital yuan) as a state-controlled alternative",
+      "China: Hong Kong operates under a fully separate SFC licensing regime, where crypto trading is legal for licensed VASPs",
       "Both jurisdictions have historically represented significant ETC mining infrastructure and retail trading activity",
     ],
   },
@@ -192,16 +192,15 @@ export function GlobalFrameworksSection() {
               The Regulatory Wave
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Virtually every major jurisdiction has finalized or is actively
-              implementing crypto regulation. For exchanges, this means
-              compliant listing requirements. For custodians, it means
-              jurisdictional clarity on what assets they can hold. For
-              investment product issuers, it means commodity versus security
-              resolution. ETC&rsquo;s regulatory profile travels well: it is a
-              digital commodity candidate in commodity-first frameworks, a
-              decentralized asset in MiCA, and a proven stablecoin platform
-              under payment-focused legislation. The same asset carries the same
-              profile under each of them.
+              Nearly every major jurisdiction has finalized crypto regulation or
+              is putting it in place. For exchanges, that means listing
+              requirements; for custodians, clarity on which assets they can
+              hold; and for investment product issuers, a settled answer to
+              whether an asset is a commodity or a security. ETC&rsquo;s profile
+              carries across them: a digital commodity candidate in
+              commodity-first frameworks, an asset with no issuer under MiCA, and
+              a working stablecoin platform under payment-focused legislation, all
+              resting on the same technical properties.
             </p>
           </FadeIn>
 
@@ -242,9 +241,9 @@ export function GlobalFrameworksSection() {
 
           <FadeIn>
             <p className="mt-10 text-sm text-[var(--text-subtle)] border-l-2 border-[var(--brand-green)] pl-4">
-              ETC&rsquo;s regulatory surface spans two distinct trajectories: the digital commodity
-              classification path that Proof-of-Work networks established, and the programmable
-              finance frameworks being built around smart contract platforms. It qualifies under both.
+              ETC stands on two distinct regulatory paths: the digital commodity classification
+              path that Proof-of-Work networks established, and the programmable finance
+              frameworks being built around smart contract platforms.
             </p>
           </FadeIn>
         </div>

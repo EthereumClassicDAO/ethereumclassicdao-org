@@ -32,7 +32,7 @@ const FALLBACK_THS = 155;
 
 /** Caption for a reading where `isFallback` is true. */
 export const HASHRATE_FALLBACK_NOTE =
-  "Live network data is temporarily unavailable — this is an approximate placeholder, not a current reading.";
+  "Live network data is temporarily unavailable, so this is an approximate placeholder, not a current reading.";
 
 export interface NetworkHashrate {
   /** Terahashes per second. */

@@ -15,19 +15,19 @@ const securityProperties = [
     icon: Cpu,
     title: "Permissionless Entry",
     description:
-      "GPU hardware available at consumer electronics retail. Purpose-built ASIC hardware for institutional scale. No licensing, no KYC, no operator approval — the widest mining participation curve of any programmable blockchain.",
+      "GPU hardware is sold by consumer electronics retailers, and purpose-built ASIC hardware serves institutional scale. No licensing, no KYC and no operator approval: anyone can mine, from a single GPU to an industrial site.",
   },
   {
     icon: Zap,
     title: "Post-Merge Infrastructure",
     description:
-      "Ethereum\u2019s 2022 transition to Proof-of-Stake directed its entire global ETChash mining network toward ETC. That reallocation of hardware capital is permanent: the equipment was purpose-built for the ETChash algorithm.",
+      "Ethereum\u2019s 2022 move to Proof-of-Stake sent a significant share of its Ethash mining hardware to ETC. That equipment was purpose-built for Ethash, and ETC\u2019s Etchash algorithm keeps it in use.",
   },
   {
     icon: History,
     title: "Continuous Security Record",
     description:
-      "Ethereum Classic has operated under Proof-of-Work consensus since July 2015. The Thanos upgrade and the MESS chain-scoring rule, implemented after the 2020 network security events, strengthened chain reorganization resistance.",
+      "Ethereum Classic has operated under Proof-of-Work consensus since July 2015. After the 2020 network security events, the MESS chain-scoring rule raised the cost of chain reorganizations, and the Thanos upgrade kept GPU miners\u2019 hashrate on the network.",
   },
 ];
 
@@ -41,7 +41,7 @@ export async function NetworkSecuritySection() {
     {
       value: `${hashrateTHs.toFixed(1)} TH/s`,
       label: "Network Hashrate",
-      detail: "Live — updated hourly",
+      detail: "Live, updated hourly",
       live: true,
     },
     {
@@ -55,9 +55,9 @@ export async function NetworkSecuritySection() {
       detail: "Permissionless entry at any scale",
     },
     {
-      value: "Largest PoW EVM",
+      value: "Only Mature PoW EVM",
       label: "Post-Merge Position",
-      detail: "Absorbed Ethereum mining infrastructure",
+      detail: "Absorbed a significant share of Ethereum's mining",
     },
   ];
 
@@ -84,22 +84,20 @@ export async function NetworkSecuritySection() {
               <p className="text-base text-[var(--text-muted)]">
                 Proof-of-Work consensus makes network security measurable. The
                 hashrate represents independent, competing economic actors
-                deploying capital to secure the network &mdash; no single
-                operator controls the outcome. Reversing a transaction on ETC
-                requires outpacing the combined computational investment of
-                every miner globally. That is not a governance decision or an
-                administrative act &mdash; it is a thermodynamic constraint.
+                deploying capital to secure the network, and no single operator
+                controls the outcome. Reversing a transaction on ETC requires
+                more hashrate than the rest of the network&rsquo;s miners
+                combined. That is not a governance decision or an administrative
+                act: it is a thermodynamic constraint.
               </p>
               <p className="text-base text-[var(--text-muted)]">
-                The CLARITY Act, MiCA, and every framework that distinguishes a
-                digital commodity from a security requires evidence that no
-                single entity controls the protocol. Proof-of-Work provides that
-                evidence continuously, on-chain, with every block. ETC&rsquo;s
-                hashrate &mdash; absorbing the global GPU mining network and
-                onboarding a mature ASIC manufacturing market built
-                specifically for the ETChash algorithm after Ethereum&rsquo;s
-                2022 transition &mdash; represents the largest distributed
-                security budget of any smart contract platform.
+                The CLARITY Act, MiCA and the other frameworks that distinguish a
+                digital commodity from a security ask whether any single entity
+                controls the protocol. Proof-of-Work answers with evidence,
+                continuously and on-chain, in every block. ETC&rsquo;s hashrate,
+                which grew when a significant share of Ethereum&rsquo;s GPU and
+                ASIC miners moved to ETC after the 2022 Merge, secures the only
+                mature smart contract platform on Proof-of-Work.
               </p>
             </div>
           </FadeIn>
@@ -153,9 +151,9 @@ export async function NetworkSecuritySection() {
                 centers on a single question: does any person or entity control
                 the protocol? Proof-of-Work answers that question with
                 computational evidence rather than legal assurance. Every block
-                mined is a timestamp of distributed consensus &mdash; an
-                auditable record of the network&rsquo;s independence from
-                centralized governance.
+                mined is a timestamp of distributed consensus: an auditable
+                record of the network&rsquo;s independence from centralized
+                governance.
               </p>
             </div>
           </FadeIn>

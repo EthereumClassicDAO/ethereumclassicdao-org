@@ -14,7 +14,7 @@ const mechanics = [
     icon: FileText,
     title: "Structure",
     description:
-      "Grantor trust, not a registered investment company. ETC flows directly as trust assets. Tax treatment passes through to shareholders. SEC filer: 10-K annually, 10-Q quarterly.",
+      "Grantor trust, not a registered investment company. The trust holds ETC directly, and tax treatment passes through to shareholders. An SEC filer since 2021: 10-K annually, 10-Q quarterly.",
   },
   {
     icon: Shield,
@@ -26,7 +26,7 @@ const mechanics = [
     icon: Building2,
     title: "Sponsor",
     description:
-      "Grayscale Investments Sponsors, LLC, a subsidiary of Digital Currency Group (DCG). SEC-reporting since 2020. Manages the largest suite of regulated digital asset investment products.",
+      "Grayscale Investments Sponsors, LLC, a subsidiary of Digital Currency Group (DCG). Manages the largest suite of regulated digital asset investment products.",
   },
 ];
 
@@ -36,7 +36,7 @@ const fundData = [
   { label: "Max Discount", value: "77%" },
   { label: "ETC per Share", value: "0.785" },
   { label: "Shares Outstanding", value: "13,993,800" },
-  { label: "Inception Date", value: "May 10, 2018" },
+  { label: "Inception Date", value: "April 24, 2017" },
 ];
 
 export async function ETCGSection() {
@@ -76,20 +76,20 @@ export async function ETCGSection() {
             </h2>
             <p className="mt-1 text-base text-[var(--text-muted)]">
               <span className="font-mono font-semibold">ETCG</span> · OTCQX
-              Best Market · Est. May 10, 2018
+              Best Market · Formed April 2017 · Quoted since May 2018
             </p>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               ETCG is the oldest regulated investment product providing exposure
-              to Ethereum Classic. A grantor trust structure &mdash; not a
-              registered investment company &mdash; means ETCG holds ETC
-              directly in institutional cold storage, with each share
-              representing a fixed quantity of the underlying asset. The trust
-              has filed annually with the SEC since 2020, making it eligible for
-              IRAs and standard brokerage accounts across major US platforms
-              without any crypto-native account or custody setup. It has traded
-              on OTCQX Best Market continuously since 2018: through the 2020
-              network security events, through the Ethereum Merge, and through
-              the broader digital asset market cycles that followed.
+              to Ethereum Classic. As a grantor trust, not a registered
+              investment company, it holds ETC directly in institutional cold
+              storage, and each share represents an amount of ETC that declines
+              slowly as the sponsor&rsquo;s 2.5% annual fee is paid. The trust
+              has been an SEC reporting company since 2021, which makes it
+              available in IRAs and standard brokerage accounts across major US
+              platforms without any crypto-native account or custody setup. Its
+              shares have been quoted on OTCQX Best Market since 2018, through
+              the 2020 network security events, the Ethereum Merge and the
+              market cycles that followed.
             </p>
           </FadeIn>
 
@@ -182,20 +182,20 @@ export async function ETCGSection() {
                 </p>
                 {premium < 0 ? (
                   <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
-                    ETCG historically traded at premiums as high as 458% during
-                    the trust&apos;s early years when supply was constrained and
-                    institutional demand was high. The current{" "}
+                    ETCG traded at premiums as high as 458% in the trust&apos;s
+                    early years, when supply was constrained and institutional
+                    demand was high. The current{" "}
                     <span data-live="" className="font-semibold text-red-400">
                       {premiumSize}
                     </span>{" "}
                     discount reflects the absence of an active redemption
-                    mechanism — not a change in the underlying asset. ETF
-                    conversion restores NAV parity by introducing the
-                    create/redeem arbitrage that closes the gap. GBTC converted
-                    at a similar discount in January 2024. ETHE followed in July
-                    2024. Active protocol development and a credible ETF
-                    conversion pipeline are the primary catalysts for discount
-                    compression in closed-end digital asset trusts.
+                    mechanism, not a change in the underlying asset. ETF
+                    conversion would restore NAV parity by introducing the
+                    create-and-redeem arbitrage that closes the gap, as it did
+                    for GBTC in January 2024 and for ETHE in July 2024. Active
+                    protocol development and a credible path to ETF conversion
+                    are the main catalysts for narrowing a closed-end digital
+                    asset trust&apos;s discount.
                   </p>
                 ) : (
                   <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
@@ -204,8 +204,8 @@ export async function ETCGSection() {
                       {premiumSize}
                     </span>{" "}
                     premium to NAV. Trust-phase premiums reflect constrained
-                    supply relative to institutional demand — the same dynamic
-                    GBTC and ETHE experienced before ETF conversion. No
+                    supply relative to institutional demand, the same dynamic
+                    GBTC and ETHE saw before their ETF conversions. No
                     redemption mechanism exists; premium or discount is
                     determined entirely by secondary market supply and demand.
                   </p>
@@ -241,12 +241,12 @@ export async function ETCGSection() {
               </p>
               <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {[
-                  "Unique regulatory surface: ETC inherits the commodity profile that Bitcoin established for Proof-of-Work networks and the programmable finance frameworks that Ethereum established for smart contract platforms. It is the only network that occupies both positions simultaneously.",
-                  "Classic USD ($USC) by Brale is live on ETC mainnet: a 1:1 USD-backed stablecoin issued under US money transmission licensing. First regulated stablecoin on a Proof-of-Work EVM.",
-                  "Olympia, a proposed upgrade with draft ECIPs: EIP-1559 with the base fee credited to a treasury, and EVM alignment through Glamsterdam. Modern EVM tooling assumes EIP-1559, so integrators would no longer need an Ethereum Classic-specific path for it.",
-                  "Original EVM, in continuous operation since July 2015. Longer operational track record than any competing smart contract platform.",
-                  "Post-Merge infrastructure: the largest Proof-of-Work network with native smart contracts, having absorbed significant Ethereum mining capacity. Retail GPU access and institutional ASIC hardware available.",
-                  "300+ exchanges, 17 fiat currency pairs, continuous ETC/USD price discovery since 2016. The liquidity depth required for a credible global stablecoin settlement layer.",
+                  "Two regulatory paths: ETC inherits the commodity profile that Bitcoin established for Proof-of-Work networks and the programmable finance frameworks that Ethereum established for smart contract platforms, and as the only mature Proof-of-Work blockchain with native smart contracts, it holds both positions.",
+                  "Classic USD ($USC) by Brale is live on ETC mainnet: a 1:1 USD-backed stablecoin issued under US money transmission licensing and aligned with the GENIUS Act.",
+                  "Olympia, a proposed upgrade with draft ECIPs: EIP-1559 with the base fee credited to a treasury, and EVM alignment through Fusaka and into Glamsterdam. Modern EVM tooling assumes EIP-1559, so integrators would no longer need an Ethereum Classic-specific path for it.",
+                  "The original Ethereum chain, in continuous operation since July 2015: as long an operational track record as any smart contract platform.",
+                  "Post-Merge infrastructure: the only mature Proof-of-Work network with native smart contracts, having absorbed a significant share of Ethereum's mining capacity, with retail GPU access and institutional ASIC hardware.",
+                  "300+ markets, 17 fiat currency pairs and continuous ETC/USD price discovery since 2016: the liquidity depth a credible global stablecoin settlement layer requires.",
                 ].map((point) => (
                   <div key={point} className="flex items-start gap-2">
                     <span

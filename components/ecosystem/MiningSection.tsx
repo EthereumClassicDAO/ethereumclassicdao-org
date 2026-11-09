@@ -22,9 +22,9 @@ const asicMiners: Equipment[] = [
 ];
 
 const gpuManufacturers: Equipment[] = [
-  { name: "NVIDIA", detail: "GeForce RTX series, high-performance ETChash mining with CUDA cores",    href: "https://www.nvidia.com" },
-  { name: "AMD",    detail: "Radeon RX series, competitive ETChash performance and efficiency",        href: "https://www.amd.com" },
-  { name: "Intel",  detail: "Arc series GPUs, with emerging ETChash support",                         href: "https://www.intel.com" },
+  { name: "NVIDIA", detail: "GeForce RTX series, high-performance Etchash mining with CUDA cores",    href: "https://www.nvidia.com" },
+  { name: "AMD",    detail: "Radeon RX series, competitive Etchash performance and efficiency",        href: "https://www.amd.com" },
+  { name: "Intel",  detail: "Arc series GPUs, with emerging Etchash support",                         href: "https://www.intel.com" },
 ];
 
 interface Pool {
@@ -51,37 +51,36 @@ function formatHashrate(ths: number): string {
   return `${Math.round(ths * 1000)} GH/s`;
 }
 
+/**
+ * Fees and payout schemes are each pool's ETC terms as MiningPoolStats
+ * (miningpoolstats.stream/ethereumclassic) listed them on 2026-11-09, or as
+ * minerstat (minerstat.com/coin/etc) lists a pool MiningPoolStats does not. A
+ * pool with several schemes lists one fee per scheme, in the same order.
+ */
 const pools: Pool[] = [
-  { name: "f2pool.com",        statsId: "f2pool",        fee: "1%",     type: "PPS",   href: "https://f2pool.com" },
-  { name: "antpool.com",       statsId: "antpool",       fee: "1.5%",   type: "PPS",   href: "https://antpool.com" },
-  { name: "viabtc.com",        statsId: "viabtc",        fee: "2%",     type: "PPLNS", href: "https://viabtc.com" },
-  { name: "2miners.com",       statsId: "2miners",       fee: "1%",     type: "PPLNS", href: "https://2miners.com" },
-  { name: "hiveon.net",        statsId: "hiveon",        fee: "0%",     type: "PPS+",  href: "https://hiveon.net" },
-  { name: "pool.kryptex.com",  statsId: "kryptex",       fee: "1%",     type: "PPS+",  href: "https://pool.kryptex.com" },
-  { name: "l6pool.com",        statsId: "l6pool",        fee: "0.3%",   type: "—",     href: "https://l6pool.com" },
-  { name: "poolin.com",        statsId: "poolin",        fee: "0%",     type: "PPS+",  href: "https://poolin.com" },
-  { name: "emcd.io",           statsId: "emcd",          fee: "1.5%",   type: "FPPS",  href: "https://emcd.io" },
-  { name: "binance.com",       statsId: "binance",       fee: "3%",     type: "FPPS",  href: "https://www.binance.com" },
-  { name: "k1pool.com",        statsId: "k1pool",        fee: "1%",     type: "RBPPS", href: "https://k1pool.com" },
-  { name: "herominers.com",    statsId: "herominers",    fee: "0.9%",   type: "PROP",  href: "https://herominers.com" },
-  { name: "ntminerpool.com",   statsId: "ntminerpool",   fee: "1%",     type: "PPS+",  href: "https://ntminerpool.com" },
-  { name: "woolypooly.com",    statsId: "woolypooly",    fee: "0.9%",   type: "PPLNS", href: "https://woolypooly.com" },
-  { name: "longpool.org",      statsId: "longpool",      fee: "1%",     type: "PPLNS", href: "https://longpool.org" },
-  { name: "gtpool.io",         statsId: "gtpool",        fee: "1%",     type: "PPLNS", href: "https://gtpool.io" },
-  { name: "dogpool.work",      statsId: "dogpool",       fee: "1.25%",  type: "PPS+",  href: "https://dogpool.work" },
-  { name: "solopool.org",      statsId: "solopool",      fee: "1.5%",   type: "SOLO",  href: "https://solopool.org" },
-  { name: "coolpool.top",      statsId: "coolpool",      fee: "1%",     type: "PPLNS", href: "https://coolpool.top" },
-  { name: "molepool.com",      statsId: "molepool",      fee: "1.5%",   type: "SOLO",  href: "https://molepool.com" },
-  { name: "tpool.io",          statsId: "tpool",         fee: "0.9%",   type: "FPPS",  href: "https://tpool.io" },
-  { name: "baikalmine.com",    statsId: "baikalmine",    fee: "0.75%",  type: "PPS+",  href: "https://baikalmine.com" },
-  { name: "cloverpool.com",    statsId: "cloverpool",    fee: "—",      type: "PPLNS", href: "https://cloverpool.com" },
-  { name: "okminer.com",       statsId: "okminer",       fee: "2%",     type: "FPPS",  href: "https://okminer.com" },
-  { name: "666pool.com",       statsId: "666pool",       fee: "1%",     type: "PPLNS", href: "https://666pool.com" },
-  { name: "cruxpool.com",      statsId: "cruxpool",      fee: "1%",     type: "PPS+",  href: "https://cruxpool.com" },
-  { name: "crazypool.org",     statsId: "crazypool",     fee: "1%",     type: "PPLNS", href: "https://crazypool.org" },
-  { name: "ethcore.ru",        statsId: "ethcore",       fee: "0.5%",   type: "SOLO",  href: "https://ethcore.ru" },
-  { name: "skypool.org",       statsId: "skypool",       fee: "1.5%",   type: "PPS+",  href: "https://skypool.org" },
-  { name: "pool2mine.net",     statsId: "pool2mine",     fee: "0.5%",   type: "PROP",  href: "https://pool2mine.net" },
+  { name: "f2pool.com",        statsId: "f2pool",        fee: "1%",          type: "PPS",          href: "https://www.f2pool.com/coin/ethereum-classic" },
+  { name: "2miners.com",       statsId: "2miners",       fee: "1% / 1.5%",   type: "PPLNS / SOLO", href: "https://etc.2miners.com" },
+  { name: "k1pool.com",        statsId: "k1pool",        fee: "1%",          type: "RBPPS / SOLO", href: "https://k1pool.com/pool/etc" },
+  { name: "gtpool.io",         statsId: "gtpool",        fee: "1%",          type: "PPLNS",        href: "https://gtpool.io" },
+  { name: "pool.kryptex.com",  statsId: "kryptex",       fee: "1%",          type: "PPS+",         href: "https://pool.kryptex.com/etc" },
+  { name: "l6pool.com",        statsId: "l6pool",        fee: "0.3%",        type: "PPS+",         href: "https://global.l6pool.com" },
+  { name: "antpool.com",       statsId: "antpool",       fee: "1.5%",        type: "PPS",          href: "https://antpool.com" },
+  { name: "pool.binance.com",  statsId: "binance",       fee: "3%",          type: "FPPS",         href: "https://pool.binance.com" },
+  { name: "herominers.com",    statsId: "herominers",    fee: "0.9%",        type: "PROP / SOLO",  href: "https://etc.herominers.com" },
+  { name: "molepool.com",      statsId: "molepool",      fee: "2%",          type: "SOLO",         href: "https://etc.molepool.com" },
+  { name: "coolpool.top",      statsId: "coolpool",      fee: "1%",          type: "PPLNS / SOLO", href: "https://coolpool.top/pool/etc" },
+  { name: "baikalmine.com",    statsId: "baikalmine",    fee: "0.75% / 1%",  type: "PPS+ / SOLO",  href: "https://baikalmine.com" },
+  { name: "cloverpool.com",    statsId: "cloverpool",    fee: "—",           type: "PPLNS",        href: "https://cloverpool.com" },
+  { name: "longpool.org",      statsId: "longpool",      fee: "1%",          type: "PPLNS",        href: "https://longpool.org" },
+  { name: "cruxpool.com",      statsId: "cruxpool",      fee: "1%",          type: "PPS+",         href: "https://cruxpool.com/etc" },
+  { name: "666pool.com",       statsId: "666pool",       fee: "1%",          type: "PPLNS / PPS",  href: "https://www.666pool.com" },
+  { name: "okminer.com",       statsId: "okminer",       fee: "2%",          type: "FPPS",         href: "https://okminer.com" },
+  { name: "crazypool.org",     statsId: "crazypool",     fee: "1%",          type: "PPLNS",        href: "https://etc.crazypool.org" },
+  { name: "woolypooly.com",    statsId: "woolypooly",    fee: "0.9%",        type: "PPLNS / SOLO", href: "https://woolypooly.com" },
+  { name: "ethcore.ru",        statsId: "ethcore",       fee: "0.5%",        type: "PPLNS / SOLO", href: "https://ethcore.ru" },
+  { name: "tpool.io",          statsId: "tpool",         fee: "0.9%",        type: "FPPS",         href: "https://tpool.io" },
+  { name: "pool2mine.net",     statsId: "pool2mine",     fee: "0.5%",        type: "PROP",         href: "https://etc.pool2mine.net" },
+  { name: "solopool.org",      statsId: "solopool",      fee: "1.5%",        type: "SOLO",         href: "https://solopool.org" },
 ];
 
 function EquipmentCard({ item, icon: Icon }: { item: Equipment; icon: typeof Cpu }) {
@@ -118,7 +117,7 @@ export async function MiningSection() {
   ]);
   const stats: { value: string; unit?: string; label: string; live?: boolean }[] = [
     { value: `${hashrateTHs.toFixed(1)}`, unit: "TH/s", label: "Network Hashrate", live: true },
-    { value: "ETChash", label: "Mining Algorithm" },
+    { value: "Etchash", label: "Mining Algorithm" },
     { value: "GPU + ASIC", label: "Compatible Hardware" },
   ];
 
@@ -163,14 +162,14 @@ export async function MiningSection() {
           <FadeIn delay={300}>
             <div className="mt-8">
               <p className="text-sm leading-relaxed text-[var(--text-muted)]">
-                Ethereum Classic is the only EVM-compatible chain secured by
-                Proof-of-Work. When Ethereum transitioned to Proof-of-Stake,
-                ETC absorbed the majority of the ETHash mining ecosystem —
-                including established ASIC manufacturers like Bitmain and
-                Jasminer. ETChash supports both ASIC efficiency for
-                commercial-grade operations and GPU accessibility for global
-                participation, decentralizing hashrate across geographies and
-                reducing supply chain risk. Run{" "}
+                Ethereum Classic is the only mature Proof-of-Work blockchain with
+                native smart contracts. When Ethereum moved to Proof-of-Stake, ETC
+                absorbed a significant share of its mining infrastructure, and
+                established ASIC manufacturers such as Bitmain and Jasminer now
+                build Etchash hardware. Etchash runs on both ASICs, for
+                commercial operations, and GPUs, which anyone can buy, so
+                hashrate is spread across geographies and supply chain risk is
+                reduced. Run{" "}
                 <a
                   href={CORE_GETH_LATEST_RELEASE_URL}
                   target="_blank"
@@ -197,12 +196,9 @@ export async function MiningSection() {
             <FadeIn>
               <h3 className="text-xl font-bold tracking-tight">Mining Equipment</h3>
               <p className="mt-2 text-sm text-[var(--text-muted)]">
-                ETChash supports dedicated ASIC hardware and consumer GPU rigs,
-                distributing hashrate across a broad base of independent
-                operators. ASIC efficiency enables commercial-scale operations;
-                GPU accessibility brings in global retail miners — together
-                diversifying the security budget and reducing single-vendor
-                supply chain risk.
+                The hardware below mines Etchash today, from dedicated ASICs for
+                commercial-scale operations to the consumer GPUs retail miners
+                run, so no single vendor supplies the network&rsquo;s security.
               </p>
             </FadeIn>
 
@@ -241,11 +237,11 @@ export async function MiningSection() {
                 <h3 className="text-xl font-bold tracking-tight">Mining Pools</h3>
               </div>
               <p className="mt-2 text-sm text-[var(--text-muted)]">
-                Active ETChash mining pools contributing to Ethereum Classic&apos;s
+                Active Etchash mining pools contributing to Ethereum Classic&apos;s
                 security budget. Pool selection affects expected earnings
                 variance, payout frequency, and infrastructure dependence.
-                Hashrate is estimated from recent block attribution — larger
-                pools appear at the top.
+                Hashrate is estimated from the blocks each pool mined recently,
+                and the largest pools are listed first.
               </p>
             </FadeIn>
 

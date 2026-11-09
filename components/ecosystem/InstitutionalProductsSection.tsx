@@ -7,21 +7,21 @@ const products = [
     icon: TrendingUp,
     title: "Regulated Investment Products",
     description:
-      "The Grayscale Ethereum Classic Trust (ETCG) has provided regulated securities exposure since 2017, with an ETF conversion pipeline underway. As the Bitcoin and Ethereum ETF issuers — BlackRock, Fidelity, VanEck, 21Shares, and others — expand their digital asset product suites, ETC is positioned as the natural next Proof-of-Work digital commodity for trust and ETF structures.",
+      "The Grayscale Ethereum Classic Trust (ETCG) has provided regulated securities exposure since 2017, and could take the trust-to-ETF conversion path that GBTC and ETHE took. As the Bitcoin and Ethereum ETF issuers (BlackRock, Fidelity, VanEck, 21Shares and others) widen their product suites, ETC is a natural candidate for trust and ETF structures.",
     detail: "ETCG · Est. 2017 · ETF Pipeline",
   },
   {
     icon: Lock,
     title: "Institutional Custody",
     description:
-      "Institutional-grade ETC custody from Fireblocks, Coinbase Custody, BitGo, Copper, and Bakkt. Multi-signature security, insurance coverage, and regulatory compliance for enterprise and fund managers.",
+      "Institutional-grade ETC custody from Fireblocks, Coinbase Custody, BitGo, Copper and Bakkt, with MPC and multi-signature security, insurance coverage, and regulated custody for enterprises and fund managers.",
     detail: "Fireblocks · Coinbase Custody · BitGo · Copper · Bakkt",
   },
   {
     icon: ArrowLeftRight,
     title: "Global Exchange Coverage & OTC",
     description:
-      "300+ active markets across 20+ major global exchanges and every leading retail brokerage. For block-size positions, major OTC desks — Cumberland, Galaxy Digital, B2C2, and others — provide bilateral execution with direct settlement into regulated custody.",
+      "300+ active markets across 20+ major global exchanges. For block-size positions, major OTC desks (Cumberland, Galaxy Digital, B2C2 and others) provide bilateral execution with direct settlement into regulated custody.",
     detail: "300+ Markets · 20+ Exchanges · OTC Available",
   },
 ];
@@ -37,15 +37,13 @@ export function InstitutionalProductsSection() {
               Institutional Products & Market Access
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Regulated entry points for institutional capital into the only
-              Proof-of-Work smart contract platform. ETCG has offered compliant
-              securities exposure since 2017, with an ETF conversion pipeline
-              underway. As Bitcoin and Ethereum ETF issuers expand their digital
-              asset product suites, ETC is positioned as the next Proof-of-Work
-              digital commodity for regulated investment structures. Institutional
-              custody, OTC execution, and 300+ exchange markets give professional
-              allocators the infrastructure to build and manage compliant ETC
-              positions at any scale.
+              Regulated entry points for institutional capital into the only mature
+              Proof-of-Work smart contract platform. As Bitcoin and Ethereum ETF
+              issuers widen their digital asset products, ETC is positioned as
+              the next Proof-of-Work digital commodity for regulated investment
+              structures. Institutional custody, OTC execution and 300+ exchange
+              markets give professional allocators the infrastructure to build
+              and manage ETC positions at any scale.
             </p>
           </FadeIn>
 

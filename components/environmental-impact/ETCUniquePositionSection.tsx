@@ -3,8 +3,8 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionDivider } from "@/components/ui/SectionDivider";
 import { fetchHashrateTHs } from "@/lib/api/hashrate";
 const staticStats = [
-  { value: "July 2015", label: "In Production Since", detail: "Longest-running EVM" },
-  { value: "Glamsterdam", label: "Proposed EVM Alignment", detail: "Through the Olympia upgrade" },
+  { value: "July 2015", label: "In Production Since", detail: "From the Ethereum genesis block" },
+  { value: "Shanghai", label: "EVM Alignment", detail: "Through Spiral; Olympia proposes Glamsterdam" },
   { value: "GPU + ASIC", label: "Hardware Access", detail: "Retail to institutional" },
 ];
 
@@ -14,11 +14,11 @@ const columns = [
     heading: "From Proof-of-Work",
     subheading: "Bitcoin's regulatory trajectory",
     points: [
-      "No pre-mine, no foundation controlling the protocol, no issuer.",
-      "Mining hardware is globally distributed, permissionless to acquire.",
+      "No foundation controlling the protocol and no central issuer.",
+      "Mining hardware is globally distributed and permissionless to acquire.",
       "Block rewards and tips go to miners. Under the Olympia proposal, a treasury would be funded by the base fee rather than by new issuance.",
-      "CLARITY Act digital commodity classification path: same PoW profile as Bitcoin.",
-      "Energy demand that can co-locate with any power source, anywhere in the world.",
+      "A digital commodity candidate under the CLARITY Act, with the same Proof-of-Work profile as Bitcoin.",
+      "Mining demand can co-locate with any power source, anywhere in the world.",
     ],
   },
   {
@@ -26,9 +26,9 @@ const columns = [
     heading: "From the EVM",
     subheading: "Ethereum's regulatory trajectory",
     points: [
-      "Solidity and EVM compatibility through Shanghai: Ethereum's tools, libraries and frameworks work with ETC.",
-      <><a href="https://classicusd.com" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">Classic USD</a> ($USC) by Brale: a live, 1:1 USD-backed stablecoin on a PoW chain.</>,
-      "GENIUS Act-compliant stablecoin infrastructure, the first on any Proof-of-Work network.",
+      "Solidity and the EVM through Shanghai, so Ethereum's tools, libraries and frameworks work with ETC, with a legacy-transaction setting where a tool assumes EIP-1559.",
+      <><a href="https://classicusd.com" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">Classic USD</a> ($USC) by Brale: a live, 1:1 USD-backed stablecoin aligned with the GENIUS Act, on a Proof-of-Work network.</>,
+      "Under the Olympia proposal, EVM alignment would continue through Fusaka and into Glamsterdam.",
       <><a href="https://etcswap.org" target="_blank" rel="noopener noreferrer" className="text-[var(--brand-green)] hover:opacity-80 transition-opacity">ETCswap</a> V2 and V3 provide on-chain liquidity for composable DeFi with a regulated stable base.</>,
       "Smart contracts enable programmable settlement for energy transactions on-chain.",
     ],
@@ -45,30 +45,29 @@ export async function ETCUniquePositionSection() {
   return (
     <>
       <SectionDivider />
-      <section aria-labelledby="the-largest-proof-of-work-network-with-native-smart-contracts-heading" className="section-gradient relative py-28">
+      <section aria-labelledby="the-only-mature-proof-of-work-network-with-native-smart-contracts-heading" className="section-gradient relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 id="the-largest-proof-of-work-network-with-native-smart-contracts-heading" className="text-3xl font-bold tracking-tight">
-              The Largest Proof-of-Work Network with Native Smart Contracts
+            <h2 id="the-only-mature-proof-of-work-network-with-native-smart-contracts-heading" className="text-3xl font-bold tracking-tight">
+              The Only Mature Proof-of-Work Network with Native Smart Contracts
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              ETC is not simply a PoW network or simply a smart contract
-              platform. It sits at the intersection of both, inheriting the
-              commodity classification path that Bitcoin established and the
-              programmable finance frameworks that Ethereum established. No
-              other active blockchain occupies this position &mdash; Bitcoin has
-              PoW without programmability, Ethereum has the EVM without PoW.
-              ETC has both.
+              ETC is not simply a Proof-of-Work network or simply a smart
+              contract platform. It sits at the intersection of both, inheriting
+              the commodity classification path that Bitcoin established and the
+              programmable finance frameworks that Ethereum established. Bitcoin
+              has Proof-of-Work without general-purpose smart contracts, and
+              Ethereum has the EVM without Proof-of-Work; ETC has both, and it
+              is the only mature network that does.
             </p>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               For energy markets, this intersection has a specific consequence:
-              the same network that provides a global 24/7 energy demand signal
-              also supports programmable contracts for energy settlement.
-              ETC/USD price is a function of energy cost, block reward, and
-              hardware efficiency &mdash; mining activity arbitrages between
-              energy markets and crypto markets continuously. The EVM layer
-              means those contracts can be settled on the same chain that
-              prices them.
+              the network that provides a global 24/7 energy demand signal also
+              supports programmable contracts for energy settlement. Mining
+              profitability depends on the ETC price, the block reward, energy
+              cost and hardware efficiency, so mining activity arbitrages between
+              energy markets and crypto markets continuously. The EVM layer means
+              contracts can settle on the same chain that prices them.
             </p>
           </FadeIn>
 

@@ -7,7 +7,7 @@ const mechanics = [
   {
     label: "When energy is cheap",
     detail:
-      "Mining profitability rises, driving up hash rate and energy consumption. Stranded power finds a buyer.",
+      "Mining profitability rises, driving up hashrate and energy consumption. Stranded power finds a buyer.",
   },
   {
     label: "When energy is expensive",
@@ -17,7 +17,7 @@ const mechanics = [
   {
     label: "24/7 price discovery",
     detail:
-      "With 300+ exchanges across every time zone, ETC markets never close — unlike energy futures, which halt on weekends.",
+      "With 300+ markets across every time zone, ETC trading never closes, unlike energy futures, which halt on weekends.",
   },
   {
     label: "Local currency signals",
@@ -60,23 +60,23 @@ export function ETCAsEnergyMarketSection() {
               ETC/USD: A Global 24/7 Energy Proxy
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Mining profitability is a direct function of ETC price, block
-              reward, and energy cost. This creates a tight arbitrage: miners
-              enter when energy is cheap relative to ETC price, exit when it is
-              not. ETC financial markets are therefore a continuous, real-time
-              signal about energy value worldwide &mdash; the first always-open,
-              globally accessible energy commodity market.
+              Mining profitability is a direct function of the ETC price, the
+              block reward and energy cost. That creates a tight arbitrage:
+              miners enter when energy is cheap relative to the ETC price and
+              exit when it is not, so ETC&rsquo;s markets carry a continuous,
+              real-time signal about the value of energy worldwide, in a market
+              that never closes.
             </p>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Energy futures markets close on weekends. Regional electricity
-              spot markets are balkanized by jurisdiction, settlement rules, and
-              transmission constraints. ETC/USD trades 24/7, in every time
-              zone, across major global currencies, on over 300 exchanges. An
-              energy producer in Norway, a wellhead operator in Texas, and a
-              hydro developer in Malawi are all pricing their output against the
-              same continuous global signal. That is not a feature of
-              traditional commodity markets &mdash; it is a consequence of
-              permissionless, decentralized infrastructure.
+              Energy futures markets close on weekends, and regional electricity
+              spot markets are split by jurisdiction, settlement rules and
+              transmission constraints. ETC/USD trades 24/7, in every time zone
+              and against major world currencies, in 300+ markets. An energy
+              producer in Norway, a wellhead operator in Texas and a hydro
+              developer in Malawi can all price their output against the same
+              continuous global signal. That is not a feature of traditional
+              commodity markets: it is a consequence of permissionless,
+              decentralized infrastructure.
             </p>
           </FadeIn>
 

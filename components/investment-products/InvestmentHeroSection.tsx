@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 const stats = [
   {
     value: "ETCG",
-    label: "Est. 2018 · Oldest ETC regulated product",
+    label: "Est. 2017 · Oldest ETC regulated product",
     detail: "Grantor trust on OTCQX Best Market",
   },
   {
@@ -31,24 +31,24 @@ export function InvestmentHeroSection() {
             Institutional <span className="text-[var(--brand-green)]">Access</span> to Ethereum Classic
           </h1>
           <p className="mt-4 text-base text-[var(--text-muted)]">
-            ETC has had regulated investment product exposure since May 2018
-            &mdash; before most institutional digital asset infrastructure
-            existed. The Grayscale Ethereum Classic Trust was among the earliest
-            digital asset grantor trusts, applying the same structure Grayscale
-            used for GBTC (2013) and ETHE (2017) to Ethereum Classic. It
-            predated the ETF era and has traded as an SEC-reporting security for
-            over six years.
+            Ethereum Classic has had a publicly quoted investment product since
+            May 2018, before most institutional digital asset infrastructure
+            existed. The Grayscale Ethereum Classic Trust, formed in April 2017,
+            was among the earliest digital asset grantor trusts, using the
+            structure Grayscale first applied to GBTC in 2013 and later to ETHE.
+            It predated the ETF era and has been an SEC reporting company since
+            2021.
           </p>
           <p className="mt-3 text-base text-[var(--text-muted)]">
-            The product landscape is now expanding. GBTC converted to a spot
-            Bitcoin ETF in January 2024. ETHE followed in July 2024. Regulatory
-            precedent for the trust-to-ETF conversion path is established, and
-            every issuer that built infrastructure for BTC and ETH investment
-            products already has the custody relationships, legal framework, and
-            distribution agreements needed for an ETC product. ETC is accessible
-            today through the same brokerage accounts used for equities, bonds,
-            and commodities &mdash; no crypto exchange, no self-custody, and no
-            special onboarding required.
+            The product landscape has since expanded. GBTC converted to a spot
+            Bitcoin ETF in January 2024, and ETHE followed in July 2024. The
+            regulatory precedent for the trust-to-ETF conversion path is
+            established, and every issuer that built infrastructure for BTC and
+            ETH investment products already has the custody relationships, legal
+            framework and distribution agreements an ETC product needs. Through
+            ETCG, ETC exposure is available today in the same brokerage accounts
+            used for equities, bonds and commodities, with no crypto exchange, no
+            self-custody and no special onboarding.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a

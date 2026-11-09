@@ -37,7 +37,6 @@ const cryptoPairs = [
   { pair: "ETC/UNI", symbol: "UNI" },
   { pair: "ETC/LTC", symbol: "LTC" },
   { pair: "CAKE/ETC", symbol: "CAKE" },
-  { pair: "ETC/BUSD", symbol: "BUSD" },
   { pair: "ETC/FDUSD", symbol: "FDUSD" },
   { pair: "ETC/USC", symbol: "USC" },
 ];
@@ -46,18 +45,18 @@ const stats = [
   {
     icon: Globe,
     value: "300+",
-    label: "Active Exchanges",
-    detail: "Global coverage",
+    label: "Active Markets",
+    detail: "Across 20+ exchanges",
   },
   {
     icon: BarChart3,
-    value: "17",
+    value: `${fiatPairs.length}`,
     label: "Fiat Pairs",
     detail: "Major currencies",
   },
   {
     icon: Activity,
-    value: "13",
+    value: `${cryptoPairs.length}`,
     label: "Crypto Cross-Pairs",
     detail: "BTC, ETH, stablecoins",
   },
@@ -75,19 +74,19 @@ export function ETCMarketDepthSection() {
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               A stablecoin is only as useful as the network it runs on. For a
-              stablecoin to function as a global payment rail, the underlying
-              asset must be tradeable against local currencies in every
-              jurisdiction where the stablecoin is used. ETC has continuous
-              fiat price discovery across 17 major currencies and 300+ active
-              exchange markets — ETC/USD, ETC/EUR, ETC/JPY, ETC/KRW, ETC/INR,
-              and coverage across Latin America, Southeast Asia, the Middle
-              East, and Eastern Europe. Classic USD ($USC) settles on the same
-              network that these markets are pricing.
+              stablecoin to work as a global payment rail, the network&rsquo;s
+              native asset needs to trade against local currencies wherever the
+              stablecoin is used. ETC has continuous fiat price discovery across{" "}
+              {fiatPairs.length} major currencies and 300+ active exchange
+              markets, with ETC/USD, ETC/EUR, ETC/JPY, ETC/KRW and ETC/INR among
+              them and coverage across Latin America, Southeast Asia, the Middle
+              East and Eastern Europe. Classic USD ($USC) settles on the same
+              network these markets price.
             </p>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              ETC/USD spot markets have operated continuously since 2016 —
-              one of the longest-running fiat price discovery mechanisms in
-              digital assets. That track record is what OTC desks, custodians,
+              ETC/USD spot markets have operated continuously since 2016, one of
+              the longest-running fiat price discovery mechanisms in digital
+              assets. That track record is what OTC desks, custodians,
               and compliance teams look for when evaluating whether a network
               can support institutional-scale stablecoin settlement. Deep
               liquidity is not a marketing claim; it is a prerequisite for

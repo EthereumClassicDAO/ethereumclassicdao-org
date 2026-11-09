@@ -8,15 +8,15 @@ const profiles = [
     act: "CLARITY Act",
     jurisdiction: "United States",
     badge: "badge-pending" as const,
-    badgeLabel: "Senate Floor Pending",
+    badgeLabel: "Stalled in the Senate",
     tagline: "Digital Commodity Profile",
     points: [
-      "Longest-running EVM: original Ethereum codebase, launched July 2015",
-      "No pre-mine, no foundation controlling protocol direction",
+      "Continues the original Ethereum chain, running since July 2015",
+      "No foundation controlling the protocol's direction",
       "Proof-of-Work consensus matches Bitcoin's commodity profile",
       "No central issuer or controlling entity, distributed globally",
       "CFTC jurisdiction for derivatives; spot markets governed by existing law",
-      "House passage July 17, 2025; Senate Banking Committee passed 15-9 on May 14, 2026",
+      "Passed the House on July 17, 2025, and the Senate Banking Committee 15-9 on May 14, 2026; a Senate cloture vote failed 49-50 on September 15, 2026",
     ],
   },
   {
@@ -25,14 +25,14 @@ const profiles = [
     jurisdiction: "European Union",
     badge: "badge-available" as const,
     badgeLabel: "In Force Dec 2024",
-    tagline: "Decentralized Asset",
+    tagline: "No Issuer",
     points: [
-      "No central issuer → exempt from ART and EMT issuer obligations",
+      "No issuer, so the rules for asset-referenced and e-money tokens do not apply",
       "MiCA-licensed CASPs may offer ETC without per-asset regulatory approval",
-      "Decentralized PoW eliminates single point of regulatory or operational failure",
-      "Token issuance originated from community fork, with no foundation and no ICO",
-      "Qualifies for trading on all 27 EU member state CASP-authorized platforms",
-      "Hard cutoff July 1, 2026. ETC is tradable by compliant entities from day one.",
+      "Decentralized Proof-of-Work leaves no single point of regulatory or operational failure",
+      "New ETC is issued only through mining, on the fixed schedule ECIP-1017 sets",
+      "Tradable on CASP-authorized platforms in all 27 EU member states",
+      "The transitional period ended on July 1, 2026, and authorized CASPs can offer ETC",
     ],
   },
   {
@@ -40,10 +40,10 @@ const profiles = [
     act: "GENIUS Act",
     jurisdiction: "United States",
     badge: "badge-available" as const,
-    badgeLabel: "Signed Jul 18, 2025",
+    badgeLabel: "Signed July 18, 2025",
     tagline: "Live Stablecoin Platform",
     points: [
-      "Classic USD ($USC) deployed on ETC mainnet, the first GENIUS Act-aligned stablecoin on ETC",
+      "Classic USD ($USC), a stablecoin aligned with the GENIUS Act, is live on ETC mainnet",
       "Issued by Brale Inc. (NMLS #2376957) under US money transmission licensing",
       "Reserves held 1:1 in segregated, regulated US bank accounts",
       "Third-party reserve attestations and SOC 2 compliance",
@@ -57,15 +57,15 @@ export function ETCRegulatoryProfileSection() {
   return (
     <>
       <SectionDivider />
-      <section aria-labelledby="etc-s-regulatory-profile-heading" className="section-gradient relative py-28">
+      <section aria-labelledby="etc-regulatory-profile-heading" className="section-gradient relative py-28">
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <FadeIn>
-            <h2 id="etc-s-regulatory-profile-heading" className="text-3xl font-bold tracking-tight">
+            <h2 id="etc-regulatory-profile-heading" className="text-3xl font-bold tracking-tight">
               ETC&rsquo;s Regulatory Profile
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              Ethereum Classic is uniquely positioned across every major
-              regulatory classification, by design, not by accident.
+              Ethereum Classic holds a distinct position under each major
+              regulatory framework, by design rather than by accident.
             </p>
           </FadeIn>
 

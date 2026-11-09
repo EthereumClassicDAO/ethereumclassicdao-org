@@ -21,7 +21,7 @@ const ethIssuers = [
   { name: "VanEck", ticker: "ETHV", note: "" },
   { name: "Franklin Templeton", ticker: "EZET", note: "" },
   { name: "Grayscale", ticker: "ETHE / ETH Mini", note: "" },
-  { name: "21Shares", ticker: "—", note: "" },
+  { name: "21Shares", ticker: "CETH", note: "" },
 ];
 
 export function FutureIssuersSection() {
@@ -37,8 +37,8 @@ export function FutureIssuersSection() {
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Every issuer that launched a Bitcoin or Ethereum investment product
               has already built the infrastructure that an ETC product requires.
-              The legal structure &mdash; grantor trust or exchange-listed
-              product &mdash; is already established. Custodial relationships
+              The legal structure, whether a grantor trust or an exchange-listed
+              product, is already established. Custodial relationships
               with Coinbase Custody or Fidelity Digital Assets are already in
               place. Distribution agreements with major brokerages, SEC reporting
               relationships, and the regulatory precedent for a Proof-of-Work
@@ -54,7 +54,7 @@ export function FutureIssuersSection() {
             <FadeIn delay={80}>
               <div>
                 <p className="text-xs font-mono uppercase tracking-wider text-[var(--color-orange)]">
-                  Bitcoin ETF Issuers (10)
+                  Bitcoin ETF Issuers ({btcIssuers.length})
                 </p>
                 <div className="mt-4 space-y-2">
                   {btcIssuers.map((issuer) => (
@@ -83,7 +83,7 @@ export function FutureIssuersSection() {
             <FadeIn delay={160}>
               <div>
                 <p className="text-xs font-mono uppercase tracking-wider text-[var(--color-violet)]">
-                  Ethereum ETF Issuers (6)
+                  Ethereum ETF Issuers ({ethIssuers.length})
                 </p>
                 <div className="mt-4 space-y-2">
                   {ethIssuers.map((issuer) => (
@@ -110,10 +110,11 @@ export function FutureIssuersSection() {
                   <p className="text-xs leading-relaxed text-[var(--text-secondary)]">
                     Bitcoin and Ethereum investment products accumulated $31
                     billion in net inflows in 2025. As institutional appetite
-                    for digital assets deepens, the original EVM presents a
-                    natural expansion opportunity for these same issuers, given
-                    its PoW security, regulated stablecoin infrastructure, and
-                    CLARITY Act commodity candidate status.
+                    for digital assets deepens, the original Ethereum chain
+                    presents a natural expansion opportunity for these same
+                    issuers, given its Proof-of-Work security, its regulated
+                    stablecoin infrastructure and its status as a digital
+                    commodity candidate under the CLARITY Act.
                   </p>
                   <div className="mt-3">
                     <Link

@@ -6,7 +6,7 @@ const stages = [
     stage: "Stage 1",
     title: "Closed-End Trust (OTCQX)",
     description:
-      "Private placement creates shares → 6-month lock-up → shares trade on OTCQX. No redemption program. Price deviates from NAV.",
+      "A private placement creates shares, which trade on OTCQX after a six-month lock-up. There is no redemption program, so the price deviates from NAV.",
     status: "ETCG complete · May 2018",
     badgeClass: "badge-complete",
   },
@@ -14,15 +14,15 @@ const stages = [
     stage: "Stage 2",
     title: "SEC Reporting & Institutional Adoption",
     description:
-      "Annual 10-K and quarterly 10-Q filings. Eligible for IRA and brokerage accounts. Broad TradFi distribution. Institutional accumulation phase.",
-    status: "ETCG complete · since ~2021",
+      "Annual 10-K and quarterly 10-Q filings, eligibility for IRA and brokerage accounts, broad distribution through traditional finance, and a phase of institutional accumulation.",
+    status: "ETCG complete · since 2021",
     badgeClass: "badge-complete",
   },
   {
     stage: "Stage 3",
     title: "Exchange-Listed Product Conversion",
     description:
-      "Application to SEC for exchange-listed product. Redemption mechanism restores NAV parity. Fee compression. Broadest retail and institutional access.",
+      "An application to the SEC for an exchange-listed product. A redemption mechanism restores NAV parity, fees compress, and access widens to the broadest retail and institutional base.",
     status: "GBTC Jan 2024 · ETHE Jul 2024",
     badgeClass: "badge-pending",
   },
@@ -33,7 +33,7 @@ const precedents = [
     product: "GBTC",
     inception: "Sep 2013",
     conversion: "Jan 2024",
-    aum: "~$60B",
+    aum: "~$60B (BlackRock IBIT)",
   },
   {
     product: "ETHE",
@@ -43,8 +43,8 @@ const precedents = [
   },
   {
     product: "ETCG",
-    inception: "May 2018",
-    conversion: "Pending",
+    inception: "Apr 2017",
+    conversion: "Not yet converted",
     aum: "—",
   },
 ];
@@ -61,16 +61,15 @@ export function GrayscaleProductLifecycleSection() {
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Grayscale has established a repeatable three-stage path from
-              private placement to broadly accessible exchange-listed product.
-              The same lifecycle that took GBTC from closed-end trust (2013) to
-              spot Bitcoin ETF (January 2024), and ETHE from closed-end trust
-              (2017) to spot Ethereum ETF (July 2024), applies structurally to
-              ETCG. The conversion path is not novel &mdash; it is the same
-              application process, the same regulatory framework, and the same
-              legal template Grayscale has executed twice. ETCG has completed
-              the first two stages. Conversion to an exchange-listed product is
-              a function of Grayscale&rsquo;s prioritization and SEC application
-              timing, not product eligibility, which ETCG already satisfies.
+              private placement to a broadly accessible exchange-listed product.
+              The lifecycle that took GBTC from closed-end trust (2013) to spot
+              Bitcoin ETF (January 2024), and ETHE from closed-end trust (2017)
+              to spot Ethereum ETF (July 2024), applies to ETCG in the same way.
+              The conversion path is not novel: it is the same application
+              process, regulatory framework and legal template Grayscale has
+              executed twice. ETCG has completed the first two stages, and its
+              conversion to an exchange-listed product turns on Grayscale&rsquo;s
+              prioritization and the timing of an SEC application.
             </p>
           </FadeIn>
 
@@ -110,7 +109,7 @@ export function GrayscaleProductLifecycleSection() {
                       Conversion
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--text-subtle)]">
-                      AUM Post-Conversion
+                      Largest ETF After Conversion
                     </th>
                   </tr>
                 </thead>
@@ -138,10 +137,9 @@ export function GrayscaleProductLifecycleSection() {
 
           <FadeIn>
             <p className="mt-8 text-sm text-[var(--text-subtle)] border-l-2 border-[var(--brand-green)] pl-4">
-              Grayscale has established the regulatory and legal template for
-              trust-to-ETF conversion. ETCG already satisfies Stage 2
-              requirements. Conversion is a function of Grayscale&rsquo;s
-              prioritization and SEC application timing.
+              Conversion is Grayscale&rsquo;s decision to make and the
+              SEC&rsquo;s to approve; ETCG has completed the stages that come
+              before it.
             </p>
           </FadeIn>
         </div>

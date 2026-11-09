@@ -6,25 +6,25 @@ const categories = [
   {
     icon: Wallet,
     heading: "Wallets",
-    body: "ETC has native support across 50+ wallet applications — hardware (Ledger, Trezor), browser extensions (MetaMask, Rabby), and mobile (Trust Wallet, Exodus). EVM compatibility means any wallet that supports Ethereum can integrate ETC with a single chain configuration. No custom SDK, no protocol modifications.",
-    detail: "50+ Wallets · Hardware · Browser · Mobile",
+    body: "Hardware wallets (Ledger, Trezor), browser extensions (MetaMask, Rabby) and mobile wallets (Trust Wallet, Exodus) support ETC. A wallet built for EVM networks adds ETC with a chain configuration, and one that assumes EIP-1559 needs its legacy-transaction setting, since ETC has no EIP-1559 fee market today.",
+    detail: "Hardware · Browser · Mobile",
   },
   {
     icon: BarChart2,
     heading: "Exchanges & Markets",
-    body: "300+ active markets across 20+ major global exchanges — Coinbase, Binance, Kraken, OKX, and every leading retail brokerage. ETC's Proof-of-Work consensus satisfies exchange compliance requirements in jurisdictions that draw a regulatory distinction between PoW and PoS assets, broadening the addressable market for listings and structured products.",
+    body: "300+ active markets across 20+ major global exchanges, Coinbase, Binance, Kraken and OKX among them. In jurisdictions that distinguish Proof-of-Work assets from Proof-of-Stake ones, ETC's Proof-of-Work consensus is an advantage for listings and structured products.",
     detail: "300+ Markets · 20+ Exchanges · Tier-1 Coverage",
   },
   {
     icon: Shuffle,
     heading: "Bridges & DEXes",
-    body: "EVM-native contract architecture supports standard bridge and decentralized exchange integrations without custom protocol modifications. ETCswap provides on-chain liquidity in V2 and V3. Cross-chain bridges connect ETC to the multi-chain ecosystem using the same messaging standards deployed across EVM-compatible networks.",
+    body: "EVM-native contracts support standard bridge and decentralized exchange integrations without protocol changes. ETCswap provides on-chain liquidity in V2 and V3, and cross-chain bridges connect ETC to other networks with the same messaging standards used across EVM chains.",
     detail: "EVM-Native · Standard Bridge Interfaces",
   },
   {
     icon: Radio,
     heading: "Oracles & Data",
-    body: "ETC's long Proof-of-Work block history, the standard Ethereum JSON-RPC APIs, and open Blockscout API make it a reliable substrate for on-chain data services. Standard EVM event logs, deterministic block ordering, and chain-native timestamp security provide the primitives oracle networks and data indexers expect.",
+    body: "ETC's long Proof-of-Work block history, the standard Ethereum JSON-RPC APIs and the open Blockscout API make it a reliable base for on-chain data services. Standard EVM event logs, deterministic block ordering and Proof-of-Work timestamps give oracle networks and data indexers the primitives they expect.",
     detail: "Standard JSON-RPC · Blockscout API · EVM Events",
   },
 ];
@@ -40,13 +40,12 @@ export function IntegrationsSection() {
               Wallets, Exchanges & Infrastructure
             </h2>
             <p className="mt-3 text-base text-[var(--text-muted)]">
-              ETC&apos;s global exchange coverage, deep spot liquidity, and
-              EVM-native architecture make it the Proof-of-Work integration
-              target for the multi-chain ecosystem. Recognized as a digital
-              commodity in multiple jurisdictions, ETC gives infrastructure
-              products — wallets, exchanges, bridges, oracles — access to a
-              globally accessible and compliance-friendly asset with standard
-              EVM tooling.
+              ETC&apos;s global exchange coverage, deep spot liquidity and
+              EVM-native architecture make it a straightforward Proof-of-Work
+              chain to integrate. As a digital commodity candidate in the US, it
+              gives infrastructure products (wallets, exchanges, bridges and
+              oracles) a globally accessible asset that works with standard EVM
+              tooling.
             </p>
           </FadeIn>
 

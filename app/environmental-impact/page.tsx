@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "stranded energy",
     "curtailed renewables",
     "flared gas mining",
-    "ETChash energy",
+    "Etchash energy",
     "ETC hashrate",
     "programmable energy demand",
     "GPU mining energy",

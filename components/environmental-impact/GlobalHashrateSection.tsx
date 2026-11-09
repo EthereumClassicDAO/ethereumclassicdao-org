@@ -34,24 +34,22 @@ export async function GlobalHashrateSection() {
             </h2>
             <div className="mt-4 space-y-3">
               <p className="text-base text-[var(--text-muted)]">
-                Hashrate is the direct measure of the energy Ethereum
-                Classic&rsquo;s mining network consumes globally. Every
-                terahash per second represents real electricity, real hardware,
-                and real capital deployed by independent actors across every
-                time zone. When hashrate rises, the network is absorbing more
-                energy from the global supply &mdash; by choice, at market
-                price, wherever that energy is cheapest. When it falls, miners
-                curtail and that capacity returns to the grid.
+                Hashrate tracks the energy Ethereum Classic&rsquo;s mining
+                network consumes worldwide. Every terahash per second represents
+                real electricity, real hardware and real capital deployed by
+                independent actors across every time zone. When hashrate rises,
+                the network is absorbing more energy from the global supply, by
+                choice, at market price, wherever that energy is cheapest. When it
+                falls, miners curtail and that capacity returns to the grid.
               </p>
               <p className="text-base text-[var(--text-muted)]">
-                Ethereum&rsquo;s 2022 transition to Proof-of-Stake redirected
-                its entire mining network &mdash; hundreds of millions of
-                dollars in GPU and ASIC hardware &mdash; toward Ethereum
-                Classic. The hashrate chart below reflects that absorption: a
-                discrete, measurable event that permanently changed the scale
-                of ETC&rsquo;s energy footprint and security budget. No other
-                smart contract platform retained Proof-of-Work consensus to
-                receive that infrastructure.
+                Ethereum&rsquo;s 2022 move to Proof-of-Stake sent a significant
+                share of its mining infrastructure, GPU and ASIC hardware alike,
+                to Ethereum Classic. The chart&rsquo;s All view shows that
+                absorption: a discrete, measurable event that changed the scale of
+                ETC&rsquo;s energy footprint and security budget. As the only mature
+                smart contract platform still on Proof-of-Work, ETC is where that
+                infrastructure could go.
               </p>
             </div>
           </FadeIn>
@@ -69,7 +67,7 @@ export async function GlobalHashrateSection() {
                 </p>
                 <p data-live="" className="mt-0.5 text-xs text-[var(--text-subtle)]">
                   {hashrate.isFallback
-                    ? "Estimate — live data unavailable"
+                    ? "Estimate: live data unavailable"
                     : "Updated hourly · Source: Blockscout"}
                 </p>
               </div>

@@ -57,7 +57,7 @@ const upgrades: Upgrade[] = [
     eips: [],
     keyChanges: ["EVM genesis block", "Smart contract execution", "Mining reward 5 ETC", "Gas system"],
     description:
-      "Ethereum Classic genesis. The original Ethereum codebase launches — the first production EVM with smart contract capability. The ledger begins.",
+      "The genesis block of the original Ethereum chain, which Ethereum Classic continues. The first production EVM with smart contracts goes live, and the ledger begins.",
     status: "complete",
   },
   {
@@ -71,7 +71,7 @@ const upgrades: Upgrade[] = [
     eips: [],
     keyChanges: ["Gas limit increase", "Canary blocks removed", "Difficulty adjustment"],
     description:
-      "Gas limit raised from 5,000 to allow network growth. Mining difficulty threshold adjusted.",
+      "Raised the gas limit from its launch value of 5,000 so the network could grow, and adjusted the mining difficulty threshold.",
     status: "complete",
   },
   {
@@ -85,7 +85,7 @@ const upgrades: Upgrade[] = [
     eips: ["EIP-2", "EIP-7", "EIP-8"],
     keyChanges: ["DELEGATECALL opcode", "Transaction signing fix", "p2p devp2p upgrade", "Frontier protections removed"],
     description:
-      "First major planned upgrade. Removed the provisional Frontier protective measures; the network transitions from beta to a stable production platform.",
+      "The first major planned upgrade. It removed Frontier's provisional protective measures, and the network moved from beta to a stable production platform.",
     status: "complete",
   },
   {
@@ -99,7 +99,7 @@ const upgrades: Upgrade[] = [
     eips: [],
     keyChanges: ["Irregular state change rejected", "Code is Law upheld", "Ledger immutability preserved", "ETH/ETC permanent split"],
     description:
-      "Ethereum implemented an irregular state change to reverse the DAO exploit. Ethereum Classic rejected this intervention, upholding Code is Law and the immutability of the ledger. ETC and ETH permanently diverge. This is the founding principle of Ethereum Classic.",
+      "Ethereum applied an irregular state change to reverse the exploit of The DAO. Ethereum Classic rejected the intervention, upholding Code is Law and the immutability of the ledger, and the two chains permanently diverged. That refusal is Ethereum Classic's founding principle.",
     status: "complete",
   },
   {
@@ -113,7 +113,7 @@ const upgrades: Upgrade[] = [
     eips: ["EIP-150"],
     keyChanges: ["IO-heavy opcode repricing", "DoS attack mitigation", "SLOAD/CALL/EXTCODE repriced"],
     description:
-      "Gas cost repricing for IO-heavy operations to prevent denial-of-service attacks that had been exploiting underpriced opcodes.",
+      "Repriced the gas cost of IO-heavy operations to stop the denial-of-service attacks that had been exploiting underpriced opcodes.",
     status: "complete",
   },
   {
@@ -128,7 +128,7 @@ const upgrades: Upgrade[] = [
     eips: ["EIP-155", "EIP-160"],
     keyChanges: ["Chain ID 61 replay protection", "EXP gas repricing", "Difficulty bomb delayed", "First ETC protocol deviation"],
     description:
-      "Delayed the difficulty bomb and implemented replay protection via chain ID. ETC's chain ID 61 derives from its coin_type value in the BIP44 derivation path (m/44'/61'/0'/0/index). ETC's first independent protocol deviation from Ethereum.",
+      "Delayed the difficulty bomb and added replay protection through the chain ID. ETC's chain ID, 61, matches its coin_type in the BIP44 derivation path (m/44'/61'/0'/0/index). It was ETC's first independent deviation from Ethereum's protocol.",
     status: "complete",
   },
   {
@@ -141,9 +141,9 @@ const upgrades: Upgrade[] = [
     ecip: "ECIP-1017",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1017",
     eips: [],
-    keyChanges: ["5M20 era system", "210,700,000 max supply", "20% reduction per era", "Sound fixed monetary policy", "First PoW EVM with programmable monetary policy"],
+    keyChanges: ["5M20 era system", "210,700,000 max supply", "20% reduction per era", "Fixed monetary policy"],
     description:
-      "Established ETC's fixed monetary policy: the 5M20 era system with a 210,700,000 maximum supply. Block rewards reduce 20% — a fifthening — every 5,000,000 blocks, roughly every two years. Inspired by Bitcoin's halving schedule but designed to soften the miner hardware shock and spot price dislocation a 50% supply cut produces: the gradual reduction preserves the same long-term predictability with a smoother transition at each era boundary.",
+      "Established ETC's fixed monetary policy: the 5M20 era system, with a maximum supply of 210,700,000 ETC. Block rewards fall by 20%, a “fifthening”, every 5,000,000 blocks, roughly every two years. The schedule follows the idea of Bitcoin's halvings but softens the shock a 50% cut in rewards gives miners' economics and the spot price, keeping the same long-term predictability with a smaller step at each era boundary.",
     status: "complete",
   },
   {
@@ -155,9 +155,9 @@ const upgrades: Upgrade[] = [
     ecip: "ECIP-1041",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1041",
     eips: [],
-    keyChanges: ["Difficulty bomb permanently removed", "Perpetual PoW guaranteed", "No artificial migration pressure"],
+    keyChanges: ["Difficulty bomb permanently removed", "Long-term Proof-of-Work", "No artificial migration pressure"],
     description:
-      "Permanently removed the difficulty bomb — the artificial mechanism designed to pressure migration to Proof-of-Stake. With the bomb gone, Ethereum Classic became the canonical long-term Proof-of-Work EVM, establishing the two-EVM model: a flagship PoS chain and a flagship PoW chain, each with distinct security properties and trust assumptions, both sharing the EVM execution standard.",
+      "Permanently removed the difficulty bomb, the mechanism built to pressure a move to Proof-of-Stake. With the bomb gone, Ethereum Classic committed to Proof-of-Work for the long term. When Ethereum moved to Proof-of-Stake in 2022, the two became the flagship Proof-of-Stake and Proof-of-Work EVM chains, each with distinct security properties and trust assumptions, both sharing the EVM execution standard.",
     status: "complete",
   },
   {
@@ -180,7 +180,7 @@ const upgrades: Upgrade[] = [
     ],
     keyChanges: ["ZK-proof precompiles (BN128)", "REVERT opcode", "Return data opcodes", "Receipt status codes"],
     description:
-      "Aligned with Byzantium. Added precompiles for elliptic curve arithmetic enabling ZK-proof compatibility, REVERT opcode, and receipt status codes.",
+      "Aligned with Byzantium. Added elliptic curve precompiles that make zero-knowledge proof verification possible, the REVERT opcode, and receipt status codes.",
     status: "complete",
   },
   {
@@ -194,7 +194,7 @@ const upgrades: Upgrade[] = [
     eips: ["EIP-145", "EIP-1014", "EIP-1052"],
     keyChanges: ["Bitwise shift opcodes", "CREATE2 (deterministic deployment)", "EXTCODEHASH opcode", "Petersburg security fixes"],
     description:
-      "Aligned with Constantinople and Petersburg. Introduced bitwise shifting opcodes, CREATE2 for deterministic contract deployment, and EXTCODEHASH.",
+      "Aligned with Constantinople and Petersburg. Introduced bitwise shift opcodes, CREATE2 for deterministic contract deployment, and the EXTCODEHASH opcode.",
     status: "complete",
   },
   {
@@ -215,7 +215,7 @@ const upgrades: Upgrade[] = [
     ],
     keyChanges: ["BLAKE2 precompile", "BN precompile repricing", "CHAINID opcode", "Calldata cost reduction"],
     description:
-      "Aligned with Istanbul. Added BLAKE2 precompile, repriced elliptic curve operations, chain ID opcode, and improved gas cost accuracy for storage operations.",
+      "Aligned with Istanbul. Added the BLAKE2 precompile and the CHAINID opcode, repriced elliptic curve operations, and made gas costs for storage operations more accurate.",
     status: "complete",
   },
   {
@@ -229,12 +229,12 @@ const upgrades: Upgrade[] = [
     eips: [],
     keyChanges: ["ECBP-1100 default set to on", "Exponential chain scoring replaces linear total difficulty", "Raises the cost of low-hashrate reorganization attacks"],
     description:
-      "MESS scores competing chains exponentially rather than linearly by total difficulty, making a deep reorganization far more expensive to mount than accumulated difficulty alone would suggest. Enabled as a client default rather than a consensus rule — a non-implementing client provides weaker reorg resistance without forking from the canonical chain.",
+      "MESS (Modified Exponential Subjective Scoring) requires a competing chain to outweigh the local one by a factor that grows with how far back the two split, so a deep reorganization costs far more to mount than its total difficulty alone would suggest. It shipped as a client default rather than a consensus rule: a client without it resists reorganizations less, but follows the same chain.",
     status: "complete",
   },
   {
     name: "Thanos",
-    subtitle: "ETChash",
+    subtitle: "Etchash",
     block: "Block 11,700,000",
     date: "2020-11-28",
     type: "etc-native",
@@ -244,9 +244,9 @@ const upgrades: Upgrade[] = [
       { name: "ECIP-1099", url: "https://ecips.ethereumclassic.org/ECIPs/ecip-1099" },
     ],
     eips: [],
-    keyChanges: ["ETChash algorithm", "DAG growth reduction", "GPU mining preserved", "All Ethash ASICs absorbed post-Merge"],
+    keyChanges: ["Etchash algorithm", "DAG growth reduction", "GPU mining preserved", "Ethash ASICs mine ETC post-Merge"],
     description:
-      "Introduced ETChash — a modified DAG growth algorithm keeping ETC mineable on GPU hardware. Following Ethereum's Merge, ETC absorbed a significant portion of the global GPU mining network and every purpose-built Ethash ASIC miner — the only chain still running an ETChash-compatible algorithm.",
+      "Introduced Etchash, a modification of Ethash that slows the growth of its DAG and so kept ETC mineable on GPUs with less memory. After Ethereum's Merge in 2022, ETC absorbed a significant share of Ethereum's mining infrastructure, GPUs and Ethash ASICs alike.",
     status: "complete",
   },
   {
@@ -274,28 +274,28 @@ const upgrades: Upgrade[] = [
     eips: ["EIP-3529", "EIP-3541"],
     keyChanges: ["Gas refund reduction", "0xEF bytecode prefix reserved", "EIP-1559 and EIP-3198 omitted"],
     description:
-      "Part of London: gas refunds reduced and the 0xEF bytecode prefix reserved. ECIP-1104 omitted EIP-1559, as it would conflict with the monetary policy set in ECIP-1017, and the BASEFEE opcode, which depends on it. The proposed Olympia upgrade would activate EIP-1559 with the base fee credited to a treasury rather than burned (ECIP-1111).",
+      "Part of London: gas refunds reduced and the 0xEF bytecode prefix reserved. ECIP-1104 left out two of London's changes: EIP-1559, which would conflict with the monetary policy set in ECIP-1017, and the BASEFEE opcode (EIP-3198), which depends on EIP-1559. The proposed Olympia upgrade would activate EIP-1559, with the base fee credited to a treasury rather than destroyed (ECIP-1111).",
     status: "complete",
   },
   {
     name: "Spiral",
     subtitle: "Shanghai",
     block: "Block 19,250,000",
-    date: "2024-02-04",
+    date: "2024-02-05",
     type: "evm-alignment",
     ecip: "ECIP-1109",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1109",
     eips: ["EIP-3651", "EIP-3855", "EIP-3860", "EIP-6049"],
     keyChanges: ["Warm COINBASE access", "PUSH0 opcode", "Initcode size limit", "SELFDESTRUCT deprecation notice"],
     description:
-      "Shanghai's EVM changes: warm COINBASE access, the PUSH0 opcode, the initcode size limit, and the SELFDESTRUCT deprecation notice. ECIP-1109 omitted EIP-4399 and EIP-4895, Proof-of-Stake changes that do not apply to Ethereum Classic.",
+      "Brought Shanghai's EVM changes: warm COINBASE access, the PUSH0 opcode, the initcode size limit and the SELFDESTRUCT deprecation notice. ECIP-1109 left out EIP-4399 and EIP-4895, Proof-of-Stake changes that do not apply to Ethereum Classic.",
     status: "complete",
   },
   {
     name: "MESS Default: Off",
     subtitle: "ECBP-1110",
     block: "Block 19,250,000",
-    date: "2024-02-04",
+    date: "2024-02-05",
     type: "etc-native",
     ecip: "ECIP-1110",
     ecipUrl: "https://ecips.ethereumclassic.org/ECIPs/ecip-1110",
@@ -307,7 +307,7 @@ const upgrades: Upgrade[] = [
   },
   {
     name: "Olympia",
-    subtitle: "Glamsterdam",
+    subtitle: "Glamsterdam (partial)",
     block: "Activation block TBD",
     date: "Targeted for 2027",
     type: "olympia",
@@ -327,7 +327,7 @@ const upgrades: Upgrade[] = [
     keyChanges: [
       "EIP-1559, with the base fee credited rather than destroyed (ECIP-1111)",
       "The Sovereignty Vault, the Treasury's permanent address (ECIP-1112)",
-      "EVM alignment through Glamsterdam (ECIP-1121)",
+      "EVM alignment through Fusaka and into Glamsterdam (ECIP-1121)",
     ],
     description:
       "A proposed upgrade, targeted for 2027, whose ECIPs are drafts. ECIP-1121 would advance the execution layer through Dencun, Pectra and Fusaka and carry that work into Glamsterdam, adopting part of Glamsterdam's set. ECIP-1111 would activate EIP-1559 with the base fee credited to the Sovereignty Vault address rather than destroyed. The governance contracts that would spend from that address would deploy before the fork, as the Olympia page describes.",
@@ -341,7 +341,7 @@ const typeLabels: Record<UpgradeType, string> = {
   "etc-native": "ETC Native",
   monetary: "Monetary Policy",
   "fork-moment": "Defining Moment",
-  olympia: "Upcoming",
+  olympia: "Proposed",
 };
 
 const typeBadge: Record<UpgradeType, string> = {
@@ -380,13 +380,13 @@ export default function TimelinePage() {
             </h1>
             <p className="mt-4 text-base text-[var(--text-muted)]">
               Every network upgrade applied to Ethereum Classic mainnet, across
-              more than a decade of uninterrupted Proof-of-Work operation. Each
-              was coordinated across independent client teams, supported in turn
-              by ETCDEV, ETC Labs and the ETC Cooperative, and ratified through the
-              Ethereum Classic Improvement Proposal process. Each cycle from Gas
-              Reprice to Spiral brought Ethereum&rsquo;s execution-layer changes
-              to Ethereum Classic, in full or in part, on the largest
-              Proof-of-Work smart contract platform and the only PoW EVM.
+              more than a decade of uninterrupted Proof-of-Work operation. Since
+              the 2016 split, each upgrade has been coordinated across
+              independent client teams, supported in turn by ETCDEV, ETC Labs and
+              the ETC Cooperative, and adopted through the Ethereum Classic
+              Improvement Proposal process. Each cycle from Gas Reprice to Spiral
+              brought Ethereum&rsquo;s execution-layer changes to Ethereum
+              Classic, in full or in part.
             </p>
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Olympia is the proposed next upgrade.
@@ -402,7 +402,7 @@ export default function TimelinePage() {
                   ["etc-native", "ETC Native"],
                   ["monetary", "Monetary Policy"],
                   ["fork-moment", "Defining Moment"],
-                  ["olympia", "Upcoming"],
+                  ["olympia", "Proposed"],
                 ] as [UpgradeType, string][]
               ).map(([type, label]) => (
                 <span
@@ -566,7 +566,7 @@ export default function TimelinePage() {
                 rel="noopener noreferrer"
                 className="text-[var(--brand-green)] hover:underline underline-offset-2"
               >
-                ECIP-1066 — Ethereum Classic Network Description
+                ECIP-1066: Ethereum Classic Network Description
               </a>
             </p>
           </FadeIn>

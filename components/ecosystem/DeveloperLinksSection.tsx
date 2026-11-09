@@ -18,7 +18,7 @@ const resources = [
   {
     icon: Globe,
     name: "Ethereum Classic",
-    description: "Network documentation and community resources",
+    description: "Wallets, exchanges, apps, mining, development and research",
     href: "https://ethereumclassic.com",
   },
   {
@@ -29,9 +29,9 @@ const resources = [
   },
   {
     icon: BookOpen,
-    name: "ETC Knowledge Base",
-    description: "Protocol specifications and developer guides",
-    href: "https://ethereumclassic.com/knowledge",
+    name: "Developer Documentation",
+    description: "Tutorials, API references and protocol specifications",
+    href: "https://ethereumclassic.com/build/docs",
   },
 ];
 
@@ -48,8 +48,8 @@ export function DeveloperLinksSection() {
             <p className="mt-3 text-base text-[var(--text-muted)]">
               Ethereum&rsquo;s development infrastructure, configured for
               Ethereum Classic: client libraries, on-chain analytics and protocol
-              documentation. The EVM through Shanghai, the same standards, and a
-              developer experience that is already familiar.
+              documentation. The EVM matches Ethereum&rsquo;s through Shanghai, so
+              the standards and the developer experience are already familiar.
             </p>
           </FadeIn>
 

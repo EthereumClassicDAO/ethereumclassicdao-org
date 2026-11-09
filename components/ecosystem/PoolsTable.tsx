@@ -168,15 +168,35 @@ export function PoolsTable({
 
     {/* Attribution + payout type explainer */}
     <p className="mt-3 text-xs text-[var(--text-subtle)]">
-      Hashrate estimated from last ~500 blocks ·{" "}
+      Hashrate is estimated from the last 1,000 blocks on{" "}
+      <a
+        href="https://etc.blockscout.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline underline-offset-2 transition-colors hover:text-[var(--brand-green)]"
+      >
+        Blockscout
+      </a>
+      , by each pool&rsquo;s known payout addresses, and a dash means none of
+      them mined a block in that window. Fees and payout types are as{" "}
       <a
         href="https://miningpoolstats.stream/ethereumclassic"
         target="_blank"
         rel="noopener noreferrer"
         className="underline underline-offset-2 transition-colors hover:text-[var(--brand-green)]"
       >
-        miningpoolstats.stream
-      </a>
+        MiningPoolStats
+      </a>{" "}
+      lists them, or{" "}
+      <a
+        href="https://minerstat.com/coin/etc"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline underline-offset-2 transition-colors hover:text-[var(--brand-green)]"
+      >
+        minerstat
+      </a>{" "}
+      for a pool MiningPoolStats does not list.
     </p>
 
     <div className="mt-5 space-y-1.5">
@@ -190,7 +210,7 @@ export function PoolsTable({
               {type}
             </dt>
             <dd className="text-[var(--text-subtle)]">
-              <span className="font-medium text-[var(--text-muted)]">{label} — </span>
+              <span className="font-medium text-[var(--text-muted)]">{label}: </span>
               {desc}
             </dd>
           </div>

@@ -27,7 +27,7 @@ const categories: ToolCategory[] = [
       },
       {
         name: "Foundry",
-        description: "Blazing fast Rust-based toolchain: forge, cast, anvil. Write tests in Solidity.",
+        description: "A Rust-based toolchain (forge, cast and anvil) with tests written in Solidity.",
         config: "--rpc-url $ETC_RPC_URL --chain 61 --legacy --evm-version shanghai",
         href: "https://getfoundry.sh",
       },
@@ -79,7 +79,7 @@ const categories: ToolCategory[] = [
       },
       {
         name: "RainbowKit",
-        description: "Beautiful wallet connection UI for React. Supports 100+ wallets with a polished connect flow.",
+        description: "A wallet connection UI for React that supports 100+ wallets.",
         config: "chains: [classic]",
         href: "https://www.rainbowkit.com",
       },
@@ -102,7 +102,7 @@ const categories: ToolCategory[] = [
     tools: [
       {
         name: "Ledger",
-        description: "Secure ETC storage with Ledger Nano S Plus and Nano X. Industry-leading cold storage.",
+        description: "Cold storage for ETC on the Ledger Nano S Plus and Nano X.",
         badge: "Hardware Wallet",
         href: "https://www.ledger.com",
       },
@@ -129,7 +129,7 @@ const categories: ToolCategory[] = [
       },
       {
         name: "Exodus",
-        description: "Desktop + mobile wallet with native ETC support and built-in exchange. Available on desktop, mobile, and browser.",
+        description: "A wallet for desktop, mobile and browser, with native ETC support and a built-in exchange.",
         href: "https://www.exodus.com",
       },
     ],
@@ -162,7 +162,7 @@ const categories: ToolCategory[] = [
     tools: [
       {
         name: "Slither",
-        description: "Static analysis framework by Trail of Bits. Detects vulnerabilities, optimizes gas, and suggests improvements.",
+        description: "Static analysis framework by Trail of Bits. Detects vulnerabilities and suggests code and gas improvements.",
         href: "https://github.com/crytic/slither",
       },
       {
@@ -204,10 +204,10 @@ export function DeveloperToolingSection() {
               Ethereum&rsquo;s development toolchain works on ETC: Hardhat,
               Foundry, ethers.js, viem and wagmi connect through a chain
               configuration. Set Chain ID to 61 and compile for the Shanghai EVM:
-              current Solidity compiles for a later EVM by default, and its code
-              can use opcodes ETC does not have. Point your RPC at an endpoint
-              from ChainList or your own node, send legacy transactions, since
-              ETC has no EIP-1559 fee market today, and deploy.
+              current Solidity targets a later EVM by default, and code compiled
+              that way can use opcodes ETC does not have. Point your RPC at an
+              endpoint from ChainList or at your own node, and deploy with legacy
+              transactions, since ETC has no EIP-1559 fee market today.
             </p>
           </FadeIn>
 
@@ -261,10 +261,10 @@ export function DeveloperToolingSection() {
           </div>
 
           <p className="mt-6 text-xs text-[var(--text-subtle)]">
-            ETC is supported by 50+ wallet applications across hardware,
-            browser, mobile, and desktop. See the full list at{" "}
+            Wallets for ETC run on hardware, in the browser, on mobile and on
+            the desktop. Compare them at{" "}
             <a
-              href="https://ethereumclassic.com/services/wallets"
+              href="https://ethereumclassic.com/wallet"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[var(--brand-green)] hover:underline"

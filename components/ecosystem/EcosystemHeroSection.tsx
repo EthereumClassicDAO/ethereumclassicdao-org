@@ -6,25 +6,25 @@ const audiences = [
     icon: Code,
     heading: "Developers",
     description:
-      "EVM compatibility through Shanghai: the frameworks, libraries and IDEs that target Ethereum work on ETC. Set Chain ID 61, point your RPC at a public endpoint or your own node, send legacy transactions, since ETC has no EIP-1559 fee market today, and deploy. No bridge risk.",
+      "EVM compatibility through Shanghai: the frameworks, libraries and IDEs that target Ethereum work on ETC. Set Chain ID 61, compile for the Shanghai EVM, point your RPC at a public endpoint or your own node, and send legacy transactions, since ETC has no EIP-1559 fee market today. Contracts run on ETC itself, with no bridge in between.",
   },
   {
     icon: Pickaxe,
     heading: "Miners",
     description:
-      "The only Proof-of-Work blockchain with native smart contracts. ETChash supports both ASIC and GPU hardware, absorbing significant Ethereum mining infrastructure post-Merge. Contribute to the network's security budget and earn block rewards.",
+      "The only mature Proof-of-Work blockchain with native smart contracts. Etchash runs on both ASIC and GPU hardware, and ETC absorbed a significant share of Ethereum's mining infrastructure after the Merge. Help secure the network and earn block rewards.",
   },
   {
     icon: Landmark,
     heading: "Institutions",
     description:
-      "A regulated digital asset ecosystem with Grayscale trust products since 2017, institutional custody at Fireblocks, Coinbase Custody, and BitGo, and 300+ active markets across 20+ exchanges. Positioned as a digital commodity under pending CLARITY Act classification.",
+      "A Grayscale trust since 2017, institutional custody at Fireblocks, Coinbase Custody and BitGo, and 300+ active markets across 20+ exchanges. ETC is a digital commodity candidate under the CLARITY Act, whose Senate cloture vote failed on September 15, 2026.",
   },
   {
     icon: Globe,
     heading: "Infrastructure",
     description:
-      "50+ wallet integrations, 300+ exchange markets, and EVM-native bridge and oracle architecture. ETC's global exchange coverage and PoW compliance posture make it the infrastructure integration target for the multi-chain ecosystem.",
+      "Hardware, browser and mobile wallets, 300+ exchange markets, and standard EVM bridges and oracles. ETC's exchange coverage and regulatory profile make it a straightforward Proof-of-Work chain to integrate.",
   },
 ];
 
@@ -40,11 +40,10 @@ export function EcosystemHeroSection() {
             <span className="text-[var(--brand-green)]">Build</span> on Ethereum Classic
           </h1>
           <p className="mt-4 text-lg text-[var(--text-muted)]">
-            The only Proof-of-Work blockchain with native EVM smart contracts
-            — and the largest PoW smart contract platform by network hashrate.
-            A production-grade infrastructure layer for developers, miners,
-            and institutional participants operating at the intersection of
-            cryptographic security and programmable finance.
+            The only mature Proof-of-Work blockchain with native smart
+            contracts: a production-grade infrastructure layer for developers,
+            miners and institutional participants, where cryptographic security
+            meets programmable finance.
           </p>
         </FadeIn>
 
